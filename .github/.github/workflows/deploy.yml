@@ -1,0 +1,34 @@
+name: Deploy Hexo Blog
+
+on:
+  push:
+    branches:
+      - main  # 监听 `main` 分支的推送事件
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install -g hexo-cli
+          npm install
+
+      - name: Generate static files
+        run: hexo generate
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: public
+          publish_dir: public
