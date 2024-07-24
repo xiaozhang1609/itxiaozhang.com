@@ -1,0 +1,778 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="小章">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="准备工作1. 更新1apt update &amp;&amp; apt upgrade -y  2. 安装必要工具安装我们将用到的工具： 1apt install -y vim wget curl unzip git  3. 安装 Nginx 和 Certbot1apt install -y nginx certbot python3-certbot-nginx  4. 安装 Docker 和 D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Ubuntu VPS 上部署 Hexo 博客并配置 HTTPS">
+<meta property="og:url" content="https://itxiaozhang.com/deploy-hexo-blog-on-ubuntu-vps-and-configure-https/index.html">
+<meta property="og:site_name" content="IT小章">
+<meta property="og:description" content="准备工作1. 更新1apt update &amp;&amp; apt upgrade -y  2. 安装必要工具安装我们将用到的工具： 1apt install -y vim wget curl unzip git  3. 安装 Nginx 和 Certbot1apt install -y nginx certbot python3-certbot-nginx  4. 安装 Docker 和 D">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-01-02T01:42:06.000Z">
+<meta property="article:modified_time" content="2024-07-24T12:14:39.920Z">
+<meta property="article:author" content="小章">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>在 Ubuntu VPS 上部署 Hexo 博客并配置 HTTPS - IT小章</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"itxiaozhang.com","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="IT小章" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 50vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>IT小章</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tools/" target="_self">
+                <i class="iconfont briefcase icon-briefcase"></i>
+                <span>工具</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://fixpc.cc" target="_self">
+                <i class="iconfont bug icon-bug"></i>
+                <span>修电脑</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">在 Ubuntu VPS 上部署 Hexo 博客并配置 HTTPS</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-01-02 09:42" pubdate>
+          2024年1月2日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          928 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">在 Ubuntu VPS 上部署 Hexo 博客并配置 HTTPS</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="1-更新"><a href="#1-更新" class="headerlink" title="1. 更新"></a>1. 更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt update &amp;&amp; apt upgrade -y<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-安装必要工具"><a href="#2-安装必要工具" class="headerlink" title="2. 安装必要工具"></a>2. 安装必要工具</h3><p>安装我们将用到的工具：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt install -y vim wget curl unzip git<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-安装-Nginx-和-Certbot"><a href="#3-安装-Nginx-和-Certbot" class="headerlink" title="3. 安装 Nginx 和 Certbot"></a>3. 安装 Nginx 和 Certbot</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt install -y nginx certbot python3-certbot-nginx<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-安装-Docker-和-Docker-Compose"><a href="#4-安装-Docker-和-Docker-Compose" class="headerlink" title="4. 安装 Docker 和 Docker Compose"></a>4. 安装 Docker 和 Docker Compose</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装 Docker</span><br>curl -fsSL https://get.docker.com -o get-docker.sh<br>sh get-docker.sh<br><br><span class="hljs-comment"># 安装 Docker Compose</span><br>apt install -y docker-compose<br></code></pre></td></tr></table></figure>
+
+<h2 id="部署-Hexo-博客"><a href="#部署-Hexo-博客" class="headerlink" title="部署 Hexo 博客"></a>部署 Hexo 博客</h2><h3 id="1-准备-Hexo-博客文件"><a href="#1-准备-Hexo-博客文件" class="headerlink" title="1. 准备 Hexo 博客文件"></a>1. 准备 Hexo 博客文件</h3><p>假设您已经在本地机器上创建了 Hexo 博客。使用 SCP 或其他方法将生成的静态文件传输到服务器：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 在本地机器上执行</span><br>scp -r /path/to/local/hexo/public root@your_server_ip:/var/www/itxiaozhang.com<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-配置-Nginx-为-Hexo-博客"><a href="#2-配置-Nginx-为-Hexo-博客" class="headerlink" title="2. 配置 Nginx 为 Hexo 博客"></a>2. 配置 Nginx 为 Hexo 博客</h3><p>创建 Nginx 配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/nginx/sites-available/itxiaozhang.com<br></code></pre></td></tr></table></figure>
+
+<p>添加以下内容：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">server_name</span> itxiaozhang.com www.itxiaozhang.com;<br><br>    <span class="hljs-attribute">root</span> /var/www/itxiaozhang.com;<br>    <span class="hljs-attribute">index</span> index.html;<br><br>    <span class="hljs-attribute">ssl_certificate</span> /etc/letsencrypt/live/itxiaozhang.com/fullchain.pem;<br>    <span class="hljs-attribute">ssl_certificate_key</span> /etc/letsencrypt/live/itxiaozhang.com/privkey.pem;<br>    <span class="hljs-attribute">include</span> /etc/letsencrypt/options-ssl-nginx.conf;<br>    <span class="hljs-attribute">ssl_dhparam</span> /etc/letsencrypt/ssl-dhparams.pem;<br><br>    <span class="hljs-section">location</span> / &#123;<br>        <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ =<span class="hljs-number">404</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">server_name</span> itxiaozhang.com www.itxiaozhang.com;<br>    <span class="hljs-attribute">return</span> <span class="hljs-number">301</span> https://<span class="hljs-variable">$server_name</span><span class="hljs-variable">$request_uri</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>启用配置并检查 Nginx 配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ln</span> -s /etc/nginx/sites-available/itxiaozhang.com /etc/nginx/sites-enabled/<br>nginx -t<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-配置-SSL-证书"><a href="#3-配置-SSL-证书" class="headerlink" title="3. 配置 SSL 证书"></a>3. 配置 SSL 证书</h3><p>使用 Certbot 获取 SSL 证书，但不修改 Nginx 配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">certbot certonly --nginx --installer none -d itxiaozhang.com -d www.itxiaozhang.com<br></code></pre></td></tr></table></figure>
+
+<p>按照提示完成配置。</p>
+<h3 id="4-重启-Nginx"><a href="#4-重启-Nginx" class="headerlink" title="4. 重启 Nginx"></a>4. 重启 Nginx</h3><p>配置完成后，重启 Nginx 服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl restart nginx<br></code></pre></td></tr></table></figure>
+
+<h2 id="部署-Wallos-应用"><a href="#部署-Wallos-应用" class="headerlink" title="部署 Wallos 应用"></a>部署 Wallos 应用</h2><h3 id="1-准备-Wallos-数据目录"><a href="#1-准备-Wallos-数据目录" class="headerlink" title="1. 准备 Wallos 数据目录"></a>1. 准备 Wallos 数据目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> -p /root/data/docker_data/wallos<br><span class="hljs-built_in">cd</span> /root/data/docker_data/wallos<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-创建-Docker-Compose-配置"><a href="#2-创建-Docker-Compose-配置" class="headerlink" title="2. 创建 Docker Compose 配置"></a>2. 创建 Docker Compose 配置</h3><p>使用 vim 创建并编辑 <code>docker-compose.yml</code> 文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim docker-compose.yml<br></code></pre></td></tr></table></figure>
+
+<p>添加以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">version:</span> <span class="hljs-string">&#x27;3.0&#x27;</span><br><br><span class="hljs-attr">services:</span><br>  <span class="hljs-attr">wallos:</span><br>    <span class="hljs-attr">container_name:</span> <span class="hljs-string">wallos</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">bellamy/wallos:latest</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;8282:80/tcp&quot;</span><br>    <span class="hljs-attr">environment:</span><br>      <span class="hljs-attr">TZ:</span> <span class="hljs-string">&#x27;Asia/Shanghai&#x27;</span>  <span class="hljs-comment"># 设置为您的时区</span><br>    <span class="hljs-attr">volumes:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;./db:/var/www/html/db&#x27;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;./logos:/var/www/html/images/uploads/logos&#x27;</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">unless-stopped</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3-启动-Wallos-应用"><a href="#3-启动-Wallos-应用" class="headerlink" title="3. 启动 Wallos 应用"></a>3. 启动 Wallos 应用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker-compose up -d<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-配置-Nginx-反向代理"><a href="#4-配置-Nginx-反向代理" class="headerlink" title="4. 配置 Nginx 反向代理"></a>4. 配置 Nginx 反向代理</h3><p>创建 Nginx 配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/nginx/sites-available/wallos.itxiaozhang.com<br></code></pre></td></tr></table></figure>
+
+<p>添加以下内容：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">server_name</span> wallos.itxiaozhang.com;<br><br>    <span class="hljs-attribute">ssl_certificate</span> /etc/letsencrypt/live/wallos.itxiaozhang.com/fullchain.pem;<br>    <span class="hljs-attribute">ssl_certificate_key</span> /etc/letsencrypt/live/wallos.itxiaozhang.com/privkey.pem;<br>    <span class="hljs-attribute">include</span> /etc/letsencrypt/options-ssl-nginx.conf;<br>    <span class="hljs-attribute">ssl_dhparam</span> /etc/letsencrypt/ssl-dhparams.pem;<br><br>    <span class="hljs-section">location</span> / &#123;<br>        <span class="hljs-attribute">proxy_pass</span> http://localhost:8282;<br>        <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$host</span>;<br>        <span class="hljs-attribute">proxy_set_header</span> X-Real-IP <span class="hljs-variable">$remote_addr</span>;<br>        <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-For <span class="hljs-variable">$proxy_add_x_forwarded_for</span>;<br>        <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-Proto <span class="hljs-variable">$scheme</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">server_name</span> wallos.itxiaozhang.com;<br>    <span class="hljs-attribute">return</span> <span class="hljs-number">301</span> https://<span class="hljs-variable">$server_name</span><span class="hljs-variable">$request_uri</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>启用配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ln</span> -s /etc/nginx/sites-available/wallos.itxiaozhang.com /etc/nginx/sites-enabled/<br>nginx -t<br></code></pre></td></tr></table></figure>
+
+<h3 id="5-为-Wallos-配置-SSL"><a href="#5-为-Wallos-配置-SSL" class="headerlink" title="5. 为 Wallos 配置 SSL"></a>5. 为 Wallos 配置 SSL</h3><p>使用 Certbot 获取 SSL 证书，但不修改 Nginx 配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">certbot certonly --nginx --installer none -d wallos.itxiaozhang.com<br></code></pre></td></tr></table></figure>
+
+<h3 id="6-重启-Nginx"><a href="#6-重启-Nginx" class="headerlink" title="6. 重启 Nginx"></a>6. 重启 Nginx</h3><p>配置完成后，重启 Nginx 服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl restart nginx<br></code></pre></td></tr></table></figure>
+
+<h2 id="完成部署"><a href="#完成部署" class="headerlink" title="完成部署"></a>完成部署</h2><p>通过以下地址访问：</p>
+<ul>
+<li>Hexo 博客：<a href="https://itxiaozhang.com/">https://itxiaozhang.com</a></li>
+<li>Wallos 应用：<a target="_blank" rel="noopener" href="https://wallos.itxiaozhang.com/">https://wallos.itxiaozhang.com</a></li>
+</ul>
+<hr>
+<p>以上是新版本，以下是老版本。</p>
+<hr>
+<blockquote>
+<p>Ubuntu 20.04</p>
+</blockquote>
+<ol>
+<li><p><strong>安装 Nginx 和 Certbot</strong></p>
+<ul>
+<li><p>使用 SSH 连接到你的 VPS。</p>
+</li>
+<li><p>更新软件包列表并安装 Nginx 和 Certbot：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt update<br>sudo apt install nginx<br>sudo apt install certbot python3-certbot-nginx<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>配置 Hexo 博客</strong></p>
+<ul>
+<li>在本地搭建并生成 Hexo 博客，确保生成的静态文件位于本地目录中。</li>
+</ul>
+</li>
+<li><p><strong>将 Hexo 博客同步到 VPS</strong></p>
+<ul>
+<li>使用 SCP 或其他方法将本地生成的 Hexo 博客的静态文件复制到 VPS 上。</li>
+</ul>
+</li>
+<li><p><strong>申请 SSL 证书</strong></p>
+<ul>
+<li><p>运行 Certbot 命令申请 SSL 证书：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo certbot certonly --nginx -d itxiaozhang.com -d www.itxiaozhang.com<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>按提示提供电子邮件地址并同意服务条款。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>创建网站根目录</strong></p>
+<ul>
+<li><p>在 VPS 上创建存放网站文件的目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">mkdir</span> -p /var/www/itxiaozhang.com<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>配置 Nginx 反向代理和 SSL</strong></p>
+<ul>
+<li><p>创建一个新的 Nginx 配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/nginx/sites-available/itxiaozhang.com<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>将以下配置粘贴到文件中：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">server_name</span> itxiaozhang.com www.itxiaozhang.com;<br><br>    <span class="hljs-attribute">root</span> /var/www/itxiaozhang.com;  <span class="hljs-comment"># 替换为你的静态网页文件目录</span><br><br>    <span class="hljs-attribute">index</span> index.html;<br><br>    <span class="hljs-attribute">ssl_certificate</span> /etc/letsencrypt/live/itxiaozhang.com/fullchain.pem;<br>    <span class="hljs-attribute">ssl_certificate_key</span> /etc/letsencrypt/live/itxiaozhang.com/privkey.pem;<br><br>    <span class="hljs-attribute">include</span> /etc/letsencrypt/options-ssl-nginx.conf;<br>    <span class="hljs-attribute">ssl_dhparam</span> /etc/letsencrypt/ssl-dhparams.pem;<br><br>    <span class="hljs-section">location</span> / &#123;<br>        <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ =<span class="hljs-number">404</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">server_name</span> itxiaozhang.com www.itxiaozhang.com;<br><br>    <span class="hljs-attribute">return</span> <span class="hljs-number">301</span> https://<span class="hljs-variable">$server_name</span><span class="hljs-variable">$request_uri</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>确保替换上述配置中的路径和域名为你的实际路径和域名。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>启用 Nginx 配置</strong></p>
+<ul>
+<li><p>创建符号链接以启用该配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">ln</span> -s /etc/nginx/sites-available/itxiaozhang.com /etc/nginx/sites-enabled/<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>重新加载 Nginx</strong></p>
+<ul>
+<li><p>通过以下命令重新加载 Nginx 以应用新配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl reload nginx<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="category-chain-item">技术笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/hexo/" class="print-no-link">#hexo</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>在 Ubuntu VPS 上部署 Hexo 博客并配置 HTTPS</div>
+      <div>https://itxiaozhang.com/deploy-hexo-blog-on-ubuntu-vps-and-configure-https/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>小章</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年1月2日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/win10-white-screen-issue-case-study/" title="Win10白屏问题实战案例">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Win10白屏问题实战案例</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/msi-installation-failure/" title="MSI文件安装失败">
+                        <span class="hidden-mobile">MSI文件安装失败</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
