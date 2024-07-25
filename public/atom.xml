@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-07-24T12:14:39.914Z</updated>
+  <updated>2024-07-25T01:27:02.030Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客</title>
+    <link href="https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/"/>
+    <id>https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/</id>
+    <published>2024-07-24T14:38:03.000Z</published>
+    <updated>2024-07-25T01:27:02.030Z</updated>
+    
+    
+    <summary type="html">这篇文章记录我使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客，记录如何安装和配置 Hexo，如何通过 SSH 将项目推送到 GitHub，以及如何在 Cloudflare Pages 部署博客并设置自定义域名。</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://itxiaozhang.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="hexo" scheme="https://itxiaozhang.com/tags/hexo/"/>
+    
+    <category term="博客" scheme="https://itxiaozhang.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="cloudflare" scheme="https://itxiaozhang.com/tags/cloudflare/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读与感悟周记20</title>
@@ -388,29 +411,6 @@
     
     
     <category term="树懒" scheme="https://itxiaozhang.com/tags/%E6%A0%91%E6%87%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Motrix下载管理器：开源优雅高效的下载工具</title>
-    <link href="https://itxiaozhang.com/motrix-download-manager-open-source-efficient-tool/"/>
-    <id>https://itxiaozhang.com/motrix-download-manager-open-source-efficient-tool/</id>
-    <published>2024-05-26T02:44:00.000Z</published>
-    <updated>2024-07-24T12:14:39.917Z</updated>
-    
-    
-    <summary type="html">本文介绍了Motrix，一个全能且免费的下载管理器，跨Windows、Mac、Linux平台使用，支持多种下载协议，如HTTP、FTP、BT及磁力链接。</summary>
-    
-    
-    
-    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="Motrix" scheme="https://itxiaozhang.com/tags/Motrix/"/>
-    
-    <category term="下载工具" scheme="https://itxiaozhang.com/tags/%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="开源" scheme="https://itxiaozhang.com/tags/%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://itxiaozhang.com//building-personal-blog-with-hexo-github-cloudflare-pages/</loc>
+    <lastmod>2024-07-25</lastmod>
+  </url>
+  <url>
     <loc>https://itxiaozhang.com//test/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//prompt-engineering-3/</loc>
+    <loc>https://itxiaozhang.com//customer-feedback-and-reviews/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
     <loc>https://itxiaozhang.com//file-search-tool-everything/</loc>
+    <lastmod>2024-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://itxiaozhang.com//prompt-engineering-3/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
@@ -37,11 +45,11 @@
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//enter-safe-mode-windows-7-windows-10-windows-11/</loc>
+    <loc>https://itxiaozhang.com//create-firewall-rule-to-block-all-applications-from-accessing-the-network/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//create-firewall-rule-to-block-all-applications-from-accessing-the-network/</loc>
+    <loc>https://itxiaozhang.com//enter-safe-mode-windows-7-windows-10-windows-11/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
@@ -137,11 +145,11 @@
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//msi-installation-failure/</loc>
+    <loc>https://itxiaozhang.com//create-windows-bootable-usb-on-macos/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//create-windows-bootable-usb-on-macos/</loc>
+    <loc>https://itxiaozhang.com//msi-installation-failure/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
@@ -185,10 +193,6 @@
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//customer-feedback-and-reviews/</loc>
-    <lastmod>2024-07-24</lastmod>
-  </url>
-  <url>
     <loc>https://itxiaozhang.com//viewing-ssd-and-hdd-counts/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
@@ -229,11 +233,11 @@
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//toilet-theory-of-the-internet-and-its-impact-on-web/</loc>
+    <loc>https://itxiaozhang.com//deploy-hexo-blog-on-ubuntu-vps-and-configure-https/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//deploy-hexo-blog-on-ubuntu-vps-and-configure-https/</loc>
+    <loc>https://itxiaozhang.com//toilet-theory-of-the-internet-and-its-impact-on-web/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
@@ -341,19 +345,19 @@
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//reinforce-future-plan-reading-reflections-week-10/</loc>
-    <lastmod>2024-07-24</lastmod>
-  </url>
-  <url>
     <loc>https://itxiaozhang.com//reinforce-future-plan-reading-reflections-week-9/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://itxiaozhang.com//weekly7/</loc>
+    <loc>https://itxiaozhang.com//reinforce-future-plan-reading-reflections-week-10/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
     <loc>https://itxiaozhang.com//weekly6/</loc>
+    <lastmod>2024-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://itxiaozhang.com//weekly7/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>

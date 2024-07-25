@@ -82,7 +82,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="IT小章" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="IT小章" type="application/atom+xml">
 </head>
 
 
@@ -368,7 +368,7 @@
 <li><p>使用 SSH 连接到你的 VPS。</p>
 </li>
 <li><p>更新软件包列表并安装 Nginx 和 Certbot：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt update<br>sudo apt install nginx<br>sudo apt install certbot python3-certbot-nginx<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt update<br><span class="hljs-built_in">sudo</span> apt install nginx<br><span class="hljs-built_in">sudo</span> apt install certbot python3-certbot-nginx<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p><strong>配置 Hexo 博客</strong></p>
@@ -384,7 +384,7 @@
 <li><p><strong>申请 SSL 证书</strong></p>
 <ul>
 <li><p>运行 Certbot 命令申请 SSL 证书：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo certbot certonly --nginx -d itxiaozhang.com -d www.itxiaozhang.com<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> certbot certonly --nginx -d itxiaozhang.com -d www.itxiaozhang.com<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>按提示提供电子邮件地址并同意服务条款。</p>
 </li>
@@ -393,13 +393,13 @@
 <li><p><strong>创建网站根目录</strong></p>
 <ul>
 <li><p>在 VPS 上创建存放网站文件的目录：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">mkdir</span> -p /var/www/itxiaozhang.com<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mkdir</span> -p /var/www/itxiaozhang.com<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p><strong>配置 Nginx 反向代理和 SSL</strong></p>
 <ul>
 <li><p>创建一个新的 Nginx 配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/nginx/sites-available/itxiaozhang.com<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vim /etc/nginx/sites-available/itxiaozhang.com<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>将以下配置粘贴到文件中：</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">server_name</span> itxiaozhang.com www.itxiaozhang.com;<br><br>    <span class="hljs-attribute">root</span> /var/www/itxiaozhang.com;  <span class="hljs-comment"># 替换为你的静态网页文件目录</span><br><br>    <span class="hljs-attribute">index</span> index.html;<br><br>    <span class="hljs-attribute">ssl_certificate</span> /etc/letsencrypt/live/itxiaozhang.com/fullchain.pem;<br>    <span class="hljs-attribute">ssl_certificate_key</span> /etc/letsencrypt/live/itxiaozhang.com/privkey.pem;<br><br>    <span class="hljs-attribute">include</span> /etc/letsencrypt/options-ssl-nginx.conf;<br>    <span class="hljs-attribute">ssl_dhparam</span> /etc/letsencrypt/ssl-dhparams.pem;<br><br>    <span class="hljs-section">location</span> / &#123;<br>        <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ =<span class="hljs-number">404</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">server_name</span> itxiaozhang.com www.itxiaozhang.com;<br><br>    <span class="hljs-attribute">return</span> <span class="hljs-number">301</span> https://<span class="hljs-variable">$server_name</span><span class="hljs-variable">$request_uri</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -411,13 +411,13 @@
 <li><p><strong>启用 Nginx 配置</strong></p>
 <ul>
 <li><p>创建符号链接以启用该配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">ln</span> -s /etc/nginx/sites-available/itxiaozhang.com /etc/nginx/sites-enabled/<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">ln</span> -s /etc/nginx/sites-available/itxiaozhang.com /etc/nginx/sites-enabled/<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p><strong>重新加载 Nginx</strong></p>
 <ul>
 <li><p>通过以下命令重新加载 Nginx 以应用新配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo systemctl reload nginx<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl reload nginx<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ol>
