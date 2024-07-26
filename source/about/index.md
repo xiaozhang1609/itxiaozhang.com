@@ -14,4 +14,4 @@ date: 2023-03-29 00:39:06
 ## 联系我
 
 - 我的微信: xiaozhang1609  
-- 我的邮箱: xiaozhang.tech#hotmail.com
+- 我的邮箱: xiaozhang.tech@hotmail.com
