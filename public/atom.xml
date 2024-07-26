@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-07-25T01:27:02.030Z</updated>
+  <updated>2024-07-26T10:23:05.196Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从头开始安装一个软件：官网下载纯净安装</title>
+    <link href="https://itxiaozhang.com/software-installation-guide-download-pure-version-from-official-site/"/>
+    <id>https://itxiaozhang.com/software-installation-guide-download-pure-version-from-official-site/</id>
+    <published>2024-07-26T09:58:36.000Z</published>
+    <updated>2024-07-26T10:23:05.196Z</updated>
+    
+    
+    <summary type="html">这篇文章提供了一份保姆级的软件安装教程，适用于各类软件。内容涵盖从找到软件官网、下载安装包到完成安装的全过程。教程简单易懂，特别适合普通用户，帮助他们顺利完成软件的安装过程。</summary>
+    
+    
+    
+    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="软件安装" scheme="https://itxiaozhang.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客</title>
@@ -392,25 +411,6 @@
     <category term="Win11" scheme="https://itxiaozhang.com/tags/Win11/"/>
     
     <category term="WRC" scheme="https://itxiaozhang.com/tags/WRC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树懒：缓慢是一种生存策略[译]</title>
-    <link href="https://itxiaozhang.com/sloth-survival-strategies/"/>
-    <id>https://itxiaozhang.com/sloth-survival-strategies/</id>
-    <published>2024-05-27T06:04:38.000Z</published>
-    <updated>2024-07-24T12:14:39.921Z</updated>
-    
-    
-    <summary type="html">这篇文章探讨了树懒缓慢行动的生物学原因。通过研究树懒的视力、低热量饮食和低新陈代谢率，揭示了缓慢是其成功生存的关键。树懒的色盲视力、以叶子为主的食物以及极慢的消化速度，导致了它们的行动迟缓。这种缓慢行动不仅是一种生存策略，还反映了树懒长期适应树上生活的演化历程。</summary>
-    
-    
-    
-    <category term="文章翻译" scheme="https://itxiaozhang.com/categories/%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
-    
-    
-    <category term="树懒" scheme="https://itxiaozhang.com/tags/%E6%A0%91%E6%87%92/"/>
     
   </entry>
   
