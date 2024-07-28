@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-07-26T10:23:05.196Z</updated>
+  <updated>2024-07-28T05:04:16.082Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>阅读与感悟周记21</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-21/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-21/</id>
+    <published>2024-07-28T04:25:39.000Z</published>
+    <updated>2024-07-28T05:04:16.082Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第21周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从头开始安装一个软件：官网下载纯净安装</title>
     <link href="https://itxiaozhang.com/software-installation-guide-download-pure-version-from-official-site/"/>
     <id>https://itxiaozhang.com/software-installation-guide-download-pure-version-from-official-site/</id>
     <published>2024-07-26T09:58:36.000Z</published>
-    <updated>2024-07-26T10:23:05.196Z</updated>
+    <updated>2024-07-26T14:32:57.534Z</updated>
     
     
     <summary type="html">这篇文章提供了一份保姆级的软件安装教程，适用于各类软件。内容涵盖从找到软件官网、下载安装包到完成安装的全过程。教程简单易懂，特别适合普通用户，帮助他们顺利完成软件的安装过程。</summary>
@@ -388,29 +407,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决Windows 11系统下 WRC 游戏键盘操作卡顿问题</title>
-    <link href="https://itxiaozhang.com/solve-windows-11-wrc-game-keyboard-lag-issues/"/>
-    <id>https://itxiaozhang.com/solve-windows-11-wrc-game-keyboard-lag-issues/</id>
-    <published>2024-05-29T01:06:20.000Z</published>
-    <updated>2024-07-24T12:14:39.918Z</updated>
-    
-    
-    <summary type="html">本文解决了Win11系统玩WRC游戏键盘卡顿问题，通过添加英语（美国）语言并将其设为默认输入法，以下是详细操作流程。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="修电脑" scheme="https://itxiaozhang.com/tags/%E4%BF%AE%E7%94%B5%E8%84%91/"/>
-    
-    <category term="Win11" scheme="https://itxiaozhang.com/tags/Win11/"/>
-    
-    <category term="WRC" scheme="https://itxiaozhang.com/tags/WRC/"/>
     
   </entry>
   
