@@ -169,14 +169,9 @@ vim /etc/nginx/sites-available/wallos.itxiaozhang.com
 
 ```nginx
 server {
-    listen 443 ssl;
-    listen [::]:443 ssl;
+    listen 80;
+    listen [::]:80;
     server_name wallos.itxiaozhang.com;
-
-    ssl_certificate /etc/letsencrypt/live/wallos.itxiaozhang.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/wallos.itxiaozhang.com/privkey.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
     location / {
         proxy_pass http://localhost:8282;
@@ -185,13 +180,6 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
-}
-
-server {
-    listen 80;
-    listen [::]:80;
-    server_name wallos.itxiaozhang.com;
-    return 301 https://$server_name$request_uri;
 }
 ```
 

@@ -36,8 +36,8 @@ tags:
 
 ## 安装和使用
 
-- [哔哩哔哩](lianjie)
-- [西瓜视频](lianjie)
+- [哔哩哔哩](https://www.bilibili.com/video/BV13PvCeXE41)
+- [西瓜视频](https://www.ixigua.com/7397650804745699850)
 
 ---
 ▶ 可以在[关于](https://itxiaozhang.com/about/)或者[这篇文章](https://itxiaozhang.com/about-computer-repair-services-with-me/)找到我的联系方式。
