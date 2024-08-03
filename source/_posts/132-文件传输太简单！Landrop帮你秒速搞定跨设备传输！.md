@@ -69,8 +69,8 @@ tags:
 
 ## 视频教程
 
-- [哔哩哔哩](lianjie)
-- [西瓜视频](lianjie)
+- [哔哩哔哩](https://www.bilibili.com/video/BV1K9vaeSE7Z)
+- [西瓜视频](https://www.ixigua.com/7398138038297035301)
 
 ---
 ▶ 可以在[关于](https://itxiaozhang.com/about/)或者[这篇文章](https://itxiaozhang.com/about-computer-repair-services-with-me/)找到我的联系方式。
