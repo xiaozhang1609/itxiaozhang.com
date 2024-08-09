@@ -155,6 +155,11 @@ tags:
    - 进入 Cloudflare Pages 项目的设置页面，找到 `Custom Domains`，添加自定义域名。
 
 ---
+
+> 备注：
+> sticky: true  # 添加这一行来置顶文章，有些主题可能需要特定的格式或数值
+
+---
 ▶ 可以在[关于](https://itxiaozhang.com/about/)或者[这篇文章](https://itxiaozhang.com/about-computer-repair-services-with-me/)找到我的联系方式。
 ▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。  
 ▶ **我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。**  

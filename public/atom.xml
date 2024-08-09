@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-08-03T08:15:30.304Z</updated>
+  <updated>2024-08-09T14:28:56.656Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阅读与感悟周记23</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-23/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-23/</id>
+    <published>2024-08-09T14:03:56.000Z</published>
+    <updated>2024-08-09T14:28:56.656Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第23周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读与感悟周记22</title>
@@ -139,7 +158,7 @@
     <link href="https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/"/>
     <id>https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/</id>
     <published>2024-07-24T14:38:03.000Z</published>
-    <updated>2024-07-25T01:27:02.030Z</updated>
+    <updated>2024-08-09T14:16:49.257Z</updated>
     
     
     <summary type="html">这篇文章记录我使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客，记录如何安装和配置 Hexo，如何通过 SSH 将项目推送到 GitHub，以及如何在 Cloudflare Pages 部署博客并设置自定义域名。</summary>
@@ -388,29 +407,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三种方法教你下载 Windows 10 和 Windows 11 原生镜像</title>
-    <link href="https://itxiaozhang.com/three-methods-to-download-windows-10-and-windows-11-iso/"/>
-    <id>https://itxiaozhang.com/three-methods-to-download-windows-10-and-windows-11-iso/</id>
-    <published>2024-06-20T09:54:40.000Z</published>
-    <updated>2024-07-24T12:14:39.918Z</updated>
-    
-    
-    <summary type="html">这篇教程详细介绍了三种下载 Windows 10 和 Windows 11 原生镜像的方法，包括通过微软官网、iTellYou 网站和系统库网站下载，帮助你快速获取所需的操作系统镜像文件。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="修电脑" scheme="https://itxiaozhang.com/tags/%E4%BF%AE%E7%94%B5%E8%84%91/"/>
-    
-    <category term="ISO下载" scheme="https://itxiaozhang.com/tags/ISO%E4%B8%8B%E8%BD%BD/"/>
-    
-    <category term="镜像下载" scheme="https://itxiaozhang.com/tags/%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD/"/>
     
   </entry>
   
