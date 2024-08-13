@@ -345,10 +345,21 @@ navbar:
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    #- { key: "我的", link: "https://read.itxiaozhang.com", icon: "iconfont icon-user-fill" }
+    - {
+      key: '我的',
+      icon: 'iconfont icon-books',
+      submenu: [
+        { key: '阅读记录', link: 'https://read.itxiaozhang.com' },
+        { key: '配置指南', link: 'https://hexo.fluid-dev.com/docs/guide/' },
+        { key: '图标用法', link: 'https://hexo.fluid-dev.com/docs/icon/' }
+      ]
+    }
+    #- { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "工具", link: "/tools/", icon: "iconfont briefcase icon-briefcase" }
     - { key: "修电脑", link: "https://fixpc.cc", icon: "iconfont bug icon-bug" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files

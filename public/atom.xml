@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-08-09T15:12:25.328Z</updated>
+  <updated>2024-08-13T14:26:18.796Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,57 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PixPin截图图软件教程</title>
+    <link href="https://itxiaozhang.com/pixpin-screenshot-sticky-notes-software-tutorial/"/>
+    <id>https://itxiaozhang.com/pixpin-screenshot-sticky-notes-software-tutorial/</id>
+    <published>2024-08-13T14:18:55.000Z</published>
+    <updated>2024-08-13T14:26:18.796Z</updated>
+    
+    
+    <summary type="html">这篇文章讲了PixPin软件的六大主要功能：截图、贴图、长截图、文字识别、标注和动图录制等。</summary>
+    
+    
+    
+    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="PixPin" scheme="https://itxiaozhang.com/tags/PixPin/"/>
+    
+    <category term="截图软件" scheme="https://itxiaozhang.com/tags/%E6%88%AA%E5%9B%BE%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="贴图" scheme="https://itxiaozhang.com/tags/%E8%B4%B4%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用JavaScript书签提取构造URL下载PDF文件</title>
+    <link href="https://itxiaozhang.com/create-bookmark-url-download-pdf/"/>
+    <id>https://itxiaozhang.com/create-bookmark-url-download-pdf/</id>
+    <published>2024-08-11T04:09:58.000Z</published>
+    <updated>2024-08-11T04:14:09.866Z</updated>
+    
+    
+    <summary type="html">本文介绍如何创建一个浏览器书签，通过JavaScript自动提取当前页面的ID参数，构造PDF文件的下载链接，并在新窗口中打开该链接。</summary>
+    
+    
+    
+    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
+    
+    
+    <category term="书签" scheme="https://itxiaozhang.com/tags/%E4%B9%A6%E7%AD%BE/"/>
+    
+    <category term="浏览器书签" scheme="https://itxiaozhang.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE/"/>
+    
+    <category term="js脚本" scheme="https://itxiaozhang.com/tags/js%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>阅读与感悟周记23</title>
     <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-23/"/>
     <id>https://itxiaozhang.com/weekly-reflections-reading-insights-23/</id>
     <published>2024-08-09T14:03:56.000Z</published>
-    <updated>2024-08-09T15:12:25.328Z</updated>
+    <updated>2024-08-10T02:26:31.747Z</updated>
     
     
     <summary type="html">这是《阅读与感悟周记》的第23周，记录我本周的所见所闻所思所想。</summary>
@@ -337,7 +383,7 @@
     <link href="https://itxiaozhang.com/website-recommendation-collection/"/>
     <id>https://itxiaozhang.com/website-recommendation-collection/</id>
     <published>2024-07-01T09:33:39.000Z</published>
-    <updated>2024-08-03T08:16:48.964Z</updated>
+    <updated>2024-08-12T12:30:16.277Z</updated>
     
     
     <summary type="html">本文收集并分享一些有趣的网站/工具，每一期都有简单的对照视频讲解。</summary>
@@ -360,46 +406,6 @@
     
     
     <summary type="html">这是“增援未来计划”系列第17期，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>头脑肥胖危机[译]</title>
-    <link href="https://itxiaozhang.com/the-intellectual-obesity-crisis/"/>
-    <id>https://itxiaozhang.com/the-intellectual-obesity-crisis/</id>
-    <published>2024-06-29T13:45:02.000Z</published>
-    <updated>2024-07-24T12:14:39.922Z</updated>
-    
-    
-    <summary type="html">在信息过剩的时代，我们的好奇心变成了分心，导致智力肥胖。低质量的垃圾信息充斥网络，虽能带来短暂的满足感，但对生活无益，甚至有害。培养元意识和选择性信息摄入有助于避免这一现象。</summary>
-    
-    
-    
-    <category term="文章翻译" scheme="https://itxiaozhang.com/categories/%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
-    
-    
-    <category term="信息" scheme="https://itxiaozhang.com/tags/%E4%BF%A1%E6%81%AF/"/>
-    
-    <category term="阅读" scheme="https://itxiaozhang.com/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>增援未来计划-阅读与感悟周记16</title>
-    <link href="https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-16/"/>
-    <id>https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-16/</id>
-    <published>2024-06-21T14:22:13.000Z</published>
-    <updated>2024-07-24T12:14:39.912Z</updated>
-    
-    
-    <summary type="html">这是“增援未来计划”系列第16期，记录我本周的所见所闻所思所想。</summary>
     
     
     
