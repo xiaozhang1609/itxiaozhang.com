@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-08-13T14:26:18.796Z</updated>
+  <updated>2024-08-18T02:07:26.366Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阅读与感悟周记24</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-24/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-24/</id>
+    <published>2024-08-18T01:39:37.000Z</published>
+    <updated>2024-08-18T02:07:26.366Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第24周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GeekUninstaller：高效清理电脑上的软件</title>
+    <link href="https://itxiaozhang.com/geekuninstaller-effective-software-cleaning/"/>
+    <id>https://itxiaozhang.com/geekuninstaller-effective-software-cleaning/</id>
+    <published>2024-08-17T02:23:53.000Z</published>
+    <updated>2024-08-18T02:32:01.646Z</updated>
+    
+    
+    <summary type="html">这篇文章介绍了GeekUninstaller，帮助你高效卸载电脑上的软件。它能彻底清理不需要的软件及其相关注册表信息，并提供简单的操作指南和附加功能说明。</summary>
+    
+    
+    
+    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="Geek Uninstaller" scheme="https://itxiaozhang.com/tags/Geek-Uninstaller/"/>
+    
+    <category term="卸载工具" scheme="https://itxiaozhang.com/tags/%E5%8D%B8%E8%BD%BD%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>PixPin截图图软件教程</title>
@@ -375,44 +415,6 @@
     
     
     <category term="重命名" scheme="https://itxiaozhang.com/tags/%E9%87%8D%E5%91%BD%E5%90%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站推荐合集</title>
-    <link href="https://itxiaozhang.com/website-recommendation-collection/"/>
-    <id>https://itxiaozhang.com/website-recommendation-collection/</id>
-    <published>2024-07-01T09:33:39.000Z</published>
-    <updated>2024-08-12T12:30:16.277Z</updated>
-    
-    
-    <summary type="html">本文收集并分享一些有趣的网站/工具，每一期都有简单的对照视频讲解。</summary>
-    
-    
-    
-    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="网站" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%AB%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>增援未来计划-阅读与感悟周记17</title>
-    <link href="https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-17/"/>
-    <id>https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-17/</id>
-    <published>2024-06-30T04:18:22.000Z</published>
-    <updated>2024-07-24T12:14:39.913Z</updated>
-    
-    
-    <summary type="html">这是“增援未来计划”系列第17期，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
