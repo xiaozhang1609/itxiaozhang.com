@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-08-18T02:07:26.366Z</updated>
+  <updated>2024-08-24T13:18:50.629Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何玩黑神话悟空？注册账号购买游戏全流程</title>
+    <link href="https://itxiaozhang.com/how-to-play-black-myth-wukong-register-buy-game/"/>
+    <id>https://itxiaozhang.com/how-to-play-black-myth-wukong-register-buy-game/</id>
+    <published>2024-08-24T13:13:37.000Z</published>
+    <updated>2024-08-24T13:18:50.629Z</updated>
+    
+    
+    <summary type="html">这篇文章记录了《黑神话：悟空》的全流程操作指南，包括网易邮箱和Steam账号的注册、游戏的购买以及下载步骤。用户可以通过本文快速完成相关操作，轻松开始游戏体验。</summary>
+    
+    
+    
+    <category term="电脑技巧" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="steam" scheme="https://itxiaozhang.com/tags/steam/"/>
+    
+    <category term="黑神话悟空" scheme="https://itxiaozhang.com/tags/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读与感悟周记24</title>
@@ -40,7 +61,7 @@
     <link href="https://itxiaozhang.com/geekuninstaller-effective-software-cleaning/"/>
     <id>https://itxiaozhang.com/geekuninstaller-effective-software-cleaning/</id>
     <published>2024-08-17T02:23:53.000Z</published>
-    <updated>2024-08-18T02:32:01.646Z</updated>
+    <updated>2024-08-18T04:51:16.427Z</updated>
     
     
     <summary type="html">这篇文章介绍了GeekUninstaller，帮助你高效卸载电脑上的软件。它能彻底清理不需要的软件及其相关注册表信息，并提供简单的操作指南和附加功能说明。</summary>
@@ -396,25 +417,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文件批量重命名</title>
-    <link href="https://itxiaozhang.com/batch-file-renaming/"/>
-    <id>https://itxiaozhang.com/batch-file-renaming/</id>
-    <published>2024-07-03T06:12:32.000Z</published>
-    <updated>2024-07-24T12:14:39.918Z</updated>
-    
-    
-    <summary type="html">本文探讨了如何利用Python批量重命名文件，通过正则表达式匹配文件名格式，并增加指定数值以实现文件名数字部分的更新。详细介绍了代码实现及其在不同文件夹结构下的应用，旨在帮助用户提升文件管理效率。</summary>
-    
-    
-    
-    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
-    
-    
-    <category term="重命名" scheme="https://itxiaozhang.com/tags/%E9%87%8D%E5%91%BD%E5%90%8D/"/>
     
   </entry>
   

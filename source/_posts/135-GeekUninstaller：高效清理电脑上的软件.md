@@ -22,9 +22,8 @@ tags:
 - **便携性**：单个小型EXE文件可在任何32位和64位Windows系统上运行。
 
 ### 软件下载
+
 - [官网下载](https://geekuninstaller.com/)
-
-
 
 ## 视频教程
 
