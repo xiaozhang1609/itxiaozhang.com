@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-08-25T02:40:09.833Z</updated>
+  <updated>2024-08-31T13:31:37.302Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阅读与感悟周记26</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-26/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-26/</id>
+    <published>2024-08-31T13:11:37.000Z</published>
+    <updated>2024-08-31T13:31:37.302Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第26周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读与感悟周记25</title>
@@ -398,25 +417,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>提升用户阅读体验：博客和个人网站的小功能[译]</title>
-    <link href="https://itxiaozhang.com/enhancing-reading-experience-micro-features-for-blogs-and-personal-websites/"/>
-    <id>https://itxiaozhang.com/enhancing-reading-experience-micro-features-for-blogs-and-personal-websites/</id>
-    <published>2024-07-12T02:09:34.000Z</published>
-    <updated>2024-07-24T12:14:39.922Z</updated>
-    
-    
-    <summary type="html">通过实现边注、目录、易链接标题等小功能，博客和个人网站能够显著提升用户的阅读体验，让在线阅读更加舒适和愉悦。</summary>
-    
-    
-    
-    <category term="文章翻译" scheme="https://itxiaozhang.com/categories/%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
-    
-    
-    <category term="博客" scheme="https://itxiaozhang.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
