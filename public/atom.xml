@@ -6,8 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <description>feedId:61639476635869184+userId:43116669861810176</description>
-  <updated>2024-09-29T02:56:00.589Z</updated>
+  <updated>2024-09-22T03:33:27.884Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -16,21 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>follow认证</title>
-    <link href="https://itxiaozhang.com/pinyin/"/>
-    <id>https://itxiaozhang.com/pinyin/</id>
-    <published>2024-09-29T02:55:40.000Z</published>
-    <updated>2024-09-29T02:56:00.589Z</updated>
-    
-    
-    <summary type="html">feedId:61639476635869184+userId:43116669861810176</summary>
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>阅读与感悟周记28</title>
@@ -417,9 +401,23 @@
     
   </entry>
   
-  <follow_challenge>
-      <feedId>61639476635869184</feedId>
-      <userId>43116669861810176</userId>
-  </follow_challenge>
-
+  <entry>
+    <title>gwang.top：一键官网查询</title>
+    <link href="https://itxiaozhang.com/one-click-official-site-query/"/>
+    <id>https://itxiaozhang.com/one-click-official-site-query/</id>
+    <published>2024-07-17T09:19:26.000Z</published>
+    <updated>2024-07-24T12:14:39.919Z</updated>
+    
+    
+    <summary type="html">gwang.top是由小章做的一款在线工具，专注于帮助用户快速查找软件、机构或公司的官方网站，本文介绍这款工具的使用。</summary>
+    
+    
+    
+    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
+    
+    
+    <category term="重命名" scheme="https://itxiaozhang.com/tags/%E9%87%8D%E5%91%BD%E5%90%8D/"/>
+    
+  </entry>
+  
 </feed>
