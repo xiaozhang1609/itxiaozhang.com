@@ -6,6 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
+  <description>feedId:61639476635869184+userId:43116669861810176</description>
   <updated>2024-09-29T02:56:00.589Z</updated>
   <id>https://itxiaozhang.com/</id>
   
@@ -416,4 +417,9 @@
     
   </entry>
   
+  <follow_challenge>
+      <feedId>61639476635869184</feedId>
+      <userId>43116669861810176</userId>
+  </follow_challenge>
+
 </feed>
