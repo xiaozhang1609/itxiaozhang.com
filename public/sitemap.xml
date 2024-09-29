@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itxiaozhang.com/weekly-reflections-reading-insights-29/</loc>
+    
+    <lastmod>2024-09-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itxiaozhang.com/weekly-reflections-reading-insights-28/</loc>
     
     <lastmod>2024-09-22</lastmod>
@@ -407,15 +416,6 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/fix-proxy-webpage-issues/</loc>
-    
-    <lastmod>2024-07-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://itxiaozhang.com/tongyi-qianwen-beginner-to-advanced-tutorial-lesson1/</loc>
     
     <lastmod>2024-07-24</lastmod>
@@ -426,6 +426,15 @@
   
   <url>
     <loc>https://itxiaozhang.com/usb-boot-shortcut-keys-by-brand/</loc>
+    
+    <lastmod>2024-07-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/fix-proxy-webpage-issues/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -506,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/bitlocker-key-recovery-deactivation/</loc>
+    <loc>https://itxiaozhang.com/8-piece-slide-puzzle-game/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -515,7 +524,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/8-piece-slide-puzzle-game/</loc>
+    <loc>https://itxiaozhang.com/bitlocker-key-recovery-deactivation/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -533,7 +542,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/msi-installation-failure/</loc>
+    <loc>https://itxiaozhang.com/create-windows-bootable-usb-on-macos/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -542,7 +551,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/create-windows-bootable-usb-on-macos/</loc>
+    <loc>https://itxiaozhang.com/msi-installation-failure/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -992,7 +1001,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/weekly3/</loc>
+    <loc>https://itxiaozhang.com/weekly4/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -1001,7 +1010,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/weekly4/</loc>
+    <loc>https://itxiaozhang.com/weekly3/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -1019,7 +1028,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/weekly2/</loc>
+    <loc>https://itxiaozhang.com/weekly1/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -1028,7 +1037,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/weekly1/</loc>
+    <loc>https://itxiaozhang.com/weekly2/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -1179,6 +1188,20 @@
   </url>
   
   <url>
+    <loc>https://itxiaozhang.com/tags/python/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E8%B4%AA%E5%90%83%E8%9B%87/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://itxiaozhang.com/tags/Win11/</loc>
     <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -1207,20 +1230,6 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/tags/python/</loc>
-    <lastmod>2024-09-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://itxiaozhang.com/tags/%E8%B4%AA%E5%90%83%E8%9B%87/</loc>
-    <lastmod>2024-09-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://itxiaozhang.com/tags/%E9%87%8D%E5%91%BD%E5%90%8D/</loc>
     <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -1242,13 +1251,6 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2024-09-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://itxiaozhang.com/tags/hexo/</loc>
     <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -1264,6 +1266,13 @@
   
   <url>
     <loc>https://itxiaozhang.com/tags/cloudflare/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1319,20 +1328,6 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/tags/Geek-Uninstaller/</loc>
-    <lastmod>2024-09-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://itxiaozhang.com/tags/%E5%8D%B8%E8%BD%BD%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2024-09-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://itxiaozhang.com/tags/PixPin/</loc>
     <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -1348,6 +1343,20 @@
   
   <url>
     <loc>https://itxiaozhang.com/tags/%E8%B4%B4%E5%9B%BE/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/Geek-Uninstaller/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E5%8D%B8%E8%BD%BD%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1634,13 +1643,6 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2024-09-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://itxiaozhang.com/tags/qianwen/</loc>
     <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -1677,6 +1679,13 @@
   
   <url>
     <loc>https://itxiaozhang.com/tags/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
