@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-09-29T12:33:16.117Z</updated>
+  <updated>2024-10-06T14:06:50.026Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>阅读与感悟周记30</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-30/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-30/</id>
+    <published>2024-10-06T13:40:18.000Z</published>
+    <updated>2024-10-06T14:06:50.026Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第30周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>阅读与感悟周记29</title>
     <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-29/"/>
     <id>https://itxiaozhang.com/weekly-reflections-reading-insights-29/</id>
     <published>2024-09-29T12:24:48.000Z</published>
-    <updated>2024-09-29T12:33:16.117Z</updated>
+    <updated>2024-10-06T13:58:44.382Z</updated>
     
     
     <summary type="html">这是《阅读与感悟周记》的第29周，记录我本周的所见所闻所思所想。</summary>
@@ -394,29 +413,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HandBrake：免费开源的全能视频转换神器</title>
-    <link href="https://itxiaozhang.com/handbrake-free-open-source-video-converter/"/>
-    <id>https://itxiaozhang.com/handbrake-free-open-source-video-converter/</id>
-    <published>2024-07-19T11:58:22.000Z</published>
-    <updated>2024-08-01T02:13:06.998Z</updated>
-    
-    
-    <summary type="html">这篇文章介绍HandBrake，一款免费开源的视频转换神器。它跨平台运行，提供便捷的设备预设，支持多种视频格式，支持批量处理。</summary>
-    
-    
-    
-    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="开源" scheme="https://itxiaozhang.com/tags/%E5%BC%80%E6%BA%90/"/>
-    
-    <category term="HandBrake" scheme="https://itxiaozhang.com/tags/HandBrake/"/>
-    
-    <category term="格式转换" scheme="https://itxiaozhang.com/tags/%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/"/>
     
   </entry>
   
