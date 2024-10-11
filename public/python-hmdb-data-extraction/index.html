@@ -1,0 +1,716 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="小章">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="本文介绍了一款自动化工具，用于从人类代谢组数据库（HMDB）批量提取代谢物信息，并根据需求整合。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Python 从 HMDB 网站提取数据">
+<meta property="og:url" content="https://itxiaozhang.com/python-hmdb-data-extraction/index.html">
+<meta property="og:site_name" content="IT小章">
+<meta property="og:description" content="本文介绍了一款自动化工具，用于从人类代谢组数据库（HMDB）批量提取代谢物信息，并根据需求整合。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-11T00:59:45.000Z">
+<meta property="article:modified_time" content="2024-10-11T01:08:10.148Z">
+<meta property="article:author" content="小章">
+<meta property="article:tag" content="脚本">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>使用 Python 从 HMDB 网站提取数据 - IT小章</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"itxiaozhang.com","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="IT小章" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 50vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>IT小章</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                <span>我的</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://read.itxiaozhang.com" target="_self">
+                    
+                    <span>阅读记录</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://hexo.fluid-dev.com/docs/guide/" target="_self">
+                    
+                    <span>配置指南</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://hexo.fluid-dev.com/docs/icon/" target="_self">
+                    
+                    <span>图标用法</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tools/" target="_self">
+                <i class="iconfont briefcase icon-briefcase"></i>
+                <span>工具</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://fixpc.cc" target="_self">
+                <i class="iconfont bug icon-bug"></i>
+                <span>修电脑</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">使用 Python 从 HMDB 网站提取数据</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-10-11 08:59" pubdate>
+          2024年10月11日 早上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">使用 Python 从 HMDB 网站提取数据</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/python-hmdb-data-extraction/">https://itxiaozhang.com/python-hmdb-data-extraction/</a><br>本文配合视频食用效果最佳，视频教程在文章末尾。  </p>
+</blockquote>
+<h2 id="这个程序是做什么的？"><a href="#这个程序是做什么的？" class="headerlink" title="这个程序是做什么的？"></a>这个程序是做什么的？</h2><p>这个程序可以从人类代谢组数据库（HMDB）网站<a target="_blank" rel="noopener" href="https://hmdb.ca/">https://hmdb.ca/</a>上获取代谢物的信息。你只需要提供一些HMDB ID，程序就会自动去网站上查找并下载相关数据。</p>
+<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><ol>
+<li><p><strong>批量处理</strong>：可以一次处理很多HMDB ID。</p>
+</li>
+<li><p><strong>数据检查</strong>：会检查你输入的ID是否正确，有没有重复的。</p>
+</li>
+<li><p><strong>信息收集</strong>：从网站上获取代谢物的各种信息，比如它的分类、在人体内的分布等。</p>
+</li>
+<li><p><strong>自动重试</strong>：如果因为网络问题失败了，会自动再试几次。</p>
+</li>
+<li><p><strong>进度显示</strong>：会告诉你现在处理到哪里了，完成了多少。</p>
+</li>
+<li><p><strong>定期保存</strong>：每处理一些数据就会保存一次，防止意外丢失。</p>
+</li>
+</ol>
+<h2 id="程序特点"><a href="#程序特点" class="headerlink" title="程序特点"></a>程序特点</h2><ol>
+<li><p><strong>容易使用</strong>：设计得比较简单，普通人也能操作。</p>
+</li>
+<li><p><strong>速度快</strong>：可以同时处理多个请求，所以比较快。</p>
+</li>
+<li><p><strong>不容易出错</strong>：有很多防错设计，运行起来比较稳定。</p>
+</li>
+<li><p><strong>中文界面</strong>：所有提示都是中文的，看起来更容易懂。</p>
+</li>
+</ol>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> csv<br><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">from</span> concurrent.futures <span class="hljs-keyword">import</span> ThreadPoolExecutor, as_completed<br><span class="hljs-keyword">from</span> lxml <span class="hljs-keyword">import</span> html<br><span class="hljs-keyword">import</span> re<br><span class="hljs-keyword">import</span> html <span class="hljs-keyword">as</span> html_module<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter<br><span class="hljs-keyword">import</span> sys<br><br><span class="hljs-comment"># 作者：IT小章</span><br><span class="hljs-comment"># 时间：2024年10月11日</span><br><span class="hljs-comment"># 网站：itxiaozhang.com</span><br><br>HEADERS = &#123;<br>    <span class="hljs-string">&#x27;User-Agent&#x27;</span>: <span class="hljs-string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36&#x27;</span><br>&#125;<br><br>NEW_COLUMNS = [<br>    <span class="hljs-string">&quot;exists in all living species, ranging from bacteria to humans&quot;</span>,<br>    <span class="hljs-string">&quot;only found in individuals that have used or taken this drug&quot;</span>,<br>    <span class="hljs-string">&quot;not a naturally occurring metabolite and is only found in those individuals exposed to this compound or its derivatives&quot;</span><br>]<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">check_ids</span>(<span class="hljs-params">ids</span>):<br>    invalid_ids = []<br>    id_counts = Counter(ids)<br>    duplicates = &#123;<span class="hljs-built_in">id</span>: count <span class="hljs-keyword">for</span> <span class="hljs-built_in">id</span>, count <span class="hljs-keyword">in</span> id_counts.items() <span class="hljs-keyword">if</span> count &gt; <span class="hljs-number">1</span>&#125;<br>    <br>    <span class="hljs-keyword">for</span> index, <span class="hljs-built_in">id</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(ids, <span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-built_in">id</span>.startswith(<span class="hljs-string">&quot;HMDB&quot;</span>):<br>            invalid_ids.append((index, <span class="hljs-built_in">id</span>))<br>    <br>    <span class="hljs-keyword">return</span> invalid_ids, duplicates<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_metabolite_data</span>(<span class="hljs-params">hmdb_id</span>):<br>    url = <span class="hljs-string">f&quot;https://hmdb.ca/metabolites/<span class="hljs-subst">&#123;hmdb_id&#125;</span>&quot;</span><br>    <br>    response = requests.get(url, headers=HEADERS)<br>    response.raise_for_status()<br>    <br>    tree = html.fromstring(response.content)<br><br>    data = &#123;<span class="hljs-string">&#x27;HMDB ID&#x27;</span>: hmdb_id&#125;<br><br>    description = tree.xpath(<span class="hljs-string">&quot;//td[@class=&#x27;met-desc&#x27;]/text()&quot;</span>)<br>    description_text = description[<span class="hljs-number">0</span>].strip() <span class="hljs-keyword">if</span> description <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    <span class="hljs-keyword">for</span> column <span class="hljs-keyword">in</span> NEW_COLUMNS:<br>        data[column] = <span class="hljs-string">&#x27;yes&#x27;</span> <span class="hljs-keyword">if</span> column <span class="hljs-keyword">in</span> description_text <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;no&#x27;</span><br><br>    super_class = tree.xpath(<span class="hljs-string">&quot;//tr/th[text()=&#x27;Super Class&#x27;]/following-sibling::td/a/text()&quot;</span>)<br>    data[<span class="hljs-string">&#x27;Super Class&#x27;</span>] = super_class[<span class="hljs-number">0</span>].strip() <span class="hljs-keyword">if</span> super_class <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    class_data = tree.xpath(<span class="hljs-string">&quot;//tr/th[text()=&#x27;Class&#x27;]/following-sibling::td/a/text()&quot;</span>)<br>    data[<span class="hljs-string">&#x27;Class&#x27;</span>] = class_data[<span class="hljs-number">0</span>].strip() <span class="hljs-keyword">if</span> class_data <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    sub_class = tree.xpath(<span class="hljs-string">&quot;//tr/th[text()=&#x27;Sub Class&#x27;]/following-sibling::td/a/text()&quot;</span>)<br>    data[<span class="hljs-string">&#x27;Sub Class&#x27;</span>] = sub_class[<span class="hljs-number">0</span>].strip() <span class="hljs-keyword">if</span> sub_class <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    disposition_source = tree.xpath(<span class="hljs-string">&quot;//tr/th[text()=&#x27;Disposition&#x27;]/following-sibling::td/text()&quot;</span>)<br>    data[<span class="hljs-string">&#x27;Disposition_source(Endogenous)&#x27;</span>] = disposition_source[<span class="hljs-number">0</span>].strip() <span class="hljs-keyword">if</span> disposition_source <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    endogenous_elements = tree.xpath(<span class="hljs-string">&quot;//a[@class=&#x27;category-ontnode&#x27; and text()=&#x27;Endogenous&#x27;]/following-sibling::ul[1]//li[@class=&#x27;level-inner&#x27;]&quot;</span>)<br>    endogenous_data = []<br>    <span class="hljs-keyword">for</span> element <span class="hljs-keyword">in</span> endogenous_elements:<br>        content = element.xpath(<span class="hljs-string">&quot;string()&quot;</span>).strip()<br>        content = html_module.unescape(content)<br>        content = re.sub(<span class="hljs-string">r&#x27;\s+&#x27;</span>, <span class="hljs-string">&#x27; &#x27;</span>, content).strip()<br>        endogenous_data.append(content)<br>    data[<span class="hljs-string">&#x27;Endogenous(plant or animal or more)&#x27;</span>] = <span class="hljs-string">&#x27;, &#x27;</span>.join(endogenous_data) <span class="hljs-keyword">if</span> endogenous_data <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    data[<span class="hljs-string">&#x27;Disposition_source(Endogenous)&#x27;</span>] = <span class="hljs-string">&#x27;yes&#x27;</span> <span class="hljs-keyword">if</span> data[<span class="hljs-string">&#x27;Endogenous(plant or animal or more)&#x27;</span>] <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;no&#x27;</span><br><br>    biospecimen_locations = tree.xpath(<span class="hljs-string">&quot;//th[contains(text(), &#x27;Biospecimen Locations&#x27;)]/following-sibling::td//li/text()&quot;</span>)<br>    data[<span class="hljs-string">&#x27;Biological Properties_Biospecimen Locations&#x27;</span>] = <span class="hljs-string">&#x27;, &#x27;</span>.join([item.strip() <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> biospecimen_locations]) <span class="hljs-keyword">if</span> biospecimen_locations <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    tissue_locations = tree.xpath(<span class="hljs-string">&quot;//th[contains(text(), &#x27;Tissue Locations&#x27;)]/following-sibling::td//li/text()&quot;</span>)<br>    data[<span class="hljs-string">&#x27;Biological Properties_Tissue Locations&#x27;</span>] = <span class="hljs-string">&#x27;, &#x27;</span>.join([item.strip() <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> tissue_locations]) <span class="hljs-keyword">if</span> tissue_locations <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    kegg_id = tree.xpath(<span class="hljs-string">&quot;//tr/th[text()=&#x27;KEGG Compound ID&#x27;]/following-sibling::td/a/text()&quot;</span>)<br>    data[<span class="hljs-string">&#x27;KEGG Compound ID&#x27;</span>] = kegg_id[<span class="hljs-number">0</span>].strip() <span class="hljs-keyword">if</span> kegg_id <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    chebi_id = tree.xpath(<span class="hljs-string">&quot;//tr/th[text()=&#x27;ChEBI ID&#x27;]/following-sibling::td/a/text()&quot;</span>)<br>    data[<span class="hljs-string">&#x27;ChEBI ID&#x27;</span>] = chebi_id[<span class="hljs-number">0</span>].strip() <span class="hljs-keyword">if</span> chebi_id <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    metlin_id = tree.xpath(<span class="hljs-string">&quot;//tr/th[text()=&#x27;METLIN ID&#x27;]/following-sibling::td/a/text()&quot;</span>)<br>    data[<span class="hljs-string">&#x27;METLIN ID&#x27;</span>] = metlin_id[<span class="hljs-number">0</span>].strip() <span class="hljs-keyword">if</span> metlin_id <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;&#x27;</span><br><br>    <span class="hljs-keyword">return</span> data<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_metabolite_data_with_retry</span>(<span class="hljs-params">hmdb_id, max_retries=<span class="hljs-number">3</span></span>):<br>    <span class="hljs-keyword">for</span> attempt <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(max_retries):<br>        <span class="hljs-keyword">try</span>:<br>            <span class="hljs-keyword">return</span> get_metabolite_data(hmdb_id)<br>        <span class="hljs-keyword">except</span> Exception:<br>            <span class="hljs-keyword">if</span> attempt == max_retries - <span class="hljs-number">1</span>:<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;[<span class="hljs-subst">&#123;hmdb_id&#125;</span>] 所有重试尝试均失败。&quot;</span>)<br>            time.sleep(<span class="hljs-number">2</span> ** attempt)<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">write_to_csv</span>(<span class="hljs-params">results, filename, mode=<span class="hljs-string">&#x27;a&#x27;</span></span>):<br>    fieldnames = [<span class="hljs-string">&#x27;HMDB ID&#x27;</span>] + NEW_COLUMNS + [<br>        <span class="hljs-string">&#x27;Super Class&#x27;</span>, <span class="hljs-string">&#x27;Class&#x27;</span>, <span class="hljs-string">&#x27;Sub Class&#x27;</span>, <br>        <span class="hljs-string">&#x27;Disposition_source(Endogenous)&#x27;</span>, <span class="hljs-string">&#x27;Endogenous(plant or animal or more)&#x27;</span>, <br>        <span class="hljs-string">&#x27;Biological Properties_Biospecimen Locations&#x27;</span>,  <span class="hljs-comment"># 添加新列</span><br>        <span class="hljs-string">&#x27;Biological Properties_Tissue Locations&#x27;</span>,<br>        <span class="hljs-string">&#x27;KEGG Compound ID&#x27;</span>, <span class="hljs-string">&#x27;ChEBI ID&#x27;</span>, <span class="hljs-string">&#x27;METLIN ID&#x27;</span><br>    ]<br>    <br>    file_exists = os.path.isfile(filename)<br>    <br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, mode, newline=<span class="hljs-string">&#x27;&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>) <span class="hljs-keyword">as</span> csvfile:<br>        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> file_exists <span class="hljs-keyword">or</span> mode == <span class="hljs-string">&#x27;w&#x27;</span>:<br>            writer.writeheader()<br>        writer.writerows(results)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">process_ids</span>(<span class="hljs-params">hmdb_ids, max_workers=<span class="hljs-number">5</span></span>):<br>    results = &#123;&#125;<br>    total_ids = <span class="hljs-built_in">len</span>(hmdb_ids)<br>    processed_count = <span class="hljs-number">0</span><br>    success_count = <span class="hljs-number">0</span><br>    failure_count = <span class="hljs-number">0</span><br>    <br>    <span class="hljs-keyword">with</span> ThreadPoolExecutor(max_workers=max_workers) <span class="hljs-keyword">as</span> executor:<br>        future_to_id = &#123;executor.submit(get_metabolite_data_with_retry, hmdb_id): hmdb_id <span class="hljs-keyword">for</span> hmdb_id <span class="hljs-keyword">in</span> hmdb_ids&#125;<br>        <br>        <span class="hljs-keyword">for</span> future <span class="hljs-keyword">in</span> as_completed(future_to_id):<br>            hmdb_id = future_to_id[future]<br>            processed_count += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">try</span>:<br>                data = future.result()<br>                <span class="hljs-keyword">if</span> data:<br>                    results[hmdb_id] = data<br>                    status = <span class="hljs-string">&quot;成功&quot;</span><br>                    success_count += <span class="hljs-number">1</span><br>                <span class="hljs-keyword">else</span>:<br>                    status = <span class="hljs-string">&quot;失败&quot;</span><br>                    failure_count += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">except</span> Exception:<br>                status = <span class="hljs-string">&quot;失败&quot;</span><br>                failure_count += <span class="hljs-number">1</span><br>            <br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;正在处理第 <span class="hljs-subst">&#123;processed_count&#125;</span>/<span class="hljs-subst">&#123;total_ids&#125;</span> 个: <span class="hljs-subst">&#123;hmdb_id&#125;</span> - <span class="hljs-subst">&#123;status&#125;</span>&quot;</span>)<br>            <br>            <span class="hljs-comment"># 每处理10个数据后写入文件</span><br>            <span class="hljs-keyword">if</span> processed_count % <span class="hljs-number">10</span> == <span class="hljs-number">0</span>:<br>                write_to_csv(<span class="hljs-built_in">list</span>(results.values()), <span class="hljs-string">&#x27;代谢物数据_最终.csv&#x27;</span>, mode=<span class="hljs-string">&#x27;a&#x27;</span>)<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;已保存到最终文件。已处理: <span class="hljs-subst">&#123;processed_count&#125;</span>, 成功: <span class="hljs-subst">&#123;success_count&#125;</span>, 失败: <span class="hljs-subst">&#123;failure_count&#125;</span>&quot;</span>)<br>                results.clear()  <span class="hljs-comment"># 清空已写入的结果，节省内存</span><br>    <br>    <span class="hljs-comment"># 处理剩余的结果</span><br>    <span class="hljs-keyword">if</span> results:<br>        write_to_csv(<span class="hljs-built_in">list</span>(results.values()), <span class="hljs-string">&#x27;代谢物数据_最终.csv&#x27;</span>, mode=<span class="hljs-string">&#x27;a&#x27;</span>)<br>    <br>    <span class="hljs-keyword">return</span> success_count, failure_count<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():<br>    <span class="hljs-keyword">try</span>:<br>        <span class="hljs-comment"># 检查 id.txt 是否存在</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(<span class="hljs-string">&#x27;id.txt&#x27;</span>):<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;错误：找不到 id.txt 文件。请确保该文件与程序在同一目录下。&quot;</span>)<br>            <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;按回车键退出...&quot;</span>)<br>            sys.exit(<span class="hljs-number">1</span>)<br><br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;id.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>            hmdb_ids = f.read().splitlines()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;从id.txt加载了 <span class="hljs-subst">&#123;<span class="hljs-built_in">len</span>(hmdb_ids)&#125;</span> 个ID&quot;</span>)<br>        <br>        <span class="hljs-comment"># 检查异常和重复数据</span><br>        invalid_ids, duplicates = check_ids(hmdb_ids)<br>        <br>        <span class="hljs-keyword">if</span> invalid_ids:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;发现以下异常ID:&quot;</span>)<br>            <span class="hljs-keyword">for</span> index, <span class="hljs-built_in">id</span> <span class="hljs-keyword">in</span> invalid_ids:<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;  第<span class="hljs-subst">&#123;index&#125;</span>行: <span class="hljs-subst">&#123;<span class="hljs-built_in">id</span>&#125;</span>&quot;</span>)<br>        <br>        <span class="hljs-keyword">if</span> duplicates:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;发现以下重复ID:&quot;</span>)<br>            <span class="hljs-keyword">for</span> <span class="hljs-built_in">id</span>, count <span class="hljs-keyword">in</span> duplicates.items():<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;  <span class="hljs-subst">&#123;<span class="hljs-built_in">id</span>&#125;</span>: 重复<span class="hljs-subst">&#123;count&#125;</span>次&quot;</span>)<br>        <br>        <span class="hljs-comment"># 过滤掉无效ID，保留有效的唯一ID</span><br>        valid_ids = [<span class="hljs-built_in">id</span> <span class="hljs-keyword">for</span> <span class="hljs-built_in">id</span> <span class="hljs-keyword">in</span> hmdb_ids <span class="hljs-keyword">if</span> <span class="hljs-built_in">id</span>.startswith(<span class="hljs-string">&quot;HMDB&quot;</span>)]<br>        unique_ids = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">dict</span>.fromkeys(valid_ids))  <span class="hljs-comment"># 保持顺序的去重</span><br>        <br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;将处理 <span class="hljs-subst">&#123;<span class="hljs-built_in">len</span>(unique_ids)&#125;</span> 个有效且唯一的ID&quot;</span>)<br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;发生错误: <span class="hljs-subst">&#123;e&#125;</span>&quot;</span>)<br>    <span class="hljs-keyword">finally</span>:<br>        <span class="hljs-comment"># 清空或创建新的CSV文件</span><br>        write_to_csv([], <span class="hljs-string">&#x27;代谢物数据_最终.csv&#x27;</span>, mode=<span class="hljs-string">&#x27;w&#x27;</span>)<br><br>        success_count, failure_count = process_ids(unique_ids)<br><br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;数据提取完成。总计: <span class="hljs-subst">&#123;<span class="hljs-built_in">len</span>(unique_ids)&#125;</span>, 成功: <span class="hljs-subst">&#123;success_count&#125;</span>, 失败: <span class="hljs-subst">&#123;failure_count&#125;</span>&quot;</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;最终结果已保存在代谢物数据_最终.csv中&quot;</span>)<br><br>        <span class="hljs-comment"># 替换原来的 input() 调用</span><br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;按回车键退出程序...&quot;</span>)<br>        <span class="hljs-keyword">try</span>:<br>            <span class="hljs-built_in">input</span>()<br>        <span class="hljs-keyword">except</span> EOFError:<br>            <span class="hljs-keyword">pass</span><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    main()<br></code></pre></td></tr></table></figure>
+
+<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><ul>
+<li><a href="lianjie">哔哩哔哩</a></li>
+<li><a href="lianjie">西瓜视频</a></li>
+</ul>
+<hr>
+<p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/" class="category-chain-item">编程案例</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%84%9A%E6%9C%AC/" class="print-no-link">#脚本</a>
+      
+        <a href="/tags/python/" class="print-no-link">#python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>使用 Python 从 HMDB 网站提取数据</div>
+      <div>https://itxiaozhang.com/python-hmdb-data-extraction/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>小章</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年10月11日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/weekly-reflections-reading-insights-30/" title="阅读与感悟周记30">
+                        <span class="hidden-mobile">阅读与感悟周记30</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
