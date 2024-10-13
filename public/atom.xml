@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-10-11T01:08:10.148Z</updated>
+  <updated>2024-10-13T07:44:08.892Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>阅读与感悟周记31</title>
+    <link href="https://itxiaozhang.com/pinyin/"/>
+    <id>https://itxiaozhang.com/pinyin/</id>
+    <published>2024-10-13T01:04:17.000Z</published>
+    <updated>2024-10-13T07:44:08.892Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第31周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用 Python 从 HMDB 网站提取数据</title>
     <link href="https://itxiaozhang.com/python-hmdb-data-extraction/"/>
     <id>https://itxiaozhang.com/python-hmdb-data-extraction/</id>
     <published>2024-10-11T00:59:45.000Z</published>
-    <updated>2024-10-11T01:08:10.148Z</updated>
+    <updated>2024-10-12T12:01:47.656Z</updated>
     
     
     <summary type="html">本文介绍了一款自动化工具，用于从人类代谢组数据库（HMDB）批量提取代谢物信息，并根据需求整合。</summary>
@@ -392,29 +411,6 @@
     
     
     <category term="软件安装" scheme="https://itxiaozhang.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客</title>
-    <link href="https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/"/>
-    <id>https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/</id>
-    <published>2024-07-24T14:38:03.000Z</published>
-    <updated>2024-08-09T14:16:49.257Z</updated>
-    
-    
-    <summary type="html">这篇文章记录我使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客，记录如何安装和配置 Hexo，如何通过 SSH 将项目推送到 GitHub，以及如何在 Cloudflare Pages 部署博客并设置自定义域名。</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://itxiaozhang.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="hexo" scheme="https://itxiaozhang.com/tags/hexo/"/>
-    
-    <category term="博客" scheme="https://itxiaozhang.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="cloudflare" scheme="https://itxiaozhang.com/tags/cloudflare/"/>
     
   </entry>
   
