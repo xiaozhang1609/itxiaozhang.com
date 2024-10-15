@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-10-13T08:03:51.190Z</updated>
+  <updated>2024-10-15T02:23:35.797Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>RSS 阅读器推荐 Follow</title>
+    <link href="https://itxiaozhang.com/rss-reader-recommendation-follow/"/>
+    <id>https://itxiaozhang.com/rss-reader-recommendation-follow/</id>
+    <published>2024-10-15T01:57:53.000Z</published>
+    <updated>2024-10-15T02:23:35.797Z</updated>
+    
+    
+    <summary type="html">Follow 是一款创新的 RSS 阅读器，支持多种内容订阅（文章、社交媒体、图片、视频和音频），并通过邀请制和代币系统促进社区互动等特点。</summary>
+    
+    
+    
+    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="rss" scheme="https://itxiaozhang.com/tags/rss/"/>
+    
+    <category term="rss阅读器" scheme="https://itxiaozhang.com/tags/rss%E9%98%85%E8%AF%BB%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>阅读与感悟周记31</title>
     <link href="https://itxiaozhang.com/pinyin/"/>
     <id>https://itxiaozhang.com/pinyin/</id>
     <published>2024-10-13T01:04:17.000Z</published>
-    <updated>2024-10-13T08:03:51.190Z</updated>
+    <updated>2024-10-15T01:35:33.678Z</updated>
     
     
     <summary type="html">这是《阅读与感悟周记》的第31周，记录我本周的所见所闻所思所想。</summary>
@@ -392,25 +413,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从头开始安装一个软件：官网下载纯净安装</title>
-    <link href="https://itxiaozhang.com/software-installation-guide-download-pure-version-from-official-site/"/>
-    <id>https://itxiaozhang.com/software-installation-guide-download-pure-version-from-official-site/</id>
-    <published>2024-07-26T09:58:36.000Z</published>
-    <updated>2024-07-26T14:32:57.534Z</updated>
-    
-    
-    <summary type="html">这篇文章提供了一份保姆级的软件安装教程，适用于各类软件。内容涵盖从找到软件官网、下载安装包到完成安装的全过程。教程简单易懂，特别适合普通用户，帮助他们顺利完成软件的安装过程。</summary>
-    
-    
-    
-    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="软件安装" scheme="https://itxiaozhang.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
