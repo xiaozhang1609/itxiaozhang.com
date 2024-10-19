@@ -351,8 +351,7 @@ navbar:
       icon: 'iconfont icon-books',
       submenu: [
         { key: '阅读记录', link: 'https://read.itxiaozhang.com' },
-        { key: '配置指南', link: 'https://hexo.fluid-dev.com/docs/guide/' },
-        { key: '图标用法', link: 'https://hexo.fluid-dev.com/docs/icon/' }
+        { key: '订阅管理', link: 'https://sub.itxiaozhang.com/' }
       ]
     }
     #- { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }

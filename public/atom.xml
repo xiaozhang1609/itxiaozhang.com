@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-10-15T02:28:24.857Z</updated>
+  <updated>2024-10-19T02:12:17.334Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,51 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>阅读与感悟周记32</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-32/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-32/</id>
+    <published>2024-10-19T01:03:47.000Z</published>
+    <updated>2024-10-19T02:12:17.334Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第32周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用python写一个网页源码下载器</title>
+    <link href="https://itxiaozhang.com/python-webpage-source-downloader/"/>
+    <id>https://itxiaozhang.com/python-webpage-source-downloader/</id>
+    <published>2024-10-17T03:42:12.000Z</published>
+    <updated>2024-10-17T04:13:54.163Z</updated>
+    
+    
+    <summary type="html">这个Python脚本能帮助您轻松保存完整网页,包括图片、样式和脚本。</summary>
+    
+    
+    
+    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
+    
+    
+    <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
+    
+    <category term="python代码" scheme="https://itxiaozhang.com/tags/python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>RSS 阅读器推荐 Follow</title>
     <link href="https://itxiaozhang.com/rss-reader-recommendation-follow/"/>
     <id>https://itxiaozhang.com/rss-reader-recommendation-follow/</id>
     <published>2024-10-15T01:57:53.000Z</published>
-    <updated>2024-10-15T02:28:24.857Z</updated>
+    <updated>2024-10-17T03:53:40.358Z</updated>
     
     
     <summary type="html">Follow 是一款创新的 RSS 阅读器，支持多种内容订阅（文章、社交媒体、图片、视频和音频），并通过邀请制和代币系统促进社区互动等特点。</summary>
@@ -39,10 +79,10 @@
   
   <entry>
     <title>阅读与感悟周记31</title>
-    <link href="https://itxiaozhang.com/pinyin/"/>
-    <id>https://itxiaozhang.com/pinyin/</id>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-31/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-31/</id>
     <published>2024-10-13T01:04:17.000Z</published>
-    <updated>2024-10-15T01:35:33.678Z</updated>
+    <updated>2024-10-19T01:06:25.705Z</updated>
     
     
     <summary type="html">这是《阅读与感悟周记》的第31周，记录我本周的所见所闻所思所想。</summary>
@@ -377,42 +417,6 @@
     <category term="Landrop" scheme="https://itxiaozhang.com/tags/Landrop/"/>
     
     <category term="文件传输" scheme="https://itxiaozhang.com/tags/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>此时此刻的一点感想</title>
-    <link href="https://itxiaozhang.com/reflections-of-the-moment/"/>
-    <id>https://itxiaozhang.com/reflections-of-the-moment/</id>
-    <published>2024-07-29T14:09:34.000Z</published>
-    <updated>2024-07-29T14:21:17.896Z</updated>
-    
-    
-    <summary type="html">这篇文章写了作者对当前生活的反思和感悟。作者从大学毕业后的职业经历谈起，描述了在国企工作的压力和辞职后的放纵时光，探讨了对主流社会价值观的质疑和对自由生活的追求，表达了对未来轻松快活生活的期望。</summary>
-    
-    
-    
-    
-    <category term="感悟" scheme="https://itxiaozhang.com/tags/%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记21</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-21/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-21/</id>
-    <published>2024-07-28T04:25:39.000Z</published>
-    <updated>2024-07-28T05:04:16.082Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第21周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   

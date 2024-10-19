@@ -12,7 +12,7 @@ tags:
 
 这里是文章模板内容，记得修改 permalink 和阅读全文链接。
 
-## 视频教程
+## 视频版本
 
 - [哔哩哔哩](lianjie)
 - [YouTube](lianjie)

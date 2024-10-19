@@ -45,8 +45,8 @@ RSS（Really Simple Syndication）是一种用于发布和分发内容的网络�
 
 ## 视频教程
 
-- [哔哩哔哩](lianjie)  
-- [YouTube](lianjie)  
+- [哔哩哔哩](https://www.bilibili.com/video/BV1Tk2RYdEJy)  
+- [YouTube](https://youtu.be/ZqyIDEcUcDI?si=MtXG3us84f5a4bU5)  
 
 ---
 
