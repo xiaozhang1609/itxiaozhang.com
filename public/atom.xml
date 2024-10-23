@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-10-19T02:12:17.334Z</updated>
+  <updated>2024-10-23T09:45:38.100Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文件传输工具 LocalSend</title>
+    <link href="https://itxiaozhang.com/file-transfer-tool-localsend/"/>
+    <id>https://itxiaozhang.com/file-transfer-tool-localsend/</id>
+    <published>2024-10-23T09:38:08.000Z</published>
+    <updated>2024-10-23T09:45:38.100Z</updated>
+    
+    
+    <summary type="html">LocalSend是一款开源、跨平台的局域网文件传输工具，支持Windows、macOS、Linux、iOS和Android系统之间的文件和文本共享。</summary>
+    
+    
+    
+    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="文件传输" scheme="https://itxiaozhang.com/tags/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93/"/>
+    
+    <category term="localsend" scheme="https://itxiaozhang.com/tags/localsend/"/>
+    
+  </entry>
+  
+  <entry>
     <title>阅读与感悟周记32</title>
     <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-32/"/>
     <id>https://itxiaozhang.com/weekly-reflections-reading-insights-32/</id>
     <published>2024-10-19T01:03:47.000Z</published>
-    <updated>2024-10-19T02:12:17.334Z</updated>
+    <updated>2024-10-19T04:54:05.667Z</updated>
     
     
     <summary type="html">这是《阅读与感悟周记》的第32周，记录我本周的所见所闻所思所想。</summary>
@@ -396,27 +417,6 @@
     <category term="思维模式" scheme="https://itxiaozhang.com/tags/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%BC%8F/"/>
     
     <category term="个人成长" scheme="https://itxiaozhang.com/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文件传输太简单！Landrop帮你秒速搞定跨设备传输！</title>
-    <link href="https://itxiaozhang.com/file-transfer-made-easy-with-landrop/"/>
-    <id>https://itxiaozhang.com/file-transfer-made-easy-with-landrop/</id>
-    <published>2024-08-01T03:20:55.000Z</published>
-    <updated>2024-08-01T12:26:21.852Z</updated>
-    
-    
-    <summary type="html">这边文章介绍一款名为Landrop的高效文件传输工具，支持跨平台文件传输，无论是在Windows、macOS、Linux系统下的电脑，还是在安卓或iOS系统的手机上，都能轻松使用。本文将详细讲解如何安装Landrop，并演示如何在不同设备间传输文件。</summary>
-    
-    
-    
-    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="Landrop" scheme="https://itxiaozhang.com/tags/Landrop/"/>
-    
-    <category term="文件传输" scheme="https://itxiaozhang.com/tags/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93/"/>
     
   </entry>
   
