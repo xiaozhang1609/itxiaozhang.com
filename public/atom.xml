@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-10-23T10:19:27.206Z</updated>
+  <updated>2024-10-26T02:03:57.376Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>阅读与感悟周记33</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-33/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-33/</id>
+    <published>2024-10-25T12:46:06.000Z</published>
+    <updated>2024-10-26T02:03:57.376Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第33周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文件传输工具 LocalSend</title>
     <link href="https://itxiaozhang.com/file-transfer-tool-localsend/"/>
     <id>https://itxiaozhang.com/file-transfer-tool-localsend/</id>
     <published>2024-10-23T09:38:08.000Z</published>
-    <updated>2024-10-23T10:19:27.206Z</updated>
+    <updated>2024-10-23T12:30:25.581Z</updated>
     
     
     <summary type="html">LocalSend是一款开源、跨平台的局域网文件传输工具，支持Windows、macOS、Linux、iOS和Android系统之间的文件和文本共享。</summary>
@@ -394,29 +413,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>长期思维的惊人力量[译]</title>
-    <link href="https://itxiaozhang.com/the-surprising-power-of-long-term-thinking/"/>
-    <id>https://itxiaozhang.com/the-surprising-power-of-long-term-thinking/</id>
-    <published>2024-08-02T03:34:15.000Z</published>
-    <updated>2024-08-02T03:44:02.186Z</updated>
-    
-    
-    <summary type="html">在一个大多数人追求短期利益的世界里，长期思维能够带来显著优势。本文探讨了为什么采用长期策略比短期策略更容易获得成功，并通过对比这两种思维方式的效果，强调了耐心和持续投入的重要性。长期思维虽然看似枯燥，但它能通过微小的优势积累，实现复利增长，最终带来更大的回报。</summary>
-    
-    
-    
-    <category term="文章翻译" scheme="https://itxiaozhang.com/categories/%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
-    
-    
-    <category term="长期策略" scheme="https://itxiaozhang.com/tags/%E9%95%BF%E6%9C%9F%E7%AD%96%E7%95%A5/"/>
-    
-    <category term="思维模式" scheme="https://itxiaozhang.com/tags/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%BC%8F/"/>
-    
-    <category term="个人成长" scheme="https://itxiaozhang.com/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
     
   </entry>
   

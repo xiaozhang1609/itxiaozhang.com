@@ -49,8 +49,8 @@ LocalSend是一款开源、跨平台的局域网文件互传工具，能够在�
 
 ## 视频版本
 
-- [哔哩哔哩](lianjie)
-- [YouTube](lianjie)
+- [哔哩哔哩](https://www.bilibili.com/video/BV1B3yfY1E1V)
+- [YouTube](https://youtu.be/y0a0ptk0uw0?si=VdRCOsgS01c67hJA)
 
 ---
 ▶ 可以在[关于](https://itxiaozhang.com/about/)或者[这篇文章](https://itxiaozhang.com/about-computer-repair-services-with-me/)找到我的联系方式。
