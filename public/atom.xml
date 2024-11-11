@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-11-03T11:14:09.230Z</updated>
+  <updated>2024-11-11T05:03:13.122Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阅读与感悟周记35</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-35/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-35/</id>
+    <published>2024-11-10T13:36:04.000Z</published>
+    <updated>2024-11-11T05:03:13.122Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第35周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读与感悟周记34</title>
@@ -394,25 +413,6 @@
     <category term="浏览器书签" scheme="https://itxiaozhang.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE/"/>
     
     <category term="js脚本" scheme="https://itxiaozhang.com/tags/js%E8%84%9A%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记23</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-23/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-23/</id>
-    <published>2024-08-09T14:03:56.000Z</published>
-    <updated>2024-08-10T02:26:31.747Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第23周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
