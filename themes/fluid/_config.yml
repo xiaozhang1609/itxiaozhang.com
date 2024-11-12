@@ -345,15 +345,15 @@ navbar:
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    #- { key: "我的", link: "https://read.itxiaozhang.com", icon: "iconfont icon-user-fill" }
-    - {
-      key: '我的',
-      icon: 'iconfont icon-books',
-      submenu: [
-        { key: '阅读记录', link: 'https://read.itxiaozhang.com' },
-        { key: '订阅管理', link: 'https://sub.itxiaozhang.com/' }
-      ]
-    }
+    - { key: '阅读', link: 'https://read.itxiaozhang.com', icon: "iconfont icon-books" }
+    #- {
+    #  key: '我的',
+    #  icon: 'iconfont icon-books',
+    #  submenu: [
+    #    { key: '阅读记录', link: 'https://read.itxiaozhang.com' },
+    #    { key: '订阅管理', link: 'https://sub.itxiaozhang.com/' }
+    #  ]
+    #}
     #- { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     #- { key: "工具", link: "/tools/", icon: "iconfont briefcase icon-briefcase" }
     - { key: "工具箱", link: "https://fixpc.cc", icon: "iconfont briefcase icon-briefcase" }
