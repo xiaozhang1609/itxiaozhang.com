@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>安卓手机USB网络共享给Windows</title>
+    <link href="/how-to-share-android-phone-internet-with-windows-via-usb/"/>
+    <url>/how-to-share-android-phone-internet-with-windows-via-usb/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/how-to-share-android-phone-internet-with-windows-via-usb/">https://itxiaozhang.com/how-to-share-android-phone-internet-with-windows-via-usb/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul><li>一台安卓手机。</li><li>一台Windows电脑。</li><li>安卓手机数据线，最好是原装数据线。</li></ul><h2 id="步骤1：连接手机与电脑"><a href="#步骤1：连接手机与电脑" class="headerlink" title="步骤1：连接手机与电脑"></a>步骤1：连接手机与电脑</h2><ul><li>使用USB数据线将安卓手机和Windows电脑连起来。</li></ul><h2 id="步骤2：启用USB网络共享"><a href="#步骤2：启用USB网络共享" class="headerlink" title="步骤2：启用USB网络共享"></a>步骤2：启用USB网络共享</h2><ol><li>打开手机“设置”。</li><li>搜索“网络共享”。</li><li>找到“USB网络共享”。</li><li>开启“USB网络共享”开关。</li><li>如果搜不到“USB网络共享”，请看步骤3。</li></ol><h2 id="步骤3：启用USB调试（备用）"><a href="#步骤3：启用USB调试（备用）" class="headerlink" title="步骤3：启用USB调试（备用）"></a>步骤3：启用USB调试（备用）</h2><ol><li>打开手机“设置”。</li><li>向下滚动到底部，选择“关于手机”。</li><li>找到“软件信息”，然后点击“版本号”七次，以激活开发者选项。</li><li>继续步骤2。</li></ol><h3 id="步骤4：在Windows上设置网络"><a href="#步骤4：在Windows上设置网络" class="headerlink" title="步骤4：在Windows上设置网络"></a>步骤4：在Windows上设置网络</h3><ol><li>默认会直接自动连接，如果已经连接，就忽略以下内容。</li><li>如果没有连接，在网络适配器页面找到名为“USB Ethernet&#x2F;RNDIS”或类似的网络连接，右键点击它，然后选择“启用”。</li></ol><h3 id="步骤5：测试网络连接"><a href="#步骤5：测试网络连接" class="headerlink" title="步骤5：测试网络连接"></a>步骤5：测试网络连接</h3><ol><li>打开浏览器，尝试访问网页，看看是否可以正常上网。</li><li>如果不能上网，检查手机上的USB网络共享是否已开启，或者更换数据线。</li><li>尝试重新启动手机和电脑，有时候这能解决连接问题。</li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="lianjie">哔哩哔哩</a></li><li><a href="lianjie">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>手机共享网络</tag>
+      
+      <tag>usb网路共享</tag>
+      
+      <tag>usb</tag>
+      
+      <tag>网络共享</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>阅读与感悟周记35</title>
     <link href="/weekly-reflections-reading-insights-35/"/>
     <url>/weekly-reflections-reading-insights-35/</url>

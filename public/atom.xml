@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-11-11T05:03:13.122Z</updated>
+  <updated>2024-11-13T05:21:52.688Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓手机USB网络共享给Windows</title>
+    <link href="https://itxiaozhang.com/how-to-share-android-phone-internet-with-windows-via-usb/"/>
+    <id>https://itxiaozhang.com/how-to-share-android-phone-internet-with-windows-via-usb/</id>
+    <published>2024-11-13T05:07:27.000Z</published>
+    <updated>2024-11-13T05:21:52.688Z</updated>
+    
+    
+    <summary type="html">本文介绍如何通过USB数据线将安卓手机的网络连接共享给Windows电脑。包括启用USB调试、开启USB网络共享、连接手机与电脑及设置Windows网络的详细步骤。</summary>
+    
+    
+    
+    <category term="电脑技巧" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="手机共享网络" scheme="https://itxiaozhang.com/tags/%E6%89%8B%E6%9C%BA%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="usb网路共享" scheme="https://itxiaozhang.com/tags/usb%E7%BD%91%E8%B7%AF%E5%85%B1%E4%BA%AB/"/>
+    
+    <category term="usb" scheme="https://itxiaozhang.com/tags/usb/"/>
+    
+    <category term="网络共享" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读与感悟周记35</title>
@@ -390,29 +415,6 @@
     <category term="截图软件" scheme="https://itxiaozhang.com/tags/%E6%88%AA%E5%9B%BE%E8%BD%AF%E4%BB%B6/"/>
     
     <category term="贴图" scheme="https://itxiaozhang.com/tags/%E8%B4%B4%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用JavaScript书签提取构造URL下载PDF文件</title>
-    <link href="https://itxiaozhang.com/create-bookmark-url-download-pdf/"/>
-    <id>https://itxiaozhang.com/create-bookmark-url-download-pdf/</id>
-    <published>2024-08-11T04:09:58.000Z</published>
-    <updated>2024-08-11T04:14:09.866Z</updated>
-    
-    
-    <summary type="html">本文介绍如何创建一个浏览器书签，通过JavaScript自动提取当前页面的ID参数，构造PDF文件的下载链接，并在新窗口中打开该链接。</summary>
-    
-    
-    
-    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
-    
-    
-    <category term="书签" scheme="https://itxiaozhang.com/tags/%E4%B9%A6%E7%AD%BE/"/>
-    
-    <category term="浏览器书签" scheme="https://itxiaozhang.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE/"/>
-    
-    <category term="js脚本" scheme="https://itxiaozhang.com/tags/js%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
