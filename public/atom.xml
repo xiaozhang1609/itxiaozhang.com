@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-11-13T05:21:52.688Z</updated>
+  <updated>2024-11-16T02:37:02.324Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>常见电脑网络问题解决思路</title>
+    <link href="https://itxiaozhang.com/common-computer-network-problems-solutions/"/>
+    <id>https://itxiaozhang.com/common-computer-network-problems-solutions/</id>
+    <published>2024-11-16T05:29:24.000Z</published>
+    <updated>2024-11-16T02:37:02.324Z</updated>
+    
+    
+    <summary type="html">本文提供了解决常见电脑网络问题的思路，适用于Windows 7、Windows 10 和 Windows 11 系统的电脑。</summary>
+    
+    
+    
+    <category term="电脑技巧" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="网络" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="网络问题" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>安卓手机USB网络共享给Windows</title>
     <link href="https://itxiaozhang.com/how-to-share-android-phone-internet-with-windows-via-usb/"/>
     <id>https://itxiaozhang.com/how-to-share-android-phone-internet-with-windows-via-usb/</id>
     <published>2024-11-13T05:07:27.000Z</published>
-    <updated>2024-11-13T05:21:52.688Z</updated>
+    <updated>2024-11-13T13:35:51.449Z</updated>
     
     
     <summary type="html">本文介绍如何通过USB数据线将安卓手机的网络连接共享给Windows电脑。包括启用USB调试、开启USB网络共享、连接手机与电脑及设置Windows网络的详细步骤。</summary>
@@ -392,29 +413,6 @@
     <category term="Geek Uninstaller" scheme="https://itxiaozhang.com/tags/Geek-Uninstaller/"/>
     
     <category term="卸载工具" scheme="https://itxiaozhang.com/tags/%E5%8D%B8%E8%BD%BD%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PixPin截图图软件教程</title>
-    <link href="https://itxiaozhang.com/pixpin-screenshot-sticky-notes-software-tutorial/"/>
-    <id>https://itxiaozhang.com/pixpin-screenshot-sticky-notes-software-tutorial/</id>
-    <published>2024-08-13T14:18:55.000Z</published>
-    <updated>2024-08-13T14:26:18.796Z</updated>
-    
-    
-    <summary type="html">这篇文章讲了PixPin软件的六大主要功能：截图、贴图、长截图、文字识别、标注和动图录制等。</summary>
-    
-    
-    
-    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="PixPin" scheme="https://itxiaozhang.com/tags/PixPin/"/>
-    
-    <category term="截图软件" scheme="https://itxiaozhang.com/tags/%E6%88%AA%E5%9B%BE%E8%BD%AF%E4%BB%B6/"/>
-    
-    <category term="贴图" scheme="https://itxiaozhang.com/tags/%E8%B4%B4%E5%9B%BE/"/>
     
   </entry>
   
