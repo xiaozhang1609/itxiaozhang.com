@@ -99,40 +99,7 @@ def get_metabolite_data(hmdb_id):
     super_class = tree.xpath("//tr/th[text()='Super Class']/following-sibling::td/a/text()")
     data['Super Class'] = super_class[0].strip() if super_class else ''
 
-    class_data = tree.xpath("//tr/th[text()='Class']/following-sibling::td/a/text()")
-    data['Class'] = class_data[0].strip() if class_data else ''
-
-    sub_class = tree.xpath("//tr/th[text()='Sub Class']/following-sibling::td/a/text()")
-    data['Sub Class'] = sub_class[0].strip() if sub_class else ''
-
-    disposition_source = tree.xpath("//tr/th[text()='Disposition']/following-sibling::td/text()")
-    data['Disposition_source(Endogenous)'] = disposition_source[0].strip() if disposition_source else ''
-
-    endogenous_elements = tree.xpath("//a[@class='category-ontnode' and text()='Endogenous']/following-sibling::ul[1]//li[@class='level-inner']")
-    endogenous_data = []
-    for element in endogenous_elements:
-        content = element.xpath("string()").strip()
-        content = html_module.unescape(content)
-        content = re.sub(r'\s+', ' ', content).strip()
-        endogenous_data.append(content)
-    data['Endogenous(plant or animal or more)'] = ', '.join(endogenous_data) if endogenous_data else ''
-
-    data['Disposition_source(Endogenous)'] = 'yes' if data['Endogenous(plant or animal or more)'] else 'no'
-
-    biospecimen_locations = tree.xpath("//th[contains(text(), 'Biospecimen Locations')]/following-sibling::td//li/text()")
-    data['Biological Properties_Biospecimen Locations'] = ', '.join([item.strip() for item in biospecimen_locations]) if biospecimen_locations else ''
-
-    tissue_locations = tree.xpath("//th[contains(text(), 'Tissue Locations')]/following-sibling::td//li/text()")
-    data['Biological Properties_Tissue Locations'] = ', '.join([item.strip() for item in tissue_locations]) if tissue_locations else ''
-
-    kegg_id = tree.xpath("//tr/th[text()='KEGG Compound ID']/following-sibling::td/a/text()")
-    data['KEGG Compound ID'] = kegg_id[0].strip() if kegg_id else ''
-
-    chebi_id = tree.xpath("//tr/th[text()='ChEBI ID']/following-sibling::td/a/text()")
-    data['ChEBI ID'] = chebi_id[0].strip() if chebi_id else ''
-
-    metlin_id = tree.xpath("//tr/th[text()='METLIN ID']/following-sibling::td/a/text()")
-    data['METLIN ID'] = metlin_id[0].strip() if metlin_id else ''
+    ## 其他类似
 
     return data
 

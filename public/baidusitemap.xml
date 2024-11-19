@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://itxiaozhang.com//python-hmdb-data-extraction/</loc>
+    <lastmod>2024-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://itxiaozhang.com//test/</loc>
+    <lastmod>2024-11-17</lastmod>
+  </url>
+  <url>
     <loc>https://itxiaozhang.com//weekly-reflections-reading-insights-36/</loc>
     <lastmod>2024-11-17</lastmod>
   </url>
@@ -47,10 +55,6 @@
   <url>
     <loc>https://itxiaozhang.com//rss-reader-recommendation-follow/</loc>
     <lastmod>2024-10-17</lastmod>
-  </url>
-  <url>
-    <loc>https://itxiaozhang.com//python-hmdb-data-extraction/</loc>
-    <lastmod>2024-10-12</lastmod>
   </url>
   <url>
     <loc>https://itxiaozhang.com//prompt-vault/</loc>
@@ -147,10 +151,6 @@
   <url>
     <loc>https://itxiaozhang.com//weekly-reflections-reading-insights-21/</loc>
     <lastmod>2024-07-28</lastmod>
-  </url>
-  <url>
-    <loc>https://itxiaozhang.com//test/</loc>
-    <lastmod>2024-07-27</lastmod>
   </url>
   <url>
     <loc>https://itxiaozhang.com//software-installation-guide-download-pure-version-from-official-site/</loc>
