@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itxiaozhang.com/test/</loc>
+    
+    <lastmod>2024-11-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itxiaozhang.com/vlc-best-video-player/</loc>
     
     <lastmod>2024-11-19</lastmod>
@@ -14,15 +23,6 @@
     <loc>https://itxiaozhang.com/python-hmdb-data-extraction/</loc>
     
     <lastmod>2024-11-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://itxiaozhang.com/test/</loc>
-    
-    <lastmod>2024-11-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
