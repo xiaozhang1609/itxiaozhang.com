@@ -16,22 +16,24 @@
   <meta name="author" content="小章">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这是《阅读与感悟周记》的第36周，记录我本周的所见所闻所思所想。">
+    <meta name="description" content="本文详细介绍如何使用 GitHub Actions 实现代码自动部署，通过配置 SSH 和 rsync，将 GitHub 仓库中的指定文件夹自动同步到 Ubuntu 服务器。适合需要自动化部署静态网站的开朋友。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阅读与感悟周记36">
-<meta property="og:url" content="https://itxiaozhang.com/weekly-reflections-reading-insights-36/index.html">
+<meta property="og:title" content="GitHub Actions 自动部署：配置 GitHub 仓库指定文件夹到 Ubuntu 服务器">
+<meta property="og:url" content="https://itxiaozhang.com/github-actions-sync-specific-folder-to-ubuntu-server-complete-guide/index.html">
 <meta property="og:site_name" content="IT小章">
-<meta property="og:description" content="这是《阅读与感悟周记》的第36周，记录我本周的所见所闻所思所想。">
+<meta property="og:description" content="本文详细介绍如何使用 GitHub Actions 实现代码自动部署，通过配置 SSH 和 rsync，将 GitHub 仓库中的指定文件夹自动同步到 Ubuntu 服务器。适合需要自动化部署静态网站的开朋友。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-17T10:31:12.000Z">
-<meta property="article:modified_time" content="2024-11-17T11:04:53.409Z">
+<meta property="article:published_time" content="2024-11-19T15:10:18.000Z">
+<meta property="article:modified_time" content="2024-11-19T15:21:10.826Z">
 <meta property="article:author" content="小章">
-<meta property="article:tag" content="小章周记">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="GitHub Actions">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>阅读与感悟周记36 - IT小章</title>
+  <title>GitHub Actions 自动部署：配置 GitHub 仓库指定文件夹到 Ubuntu 服务器 - IT小章</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">阅读与感悟周记36</span>
+            <span id="subtitle">GitHub Actions 自动部署：配置 GitHub 仓库指定文件夹到 Ubuntu 服务器</span>
           
         </div>
 
@@ -221,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-17 18:31" pubdate>
-          2024年11月17日 晚上
+        <time datetime="2024-11-19 23:10" pubdate>
+          2024年11月19日 晚上
         </time>
       </span>
     
@@ -233,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          767 字
         
       </span>
     
@@ -244,7 +246,7 @@
         
         
         
-          16 分钟
+          7 分钟
         
       </span>
     
@@ -281,90 +283,88 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">阅读与感悟周记36</h1>
+            <h1 id="seo-header">GitHub Actions 自动部署：配置 GitHub 仓库指定文件夹到 Ubuntu 服务器</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>原文地址：<a href="https://itxiaozhang.com/weekly-reflections-reading-insights-36/">https://itxiaozhang.com/weekly-reflections-reading-insights-36/</a>  </p>
+<p>原文地址：<a href="https://itxiaozhang.com//github-actions-sync-specific-folder-to-ubuntu-server-complete-guide/">https://itxiaozhang.com//github-actions-sync-specific-folder-to-ubuntu-server-complete-guide/</a>  </p>
 </blockquote>
-<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://m.okjike.com/originalPosts/67347eca8d6dd8c09cfdf6bd">秉承Build in Public，分享下使用Cursor实 - 即刻App</a></li>
-<li><a target="_blank" rel="noopener" href="https://m.okjike.com/originalPosts/6734974af0513f1316d538f2">最近悟到了一个顶级心态，如何拿回自己的主体性。 - 即刻App</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.v2ex.com/t/1089730">开源精神都贯彻落实不到位的国人，就不要想着网上那些可以带你赚钱的人了 - V2EX</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.v2ex.com/t/1089801">挑战:第一次出国挑战，明年 4 月 想去日本，我需要做什么准备 - V2EX</a></li>
-<li><a target="_blank" rel="noopener" href="https://baoyu.io/blog/comparing-god-level-prompts-to-o1-reasoning-models">用类比的方式点评下神级 Prompt，以及它和 o1 推理模型的差距 | 宝玉的分享</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.douban.com/group/topic/313850976">能够留守一扇窗口才是幸运</a></li>
-<li><a target="_blank" rel="noopener" href="https://m.okjike.com/originalPosts/6732b8d59894720ee50db2de">年轻人要存钱，尽力多存，有多少存多少 - 即刻App</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.v2ex.com/t/1089006">用 AI 做了一个传统企业网站 - V2EX</a></li>
-<li><a target="_blank" rel="noopener" href="https://baoyu.io/blog/detailed-prompts-vs-creative-ai-framework">提示词是越详尽越好吗，还是更加富有创造性？ | 宝玉的分享</a></li>
-<li><a target="_blank" rel="noopener" href="https://m.okjike.com/originalPosts/672f29ddc826ffe910bf1867">只是上学，并不能帮你弄懂世界的运行规则 - 即刻App</a></li>
-</ul>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://justyy.com/archives/66529">剑桥Girton&#x2F;吉尔顿村庄秋天风景照</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.douban.com/group/topic/313796979">西柚色的天空</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.douban.com/group/topic/313717713">好柿连连</a></li>
-</ul>
-<h2 id="播客"><a href="#播客" class="headerlink" title="播客"></a>播客</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.xiaoyuzhoufm.com/episode/6739270d2604e2ab3b6ebb63">Ep 50. 独立开发，做 App 还是做 SaaS？【开发篇】 - 捕蛇者说 | 小宇宙</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.xiaoyuzhoufm.com/episode/671cc2d5eb46cd6655e0997d">E21. 比特币$7.5w再次创新高, 普通人可用的3种BTC投资方法 w&#x2F; 倪森 Phyrex - Day1Global生而全球 | 小宇宙</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.xiaoyuzhoufm.com/episode/673499c064373f6b0cbbbb3b">以史明今：从科技革命的规律看 AI 时代的机会｜S8E24 - What’s Next｜科技早知道 | 小宇宙</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.xiaoyuzhoufm.com/episode/67307e1643dc3a43876dc29b">E23. 如何帮富豪们布局加密货币，特朗普当选的影响，未来什么值得买 w&#x2F; EO Hao - Day1Global生而全球 | 小宇宙</a></li>
-</ul>
-<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vv411h7io">满大街跑的集装箱你了解有多少？_哔哩哔哩</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Qf4y1N7CC">被所有人小瞧的铁皮盒子究竟能有多厉害？【有机社会】_哔哩哔哩</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1TampYTEMW">【隐居之地】三万六千人民币的房子可以住吗？_哔哩哔哩</a></li>
-</ul>
-<h2 id="看书"><a href="#看书" class="headerlink" title="看书"></a>看书</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://neodb.social/book/1UXREnNy9SeitvC7ebF0uH">梅雨</a></li>
-</ul>
-<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://neodb.social/movie/39cOkUdVxnOxkKAXwbPgJK">幸福的国家</a></li>
-<li><a target="_blank" rel="noopener" href="https://neodb.social/movie/5IcZOlhMPmChgLlfXIaEQw">灰猎犬号</a><ul>
-<li>全程紧张刺激，代入感很强。拍摄很写实，演技扎实。做一个出色的船长真不容易，不眠不休，反应迅速，随时要下达命令，随时做出重大决定。</li>
-<li>我有个疑问，这么大的运输船队，装的物资非常多，运输船队的武器也很厉害，为什么没有配备更多的空中支援呢？</li>
-<li>人类互相侵略是否写在基因中的呢，这种邪恶难道真的是无法祛除的吗？</li>
+<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><ol>
+<li><p><strong>源</strong>：</p>
+<ul>
+<li>GitHub 仓库：[你的仓库地址]</li>
+<li>需同步的文件夹：public&#x2F;</li>
 </ul>
 </li>
-</ul>
-<h2 id="剧集"><a href="#剧集" class="headerlink" title="剧集"></a>剧集</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://neodb.social/tv/season/5qPyrf2Tof3tbMIJN4dlaO">黑镜 第二季</a></li>
-</ul>
-<h2 id="言论"><a href="#言论" class="headerlink" title="言论"></a>言论</h2><blockquote>
-<p>“我觉得疫情是一个转折点，现在世界正在退缩，仿佛被拖回到过去。我甚至可以说，世界变得越来越中世纪化了。全球化正在大规模退缩，而曾经充满希望的社交媒体也似乎走到了尽头。一座被高墙围绕的城市的景象可能反映了这种被阻碍和封闭的状况。也许在我们生活的这个时代，古老的故事可能会产生一种意想不到的共鸣。我对这种可能性充满希望。”<br>— <a target="_blank" rel="noopener" href="https://www.newyorker.com/">村上春树，《纽约客》采访</a>  </p>
-</blockquote>
-<h2 id="笑话"><a href="#笑话" class="headerlink" title="笑话"></a>笑话</h2><blockquote>
-<p>经学生举报，现已查明：高三二班的<strong>坤同学在高三模拟考期间，借故离开考场去洗手间，随后大摇大摆地进入隔壁考场，将手背在身后，慢慢地走着，以光明正大、不紧不慢的姿态观察了几位学生的考卷。<br>由于隔壁考场的监考老师并不认识该同学，误以为他是学校组织的巡考人员，还频频点头微笑示意。</strong>坤同学在看完答案后离开，并且“入戏太深”，还特意提醒监考老师注意考场纪律。<br>该行为严重挑战了校纪校规，按规定应予以开除，但考虑到是初犯，予以记大过一次，警告下不为例。由于题目简单，补考无意义，取消该科成绩。<br>— <a target="_blank" rel="noopener" href="https://s.weibo.com/weibo?q=%23%E6%94%BE%E5%9C%A8%E6%95%B4%E4%B8%AA%E8%80%83%E8%AF%95%E7%95%8C%E4%B9%9F%E5%BE%88%E7%82%B8%E8%A3%82%23">来源</a>  </p>
-</blockquote>
-<hr>
-<blockquote>
-<p>我辞职在家待着后我家猫压力太大，在家里吐了，我以为是吃多了还是吃坏肚子了，结果医生说它有自己的日常生活安排，在那段时间内有我在旁边，它觉得自己的安排被破坏，感受到了巨大的压力，所以吐了····我真服了···我会尽快找到工作的。<br>— <a target="_blank" rel="noopener" href="https://s.weibo.com/weibo?q=%23%E6%94%BE%E5%9C%A8%E6%95%B4%E4%B8%AA%E8%80%83%E8%AF%95%E7%95%8C%E4%B9%9F%E5%BE%88%E7%82%B8%E8%A3%82%23">来源</a>  </p>
-</blockquote>
-<h2 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h2><ul>
-<li>11月11日<ul>
-<li>我对大学生夜骑的看法，在法律允许的前提下，对不公平卑微的、无声的反抗。</li>
+<li><p><strong>目标</strong>：</p>
+<ul>
+<li>服务器：[服务器IP]</li>
+<li>SSH 端口：[SSH端口]</li>
+<li>用户：[用户名]</li>
+<li>目标路径：&#x2F;var&#x2F;www&#x2F;html&#x2F;[你的域名]</li>
 </ul>
 </li>
-<li>11月12日<ul>
-<li>我看到共享单车的工作人员在忙活着，问他这是在干什么，他说冬天到了，骑车出行手很冷，他正在给每辆车装把套，这样一来就不会太冷了。想的还挺周到，我还记得夏天的时候，我看到过在共享单车屁股上面贴防烫的膜，确实有心了。</li>
+<li><p><strong>功能要求</strong>：</p>
+<ul>
+<li>当 push 到 main 分支时自动部署</li>
+<li>只同步 public 文件夹内容</li>
+<li>部署前清空目标目录</li>
+<li>无需构建步骤</li>
+<li>无需部署后操作</li>
 </ul>
 </li>
-<li>11月14日<ul>
-<li>手痒难耐，又下载了英雄联盟，玩了2天，虽然玩游戏会有罪恶感，但确实可以释放自己。晚上玩完最后一把后，就卸载了，现在的我确实没资格再继续陷入进去了。</li>
+</ol>
+<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><ol>
+<li>生成新的 public 文件夹中的文件</li>
+<li>提交并推送到 GitHub</li>
+<li>GitHub Actions 自动触发</li>
+<li>Actions 通过 SSH 连接服务器</li>
+<li>清空目标目录</li>
+<li>同步新文件到服务器</li>
+</ol>
+<h3 id="详细教程"><a href="#详细教程" class="headerlink" title="详细教程"></a>详细教程</h3><h4 id="1-服务器配置"><a href="#1-服务器配置" class="headerlink" title="1. 服务器配置"></a>1. 服务器配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 1.1 SSH 登录服务器</span><br>ssh [用户名]@[服务器IP] -p [SSH端口]<br><br><span class="hljs-comment"># 1.2 生成 SSH 密钥对</span><br>ssh-keygen -t ed25519 -C <span class="hljs-string">&quot;github-actions-deploy&quot;</span><br><span class="hljs-comment"># 按三次回车，使用默认设置</span><br><br><span class="hljs-comment"># 1.3 设置 SSH 目录权限</span><br><span class="hljs-built_in">mkdir</span> -p ~/.ssh<br><span class="hljs-built_in">chmod</span> 700 ~/.ssh<br><br><span class="hljs-comment"># 1.4 配置授权</span><br><span class="hljs-built_in">cat</span> ~/.ssh/id_ed25519.pub &gt;&gt; ~/.ssh/authorized_keys<br><span class="hljs-built_in">chmod</span> 600 ~/.ssh/authorized_keys<br><br><span class="hljs-comment"># 1.5 查看私钥（需要复制这个内容）</span><br>vim ~/.ssh/id_ed25519<br><span class="hljs-comment"># 使用 y 复制内容</span><br><span class="hljs-comment"># 使用 :q 退出</span><br><br><span class="hljs-comment"># 1.6 创建并设置部署目录</span><br><span class="hljs-built_in">mkdir</span> -p /var/www/html/[你的域名]<br><span class="hljs-built_in">chmod</span> 755 /var/www/html/[你的域名]<br></code></pre></td></tr></table></figure>
+
+<h4 id="2-GitHub-配置"><a href="#2-GitHub-配置" class="headerlink" title="2. GitHub 配置"></a>2. GitHub 配置</h4><ol>
+<li><p><strong>添加 Repository Secrets</strong></p>
+<ul>
+<li><p>访问你的 GitHub 仓库的 Settings &gt; Secrets and variables &gt; Actions</p>
+</li>
+<li><p>点击 “New repository secret”</p>
+</li>
+<li><p>添加以下 secrets：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">SERVER_HOST:</span> [服务器IP]<br><span class="hljs-symbol">SERVER_PORT:</span> [SSH端口]<br><span class="hljs-symbol">SERVER_USERNAME:</span> [用户名]<br><span class="hljs-symbol">SERVER_SSH_KEY:</span> [粘贴之前复制的私钥内容]<br><span class="hljs-symbol">DEPLOY_PATH:</span> <span class="hljs-keyword">/var/</span>www<span class="hljs-keyword">/html/</span>[你的域名]<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li>11月16日<ul>
-<li>周六了，公园人肯定多，我洗了个冷水澡，就步行溜达去公园了。公园这里横穿了一个防洪渠，从我来这里的1年多以来，都是脏乱差，只有沙子，来这里玩的人很少。一个月以前，这里突然开始装修，加了很多小孩玩的东西，除了秋千，还有好几个我叫不上名字的东西，四周墙上都刷了绿色的漆，再往下地面上都铺了假草皮，最底下是细沙。最近的2周装修完工了，来这里玩的人非常多，尤其是周末，大人带着自己小朋友都来这里玩，很热闹。我也乐的这种场景，感谢提出这个方案的人，这才是服务群众，效果非常好。</li>
-<li>现在孩子很多，各种孩子的声音在耳边不停，我找了一个太阳不错的地方，坐下来，看书，也看他们玩。腿坐麻了就起来走走，看到之前打球的老头了，和他打了招呼，他给家里人说了一声，我们俩去打球了，玩到晚上快7点才回家。</li>
+<li><p><strong>创建 GitHub Actions 配置</strong></p>
+<ul>
+<li>在仓库中创建 <code>.github/workflows/deploy.yml</code>：</li>
 </ul>
 </li>
-<li>11月17日<ul>
-<li>周日也是个好日子，公园人也多，我平时都是隔一天出门，但周末两天都出去玩，今天碰到两个打球不错的人，应该都是上班族，他们的球拍也不错，听他说400多，而我的这个假牌子才30元，哈哈哈。之前以为玩几天可能就弃了，所以就随便买了个凑活，现在来看，这段时间我应该会经常打球，应该找时间买个好点的球拍了。</li>
-</ul>
-</li>
-</ul>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs yaml:.github/workflows/deploy.yml">name: Deploy to Server<br><br>on:<br>  push:<br>    branches: [ main ]<br>    paths:<br>      - &#x27;public/**&#x27;<br><br>jobs:<br>  deploy:<br>    runs-on: ubuntu-latest<br>    steps:<br>      - uses: actions/checkout@v2<br>      <br>      - name: Install SSH Key<br>        uses: shimataro/ssh-key-action@v2<br>        with:<br>          key: $&#123;&#123; secrets.SERVER_SSH_KEY &#125;&#125;<br>          known_hosts: unnecessary<br>          if_key_exists: replace<br>          <br>      - name: Adding Known Hosts<br>        run: ssh-keyscan -p $&#123;&#123; secrets.SERVER_PORT &#125;&#125; -H $&#123;&#123; secrets.SERVER_HOST &#125;&#125; &gt;&gt; ~/.ssh/known_hosts<br>      <br>      - name: Clear target directory<br>        run: ssh -p $&#123;&#123; secrets.SERVER_PORT &#125;&#125; $&#123;&#123; secrets.SERVER_USERNAME &#125;&#125;@$&#123;&#123; secrets.SERVER_HOST &#125;&#125; &quot;rm -rf $&#123;&#123; secrets.DEPLOY_PATH &#125;&#125;/*&quot;<br>      <br>      - name: Deploy with rsync<br>        run: rsync -avz -e &quot;ssh -p $&#123;&#123; secrets.SERVER_PORT &#125;&#125;&quot; ./public/ $&#123;&#123; secrets.SERVER_USERNAME &#125;&#125;@$&#123;&#123; secrets.SERVER_HOST &#125;&#125;:$&#123;&#123; secrets.DEPLOY_PATH &#125;&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="3-提交配置"><a href="#3-提交配置" class="headerlink" title="3. 提交配置"></a>3. 提交配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 如果是新仓库，先克隆</span><br>git <span class="hljs-built_in">clone</span> [你的仓库地址]<br><span class="hljs-built_in">cd</span> [仓库名]<br><br><span class="hljs-comment"># 创建 workflows 目录</span><br><span class="hljs-built_in">mkdir</span> -p .github/workflows<br><br><span class="hljs-comment"># 创建并编辑配置文件</span><br>vim .github/workflows/deploy.yml<br><span class="hljs-comment"># 粘贴上面的配置内容</span><br><br><span class="hljs-comment"># 提交更改</span><br>git add .github/workflows/deploy.yml<br>git commit -m <span class="hljs-string">&quot;Add deployment workflow&quot;</span><br>git push<br><br><span class="hljs-comment"># 如果遇到 GitHub 认证提示，输入 yes</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="4-验证部署"><a href="#4-验证部署" class="headerlink" title="4. 验证部署"></a>4. 验证部署</h4><ol>
+<li>访问 GitHub 仓库的 Actions 标签页</li>
+<li>应该能看到一个新的 workflow 运行</li>
+<li>检查服务器目标目录：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> -la /var/www/html/[你的域名]<br></code></pre></td></tr></table></figure>
+
+<h4 id="5-故障排查"><a href="#5-故障排查" class="headerlink" title="5. 故障排查"></a>5. 故障排查</h4><p>如果部署失败：</p>
+<ol>
+<li>检查 GitHub Actions 日志</li>
+<li>验证 SSH 连接：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -p [SSH端口] [用户名]@[服务器IP]<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>检查目标目录权限</li>
+<li>确认 Secrets 是否正确设置</li>
+</ol>
 <hr>
 <p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>
 
@@ -385,7 +385,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/" class="category-chain-item">小章周记</a>
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="category-chain-item">技术笔记</a>
   
   
 
@@ -400,7 +400,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/" class="print-no-link">#小章周记</a>
+        <a href="/tags/%E5%8D%9A%E5%AE%A2/" class="print-no-link">#博客</a>
+      
+        <a href="/tags/GitHub/" class="print-no-link">#GitHub</a>
+      
+        <a href="/tags/GitHub-Actions/" class="print-no-link">#GitHub Actions</a>
       
     </div>
   
@@ -412,8 +416,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>阅读与感悟周记36</div>
-      <div>https://itxiaozhang.com/weekly-reflections-reading-insights-36/</div>
+      <div>GitHub Actions 自动部署：配置 GitHub 仓库指定文件夹到 Ubuntu 服务器</div>
+      <div>https://itxiaozhang.com/github-actions-sync-specific-folder-to-ubuntu-server-complete-guide/</div>
     </div>
     <div class="license-meta">
       
@@ -425,7 +429,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月17日</div>
+          <div>2024年11月19日</div>
         </div>
       
       
@@ -457,18 +461,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/github-actions-sync-specific-folder-to-ubuntu-server-complete-guide/" title="GitHub Actions 自动部署：配置 GitHub 仓库指定文件夹到 Ubuntu 服务器">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">GitHub Actions 自动部署：配置 GitHub 仓库指定文件夹到 Ubuntu 服务器</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/common-computer-network-problems-solutions/" title="常见电脑网络问题解决思路">
-                        <span class="hidden-mobile">常见电脑网络问题解决思路</span>
+                      <a href="/weekly-reflections-reading-insights-36/" title="阅读与感悟周记36">
+                        <span class="hidden-mobile">阅读与感悟周记36</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

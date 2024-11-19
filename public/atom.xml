@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-11-17T11:04:53.409Z</updated>
+  <updated>2024-11-19T15:21:10.826Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub Actions 自动部署：配置 GitHub 仓库指定文件夹到 Ubuntu 服务器</title>
+    <link href="https://itxiaozhang.com/github-actions-sync-specific-folder-to-ubuntu-server-complete-guide/"/>
+    <id>https://itxiaozhang.com/github-actions-sync-specific-folder-to-ubuntu-server-complete-guide/</id>
+    <published>2024-11-19T15:10:18.000Z</published>
+    <updated>2024-11-19T15:21:10.826Z</updated>
+    
+    
+    <summary type="html">本文详细介绍如何使用 GitHub Actions 实现代码自动部署，通过配置 SSH 和 rsync，将 GitHub 仓库中的指定文件夹自动同步到 Ubuntu 服务器。适合需要自动化部署静态网站的开朋友。</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://itxiaozhang.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="博客" scheme="https://itxiaozhang.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="GitHub" scheme="https://itxiaozhang.com/tags/GitHub/"/>
+    
+    <category term="GitHub Actions" scheme="https://itxiaozhang.com/tags/GitHub-Actions/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读与感悟周记36</title>
@@ -392,25 +415,6 @@
     <category term="steam" scheme="https://itxiaozhang.com/tags/steam/"/>
     
     <category term="黑神话悟空" scheme="https://itxiaozhang.com/tags/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记24</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-24/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-24/</id>
-    <published>2024-08-18T01:39:37.000Z</published>
-    <updated>2024-08-18T02:07:26.366Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第24周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
