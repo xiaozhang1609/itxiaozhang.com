@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itxiaozhang.com/vlc-best-video-player/</loc>
+    
+    <lastmod>2024-11-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itxiaozhang.com/python-hmdb-data-extraction/</loc>
     
     <lastmod>2024-11-19</lastmod>
@@ -605,15 +614,6 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/vlc-best-video-player/</loc>
-    
-    <lastmod>2024-07-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://itxiaozhang.com/switch-full-half-angle-win10-win11/</loc>
     
     <lastmod>2024-07-24</lastmod>
@@ -1046,7 +1046,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-13/</loc>
+    <loc>https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-12/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -1055,7 +1055,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-12/</loc>
+    <loc>https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-13/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -1118,7 +1118,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/weekly4/</loc>
+    <loc>https://itxiaozhang.com/weekly3/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -1127,7 +1127,7 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/weekly3/</loc>
+    <loc>https://itxiaozhang.com/weekly4/</loc>
     
     <lastmod>2024-07-24</lastmod>
     
@@ -1172,14 +1172,14 @@
 
   
   <url>
-    <loc>https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/</loc>
+    <loc>https://itxiaozhang.com/tags/%E4%BF%AE%E7%94%B5%E8%84%91/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/tags/%E4%BF%AE%E7%94%B5%E8%84%91/</loc>
+    <loc>https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1368,6 +1368,13 @@
   </url>
   
   <url>
+    <loc>https://itxiaozhang.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2024-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://itxiaozhang.com/tags/hexo/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1383,13 +1390,6 @@
   
   <url>
     <loc>https://itxiaozhang.com/tags/cloudflare/</loc>
-    <lastmod>2024-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://itxiaozhang.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1571,14 +1571,14 @@
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/tags/%E7%BD%91%E7%AB%99/</loc>
+    <loc>https://itxiaozhang.com/tags/windows/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/tags/windows/</loc>
+    <loc>https://itxiaozhang.com/tags/%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1972,14 +1972,14 @@
 
   
   <url>
-    <loc>https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/</loc>
+    <loc>https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/</loc>
+    <loc>https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

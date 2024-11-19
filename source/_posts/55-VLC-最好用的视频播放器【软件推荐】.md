@@ -32,8 +32,5 @@ VLC 是一款自由、开源的跨平台多媒体播放器及框架，可播放�
 
 [B站观看](https://www.bilibili.com/video/BV1yz421R7dM)
 
-[小红书观看](http://xhslink.com/4P0TpB)
-
 [西瓜视频](https://www.ixigua.com/7335092437574779407)
 
-<iframe src="//player.bilibili.com/player.html?aid=1350583875&amp;bvid=BV1yz421R7dM&amp;cid=1438825474&amp;p=1" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0"></iframe>
