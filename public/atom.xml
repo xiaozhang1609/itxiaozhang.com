@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-11-19T15:21:10.826Z</updated>
+  <updated>2024-11-21T08:47:49.230Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 10 局域网共享文件夹设置教程</title>
+    <link href="https://itxiaozhang.com/windows-10-local-network-shared-folder-setup-guide/"/>
+    <id>https://itxiaozhang.com/windows-10-local-network-shared-folder-setup-guide/</id>
+    <published>2024-11-21T05:38:48.000Z</published>
+    <updated>2024-11-21T08:47:49.230Z</updated>
+    
+    
+    <summary type="html">本问介绍如何在多台Windows 10计算机上设置局域网共享文件夹，包括准备工作、启用网络发现和文件共享、设置共享文件夹以及解决账户锁定问题的步骤。</summary>
+    
+    
+    
+    <category term="电脑技巧" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="共享" scheme="https://itxiaozhang.com/tags/%E5%85%B1%E4%BA%AB/"/>
+    
+    <category term="共享文件夹" scheme="https://itxiaozhang.com/tags/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
+    
+    <category term="局域网共享" scheme="https://itxiaozhang.com/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub Actions 自动部署：配置 GitHub 仓库指定文件夹到 Ubuntu 服务器</title>
@@ -394,27 +417,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何玩黑神话悟空？注册账号购买游戏全流程</title>
-    <link href="https://itxiaozhang.com/how-to-play-black-myth-wukong-register-buy-game/"/>
-    <id>https://itxiaozhang.com/how-to-play-black-myth-wukong-register-buy-game/</id>
-    <published>2024-08-24T13:13:37.000Z</published>
-    <updated>2024-08-24T13:18:50.629Z</updated>
-    
-    
-    <summary type="html">这篇文章记录了《黑神话：悟空》的全流程操作指南，包括网易邮箱和Steam账号的注册、游戏的购买以及下载步骤。用户可以通过本文快速完成相关操作，轻松开始游戏体验。</summary>
-    
-    
-    
-    <category term="电脑技巧" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="steam" scheme="https://itxiaozhang.com/tags/steam/"/>
-    
-    <category term="黑神话悟空" scheme="https://itxiaozhang.com/tags/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/"/>
     
   </entry>
   
