@@ -44,6 +44,15 @@ tags:
 ## 源代码
 
 ```python
+"""
+================================
+作者：IT小章
+网站：itxiaozhang.com
+时间：2024年10月11日
+Copyright © 2024 IT小章
+================================
+"""
+
 import csv
 import time
 import requests
@@ -54,10 +63,6 @@ import html as html_module
 import os
 from collections import Counter
 import sys
-
-# 作者：IT小章
-# 时间：2024年10月11日
-# 网站：itxiaozhang.com
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
