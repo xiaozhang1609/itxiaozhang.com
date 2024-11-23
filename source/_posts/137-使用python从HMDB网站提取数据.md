@@ -58,8 +58,6 @@ import time
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from lxml import html
-import re
-import html as html_module
 import os
 from collections import Counter
 import sys
@@ -86,27 +84,8 @@ def check_ids(ids):
     return invalid_ids, duplicates
 
 def get_metabolite_data(hmdb_id):
-    url = f"https://hmdb.ca/metabolites/{hmdb_id}"
-    
-    response = requests.get(url, headers=HEADERS)
-    response.raise_for_status()
-    
-    tree = html.fromstring(response.content)
-
-    data = {'HMDB ID': hmdb_id}
-
-    description = tree.xpath("//td[@class='met-desc']/text()")
-    description_text = description[0].strip() if description else ''
-
-    for column in NEW_COLUMNS:
-        data[column] = 'yes' if column in description_text else 'no'
-
-    super_class = tree.xpath("//tr/th[text()='Super Class']/following-sibling::td/a/text()")
-    data['Super Class'] = super_class[0].strip() if super_class else ''
-
-    ## 其他类似
-
-    return data
+    # 省略
+    pass
 
 def get_metabolite_data_with_retry(hmdb_id, max_retries=3):
     for attempt in range(max_retries):
@@ -122,13 +101,12 @@ def write_to_csv(results, filename, mode='a'):
     fieldnames = ['HMDB ID'] + NEW_COLUMNS + [
         'Super Class', 'Class', 'Sub Class', 
         'Disposition_source(Endogenous)', 'Endogenous(plant or animal or more)', 
-        'Biological Properties_Biospecimen Locations',  # 添加新列
+        'Biological Properties_Biospecimen Locations',
         'Biological Properties_Tissue Locations',
         'KEGG Compound ID', 'ChEBI ID', 'METLIN ID'
     ]
     
     file_exists = os.path.isfile(filename)
-    
     with open(filename, mode, newline='', encoding='utf-8') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         if not file_exists or mode == 'w':
@@ -136,92 +114,29 @@ def write_to_csv(results, filename, mode='a'):
         writer.writerows(results)
 
 def process_ids(hmdb_ids, max_workers=5):
-    results = {}
-    total_ids = len(hmdb_ids)
-    processed_count = 0
-    success_count = 0
-    failure_count = 0
-    
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_id = {executor.submit(get_metabolite_data_with_retry, hmdb_id): hmdb_id for hmdb_id in hmdb_ids}
-        
-        for future in as_completed(future_to_id):
-            hmdb_id = future_to_id[future]
-            processed_count += 1
-            try:
-                data = future.result()
-                if data:
-                    results[hmdb_id] = data
-                    status = "成功"
-                    success_count += 1
-                else:
-                    status = "失败"
-                    failure_count += 1
-            except Exception:
-                status = "失败"
-                failure_count += 1
-            
-            print(f"正在处理第 {processed_count}/{total_ids} 个: {hmdb_id} - {status}")
-            
-            # 每处理10个数据后写入文件
-            if processed_count % 10 == 0:
-                write_to_csv(list(results.values()), '代谢物数据_最终.csv', mode='a')
-                print(f"已保存到最终文件。已处理: {processed_count}, 成功: {success_count}, 失败: {failure_count}")
-                results.clear()  # 清空已写入的结果，节省内存
-    
-    # 处理剩余的结果
-    if results:
-        write_to_csv(list(results.values()), '代谢物数据_最终.csv', mode='a')
-    
-    return success_count, failure_count
+    # 省略
+    pass
 
 def main():
     try:
-        # 检查 id.txt 是否存在
         if not os.path.exists('id.txt'):
-            print("错误：找不到 id.txt 文件。请确保该文件与程序在同一目录下。")
-            input("按回车键退出...")
-            sys.exit(1)
+            print("错误：找不到 id.txt 文件。")
+            return
 
         with open('id.txt', 'r') as f:
             hmdb_ids = f.read().splitlines()
-        print(f"从id.txt加载了 {len(hmdb_ids)} 个ID")
         
-        # 检查异常和重复数据
         invalid_ids, duplicates = check_ids(hmdb_ids)
-        
-        if invalid_ids:
-            print("发现以下异常ID:")
-            for index, id in invalid_ids:
-                print(f"  第{index}行: {id}")
-        
-        if duplicates:
-            print("发现以下重复ID:")
-            for id, count in duplicates.items():
-                print(f"  {id}: 重复{count}次")
-        
-        # 过滤掉无效ID，保留有效的唯一ID
         valid_ids = [id for id in hmdb_ids if id.startswith("HMDB")]
-        unique_ids = list(dict.fromkeys(valid_ids))  # 保持顺序的去重
+        unique_ids = list(dict.fromkeys(valid_ids))
         
-        print(f"将处理 {len(unique_ids)} 个有效且唯一的ID")
+        write_to_csv([], '代谢物数据_最终.csv', mode='w')
+        success_count, failure_count = process_ids(unique_ids)
+        
+        print(f"数据提取完成。总计: {len(unique_ids)}, 成功: {success_count}, 失败: {failure_count}")
+
     except Exception as e:
         print(f"发生错误: {e}")
-    finally:
-        # 清空或创建新的CSV文件
-        write_to_csv([], '代谢物数据_最终.csv', mode='w')
-
-        success_count, failure_count = process_ids(unique_ids)
-
-        print(f"数据提取完成。总计: {len(unique_ids)}, 成功: {success_count}, 失败: {failure_count}")
-        print(f"最终结果已保存在代谢物数据_最终.csv中")
-
-        # 替换原来的 input() 调用
-        print("按回车键退出程序...")
-        try:
-            input()
-        except EOFError:
-            pass
 
 if __name__ == "__main__":
     main()
