@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-11-24T11:17:45.965Z</updated>
+  <updated>2024-11-27T04:13:12.202Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python自动化工具：HMDB代谢物信息一键批量获取</title>
+    <link href="https://itxiaozhang.com/python-hmdb-metabolites-batch-extractor/"/>
+    <id>https://itxiaozhang.com/python-hmdb-metabolites-batch-extractor/</id>
+    <published>2024-11-27T04:08:15.000Z</published>
+    <updated>2024-11-27T04:13:12.202Z</updated>
+    
+    
+    <summary type="html">本文介绍了一款基于Python开发的自动化工具，可批量获取HMDB数据库中的代谢物信息，支持正负离子模式，提高科研效率。</summary>
+    
+    
+    
+    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
+    
+    
+    <category term="脚本" scheme="https://itxiaozhang.com/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+    <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
+    
+    <category term="hmdb" scheme="https://itxiaozhang.com/tags/hmdb/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读与感悟周记37</title>
@@ -395,25 +418,6 @@
     
     
     <summary type="html">这是《阅读与感悟周记》的第28周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记27</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-27/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-27/</id>
-    <published>2024-09-08T15:11:37.000Z</published>
-    <updated>2024-09-10T02:19:21.838Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第27周，记录我本周的所见所闻所思所想。</summary>
     
     
     
