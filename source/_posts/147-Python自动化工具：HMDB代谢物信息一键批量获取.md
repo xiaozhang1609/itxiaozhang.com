@@ -14,8 +14,6 @@ tags:
 > 原文地址：<https://itxiaozhang.com/python-hmdb-metabolites-batch-extractor/>  
 > 本文配合视频食用效果最佳，视频版本在文章末尾。
 
-# HMDB代谢物批量提取工具
-
 ## 简介
 
 这是一个用于从HMDB（人类代谢组数据库）批量提取代谢物信息的小工具。它可以帮助研究人员快速获取多个代谢物的详细信息，节省手动查询的时间。

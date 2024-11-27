@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-11-27T04:17:46.214Z</updated>
+  <updated>2024-11-27T04:22:07.091Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://itxiaozhang.com/python-hmdb-metabolites-batch-extractor/"/>
     <id>https://itxiaozhang.com/python-hmdb-metabolites-batch-extractor/</id>
     <published>2024-11-27T04:08:15.000Z</published>
-    <updated>2024-11-27T04:17:46.214Z</updated>
+    <updated>2024-11-27T04:22:07.091Z</updated>
     
     
     <summary type="html">本文介绍了一款基于Python开发的自动化工具，可批量获取HMDB数据库中的代谢物信息，支持正负离子模式，提高科研效率。</summary>
