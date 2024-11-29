@@ -67,7 +67,7 @@ tags:
 ================================
 作者：IT小章
 网站：itxiaozhang.com
-时间：2024年10月11日
+时间：2024年11月27日
 Copyright © 2024 IT小章
 ================================
 """
@@ -173,8 +173,8 @@ if __name__ == "__main__":
 
 ## 视频版本
 
-- [哔哩哔哩](lianjie)
-- [YouTube](lianjie)
+- [哔哩哔哩](https://www.bilibili.com/video/BV1DsBQYwEC4/)
+- [YouTube](https://youtu.be/LWwqvTgxm3o?si=Uqy46agi8KYQpD9H)
 
 ---
 ▶ 可以在[关于](https://itxiaozhang.com/about/)或者[这篇文章](https://itxiaozhang.com/about-computer-repair-services-with-me/)找到我的联系方式。

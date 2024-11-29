@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://itxiaozhang.com//deploy-hexo-blog-on-ubuntu-vps-and-configure-https/</loc>
+    <lastmod>2024-11-29</lastmod>
+  </url>
+  <url>
     <loc>https://itxiaozhang.com//python-hmdb-metabolites-batch-extractor/</loc>
     <lastmod>2024-11-27</lastmod>
   </url>
@@ -163,10 +167,6 @@
   <url>
     <loc>https://itxiaozhang.com//handbrake-free-open-source-video-converter/</loc>
     <lastmod>2024-08-01</lastmod>
-  </url>
-  <url>
-    <loc>https://itxiaozhang.com//deploy-hexo-blog-on-ubuntu-vps-and-configure-https/</loc>
-    <lastmod>2024-07-31</lastmod>
   </url>
   <url>
     <loc>https://itxiaozhang.com//reflections-of-the-moment/</loc>
