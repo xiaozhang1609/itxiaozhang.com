@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-11-27T10:03:50.607Z</updated>
+  <updated>2024-12-01T11:33:30.306Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python爬虫实战: 58同城房产信息自动化采集</title>
+    <link href="https://itxiaozhang.com/python-web-crawler-58city-real-estate-data-collection/"/>
+    <id>https://itxiaozhang.com/python-web-crawler-58city-real-estate-data-collection/</id>
+    <published>2024-12-01T11:28:00.000Z</published>
+    <updated>2024-12-01T11:33:30.306Z</updated>
+    
+    
+    <summary type="html">这是一个基于Python开发的58同城房产信息采集系统,主要用于自动采集商铺、写字楼、厂房和生意转让等房产信息。系统提供图形界面操作,支持多城市数据采集。</summary>
+    
+    
+    
+    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
+    
+    
+    <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
+    
+    <category term="爬虫" scheme="https://itxiaozhang.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+    <category term="58同城" scheme="https://itxiaozhang.com/tags/58%E5%90%8C%E5%9F%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu下快速部署多个静态网站（含HTTPS配置）</title>
+    <link href="https://itxiaozhang.com/ubuntu-multiple-static-sites-deployment-guide/"/>
+    <id>https://itxiaozhang.com/ubuntu-multiple-static-sites-deployment-guide/</id>
+    <published>2024-11-29T05:30:16.000Z</published>
+    <updated>2024-11-29T05:52:00.121Z</updated>
+    
+    
+    <summary type="html">本文介绍如何在Ubuntu服务器上快速部署多个静态网站，通过一个简单的脚本实现自动化配置，并详细说明HTTPS证书的申请步骤。</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://itxiaozhang.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="hexo" scheme="https://itxiaozhang.com/tags/hexo/"/>
+    
+    <category term="博客" scheme="https://itxiaozhang.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="静态网站" scheme="https://itxiaozhang.com/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="Ubuntu" scheme="https://itxiaozhang.com/tags/Ubuntu/"/>
+    
+    <category term="建站" scheme="https://itxiaozhang.com/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
   
   <entry>
     <title>Python自动化工具：HMDB代谢物信息一键批量获取</title>
@@ -380,44 +430,6 @@
     
     
     <summary type="html">这是《阅读与感悟周记》的第30周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记29</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-29/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-29/</id>
-    <published>2024-09-29T12:24:48.000Z</published>
-    <updated>2024-10-06T13:58:44.382Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第29周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记28</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-28/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-28/</id>
-    <published>2024-09-22T03:11:37.000Z</published>
-    <updated>2024-09-22T03:33:27.884Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第28周，记录我本周的所见所闻所思所想。</summary>
     
     
     
