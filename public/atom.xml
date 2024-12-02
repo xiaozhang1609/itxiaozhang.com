@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-12-01T11:33:30.306Z</updated>
+  <updated>2024-12-02T01:29:50.698Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>阅读与感悟周记38</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-38/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-38/</id>
+    <published>2024-12-01T11:43:41.000Z</published>
+    <updated>2024-12-02T01:29:50.698Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第38周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python爬虫实战: 58同城房产信息自动化采集</title>
     <link href="https://itxiaozhang.com/python-web-crawler-58city-real-estate-data-collection/"/>
     <id>https://itxiaozhang.com/python-web-crawler-58city-real-estate-data-collection/</id>
     <published>2024-12-01T11:28:00.000Z</published>
-    <updated>2024-12-01T11:33:30.306Z</updated>
+    <updated>2024-12-01T11:42:37.979Z</updated>
     
     
     <summary type="html">这是一个基于Python开发的58同城房产信息采集系统,主要用于自动采集商铺、写字楼、厂房和生意转让等房产信息。系统提供图形界面操作,支持多城市数据采集。</summary>
@@ -418,25 +437,6 @@
     <category term="脚本" scheme="https://itxiaozhang.com/tags/%E8%84%9A%E6%9C%AC/"/>
     
     <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记30</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-30/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-30/</id>
-    <published>2024-10-06T13:40:18.000Z</published>
-    <updated>2024-10-06T14:06:50.026Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第30周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
