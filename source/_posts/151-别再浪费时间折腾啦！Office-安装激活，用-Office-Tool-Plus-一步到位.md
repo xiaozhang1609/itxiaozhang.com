@@ -56,12 +56,13 @@ tags:
 
 ## 激活 Office
 
-1. **选择激活方式**：
-   Office Tool Plus 支持多种激活方式，最常用的是 **KMS 激活**（适用于批量许可证）。如果您是个人用户，可能会使用 **零售密钥激活**。
+1. **KMS 激活**：
+   Office Tool Plus 支持多种激活方式，最常用的是 **KMS 激活**（适用于批量许可证）。
+   [KMS 地址列表](https://www.coolhub.top/tech-articles/kms_list.html)
 
 2. **配置 KMS 激活**：
    - 在 “激活” 选项卡中，选择 **KMS 激活**。
-   - 输入 KMS 服务器地址（如 `kms.example.com`）和端口号（默认为 1688）。
+   - 输入 KMS 服务器地址（如 `kms.03k.org`）和端口号（默认为 1688）。
    - 点击“激活”按钮，工具会自动连接到 KMS 服务器进行激活。
 
 3. **激活成功**：
