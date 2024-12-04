@@ -28,7 +28,7 @@ tags:
 ## 下载并安装 Office Tool Plus
 
 1. **访问下载页面**：
-   打开 [Office Tool Plus 官方网站](https://otp.landian.vip/)，下载最新版本的安装包。
+   打开 [Office Tool Plus 下载页面](https://otp.landian.vip/zh-cn/download.html)，下载最新版本的安装包。
 
 2. **安装程序**：
    下载完成后，双击运行安装包，按照提示完成安装。
@@ -91,8 +91,8 @@ KMS 激活就像是通过“家长签名”来验证文件是否有效。在大�
 
 ## 视频版本
 
-- [哔哩哔哩](lianjie)
-- [YouTube](lianjie)
+- [哔哩哔哩]( https://www.bilibili.com/video/BV1sMzRYeE2S)
+- [YouTube](https://youtu.be/4R9M--TRPVo)
 
 ### 参考链接
 
