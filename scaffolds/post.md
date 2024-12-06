@@ -14,8 +14,8 @@ tags:
 
 ## 视频版本
 
-- [哔哩哔哩](lianjie)
-- [YouTube](lianjie)
+- [哔哩哔哩](https://space.bilibili.com/3546607630944387)
+- [YouTube](https://www.youtube.com/@itxiaozhang)
 
 ---
 ▶ 可以在[关于](https://itxiaozhang.com/about/)或者[这篇文章](https://itxiaozhang.com/about-computer-repair-services-with-me/)找到我的联系方式。
