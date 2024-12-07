@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Steam令牌手机验证器丢失完整恢复案例</title>
+    <link href="/steam-token-mobile-verifier-loss-recovery-case/"/>
+    <url>/steam-token-mobile-verifier-loss-recovery-case/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/steam-token-mobile-verifier-loss-recovery-case/">https://itxiaozhang.com/steam-token-mobile-verifier-loss-recovery-case/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><hr><h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a><strong>问题背景</strong></h2><ol><li><strong>Steam令牌手机验证器丢失</strong>。  </li><li>Steam令牌手机验证器的<strong>恢复码</strong>丢失。  </li><li>绑定的<strong>手机号码</strong>已注销，无法接收Steam发送的验证码。  </li><li>记得自己的 <strong>Steam账号邮箱地址和密码</strong>，且当前电脑Steam是登录状态。</li></ol><hr><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a><strong>解决办法</strong></h2><h3 id="步骤1：访问Steam支持页面"><a href="#步骤1：访问Steam支持页面" class="headerlink" title="步骤1：访问Steam支持页面"></a><strong>步骤1：访问Steam支持页面</strong></h3><ol><li>打开Steam官方的支持页面：<a href="https://help.steampowered.com/zh-cn/wizard/HelpWithLogin">Steam支持页面</a>。  </li><li>点击页面中的 <strong>“我删除或遗失了我的Steam令牌手机验证器”</strong> 选项，进入验证器丢失流程。</li></ol><hr><h3 id="步骤2：输入账户信息"><a href="#步骤2：输入账户信息" class="headerlink" title="步骤2：输入账户信息"></a><strong>步骤2：输入账户信息</strong></h3><ol><li>在搜索框中，输入注册Steam时使用的 <strong>电子邮箱地址</strong>。  </li><li>点击 <strong>“搜索”</strong> 按钮，进入下一步验证流程。</li></ol><hr><h3 id="步骤3：验证账户访问权限"><a href="#步骤3：验证账户访问权限" class="headerlink" title="步骤3：验证账户访问权限"></a><strong>步骤3：验证账户访问权限</strong></h3><ol><li>在结果页面选择 <strong>“我已无法使用我的Steam令牌手机验证器”</strong>。  </li><li>选择 <strong>“我已无法使用此手机号码”</strong>。  </li><li>点击 <strong>“通过电子邮件发送账户验证码”</strong>。  </li><li>登录自己的邮箱，查收Steam发送的验证邮件。  </li><li>在邮件中点击 <strong>“继续恢复”</strong>，页面将显示我的 <strong>Steam用户名</strong> 和 <strong>昵称</strong>，记录下这些信息。</li></ol><hr><h3 id="步骤4：处理丢失恢复码的问题"><a href="#步骤4：处理丢失恢复码的问题" class="headerlink" title="步骤4：处理丢失恢复码的问题"></a><strong>步骤4：处理丢失恢复码的问题</strong></h3><ol><li>进入恢复页面后，点击 <strong>“移除Steam令牌手机验证器”</strong> 按钮。  </li><li>点击 <strong>“我找不到验证器恢复码了”</strong>，进入了恢复申请表单页面。</li></ol><hr><h3 id="步骤5：填写恢复表单内容"><a href="#步骤5：填写恢复表单内容" class="headerlink" title="步骤5：填写恢复表单内容"></a><strong>步骤5：填写恢复表单内容</strong></h3><p>表单中的其他信息很简单，自行填写就可以了。<br>在“请提供任何其它能帮助我们协助您的有关信息”部分，我填写了以下内容，仅供参考：</p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">您好，我的账户名称是“用户账户名”，昵称为“用户昵称”。  <br>由于手机摔坏并被格式化，导致丢失了Steam手机令牌和恢复码，  <br>且原先绑定的手机号已注销。请协助移除Steam手机令牌，谢谢！<br><br>Hello, my account name is “user_account_name” <span class="hljs-keyword">and</span> my nickname is “user_nickname”.  <br>My phone was damaged <span class="hljs-keyword">and</span> formatted, resulting <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> loss <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> Steam mobile <span class="hljs-keyword">token</span> <span class="hljs-keyword">and</span> recovery code.  <br>Additionally, <span class="hljs-keyword">the</span> phone <span class="hljs-built_in">number</span> previously linked <span class="hljs-built_in">to</span> my account has been deactivated.  <br>Please assist <span class="hljs-keyword">in</span> removing <span class="hljs-keyword">the</span> Steam mobile <span class="hljs-keyword">token</span>. Thank you!<br></code></pre></td></tr></table></figure><p><strong>在附件部分，我添加了steam上的消费历史记录截图，和使用微信&#x2F;支付宝消费的截图。</strong></p><hr><h3 id="步骤6：提交表单"><a href="#步骤6：提交表单" class="headerlink" title="步骤6：提交表单"></a><strong>步骤6：提交表单</strong></h3><ol><li>确认填写信息准确无误后，我点击了页面上的 <strong>“提交”</strong> 按钮。  </li><li>提交成功后，系统提示表单已发送，并会通过邮箱进行反馈。</li></ol><hr><h2 id="恢复结果"><a href="#恢复结果" class="headerlink" title="恢复结果"></a><strong>恢复结果</strong></h2><p>当天下午，我收到了回复邮件，Steam移除了我绑定的手机验证器，后续我可以重新设置。</p><hr><h2 id="经验总结"><a href="#经验总结" class="headerlink" title="经验总结"></a><strong>经验总结</strong></h2><ul><li>确如果当前电脑的Steam仍处于登录状态，就暂时不要退出。</li><li>使用 <strong>电子邮箱地址</strong> 进行身份验证，避免因手机号注销而无法接收短信验证码。  </li><li>提供消费记录和支付凭证，增强身份验证的可信度。  </li><li>找到消费记录时，务必截图保存，证明自己的账号身份。  </li><li>提交表单时，一定要准确填写信息，包括邮箱、用户名和新手机号。  </li><li>在恢复成功后，及时重新绑定手机号并备份好恢复码，以避免类似问题再次发生。</li></ul><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>steam</tag>
+      
+      <tag>Steam令牌手机验证器</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《漫威争锋》下载与安装指南 | PC配置要求及常见问题汇总</title>
     <link href="/marvel-battle-download-install-guide-pc-requirements-faq/"/>
     <url>/marvel-battle-download-install-guide-pc-requirements-faq/</url>
