@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-12-09T03:39:30.817Z</updated>
+  <updated>2024-12-09T13:48:58.779Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ACE安全中心报错怎么办？试试我总结的「二次重启法」！</title>
+    <link href="https://itxiaozhang.com/how-to-fix-ace-security-center-error-double-restart-method/"/>
+    <id>https://itxiaozhang.com/how-to-fix-ace-security-center-error-double-restart-method/</id>
+    <published>2024-12-09T13:20:11.000Z</published>
+    <updated>2024-12-09T13:48:58.779Z</updated>
+    
+    
+    <summary type="html">玩无畏契约或者其他腾讯代理的游戏时，可能会遇到以下报错信息：&quot;ACE安全中心[]游戏安全组件运行时发生异常，请关闭不必要的软件或其他游戏，或重启机器后再试()&quot;。此问题通常与ACE防作弊组件的冲突或加载失败有关，通过“二次重启法”可以有效修复。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="ACE安全中心" scheme="https://itxiaozhang.com/tags/ACE%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83/"/>
+    
+    <category term="无畏契约" scheme="https://itxiaozhang.com/tags/%E6%97%A0%E7%95%8F%E5%A5%91%E7%BA%A6/"/>
+    
+    <category term="ACE报错" scheme="https://itxiaozhang.com/tags/ACE%E6%8A%A5%E9%94%99/"/>
+    
+  </entry>
+  
+  <entry>
     <title>阅读与感悟周记39</title>
     <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-39/"/>
     <id>https://itxiaozhang.com/weekly-reflections-reading-insights-39/</id>
     <published>2024-12-08T13:30:58.000Z</published>
-    <updated>2024-12-09T03:39:30.817Z</updated>
+    <updated>2024-12-09T03:43:43.819Z</updated>
     
     
     <summary type="html">这是《阅读与感悟周记》的第39周，记录我本周的所见所闻所思所想。</summary>
@@ -420,27 +443,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文件传输工具 LocalSend</title>
-    <link href="https://itxiaozhang.com/file-transfer-tool-localsend/"/>
-    <id>https://itxiaozhang.com/file-transfer-tool-localsend/</id>
-    <published>2024-10-23T09:38:08.000Z</published>
-    <updated>2024-10-23T12:30:25.581Z</updated>
-    
-    
-    <summary type="html">LocalSend是一款开源、跨平台的局域网文件传输工具，支持Windows、macOS、Linux、iOS和Android系统之间的文件和文本共享。</summary>
-    
-    
-    
-    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="文件传输" scheme="https://itxiaozhang.com/tags/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93/"/>
-    
-    <category term="localsend" scheme="https://itxiaozhang.com/tags/localsend/"/>
     
   </entry>
   
