@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-12-12T01:41:05.710Z</updated>
+  <updated>2024-12-13T15:49:56.092Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一键禁用 Windows 自动更新：Windows Update Blocker 教程</title>
+    <link href="https://itxiaozhang.com/windows-update-blocker-disable-auto-updates/"/>
+    <id>https://itxiaozhang.com/windows-update-blocker-disable-auto-updates/</id>
+    <published>2024-12-13T15:46:55.000Z</published>
+    <updated>2024-12-13T15:49:56.092Z</updated>
+    
+    
+    <summary type="html">这篇文章介绍了如何使用 Windows Update Blocker 禁用 Windows 自动更新。通过简单的几步操作，用户可以轻松禁用或启用更新服务，并保护设置避免自动恢复。</summary>
+    
+    
+    
+    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="Windows更新" scheme="https://itxiaozhang.com/tags/Windows%E6%9B%B4%E6%96%B0/"/>
+    
+    <category term="Windows Update Blocker" scheme="https://itxiaozhang.com/tags/Windows-Update-Blocker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《漫威争锋》着色器编译报错与显卡内存不足问题案例</title>
     <link href="https://itxiaozhang.com/marvel-rivals-shader-compilation-gpu-memory-issue/"/>
     <id>https://itxiaozhang.com/marvel-rivals-shader-compilation-gpu-memory-issue/</id>
     <published>2024-12-12T01:28:00.000Z</published>
-    <updated>2024-12-12T01:41:05.710Z</updated>
+    <updated>2024-12-13T15:51:59.241Z</updated>
     
     
     <summary type="html">这篇文章记录了《漫威争锋》游戏中英特尔第13/14代CPU用户遇到的着色器编译错误和显存不足问题的一个成功解决案例。</summary>
@@ -421,25 +442,6 @@
     
     
     <summary type="html">这是《阅读与感悟周记》的第35周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记34</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-34/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-34/</id>
-    <published>2024-11-03T10:29:51.000Z</published>
-    <updated>2024-11-03T11:14:09.230Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第34周，记录我本周的所见所闻所思所想。</summary>
     
     
     
