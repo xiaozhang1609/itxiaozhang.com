@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-12-13T15:49:56.092Z</updated>
+  <updated>2024-12-15T13:26:57.333Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阅读与感悟周记40</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-40/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-40/</id>
+    <published>2024-12-15T13:15:22.000Z</published>
+    <updated>2024-12-15T13:26:57.333Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第40周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>一键禁用 Windows 自动更新：Windows Update Blocker 教程</title>
@@ -107,7 +126,7 @@
     <link href="https://itxiaozhang.com/steam-token-mobile-verifier-loss-recovery-case/"/>
     <id>https://itxiaozhang.com/steam-token-mobile-verifier-loss-recovery-case/</id>
     <published>2024-12-07T02:03:53.000Z</published>
-    <updated>2024-12-07T02:28:38.405Z</updated>
+    <updated>2024-12-13T16:07:35.858Z</updated>
     
     
     <summary type="html">本文分享了Steam令牌手机验证器丢失的完整恢复案例，详细讲解了身份验证、恢复步骤及解决流程，帮助用户快速解决登录问题。</summary>
@@ -430,25 +449,6 @@
     <category term="usb" scheme="https://itxiaozhang.com/tags/usb/"/>
     
     <category term="网络共享" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记35</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-35/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-35/</id>
-    <published>2024-11-10T13:36:04.000Z</published>
-    <updated>2024-11-11T05:03:13.122Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第35周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
