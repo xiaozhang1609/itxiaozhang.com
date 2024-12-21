@@ -4,11 +4,59 @@
   
   
   <entry>
+    <title>两种关闭VBS的实用方法</title>
+    <link href="/two-effective-ways-to-disable-vbs/"/>
+    <url>/two-effective-ways-to-disable-vbs/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/two-effective-ways-to-disable-vbs/">https://itxiaozhang.com/two-effective-ways-to-disable-vbs/</a>  </p></blockquote><h3 id="什么是VBS（Virtualization-Based-Security）？"><a href="#什么是VBS（Virtualization-Based-Security）？" class="headerlink" title="什么是VBS（Virtualization-Based Security）？"></a><strong>什么是VBS（Virtualization-Based Security）？</strong></h3><p><strong>虚拟化基础安全性（VBS）</strong> 是一种利用硬件虚拟化技术增强操作系统安全的功能。它通过将内存、进程等重要系统组件隔离在一个受保护的虚拟环境中，以防止恶意软件访问和篡改系统数据。VBS 的目的是提高系统防护，尤其是防止内核级的攻击。</p><p>然而，启用 VBS 可能导致系统性能下降，特别是当运行虚拟化应用时。此外，一些依赖硬件虚拟化的程序可能会与 VBS 产生兼容性问题。因此，某些用户可能希望关闭 VBS 以提高性能或解决兼容性问题。</p><h3 id="方法一：使用批处理文件禁用-VBS"><a href="#方法一：使用批处理文件禁用-VBS" class="headerlink" title="方法一：使用批处理文件禁用 VBS"></a><strong>方法一：使用批处理文件禁用 VBS</strong></h3><ol><li><p><strong>创建批处理文件</strong></p><p>首先，创建一个批处理文件，内容如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs batch">@echo off<br><br>dism /Online /Disable-Feature:microsoft-hyper-v-all /NoRestart<br>dism /Online /Disable-Feature:IsolatedUserMode /NoRestart<br>dism /Online /Disable-Feature:Microsoft-Hyper-V-Hypervisor /NoRestart<br>dism /Online /Disable-Feature:Microsoft-Hyper-V-Online /NoRestart<br>dism /Online /Disable-Feature:HypervisorPlatform /NoRestart<br><br>REM ===========================================<br><br>mountvol X: /s<br>copy %WINDIR%\System32\SecConfig.efi X:\EFI\Microsoft\Boot\SecConfig.efi /Y<br>bcdedit /create &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125; /d &quot;DebugTool&quot; /application osloader<br>bcdedit /set &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125; path &quot;\EFI\Microsoft\Boot\SecConfig.efi&quot;<br>bcdedit /set &#123;bootmgr&#125; bootsequence &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125;<br>bcdedit /set &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125; loadoptions DISABLE-LSA-ISO,DISABLE-VBS<br>bcdedit /set &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125; device partition=X:<br>mountvol X: /d<br>bcdedit /set hypervisorlaunchtype off<br><br>echo.<br>echo.<br>echo =======================================================<br>echo 当前操作已完成，接下来请关闭此窗口并重启电脑，然后根据屏幕提示完成剩下操作。<br>pause &gt; nul<br>echo.<br></code></pre></td></tr></table></figure></li><li><p><strong>保存文件并以管理员身份运行</strong></p><p>将上述代码保存为 <code>.bat</code> 文件（例如 <code>disable_vbs.bat</code>），右键点击该文件，选择“<strong>以管理员身份运行</strong>”。</p></li><li><p><strong>执行脚本</strong></p><p>执行脚本后，系统会自动禁用 Hyper-V 和其他与 VBS 相关的功能。脚本执行完后，系统会提示您重启电脑。</p></li><li><p><strong>重启电脑并完成操作</strong></p><p>关闭脚本窗口并重启计算机。重启时，按照提示操作，系统会完成 VBS 相关的设置调整。</p></li><li><p><strong>按F3键完成配置</strong></p><p>在电脑重启时，系统会显示一个设置界面。按 <strong>F3</strong> 键四次，确保 VBS 功能被彻底禁用。</p></li></ol><hr><h3 id="方法二：通过雷电模拟器关闭-VBS"><a href="#方法二：通过雷电模拟器关闭-VBS" class="headerlink" title="方法二：通过雷电模拟器关闭 VBS"></a><strong>方法二：通过雷电模拟器关闭 VBS</strong></h3><ol><li><p><strong>下载并安装雷电模拟器</strong></p><p>下载并安装雷电模拟器：<a href="https://www.ldmnq.com/">雷电模拟器下载链接</a>。雷电模拟器在安装时会自动检测并提示是否启用虚拟化功能。</p></li><li><p><strong>重启电脑</strong></p><p>在安装过程中，雷电模拟器会要求您重启电脑，以完成虚拟化功能的配置。</p></li><li><p><strong>雷电模拟器自动禁用 VBS</strong></p><p>重启后，雷电模拟器会自动帮助您关闭 VBS 和其他与虚拟化相关的安全功能。此时，您不需要手动干预，雷电模拟器会完成所有必要的设置。</p></li></ol><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://iknow.lenovo.com.cn/detail/423992">Win11最新关闭VBS的几种方法</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vbs</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>一种解决 Inaccessible Boot Device 蓝屏的方法</title>
+    <link href="/solution-inaccessible-boot-device-blue-screen/"/>
+    <url>/solution-inaccessible-boot-device-blue-screen/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/solution-inaccessible-boot-device-blue-screen/">https://itxiaozhang.com/solution-inaccessible-boot-device-blue-screen/</a>  </p></blockquote><h2 id="科普：Intel-VMD-与-Inaccessible-Boot-Device-蓝屏及解决方法"><a href="#科普：Intel-VMD-与-Inaccessible-Boot-Device-蓝屏及解决方法" class="headerlink" title="科普：Intel VMD 与 Inaccessible Boot Device 蓝屏及解决方法"></a>科普：Intel VMD 与 Inaccessible Boot Device 蓝屏及解决方法</h2><p><strong>Intel VMD（Volume Management Device）</strong> 是英特尔推出的技术，旨在优化NVMe SSD的性能与管理。VMD将存储设备直接连接到CPU，通过PCIe总线减少延迟，支持热插拔并简化管理，增强系统的安全性与可靠性。</p><h2 id="Inaccessible-Boot-Device-蓝屏"><a href="#Inaccessible-Boot-Device-蓝屏" class="headerlink" title="Inaccessible Boot Device 蓝屏"></a><strong>Inaccessible Boot Device 蓝屏</strong></h2><p><strong>inaccessible_boot_device</strong> 蓝屏错误通常发生在系统无法访问启动盘时，常见原因包括：</p><ol><li><strong>VMD 驱动未安装</strong>：系统无法识别启用的VMD控制器。</li><li><strong>BIOS 配置问题</strong>：VMD在BIOS中启用时，可能导致存储设备无法被正确访问。</li></ol><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a><strong>解决方法</strong></h2><h3 id="方法一：在-BIOS-中关闭-VMD"><a href="#方法一：在-BIOS-中关闭-VMD" class="headerlink" title="方法一：在 BIOS 中关闭 VMD"></a>方法一：在 BIOS 中关闭 VMD</h3><ol><li>进入 BIOS 设置，禁用 VMD 功能。</li><li>保存并退出，重启系统，问题解决。</li></ol><h3 id="方法二：进入-PE-环境安装-VMD-驱动"><a href="#方法二：进入-PE-环境安装-VMD-驱动" class="headerlink" title="方法二：进入 PE 环境安装 VMD 驱动"></a>方法二：进入 PE 环境安装 VMD 驱动</h3><ol><li>使用PE工具启动电脑，进入PE环境。</li><li>安装VMD驱动后重启，系统正常启动。</li></ol><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+      <category>蓝屏</category>
+      
+      <category>vmd</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>插入U盘，电脑提示「格式化磁盘」，使用DiskGenius恢复U盘数据成功案例</title>
     <link href="/format-disk-error-recover-usb-data-with-diskgenius-case/"/>
     <url>/format-disk-error-recover-usb-data-with-diskgenius-case/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/format-disk-error-recover-usb-data-with-diskgenius-case/">https://itxiaozhang.com/format-disk-error-recover-usb-data-with-diskgenius-case/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>将U盘插入电脑后，系统提示“格式化磁盘”，但U盘里有一些非常重要的文件需要保留。本文详细介绍了如何利用DiskGenius修复U盘分区表并恢复数据的全过程，帮助遇到类似问题的用户找回丢失文件。</p><h2 id="步骤一：下载并安装DiskGenius"><a href="#步骤一：下载并安装DiskGenius" class="headerlink" title="步骤一：下载并安装DiskGenius"></a>步骤一：下载并安装DiskGenius</h2><ol><li><a href="https://www.diskgenius.cn/">官网下载</a><strong>DiskGenius</strong>软件。  </li><li>安装并打开软件，准备进行数据恢复。</li></ol><h2 id="步骤二：连接U盘并打开软件"><a href="#步骤二：连接U盘并打开软件" class="headerlink" title="步骤二：连接U盘并打开软件"></a>步骤二：连接U盘并打开软件</h2><ol><li>将出现问题的U盘插入电脑。  </li><li>打开DiskGenius软件，找到U盘并选择。</li></ol><h2 id="步骤三：搜索丢失的分区"><a href="#步骤三：搜索丢失的分区" class="headerlink" title="步骤三：搜索丢失的分区"></a>步骤三：搜索丢失的分区</h2><ol><li>右键点击U盘，选择<strong>“搜索已丢失分区（重建分区表）”</strong>。  </li><li>选择“自动搜索整个磁盘”，点击“开始搜索”。  </li><li>等待扫描完成，通常几分钟内即可。</li></ol><h2 id="步骤四：检查恢复的文件"><a href="#步骤四：检查恢复的文件" class="headerlink" title="步骤四：检查恢复的文件"></a>步骤四：检查恢复的文件</h2><ol><li>扫描完成后，查看恢复的分区。  </li><li>检查文件是否正常。  </li><li>确认文件无误后，点击<strong>“保存更改”</strong>。</li></ol><h2 id="步骤五：恢复数据并保存"><a href="#步骤五：恢复数据并保存" class="headerlink" title="步骤五：恢复数据并保存"></a>步骤五：恢复数据并保存</h2><ol><li>使用<strong>免费版</strong>时，可能需要购买专业版才能恢复数据。  </li><li>购买专业版后，继续恢复过程。  </li><li>恢复完成后，将数据保存到电脑硬盘中，防止U盘再次出现问题。</li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/format-disk-error-recover-usb-data-with-diskgenius-case/">https://itxiaozhang.com/format-disk-error-recover-usb-data-with-diskgenius-case/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>将U盘插入电脑后，系统提示“格式化磁盘”，但U盘里有一些非常重要的文件需要保留。本文详细介绍了如何利用DiskGenius修复U盘分区表并恢复数据的全过程，帮助遇到类似问题的用户找回丢失文件。</p><h2 id="步骤一：下载并安装DiskGenius"><a href="#步骤一：下载并安装DiskGenius" class="headerlink" title="步骤一：下载并安装DiskGenius"></a>步骤一：下载并安装DiskGenius</h2><ol><li><a href="https://www.diskgenius.cn/">官网下载</a><strong>DiskGenius</strong>软件。  </li><li>安装并打开软件，准备进行数据恢复。</li></ol><h2 id="步骤二：连接U盘并打开软件"><a href="#步骤二：连接U盘并打开软件" class="headerlink" title="步骤二：连接U盘并打开软件"></a>步骤二：连接U盘并打开软件</h2><ol><li>将出现问题的U盘插入电脑。  </li><li>打开DiskGenius软件，找到U盘并选择。</li></ol><h2 id="步骤三：搜索丢失的分区"><a href="#步骤三：搜索丢失的分区" class="headerlink" title="步骤三：搜索丢失的分区"></a>步骤三：搜索丢失的分区</h2><ol><li>右键点击U盘，选择<strong>“搜索已丢失分区（重建分区表）”</strong>。  </li><li>选择“自动搜索整个磁盘”，点击“开始搜索”。  </li><li>等待扫描完成，通常几分钟内即可。</li></ol><h2 id="步骤四：检查恢复的文件"><a href="#步骤四：检查恢复的文件" class="headerlink" title="步骤四：检查恢复的文件"></a>步骤四：检查恢复的文件</h2><ol><li>扫描完成后，查看恢复的分区。  </li><li>检查文件是否正常。  </li><li>确认文件无误后，点击<strong>“保存更改”</strong>。</li></ol><h2 id="步骤五：恢复数据并保存"><a href="#步骤五：恢复数据并保存" class="headerlink" title="步骤五：恢复数据并保存"></a>步骤五：恢复数据并保存</h2><ol><li>使用<strong>免费版</strong>时，可能需要购买专业版才能恢复数据。  </li><li>购买专业版后，继续恢复过程。  </li><li>恢复完成后，将数据保存到电脑硬盘中，防止U盘再次出现问题。</li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://www.bilibili.com/video/BV1tkktYTEGB">哔哩哔哩</a></li><li><a href="https://youtu.be/AMm-73oH9yw?si=H3GH96ybn0zd-6nj">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
     
     
     <categories>

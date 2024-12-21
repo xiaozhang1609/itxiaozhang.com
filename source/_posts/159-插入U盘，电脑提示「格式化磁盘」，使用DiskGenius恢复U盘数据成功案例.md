@@ -47,8 +47,8 @@ tags:
 
 ## 视频版本
 
-- [哔哩哔哩](https://space.bilibili.com/3546607630944387)
-- [YouTube](https://www.youtube.com/@itxiaozhang)
+- [哔哩哔哩](https://www.bilibili.com/video/BV1tkktYTEGB)
+- [YouTube](https://youtu.be/AMm-73oH9yw?si=H3GH96ybn0zd-6nj)
 
 ---
 ▶ 可以在[关于](https://itxiaozhang.com/about/)或者[这篇文章](https://itxiaozhang.com/about-computer-repair-services-with-me/)找到我的联系方式。
