@@ -16,22 +16,23 @@
   <meta name="author" content="小章">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文介绍了两种实用的方法来关闭虚拟化基础安全性（VBS），以提高系统性能或解决兼容性问题。">
+    <meta name="description" content="这篇文章介绍了微软官方的两款工具：程序安装和卸载修复工具与恶意软件删除工具，帮助用户解决程序无法安装或卸载的问题，并清理系统中的恶意软件。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="两种关闭VBS的实用方法">
-<meta property="og:url" content="https://itxiaozhang.com/two-effective-ways-to-disable-vbs/index.html">
+<meta property="og:title" content="微软官方安装卸载修复工具与恶意软件删除工具使用教程">
+<meta property="og:url" content="https://itxiaozhang.com/windows-installation-uninstallation-problems-solution/index.html">
 <meta property="og:site_name" content="IT小章">
-<meta property="og:description" content="本文介绍了两种实用的方法来关闭虚拟化基础安全性（VBS），以提高系统性能或解决兼容性问题。">
+<meta property="og:description" content="这篇文章介绍了微软官方的两款工具：程序安装和卸载修复工具与恶意软件删除工具，帮助用户解决程序无法安装或卸载的问题，并清理系统中的恶意软件。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-21T16:53:09.000Z">
-<meta property="article:modified_time" content="2024-12-21T17:18:47.681Z">
+<meta property="article:published_time" content="2024-12-21T17:09:42.000Z">
+<meta property="article:modified_time" content="2024-12-21T17:18:40.165Z">
 <meta property="article:author" content="小章">
-<meta property="article:tag" content="vbs">
+<meta property="article:tag" content="微软">
+<meta property="article:tag" content="运行库">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>两种关闭VBS的实用方法 - IT小章</title>
+  <title>微软官方安装卸载修复工具与恶意软件删除工具使用教程 - IT小章</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">两种关闭VBS的实用方法</span>
+            <span id="subtitle">微软官方安装卸载修复工具与恶意软件删除工具使用教程</span>
           
         </div>
 
@@ -221,7 +222,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-12-22 00:53" pubdate>
+        <time datetime="2024-12-22 01:09" pubdate>
           2024年12月22日 凌晨
         </time>
       </span>
@@ -233,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          834 字
+          818 字
         
       </span>
     
@@ -281,48 +282,52 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">两种关闭VBS的实用方法</h1>
+            <h1 id="seo-header">微软官方安装卸载修复工具与恶意软件删除工具使用教程</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>原文地址：<a href="https://itxiaozhang.com/two-effective-ways-to-disable-vbs/">https://itxiaozhang.com/two-effective-ways-to-disable-vbs/</a>  </p>
+<p>原文地址：<a href="https://itxiaozhang.com/windows-installation-uninstallation-problems-solution/">https://itxiaozhang.com/windows-installation-uninstallation-problems-solution/</a>  </p>
 </blockquote>
-<h3 id="什么是VBS（Virtualization-Based-Security）？"><a href="#什么是VBS（Virtualization-Based-Security）？" class="headerlink" title="什么是VBS（Virtualization-Based Security）？"></a><strong>什么是VBS（Virtualization-Based Security）？</strong></h3><p><strong>虚拟化基础安全性（VBS）</strong> 是一种利用硬件虚拟化技术增强操作系统安全的功能。它通过将内存、进程等重要系统组件隔离在一个受保护的虚拟环境中，以防止恶意软件访问和篡改系统数据。VBS 的目的是提高系统防护，尤其是防止内核级的攻击。</p>
-<p>然而，启用 VBS 可能导致系统性能下降，特别是当运行虚拟化应用时。此外，一些依赖硬件虚拟化的程序可能会与 VBS 产生兼容性问题。因此，某些用户可能希望关闭 VBS 以提高性能或解决兼容性问题。</p>
-<h3 id="方法一：使用批处理文件禁用-VBS"><a href="#方法一：使用批处理文件禁用-VBS" class="headerlink" title="方法一：使用批处理文件禁用 VBS"></a><strong>方法一：使用批处理文件禁用 VBS</strong></h3><ol>
-<li><p><strong>创建批处理文件</strong></p>
-<p>首先，创建一个批处理文件，内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs batch">@echo off<br><br>dism /Online /Disable-Feature:microsoft-hyper-v-all /NoRestart<br>dism /Online /Disable-Feature:IsolatedUserMode /NoRestart<br>dism /Online /Disable-Feature:Microsoft-Hyper-V-Hypervisor /NoRestart<br>dism /Online /Disable-Feature:Microsoft-Hyper-V-Online /NoRestart<br>dism /Online /Disable-Feature:HypervisorPlatform /NoRestart<br><br>REM ===========================================<br><br>mountvol X: /s<br>copy %WINDIR%\System32\SecConfig.efi X:\EFI\Microsoft\Boot\SecConfig.efi /Y<br>bcdedit /create &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125; /d &quot;DebugTool&quot; /application osloader<br>bcdedit /set &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125; path &quot;\EFI\Microsoft\Boot\SecConfig.efi&quot;<br>bcdedit /set &#123;bootmgr&#125; bootsequence &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125;<br>bcdedit /set &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125; loadoptions DISABLE-LSA-ISO,DISABLE-VBS<br>bcdedit /set &#123;0cb3b571-2f2e-4343-a879-d86a476d7215&#125; device partition=X:<br>mountvol X: /d<br>bcdedit /set hypervisorlaunchtype off<br><br>echo.<br>echo.<br>echo =======================================================<br>echo 当前操作已完成，接下来请关闭此窗口并重启电脑，然后根据屏幕提示完成剩下操作。<br>pause &gt; nul<br>echo.<br></code></pre></td></tr></table></figure>
+<p>在使用 Windows 系统时，程序安装或卸载过程中常常会遇到各种问题，比如注册表损坏、程序无法卸载或安装等。这些问题通常会影响系统的正常运行。微软提供了两个非常有用的官方工具，可以帮助解决这些常见的安装和卸载问题，同时帮助清理恶意软件。今天，我们就来介绍这两个工具以及如何解决相关的报错问题。</p>
+<h2 id="程序安装和卸载修复工具"><a href="#程序安装和卸载修复工具" class="headerlink" title="程序安装和卸载修复工具"></a><strong>程序安装和卸载修复工具</strong></h2><p>如果你遇到如下报错提示：</p>
+<blockquote>
+<p><strong>“The feature you are trying to use is on a network resource that is unavailable.”</strong><br>点击 <strong>OK</strong> 后，会显示：<br><strong>“Click OK to try again, or enter an alternate path to a folder containing the installation package in the box below.”</strong></p>
+</blockquote>
+<p>这个问题通常是由于安装程序的路径丢失、注册表损坏或其他文件问题引起的。微软的“程序安装和卸载修复工具”可以帮助你修复这些问题。</p>
+<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><ol>
+<li><p><strong>下载工具</strong>：<br>访问微软官方网站，下载 <a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/windows/%E4%BF%AE%E5%A4%8D%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%88%96%E5%88%A0%E9%99%A4%E7%9A%84%E9%97%AE%E9%A2%98-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">程序安装和卸载修复工具</a>。</p>
 </li>
-<li><p><strong>保存文件并以管理员身份运行</strong></p>
-<p>将上述代码保存为 <code>.bat</code> 文件（例如 <code>disable_vbs.bat</code>），右键点击该文件，选择“<strong>以管理员身份运行</strong>”。</p>
+<li><p><strong>运行工具</strong>：<br>下载完成后，双击运行该程序，并按照提示点击“下一步”。</p>
 </li>
-<li><p><strong>执行脚本</strong></p>
-<p>执行脚本后，系统会自动禁用 Hyper-V 和其他与 VBS 相关的功能。脚本执行完后，系统会提示您重启电脑。</p>
+<li><p><strong>选择修复功能</strong>：<br>你可以选择“<strong>卸载功能</strong>”来修复程序卸载失败的问题。如果遇到安装问题，也可以选择“安装功能”来修复安装失败。</p>
 </li>
-<li><p><strong>重启电脑并完成操作</strong></p>
-<p>关闭脚本窗口并重启计算机。重启时，按照提示操作，系统会完成 VBS 相关的设置调整。</p>
+<li><p><strong>选择需要修复的程序</strong>：<br>根据工具提示，选择需要修复的程序，点击“下一步”进行卸载或修复。</p>
 </li>
-<li><p><strong>按F3键完成配置</strong></p>
-<p>在电脑重启时，系统会显示一个设置界面。按 <strong>F3</strong> 键四次，确保 VBS 功能被彻底禁用。</p>
+<li><p><strong>完成修复</strong>：<br>修复完成后，点击“关闭”即可。</p>
+</li>
+</ol>
+<h2 id="恶意软件删除工具"><a href="#恶意软件删除工具" class="headerlink" title="恶意软件删除工具"></a><strong>恶意软件删除工具</strong></h2><p>如果系统被恶意软件感染，可能会导致各种功能异常，包括程序无法正常安装或卸载。微软的 <strong>恶意软件删除工具</strong> 可以帮助你清除系统中的流行恶意软件，确保系统安全。该工具支持 Windows 7 到 Windows 10，适用于扫描和清除各种特定恶意软件。</p>
+<h3 id="使用步骤-1"><a href="#使用步骤-1" class="headerlink" title="使用步骤"></a>使用步骤</h3><ol>
+<li><p><strong>下载工具</strong>：<br>访问微软官方网站，下载 <a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool">恶意软件删除工具</a>。以 64 位举例，下载对于 64 位基于 x64 的系统。</p>
+</li>
+<li><p><strong>运行工具</strong>：<br>下载后，双击运行该工具。如果系统提示需要更新，确保你的操作系统已更新到最新版本，否则工具可能无法正常运行。</p>
+</li>
+<li><p><strong>选择扫描类型</strong>：<br>运行后，你可以选择以下几种扫描方式：</p>
+<ul>
+<li><strong>快速扫描</strong>：扫描常见的恶意软件。</li>
+<li><strong>全面扫描</strong>：扫描整个系统，查找潜在的恶意软件。</li>
+<li><strong>特定目录扫描</strong>：扫描指定文件夹或目录。</li>
+</ul>
+</li>
+<li><p><strong>开始扫描</strong>：<br>选择扫描方式后，点击“下一步”开始扫描。扫描完成后，工具会自动删除检测到的恶意软件。</p>
 </li>
 </ol>
 <hr>
-<h3 id="方法二：通过雷电模拟器关闭-VBS"><a href="#方法二：通过雷电模拟器关闭-VBS" class="headerlink" title="方法二：通过雷电模拟器关闭 VBS"></a><strong>方法二：通过雷电模拟器关闭 VBS</strong></h3><ol>
-<li><p><strong>下载并安装雷电模拟器</strong></p>
-<p>下载并安装雷电模拟器：<a target="_blank" rel="noopener" href="https://www.ldmnq.com/">雷电模拟器下载链接</a>。雷电模拟器在安装时会自动检测并提示是否启用虚拟化功能。</p>
-</li>
-<li><p><strong>重启电脑</strong></p>
-<p>在安装过程中，雷电模拟器会要求您重启电脑，以完成虚拟化功能的配置。</p>
-</li>
-<li><p><strong>雷电模拟器自动禁用 VBS</strong></p>
-<p>重启后，雷电模拟器会自动帮助您关闭 VBS 和其他与虚拟化相关的安全功能。此时，您不需要手动干预，雷电模拟器会完成所有必要的设置。</p>
-</li>
-</ol>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://iknow.lenovo.com.cn/detail/423992">Win11最新关闭VBS的几种方法</a></li>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45029834/article/details/129158937">如何解决“程序安装和卸载修复工具”问题</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/93056001">微软恶意软件删除工具的使用</a></li>
 </ul>
 <hr>
 <p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>
@@ -344,7 +349,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/" class="category-chain-item">电脑技巧</a>
+  <a href="/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/" class="category-chain-item">电脑维修</a>
   
   
 
@@ -359,7 +364,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/vbs/" class="print-no-link">#vbs</a>
+        <a href="/tags/%E5%BE%AE%E8%BD%AF/" class="print-no-link">#微软</a>
+      
+        <a href="/tags/%E8%BF%90%E8%A1%8C%E5%BA%93/" class="print-no-link">#运行库</a>
       
     </div>
   
@@ -371,8 +378,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>两种关闭VBS的实用方法</div>
-      <div>https://itxiaozhang.com/two-effective-ways-to-disable-vbs/</div>
+      <div>微软官方安装卸载修复工具与恶意软件删除工具使用教程</div>
+      <div>https://itxiaozhang.com/windows-installation-uninstallation-problems-solution/</div>
     </div>
     <div class="license-meta">
       
@@ -416,18 +423,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/windows-installation-uninstallation-problems-solution/" title="微软官方安装卸载修复工具与恶意软件删除工具使用教程">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">微软官方安装卸载修复工具与恶意软件删除工具使用教程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/solution-inaccessible-boot-device-blue-screen/" title="一种解决 Inaccessible Boot Device 蓝屏的方法">
-                        <span class="hidden-mobile">一种解决 Inaccessible Boot Device 蓝屏的方法</span>
+                      <a href="/two-effective-ways-to-disable-vbs/" title="两种关闭VBS的实用方法">
+                        <span class="hidden-mobile">两种关闭VBS的实用方法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
