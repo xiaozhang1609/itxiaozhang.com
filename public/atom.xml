@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-12-21T17:18:40.165Z</updated>
+  <updated>2024-12-23T06:10:52.078Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用HTML、CSS和JavaScript写一个圣诞氛围的网页</title>
+    <link href="https://itxiaozhang.com/create-christmas-themed-webpage-with-html-css-javascript/"/>
+    <id>https://itxiaozhang.com/create-christmas-themed-webpage-with-html-css-javascript/</id>
+    <published>2024-12-23T06:04:44.000Z</published>
+    <updated>2024-12-23T06:10:52.078Z</updated>
+    
+    
+    <summary type="html">本文介绍了如何使用HTML、CSS和JavaScript创建一个充满圣诞氛围的网页。通过实现雪花飘落、圣诞树和蜡烛闪烁等动态效果。</summary>
+    
+    
+    
+    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
+    
+    
+    <category term="编程" scheme="https://itxiaozhang.com/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="圣诞" scheme="https://itxiaozhang.com/tags/%E5%9C%A3%E8%AF%9E/"/>
+    
+  </entry>
   
   <entry>
     <title>微软官方安装卸载修复工具与恶意软件删除工具使用教程</title>
@@ -422,25 +443,6 @@
     <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
     
     <category term="hmdb" scheme="https://itxiaozhang.com/tags/hmdb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记37</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-37/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-37/</id>
-    <published>2024-11-24T11:06:29.000Z</published>
-    <updated>2024-11-24T11:17:45.965Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第37周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
