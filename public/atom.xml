@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2024-12-23T06:10:52.078Z</updated>
+  <updated>2024-12-23T15:00:18.854Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阅读与感悟周记41</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-41/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-41/</id>
+    <published>2024-12-23T14:52:00.000Z</published>
+    <updated>2024-12-23T15:00:18.854Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第41周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>用HTML、CSS和JavaScript写一个圣诞氛围的网页</title>
@@ -420,29 +439,6 @@
     <category term="Ubuntu" scheme="https://itxiaozhang.com/tags/Ubuntu/"/>
     
     <category term="建站" scheme="https://itxiaozhang.com/tags/%E5%BB%BA%E7%AB%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python自动化工具：HMDB代谢物信息一键批量获取</title>
-    <link href="https://itxiaozhang.com/python-hmdb-metabolites-batch-extractor/"/>
-    <id>https://itxiaozhang.com/python-hmdb-metabolites-batch-extractor/</id>
-    <published>2024-11-27T04:08:15.000Z</published>
-    <updated>2024-11-27T10:03:50.607Z</updated>
-    
-    
-    <summary type="html">本文介绍了一款基于Python开发的自动化工具，可批量获取HMDB数据库中的代谢物信息，支持正负离子模式，提高科研效率。</summary>
-    
-    
-    
-    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
-    
-    
-    <category term="脚本" scheme="https://itxiaozhang.com/tags/%E8%84%9A%E6%9C%AC/"/>
-    
-    <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
-    
-    <category term="hmdb" scheme="https://itxiaozhang.com/tags/hmdb/"/>
     
   </entry>
   
