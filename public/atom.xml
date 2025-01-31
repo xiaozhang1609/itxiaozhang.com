@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-01-06T13:23:53.441Z</updated>
+  <updated>2025-01-31T13:22:18.188Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Windows 10/11 安装与激活指南</title>
+    <link href="https://itxiaozhang.com/windows-10-11-install-activation-guide/"/>
+    <id>https://itxiaozhang.com/windows-10-11-install-activation-guide/</id>
+    <published>2025-01-31T13:20:40.000Z</published>
+    <updated>2025-01-31T13:22:18.188Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&quot;https://itxiaozhang.com/windows-10-11-install-activation-guide/&quot;&gt;https://itxiaozhang.com/windows-10-11-install</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>阅读与感悟周记43</title>
     <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-43/"/>
     <id>https://itxiaozhang.com/weekly-reflections-reading-insights-43/</id>
     <published>2025-01-06T09:26:34.000Z</published>
-    <updated>2025-01-06T13:23:53.441Z</updated>
+    <updated>2025-01-06T14:58:45.547Z</updated>
     
     
     <summary type="html">这是《阅读与感悟周记》的第43周，记录我本周的所见所闻所思所想。</summary>
@@ -406,29 +425,6 @@
     <category term="软件安装" scheme="https://itxiaozhang.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
     
     <category term="office" scheme="https://itxiaozhang.com/tags/office/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>游戏安全组件运行时发生异常，ACE安全中心问题归纳总结</title>
-    <link href="https://itxiaozhang.com/game-security-component-issues-ace-security-center-summary/"/>
-    <id>https://itxiaozhang.com/game-security-component-issues-ace-security-center-summary/</id>
-    <published>2024-12-02T01:31:04.000Z</published>
-    <updated>2024-12-02T01:39:56.191Z</updated>
-    
-    
-    <summary type="html">本教程教你通过卸载ACE和重新安装WeGAME来解决腾讯游戏中的ACE安全中心错误，步骤简单易懂，适合普通用户操作。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="ACE" scheme="https://itxiaozhang.com/tags/ACE/"/>
-    
-    <category term="ACE安全中心" scheme="https://itxiaozhang.com/tags/ACE%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83/"/>
-    
-    <category term="游戏" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
