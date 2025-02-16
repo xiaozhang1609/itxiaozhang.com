@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-01-31T13:25:38.520Z</updated>
+  <updated>2025-02-16T14:43:32.861Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>阅读与感悟周记44</title>
+    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-44/"/>
+    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-44/</id>
+    <published>2025-02-16T02:26:34.000Z</published>
+    <updated>2025-02-16T14:43:32.861Z</updated>
+    
+    
+    <summary type="html">这是《阅读与感悟周记》的第44周，记录我本周的所见所闻所思所想。</summary>
+    
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows 10/11 安装与激活指南</title>
     <link href="https://itxiaozhang.com/windows-10-11-install-activation-guide/"/>
     <id>https://itxiaozhang.com/windows-10-11-install-activation-guide/</id>
     <published>2025-01-31T13:20:40.000Z</published>
-    <updated>2025-01-31T13:25:38.520Z</updated>
+    <updated>2025-02-01T02:08:35.126Z</updated>
     
     
     <summary type="html">本文记录了Windows 10/11的安装和激活过程，包括镜像和工具下载链接，以及针对不同版本（专业版、企业版、家庭版、教育版）的KMS激活命令，帮助用户顺利完成系统安装与激活。</summary>
@@ -402,29 +421,6 @@
     
     
     <category term="漫威争锋" scheme="https://itxiaozhang.com/tags/%E6%BC%AB%E5%A8%81%E4%BA%89%E9%94%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>别再浪费时间折腾啦！Office 安装激活，用 Office Tool Plus 一步到位</title>
-    <link href="https://itxiaozhang.com/office-tool-plus-install-activate-fast/"/>
-    <id>https://itxiaozhang.com/office-tool-plus-install-activate-fast/</id>
-    <published>2024-12-03T14:05:03.000Z</published>
-    <updated>2024-12-04T09:02:24.582Z</updated>
-    
-    
-    <summary type="html">这篇文章介绍了使用 Office Tool Plus 下载安装工具，下载安装 Office，并通过在线或KMS方式激活Office。</summary>
-    
-    
-    
-    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="修电脑" scheme="https://itxiaozhang.com/tags/%E4%BF%AE%E7%94%B5%E8%84%91/"/>
-    
-    <category term="软件安装" scheme="https://itxiaozhang.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    <category term="office" scheme="https://itxiaozhang.com/tags/office/"/>
     
   </entry>
   
