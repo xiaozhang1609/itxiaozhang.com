@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-02-23T15:44:10.250Z</updated>
+  <updated>2025-03-03T01:19:49.510Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>无畏契约报错：A D3D11-compatible GPU</title>
+    <link href="https://itxiaozhang.com/fix-valorant-d3d11-gpu-error/"/>
+    <id>https://itxiaozhang.com/fix-valorant-d3d11-gpu-error/</id>
+    <published>2025-03-03T01:11:06.000Z</published>
+    <updated>2025-03-03T01:19:49.510Z</updated>
+    
+    
+    <summary type="html">玩家在启动《无畏契约》时遇到错误“A D3D11-compatible GPU (Feature Level 11.0, Shader Model 5.0) is required to run the engine”，导致游戏无法运行。该问题通常由显卡驱动缺失或未正确安装引起。本文将介绍问题原因及详细的解决步骤。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="显卡驱动" scheme="https://itxiaozhang.com/tags/%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/"/>
+    
+    <category term="无畏契约" scheme="https://itxiaozhang.com/tags/%E6%97%A0%E7%95%8F%E5%A5%91%E7%BA%A6/"/>
+    
+    <category term="游戏问题" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>阅读与感悟周记45</title>
     <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-45/"/>
     <id>https://itxiaozhang.com/weekly-reflections-reading-insights-45/</id>
     <published>2025-02-23T15:38:59.000Z</published>
-    <updated>2025-02-23T15:44:10.250Z</updated>
+    <updated>2025-02-23T15:51:51.177Z</updated>
     
     
     <summary type="html">这是《阅读与感悟周记》的第45周，记录我本周的所见所闻所思所想。</summary>
@@ -400,27 +423,6 @@
     
     
     <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Steam令牌手机验证器丢失完整恢复案例</title>
-    <link href="https://itxiaozhang.com/steam-token-mobile-verifier-loss-recovery-case/"/>
-    <id>https://itxiaozhang.com/steam-token-mobile-verifier-loss-recovery-case/</id>
-    <published>2024-12-07T02:03:53.000Z</published>
-    <updated>2024-12-13T16:07:35.858Z</updated>
-    
-    
-    <summary type="html">本文分享了Steam令牌手机验证器丢失的完整恢复案例，详细讲解了身份验证、恢复步骤及解决流程，帮助用户快速解决登录问题。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="steam" scheme="https://itxiaozhang.com/tags/steam/"/>
-    
-    <category term="Steam令牌手机验证器" scheme="https://itxiaozhang.com/tags/Steam%E4%BB%A4%E7%89%8C%E6%89%8B%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%99%A8/"/>
     
   </entry>
   
