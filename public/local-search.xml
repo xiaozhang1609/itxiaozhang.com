@@ -60,7 +60,7 @@
     <link href="/steam-fatal-error-non-ascii-path/"/>
     <url>/steam-fatal-error-non-ascii-path/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/steam-fatal-error-non-ascii-path/">https://itxiaozhang.com/steam-fatal-error-non-ascii-path/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p><strong>Steam致命错误</strong><br>Steam在该Windows版本上无法从含有非ASCII字符的文件夹路径运行。请重新安装Steam至默认文件夹，或将其安装于Windows 7及更高版本上。  </p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>Steam的安装路径中包含非ASCII字符（如中文字符），导致程序无法正常运行。  </p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>重新安装Steam</strong>：  </p><ul><li>双击打开Steam安装包。  </li><li>选择简体中文作为安装语言，点击“下一步”。  </li><li>注意默认安装路径，如果包含中文字符，需要修改。</li></ul></li><li><p><strong>修改安装路径</strong>：  </p><ul><li>在安装路径栏，删除中文文件夹名称。  </li><li>替换为仅包含英文字符的文件夹名称（如“Steam”）。  </li><li>确认后点击“安装”。</li></ul></li><li><p><strong>运行Steam</strong>：  </p><ul><li>安装完成后，点击“完成”启动Steam。  </li><li>确保Steam可以正常更新并运行。</li></ul></li><li><p><strong>避免后续问题</strong>：  </p><ul><li>如果之前安装路径含有中文字符，导致无法打开Steam，需要卸载并重新安装。  </li><li>重新安装时，务必选择全英文路径，以确保Steam正常运行。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://www.bilibili.com/video/BV1enRwYzEu2">哔哩哔哩</a></li><li><a href="https://youtu.be/MaRLsUXFcww?si=g2lIcp1vJ4vJ7mph">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/steam-fatal-error-non-ascii-path/">https://itxiaozhang.com/steam-fatal-error-non-ascii-path/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p><strong>Steam致命错误</strong><br>Steam在该Windows版本上无法从含有非ASCII字符的文件夹路径运行。请重新安装Steam至默认文件夹，或将其安装于Windows 7及更高版本上。  </p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>Steam的安装路径中包含非ASCII字符（如中文字符），导致程序无法正常运行。  </p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>重新安装Steam</strong>：  </p><ul><li>双击打开Steam安装包。  </li><li>选择简体中文作为安装语言，点击“下一步”。  </li><li>注意默认安装路径，如果包含中文字符，需要修改。</li></ul></li><li><p><strong>修改安装路径</strong>：  </p><ul><li>在安装路径栏，删除中文文件夹名称。  </li><li>替换为仅包含英文字符的文件夹名称（如“Steam”）。  </li><li>确认后点击“安装”。</li></ul></li><li><p><strong>运行Steam</strong>：  </p><ul><li>安装完成后，点击“完成”启动Steam。  </li><li>确保Steam可以正常更新运行。</li></ul></li><li><p><strong>避免后续问题</strong>：  </p><ul><li>如果之前安装路径含有中文字符，导致无法打开Steam，需要卸载并重新安装。  </li><li>重新安装时，务必选择全英文路径，以确保Steam正常运行。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://www.bilibili.com/video/BV1enRwYzEu2">哔哩哔哩</a></li><li><a href="https://youtu.be/MaRLsUXFcww?si=g2lIcp1vJ4vJ7mph">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
     
     
     <categories>
@@ -4128,31 +4128,6 @@
       <tag>amd</tag>
       
       <tag>显卡</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>在 Ubuntu VPS 上部署 Hexo 博客并配置 HTTPS</title>
-    <link href="/deploy-hexo-blog-on-ubuntu-vps-and-configure-https/"/>
-    <url>/deploy-hexo-blog-on-ubuntu-vps-and-configure-https/</url>
-    
-    <content type="html"><![CDATA[<h3 id="1-系统准备"><a href="#1-系统准备" class="headerlink" title="1. 系统准备"></a>1. <strong>系统准备</strong></h3><ul><li>更新系统：<code>apt update &amp;&amp; apt upgrade -y</code></li><li>安装必要工具：<code>apt install -y vim wget curl unzip git</code></li><li>安装 Nginx 和 Certbot：<code>apt install -y nginx certbot python3-certbot-nginx</code></li><li>安装 Docker 和 Docker Compose：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -fsSL https://get.docker.com -o get-docker.sh<br>sh get-docker.sh<br>apt install -y docker-compose<br></code></pre></td></tr></table></figure></li></ul><h3 id="2-部署-Hexo-博客"><a href="#2-部署-Hexo-博客" class="headerlink" title="2. 部署 Hexo 博客"></a>2. <strong>部署 Hexo 博客</strong></h3><ul><li>配置 Nginx：<br>创建文件 <code>/etc/nginx/sites-available/itxiaozhang.com</code>，添加配置：<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">443</span> ssl;<br>    <span class="hljs-attribute">server_name</span> itxiaozhang.com www.itxiaozhang.com;<br><br>    <span class="hljs-attribute">root</span> /var/www/itxiaozhang.com;<br>    <span class="hljs-attribute">index</span> index.html;<br><br>    <span class="hljs-attribute">ssl_certificate</span> /etc/letsencrypt/live/itxiaozhang.com/fullchain.pem;<br>    <span class="hljs-attribute">ssl_certificate_key</span> /etc/letsencrypt/live/itxiaozhang.com/privkey.pem;<br>    <span class="hljs-attribute">include</span> /etc/letsencrypt/options-ssl-nginx.conf;<br>    <span class="hljs-attribute">ssl_dhparam</span> /etc/letsencrypt/ssl-dhparams.pem;<br><br>    <span class="hljs-section">location</span> / &#123;<br>        <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ =<span class="hljs-number">404</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">80</span>;<br>    <span class="hljs-attribute">server_name</span> itxiaozhang.com www.itxiaozhang.com;<br>    <span class="hljs-attribute">return</span> <span class="hljs-number">301</span> https://<span class="hljs-variable">$server_name</span><span class="hljs-variable">$request_uri</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li><li>获取 SSL 证书：<br><code>certbot certonly --nginx --installer none -d itxiaozhang.com -d www.itxiaozhang.com</code></li><li>启用 Nginx 配置：<br><code>ln -s /etc/nginx/sites-available/itxiaozhang.com /etc/nginx/sites-enabled/</code></li><li>重启 Nginx：<code>systemctl restart nginx</code></li></ul><h3 id="3-访问地址"><a href="#3-访问地址" class="headerlink" title="3. 访问地址"></a>3. <strong>访问地址</strong></h3><ul><li>Hexo 博客：<code>https://itxiaozhang.com</code></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>技术笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>hexo</tag>
       
     </tags>
     
