@@ -16,23 +16,24 @@
   <meta name="author" content="小章">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在安装虚幻引擎和相关运行库时，出现错误代码 0x80070660，提示：“临时文件夹已满或无法访问。请释放一些空间或验证您是否有写入临时文件夹的权限。”可能原因包括缺失 Installer 文件夹、临时文件夹权限设置不当等。">
+    <meta name="description" content="本文介绍了如何解决Windows系统中出现的「管理员已阻止你运行此应用」错误，针对mmc.exe文件无法运行的常见原因，提供了注册表修改、组策略调整和防火墙例外设置三种有效的解决方法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决安装虚幻引擎时出现的错误代码 0x80070660">
-<meta property="og:url" content="https://itxiaozhang.com/fix-unreal-engine-installation-error-0x80070660/index.html">
+<meta property="og:title" content="如何解决「管理员已阻止你运行此应用」错误（mmc.exe）">
+<meta property="og:url" content="https://itxiaozhang.com/how-to-fix-admin-blocked-mmc-exe-error/index.html">
 <meta property="og:site_name" content="IT小章">
-<meta property="og:description" content="在安装虚幻引擎和相关运行库时，出现错误代码 0x80070660，提示：“临时文件夹已满或无法访问。请释放一些空间或验证您是否有写入临时文件夹的权限。”可能原因包括缺失 Installer 文件夹、临时文件夹权限设置不当等。">
+<meta property="og:description" content="本文介绍了如何解决Windows系统中出现的「管理员已阻止你运行此应用」错误，针对mmc.exe文件无法运行的常见原因，提供了注册表修改、组策略调整和防火墙例外设置三种有效的解决方法。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-10T00:32:52.000Z">
-<meta property="article:modified_time" content="2025-03-10T00:36:42.417Z">
+<meta property="article:published_time" content="2025-03-14T01:13:27.000Z">
+<meta property="article:modified_time" content="2025-03-14T01:15:27.515Z">
 <meta property="article:author" content="小章">
-<meta property="article:tag" content="虚幻引擎">
-<meta property="article:tag" content="2147944032">
+<meta property="article:tag" content="mmc.exe">
+<meta property="article:tag" content="用户账户控制">
+<meta property="article:tag" content="组策略">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>解决安装虚幻引擎时出现的错误代码 0x80070660 - IT小章</title>
+  <title>如何解决「管理员已阻止你运行此应用」错误（mmc.exe） - IT小章</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">解决安装虚幻引擎时出现的错误代码 0x80070660</span>
+            <span id="subtitle">如何解决「管理员已阻止你运行此应用」错误（mmc.exe）</span>
           
         </div>
 
@@ -222,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-10 08:32" pubdate>
-          2025年3月10日 早上
+        <time datetime="2025-03-14 09:13" pubdate>
+          2025年3月14日 上午
         </time>
       </span>
     
@@ -234,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          796 字
+          633 字
         
       </span>
     
@@ -245,7 +246,7 @@
         
         
         
-          7 分钟
+          6 分钟
         
       </span>
     
@@ -282,81 +283,44 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">解决安装虚幻引擎时出现的错误代码 0x80070660</h1>
+            <h1 id="seo-header">如何解决「管理员已阻止你运行此应用」错误（mmc.exe）</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>原文地址：<a href="https://itxiaozhang.com/fix-unreal-engine-installation-error-0x80070660/">https://itxiaozhang.com/fix-unreal-engine-installation-error-0x80070660/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p>
+<p>原文地址：<a href="https://itxiaozhang.com/how-to-fix-admin-blocked-mmc-exe-error/">https://itxiaozhang.com/how-to-fix-admin-blocked-mmc-exe-error/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p>
 </blockquote>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在安装虚幻引擎和相关运行库时，出现以下错误提示：</p>
-<blockquote>
-<p><strong>错误代码 0x80070660</strong><br>临时文件夹已满或无法访问。请释放一些空间或验证您是否有写入临时文件夹的权限。</p>
-</blockquote>
-<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>导致此错误的常见原因包括：</p>
-<ol>
-<li><p><strong>缺失 Installer 文件夹</strong>：系统中的 <code>C:\Windows\Installer</code> 文件夹丢失，导致安装程序无法正常工作。</p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>报错信息：<br>用户帐户控制<br>为了对电脑进行保护，已经阻止此应用。<br>管理员已阻止你运行此应用。有关详细信息，请与管理员联系。<br>mmc.exe<br>发布者：未知<br>文件源：此计算机上的硬盘驱动器<br>程序位置：”C:\WINDOWS\system32\mmc.exe” C:\WINDOWS\system32\devmgmt.msc<br>关闭。</p>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol>
+<li><strong>用户账户控制（UAC）限制</strong>：Windows的用户账户控制可能误判了mmc.exe的安全性，导致其被阻止执行。</li>
+<li><strong>注册表或组策略配置错误</strong>：某些注册表项（如EnableLUA、FilterAdministratorToken）被修改，或者组策略设置了管理员批准模式，阻止了mmc.exe的运行。</li>
+<li><strong>防火墙或安全软件拦截</strong>：某些防火墙或第三方安全软件可能会误判mmc.exe，并阻止其运行。</li>
+</ol>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="方法1：通过注册表修改（推荐）"><a href="#方法1：通过注册表修改（推荐）" class="headerlink" title="方法1：通过注册表修改（推荐）"></a>方法1：通过注册表修改（推荐）</h3><ol>
+<li><p>以管理员身份运行记事本，创建新文件并粘贴以下内容：</p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">Windows Registry Editor Version <span class="hljs-number">5.00</span><br>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]<br><span class="hljs-string">&quot;EnableLUA&quot;</span>=<span class="hljs-name">dword</span>:<span class="hljs-number">00000000</span><br><span class="hljs-string">&quot;FilterAdministratorToken&quot;</span>=<span class="hljs-name">dword</span>:<span class="hljs-number">00000001</span><br></code></pre></td></tr></table></figure>
 </li>
-<li><p><strong>临时文件夹权限问题</strong>：<code>C:\Windows\Temp</code> 或用户的 <code>%temp%</code> 文件夹权限设置不当，阻止安装程序写入临时文件。</p>
+<li><p>保存文件为 <code>.reg</code> 格式（如 <code>fix_mmc.reg</code>），双击文件导入注册表。</p>
+</li>
+<li><p>重启计算机，使设置生效。</p>
 </li>
 </ol>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="方法一：创建缺失的-Installer-文件夹"><a href="#方法一：创建缺失的-Installer-文件夹" class="headerlink" title="方法一：创建缺失的 Installer 文件夹"></a>方法一：创建缺失的 Installer 文件夹</h3><ol>
-<li><p><strong>打开命令提示符（管理员）</strong>：</p>
-<ul>
-<li>按下 <code>Windows 键</code>，输入“命令提示符”，在搜索结果中右键点击“命令提示符”，选择“以管理员身份运行”。</li>
+<h3 id="方法2：组策略调整"><a href="#方法2：组策略调整" class="headerlink" title="方法2：组策略调整"></a>方法2：组策略调整</h3><ol>
+<li>按 <code>Win + R</code>，输入 <code>gpedit.msc</code> 打开组策略编辑器。</li>
+<li>依次展开：计算机配置 → Windows设置 → 安全设置 → 本地策略 → 安全选项。</li>
+<li>修改以下两项：<ul>
+<li>用户账户控制: 用于内置管理员账户的管理员批准模式 → 设置为已启用。</li>
+<li>用户账户控制: 以管理员批准模式运行所有管理员 → 设置为已禁用。</li>
 </ul>
 </li>
-<li><p><strong>创建 Installer 文件夹</strong>：</p>
-<ul>
-<li><p>在命令提示符窗口中，输入以下命令并按回车键：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd"><span class="hljs-built_in">md</span> C:\Windows\Installer<br></code></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p><strong>重新运行安装程序</strong>：关闭命令提示符窗口，尝试再次运行之前的安装程序。</p>
-</li>
+<li>重启计算机。</li>
 </ol>
-<h3 id="方法二：运行-Windows-更新疑难解答"><a href="#方法二：运行-Windows-更新疑难解答" class="headerlink" title="方法二：运行 Windows 更新疑难解答"></a>方法二：运行 Windows 更新疑难解答</h3><ol>
-<li><p><strong>打开设置</strong>：</p>
-<ul>
-<li>按下 <code>Windows 键 + I</code>，打开“设置”窗口。</li>
-</ul>
-</li>
-<li><p><strong>进入疑难解答</strong>：</p>
-<ul>
-<li>点击“更新和安全”，然后选择“疑难解答”。</li>
-</ul>
-</li>
-<li><p><strong>运行 Windows 更新疑难解答</strong>：</p>
-<ul>
-<li>在“疑难解答”页面，点击“其他疑难解答”，找到并点击“Windows 更新”，然后点击“运行疑难解答”。</li>
-</ul>
-</li>
-<li><p><strong>按照提示操作</strong>：系统将自动检测并修复与 Windows 更新相关的问题。</p>
-</li>
-<li><p><strong>重新启动计算机</strong>：完成修复后，重启计算机，然后尝试再次安装软件。</p>
-</li>
-</ol>
-<h3 id="方法三：修复临时文件夹权限"><a href="#方法三：修复临时文件夹权限" class="headerlink" title="方法三：修复临时文件夹权限"></a>方法三：修复临时文件夹权限</h3><ol>
-<li><p><strong>打开命令提示符（管理员）</strong>：</p>
-<ul>
-<li>按下 <code>Windows 键</code>，输入“命令提示符”，在搜索结果中右键点击“命令提示符”，选择“以管理员身份运行”。</li>
-</ul>
-</li>
-<li><p><strong>修复系统临时文件夹权限</strong>：</p>
-<ul>
-<li><p>在命令提示符窗口中，输入以下命令并逐一按回车键执行：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cmd">takeown /f c:\windows\temp /a<br>icacls c:\windows\temp /reset<br>icacls c:\windows\temp /inheritance:r<br>icacls c:\windows\temp /grant *S-<span class="hljs-number">1</span>-<span class="hljs-number">5</span>-<span class="hljs-number">32</span>-<span class="hljs-number">544</span>:(OI)(CI)(F)<br>icacls c:\windows\temp /grant *S-<span class="hljs-number">1</span>-<span class="hljs-number">5</span>-<span class="hljs-number">18</span>:(OI)(CI)(F)<br>icacls c:\windows\temp /grant &quot;<span class="hljs-variable">%username%</span>&quot;:(OI)(CI)(F)<br></code></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p><strong>修复用户临时文件夹权限</strong>：</p>
-<ul>
-<li><p>继续在命令提示符中，输入以下命令并逐一执行：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cmd">icacls <span class="hljs-variable">%temp%</span> /inheritance:r<br>icacls <span class="hljs-variable">%temp%</span> /grant <span class="hljs-variable">%username%</span>:(OI)(CI)F /T /C<br>icacls <span class="hljs-variable">%temp%</span> /grant *S-<span class="hljs-number">1</span>-<span class="hljs-number">5</span>-<span class="hljs-number">32</span>-<span class="hljs-number">544</span>:(OI)(CI)F /T /C<br>icacls <span class="hljs-variable">%temp%</span> /grant *S-<span class="hljs-number">1</span>-<span class="hljs-number">5</span>-<span class="hljs-number">18</span>:(OI)(CI)(F) /T /C<br><span class="hljs-built_in">md</span> <span class="hljs-variable">%temp%</span>\Low<br>icacls <span class="hljs-variable">%temp%</span>\Low /setintegritylevel (OI)(CI)low<br></code></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p><strong>重新运行安装程序</strong>：完成上述步骤后，关闭命令提示符窗口，尝试再次运行安装程序。</p>
-</li>
+<h3 id="方法3：防火墙例外设置"><a href="#方法3：防火墙例外设置" class="headerlink" title="方法3：防火墙例外设置"></a>方法3：防火墙例外设置</h3><ol>
+<li>打开控制面板 → Windows Defender 防火墙。</li>
+<li>点击“允许应用或功能通过防火墙”，然后点击“更改设置”。</li>
+<li>点击“允许其他应用”，定位到 <code>C:\Windows\System32\mmc.exe</code> 并添加。</li>
+<li>勾选“专用”和“公用网络”权限，保存后注销系统。</li>
 </ol>
 <h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
@@ -397,9 +361,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%99%9A%E5%B9%BB%E5%BC%95%E6%93%8E/" class="print-no-link">#虚幻引擎</a>
+        <a href="/tags/mmc-exe/" class="print-no-link">#mmc.exe</a>
       
-        <a href="/tags/2147944032/" class="print-no-link">#2147944032</a>
+        <a href="/tags/%E7%94%A8%E6%88%B7%E8%B4%A6%E6%88%B7%E6%8E%A7%E5%88%B6/" class="print-no-link">#用户账户控制</a>
+      
+        <a href="/tags/%E7%BB%84%E7%AD%96%E7%95%A5/" class="print-no-link">#组策略</a>
       
     </div>
   
@@ -411,8 +377,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>解决安装虚幻引擎时出现的错误代码 0x80070660</div>
-      <div>https://itxiaozhang.com/fix-unreal-engine-installation-error-0x80070660/</div>
+      <div>如何解决「管理员已阻止你运行此应用」错误（mmc.exe）</div>
+      <div>https://itxiaozhang.com/how-to-fix-admin-blocked-mmc-exe-error/</div>
     </div>
     <div class="license-meta">
       
@@ -424,7 +390,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月10日</div>
+          <div>2025年3月14日</div>
         </div>
       
       
@@ -456,18 +422,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/how-to-fix-admin-blocked-mmc-exe-error/" title="如何解决「管理员已阻止你运行此应用」错误（mmc.exe）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">如何解决「管理员已阻止你运行此应用」错误（mmc.exe）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/fix-kalabiqiu-fullscreen-black-bars/" title="解决《卡拉比丘》游戏无法全屏显示黑边问题">
-                        <span class="hidden-mobile">解决《卡拉比丘》游戏无法全屏显示黑边问题</span>
+                      <a href="/fix-unreal-engine-installation-error-0x80070660/" title="解决安装虚幻引擎时出现的错误代码 0x80070660">
+                        <span class="hidden-mobile">解决安装虚幻引擎时出现的错误代码 0x80070660</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
