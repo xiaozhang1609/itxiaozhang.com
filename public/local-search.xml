@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>C盘被「ACLOS」文件夹占满：无畏契约录像文件清理与路径修改</title>
+    <link href="/valorant-aclos-folder-cleanup/"/>
+    <url>/valorant-aclos-folder-cleanup/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/valorant-aclos-folder-cleanup/">https://itxiaozhang.com/valorant-aclos-folder-cleanup/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。   </p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>C盘空间被「ACLOS」文件夹占用严重，路径为：「C:\Users\Administrator\AppData\ACLOS」。此文件夹为游戏《无畏契约》的「无畏时刻」录制文件存储路径，导致C盘爆满。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>「无畏契约」的「无畏时刻」功能会自动录制游戏画面，并将视频文件默认保存在「ACLOS」文件夹。随着录制文件增多，C盘空间逐渐被占满，若不更改设置或关闭功能，问题会持续发生。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>删除已有录制文件</strong>  </p><ul><li>打开「ACLOS」文件夹：「C:\Users\Administrator\AppData\ACLOS」。  </li><li>根据需要选择性删除或直接全选删除文件。  </li><li>删除时建议「Shift + Delete」永久删除，避免占用回收站空间。</li></ul></li><li><p><strong>更改录制路径</strong>  </p><ul><li>在D盘或其他空间充足的分区新建一个文件夹（如「D:\ValorantClips」）。  </li><li>打开《无畏契约》设置，找到「无畏时刻」功能的录制路径选项。  </li><li>将录制路径更改为新建的文件夹路径。</li></ul></li><li><p><strong>关闭录制功能（如无需求）</strong>  </p><ul><li>在《无畏契约》设置内找到「无畏时刻」功能选项。  </li><li>关闭录制功能，避免后续自动生成新录像文件。</li></ul></li></ol><p>完成以上步骤后，C盘空间将得到释放，并避免日后再次因录像文件占满C盘。若仍需使用该功能，建议定期清理或备份录像文件。  </p><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>无畏契约</tag>
+      
+      <tag>C盘清理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如何解决「管理员已阻止你运行此应用」错误（mmc.exe）</title>
     <link href="/how-to-fix-admin-blocked-mmc-exe-error/"/>
     <url>/how-to-fix-admin-blocked-mmc-exe-error/</url>
