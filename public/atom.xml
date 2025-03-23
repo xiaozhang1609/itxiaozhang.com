@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-03-19T03:08:21.934Z</updated>
+  <updated>2025-03-23T01:51:20.438Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决2个常见的WeGame问题</title>
+    <link href="https://itxiaozhang.com/fix-two-common-wegame-issues/"/>
+    <id>https://itxiaozhang.com/fix-two-common-wegame-issues/</id>
+    <published>2025-03-23T01:41:57.000Z</published>
+    <updated>2025-03-23T01:51:20.438Z</updated>
+    
+    
+    <summary type="html">本文介绍了WeGame启动失败（错误代码[193]）与下载超时问题的原因与解决办法。通过修复运行库、运行系统文件检查工具以及使用网络修复工具，可有效解决这些问题。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="WeGame" scheme="https://itxiaozhang.com/tags/WeGame/"/>
+    
+    <category term="msvcp140.dll" scheme="https://itxiaozhang.com/tags/msvcp140-dll/"/>
+    
+  </entry>
   
   <entry>
     <title>C盘被「ACLOS」文件夹占满：无畏契约录像文件清理与路径修改</title>
@@ -404,25 +425,6 @@
     <category term="数据恢复" scheme="https://itxiaozhang.com/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/"/>
     
     <category term="DiskGenius" scheme="https://itxiaozhang.com/tags/DiskGenius/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WeGame登录超时问题（错误码：7610001）</title>
-    <link href="https://itxiaozhang.com/wegame-login-timeout-error-7610001/"/>
-    <id>https://itxiaozhang.com/wegame-login-timeout-error-7610001/</id>
-    <published>2024-12-18T13:30:33.000Z</published>
-    <updated>2024-12-21T09:55:24.356Z</updated>
-    
-    
-    <summary type="html">在登录WeGame时，出现错误提示“登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001”，本文提供三种有效的解决方法。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="wegame" scheme="https://itxiaozhang.com/tags/wegame/"/>
     
   </entry>
   

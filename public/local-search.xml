@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>解决2个常见的WeGame问题</title>
+    <link href="/fix-two-common-wegame-issues/"/>
+    <url>/fix-two-common-wegame-issues/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/fix-two-common-wegame-issues/">https://itxiaozhang.com/fix-two-common-wegame-issues/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><h3 id="1-启动失败：错误代码-193"><a href="#1-启动失败：错误代码-193" class="headerlink" title="1. 启动失败：错误代码[193]"></a>1. 启动失败：错误代码[193]</h3><ul><li>报错信息：<ul><li>「程序无法启动，错误代码[193]：加载msvcp140.dll失败，该文件缺失或损坏。尝试重新安装程序可能会解决此问题。」</li><li>「TASLogin.exe - 损坏的映像：C:\WINDOWS\SYSTEM32\msvcp140.dll没有被指定在Windows上运行，或者它包含错误。错误状态0xc000012f。」</li></ul></li></ul><h3 id="2-下载失败：操作超时"><a href="#2-下载失败：操作超时" class="headerlink" title="2. 下载失败：操作超时"></a>2. 下载失败：操作超时</h3><ul><li>报错信息：<ul><li>「下载失败，下载操作超时。请确认网络状况后重试，若本机开启了网络代理、加速工具或相关软件，请关闭后再试。」</li></ul></li></ul><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li><strong>启动失败（错误代码[193]）</strong>：<ul><li>由于msvcp140.dll文件缺失、损坏或版本不匹配，导致程序无法正常启动。该文件属于Microsoft Visual C++运行库，许多软件依赖它才能正常运行。</li></ul></li><li><strong>下载失败（操作超时）</strong>：<ul><li>通常由网络连接异常或网络配置问题引起，例如网络代理、加速工具或其他网络设置干扰。</li></ul></li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="1-修复启动失败（错误代码-193-）"><a href="#1-修复启动失败（错误代码-193-）" class="headerlink" title="1. 修复启动失败（错误代码[193]）"></a>1. 修复启动失败（错误代码[193]）</h3><ol><li><p><strong>重新安装运行库</strong></p><ul><li>下载并运行「All_In_One_Runtimes 运行库修复工具」。</li><li>双击运行工具，等待程序自动修复或更新运行库文件。</li></ul></li><li><p><strong>运行系统文件检查工具</strong></p><ul><li>以管理员身份打开命令提示符。  </li><li>输入命令：<code>sfc /scannow</code>，按回车键执行。  </li><li>系统会自动扫描并修复损坏的系统文件，耐心等待完成。</li></ul></li><li><p><strong>重启电脑</strong></p><ul><li>修复完成后，重启电脑，然后重新启动WeGame，确认问题是否解决。</li></ul></li></ol><h3 id="2-解决下载失败（操作超时）"><a href="#2-解决下载失败（操作超时）" class="headerlink" title="2. 解决下载失败（操作超时）"></a>2. 解决下载失败（操作超时）</h3><ol><li><p><strong>使用网络修复工具</strong></p><ul><li>下载并运行「360断网急救箱」独立版。  </li><li>点击「全面诊断」，然后依次选择「重置网络配置」和「强力修复」。</li></ul></li><li><p><strong>重启电脑</strong></p><ul><li>修复完成后，重启电脑，然后重新下载游戏，确认问题是否解决。</li></ul></li></ol><h3 id="工具下载链接"><a href="#工具下载链接" class="headerlink" title="工具下载链接"></a>工具下载链接</h3><ul><li><a href="https://www.123912.com/s/dptuVv-D1oW3">下载链接</a></li></ul><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>WeGame</tag>
+      
+      <tag>msvcp140.dll</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>C盘被「ACLOS」文件夹占满：无畏契约录像文件清理与路径修改</title>
     <link href="/valorant-aclos-folder-cleanup/"/>
     <url>/valorant-aclos-folder-cleanup/</url>
