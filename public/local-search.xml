@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>永劫无间：系统检测到您的本地文件有损坏，建议修复客户端</title>
+    <link href="/naraka-file-corruption-fix/"/>
+    <url>/naraka-file-corruption-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/naraka-file-corruption-fix/">https://itxiaozhang.com/naraka-file-corruption-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。   </p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在启动《永劫无间》时，出现提示：「系统检测到您的本地文件有损坏，为了更好的游戏体验，官方建议您修复客户端。」</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>该提示通常是由于游戏文件缺失或损坏所致，可能在下载、安装或更新过程中发生。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p><strong>通过Steam客户端修复：</strong></p><ol><li>打开Steam客户端，确保游戏已停止运行。</li><li>在游戏库中找到《永劫无间》，右键点击并选择「属性」。</li><li>在弹出的窗口中，选择「本地文件」选项卡。</li><li>点击「验证游戏文件的完整性」，等待Steam完成验证并自动修复损坏的文件。</li></ol><p><strong>通过官方启动器修复：</strong></p><ol><li>关闭游戏，打开《永劫无间》官方启动器。</li><li>点击右上角的菜单按钮（通常为三个横杠）。</li><li>在下拉菜单中选择「修复」选项，点击确定。</li><li>启动器将开始检测并自动下载替换损坏或缺失的文件。</li><li>修复完成后，点击「启动游戏」进入游戏。</li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>永劫无间</tag>
+      
+      <tag>游戏文件损坏</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>编程案例：摄影照片展示网站纯前端实现（HTML、CSS、JS）</title>
     <link href="/spa-photography-gallery/"/>
     <url>/spa-photography-gallery/</url>
