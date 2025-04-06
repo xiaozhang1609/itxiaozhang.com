@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>三角洲报错：加载msvcp140.dll失败，文件缺失或损坏</title>
+    <link href="/delta-error-msvcp140-dll-missing/"/>
+    <url>/delta-error-msvcp140-dll-missing/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/delta-error-msvcp140-dll-missing/">https://itxiaozhang.com/delta-error-msvcp140-dll-missing/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>「警告 (3,1039,30003) [50f776d25e743f132ceb58]<br>错误代码[193]：加载msvcp140.dll失败，该文件缺失或损坏！尝试重新安装程序可能会解决此问题。」  </p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li>电脑缺少必要的运行库（如Microsoft Visual C++ Redistributable）。  </li><li>msvcp140.dll文件损坏或被误删。  </li><li>杀毒软件可能误删了相关文件。  </li><li>游戏或软件安装目录中的文件损坏。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="1-检查安全软件"><a href="#1-检查安全软件" class="headerlink" title="1. 检查安全软件"></a>1. 检查安全软件</h3><ul><li>打开「Windows安全中心」，查看「保护历史记录」，确认是否有误删情况。  </li><li>若安装了第三方杀毒软件，可进行病毒查杀，排除安全威胁。</li></ul><h3 id="2-下载安装运行库"><a href="#2-下载安装运行库" class="headerlink" title="2. 下载安装运行库"></a>2. 下载安装运行库</h3><ul><li>访问微软官网下载「Microsoft Visual C++ Redistributable」运行库：<a href="https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170">点击下载</a>。  </li><li>下载适合系统版本的安装包（通常为x64）。  </li><li>右键以管理员身份运行安装程序，安装完成后重启电脑。</li></ul><h3 id="3-修复游戏或软件"><a href="#3-修复游戏或软件" class="headerlink" title="3. 修复游戏或软件"></a>3. 修复游戏或软件</h3><ul><li>右键游戏或软件，选择「修复」功能。  </li><li>若普通修复无效，尝试「深度修复」。  </li><li>部分游戏平台（如WeGame）提供内置修复工具，可在修复完成后重新启动游戏。</li></ul><h3 id="4-其他操作"><a href="#4-其他操作" class="headerlink" title="4. 其他操作"></a>4. 其他操作</h3><ul><li>若问题仍未解决，可尝试卸载并重新安装游戏或软件。  </li><li>确保Windows系统和所有驱动程序均为最新版本。</li></ul><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>游戏报错</tag>
+      
+      <tag>运行库</tag>
+      
+      <tag>msvcp140.dll</tag>
+      
+      <tag>三角洲</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>永劫无间：系统检测到您的本地文件有损坏，建议修复客户端</title>
     <link href="/naraka-file-corruption-fix/"/>
     <url>/naraka-file-corruption-fix/</url>
