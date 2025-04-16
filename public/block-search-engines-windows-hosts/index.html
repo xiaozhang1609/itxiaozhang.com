@@ -24,7 +24,7 @@
 <meta property="og:description" content="本文介绍如何在Windows 10系统中通过hosts文件屏蔽百度、搜狗、360搜索、谷歌等搜索引擎，包括域名列表、修改方法及注意事项。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-15T11:06:50.000Z">
-<meta property="article:modified_time" content="2025-04-15T11:12:33.686Z">
+<meta property="article:modified_time" content="2025-04-16T00:43:24.210Z">
 <meta property="article:author" content="小章">
 <meta property="article:tag" content="搜索引擎">
 <meta property="article:tag" content="hosts">
@@ -313,7 +313,8 @@
 </li>
 <li><p><strong>添加搜索引擎域名（优化列表）</strong></p>
 <ul>
-<li>在文件末尾添加以下条目（推荐使用0.0.0.0）：<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">0.0.0.0</span> www.baidu.com<br><span class="hljs-number">0.0.0.0</span> baidu.com<br><span class="hljs-number">0.0.0.0</span> m.baidu.com<br><span class="hljs-number">0.0.0.0</span> image.baidu.com<br><span class="hljs-number">0.0.0.0</span> zhidao.baidu.com<br><span class="hljs-number">0.0.0.0</span> www.sogou.com<br><span class="hljs-number">0.0.0.0</span> sogou.com<br><span class="hljs-number">0.0.0.0</span> m.sogou.com<br><span class="hljs-number">0.0.0.0</span> wap.sogou.com<br><span class="hljs-number">0.0.0.0</span> www.so.com<br><span class="hljs-number">0.0.0.0</span> so.com<br><span class="hljs-number">0.0.0.0</span> m.so.com<br><span class="hljs-number">0.0.0.0</span> www.sm.cn<br><span class="hljs-number">0.0.0.0</span> sm.cn<br><span class="hljs-number">0.0.0.0</span> m.sm.cn<br><span class="hljs-number">0.0.0.0</span> www.google.com<br><span class="hljs-number">0.0.0.0</span> google.com<br><span class="hljs-number">0.0.0.0</span> www.bing.com<br><span class="hljs-number">0.0.0.0</span> bing.com<br><span class="hljs-number">0.0.0.0</span> www.yandex.com<br><span class="hljs-number">0.0.0.0</span> yandex.com<br></code></pre></td></tr></table></figure></li>
+<li><p>在文件末尾添加以下条目（推荐使用0.0.0.0）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs bash">0.0.0.0 www.baidu.com<br>0.0.0.0 baidu.com<br>0.0.0.0 m.baidu.com<br>0.0.0.0 image.baidu.com<br>0.0.0.0 zhidao.baidu.com<br>0.0.0.0 www.sogou.com<br>0.0.0.0 sogou.com<br>0.0.0.0 m.sogou.com<br>0.0.0.0 wap.sogou.com<br>0.0.0.0 www.so.com<br>0.0.0.0 so.com<br>0.0.0.0 m.so.com<br>0.0.0.0 www.sm.cn<br>0.0.0.0 sm.cn<br>0.0.0.0 m.sm.cn<br>0.0.0.0 www.google.com<br>0.0.0.0 google.com<br>0.0.0.0 www.bing.com<br>0.0.0.0 bing.com<br>0.0.0.0 www.yandex.com<br>0.0.0.0 yandex.com<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p><strong>保存文件</strong></p>
@@ -324,8 +325,10 @@
 </li>
 <li><p><strong>刷新DNS缓存</strong></p>
 <ul>
-<li>打开命令提示符（Win + R 输入<code>cmd</code>）；</li>
-<li>执行命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ipconfig /flushdns<br></code></pre></td></tr></table></figure></li>
+<li><p>打开命令提示符（Win + R 输入<code>cmd</code>）；</p>
+</li>
+<li><p>执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ipconfig /flushdns<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p><strong>测试屏蔽效果</strong></p>
