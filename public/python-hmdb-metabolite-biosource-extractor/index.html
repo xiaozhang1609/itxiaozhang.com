@@ -1,0 +1,674 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="小章">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="使用Python从HMDB数据库获取代谢物的生物来源信息，结合智能HTML解析与关键词匹配算法，高效生成结构化数据报告。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Python从HMDB网站提取代谢物生物来源信息">
+<meta property="og:url" content="https://itxiaozhang.com/python-hmdb-metabolite-biosource-extractor/index.html">
+<meta property="og:site_name" content="IT小章">
+<meta property="og:description" content="使用Python从HMDB数据库获取代谢物的生物来源信息，结合智能HTML解析与关键词匹配算法，高效生成结构化数据报告。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-04-27T01:12:08.000Z">
+<meta property="article:modified_time" content="2025-04-27T01:40:12.847Z">
+<meta property="article:author" content="小章">
+<meta property="article:tag" content="hmdb">
+<meta property="article:tag" content="数据采集">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>使用Python从HMDB网站提取代谢物生物来源信息 - IT小章</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"itxiaozhang.com","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="IT小章" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 50vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>IT小章</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://read.itxiaozhang.com" target="_self">
+                <i class="iconfont icon-books"></i>
+                <span>阅读</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://fixpc.cc" target="_self">
+                <i class="iconfont briefcase icon-briefcase"></i>
+                <span>工具箱</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">使用Python从HMDB网站提取代谢物生物来源信息</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-04-27 09:12" pubdate>
+          2025年4月27日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">使用Python从HMDB网站提取代谢物生物来源信息</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/python-hmdb-metabolite-biosource-extractor/">https://itxiaozhang.com/python-hmdb-metabolite-biosource-extractor/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p>
+</blockquote>
+<h2 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h2><ul>
+<li><strong>自动化数据采集</strong>：基于requests库实现稳定可靠的数据抓取</li>
+<li><strong>智能内容解析</strong>：采用lxml高效提取HTML中的关键信息</li>
+<li><strong>多维度分类</strong>：精准识别7类生物来源（人类、食品、微生物等）</li>
+<li><strong>双语日志系统</strong>：中英文混合日志记录，便于问题追踪</li>
+<li><strong>结构化输出</strong>：标准CSV格式结果，兼容各类分析工具</li>
+<li><strong>实时进度监控</strong>：可视化进度条显示任务执行情况</li>
+</ul>
+<h2 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
+<li>创建输入文件<code>hmdb_id.txt</code>，每行包含一个HMDB ID</li>
+<li>推荐使用Python 3.7+环境</li>
+</ol>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装依赖库</span><br>pip install requests lxml pandas<br></code></pre></td></tr></table></figure>
+
+<h3 id="执行程序"><a href="#执行程序" class="headerlink" title="执行程序"></a>执行程序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python get_disposition.py<br></code></pre></td></tr></table></figure>
+
+<h2 id="部分代码"><a href="#部分代码" class="headerlink" title="部分代码"></a>部分代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> logging<br><span class="hljs-keyword">from</span> lxml <span class="hljs-keyword">import</span> html<br><span class="hljs-keyword">import</span> html <span class="hljs-keyword">as</span> html_module<br><span class="hljs-keyword">import</span> re<br><span class="hljs-keyword">import</span> csv<br><span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> <span class="hljs-type">List</span>, <span class="hljs-type">Dict</span>, <span class="hljs-type">Any</span>, <span class="hljs-type">Union</span><br><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">================================</span><br><span class="hljs-string">作者：IT小章</span><br><span class="hljs-string">主页txiaozhang.com</span><br><span class="hljs-string">时间：2025年04月20日</span><br><span class="hljs-string">Copyright © 2025 IT小章</span><br><span class="hljs-string">================================</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><br><span class="hljs-comment"># 配置日志记录器</span><br>file_handler = logging.FileHandler(<span class="hljs-string">&#x27;disposition_log.txt&#x27;</span>, mode=<span class="hljs-string">&#x27;w&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>file_handler.setLevel(logging.INFO)<br>file_handler.setFormatter(logging.Formatter(<span class="hljs-string">&#x27;%(asctime)s - %(levelname)s - %(message)s&#x27;</span>))<br><br>console_handler = logging.StreamHandler()<br>console_handler.setLevel(logging.INFO)<br>console_handler.setFormatter(logging.Formatter(<span class="hljs-string">&#x27;%(message)s&#x27;</span>))<br>console_handler.addFilter(<span class="hljs-keyword">lambda</span> record: <span class="hljs-keyword">not</span> record.msg.startswith(<span class="hljs-string">&#x27;\n&#x27;</span>))<br><br>logger = logging.getLogger()<br>logger.setLevel(logging.INFO)<br>logger.addHandler(file_handler)<br>logger.addHandler(console_handler)<br><br><span class="hljs-comment"># 请求头配置</span><br>HEADERS = &#123;<br>    <span class="hljs-string">&#x27;User-Agent&#x27;</span>: <span class="hljs-string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36&#x27;</span><br>&#125;<br><br><span class="hljs-comment"># 关键词定义（按长度降序排列防止覆盖）</span><br>KEYWORDS = [<br>    &#123;<span class="hljs-string">&#x27;pattern&#x27;</span>: <span class="hljs-string">r&#x27;\bAnimal\b(?!.&#123;0,10&#125;origin)&#x27;</span>, <span class="hljs-string">&#x27;display_name&#x27;</span>: <span class="hljs-string">&#x27;Animal&#x27;</span>&#125;,<br>    &#123;<span class="hljs-string">&#x27;pattern&#x27;</span>: <span class="hljs-string">r&#x27;\bAquatic\b(?!.&#123;0,10&#125;origin)&#x27;</span>, <span class="hljs-string">&#x27;display_name&#x27;</span>: <span class="hljs-string">&#x27;Aquatic&#x27;</span>&#125;,<br>    &#123;<span class="hljs-string">&#x27;pattern&#x27;</span>: <span class="hljs-string">r&#x27;\bEndogenous\b&#x27;</span>, <span class="hljs-string">&#x27;display_name&#x27;</span>: <span class="hljs-string">&#x27;Endogenous&#x27;</span>&#125;,<br>    &#123;<span class="hljs-string">&#x27;pattern&#x27;</span>: <span class="hljs-string">r&#x27;\bMollusk\b&#x27;</span>, <span class="hljs-string">&#x27;display_name&#x27;</span>: <span class="hljs-string">&#x27;Mollusk&#x27;</span>&#125;,<br>    &#123;<span class="hljs-string">&#x27;pattern&#x27;</span>: <span class="hljs-string">r&#x27;\bAnimal origin\b&#x27;</span>, <span class="hljs-string">&#x27;display_name&#x27;</span>: <span class="hljs-string">&#x27;Animal origin&#x27;</span>&#125;,<br>    &#123;<span class="hljs-string">&#x27;pattern&#x27;</span>: <span class="hljs-string">r&#x27;\bAquatic origin\b&#x27;</span>, <span class="hljs-string">&#x27;display_name&#x27;</span>: <span class="hljs-string">&#x27;Aquatic origin&#x27;</span>&#125;,<br>    &#123;<span class="hljs-string">&#x27;pattern&#x27;</span>: <span class="hljs-string">r&#x27;\bSource\b&#x27;</span>, <span class="hljs-string">&#x27;display_name&#x27;</span>: <span class="hljs-string">&#x27;Source&#x27;</span>&#125;<br>]<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">process_node</span>(<span class="hljs-params">node, indent_level=<span class="hljs-number">0</span></span>) -&gt; <span class="hljs-built_in">str</span>:<br>    <span class="hljs-string">&quot;&quot;&quot;递归处理HTML节点结构，将HTML转换为格式化文本</span><br><span class="hljs-string">    </span><br><span class="hljs-string">    Args:</span><br><span class="hljs-string">        node: HTML节点</span><br><span class="hljs-string">        indent_level: 缩进级别</span><br><span class="hljs-string">        </span><br><span class="hljs-string">    Returns:</span><br><span class="hljs-string">        str: 格式化后的文本</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    text = <span class="hljs-string">&#x27;&#x27;</span><br>    <span class="hljs-keyword">if</span> node.tag == <span class="hljs-string">&#x27;br&#x27;</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;\n&#x27;</span><br>    <span class="hljs-keyword">if</span> node.tag <span class="hljs-keyword">in</span> [<span class="hljs-string">&#x27;ul&#x27;</span>, <span class="hljs-string">&#x27;ol&#x27;</span>]:<br>        text += <span class="hljs-string">&#x27;\n&#x27;</span> + <span class="hljs-string">&#x27;  &#x27;</span> * indent_level<br>    <span class="hljs-keyword">if</span> node.tag == <span class="hljs-string">&#x27;li&#x27;</span>:<br>        bullet = [<span class="hljs-string">&#x27;- &#x27;</span>, <span class="hljs-string">&#x27;* &#x27;</span>, <span class="hljs-string">&#x27;• &#x27;</span>][indent_level % <span class="hljs-number">3</span>]<br>        text += <span class="hljs-string">&#x27;\n&#x27;</span> + <span class="hljs-string">&#x27;  &#x27;</span> * indent_level + bullet<br>    <br>    <span class="hljs-keyword">if</span> node.text:<br>        text += node.text.strip()<br>    <br>    <span class="hljs-keyword">for</span> child <span class="hljs-keyword">in</span> node:<br>        text += process_node(child, indent_level + <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> node.tag <span class="hljs-keyword">in</span> [<span class="hljs-string">&#x27;ul&#x27;</span>, <span class="hljs-string">&#x27;ol&#x27;</span>] <span class="hljs-keyword">else</span> indent_level)<br>        <span class="hljs-keyword">if</span> child.tail <span class="hljs-keyword">and</span> child.tail.strip():<br>            text += child.tail.strip() + <span class="hljs-string">&#x27; &#x27;</span><br>    <br>    <span class="hljs-keyword">if</span> node.tag <span class="hljs-keyword">in</span> [<span class="hljs-string">&#x27;p&#x27;</span>, <span class="hljs-string">&#x27;div&#x27;</span>]:<br>        text += <span class="hljs-string">&#x27;\n\n&#x27;</span><br>    <span class="hljs-keyword">return</span> text<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">clean_html_text</span>(<span class="hljs-params">text: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">str</span>:<br>    <span class="hljs-string">&quot;&quot;&quot;清理HTML文本，移除HTML标签和实体</span><br><span class="hljs-string">    </span><br><span class="hljs-string">    Args:</span><br><span class="hljs-string">        text: 原始HTML文本</span><br><span class="hljs-string">        </span><br><span class="hljs-string">    Returns:</span><br><span class="hljs-string">        str: 清理后的文本</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-comment"># 解码HTML实体</span><br>    text = html_module.unescape(text)<br>    <span class="hljs-comment"># 替换所有残留实体</span><br>    text = re.sub(<span class="hljs-string">r&#x27;&amp;\w+;&#x27;</span>, <span class="hljs-string">&#x27; &#x27;</span>, text)<br>    <span class="hljs-comment"># 标准化空白符</span><br>    text = re.sub(<span class="hljs-string">r&#x27;[\t\r\f\v]+&#x27;</span>, <span class="hljs-string">&#x27; &#x27;</span>, text)<br>    <span class="hljs-comment"># 合并连续空格</span><br>    text = re.sub(<span class="hljs-string">r&#x27; +&#x27;</span>, <span class="hljs-string">&#x27; &#x27;</span>, text)<br>    <span class="hljs-comment"># 规范化换行</span><br>    text = re.sub(<span class="hljs-string">r&#x27;\n&#123;3,&#125;&#x27;</span>, <span class="hljs-string">&#x27;\n\n&#x27;</span>, text).strip()<br>    <span class="hljs-comment"># 转换列表项</span><br>    text = re.sub(<span class="hljs-string">r&#x27;&lt;li&gt;&#x27;</span>, <span class="hljs-string">&#x27;\n- &#x27;</span>, text)<br>    <span class="hljs-comment"># 移除剩余HTML标签</span><br>    text = re.sub(<span class="hljs-string">r&#x27;&lt;[^&gt;]+&gt;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, text)<br>    <span class="hljs-comment"># 保留段落间距</span><br>    text = re.sub(<span class="hljs-string">r&#x27;\n&#123;2,&#125;&#x27;</span>, <span class="hljs-string">&#x27;\n\n&#x27;</span>, text).strip()<br>    <br>    <span class="hljs-keyword">return</span> text<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_disposition_source</span>(<span class="hljs-params">hmdb_id: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-type">List</span>[<span class="hljs-type">Union</span>[<span class="hljs-built_in">str</span>, <span class="hljs-built_in">int</span>]]:<br>    url = <span class="hljs-string">f&quot;https://hmdb.ca/metabolites/<span class="hljs-subst">&#123;hmdb_id&#125;</span>&quot;</span><br>    <br>    <span class="hljs-keyword">try</span>:<br>        response = requests.get(url, headers=HEADERS)<br>        response.raise_for_status()<br>        <br>        tree = html.fromstring(response.content)<br><br>        disposition_td = tree.xpath(<span class="hljs-string">&quot;//table//tr/th[contains(normalize-space(), &#x27;Disposition&#x27;)]/following-sibling::td&quot;</span>)<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> disposition_td:<br>            logging.info(<span class="hljs-string">f&quot;未找到Disposition字段：<span class="hljs-subst">&#123;hmdb_id&#125;</span>&quot;</span>)<br>            <span class="hljs-keyword">return</span> [hmdb_id] + [<span class="hljs-string">&#x27;no&#x27;</span>] * <span class="hljs-built_in">len</span>(KEYWORDS)<br>            <br>        disposition_td = disposition_td[<span class="hljs-number">0</span>]<br>        <br>        disposition_text = process_node(disposition_td)<br>        disposition_text = clean_html_text(disposition_text)<br>        <br>        <span class="hljs-comment"># 仅在日志文件中记录详细内容</span><br>        file_handler = <span class="hljs-built_in">next</span>(handler <span class="hljs-keyword">for</span> handler <span class="hljs-keyword">in</span> logging.getLogger().handlers <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(handler, logging.FileHandler))<br>        file_handler.emit(logging.LogRecord(<br>            <span class="hljs-string">&#x27;root&#x27;</span>, logging.INFO, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-number">0</span>,<br>            <span class="hljs-string">f&quot;\nHMDB ID: <span class="hljs-subst">&#123;hmdb_id&#125;</span>\n\nDisposition Content:\n<span class="hljs-subst">&#123;disposition_text&#125;</span>\n<span class="hljs-subst">&#123;<span class="hljs-string">&#x27;=&#x27;</span>*<span class="hljs-number">50</span>&#125;</span>&quot;</span>, (), <span class="hljs-literal">None</span><br>        ))<br>        <br>        <span class="hljs-comment"># 统计关键词出现次数并转换为yes/no</span><br>        keyword_stats = &#123;&#125;<br>        <span class="hljs-keyword">for</span> kw <span class="hljs-keyword">in</span> KEYWORDS:<br>            matches = re.findall(kw[<span class="hljs-string">&#x27;pattern&#x27;</span>], disposition_text, flags=re.IGNORECASE)<br>            keyword_stats[kw[<span class="hljs-string">&#x27;display_name&#x27;</span>]] = <span class="hljs-string">&#x27;yes&#x27;</span> <span class="hljs-keyword">if</span> matches <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;no&#x27;</span><br><br>        <span class="hljs-comment"># 仅在日志文件中记录关键词统计</span><br>        stats_text = <span class="hljs-string">&quot;\n关键词统计结果:\n&quot;</span> + <span class="hljs-string">&quot;\n&quot;</span>.join([<span class="hljs-string">f&quot;- <span class="hljs-subst">&#123;kw&#125;</span>: <span class="hljs-subst">&#123;<span class="hljs-string">&#x27;是&#x27;</span> <span class="hljs-keyword">if</span> val == <span class="hljs-string">&#x27;yes&#x27;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;否&#x27;</span>&#125;</span>&quot;</span> <span class="hljs-keyword">for</span> kw, val <span class="hljs-keyword">in</span> keyword_stats.items()])<br>        file_handler.emit(logging.LogRecord(<br>            <span class="hljs-string">&#x27;root&#x27;</span>, logging.INFO, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-number">0</span>,<br>            <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;stats_text&#125;</span>\n<span class="hljs-subst">&#123;<span class="hljs-string">&#x27;=&#x27;</span>*<span class="hljs-number">50</span>&#125;</span>&quot;</span>, (), <span class="hljs-literal">None</span><br>        ))<br>        <br>        <span class="hljs-keyword">return</span> [hmdb_id] + [keyword_stats.get(kw[<span class="hljs-string">&#x27;display_name&#x27;</span>], <span class="hljs-string">&#x27;no&#x27;</span>) <span class="hljs-keyword">for</span> kw <span class="hljs-keyword">in</span> KEYWORDS]<br>    <br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        logging.error(<span class="hljs-string">f&quot;处理失败: <span class="hljs-subst">&#123;hmdb_id&#125;</span>，错误信息: <span class="hljs-subst">&#123;<span class="hljs-built_in">str</span>(e)&#125;</span>&quot;</span>)<br>        <span class="hljs-keyword">return</span> [hmdb_id] + [<span class="hljs-string">&#x27;no&#x27;</span>] * <span class="hljs-built_in">len</span>(KEYWORDS)<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():<br>    <span class="hljs-string">&quot;&quot;&quot;主函数，处理HMDB ID列表并生成结果CSV文件&quot;&quot;&quot;</span><br>    <span class="hljs-keyword">try</span>:<br>        <span class="hljs-comment"># 读取hmdb_id.txt文件</span><br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;hmdb_id.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>            hmdb_ids = [line.strip() <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> f <span class="hljs-keyword">if</span> line.strip()]<br>        <br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> hmdb_ids:<br>            logging.error(<span class="hljs-string">&quot;HMDB ID文件为空或不存在有效ID&quot;</span>)<br>            <span class="hljs-keyword">return</span><br>        <br>        csv_file_path = <span class="hljs-string">&quot;disposition_results.csv&quot;</span><br>        csv_headers = [<span class="hljs-string">&quot;HMDB ID&quot;</span>] + [kw[<span class="hljs-string">&#x27;display_name&#x27;</span>] <span class="hljs-keyword">for</span> kw <span class="hljs-keyword">in</span> KEYWORDS]<br>        <br>        <span class="hljs-comment"># 写入CSV文件</span><br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(csv_file_path, mode=<span class="hljs-string">&#x27;w&#x27;</span>, newline=<span class="hljs-string">&#x27;&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>) <span class="hljs-keyword">as</span> csvfile:<br>            csv_writer = csv.writer(csvfile)<br>            csv_writer.writerow(csv_headers)<br>            <br>            total = <span class="hljs-built_in">len</span>(hmdb_ids)<br>            <span class="hljs-keyword">for</span> idx, hmdb_id <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(hmdb_ids, <span class="hljs-number">1</span>):<br>                <span class="hljs-keyword">try</span>:<br>                    <span class="hljs-comment"># 显示进度信息</span><br>                    logging.info(<span class="hljs-string">f&quot;正在处理: <span class="hljs-subst">&#123;hmdb_id&#125;</span>，第<span class="hljs-subst">&#123;idx&#125;</span>个，共<span class="hljs-subst">&#123;total&#125;</span>个&quot;</span>)<br>                    <br>                    <span class="hljs-comment"># 获取处理结果并写入CSV</span><br>                    disposition_results = get_disposition_source(hmdb_id)<br>                    csv_writer.writerow(disposition_results)<br>                    csvfile.flush()  <span class="hljs-comment"># 确保数据立即写入文件</span><br>                <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>                    logging.error(<span class="hljs-string">f&quot;处理失败: <span class="hljs-subst">&#123;hmdb_id&#125;</span>，错误信息: <span class="hljs-subst">&#123;<span class="hljs-built_in">str</span>(e)&#125;</span>&quot;</span>)<br>        <br>        logging.info(<span class="hljs-string">f&quot;处理完成，共处理<span class="hljs-subst">&#123;total&#125;</span>个HMDB ID，结果已保存至<span class="hljs-subst">&#123;csv_file_path&#125;</span>&quot;</span>)<br>        <br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        logging.error(<span class="hljs-string">f&quot;程序执行出错: <span class="hljs-subst">&#123;<span class="hljs-built_in">str</span>(e)&#125;</span>&quot;</span>)<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    main()<br></code></pre></td></tr></table></figure>
+
+<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><ul>
+<li><code>disposition_results.csv</code>：包含各ID的生物来源标记(yes&#x2F;no)</li>
+<li><code>disposition_log.txt</code>：详细抓取日志和关键词统计</li>
+</ul>
+<h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
+</ul>
+<hr>
+<p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/" class="category-chain-item">编程开发</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/hmdb/" class="print-no-link">#hmdb</a>
+      
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" class="print-no-link">#数据采集</a>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>使用Python从HMDB网站提取代谢物生物来源信息</div>
+      <div>https://itxiaozhang.com/python-hmdb-metabolite-biosource-extractor/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>小章</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年4月27日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/windows-key-not-working-in-fullscreen/" title="Windows键无反应，按下无效的三种常见原因与解决方法">
+                        <span class="hidden-mobile">Windows键无反应，按下无效的三种常见原因与解决方法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
