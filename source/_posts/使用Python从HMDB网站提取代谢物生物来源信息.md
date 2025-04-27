@@ -46,203 +46,49 @@ python get_disposition.py
 ## 部分代码
 
 ```python
-import requests
-import os
-import logging
-from lxml import html
-import html as html_module
-import re
-import csv
-from typing import List, Dict, Any, Union
+# 检查并读取输入文件
+if not os.path.exists('hmdb_id.txt'):
+    print("错误：未找到hmdb_id.txt")
+    exit()
 
-"""
-================================
-作者：IT小章
-主页txiaozhang.com
-时间：2025年04月20日
-Copyright © 2025 IT小章
-================================
-"""
+with open('hmdb_id.txt', 'r', encoding='utf-8') as f:
+    hmdb_ids = [line.strip() for line in f if line.strip()]
 
-# 配置日志记录器
-file_handler = logging.FileHandler('disposition_log.txt', mode='w', encoding='utf-8')
-file_handler.setLevel(logging.INFO)
-file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+# 去重处理
+unique_ids = list(set(hmdb_ids))
+print(f"发现{len(unique_ids)}个唯一HMDB ID")
 
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
-console_handler.setFormatter(logging.Formatter('%(message)s'))
-console_handler.addFilter(lambda record: not record.msg.startswith('\n'))
+# 初始化结果存储
+results = {'HMDB_ID': [], 'Human': [], 'Food': [], 'Microbial': []}
 
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
-logger.addHandler(file_handler)
-logger.addHandler(console_handler)
-
-# 请求头配置
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-}
-
-# 关键词定义（按长度降序排列防止覆盖）
-KEYWORDS = [
-    {'pattern': r'\bAnimal\b(?!.{0,10}origin)', 'display_name': 'Animal'},
-    {'pattern': r'\bAquatic\b(?!.{0,10}origin)', 'display_name': 'Aquatic'},
-    {'pattern': r'\bEndogenous\b', 'display_name': 'Endogenous'},
-    {'pattern': r'\bMollusk\b', 'display_name': 'Mollusk'},
-    {'pattern': r'\bAnimal origin\b', 'display_name': 'Animal origin'},
-    {'pattern': r'\bAquatic origin\b', 'display_name': 'Aquatic origin'},
-    {'pattern': r'\bSource\b', 'display_name': 'Source'}
-]
-
-
-def process_node(node, indent_level=0) -> str:
-    """递归处理HTML节点结构，将HTML转换为格式化文本
-    
-    Args:
-        node: HTML节点
-        indent_level: 缩进级别
-        
-    Returns:
-        str: 格式化后的文本
-    """
-    text = ''
-    if node.tag == 'br':
-        return '\n'
-    if node.tag in ['ul', 'ol']:
-        text += '\n' + '  ' * indent_level
-    if node.tag == 'li':
-        bullet = ['- ', '* ', '• '][indent_level % 3]
-        text += '\n' + '  ' * indent_level + bullet
-    
-    if node.text:
-        text += node.text.strip()
-    
-    for child in node:
-        text += process_node(child, indent_level + 1 if node.tag in ['ul', 'ol'] else indent_level)
-        if child.tail and child.tail.strip():
-            text += child.tail.strip() + ' '
-    
-    if node.tag in ['p', 'div']:
-        text += '\n\n'
-    return text
-
-
-def clean_html_text(text: str) -> str:
-    """清理HTML文本，移除HTML标签和实体
-    
-    Args:
-        text: 原始HTML文本
-        
-    Returns:
-        str: 清理后的文本
-    """
-    # 解码HTML实体
-    text = html_module.unescape(text)
-    # 替换所有残留实体
-    text = re.sub(r'&\w+;', ' ', text)
-    # 标准化空白符
-    text = re.sub(r'[\t\r\f\v]+', ' ', text)
-    # 合并连续空格
-    text = re.sub(r' +', ' ', text)
-    # 规范化换行
-    text = re.sub(r'\n{3,}', '\n\n', text).strip()
-    # 转换列表项
-    text = re.sub(r'<li>', '\n- ', text)
-    # 移除剩余HTML标签
-    text = re.sub(r'<[^>]+>', '', text)
-    # 保留段落间距
-    text = re.sub(r'\n{2,}', '\n\n', text).strip()
-    
-    return text
-
-
-def get_disposition_source(hmdb_id: str) -> List[Union[str, int]]:
-    url = f"https://hmdb.ca/metabolites/{hmdb_id}"
-    
+for idx, hmdb_id in enumerate(unique_ids, 1):
     try:
-        response = requests.get(url, headers=HEADERS)
+        # 网络请求带超时设置
+        response = requests.get(f'https://hmdb.ca/metabolites/{hmdb_id}', timeout=10)
         response.raise_for_status()
         
-        tree = html.fromstring(response.content)
-
-        disposition_td = tree.xpath("//table//tr/th[contains(normalize-space(), 'Disposition')]/following-sibling::td")
-        if not disposition_td:
-            logging.info(f"未找到Disposition字段：{hmdb_id}")
-            return [hmdb_id] + ['no'] * len(KEYWORDS)
-            
-        disposition_td = disposition_td[0]
+        # 核心解析逻辑（示例占位符）
+        # [此处为生物来源分析的核心处理流程]
         
-        disposition_text = process_node(disposition_td)
-        disposition_text = clean_html_text(disposition_text)
+        # 模拟解析结果
+        results['HMDB_ID'].append(hmdb_id)
+        results['Human'].append('yes' if idx%2 else 'no')
         
-        # 仅在日志文件中记录详细内容
-        file_handler = next(handler for handler in logging.getLogger().handlers if isinstance(handler, logging.FileHandler))
-        file_handler.emit(logging.LogRecord(
-            'root', logging.INFO, '', 0,
-            f"\nHMDB ID: {hmdb_id}\n\nDisposition Content:\n{disposition_text}\n{'='*50}", (), None
-        ))
-        
-        # 统计关键词出现次数并转换为yes/no
-        keyword_stats = {}
-        for kw in KEYWORDS:
-            matches = re.findall(kw['pattern'], disposition_text, flags=re.IGNORECASE)
-            keyword_stats[kw['display_name']] = 'yes' if matches else 'no'
-
-        # 仅在日志文件中记录关键词统计
-        stats_text = "\n关键词统计结果:\n" + "\n".join([f"- {kw}: {'是' if val == 'yes' else '否'}" for kw, val in keyword_stats.items()])
-        file_handler.emit(logging.LogRecord(
-            'root', logging.INFO, '', 0,
-            f"{stats_text}\n{'='*50}", (), None
-        ))
-        
-        return [hmdb_id] + [keyword_stats.get(kw['display_name'], 'no') for kw in KEYWORDS]
+    except requests.exceptions.RequestException as e:
+        print(f"{hmdb_id} 请求失败: {str(e)}")
+    except Exception as e:
+        print(f"{hmdb_id} 解析错误: {str(e)}")
     
-    except Exception as e:
-        logging.error(f"处理失败: {hmdb_id}，错误信息: {str(e)}")
-        return [hmdb_id] + ['no'] * len(KEYWORDS)
+    # 实时显示进度
+    progress = idx/len(unique_ids)*50
+    print(f"[{'='*int(progress)}{' '*(50-int(progress))}] {idx/len(unique_ids):.0%}", end='\r')
 
-
-def main():
-    """主函数，处理HMDB ID列表并生成结果CSV文件"""
-    try:
-        # 读取hmdb_id.txt文件
-        with open('hmdb_id.txt', 'r') as f:
-            hmdb_ids = [line.strip() for line in f if line.strip()]
-        
-        if not hmdb_ids:
-            logging.error("HMDB ID文件为空或不存在有效ID")
-            return
-        
-        csv_file_path = "disposition_results.csv"
-        csv_headers = ["HMDB ID"] + [kw['display_name'] for kw in KEYWORDS]
-        
-        # 写入CSV文件
-        with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csvfile:
-            csv_writer = csv.writer(csvfile)
-            csv_writer.writerow(csv_headers)
-            
-            total = len(hmdb_ids)
-            for idx, hmdb_id in enumerate(hmdb_ids, 1):
-                try:
-                    # 显示进度信息
-                    logging.info(f"正在处理: {hmdb_id}，第{idx}个，共{total}个")
-                    
-                    # 获取处理结果并写入CSV
-                    disposition_results = get_disposition_source(hmdb_id)
-                    csv_writer.writerow(disposition_results)
-                    csvfile.flush()  # 确保数据立即写入文件
-                except Exception as e:
-                    logging.error(f"处理失败: {hmdb_id}，错误信息: {str(e)}")
-        
-        logging.info(f"处理完成，共处理{total}个HMDB ID，结果已保存至{csv_file_path}")
-        
-    except Exception as e:
-        logging.error(f"程序执行出错: {str(e)}")
-
-
-if __name__ == "__main__":
-    main()
+# 保存结构化结果
+try:
+    pd.DataFrame(results).to_csv('disposition_results.csv', index=False)
+    print("\n结果已保存至 disposition_results.csv")
+except Exception as e:
+    print(f"保存失败: {str(e)}")
 ```
 
 ## 输出结果
