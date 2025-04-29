@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-04-27T01:40:56.465Z</updated>
+  <updated>2025-04-29T11:10:01.966Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>看门狗2：启动错误 service update failed：EAC冲突与输入法导致的游戏问题</title>
+    <link href="https://itxiaozhang.com/watchdogs2-service-update-failed-eac-input-issue/"/>
+    <id>https://itxiaozhang.com/watchdogs2-service-update-failed-eac-input-issue/</id>
+    <published>2025-04-29T11:04:20.000Z</published>
+    <updated>2025-04-29T11:10:01.966Z</updated>
+    
+    
+    <summary type="html">本文解决《看门狗2》启动报错「service update failed」的原因，并提供解决EAC冲突和输入法操作冲突的具体方法。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="看门狗2" scheme="https://itxiaozhang.com/tags/%E7%9C%8B%E9%97%A8%E7%8B%972/"/>
+    
+    <category term="EAC报错" scheme="https://itxiaozhang.com/tags/EAC%E6%8A%A5%E9%94%99/"/>
+    
+    <category term="输入法冲突" scheme="https://itxiaozhang.com/tags/%E8%BE%93%E5%85%A5%E6%B3%95%E5%86%B2%E7%AA%81/"/>
+    
+    <category term="Watch_Dogs2" scheme="https://itxiaozhang.com/tags/Watch-Dogs2/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Python从HMDB网站提取代谢物生物来源信息</title>
@@ -428,25 +453,6 @@
     
     
     <category term="安装系统" scheme="https://itxiaozhang.com/tags/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记43</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-43/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-43/</id>
-    <published>2025-01-06T09:26:34.000Z</published>
-    <updated>2025-01-06T14:58:45.547Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第43周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   

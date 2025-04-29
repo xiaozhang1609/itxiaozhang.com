@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>看门狗2：启动错误 service update failed：EAC冲突与输入法导致的游戏问题</title>
+    <link href="/watchdogs2-service-update-failed-eac-input-issue/"/>
+    <url>/watchdogs2-service-update-failed-eac-input-issue/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/watchdogs2-service-update-failed-eac-input-issue/">https://itxiaozhang.com/watchdogs2-service-update-failed-eac-input-issue/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在启动《看门狗2》时，出现报错：「service update failed」。该错误出现在点击「开始游戏」后，导致游戏无法进入。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>该错误来源于EAC（Easy Anti-Cheat）反作弊系统异常。具体原因是电脑中存在已安装的腾讯游戏，其附带的ACE模块运行异常，与EAC发生冲突，进而阻止游戏启动。</p><p>此外，游戏进入后角色「只能开枪不能移动」的问题，主要由于输入法的快捷键（特别是Shift键）与游戏默认操作键发生冲突，常见于使用微软默认输入法的系统。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="一、修复「service-update-failed」报错"><a href="#一、修复「service-update-failed」报错" class="headerlink" title="一、修复「service update failed」报错"></a>一、修复「service update failed」报错</h3><ol><li>关闭电脑中正在运行的所有腾讯类游戏；</li><li>重启电脑一次；</li><li>若仍报错，请再次关机重启，即「<a href="https://itxiaozhang.com/how-to-fix-ace-security-center-error-double-restart-method/">二次重启法</a>」；</li><li>重启后重新打开《看门狗2》，错误应已解决。</li></ol><h3 id="二、修复「角色无法移动」问题"><a href="#二、修复「角色无法移动」问题" class="headerlink" title="二、修复「角色无法移动」问题"></a>二、修复「角色无法移动」问题</h3><ol><li>打开电脑右下角输入法图标，右键点击并选择「设置」；</li><li>进入「按键」设置界面；</li><li>取消默认的「Shift 切换中英文输入法」快捷键；</li><li>设置为「Ctrl + 空格」切换中英文；</li><li>保存设置后返回游戏，Shift键即可正常用于游戏操作。</li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>看门狗2</tag>
+      
+      <tag>EAC报错</tag>
+      
+      <tag>输入法冲突</tag>
+      
+      <tag>Watch_Dogs2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用Python从HMDB网站提取代谢物生物来源信息</title>
     <link href="/python-hmdb-metabolite-biosource-extractor/"/>
     <url>/python-hmdb-metabolite-biosource-extractor/</url>
