@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-05-08T08:03:11.409Z</updated>
+  <updated>2025-05-08T08:39:11.794Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://itxiaozhang.com/python-hmdb-mass-spectrometry-compound-extraction/"/>
     <id>https://itxiaozhang.com/python-hmdb-mass-spectrometry-compound-extraction/</id>
     <published>2025-05-08T07:11:58.000Z</published>
-    <updated>2025-05-08T08:03:11.409Z</updated>
+    <updated>2025-05-08T08:39:11.794Z</updated>
     
     
     <summary type="html">本工具通过Python脚本，利用质谱数据中的质量数，从HMDB数据库批量提取化合物信息，包括HMDB ID、常用名称、化学式及结构图片，并将结果导出为CSV文件，极大提升代谢物注释效率。</summary>
