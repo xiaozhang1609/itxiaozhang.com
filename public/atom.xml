@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-05-05T08:36:30.533Z</updated>
+  <updated>2025-05-08T08:03:11.409Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用Python从HMDB数据库批量提取质谱数据中的化合物信息</title>
+    <link href="https://itxiaozhang.com/python-hmdb-mass-spectrometry-compound-extraction/"/>
+    <id>https://itxiaozhang.com/python-hmdb-mass-spectrometry-compound-extraction/</id>
+    <published>2025-05-08T07:11:58.000Z</published>
+    <updated>2025-05-08T08:03:11.409Z</updated>
+    
+    
+    <summary type="html">本工具通过Python脚本，利用质谱数据中的质量数，从HMDB数据库批量提取化合物信息，包括HMDB ID、常用名称、化学式及结构图片，并将结果导出为CSV文件，极大提升代谢物注释效率。</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
+    
+    <category term="HMDB数据库" scheme="https://itxiaozhang.com/tags/HMDB%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="HMDB" scheme="https://itxiaozhang.com/tags/HMDB/"/>
+    
+  </entry>
   
   <entry>
     <title>暗区突围：无限「安装ACE服务失败，请确保文件完整、未被占用，或重启电脑之后再尝试」错误解决方案</title>
@@ -431,25 +454,6 @@
     
     
     <summary type="html">这是《阅读与感悟周记》的第45周，记录我本周的所见所闻所思所想。</summary>
-    
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/categories/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="小章周记" scheme="https://itxiaozhang.com/tags/%E5%B0%8F%E7%AB%A0%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读与感悟周记44</title>
-    <link href="https://itxiaozhang.com/weekly-reflections-reading-insights-44/"/>
-    <id>https://itxiaozhang.com/weekly-reflections-reading-insights-44/</id>
-    <published>2025-02-16T02:26:34.000Z</published>
-    <updated>2025-02-16T14:43:32.861Z</updated>
-    
-    
-    <summary type="html">这是《阅读与感悟周记》的第44周，记录我本周的所见所闻所思所想。</summary>
     
     
     
