@@ -31,246 +31,103 @@ tags:
    - 并发加速与重试机制：采用多线程并发抓取，自动重试机制
    - 结果导出：自动整理为CSV文件，支持Excel直接打开
 
-## 全部代码
+## 部分代码
 
 ```python
-"""
-================================
-作者：IT小章
-网站：itxiaozhang.com
-时间：2025年04月28日
-Copyright © 2024 IT小章
-================================
-"""
+"""代谢物数据处理工具"""
 
-import requests
-import re
-import csv
-import time
-import logging
-import os
-import json
-import argparse
+import json, os, logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
-from lxml import html
 from typing import List, Dict, Optional
 
-class Config:
-    def __init__(self):
-        self.HMDB_PATTERN = r'HMDB\d{7}'
-        self.HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-        self.BASE_URL = "https://hmdb.ca"
-        self.RETRY_DELAYS = [2, 4, 8]
-        self.MAX_WORKERS = 5
-        self.TOLERANCE = '5'
-        self.TOLERANCE_UNITS = 'ppm'
-        self.REQUEST_INTERVAL = 1
-        self.CACHE_FILE = 'cache.json'
-        self.PROGRESS_FILE = 'progress.json'
-
-config = Config()
-
-class ProgressManager:
-    def __init__(self, progress_file: str):
-        self.progress_file = progress_file
-        self.progress = self.load_progress()
-
-    def load_progress(self) -> Dict:
-        if os.path.exists(self.progress_file):
-            try:
-                with open(self.progress_file, 'r', encoding='utf-8') as f:
-                    return json.load(f)
-            except Exception as e:
-                logging.warning(f"加载进度失败: {e}")
-        return {'processed_masses': [], 'last_mass': None}
-
-    def save_progress(self, mass: str = None):
-        if mass and mass not in self.progress['processed_masses']:
-            self.progress['processed_masses'].append(mass)
-            self.progress['last_mass'] = mass
-            try:
-                with open(self.progress_file, 'w', encoding='utf-8') as f:
-                    json.dump(self.progress, f)
-            except Exception as e:
-                logging.error(f"保存进度失败: {e}")
-
-    def is_mass_processed(self, mass: str) -> bool:
-        return mass in self.progress['processed_masses']
-
-class CacheManager:
-    def __init__(self, cache_file: str):
+class DataManager:
+    def __init__(self, cache_file='cache.json', progress_file='progress.json'):
         self.cache_file = cache_file
-        self.cache = self.load_cache()
-
-    def load_cache(self) -> Dict:
-        if os.path.exists(self.cache_file):
+        self.progress_file = progress_file
+        self.cache = self._load_json(cache_file, {})
+        self.progress = self._load_json(progress_file, {'processed': []})
+    
+    def _load_json(self, file: str, default: Dict) -> Dict:
+        if os.path.exists(file):
             try:
-                with open(self.cache_file, 'r', encoding='utf-8') as f:
+                with open(file, 'r', encoding='utf-8') as f:
                     return json.load(f)
-            except Exception as e:
-                logging.warning(f"加载缓存失败: {e}")
-        return {}
-
-    def save_cache(self):
+            except: pass
+        return default
+    
+    def save_progress(self, item_id: str):
+        if item_id not in self.progress['processed']:
+            self.progress['processed'].append(item_id)
+            self._save_json(self.progress_file, self.progress)
+    
+    def _save_json(self, file: str, data: Dict):
         try:
-            with open(self.cache_file, 'w', encoding='utf-8') as f:
-                json.dump(self.cache, f)
+            with open(file, 'w', encoding='utf-8') as f:
+                json.dump(data, f)
         except Exception as e:
-            logging.error(f"保存缓存失败: {e}")
-
-    def get_metabolite_data(self, hmdb_id: str) -> Optional[Dict]:
-        return self.cache.get(hmdb_id)
-
-    def set_metabolite_data(self, hmdb_id: str, data: Dict):
-        self.cache[hmdb_id] = data
-        self.save_cache()
+            logging.error(f"保存文件失败: {e}")
+    
+    def is_processed(self, item_id: str) -> bool:
+        return item_id in self.progress['processed']
+    
+    def get_cache(self, key: str) -> Optional[Dict]:
+        return self.cache.get(key)
+    
+    def set_cache(self, key: str, data: Dict):
+        self.cache[key] = data
+        self._save_json(self.cache_file, self.cache)
 
 def setup_logging():
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
-        handlers=[logging.FileHandler("代谢物提取.log", encoding='utf-8'), logging.StreamHandler()]
+        handlers=[
+            logging.FileHandler("处理日志.log", encoding='utf-8'),
+            logging.StreamHandler()
+        ]
     )
 
-def parse_arguments():
-    parser = argparse.ArgumentParser(description='HMDB代谢物自动提取工具')
-    parser.add_argument('--input', '-i', default='negative.txt', help='输入文件路径')
-    parser.add_argument('--output', '-o', default='代谢物数据.csv', help='输出文件路径')
-    parser.add_argument('--mode', '-m', default='negative', choices=['positive', 'negative'], help='离子模式')
-    parser.add_argument('--workers', '-w', type=int, default=5, help='并发线程数')
-    parser.add_argument('--resume', '-r', action='store_true', help='是否继续上次的进度')
-    return parser.parse_args()
-
-def validate_mass(mass: str) -> bool:
-    try:
-        float(mass)
-        return True
-    except ValueError:
-        return False
-
-def search_hmdb_ids(mass: str, ion_mode: str = 'positive') -> List[str]:
-    if not validate_mass(mass):
-        logging.error(f"无效的质量数: {mass}")
-        return []
-
-    url = f"{config.BASE_URL}/spectra/ms/search"
-    adduct_types = ['M+H', 'M+Li', 'M+NH4', 'M+Na'] if ion_mode == 'positive' else ['M+Cl']
-    data = {
-        'query_masses': mass,
-        'ms_search_ion_mode': ion_mode,
-        'adduct_type[]': adduct_types,
-        'tolerance': config.TOLERANCE,
-        'tolerance_units': config.TOLERANCE_UNITS,
-        'commit': 'Search'
-    }
+def process_data(items: List[str], resume: bool = False) -> List[Dict]:
+    """处理数据的主要函数
     
-    try:
-        response = requests.post(url, data=data, headers=config.HEADERS)
-        response.raise_for_status()
-        hmdb_ids = list(dict.fromkeys(re.findall(config.HMDB_PATTERN, response.text)))
-        logging.info(f"在{ion_mode}模式下找到 {len(hmdb_ids)} 个唯一HMDB ID (质量数: {mass})")
-        return hmdb_ids
-    except Exception as e:
-        logging.error(f"搜索HMDB ID失败: {e}")
-        return []
-
-def get_metabolite_data(hmdb_id: str, ion_mode: str, cache_manager: CacheManager) -> Optional[Dict]:
-    cached_data = cache_manager.get_metabolite_data(hmdb_id)
-    if cached_data:
-        return cached_data
-
-    url = f"{config.BASE_URL}/metabolites/{hmdb_id}"
-    try:
-        response = requests.get(url, headers=config.HEADERS)
-        response.raise_for_status()
-        tree = html.fromstring(response.content)
-        data = {'HMDB ID': hmdb_id, 'Ion_Mode': ion_mode}
-
-        structure_src = tree.xpath("//img[contains(@src, '/system/metabolites/thumbs/')]/@src")
-        if not structure_src:
-            structure_src = tree.xpath("//a[contains(@class, 'moldbi-vector-thumbnail')]/img/@src")
-        data['Structure'] = config.BASE_URL + structure_src[0] if structure_src else ''
-
-        common_name = tree.xpath("//tr/th[text()='Common Name']/following-sibling::td/strong/text()")
-        data['Common Name'] = common_name[0] if common_name else ''
-
-        chemical_formula = tree.xpath("//tr/th[text()='Chemical Formula']/following-sibling::td//text()")
-        data['Chemical Formula'] = ''.join(chemical_formula).strip() if chemical_formula else ''
-
-        cache_manager.set_metabolite_data(hmdb_id, data)
-        time.sleep(config.REQUEST_INTERVAL)
-        return data
-    except Exception as e:
-        logging.error(f"获取代谢物数据失败: {e}")
-        return None
-
-def process_ids(hmdb_ids: List[str], ion_mode: str, cache_manager: CacheManager) -> List[Dict]:
+    Args:
+        items: 待处理的数据项列表
+        resume: 是否继续上次的进度
+        
+    Returns:
+        处理结果列表
+    """
+    data_manager = DataManager()
     results = []
-    with ThreadPoolExecutor(max_workers=config.MAX_WORKERS) as executor:
-        futures = {executor.submit(get_metabolite_data, hmdb_id, ion_mode, cache_manager): hmdb_id for hmdb_id in hmdb_ids}
-        for future in tqdm(as_completed(futures), total=len(hmdb_ids), desc=f"处理{ion_mode}模式的ID"):
-            try:
-                data = future.result()
-                if data:
-                    results.append(data)
-            except Exception as e:
-                logging.error(f"处理ID失败: {e}")
+    
+    for item in items:
+        # 检查是否已处理
+        if resume and data_manager.is_processed(item):
+            continue
+            
+        # 获取数据 - 
+        data = {"id": item, "status": "processed"}
+        results.append(data)
+        
+        # 保存进度
+        data_manager.save_progress(item)
+    
     return results
-
-def save_to_csv(results: List[Dict], filename: str):
-    if not results:
-        logging.warning("没有找到任何结果")
-        return
-
-    os.makedirs(os.path.dirname(filename) or '.', exist_ok=True)
-    fieldnames = ['Mass', 'HMDB ID', 'Ion_Mode', 'Common Name', 'Chemical Formula', 'Structure']
-    try:
-        with open(filename, 'w', newline='', encoding='utf-8-sig') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writeheader()
-            writer.writerows(results)
-        logging.info(f"已保存 {len(results)} 条记录到 {filename}")
-    except Exception as e:
-        logging.error(f"保存CSV文件失败: {e}")
 
 def main():
     setup_logging()
-    args = parse_arguments()
-    config.MAX_WORKERS = args.workers
-    
-    cache_manager = CacheManager(config.CACHE_FILE)
-    progress_manager = ProgressManager(config.PROGRESS_FILE)
-    
     try:
-        with open(args.input, 'r', encoding='utf-8') as f:
-            masses = [line.strip() for line in f if line.strip() and validate_mass(line.strip())]
+        # 读取输入数据 - 
+        items = ["item1", "item2", "item3"]
         
-        if not masses:
-            logging.error("输入文件为空或不包含有效的质量数")
-            return
+        # 处理数据
+        results = process_data(items, resume=True)
         
-        logging.info(f"从 {args.input} 加载了 {len(masses)} 个质量数")
-        all_results = []
-        
-        for mass in masses:
-            if args.resume and progress_manager.is_mass_processed(mass):
-                logging.info(f"跳过已处理的质量数: {mass}")
-                continue
+        # 保存结果 - 
+        if results:
+            logging.info(f"成功处理 {len(results)} 条数据")
                 
-            ids = search_hmdb_ids(mass, args.mode)
-            if ids:
-                mass_results = process_ids(ids, args.mode, cache_manager)
-                for result in mass_results:
-                    if result:
-                        result['Mass'] = mass
-                all_results.extend(mass_results)
-                progress_manager.save_progress(mass)
-        
-        save_to_csv(all_results, args.output)
-            
-    except FileNotFoundError:
-        logging.error(f"找不到输入文件: {args.input}")
     except Exception as e:
         logging.error(f"程序执行出错: {e}")
 
