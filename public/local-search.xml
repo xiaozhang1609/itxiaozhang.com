@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Steam版《三角洲行动》启动报错：Plugin &#39;INTLSDK&#39; failed to load</title>
+    <link href="/fix-delta-force-plugin-intlsdk-module-intlcore-error/"/>
+    <url>/fix-delta-force-plugin-intlsdk-module-intlcore-error/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/fix-delta-force-plugin-intlsdk-module-intlcore-error/">https://itxiaozhang.com/fix-delta-force-plugin-intlsdk-module-intlcore-error/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在通过 Steam 启动游戏《三角洲行动》时，出现以下错误提示：</p><p>「Plugin ‘INTLSDK’ failed to load because module ‘INTLCore’ could not be found. Please ensure the plugin is properly installed, otherwise consider disabling the plugin for this project.」</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>该错误通常发生在以下场景：</p><ul><li>电脑中同时安装了 WeGame 版和 Steam 版的《三角洲行动》。</li><li>卸载 WeGame 版或使用官方登录器安装的版本后，Steam 版启动时报错。</li></ul><p>原因是卸载 WeGame 版时，可能一并卸载了游戏所需的运行库，导致 Steam 版缺少必要的组件，从而引发插件加载失败的错误。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>重新安装运行库</strong></p><ul><li><p>访问微软官方网站，下载并安装以下运行库：</p><ul><li><a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Visual C++ Redistributable for Visual Studio 2015-2022（x64）</a></li><li><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">Visual C++ Redistributable for Visual Studio 2015-2022（x86）</a></li></ul></li><li><p>安装时，若提示已有安装，选择「修复」或「卸载后重新安装」。</p></li></ul></li><li><p><strong>验证游戏文件完整性</strong></p><ul><li>打开 Steam 客户端，右键点击《三角洲行动》，选择「属性」。</li><li>在「本地文件」选项卡中，点击「验证游戏文件的完整性」。</li></ul></li><li><p><strong>重启电脑并启动游戏</strong></p><ul><li>完成上述步骤后，重启电脑。</li><li>再次通过 Steam 启动游戏，确认问题是否解决。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>三角洲行动</tag>
+      
+      <tag>Steam报错</tag>
+      
+      <tag>delta</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>利用Python从HMDB数据库批量提取质谱数据中的化合物信息</title>
     <link href="/python-hmdb-mass-spectrometry-compound-extraction/"/>
     <url>/python-hmdb-mass-spectrometry-compound-extraction/</url>
