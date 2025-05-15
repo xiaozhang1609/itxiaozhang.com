@@ -31,6 +31,118 @@ tags:
 - 自动导出CSV格式结果
 - 内置日志记录功能
 
+## 部分代码
+
+```python
+"""
+================================
+作者：IT小章
+网站：itxiaozhang.com
+时间：2024年11月27日
+Copyright © 2024 IT小章
+================================
+"""
+
+import requests
+import re
+import csv
+import time
+import logging
+import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
+from lxml import html
+
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("代谢物提取.log", encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+
+class MetaboliteExtractor:
+    """代谢物数据提取器"""
+    
+    def __init__(self):
+        self.base_url = "https://hmdb.ca"
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+    
+    def process_files(self):
+        """处理输入文件"""
+        try:
+            logging.info("程序开始运行...")
+            results = []
+            
+            # 处理positive模式
+            if os.path.exists('positive.txt'):
+                logging.info("处理positive.txt...")
+                results.extend(self._process_file('positive.txt', 'positive'))
+            
+            # 处理negative模式
+            if os.path.exists('negative.txt'):
+                logging.info("处理negative.txt...")
+                results.extend(self._process_file('negative.txt', 'negative'))
+            
+            if results:
+                self._save_results(results)
+                logging.info(f"处理完成，共获取 {len(results)} 条结果")
+            else:
+                logging.error("未找到任何结果")
+                
+        except Exception as e:
+            logging.error(f"处理过程出错: {str(e)}")
+        finally:
+            logging.info("程序运行结束")
+            print("\n" + "="*50)
+            input("按回车键退出程序...")
+    
+    def _process_file(self, filename, mode):
+        """处理单个文件（具体实现已隐藏）"""
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                data = f.read().strip()
+            if not data:
+                logging.warning(f"{filename} 为空")
+                return []
+            logging.info(f"正在处理 {filename}")
+            return self._extract_data(data, mode)
+        except FileNotFoundError:
+            logging.error(f"未找到文件: {filename}")
+            return []
+    
+    def _extract_data(self, data, mode):
+        """提取数据（具体实现已隐藏）"""
+        # 核心实现已隐藏
+        pass
+    
+    def _save_results(self, results):
+        """保存结果到CSV"""
+        try:
+            filename = '代谢物数据.csv'
+            with open(filename, 'w', newline='', encoding='utf-8-sig') as f:
+                if results:
+                    writer = csv.DictWriter(f, fieldnames=results[0].keys())
+                    writer.writeheader()
+                    writer.writerows(results)
+            logging.info(f"数据已保存到 {filename}")
+        except Exception as e:
+            logging.error(f"保存数据失败: {str(e)}")
+
+def main():
+    extractor = MetaboliteExtractor()
+    extractor.process_files()
+
+if __name__ == "__main__":
+    main()
+```
+
+
 ## 使用方法
 
 1. 准备输入文件：
@@ -39,7 +151,7 @@ tags:
    - 每行一个质量数
 
 2. 运行程序：
-   - 双击运行程序
+   - 执行程序
    - 等待程序自动处理
    - 完成后按回车键退出
 
