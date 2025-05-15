@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-05-15T02:41:59.098Z</updated>
+  <updated>2025-05-15T12:39:48.108Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows Hello配置失败：「抱歉，出现问题。关闭Windows Hello，然后尝试再次运行安装程序。」</title>
+    <link href="https://itxiaozhang.com/windows-hello-error-close-then-try-again/"/>
+    <id>https://itxiaozhang.com/windows-hello-error-close-then-try-again/</id>
+    <published>2025-05-15T12:37:57.000Z</published>
+    <updated>2025-05-15T12:39:48.108Z</updated>
+    
+    
+    <summary type="html">由于使用内置Administrator账户，Windows Hello功能被禁用。通过创建普通账户可恢复指纹与面部识别设置。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="Windows" scheme="https://itxiaozhang.com/tags/Windows/"/>
+    
+    <category term="Windows Hello" scheme="https://itxiaozhang.com/tags/Windows-Hello/"/>
+    
+    <category term="Administrator账户" scheme="https://itxiaozhang.com/tags/Administrator%E8%B4%A6%E6%88%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</title>
@@ -440,33 +463,6 @@
     
     
     <category term="Steam" scheme="https://itxiaozhang.com/tags/Steam/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三角洲行动报错处理：加载 xapofx1_5.dll 失败</title>
-    <link href="https://itxiaozhang.com/fix-delta-force-xapofx1_5-dll-error/"/>
-    <id>https://itxiaozhang.com/fix-delta-force-xapofx1_5-dll-error/</id>
-    <published>2025-03-03T01:24:55.000Z</published>
-    <updated>2025-03-03T01:27:46.685Z</updated>
-    
-    
-    <summary type="html">运行《三角洲行动》时，可能遇到“加载 xapofx1_5.dll 失败，该文件缺失或损坏”的错误。这通常是由于 DirectX 组件缺失或损坏导致的。本文将分析该问题的原因，并提供详细的修复步骤，帮助用户顺利解决问题。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="三角洲行动" scheme="https://itxiaozhang.com/tags/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8/"/>
-    
-    <category term="xapofx1_5.dll" scheme="https://itxiaozhang.com/tags/xapofx1-5-dll/"/>
-    
-    <category term="DirectX 错误" scheme="https://itxiaozhang.com/tags/DirectX-%E9%94%99%E8%AF%AF/"/>
-    
-    <category term="游戏报错修复" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99%E4%BF%AE%E5%A4%8D/"/>
-    
-    <category term="DLL 文件缺失" scheme="https://itxiaozhang.com/tags/DLL-%E6%96%87%E4%BB%B6%E7%BC%BA%E5%A4%B1/"/>
     
   </entry>
   

@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Windows Hello配置失败：「抱歉，出现问题。关闭Windows Hello，然后尝试再次运行安装程序。」</title>
+    <link href="/windows-hello-error-close-then-try-again/"/>
+    <url>/windows-hello-error-close-then-try-again/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/windows-hello-error-close-then-try-again/">https://itxiaozhang.com/windows-hello-error-close-then-try-again/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>当尝试在Windows设备上配置Windows Hello时，出现以下错误提示：<br>「抱歉，出现问题。关闭Windows Hello，然后尝试再次运行安装程序。」<br>同时，在 <strong>设置</strong> → <strong>账户</strong> → <strong>登录选项</strong> 中，Windows Hello相关功能（指纹、面部识别等）显示为灰色不可用状态。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li><strong>系统内置的Administrator账户限制</strong><br>Windows默认禁止内置管理员账户使用Windows Hello功能，出于安全策略考虑，该账户被限制访问生物识别相关设置。  </li><li><strong>账户类型不兼容</strong><br>Windows Hello仅支持普通本地账户或微软账户登录。使用内置Administrator账户登录时，该功能会被禁用。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="步骤1：切换至普通账户或微软账户"><a href="#步骤1：切换至普通账户或微软账户" class="headerlink" title="步骤1：切换至普通账户或微软账户"></a>步骤1：切换至普通账户或微软账户</h3><ol><li><p><strong>创建新本地账户</strong>  </p><ul><li>打开「设置」→「账户」→「家庭和其他用户」→「将其他人添加到这台电脑」。  </li><li>选择「我没有此人的登录信息」→「添加一个没有Microsoft账户的用户」。  </li><li>输入用户名（如「User01」），点击「下一步」。</li></ul></li><li><p><strong>使用新账户登录</strong>  </p><ul><li>重启电脑，使用新账户登录系统。</li></ul></li></ol><h3 id="步骤2：配置Windows-Hello"><a href="#步骤2：配置Windows-Hello" class="headerlink" title="步骤2：配置Windows Hello"></a>步骤2：配置Windows Hello</h3><ol><li><p><strong>设置PIN码</strong>  </p><ul><li>打开「设置」→「账户」→「登录选项」→「PIN」→「添加」。  </li><li>输入账户密码，设置PIN码。</li></ul></li><li><p><strong>启用Windows Hello</strong>  </p><ul><li>返回「登录选项」，点击「指纹识别」或「面部识别」，按提示完成设置。</li></ul></li></ol><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul><li>如必须使用Administrator账户，可通过组策略或注册表启用该功能，但不推荐。  </li><li>请确保硬件驱动已正确安装，设备支持Windows Hello。</li></ul><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>Windows Hello</tag>
+      
+      <tag>Administrator账户</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</title>
     <link href="/hmdb-metabolite-batch-extraction-tool/"/>
     <url>/hmdb-metabolite-batch-extraction-tool/</url>
