@@ -16,24 +16,25 @@
   <meta name="author" content="小章">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文针对Steam版《三角洲行动》启动时报错「Plugin &#39;INTLSDK&#39; failed to load because module &#39;INTLCore&#39; could not be found」的问题，分析其原因并提供详细的解决步骤，帮助用户恢复游戏正常运行。">
+    <meta name="description" content="这是一款专为代谢组学研究设计的Python自动化工具，能够从HMDB数据库批量获取代谢物信息，包括物质分类、组织定位和相关数据库ID等关键信息，大幅提升数据收集效率。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Steam版《三角洲行动》启动报错：Plugin &#39;INTLSDK&#39; failed to load">
-<meta property="og:url" content="https://itxiaozhang.com/fix-delta-force-plugin-intlsdk-module-intlcore-error/index.html">
+<meta property="og:title" content="HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据">
+<meta property="og:url" content="https://itxiaozhang.com/hmdb-metabolite-batch-extraction-tool/index.html">
 <meta property="og:site_name" content="IT小章">
-<meta property="og:description" content="本文针对Steam版《三角洲行动》启动时报错「Plugin &#39;INTLSDK&#39; failed to load because module &#39;INTLCore&#39; could not be found」的问题，分析其原因并提供详细的解决步骤，帮助用户恢复游戏正常运行。">
+<meta property="og:description" content="这是一款专为代谢组学研究设计的Python自动化工具，能够从HMDB数据库批量获取代谢物信息，包括物质分类、组织定位和相关数据库ID等关键信息，大幅提升数据收集效率。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-05-11T01:53:08.000Z">
-<meta property="article:modified_time" content="2025-05-11T02:00:41.511Z">
+<meta property="article:published_time" content="2025-05-15T02:38:01.000Z">
+<meta property="article:modified_time" content="2025-05-15T02:41:59.098Z">
 <meta property="article:author" content="小章">
-<meta property="article:tag" content="三角洲行动">
-<meta property="article:tag" content="Steam报错">
-<meta property="article:tag" content="delta">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="HMDB数据库">
+<meta property="article:tag" content="HMDB">
+<meta property="article:tag" content="代谢组学工具">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Steam版《三角洲行动》启动报错：Plugin &#39;INTLSDK&#39; failed to load - IT小章</title>
+  <title>HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据 - IT小章</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Steam版《三角洲行动》启动报错：Plugin 'INTLSDK' failed to load</span>
+            <span id="subtitle">HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</span>
           
         </div>
 
@@ -223,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-11 09:53" pubdate>
-          2025年5月11日 上午
+        <time datetime="2025-05-15 10:38" pubdate>
+          2025年5月15日 上午
         </time>
       </span>
     
@@ -235,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          423 字
+          420 字
         
       </span>
     
@@ -283,48 +284,81 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Steam版《三角洲行动》启动报错：Plugin &#39;INTLSDK&#39; failed to load</h1>
+            <h1 id="seo-header">HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>原文地址：<a href="https://itxiaozhang.com/fix-delta-force-plugin-intlsdk-module-intlcore-error/">https://itxiaozhang.com/fix-delta-force-plugin-intlsdk-module-intlcore-error/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p>
+<p>原文地址：<a href="https://itxiaozhang.com/hmdb-metabolite-batch-extraction-tool/">https://itxiaozhang.com/hmdb-metabolite-batch-extraction-tool/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p>
 </blockquote>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在通过 Steam 启动游戏《三角洲行动》时，出现以下错误提示：</p>
-<p>「Plugin ‘INTLSDK’ failed to load because module ‘INTLCore’ could not be found. Please ensure the plugin is properly installed, otherwise consider disabling the plugin for this project.」</p>
-<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>该错误通常发生在以下场景：</p>
-<ul>
-<li>电脑中同时安装了 WeGame 版和 Steam 版的《三角洲行动》。</li>
-<li>卸载 WeGame 版或使用官方登录器安装的版本后，Steam 版启动时报错。</li>
-</ul>
-<p>原因是卸载 WeGame 版时，可能一并卸载了游戏所需的运行库，导致 Steam 版缺少必要的组件，从而引发插件加载失败的错误。</p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol>
-<li><p><strong>重新安装运行库</strong></p>
-<ul>
-<li><p>访问微软官方网站，下载并安装以下运行库：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Visual C++ Redistributable for Visual Studio 2015-2022（x64）</a></li>
-<li><a target="_blank" rel="noopener" href="https://aka.ms/vs/17/release/vc_redist.x86.exe">Visual C++ Redistributable for Visual Studio 2015-2022（x86）</a></li>
+<h2 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h2><ul>
+<li>支持批量查询HMDB代谢物信息</li>
+<li>自动提取关键信息，包括：<ul>
+<li>代谢物描述</li>
+<li>超类(Super Class)</li>
+<li>类别(Class)</li>
+<li>子类(Sub Class)</li>
+<li>来源(Disposition)</li>
+<li>内源性(Endogenous)</li>
+<li>组织定位(Tissue Locations)</li>
+<li>相关ID(KEGG、ChEBI、METLIN)</li>
 </ul>
 </li>
-<li><p>安装时，若提示已有安装，选择「修复」或「卸载后重新安装」。</p>
+<li>支持正负离子模式搜索</li>
+<li>自动导出CSV格式结果</li>
+<li>内置日志记录功能</li>
+</ul>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol>
+<li><p>准备输入文件：</p>
+<ul>
+<li>创建<code>id.txt</code>文件</li>
+<li>每行输入一个HMDB ID</li>
+<li>示例格式：</li>
+</ul>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dns">HMDB<span class="hljs-number">0013302</span><br>HMDB<span class="hljs-number">0000562</span><br>HMDB<span class="hljs-number">0000097</span><br></code></pre></td></tr></table></figure>
 </li>
+<li><p>运行程序：</p>
+<ul>
+<li>直接运行可执行文件或Python脚本</li>
+<li>程序会自动读取<code>id.txt</code>中的HMDB ID</li>
+<li>开始批量获取代谢物信息</li>
 </ul>
 </li>
-<li><p><strong>验证游戏文件完整性</strong></p>
+<li><p>查看结果：</p>
 <ul>
-<li>打开 Steam 客户端，右键点击《三角洲行动》，选择「属性」。</li>
-<li>在「本地文件」选项卡中，点击「验证游戏文件的完整性」。</li>
-</ul>
-</li>
-<li><p><strong>重启电脑并启动游戏</strong></p>
-<ul>
-<li>完成上述步骤后，重启电脑。</li>
-<li>再次通过 Steam 启动游戏，确认问题是否解决。</li>
+<li>程序运行完成后会生成<code>metabolite_data.csv</code>文件</li>
+<li>使用Excel或其他表格软件打开查看结果</li>
+<li>同时会生成日志文件记录运行过程</li>
 </ul>
 </li>
 </ol>
+<h2 id="输出示例"><a href="#输出示例" class="headerlink" title="输出示例"></a>输出示例</h2><p>程序会生成包含以下字段的CSV文件：</p>
+<ul>
+<li>HMDB ID</li>
+<li>Description</li>
+<li>Super Class</li>
+<li>Class</li>
+<li>Sub Class</li>
+<li>Disposition_source</li>
+<li>Endogenous</li>
+<li>Biological Properties_Tissue Locations</li>
+<li>KEGG Compound ID</li>
+<li>ChEBI ID</li>
+<li>METLIN ID</li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li>确保网络连接稳定</li>
+<li>输入文件格式需要严格遵循要求</li>
+<li>大量数据查询可能需要较长时间，请耐心等待</li>
+<li>建议定期检查日志文件了解运行状态</li>
+</ol>
+<h2 id="依赖环境"><a href="#依赖环境" class="headerlink" title="依赖环境"></a>依赖环境</h2><ul>
+<li>Python 3.6+</li>
+<li>requests</li>
+<li>lxml</li>
+<li>logging</li>
+</ul>
 <h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
@@ -349,7 +383,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/" class="category-chain-item">电脑维修</a>
+  <a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/" class="category-chain-item">编程开发</a>
   
   
 
@@ -364,11 +398,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8/" class="print-no-link">#三角洲行动</a>
+        <a href="/tags/python/" class="print-no-link">#python</a>
       
-        <a href="/tags/Steam%E6%8A%A5%E9%94%99/" class="print-no-link">#Steam报错</a>
+        <a href="/tags/HMDB%E6%95%B0%E6%8D%AE%E5%BA%93/" class="print-no-link">#HMDB数据库</a>
       
-        <a href="/tags/delta/" class="print-no-link">#delta</a>
+        <a href="/tags/HMDB/" class="print-no-link">#HMDB</a>
+      
+        <a href="/tags/%E4%BB%A3%E8%B0%A2%E7%BB%84%E5%AD%A6%E5%B7%A5%E5%85%B7/" class="print-no-link">#代谢组学工具</a>
       
     </div>
   
@@ -380,8 +416,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Steam版《三角洲行动》启动报错：Plugin &#39;INTLSDK&#39; failed to load</div>
-      <div>https://itxiaozhang.com/fix-delta-force-plugin-intlsdk-module-intlcore-error/</div>
+      <div>HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</div>
+      <div>https://itxiaozhang.com/hmdb-metabolite-batch-extraction-tool/</div>
     </div>
     <div class="license-meta">
       
@@ -393,7 +429,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年5月11日</div>
+          <div>2025年5月15日</div>
         </div>
       
       
@@ -425,18 +461,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/hmdb-metabolite-batch-extraction-tool/" title="HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/python-hmdb-mass-spectrometry-compound-extraction/" title="利用Python从HMDB数据库批量提取质谱数据中的化合物信息">
-                        <span class="hidden-mobile">利用Python从HMDB数据库批量提取质谱数据中的化合物信息</span>
+                      <a href="/fix-delta-force-plugin-intlsdk-module-intlcore-error/" title="Steam版《三角洲行动》启动报错：Plugin &#39;INTLSDK&#39; failed to load">
+                        <span class="hidden-mobile">Steam版《三角洲行动》启动报错：Plugin &#39;INTLSDK&#39; failed to load</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

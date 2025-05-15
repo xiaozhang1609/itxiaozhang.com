@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-05-11T02:00:41.511Z</updated>
+  <updated>2025-05-15T02:41:59.098Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</title>
+    <link href="https://itxiaozhang.com/hmdb-metabolite-batch-extraction-tool/"/>
+    <id>https://itxiaozhang.com/hmdb-metabolite-batch-extraction-tool/</id>
+    <published>2025-05-15T02:38:01.000Z</published>
+    <updated>2025-05-15T02:41:59.098Z</updated>
+    
+    
+    <summary type="html">这是一款专为代谢组学研究设计的Python自动化工具，能够从HMDB数据库批量获取代谢物信息，包括物质分类、组织定位和相关数据库ID等关键信息，大幅提升数据收集效率。</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
+    
+    <category term="HMDB数据库" scheme="https://itxiaozhang.com/tags/HMDB%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="HMDB" scheme="https://itxiaozhang.com/tags/HMDB/"/>
+    
+    <category term="代谢组学工具" scheme="https://itxiaozhang.com/tags/%E4%BB%A3%E8%B0%A2%E7%BB%84%E5%AD%A6%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>Steam版《三角洲行动》启动报错：Plugin &#39;INTLSDK&#39; failed to load</title>
@@ -442,29 +467,6 @@
     <category term="游戏报错修复" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99%E4%BF%AE%E5%A4%8D/"/>
     
     <category term="DLL 文件缺失" scheme="https://itxiaozhang.com/tags/DLL-%E6%96%87%E4%BB%B6%E7%BC%BA%E5%A4%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无畏契约报错：A D3D11-compatible GPU</title>
-    <link href="https://itxiaozhang.com/fix-valorant-d3d11-gpu-error/"/>
-    <id>https://itxiaozhang.com/fix-valorant-d3d11-gpu-error/</id>
-    <published>2025-03-03T01:11:06.000Z</published>
-    <updated>2025-03-03T01:19:49.510Z</updated>
-    
-    
-    <summary type="html">玩家在启动《无畏契约》时遇到错误“A D3D11-compatible GPU (Feature Level 11.0, Shader Model 5.0) is required to run the engine”，导致游戏无法运行。该问题通常由显卡驱动缺失或未正确安装引起。本文将介绍问题原因及详细的解决步骤。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="无畏契约" scheme="https://itxiaozhang.com/tags/%E6%97%A0%E7%95%8F%E5%A5%91%E7%BA%A6/"/>
-    
-    <category term="游戏问题" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/"/>
-    
-    <category term="显卡驱动" scheme="https://itxiaozhang.com/tags/%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/"/>
     
   </entry>
   
