@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-05-19T10:41:40.443Z</updated>
+  <updated>2025-05-19T11:19:35.692Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://itxiaozhang.com/iopaint-fixed-mask-batch-inpainting-cpu/"/>
     <id>https://itxiaozhang.com/iopaint-fixed-mask-batch-inpainting-cpu/</id>
     <published>2025-05-19T10:27:22.000Z</published>
-    <updated>2025-05-19T10:41:40.443Z</updated>
+    <updated>2025-05-19T11:19:35.692Z</updated>
     
     
     <summary type="html">使用 IOPaint CLI 和固定掩膜图，在 CPU 环境下实现图片水印的批量自动去除，兼顾高效率与低门槛，适用于无 GPU 用户的图像处理需求。</summary>

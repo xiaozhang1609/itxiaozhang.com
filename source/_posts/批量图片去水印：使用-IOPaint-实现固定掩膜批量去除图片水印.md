@@ -115,68 +115,7 @@ pip install iopaint
 
 > 无需 GPU、CUDA，直接使用 CPU 即可。
 
-### 2. 全部脚本
-
-```python
-import os
-import subprocess
-import time
-import logging
-from multiprocessing import Pool, cpu_count
-
-# 设置并发数（建议不超过 GPU 核心数）
-MAX_WORKERS = min(4, cpu_count())
-
-# 基本路径
-base_dir = os.path.dirname(os.path.abspath(__file__))
-input_dir = os.path.join(base_dir, "input")
-output_dir = os.path.join(base_dir, "output")
-mask_path = os.path.join(base_dir, "fixed_mask.jpg")
-log_path = os.path.join(base_dir, "process.log")
-
-# 初始化
-os.makedirs(output_dir, exist_ok=True)
-logging.basicConfig(filename=log_path, level=logging.INFO, format="%(asctime)s - %(message)s")
-
-# 单张图片处理函数
-def process_image(fname):
-    input_path = os.path.join(input_dir, fname)
-    if not fname.lower().endswith(('.jpg', '.jpeg', '.png')):
-        return
-
-    try:
-        start_time = time.time()
-        subprocess.run([
-            "iopaint", "run",
-            "--model", "lama",
-            "--device", "cuda",  # 如果没有 GPU，请改为 "cpu"
-            "--image", input_path,
-            "--mask", mask_path,
-            "--output", output_dir
-        ], check=True)
-        elapsed = time.time() - start_time
-        msg = f"{fname} ✅ 成功，用时 {elapsed:.2f}s"
-        print(msg)
-        logging.info(msg)
-    except subprocess.CalledProcessError as e:
-        msg = f"{fname} ❌ 失败：{e}"
-        print(msg)
-        logging.error(msg)
-
-# 主执行逻辑
-if __name__ == "__main__":
-    all_files = os.listdir(input_dir)
-    images = [f for f in all_files if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
-
-    print(f"开始并行处理 {len(images)} 张图片，最大并发数：{MAX_WORKERS}")
-
-    with Pool(processes=MAX_WORKERS) as pool:
-        pool.map(process_image, images)
-
-    print("全部处理完成。日志保存在 process.log")
-```
-
-### 3. 执行脚本
+### 2. 执行脚本
 
 将图片放入 `input/`，掩膜命名为 `fixed_mask.jpg`，运行命令：
 
