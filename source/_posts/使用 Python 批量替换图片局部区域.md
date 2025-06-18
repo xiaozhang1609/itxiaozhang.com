@@ -47,110 +47,17 @@ tags:
 4. **日志记录与统计**
    实时输出每张图的处理结果，最终打印成功、跳过和失败数量。
 
-## 三、关键代码
+## 三、关键代码片段
 
 ```python
-import os
-import sys
-import logging
-from PIL import Image
-from concurrent.futures import ThreadPoolExecutor, as_completed
-
-def process_image(path, top_img, bottom_img, output_dir):
-    basename = os.path.basename(path)
-    try:
-        with Image.open(path).convert('RGBA') as img:
-            width, height = img.size
-            if (width, height) != (960, 8049):
-                logging.warning(f"跳过 {basename}，尺寸 {width}x{height} 不符合 960x8049")
-                return 'skipped'
-
-            # 覆盖固定区域（第2份）：y=115 到 y=229（高度114）
-            y_start = 115
-            region_h = 114
-            # 检查 top_img 大小
-            if top_img.size != (960, region_h):
-                logging.error(f"top_image 尺寸 {top_img.size} 与目标区域 960x{region_h} 不匹配")
-                return 'failed'
-
-            # 直接不透明覆盖
-            img.paste(top_img, (0, y_start))
-
-            # 底部粘贴
-            bottom_w, bottom_h = bottom_img.size
-            img.paste(bottom_img, (0, height - bottom_h), bottom_img)
-
-            # 保存
-            out_path = os.path.join(output_dir, basename)
-            img.save(out_path)
-            logging.info(f"已保存 {out_path}")
-            return 'done'
-    except Exception as e:
-        logging.error(f"处理 {basename} 时失败: {e}")
-        return 'failed'
-
-
-def overlay_replace(
-    img_dir: str,
-    top_path: str,
-    bottom_path: str,
-    output_dir: str,
-    threads: int
-) -> None:
-    # 配置日志
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s [%(levelname)s] %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S'
-    )
-
-    # 加载覆盖图
-    try:
-        top_img = Image.open(top_path).convert('RGBA')
-        bottom_img = Image.open(bottom_path).convert('RGBA')
-    except Exception as e:
-        logging.error(f"无法打开覆盖图: {e}")
-        sys.exit(1)
-
-    # 检查输出目录
-    os.makedirs(output_dir, exist_ok=True)
-
-    # 收集待处理文件
-    all_files = [f for f in os.listdir(img_dir) if f.lower().endswith('.png')]
-    paths = [os.path.join(img_dir, f) for f in all_files]
-
-    # 多线程执行
-    results = {'done': 0, 'skipped': 0, 'failed': 0}
-    with ThreadPoolExecutor(max_workers=threads) as executor:
-        future_map = {executor.submit(process_image, p, top_img, bottom_img, output_dir): p for p in paths}
-        for future in as_completed(future_map):
-            res = future.result()
-            if res in results:
-                results[res] += 1
-
-    # 汇总
-    logging.info("处理完成：")
-    logging.info(f"  成功: {results['done']}")
-    logging.info(f"  跳过: {results['skipped']}")
-    logging.info(f"  失败: {results['failed']}")
-
-
-if __name__ == '__main__':
-    # 固定参数配置
-    img_dir = 'img'
-    top_path = 'top.png'
-    bottom_path = 'bottom.png'
-    output_dir = 'out'
-    threads = 8
-
-    overlay_replace(
-        img_dir=img_dir,
-        top_path=top_path,
-        bottom_path=bottom_path,
-        output_dir=output_dir,
-        threads=threads
-    )
-
+def process_image(path, top_img, output_dir):
+    with Image.open(path).convert('RGBA') as img:
+        if img.size != (960, 8049):
+            return 'skipped'
+        # 在 y=115 处替换 960×114 区域
+        img.paste(top_img, (0, 115))
+        img.save(os.path.join(output_dir, os.path.basename(path)))
+        return 'done'
 ```
 
 完整脚本中还包含：日志配置、多线程处理逻辑、输出统计等内容。运行脚本即可批量处理所有符合条件的图片。

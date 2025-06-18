@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-06-18T03:24:12.830Z</updated>
+  <updated>2025-06-18T03:25:44.576Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://itxiaozhang.com/batch-replace-fixed-region-images-python/"/>
     <id>https://itxiaozhang.com/batch-replace-fixed-region-images-python/</id>
     <published>2025-06-18T03:19:01.000Z</published>
-    <updated>2025-06-18T03:24:12.830Z</updated>
+    <updated>2025-06-18T03:25:44.576Z</updated>
     
     
     <summary type="html">使用Python脚本，批量替换长图中同一固定区域内容，适用于统一批改模板或替换页眉页脚。支持尺寸过滤、多线程处理，操作简单高效。</summary>
