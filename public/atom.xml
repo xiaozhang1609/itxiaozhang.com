@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-06-19T04:41:23.101Z</updated>
+  <updated>2025-06-22T04:51:41.277Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>河南旅行游记</title>
+    <link href="https://itxiaozhang.com/henan-travel-diary/"/>
+    <id>https://itxiaozhang.com/henan-travel-diary/</id>
+    <published>2025-06-22T04:38:56.000Z</published>
+    <updated>2025-06-22T04:51:41.277Z</updated>
+    
+    
+    <summary type="html">2025年5月27日出发，为期八天的旅行，虽然和计划的有些出入，但也是一趟不错的体验。</summary>
+    
+    
+    
+    <category term="旅游" scheme="https://itxiaozhang.com/categories/%E6%97%85%E6%B8%B8/"/>
+    
+    
+    <category term="河南" scheme="https://itxiaozhang.com/tags/%E6%B2%B3%E5%8D%97/"/>
+    
+    <category term="少林寺" scheme="https://itxiaozhang.com/tags/%E5%B0%91%E6%9E%97%E5%AF%BA/"/>
+    
+    <category term="云台山" scheme="https://itxiaozhang.com/tags/%E4%BA%91%E5%8F%B0%E5%B1%B1/"/>
+    
+    <category term="龙门石窟" scheme="https://itxiaozhang.com/tags/%E9%BE%99%E9%97%A8%E7%9F%B3%E7%AA%9F/"/>
+    
+    <category term="河南博物院" scheme="https://itxiaozhang.com/tags/%E6%B2%B3%E5%8D%97%E5%8D%9A%E7%89%A9%E9%99%A2/"/>
+    
+    <category term="民宿" scheme="https://itxiaozhang.com/tags/%E6%B0%91%E5%AE%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>户口本分户记录</title>
@@ -94,7 +123,7 @@
     <link href="https://itxiaozhang.com/henan-8-day-itinerary-only-henan-shaolin-laojunshan/"/>
     <id>https://itxiaozhang.com/henan-8-day-itinerary-only-henan-shaolin-laojunshan/</id>
     <published>2025-05-26T16:52:16.000Z</published>
-    <updated>2025-05-26T17:09:22.431Z</updated>
+    <updated>2025-06-22T04:53:23.453Z</updated>
     
     
     <summary type="html">想去河南久矣，这次得偿所愿了。可惜时间太短，想去的地方太多了，又怕精力不够，尽量每天去一个地方吧。</summary>
@@ -458,29 +487,6 @@
     <category term="css" scheme="https://itxiaozhang.com/tags/css/"/>
     
     <category term="js" scheme="https://itxiaozhang.com/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apex英雄启动错误：「请在开始游戏前关闭ACE-BASE」</title>
-    <link href="https://itxiaozhang.com/apex-error-close-ace-base-fix/"/>
-    <id>https://itxiaozhang.com/apex-error-close-ace-base-fix/</id>
-    <published>2025-03-27T03:09:38.000Z</published>
-    <updated>2025-03-27T03:10:43.354Z</updated>
-    
-    
-    <summary type="html">Apex英雄启动时报错「请在开始游戏前关闭ACE-BASE」，主要由于腾讯ACE与Easy Anti-Cheat（EAC）存在冲突。本文介绍如何使用geek和Everything查找并删除ACE相关文件，从而解决该问题，确保游戏正常运行。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="ace" scheme="https://itxiaozhang.com/tags/ace/"/>
-    
-    <category term="Apex" scheme="https://itxiaozhang.com/tags/Apex/"/>
-    
-    <category term="eac" scheme="https://itxiaozhang.com/tags/eac/"/>
     
   </entry>
   
