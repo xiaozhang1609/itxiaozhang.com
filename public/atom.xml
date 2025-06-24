@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-06-22T04:54:49.988Z</updated>
+  <updated>2025-06-24T02:36:41.924Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BongoCat 跨平台桌宠安装与使用教程</title>
+    <link href="https://itxiaozhang.com/bongocat-cross-platform-desktop-pet-guide/"/>
+    <id>https://itxiaozhang.com/bongocat-cross-platform-desktop-pet-guide/</id>
+    <published>2025-06-24T02:34:34.000Z</published>
+    <updated>2025-06-24T02:36:41.924Z</updated>
+    
+    
+    <summary type="html">本教程介绍如何下载、安装和使用开源桌宠 BongoCat，支持 Windows、macOS、Linux，包含模型更换与常用设置方法。</summary>
+    
+    
+    
+    <category term="软件推荐" scheme="https://itxiaozhang.com/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="桌面宠物" scheme="https://itxiaozhang.com/tags/%E6%A1%8C%E9%9D%A2%E5%AE%A0%E7%89%A9/"/>
+    
+    <category term="开源软件" scheme="https://itxiaozhang.com/tags/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="BongoCat" scheme="https://itxiaozhang.com/tags/BongoCat/"/>
+    
+    <category term="Tauri" scheme="https://itxiaozhang.com/tags/Tauri/"/>
+    
+  </entry>
   
   <entry>
     <title>河南旅行游记</title>
@@ -460,33 +485,6 @@
     <category term="永劫无间" scheme="https://itxiaozhang.com/tags/%E6%B0%B8%E5%8A%AB%E6%97%A0%E9%97%B4/"/>
     
     <category term="游戏文件损坏" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6%E6%8D%9F%E5%9D%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程案例：摄影照片展示网站纯前端实现（HTML、CSS、JS）</title>
-    <link href="https://itxiaozhang.com/spa-photography-gallery/"/>
-    <id>https://itxiaozhang.com/spa-photography-gallery/</id>
-    <published>2025-03-30T08:54:12.000Z</published>
-    <updated>2025-03-30T09:12:41.477Z</updated>
-    
-    
-    <summary type="html">「视界捕手」是一个单页面应用（SPA），用于展示摄影照片，基于JavaScript动态加载图片内容，使用CSS网格布局实现响应式展示。页面切换时，通过淡入淡出动画实现平滑过渡，所有交互均无需重新加载页面。</summary>
-    
-    
-    
-    <category term="编程案例" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/"/>
-    
-    
-    <category term="编程" scheme="https://itxiaozhang.com/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="前端" scheme="https://itxiaozhang.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="html" scheme="https://itxiaozhang.com/tags/html/"/>
-    
-    <category term="css" scheme="https://itxiaozhang.com/tags/css/"/>
-    
-    <category term="js" scheme="https://itxiaozhang.com/tags/js/"/>
     
   </entry>
   

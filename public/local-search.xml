@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>BongoCat 跨平台桌宠安装与使用教程</title>
+    <link href="/bongocat-cross-platform-desktop-pet-guide/"/>
+    <url>/bongocat-cross-platform-desktop-pet-guide/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/bongocat-cross-platform-desktop-pet-guide/">https://itxiaozhang.com/bongocat-cross-platform-desktop-pet-guide/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="一、项目简介"><a href="#一、项目简介" class="headerlink" title="一、项目简介"></a>一、项目简介</h2><p><strong>BongoCat</strong> 是一款可爱的桌面宠物应用，支持 <strong>macOS、Windows、Linux</strong> 多平台。项目开源，使用 <a href="https://tauri.app/">Tauri</a> 构建，安全、轻量、不收集任何用户数据。</p><p>项目主页：<a href="https://github.com/ayangweb/BongoCat">https://github.com/ayangweb/BongoCat</a></p><hr><h2 id="二、下载安装"><a href="#二、下载安装" class="headerlink" title="二、下载安装"></a>二、下载安装</h2><h3 id="1-打开项目主页"><a href="#1-打开项目主页" class="headerlink" title="1. 打开项目主页"></a>1. 打开项目主页</h3><p>访问 GitHub 项目页面，点击顶部 <code>Releases</code> 进入版本发布页面。</p><h3 id="2-选择对应平台版本"><a href="#2-选择对应平台版本" class="headerlink" title="2. 选择对应平台版本"></a>2. 选择对应平台版本</h3><ul><li><strong>Windows 用户</strong>：下载带有 <code>x64.exe</code> 的安装包。</li><li><strong>macOS 用户</strong>：下载 <code>.dmg</code> 安装包。</li><li><strong>Linux 用户</strong>：下载 <code>.AppImage</code> 或 <code>.deb</code> 文件。</li></ul><blockquote><p>温馨提示：如果不清楚下载哪个，查看下载指南。</p></blockquote><h3 id="3-安装软件"><a href="#3-安装软件" class="headerlink" title="3. 安装软件"></a>3. 安装软件</h3><p>Windows 示例：</p><ul><li>双击安装包，点击“更多信息”，选择“仍要运行”。</li><li>按照提示下一步即可完成安装。</li></ul><hr><h2 id="三、使用说明"><a href="#三、使用说明" class="headerlink" title="三、使用说明"></a>三、使用说明</h2><h3 id="1-启动与基本交互"><a href="#1-启动与基本交互" class="headerlink" title="1. 启动与基本交互"></a>1. 启动与基本交互</h3><p>安装完成后打开软件，会出现一只猫咪，能根据你的键盘和鼠标动作作出反应。</p><h3 id="2-更换模型（皮肤）"><a href="#2-更换模型（皮肤）" class="headerlink" title="2. 更换模型（皮肤）"></a>2. 更换模型（皮肤）</h3><ol><li>右键桌宠 &gt; 选择“偏好设置”</li><li>打开“模型管理”页面</li><li>点击“更多模型”，访问模型仓库：<a href="https://github.com/ayangweb/Awesome-BongoCat">https://github.com/ayangweb/Awesome-BongoCat</a></li><li>下载 <code>.zip</code> 文件，解压后导入模型即可使用</li></ol><h3 id="3-常用设置"><a href="#3-常用设置" class="headerlink" title="3. 常用设置"></a>3. 常用设置</h3><ul><li><strong>窗口穿透</strong>：右键 &gt; 窗口穿透，启用后不会干扰鼠标操作</li><li><strong>尺寸调整</strong>：设置猫咪显示大小</li><li><strong>镜像显示</strong>：切换到屏幕左侧</li><li><strong>透明度设置</strong>：调整猫咪的透明程度</li></ul><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件推荐</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>桌面宠物</tag>
+      
+      <tag>开源软件</tag>
+      
+      <tag>BongoCat</tag>
+      
+      <tag>Tauri</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>河南旅行游记</title>
     <link href="/henan-travel-diary/"/>
     <url>/henan-travel-diary/</url>
