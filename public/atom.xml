@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-06-26T12:25:11.764Z</updated>
+  <updated>2025-06-27T14:27:54.385Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决「CPUVirtualization Technology 未开启或被占用」弹窗问题</title>
+    <link href="https://itxiaozhang.com/fix-cpuvirtualization-technology-popup-issue/"/>
+    <id>https://itxiaozhang.com/fix-cpuvirtualization-technology-popup-issue/</id>
+    <published>2025-06-27T14:24:29.000Z</published>
+    <updated>2025-06-27T14:27:54.385Z</updated>
+    
+    
+    <summary type="html">启动腾讯游戏时出现「ACE安全中心」虚拟化相关报错。本文汇总各大主板开启虚拟化设置方法，并提供关闭HVCI、VBS、Hyper-V等系统占用功能的详细步骤，帮助用户彻底排查并解决弹窗问题。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="腾讯" scheme="https://itxiaozhang.com/tags/%E8%85%BE%E8%AE%AF/"/>
+    
+    <category term="CPU虚拟化" scheme="https://itxiaozhang.com/tags/CPU%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+    <category term="BIOS" scheme="https://itxiaozhang.com/tags/BIOS/"/>
+    
+    <category term="VT-X" scheme="https://itxiaozhang.com/tags/VT-X/"/>
+    
+  </entry>
   
   <entry>
     <title>小米笔记本「小米智能控制中心」安装教程</title>
@@ -462,31 +487,6 @@
     <category term="搜索引擎" scheme="https://itxiaozhang.com/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
     
     <category term="hosts" scheme="https://itxiaozhang.com/tags/hosts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三角洲报错：加载msvcp140.dll失败，文件缺失或损坏</title>
-    <link href="https://itxiaozhang.com/delta-error-msvcp140-dll-missing/"/>
-    <id>https://itxiaozhang.com/delta-error-msvcp140-dll-missing/</id>
-    <published>2025-04-06T02:11:58.000Z</published>
-    <updated>2025-04-06T02:13:22.013Z</updated>
-    
-    
-    <summary type="html">运行《三角洲》时遇到错误，提示msvcp140.dll文件缺失或损坏，导致游戏无法正常启动。可能原因包括缺少必要运行库、文件损坏或被误删。本文提供详细的修复方案，包括安装运行库、使用WeGame修复工具等，帮助快速恢复游戏运行。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="游戏报错" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99/"/>
-    
-    <category term="运行库" scheme="https://itxiaozhang.com/tags/%E8%BF%90%E8%A1%8C%E5%BA%93/"/>
-    
-    <category term="msvcp140.dll" scheme="https://itxiaozhang.com/tags/msvcp140-dll/"/>
-    
-    <category term="三角洲" scheme="https://itxiaozhang.com/tags/%E4%B8%89%E8%A7%92%E6%B4%B2/"/>
     
   </entry>
   
