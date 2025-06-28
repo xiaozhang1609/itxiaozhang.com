@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>任务管理器实用场景演示</title>
+    <link href="/task-manager-practical-cases/"/>
+    <url>/task-manager-practical-cases/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文作者：<a href="https://space.bilibili.com/3546872633363055">章三修电脑</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h2><h3 id="一、进程与程序控制"><a href="#一、进程与程序控制" class="headerlink" title="一、进程与程序控制"></a>一、进程与程序控制</h3><ol><li><p><strong>强制关闭无响应程序</strong><br>当游戏或软件卡死时，直接结束进程是最直接的解决方式。</p></li><li><p><strong>诊断资源占用异常</strong><br>通过进程列表的 CPU、内存排序功能，可快速定位资源占用过高的程序。</p></li><li><p><strong>调整进程优先级</strong><br>在需要优先保障关键任务时，调整优先级能显著改善体验。（游戏选手）</p></li></ol><h3 id="二、性能诊断与优化"><a href="#二、性能诊断与优化" class="headerlink" title="二、性能诊断与优化"></a>二、性能诊断与优化</h3><ol><li><p><strong>实时监控硬件状态</strong><br>通过 “性能” 选项卡的曲线图，可直观判断硬件瓶颈。</p></li><li><p><strong>识别内存泄漏问题</strong><br>当某个程序的内存占用持续增长且不释放（如部分老旧软件），通过任务管理器的 “内存” 列排序可快速发现。</p></li><li><p><strong>网络流量分析</strong><br>“性能” 选项卡的网络监控功能可实时显示上传 &#x2F; 下载速度。</p></li></ol><h3 id="三、系统启动优化"><a href="#三、系统启动优化" class="headerlink" title="三、系统启动优化"></a>三、系统启动优化</h3><ol><li><p><strong>减少开机启动项</strong><br>通过 “启动” 选项卡禁用不必要的程序，可显著加快开机速度。</p></li><li><p><strong>诊断启动影响</strong><br>任务管理器会标注每个启动项对开机时间的影响程度（高 &#x2F; 中 &#x2F; 低）。</p></li></ol><h2 id="进阶功能"><a href="#进阶功能" class="headerlink" title="进阶功能"></a>进阶功能</h2><h3 id="一、进程与服务的深度管理"><a href="#一、进程与服务的深度管理" class="headerlink" title="一、进程与服务的深度管理"></a>一、进程与服务的深度管理</h3><ol><li><strong>进程命令行参数查看</strong>  </li><li><strong>服务依赖关系分析</strong>  </li><li><strong>进程转储文件生成与分析</strong></li></ol><h3 id="二、系统级功能扩展"><a href="#二、系统级功能扩展" class="headerlink" title="二、系统级功能扩展"></a>二、系统级功能扩展</h3><ol><li><strong>替代运行对话框</strong>  </li><li><strong>快速刷新注册表</strong>  </li><li><strong>多用户会话消息交互</strong></li></ol><h3 id="三、系统维护与应急处理"><a href="#三、系统维护与应急处理" class="headerlink" title="三、系统维护与应急处理"></a>三、系统维护与应急处理</h3><ol><li><strong>资源图表导出与分析</strong>  </li><li><strong>内核模式进程诊断</strong>  </li><li><strong>安全模式下的进程管理</strong></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>任务管理器</tag>
+      
+      <tag>进程管理</tag>
+      
+      <tag>性能优化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>解决「CPUVirtualization Technology 未开启或被占用」弹窗问题</title>
     <link href="/fix-cpuvirtualization-technology-popup-issue/"/>
     <url>/fix-cpuvirtualization-technology-popup-issue/</url>

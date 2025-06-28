@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-06-27T14:27:54.385Z</updated>
+  <updated>2025-06-28T15:57:33.637Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>任务管理器实用场景演示</title>
+    <link href="https://itxiaozhang.com/task-manager-practical-cases/"/>
+    <id>https://itxiaozhang.com/task-manager-practical-cases/</id>
+    <published>2025-06-28T15:53:01.000Z</published>
+    <updated>2025-06-28T15:57:33.637Z</updated>
+    
+    
+    <summary type="html">本文总结了任务管理器的基础与进阶功能，涵盖进程控制、性能监测、启动优化等，帮助用户高效诊断与维护系统状态。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="任务管理器" scheme="https://itxiaozhang.com/tags/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8/"/>
+    
+    <category term="进程管理" scheme="https://itxiaozhang.com/tags/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="性能优化" scheme="https://itxiaozhang.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>解决「CPUVirtualization Technology 未开启或被占用」弹窗问题</title>
@@ -466,27 +489,6 @@
     <category term="守望先锋2" scheme="https://itxiaozhang.com/tags/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B2/"/>
     
     <category term="战网" scheme="https://itxiaozhang.com/tags/%E6%88%98%E7%BD%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通过修改hosts文件屏蔽主流搜索引擎</title>
-    <link href="https://itxiaozhang.com/block-search-engines-windows-hosts/"/>
-    <id>https://itxiaozhang.com/block-search-engines-windows-hosts/</id>
-    <published>2025-04-15T11:06:50.000Z</published>
-    <updated>2025-04-16T00:43:24.210Z</updated>
-    
-    
-    <summary type="html">本文介绍如何在Windows 10系统中通过hosts文件屏蔽百度、搜狗、360搜索、谷歌等搜索引擎，包括域名列表、修改方法及注意事项。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="搜索引擎" scheme="https://itxiaozhang.com/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
-    
-    <category term="hosts" scheme="https://itxiaozhang.com/tags/hosts/"/>
     
   </entry>
   
