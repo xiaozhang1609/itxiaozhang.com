@@ -1,6 +1,6 @@
 ---
 title: 解决「CPU Virtualization Technology 未开启或被占用」弹窗问题
-permalink: /fix-cpuvirtualization-technology-popup-issue/
+permalink: /fix-cpu-virtualization-technology-popup-issue/
 date: 2025-06-27 22:24:29
 description: 启动腾讯游戏时出现「ACE安全中心」虚拟化相关报错。本文汇总各大主板开启虚拟化设置方法，并提供关闭HVCI、VBS、Hyper-V等系统占用功能的详细步骤，帮助用户彻底排查并解决弹窗问题。
 category:
