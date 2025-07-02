@@ -1,5 +1,5 @@
 ---
-title: 解决「CPUVirtualization Technology 未开启或被占用」弹窗问题
+title: 解决「CPU Virtualization Technology 未开启或被占用」弹窗问题
 permalink: /fix-cpuvirtualization-technology-popup-issue/
 date: 2025-06-27 22:24:29
 description: 启动腾讯游戏时出现「ACE安全中心」虚拟化相关报错。本文汇总各大主板开启虚拟化设置方法，并提供关闭HVCI、VBS、Hyper-V等系统占用功能的详细步骤，帮助用户彻底排查并解决弹窗问题。
@@ -17,7 +17,7 @@ tags:
 
 ## 问题描述
 
-报错内容：「ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能（CPUVirtualization Technology），请重启电脑后进入BIOS开启VT-X/D或AMD-V。并关闭可能占用VT的相关软件或功能。」
+报错内容：「ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能（CPU Virtualization Technology），请重启电脑后进入BIOS开启VT-X/D或AMD-V。并关闭可能占用VT的相关软件或功能。」
 
 ## 问题原因
 

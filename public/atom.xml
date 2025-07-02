@@ -40,11 +40,11 @@
   </entry>
   
   <entry>
-    <title>解决「CPUVirtualization Technology 未开启或被占用」弹窗问题</title>
+    <title>解决「CPU Virtualization Technology 未开启或被占用」弹窗问题</title>
     <link href="https://itxiaozhang.com/fix-cpuvirtualization-technology-popup-issue/"/>
     <id>https://itxiaozhang.com/fix-cpuvirtualization-technology-popup-issue/</id>
     <published>2025-06-27T14:24:29.000Z</published>
-    <updated>2025-06-27T14:27:54.385Z</updated>
+    <updated>2025-07-02T06:50:33.375Z</updated>
     
     
     <summary type="html">启动腾讯游戏时出现「ACE安全中心」虚拟化相关报错。本文汇总各大主板开启虚拟化设置方法，并提供关闭HVCI、VBS、Hyper-V等系统占用功能的详细步骤，帮助用户彻底排查并解决弹窗问题。</summary>
