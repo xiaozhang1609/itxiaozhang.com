@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>无畏契约CPU虚拟化报错：您的电脑未开启或有其他软件占用CPU虚拟化功能</title>
+    <link href="/valorant-cpu-virtualization-error-fix/"/>
+    <url>/valorant-cpu-virtualization-error-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/valorant-cpu-virtualization-error-fix/">https://itxiaozhang.com/valorant-cpu-virtualization-error-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>启动《无畏契约》后出现报错：<br>ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能（CPU Virtualization Technology），请重启电脑后进入BIOS开启VT‑X&#x2F;D或AMD‑V。并关闭可能占用VT的相关软件或功能。</p><p>该问题在运行《无畏契约》时常见，通常在进入游戏后不久出现，导致游戏无法正常进行。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li>系统中存在占用CPU虚拟化功能的软件</li><li>Windows 安全设置中的“内存完整性”处于开启状态</li><li>BIOS 中未启用 VT‑x、VT‑d 或 AMD‑V</li><li>游戏文件损坏或未正确修复</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="一、关闭“内存完整性”功能"><a href="#一、关闭“内存完整性”功能" class="headerlink" title="一、关闭“内存完整性”功能"></a>一、关闭“内存完整性”功能</h3><ol><li><p>打开「病毒和威胁防护」</p></li><li><p>点击「设备安全性」</p></li><li><p>进入「内核隔离详细信息」</p></li><li><p>若“内存完整性”为开启状态，则将其关闭</p></li><li><p>以管理员身份打开命令行，运行以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bcdedit /set hypervisorlaunchtype off<br></code></pre></td></tr></table></figure></li><li><p>执行完成后关闭命令行窗口</p></li></ol><h3 id="二、卸载或关闭占用虚拟化的程序"><a href="#二、卸载或关闭占用虚拟化的程序" class="headerlink" title="二、卸载或关闭占用虚拟化的程序"></a>二、卸载或关闭占用虚拟化的程序</h3><ol><li>打开「程序和功能」</li><li>点击左侧「启用或关闭 Windows 功能」</li><li>取消所有与虚拟化无关的勾选项</li><li>检查并卸载&#x2F;关闭可能占用 VT 的程序，如 Hyper‑V、蓝叠等</li></ol><h3 id="三、在-BIOS-中开启虚拟化支持"><a href="#三、在-BIOS-中开启虚拟化支持" class="headerlink" title="三、在 BIOS 中开启虚拟化支持"></a>三、在 BIOS 中开启虚拟化支持</h3><ol><li>重启电脑，进入 BIOS（常用快捷键：F2、Del，或「Shift+重启」→「高级启动」）</li><li>找到“Virtualization Technology”“VT‑x”“VT‑d”或“AMD‑V”选项</li><li>将相关设置开启</li><li>保存并退出 BIOS</li></ol><h3 id="四、修复游戏文件"><a href="#四、修复游戏文件" class="headerlink" title="四、修复游戏文件"></a>四、修复游戏文件</h3><ul><li><strong>WeGame 启动</strong>：打开游戏页面，「右键」→「修复游戏」</li><li><strong>Steam 启动</strong>：右键游戏 → 属性 → 验证文件完整性</li></ul><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ACE安全中心</tag>
+      
+      <tag>无畏契约</tag>
+      
+      <tag>CPU虚拟化</tag>
+      
+      <tag>BIOS</tag>
+      
+      <tag>VT</tag>
+      
+      <tag>VD</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>三角洲行动 ACE安全中心报错(1-0-0)：游戏安全组件运行时发生异常</title>
     <link href="/delta-action-ace-security-center-error-1-0-0/"/>
     <url>/delta-action-ace-security-center-error-1-0-0/</url>

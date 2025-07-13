@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-07-12T05:56:42.907Z</updated>
+  <updated>2025-07-13T04:23:48.441Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>无畏契约CPU虚拟化报错：您的电脑未开启或有其他软件占用CPU虚拟化功能</title>
+    <link href="https://itxiaozhang.com/valorant-cpu-virtualization-error-fix/"/>
+    <id>https://itxiaozhang.com/valorant-cpu-virtualization-error-fix/</id>
+    <published>2025-07-13T04:17:06.000Z</published>
+    <updated>2025-07-13T04:23:48.441Z</updated>
+    
+    
+    <summary type="html">启动《无畏契约》时出现ACE安全中心报错，提示未开启或被占用CPU虚拟化功能。本文提供系统设置、BIOS配置及游戏修复等完整解决方案。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="ACE安全中心" scheme="https://itxiaozhang.com/tags/ACE%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83/"/>
+    
+    <category term="无畏契约" scheme="https://itxiaozhang.com/tags/%E6%97%A0%E7%95%8F%E5%A5%91%E7%BA%A6/"/>
+    
+    <category term="CPU虚拟化" scheme="https://itxiaozhang.com/tags/CPU%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+    <category term="BIOS" scheme="https://itxiaozhang.com/tags/BIOS/"/>
+    
+    <category term="VT" scheme="https://itxiaozhang.com/tags/VT/"/>
+    
+    <category term="VD" scheme="https://itxiaozhang.com/tags/VD/"/>
+    
+  </entry>
   
   <entry>
     <title>三角洲行动 ACE安全中心报错(1-0-0)：游戏安全组件运行时发生异常</title>
@@ -472,29 +501,6 @@
     <category term="数据采集" scheme="https://itxiaozhang.com/tags/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/"/>
     
     <category term="Python" scheme="https://itxiaozhang.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows键无反应，按下无效的三种常见原因与解决方法</title>
-    <link href="https://itxiaozhang.com/windows-key-not-working-in-fullscreen/"/>
-    <id>https://itxiaozhang.com/windows-key-not-working-in-fullscreen/</id>
-    <published>2025-04-17T14:01:06.000Z</published>
-    <updated>2025-04-17T14:07:19.761Z</updated>
-    
-    
-    <summary type="html">Windows键无效，可能由快捷键锁定、驱动冲突或硬件问题引起。本文提供对应的排查与修复步骤。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="Windows" scheme="https://itxiaozhang.com/tags/Windows/"/>
-    
-    <category term="Windows键" scheme="https://itxiaozhang.com/tags/Windows%E9%94%AE/"/>
-    
-    <category term="键盘失灵" scheme="https://itxiaozhang.com/tags/%E9%94%AE%E7%9B%98%E5%A4%B1%E7%81%B5/"/>
     
   </entry>
   
