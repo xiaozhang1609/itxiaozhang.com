@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itxiaozhang.com/hmdb-database-crawler-case-study-efficient-automated-python-script/</loc>
+    
+    <lastmod>2025-07-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itxiaozhang.com/valorant-cpu-virtualization-error-fix/</loc>
     
     <lastmod>2025-07-13</lastmod>
@@ -3380,6 +3389,13 @@
   
   <url>
     <loc>https://itxiaozhang.com/tags/VD/</loc>
+    <lastmod>2025-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</loc>
     <lastmod>2025-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
