@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-07-13T10:55:52.411Z</updated>
+  <updated>2025-07-22T07:51:52.006Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>三角洲行动报错：The path &#39;{Path}&#39; cannot be found. 的解决方法</title>
+    <link href="https://itxiaozhang.com/fix-the-path-cannot-be-found-error-delta-force/"/>
+    <id>https://itxiaozhang.com/fix-the-path-cannot-be-found-error-delta-force/</id>
+    <published>2025-07-22T07:50:25.000Z</published>
+    <updated>2025-07-22T07:51:52.006Z</updated>
+    
+    
+    <summary type="html">本文针对「三角洲行动」运行或修复时出现「The path &#39;{Path}&#39; cannot be found.」报错，提供完整清理和修复步骤，适用于常见安装路径丢失问题。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="运行库" scheme="https://itxiaozhang.com/tags/%E8%BF%90%E8%A1%8C%E5%BA%93/"/>
+    
+    <category term="游戏问题" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/"/>
+    
+    <category term="三角洲" scheme="https://itxiaozhang.com/tags/%E4%B8%89%E8%A7%92%E6%B4%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>HMDB数据库爬虫案例：一个高效、自动化的Python爬虫脚本</title>
@@ -476,31 +499,6 @@
     <category term="暗区突围" scheme="https://itxiaozhang.com/tags/%E6%9A%97%E5%8C%BA%E7%AA%81%E5%9B%B4/"/>
     
     <category term="安装ACE服务失败" scheme="https://itxiaozhang.com/tags/%E5%AE%89%E8%A3%85ACE%E6%9C%8D%E5%8A%A1%E5%A4%B1%E8%B4%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>看门狗2：启动错误 service update failed：EAC冲突与输入法导致的游戏问题</title>
-    <link href="https://itxiaozhang.com/watchdogs2-service-update-failed-eac-input-issue/"/>
-    <id>https://itxiaozhang.com/watchdogs2-service-update-failed-eac-input-issue/</id>
-    <published>2025-04-29T11:04:20.000Z</published>
-    <updated>2025-04-29T11:10:01.966Z</updated>
-    
-    
-    <summary type="html">本文解决《看门狗2》启动报错「service update failed」的原因，并提供解决EAC冲突和输入法操作冲突的具体方法。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="看门狗2" scheme="https://itxiaozhang.com/tags/%E7%9C%8B%E9%97%A8%E7%8B%972/"/>
-    
-    <category term="EAC报错" scheme="https://itxiaozhang.com/tags/EAC%E6%8A%A5%E9%94%99/"/>
-    
-    <category term="输入法冲突" scheme="https://itxiaozhang.com/tags/%E8%BE%93%E5%85%A5%E6%B3%95%E5%86%B2%E7%AA%81/"/>
-    
-    <category term="Watch_Dogs2" scheme="https://itxiaozhang.com/tags/Watch-Dogs2/"/>
     
   </entry>
   
