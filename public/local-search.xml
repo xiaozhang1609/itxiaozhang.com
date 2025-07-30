@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>《暗区突围》报错：ACE安全中心提示CPU虚拟化功能未开启或被占用</title>
+    <link href="/dark-zone-ace-cpu-virtualization-error-fix/"/>
+    <url>/dark-zone-ace-cpu-virtualization-error-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/dark-zone-ace-cpu-virtualization-error-fix/">https://itxiaozhang.com/dark-zone-ace-cpu-virtualization-error-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>运行《暗区突围》时，弹出原始报错信息如下：</p><p>「ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能（CPU Virtualization Technology），请重启电脑后进入BIOS开启VT‑X&#x2F;D或AMD‑V。并关闭可能占用VT的相关软件或功能。」</p><p>该问题通常在游戏启动或进入游戏初期出现，影响正常运行。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>报错表明系统未开启 CPU 虚拟化技术，或该功能被其他软件占用。常见原因包括：</p><ol><li>操作系统中启用了 VBS、内存完整性等安全功能；</li><li>Hyper-V、第三方软件等占用虚拟化资源；</li><li>BIOS 中未启用 VT‑X&#x2F;D 或 AMD‑V；</li><li>启动项或服务中存在干扰程序；</li><li>设备加密功能干扰系统性能。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>请按以下步骤依次操作：</p><ol><li><p><strong>关闭内存完整性功能</strong></p><ul><li>打开「病毒与威胁防护」→「设备安全性」→「内存隔离」→ 关闭「内存完整性」。</li></ul></li><li><p><strong>关闭 VBS（基于虚拟化的安全）</strong></p><ul><li><p>以管理员身份打开命令行窗口；</p></li><li><p>输入以下命令并回车：  </p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">bcdedit /<span class="hljs-keyword">set</span> hypervisorlaunchtype <span class="hljs-keyword">off</span><br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>关闭 Hyper-V 功能</strong></p><ul><li>按 <code>Win+R</code> 输入 <code>appwiz.cpl</code> → 回车；</li><li>点击左侧「启用或关闭 Windows 功能」；</li><li>找到「Hyper-V」，若勾选则取消。</li></ul></li><li><p><strong>检查并卸载干扰软件</strong></p><ul><li>查找如 Geek Uninstaller 等工具；</li><li>使用卸载工具进行彻底卸载，包括清理注册表。</li></ul></li><li><p><strong>禁用异常服务与启动项</strong></p><ul><li>运行 <code>msconfig</code> →「服务」；</li><li>取消勾选来源不明的服务；</li><li>打开任务管理器 →「启动」标签，禁用不常用项。</li></ul></li><li><p><strong>关闭设备加密</strong></p><ul><li>进入「设置」→「隐私和安全性」→「设备加密」；</li><li>若已开启，点击关闭。</li></ul></li><li><p><strong>在 BIOS 中开启 CPU 虚拟化</strong></p><ul><li>重启电脑，进入 BIOS；</li><li>启用「Intel VT‑X &#x2F; VT‑d」或「AMD‑V」选项；</li><li>保存设置并重启系统。</li></ul></li><li><p><strong>修复游戏文件</strong></p><ul><li>通过 WeGame、Steam 或游戏启动器；</li><li>使用其「修复」功能完成游戏文件自检修复。</li></ul></li></ol><p>操作完成后重启电脑，游戏应可正常运行。</p><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ACE安全中心</tag>
+      
+      <tag>暗区突围</tag>
+      
+      <tag>CPU虚拟化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>三角洲行动报错：The path &#39;{Path}&#39; cannot be found. 的解决方法</title>
     <link href="/fix-the-path-cannot-be-found-error-delta-force/"/>
     <url>/fix-the-path-cannot-be-found-error-delta-force/</url>
@@ -3417,7 +3446,7 @@
     <link href="/about-computer-repair-services-with-me/"/>
     <url>/about-computer-repair-services-with-me/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">https://itxiaozhang.com/about-computer-repair-services-with-me/</a>  </p></blockquote><p>大家好，我是小章。最近有很多朋友找我修电脑，但沟通效率不高，为此我写了这篇文章，详细说明一下相关情况。</p><h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><p>我目前全职提供电脑维修、IT咨询服务，如果您有任何电脑相关的问题，都可以问我。如果您想深入了解我，可以访问我的<a href="https://itxiaozhang.com/">个人网站</a>。目前我只在咸鱼有店，这是我的<a href="https://www.goofish.com/personal?userId=2214721009630">主页</a>，目前咸鱼有粉丝数量1675，好评数量1846，好评率99%，回头客数量870，鱼小铺6级。</p><h2 id="如何收费"><a href="#如何收费" class="headerlink" title="如何收费"></a>如何收费</h2><p>一般问题都是<strong>20元</strong>，如果问题复杂会提前和你商量，诚信第一。</p><ul><li><strong>收费原则</strong>：不解决不收费，诚信为本。</li></ul><h2 id="治疗原则"><a href="#治疗原则" class="headerlink" title="治疗原则"></a>治疗原则</h2><p>保守治疗，不丢失数据，不加重病情，尽力而为。</p><h2 id="解决方式-二选一"><a href="#解决方式-二选一" class="headerlink" title="解决方式(二选一)"></a>解决方式(二选一)</h2><ul><li><a href="https://www.todesk.com/download.html">ToDesk</a>远程处理</li><li>视频电话处理</li></ul><h2 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h2><ul><li>微信：xiaozhang1609</li><li>邮箱：<a href="mailto:&#x78;&#x69;&#97;&#x6f;&#x7a;&#x68;&#97;&#x6e;&#x67;&#46;&#x74;&#101;&#x63;&#x68;&#64;&#x68;&#x6f;&#116;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#x78;&#x69;&#97;&#x6f;&#x7a;&#x68;&#97;&#x6e;&#x67;&#46;&#x74;&#101;&#x63;&#x68;&#64;&#x68;&#x6f;&#116;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a></li><li>视频平台留言&#x2F;私信</li></ul><h2 id="诚信为本"><a href="#诚信为本" class="headerlink" title="诚信为本"></a>诚信为本</h2><p>我目前全平台实名，ID是<strong>小章老师修电脑</strong>或者<strong>IT小章</strong>，我想认真做好这件事，请大家监督。我会认真对待每一台电脑，认真处理每一个问题。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">https://itxiaozhang.com/about-computer-repair-services-with-me/</a>  </p></blockquote><p>大家好，我是小章。最近有很多朋友找我修电脑，但沟通效率不高，为此我写了这篇文章，详细说明一下相关情况。</p><h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><p>我目前全职提供电脑维修、IT咨询服务，如果您有任何电脑相关的问题，都可以问我。如果您想深入了解我，可以访问我的<a href="https://itxiaozhang.com/">个人网站</a>。目前我只在咸鱼有店，这是我的<a href="https://www.goofish.com/personal?userId=2214721009630">主页</a>，目前咸鱼有粉丝数量1675，好评数量1846，好评率99%，回头客数量870，鱼小铺6级。</p><h2 id="如何收费"><a href="#如何收费" class="headerlink" title="如何收费"></a>如何收费</h2><p>一般问题都是<strong>50元</strong>起步，如果问题复杂会提前和你商量，诚信第一。</p><ul><li><strong>收费原则</strong>：不解决不收费，诚信为本。</li></ul><h2 id="治疗原则"><a href="#治疗原则" class="headerlink" title="治疗原则"></a>治疗原则</h2><p>保守治疗，不丢失数据，不加重病情，尽力而为。</p><h2 id="解决方式-二选一"><a href="#解决方式-二选一" class="headerlink" title="解决方式(二选一)"></a>解决方式(二选一)</h2><ul><li><a href="https://www.todesk.com/download.html">ToDesk</a>远程处理</li><li>视频电话处理</li></ul><h2 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h2><ul><li>微信：访问 zhang9.com，点击“电脑维修”</li><li>邮箱：<a href="mailto:&#x78;&#x69;&#97;&#111;&#x7a;&#x68;&#97;&#110;&#x67;&#46;&#116;&#101;&#99;&#x68;&#64;&#104;&#x6f;&#116;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x78;&#x69;&#97;&#111;&#x7a;&#x68;&#97;&#110;&#x67;&#46;&#116;&#101;&#99;&#x68;&#64;&#104;&#x6f;&#116;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a></li><li>视频平台留言&#x2F;私信</li></ul><h2 id="诚信为本"><a href="#诚信为本" class="headerlink" title="诚信为本"></a>诚信为本</h2><p>我目前全平台实名，ID是<strong>小章老师修电脑</strong>或者<strong>IT小章</strong>，我想认真做好这件事，请大家监督。我会认真对待每一台电脑，认真处理每一个问题。</p>]]></content>
     
     
     <categories>
