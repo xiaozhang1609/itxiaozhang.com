@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-07-30T03:13:07.968Z</updated>
+  <updated>2025-08-02T07:48:22.382Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>港澳台玩家启动国服三角洲行动报错「ACE安全中心：您的電腦未開啟或有其他軟體佔用CPU虛擬化功能」</title>
+    <link href="https://itxiaozhang.com/delta-operations-ace-security-center-cpu-virtualization-error-hk-tw-cn/"/>
+    <id>https://itxiaozhang.com/delta-operations-ace-security-center-cpu-virtualization-error-hk-tw-cn/</id>
+    <published>2025-08-02T07:45:51.000Z</published>
+    <updated>2025-08-02T07:48:22.382Z</updated>
+    
+    
+    <summary type="html">本文针对港澳台玩家在国服《三角洲行动》遇到的ACE安全中心及CPU虚拟化报错问题，分析原因并详细介绍“二次重启法”及BIOS设置，帮助解决反作弊加载失败和虚拟化冲突，保证游戏顺利运行。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="ACE安全中心" scheme="https://itxiaozhang.com/tags/ACE%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83/"/>
+    
+    <category term="三角洲行动" scheme="https://itxiaozhang.com/tags/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8/"/>
+    
+    <category term="CPU虚拟化" scheme="https://itxiaozhang.com/tags/CPU%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>《暗区突围》报错：ACE安全中心提示CPU虚拟化功能未开启或被占用</title>
@@ -476,29 +499,6 @@
     <category term="Steam报错" scheme="https://itxiaozhang.com/tags/Steam%E6%8A%A5%E9%94%99/"/>
     
     <category term="delta" scheme="https://itxiaozhang.com/tags/delta/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用Python从HMDB数据库批量提取质谱数据中的化合物信息</title>
-    <link href="https://itxiaozhang.com/python-hmdb-mass-spectrometry-compound-extraction/"/>
-    <id>https://itxiaozhang.com/python-hmdb-mass-spectrometry-compound-extraction/</id>
-    <published>2025-05-08T07:11:58.000Z</published>
-    <updated>2025-05-08T08:39:11.794Z</updated>
-    
-    
-    <summary type="html">本工具通过Python脚本，利用质谱数据中的质量数，从HMDB数据库批量提取化合物信息，包括HMDB ID、常用名称、化学式及结构图片，并将结果导出为CSV文件，极大提升代谢物注释效率。</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
-    
-    <category term="HMDB数据库" scheme="https://itxiaozhang.com/tags/HMDB%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="HMDB" scheme="https://itxiaozhang.com/tags/HMDB/"/>
     
   </entry>
   
