@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>港服《瓦罗兰特》启动报错「VAN9003 This version of Vanguard requires secure boot to be enabled in order to play」解决方法</title>
+    <link href="/valorant-van9003-secure-boot-tpm2-fix/"/>
+    <url>/valorant-van9003-secure-boot-tpm2-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/valorant-van9003-secure-boot-tpm2-fix/">https://itxiaozhang.com/valorant-van9003-secure-boot-tpm2-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>原始报错：「VAN9003 This version of Vanguard requires secure boot to be enabled in order to play. See the Vanguard notification center in the tray for more details.」<br>该报错出现在启动港服《瓦罗兰特》时，提示必须开启安全启动（Secure Boot）才能运行游戏。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>电脑的安全启动功能（Secure Boot）未开启，或 TPM 2.0 未启用。Vanguard 反作弊系统要求系统在 UEFI 模式下启用 Secure Boot，并检测到 TPM 处于工作状态，才能正常运行游戏。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="1-启用-Secure-Boot"><a href="#1-启用-Secure-Boot" class="headerlink" title="1. 启用 Secure Boot"></a>1. 启用 Secure Boot</h3><ul><li><p><strong>进入 BIOS&#x2F;UEFI</strong></p><ul><li>重启电脑并按制造商快捷键：华硕 F2；戴尔 F2&#x2F;F12；惠普 F10；联想台式机 F1；联想笔记本 F2。</li><li>或通过 Windows 高级启动：设置 → 系统 → 恢复 → 高级启动 → UEFI 固件设置。</li></ul></li><li><p><strong>修改 Secure Boot 设置</strong></p><ul><li>在 BIOS 的「Boot」「Security」或「系统配置」标签页，将「Secure Boot」设为 Enabled。</li><li>若选项为灰色：先调整「Erase all Secure Boot Settings」或「Restore Secure Boot to Factory Settings」状态（Enabled↔Disabled），保存重启后再启用。</li></ul></li><li><p><strong>验证是否生效</strong></p><ul><li>按「Win + R」，输入「msinfo32」，查看「安全启动状态」是否为开启。</li></ul></li></ul><h3 id="2-启用-TPM-2-0"><a href="#2-启用-TPM-2-0" class="headerlink" title="2. 启用 TPM 2.0"></a>2. 启用 TPM 2.0</h3><ul><li><p><strong>在 BIOS 启用</strong></p><ul><li>在「Security」或「TPM」标签页，启用「TPM 2.0」或「Intel Platform Trust Technology」。</li></ul></li><li><p><strong>Windows 验证</strong></p><ul><li>按「Win + R」，输入「tpm.msc」，确认显示「TPM is ready for use」且规格版本为 2.0。</li></ul></li></ul><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>瓦罗兰特</tag>
+      
+      <tag>VAN9003</tag>
+      
+      <tag>Secure Boot</tag>
+      
+      <tag>TPM 2.0</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>港澳台玩家启动国服三角洲行动报错「ACE安全中心：您的電腦未開啟或有其他軟體佔用CPU虛擬化功能」</title>
     <link href="/delta-operations-ace-security-center-cpu-virtualization-error-hk-tw-cn/"/>
     <url>/delta-operations-ace-security-center-cpu-virtualization-error-hk-tw-cn/</url>
