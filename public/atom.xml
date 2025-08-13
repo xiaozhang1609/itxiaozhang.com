@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-08-08T03:49:07.821Z</updated>
+  <updated>2025-08-13T13:49:08.762Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WeGame 登录报错：「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」快速排查与修复</title>
+    <link href="https://itxiaozhang.com/wegame-login-timeout-7610001-fix/"/>
+    <id>https://itxiaozhang.com/wegame-login-timeout-7610001-fix/</id>
+    <published>2025-08-13T13:46:03.000Z</published>
+    <updated>2025-08-13T13:49:08.762Z</updated>
+    
+    
+    <summary type="html">WeGame 登录时报「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」。建议依次排查：临时关闭防火墙并放行WeGame、卸载可疑第三方安全/网络控制软件、禁用IPv6并更换DNS（如8.8.8.8）、刷新DNS并运行客户端修复程序，通常可恢复登录。</summary>
+    
+    
+    
+    
+    <category term="WeGame" scheme="https://itxiaozhang.com/tags/WeGame/"/>
+    
+    <category term="登录超时" scheme="https://itxiaozhang.com/tags/%E7%99%BB%E5%BD%95%E8%B6%85%E6%97%B6/"/>
+    
+    <category term="错误码7610001" scheme="https://itxiaozhang.com/tags/%E9%94%99%E8%AF%AF%E7%A0%817610001/"/>
+    
+    <category term="DNS" scheme="https://itxiaozhang.com/tags/DNS/"/>
+    
+    <category term="IPv6" scheme="https://itxiaozhang.com/tags/IPv6/"/>
+    
+  </entry>
   
   <entry>
     <title>港服《瓦罗兰特》启动报错「VAN9003 This version of Vanguard requires secure boot to be enabled in order to play」解决方法</title>
@@ -476,31 +501,6 @@
     <category term="Windows Hello" scheme="https://itxiaozhang.com/tags/Windows-Hello/"/>
     
     <category term="Administrator账户" scheme="https://itxiaozhang.com/tags/Administrator%E8%B4%A6%E6%88%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</title>
-    <link href="https://itxiaozhang.com/hmdb-metabolite-batch-extraction-tool/"/>
-    <id>https://itxiaozhang.com/hmdb-metabolite-batch-extraction-tool/</id>
-    <published>2025-05-15T02:38:01.000Z</published>
-    <updated>2025-05-15T13:29:52.015Z</updated>
-    
-    
-    <summary type="html">这是一款专为代谢组学研究设计的Python自动化工具，能够从HMDB数据库批量获取代谢物信息，包括物质分类、组织定位和相关数据库ID等关键信息，大幅提升数据收集效率。</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
-    
-    <category term="HMDB数据库" scheme="https://itxiaozhang.com/tags/HMDB%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="HMDB" scheme="https://itxiaozhang.com/tags/HMDB/"/>
-    
-    <category term="代谢组学工具" scheme="https://itxiaozhang.com/tags/%E4%BB%A3%E8%B0%A2%E7%BB%84%E5%AD%A6%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   

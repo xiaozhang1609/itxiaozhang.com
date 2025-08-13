@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>WeGame 登录报错：「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」快速排查与修复</title>
+    <link href="/wegame-login-timeout-7610001-fix/"/>
+    <url>/wegame-login-timeout-7610001-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/wegame-login-timeout-7610001-fix/">https://itxiaozhang.com/wegame-login-timeout-7610001-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>登录WeGame时出现报错：「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」。<br>表现为QQ&#x2F;微信扫码界面无法加载，或使用账号密码登录时直接报错，无法完成登录。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li>系统防火墙阻止WeGame网络访问。</li><li>存在第三方安全或网络控制类软件，干扰WeGame登录模块。</li><li>网络协议或DNS配置异常（IPv6干扰或DNS解析失败），导致无法连接WeGame服务。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>排查防火墙</strong></p><ul><li>按「Windows键」，打开「Windows 防火墙&#x2F;Windows 安全中心」。</li><li>进入「启用或关闭防火墙」，临时关闭防火墙后测试登录。</li><li>若关闭后能登录，为WeGame添加防火墙例外或按需恢复推荐设置并单独放行WeGame。</li></ul></li><li><p><strong>检查并移除第三方安全&#x2F;网络控制软件</strong></p><ul><li>打开「控制面板 → 程序和功能」，查找安全防护、网络加速、流量控制等可疑软件。</li><li>退出或卸载可疑软件，重启电脑后再次尝试登录。</li></ul></li><li><p><strong>调整网络协议与DNS</strong></p><ul><li>按「Windows键 + R」，输入<code>ncpa.cpl</code>回车，打开网络连接。</li><li>双击当前网络适配器 → 点击「属性」。</li><li>取消勾选「Internet 协议版本 6 (TCP&#x2F;IPv6)」。</li><li>双击「Internet 协议版本 4 (TCP&#x2F;IPv4)」，选择「使用下面的DNS服务器地址」，将首选DNS设为<code>8.8.8.8</code>，保存。</li><li>以管理员身份运行命令提示符，执行<code>ipconfig /flushdns</code>刷新DNS缓存。</li></ul></li><li><p><strong>修复WeGame客户端</strong></p><ul><li>在WeGame快捷方式上右键，选择「打开文件所在位置」。</li><li>找到修复程序（如<code>repair.exe</code>或同名修复工具），双击运行，等待完成（通常数秒到几十秒）。</li><li>修复完成后重启WeGame，尝试扫码或账号密码登录。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>WeGame</tag>
+      
+      <tag>登录超时</tag>
+      
+      <tag>错误码7610001</tag>
+      
+      <tag>DNS</tag>
+      
+      <tag>IPv6</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>港服《瓦罗兰特》启动报错「VAN9003 This version of Vanguard requires secure boot to be enabled in order to play」解决方法</title>
     <link href="/valorant-van9003-secure-boot-tpm2-fix/"/>
     <url>/valorant-van9003-secure-boot-tpm2-fix/</url>
