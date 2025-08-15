@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-08-13T13:49:08.762Z</updated>
+  <updated>2025-08-15T07:02:12.993Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows桌面美化教程</title>
+    <link href="https://itxiaozhang.com/windows-desktop-customization-translucenttb-nexus-rainmeter/"/>
+    <id>https://itxiaozhang.com/windows-desktop-customization-translucenttb-nexus-rainmeter/</id>
+    <published>2025-08-15T07:00:59.000Z</published>
+    <updated>2025-08-15T07:02:12.993Z</updated>
+    
+    
+    <summary type="html">本教程介绍如何使用translucentTB、Nexus和Rainmeter三款工具，让Windows桌面实现任务栏透明、添加Dock栏及个性化时间音乐条。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="Windows美化" scheme="https://itxiaozhang.com/tags/Windows%E7%BE%8E%E5%8C%96/"/>
+    
+    <category term="translucentTB" scheme="https://itxiaozhang.com/tags/translucentTB/"/>
+    
+    <category term="Nexus" scheme="https://itxiaozhang.com/tags/Nexus/"/>
+    
+    <category term="Rainmeter" scheme="https://itxiaozhang.com/tags/Rainmeter/"/>
+    
+  </entry>
   
   <entry>
     <title>WeGame 登录报错：「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」快速排查与修复</title>
@@ -478,29 +503,6 @@
     <category term="IOPaint" scheme="https://itxiaozhang.com/tags/IOPaint/"/>
     
     <category term="水印" scheme="https://itxiaozhang.com/tags/%E6%B0%B4%E5%8D%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Hello配置失败：「抱歉，出现问题。关闭Windows Hello，然后尝试再次运行安装程序。」</title>
-    <link href="https://itxiaozhang.com/windows-hello-error-close-then-try-again/"/>
-    <id>https://itxiaozhang.com/windows-hello-error-close-then-try-again/</id>
-    <published>2025-05-15T12:37:57.000Z</published>
-    <updated>2025-05-15T12:39:48.108Z</updated>
-    
-    
-    <summary type="html">由于使用内置Administrator账户，Windows Hello功能被禁用。通过创建普通账户可恢复指纹与面部识别设置。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="Windows" scheme="https://itxiaozhang.com/tags/Windows/"/>
-    
-    <category term="Windows Hello" scheme="https://itxiaozhang.com/tags/Windows-Hello/"/>
-    
-    <category term="Administrator账户" scheme="https://itxiaozhang.com/tags/Administrator%E8%B4%A6%E6%88%B7/"/>
     
   </entry>
   
