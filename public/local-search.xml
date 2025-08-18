@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>《英雄联盟》客户端启动后无反应，仅显示 League of Legends LOGO 的解决办法</title>
+    <link href="/league-of-legends-client-stuck-on-logo-fix/"/>
+    <url>/league-of-legends-client-stuck-on-logo-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/league-of-legends-client-stuck-on-logo-fix/">https://itxiaozhang.com/league-of-legends-client-stuck-on-logo-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。   </p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在启动《英雄联盟》客户端时，程序无任何响应，仅弹出英文「League of Legends」LOGO 界面，随后不再继续加载，游戏无法进入。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li><strong>客户端路径问题</strong>：如果游戏安装目录中包含中文名称，WeGame 可能无法正确识别，导致客户端无法启动。</li><li><strong>网络配置问题</strong>：IPv6 协议或 DNS 配置异常，可能影响客户端与服务器之间的通信，从而停留在 LOGO 界面。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="方法一：修改游戏目录并重新关联"><a href="#方法一：修改游戏目录并重新关联" class="headerlink" title="方法一：修改游戏目录并重新关联"></a>方法一：修改游戏目录并重新关联</h3><ol><li>打开文件管理器，进入游戏安装路径，例如：<br><code>D:\WeGame Apps\英雄联盟</code></li><li>将「英雄联盟」文件夹重命名为「LOL」。</li><li>打开 WeGame，点击右上角「三个点」→「管理」→「手动添加」。</li><li>选择刚才修改后的「LOL」文件夹。</li><li>点击「启动」，确认是否可以正常进入游戏。</li></ol><h3 id="方法二：调整网络配置"><a href="#方法二：调整网络配置" class="headerlink" title="方法二：调整网络配置"></a>方法二：调整网络配置</h3><p>若方法一无效，可尝试以下操作：</p><ol><li><p>按 <strong>Win+R</strong>，输入「ncpa.cpl」，回车进入网络适配器设置。</p></li><li><p>右键当前网络 →「属性」。</p></li><li><p>取消勾选「Internet 协议版本 6 (TCP&#x2F;IPv6)」。</p></li><li><p>双击「Internet 协议版本 4 (TCP&#x2F;IPv4)」，选择「使用下面的 DNS 服务器地址」，填写：</p><ul><li>首选 DNS：8.8.8.8</li><li>备用 DNS：8.8.4.4</li></ul></li><li><p>保存后，按 <strong>Win+R</strong> → 输入「cmd」，在命令行中执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ipconfig /flushdns<br></code></pre></td></tr></table></figure><p>刷新 DNS 缓存。</p></li><li><p>重新启动客户端，检查是否恢复正常。</p></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>WeGame</tag>
+      
+      <tag>英雄联盟</tag>
+      
+      <tag>LOL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Windows桌面美化教程</title>
     <link href="/windows-desktop-customization-translucenttb-nexus-rainmeter/"/>
     <url>/windows-desktop-customization-translucenttb-nexus-rainmeter/</url>
