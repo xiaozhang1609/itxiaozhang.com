@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-08-20T01:42:01.838Z</updated>
+  <updated>2025-08-20T15:45:34.956Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>批量新建文件夹的三种简便方法</title>
+    <link href="https://itxiaozhang.com/batch-create-folders/"/>
+    <id>https://itxiaozhang.com/batch-create-folders/</id>
+    <published>2025-08-20T15:19:53.000Z</published>
+    <updated>2025-08-20T15:45:34.956Z</updated>
+    
+    
+    <summary type="html">无论是职场中的部门文件管理，还是生活中的照片分类整理，批量创建都能让原本繁琐的流程变得简单高效。接下来，我们就来介绍三种简单方法，帮你彻底告别手动创建的重复劳动。</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="python" scheme="https://itxiaozhang.com/tags/python/"/>
+    
+    <category term="批量" scheme="https://itxiaozhang.com/tags/%E6%89%B9%E9%87%8F/"/>
+    
+    <category term="chatgpt" scheme="https://itxiaozhang.com/tags/chatgpt/"/>
+    
+  </entry>
   
   <entry>
     <title>穿越火线报错「ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能」解决方法</title>
@@ -482,27 +505,6 @@
     <category term="deadbydaylight" scheme="https://itxiaozhang.com/tags/deadbydaylight/"/>
     
     <category term="DirectX 11" scheme="https://itxiaozhang.com/tags/DirectX-11/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>河南8日旅游计划</title>
-    <link href="https://itxiaozhang.com/henan-8-day-itinerary-only-henan-shaolin-laojunshan/"/>
-    <id>https://itxiaozhang.com/henan-8-day-itinerary-only-henan-shaolin-laojunshan/</id>
-    <published>2025-05-26T16:52:16.000Z</published>
-    <updated>2025-06-22T04:53:23.453Z</updated>
-    
-    
-    <summary type="html">想去河南久矣，这次得偿所愿了。可惜时间太短，想去的地方太多了，又怕精力不够，尽量每天去一个地方吧。</summary>
-    
-    
-    
-    <category term="旅游" scheme="https://itxiaozhang.com/categories/%E6%97%85%E6%B8%B8/"/>
-    
-    
-    <category term="河南" scheme="https://itxiaozhang.com/tags/%E6%B2%B3%E5%8D%97/"/>
-    
-    <category term="旅游" scheme="https://itxiaozhang.com/tags/%E6%97%85%E6%B8%B8/"/>
     
   </entry>
   
