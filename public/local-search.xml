@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>穿越火线报错「ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能」解决方法</title>
+    <link href="/cf-ace-cpu-virtualization-error-fix/"/>
+    <url>/cf-ace-cpu-virtualization-error-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/cf-ace-cpu-virtualization-error-fix/">https://itxiaozhang.com/cf-ace-cpu-virtualization-error-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>打开《穿越火线》时，出现弹窗报错：<br>「ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能（CPU Virtualization Technology），请重启电脑后进入BIOS开启VT-X&#x2F;D或AMD-V。并关闭可能占用VT的相关软件或功能。」</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ul><li>系统文件可能存在损坏。</li><li>Windows 功能中虚拟化或 Hyper-V 设置异常。</li><li>第三方安全软件或内置的安全功能占用虚拟化。</li><li>BIOS 中虚拟化相关设置未正确开启。</li><li>启动项配置未关闭虚拟化冲突项。</li></ul><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>系统文件检查</strong></p><ul><li>以管理员身份运行命令提示符。</li><li>输入「sfc &#x2F;scannow」，等待系统文件扫描修复完成。</li></ul></li><li><p><strong>关闭 Hyper-V</strong></p><ul><li>按「Win + R」，输入「appwiz.cpl」。</li><li>打开「启用或关闭 Windows 功能」，找到「Hyper-V」相关选项，取消勾选，点击确定。</li></ul></li><li><p><strong>排查第三方软件</strong></p><ul><li>在「程序和功能」中检查是否有其他安全软件或虚拟化相关工具，若有则卸载或关闭。</li></ul></li><li><p><strong>关闭内存完整性</strong></p><ul><li>打开「Windows 安全中心」。</li><li>进入「设备安全性 → 内核隔离」，关闭「内存完整性」。</li></ul></li><li><p><strong>修改 BIOS 设置</strong></p><ul><li>重启进入 BIOS。</li><li>在「高级 → CPU 设置」中，确保「虚拟化（VT-x&#x2F;AMD-V）」已开启。</li><li>在「北桥」中，启用「VT-D」。</li><li>在「启动 → 安全系统菜单」中，将操作系统类型改为「Windows UEFI 模式」。</li><li>保存并退出，重启电脑。</li></ul></li><li><p><strong>关闭虚拟化启动项</strong></p><ul><li>以管理员身份运行命令提示符。</li><li>输入「bcdedit &#x2F;set hypervisorlaunchtype off」，回车确认。</li></ul></li><li><p><strong>修复游戏</strong></p><ul><li>系统重启后，右键游戏，选择「修复」。</li><li>重新进入游戏测试。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ACE安全中心</tag>
+      
+      <tag>BIOS</tag>
+      
+      <tag>穿越火线</tag>
+      
+      <tag>虚拟化报错</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《英雄联盟》客户端启动后无反应，仅显示 League of Legends LOGO 的解决办法</title>
     <link href="/league-of-legends-client-stuck-on-logo-fix/"/>
     <url>/league-of-legends-client-stuck-on-logo-fix/</url>
