@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>WeGame 多开卡死与「损坏的镜像」报错解决方法</title>
+    <link href="/wegame-multiclient-crash-damaged-image-fix/"/>
+    <url>/wegame-multiclient-crash-damaged-image-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/wegame-multiclient-crash-damaged-image-fix/">https://itxiaozhang.com/wegame-multiclient-crash-damaged-image-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ol><li><strong>多开问题</strong>：在 WeGame 中尝试「小号多开」时，界面卡死，一直转圈。</li><li><strong>启动报错</strong>：打开 WeGame 时提示「损坏的镜像」，点击确定后错误窗口不断弹出。</li></ol><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li><p><strong>多开问题</strong>：WeGame 启动进程中存在名为「TASLogin Application（32位）」的后台任务未被结束，导致多开失败。</p></li><li><p><strong>启动报错</strong>：</p><ul><li>系统可能存在病毒或木马程序影响。</li><li>系统文件出现损坏。</li><li>运行库不完整或异常。</li><li>WeGame 残留文件、注册表未清理干净。</li></ul></li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="针对多开问题"><a href="#针对多开问题" class="headerlink" title="针对多开问题"></a>针对多开问题</h3><ol><li>打开任务管理器。</li><li>在搜索栏输入「TAS」。</li><li>展开 WeGame 下的进程，找到「TASLogin Application（32位）」相关任务。</li><li>逐一结束这些进程。</li><li>返回 WeGame，重新登录即可。</li></ol><h3 id="针对「损坏的镜像」报错"><a href="#针对「损坏的镜像」报错" class="headerlink" title="针对「损坏的镜像」报错"></a>针对「损坏的镜像」报错</h3><ol><li><p><strong>查杀病毒</strong>：使用系统自带或第三方安全软件进行全盘查杀。</p></li><li><p><strong>修复系统文件</strong>：</p><ul><li>以管理员身份运行命令提示符。</li><li>输入「SFC &#x2F;SCANNOW」并执行，等待系统文件修复完成。</li></ul></li><li><p><strong>清理并重装运行库与 WeGame</strong>：</p><ul><li>卸载所有 Microsoft 运行库。</li><li>卸载 WeGame（建议使用 Geek 等工具彻底清理残留文件和注册表）。</li><li>从微软官网下载并重新安装 32 位与 64 位运行库。</li><li>重新安装 WeGame，建议自定义新安装路径。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运行库</tag>
+      
+      <tag>WeGame</tag>
+      
+      <tag>多开</tag>
+      
+      <tag>损坏的镜像</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>阿里云ECS部署HTTPS网站笔记</title>
     <link href="/aliyun-ecs-https-deployment-notes/"/>
     <url>/aliyun-ecs-https-deployment-notes/</url>
