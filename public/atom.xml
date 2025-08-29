@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-08-27T01:36:04.720Z</updated>
+  <updated>2025-08-29T10:07:00.264Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WeGame 打开提示「客户端正在升级 0%」的解决方法</title>
+    <link href="https://itxiaozhang.com/wegame-client-upgrade-0-percent-fix/"/>
+    <id>https://itxiaozhang.com/wegame-client-upgrade-0-percent-fix/</id>
+    <published>2025-08-29T10:05:38.000Z</published>
+    <updated>2025-08-29T10:07:00.264Z</updated>
+    
+    
+    <summary type="html">WeGame 启动时提示「客户端正在升级 0%」并卡死，原因多为系统文件损坏、网络异常或旧版本残留。通过系统修复、清理残留、调整网络配置并重装客户端即可解决。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="网络" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="WeGame" scheme="https://itxiaozhang.com/tags/WeGame/"/>
+    
+  </entry>
   
   <entry>
     <title>WeGame 多开卡死与「损坏的镜像」报错解决方法</title>
@@ -480,35 +501,6 @@
     <category term="BongoCat" scheme="https://itxiaozhang.com/tags/BongoCat/"/>
     
     <category term="Tauri" scheme="https://itxiaozhang.com/tags/Tauri/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>河南旅行游记</title>
-    <link href="https://itxiaozhang.com/henan-travel-diary/"/>
-    <id>https://itxiaozhang.com/henan-travel-diary/</id>
-    <published>2025-06-22T04:38:56.000Z</published>
-    <updated>2025-06-22T04:54:49.988Z</updated>
-    
-    
-    <summary type="html">2025年5月27日出发，为期八天的旅行，虽然和计划的有些出入，但也是一趟不错的体验。</summary>
-    
-    
-    
-    <category term="旅游" scheme="https://itxiaozhang.com/categories/%E6%97%85%E6%B8%B8/"/>
-    
-    
-    <category term="河南" scheme="https://itxiaozhang.com/tags/%E6%B2%B3%E5%8D%97/"/>
-    
-    <category term="少林寺" scheme="https://itxiaozhang.com/tags/%E5%B0%91%E6%9E%97%E5%AF%BA/"/>
-    
-    <category term="云台山" scheme="https://itxiaozhang.com/tags/%E4%BA%91%E5%8F%B0%E5%B1%B1/"/>
-    
-    <category term="龙门石窟" scheme="https://itxiaozhang.com/tags/%E9%BE%99%E9%97%A8%E7%9F%B3%E7%AA%9F/"/>
-    
-    <category term="河南博物院" scheme="https://itxiaozhang.com/tags/%E6%B2%B3%E5%8D%97%E5%8D%9A%E7%89%A9%E9%99%A2/"/>
-    
-    <category term="民宿" scheme="https://itxiaozhang.com/tags/%E6%B0%91%E5%AE%BF/"/>
     
   </entry>
   

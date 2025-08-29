@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>WeGame 打开提示「客户端正在升级 0%」的解决方法</title>
+    <link href="/wegame-client-upgrade-0-percent-fix/"/>
+    <url>/wegame-client-upgrade-0-percent-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/wegame-client-upgrade-0-percent-fix/">https://itxiaozhang.com/wegame-client-upgrade-0-percent-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>打开 WeGame 时，界面提示「客户端正在升级 0%」，并一直卡在该界面不动。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ul><li>系统文件可能存在损坏；</li><li>杀毒软件未及时清理病毒或残留文件；</li><li>WeGame 卸载不彻底，存在注册表残留；</li><li>网络配置（DNS&#x2F;IPv6）异常导致连接问题；</li><li>旧版本路径冲突引起安装失败。</li></ul><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li>以管理员身份运行命令提示符，输入「sfc &#x2F;scannow」并执行扫描修复；</li><li>使用自带或第三方杀毒软件进行全盘扫描；</li><li>下载并运行「Geek」卸载工具，彻底卸载 WeGame 并清理注册表；</li><li>打开「ncpa.cpl」，进入网络连接，取消 IPv6 选项，修改 IPv4 DNS 为「8.8.8.8」；</li><li>在命令提示符中输入「ipconfig &#x2F;flushdns」，刷新 DNS 缓存；</li><li>重新下载安装最新版 WeGame，安装路径建议与之前不同；</li><li>安装完成后，清理临时下载工具及文件。</li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网络</tag>
+      
+      <tag>WeGame</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WeGame 多开卡死与「损坏的镜像」报错解决方法</title>
     <link href="/wegame-multiclient-crash-damaged-image-fix/"/>
     <url>/wegame-multiclient-crash-damaged-image-fix/</url>
