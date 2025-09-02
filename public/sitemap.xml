@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://itxiaozhang.com/win10-11-bitlocker-disk-cannot-decrypt/</loc>
+    <loc>https://itxiaozhang.com/steam-mobile-authenticator-removal-tutorial/</loc>
     
     <lastmod>2025-09-02</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://itxiaozhang.com/prompt-vault/</loc>
+    
+    <lastmod>2025-09-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/win10-11-bitlocker-disk-cannot-decrypt/</loc>
     
     <lastmod>2025-09-02</lastmod>
     
@@ -3739,6 +3748,27 @@
   
   <url>
     <loc>https://itxiaozhang.com/tags/%E5%8A%A0%E5%AF%86/</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E6%89%8B%E6%9C%BA%E4%BB%A4%E7%89%8C/</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E8%B4%A6%E5%8F%B7%E6%81%A2%E5%A4%8D/</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E9%AA%8C%E8%AF%81%E5%99%A8%E4%B8%A2%E5%A4%B1/</loc>
     <lastmod>2025-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
