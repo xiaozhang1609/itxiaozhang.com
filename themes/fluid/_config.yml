@@ -356,7 +356,7 @@ navbar:
     #}
     #- { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     #- { key: "工具", link: "/tools/", icon: "iconfont briefcase icon-briefcase" }
-    - { key: "工具箱", link: "https://fixpc.cc", icon: "iconfont briefcase icon-briefcase" }
+    - { key: "工具箱", link: "https://zhang9.com", icon: "iconfont briefcase icon-briefcase" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 

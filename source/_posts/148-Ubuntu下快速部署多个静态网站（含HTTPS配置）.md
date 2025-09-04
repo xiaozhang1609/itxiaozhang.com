@@ -32,7 +32,7 @@ tags:
 
 # 配置区域 ====================
 DOMAINS=(
-    "fixpc.cc"
+    "zhang9.com"
     "itxiaozhang.com"
 )
 WEB_ROOT="/var/www/html"
