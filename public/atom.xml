@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-09-02T09:11:25.021Z</updated>
+  <updated>2025-09-04T11:58:55.720Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案</title>
+    <link href="https://itxiaozhang.com/colorful-g16-24-secure-boot-van9003-fix/"/>
+    <id>https://itxiaozhang.com/colorful-g16-24-secure-boot-van9003-fix/</id>
+    <published>2025-09-04T11:56:22.000Z</published>
+    <updated>2025-09-04T11:58:55.720Z</updated>
+    
+    
+    <summary type="html">笔记本在启动港服《瓦罗兰特》时出现 VAN9003 报错，需要启用 Secure Boot，但 BIOS 菜单被隐藏。通过官方 BIOS 升级包刷新 BIOS 并恢复默认设置后，可成功启用 Secure Boot，解决报错问题。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="VAN9003" scheme="https://itxiaozhang.com/tags/VAN9003/"/>
+    
+    <category term="Secure Boot" scheme="https://itxiaozhang.com/tags/Secure-Boot/"/>
+    
+    <category term="七彩虹" scheme="https://itxiaozhang.com/tags/%E4%B8%83%E5%BD%A9%E8%99%B9/"/>
+    
+    <category term="G16 24" scheme="https://itxiaozhang.com/tags/G16-24/"/>
+    
+    <category term="BIOS升级" scheme="https://itxiaozhang.com/tags/BIOS%E5%8D%87%E7%BA%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>Steam 手机令牌移除教程</title>
@@ -478,31 +505,6 @@
     <category term="进程管理" scheme="https://itxiaozhang.com/tags/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
     
     <category term="性能优化" scheme="https://itxiaozhang.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决「CPU Virtualization Technology 未开启或被占用」弹窗问题</title>
-    <link href="https://itxiaozhang.com/fix-cpu-virtualization-technology-popup-issue/"/>
-    <id>https://itxiaozhang.com/fix-cpu-virtualization-technology-popup-issue/</id>
-    <published>2025-06-27T14:24:29.000Z</published>
-    <updated>2025-07-02T06:51:22.172Z</updated>
-    
-    
-    <summary type="html">启动腾讯游戏时出现「ACE安全中心」虚拟化相关报错。本文汇总各大主板开启虚拟化设置方法，并提供关闭HVCI、VBS、Hyper-V等系统占用功能的详细步骤，帮助用户彻底排查并解决弹窗问题。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="腾讯" scheme="https://itxiaozhang.com/tags/%E8%85%BE%E8%AE%AF/"/>
-    
-    <category term="CPU虚拟化" scheme="https://itxiaozhang.com/tags/CPU%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
-    
-    <category term="BIOS" scheme="https://itxiaozhang.com/tags/BIOS/"/>
-    
-    <category term="VT-X" scheme="https://itxiaozhang.com/tags/VT-X/"/>
     
   </entry>
   
