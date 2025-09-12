@@ -16,26 +16,25 @@
   <meta name="author" content="小章">
   <meta name="keywords" content="">
   
-    <meta name="description" content="笔记本在启动港服《瓦罗兰特》时出现 VAN9003 报错，需要启用 Secure Boot，但 BIOS 菜单被隐藏。通过官方 BIOS 升级包刷新 BIOS 并恢复默认设置后，可成功启用 Secure Boot，解决报错问题。">
+    <meta name="description" content="电脑 C 盘和 D 盘同时爆满，主要原因是 Steam 游戏文件、无畏时刻录屏视频及重复文件堆积。本文结合实际案例，总结清理思路和操作步骤。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案">
-<meta property="og:url" content="https://itxiaozhang.com/colorful-g16-24-secure-boot-van9003-fix/index.html">
+<meta property="og:title" content="磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路">
+<meta property="og:url" content="https://itxiaozhang.com/disk-cleanup-case-c-d-drive-full-solution/index.html">
 <meta property="og:site_name" content="IT小章">
-<meta property="og:description" content="笔记本在启动港服《瓦罗兰特》时出现 VAN9003 报错，需要启用 Secure Boot，但 BIOS 菜单被隐藏。通过官方 BIOS 升级包刷新 BIOS 并恢复默认设置后，可成功启用 Secure Boot，解决报错问题。">
+<meta property="og:description" content="电脑 C 盘和 D 盘同时爆满，主要原因是 Steam 游戏文件、无畏时刻录屏视频及重复文件堆积。本文结合实际案例，总结清理思路和操作步骤。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-09-04T11:56:22.000Z">
-<meta property="article:modified_time" content="2025-09-04T11:58:55.720Z">
+<meta property="article:published_time" content="2025-09-12T12:07:46.000Z">
+<meta property="article:modified_time" content="2025-09-12T12:13:48.071Z">
 <meta property="article:author" content="小章">
-<meta property="article:tag" content="VAN9003">
-<meta property="article:tag" content="Secure Boot">
-<meta property="article:tag" content="七彩虹">
-<meta property="article:tag" content="G16 24">
-<meta property="article:tag" content="BIOS升级">
+<meta property="article:tag" content="C盘清理">
+<meta property="article:tag" content="Steam">
+<meta property="article:tag" content="磁盘清理">
+<meta property="article:tag" content="无畏时刻">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案 - IT小章</title>
+  <title>磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路 - IT小章</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -214,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案</span>
+            <span id="subtitle">磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路</span>
           
         </div>
 
@@ -225,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-09-04 19:56" pubdate>
-          2025年9月4日 晚上
+        <time datetime="2025-09-12 20:07" pubdate>
+          2025年9月12日 晚上
         </time>
       </span>
     
@@ -237,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          510 字
+          749 字
         
       </span>
     
@@ -248,7 +247,7 @@
         
         
         
-          5 分钟
+          7 分钟
         
       </span>
     
@@ -285,56 +284,63 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案</h1>
+            <h1 id="seo-header">磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>原文地址：<a href="https://itxiaozhang.com/colorful-g16-24-secure-boot-van9003-fix/">https://itxiaozhang.com/colorful-g16-24-secure-boot-van9003-fix/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p>
+<p>原文地址：<a href="https://itxiaozhang.com/disk-cleanup-case-c-d-drive-full-solution/">https://itxiaozhang.com/disk-cleanup-case-c-d-drive-full-solution/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p>
 </blockquote>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>七彩虹隐星 G16 24 笔记本在启动港服《瓦罗兰特》时出现报错：</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">VAN9003 This <span class="hljs-built_in">version</span> <span class="hljs-keyword">of</span> Vanguard requires secure boot <span class="hljs-built_in">to</span> be enabled <span class="hljs-keyword">in</span> order <span class="hljs-built_in">to</span> play. See <span class="hljs-keyword">the</span> Vanguard notification center <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> tray <span class="hljs-keyword">for</span> more details.<br></code></pre></td></tr></table></figure>
-
-<p>尝试在 BIOS 中开启 Secure Boot 时，又出现报错：</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">Secure boot can be enabled <span class="hljs-keyword">when</span> <span class="hljs-keyword">system</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">user</span> mode. Repeat operation <span class="hljs-keyword">after</span> enrolling platform key (PK)<br></code></pre></td></tr></table></figure>
-
-<p>同时，部分 BIOS 菜单被隐藏，无法直接修改 Secure Boot 设置。</p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>这台电脑的 <strong>C 盘与 D 盘空间已满</strong>，其中 D 盘已经完全爆满。通过工具扫描发现：</p>
+<ul>
+<li>D 盘主要被 <strong>Steam 游戏目录（steamapps\common 文件夹）</strong>以及部分大型游戏文件（如 CSGO、LOL）占用；</li>
+<li>C 盘主要被 <strong>AppData 文件夹下的缓存文件</strong>、<strong>无畏时刻录屏视频</strong>、电影文件及部分重复的游戏文件占用。</li>
+</ul>
 <h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol>
-<li>笔记本出厂设置下，部分高级 BIOS 菜单被隐藏，用户无法直接修改 Secure Boot 相关选项。</li>
-<li>BIOS 配置未处于用户模式（User Mode），导致启用 Secure Boot 时出现报错。</li>
-<li>官方 BIOS 升级包未安装或未正确操作，造成系统无法识别平台密钥（Platform Key，PK）。</li>
+<li><strong>Steam 游戏未彻底卸载</strong>：用户卸载游戏时操作不完整，或存在多个账号，导致游戏文件仍保留在「common」目录中。</li>
+<li><strong>视频与旧文件堆积</strong>：无畏时刻录屏视频、过期电影文件长期未清理，占用大量存储空间。</li>
+<li><strong>重复的游戏安装路径</strong>：Steam 在 C 盘与 D 盘均建立了库目录，导致相同或类似游戏文件重复存在。</li>
+<li><strong>系统使用时间过长</strong>：长期运行产生的软件缓存、临时文件累计，占用一定空间。</li>
 </ol>
+<blockquote>
+<p><strong>清理原则</strong>：优先找出并删除占用空间最大的文件和文件夹，避免浪费时间在小缓存上。</p>
+</blockquote>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol>
-<li><p><strong>准备工作</strong></p>
+<li><p><strong>下载安装工具</strong></p>
 <ul>
-<li>确认笔记本已连接电源适配器，避免中途关机或断电。</li>
-<li>下载官方提供的 BIOS 升级包：<a target="_blank" rel="noopener" href="https://nim.nosdn.127.net/MjYxNjUyODA=/bmltYV8yMjQ0OTM5MTMzMzhfMTc1Njk3MTQyMDc5Nl9iZjBiZWI4NS04OTNmLTRhMmEtODdhYy01NWZhMDk3NjM5OTg=?createTime=1756971426412&download=QP162.zip">QP162.zip</a>。</li>
+<li>打开 <a target="_blank" rel="noopener" href="https://zhang9.com/">章九工具箱</a>，下载 <strong>Geek Uninstaller</strong>（用于彻底卸载软件和游戏）；</li>
+<li>下载 <strong>SpaceSniffer</strong>（用于磁盘空间可视化分析）。</li>
 </ul>
 </li>
-<li><p><strong>升级 BIOS</strong></p>
+<li><p><strong>分析磁盘占用情况</strong></p>
 <ul>
-<li>在 Windows 中右击 <code>NLY_QP162.EXE</code>，选择「以管理员身份运行」。</li>
-<li>按照提示完成 BIOS 刷新操作。升级过程中不要重启或断电。</li>
+<li>打开 SpaceSniffer，分别扫描 C 盘与 D 盘；</li>
+<li>等待分析完成后，重点关注「common」目录、AppData 文件夹及其他大型文件夹。</li>
 </ul>
 </li>
-<li><p><strong>恢复默认设置</strong></p>
+<li><p><strong>清理 D 盘</strong></p>
 <ul>
-<li>升级完成后，进入 BIOS，点击「Restore to Default」恢复默认模式。</li>
-<li>保存并退出 BIOS，然后再次进入 BIOS。</li>
+<li>删除不再使用的 Steam 游戏文件（如 CSGO 等），这些文件位于「steamapps\common」目录；</li>
+<li>与用户确认不再需要的旧游戏，直接移除；</li>
+<li>保留仍在使用的游戏（如 LOL）。</li>
 </ul>
 </li>
-<li><p><strong>启用 Secure Boot</strong></p>
+<li><p><strong>清理 C 盘</strong></p>
 <ul>
-<li>在恢复默认设置后，Secure Boot 菜单将可修改。</li>
-<li>按照提示完成平台密钥（PK）的注册，启用 Secure Boot。</li>
-<li>保存并退出 BIOS，重启电脑后即可正常启动游戏。</li>
+<li>删除无畏时刻录屏文件及不必要的旧视频；</li>
+<li>移除不再观看的电影文件；</li>
+<li>删除未使用的游戏文件（如 CSGO、瓦罗兰特等）；</li>
+<li>保留仍需使用的软件和游戏；</li>
+<li>对于缓存文件，可暂时保留，因其占用空间相对较小。</li>
 </ul>
 </li>
-<li><p><strong>注意事项</strong></p>
+<li><p><strong>后续维护建议</strong></p>
 <ul>
-<li>升级 BIOS 存在一定风险，操作前请确保数据已备份。</li>
-<li>遵循官方操作指南，避免使用非官方工具或方法强制修改 BIOS。</li>
+<li>将新软件和文件优先安装或保存至 D 盘，避免 C 盘过度消耗；</li>
+<li>定期使用 SpaceSniffer 检查磁盘空间分布，及时清理无用文件；</li>
+<li>卸载游戏时使用 Geek Uninstaller，确保残留文件被彻底删除；</li>
+<li>对于 Steam 用户，可在设置中统一指定游戏安装目录，避免多盘冗余。</li>
 </ul>
 </li>
 </ol>
@@ -377,15 +383,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/VAN9003/" class="print-no-link">#VAN9003</a>
+        <a href="/tags/C%E7%9B%98%E6%B8%85%E7%90%86/" class="print-no-link">#C盘清理</a>
       
-        <a href="/tags/Secure-Boot/" class="print-no-link">#Secure Boot</a>
+        <a href="/tags/Steam/" class="print-no-link">#Steam</a>
       
-        <a href="/tags/%E4%B8%83%E5%BD%A9%E8%99%B9/" class="print-no-link">#七彩虹</a>
+        <a href="/tags/%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/" class="print-no-link">#磁盘清理</a>
       
-        <a href="/tags/G16-24/" class="print-no-link">#G16 24</a>
-      
-        <a href="/tags/BIOS%E5%8D%87%E7%BA%A7/" class="print-no-link">#BIOS升级</a>
+        <a href="/tags/%E6%97%A0%E7%95%8F%E6%97%B6%E5%88%BB/" class="print-no-link">#无畏时刻</a>
       
     </div>
   
@@ -397,8 +401,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案</div>
-      <div>https://itxiaozhang.com/colorful-g16-24-secure-boot-van9003-fix/</div>
+      <div>磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路</div>
+      <div>https://itxiaozhang.com/disk-cleanup-case-c-d-drive-full-solution/</div>
     </div>
     <div class="license-meta">
       
@@ -410,7 +414,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年9月4日</div>
+          <div>2025年9月12日</div>
         </div>
       
       
@@ -442,18 +446,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/disk-cleanup-case-c-d-drive-full-solution/" title="磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/steam-mobile-authenticator-removal-tutorial/" title="Steam 手机令牌移除教程">
-                        <span class="hidden-mobile">Steam 手机令牌移除教程</span>
+                      <a href="/colorful-g16-24-secure-boot-van9003-fix/" title="七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案">
+                        <span class="hidden-mobile">七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

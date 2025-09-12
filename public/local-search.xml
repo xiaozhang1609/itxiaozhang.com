@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路</title>
+    <link href="/disk-cleanup-case-c-d-drive-full-solution/"/>
+    <url>/disk-cleanup-case-c-d-drive-full-solution/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/disk-cleanup-case-c-d-drive-full-solution/">https://itxiaozhang.com/disk-cleanup-case-c-d-drive-full-solution/</a><br>本文配合视频食用效果最佳，视频版本在文章末尾。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>这台电脑的 <strong>C 盘与 D 盘空间已满</strong>，其中 D 盘已经完全爆满。通过工具扫描发现：</p><ul><li>D 盘主要被 <strong>Steam 游戏目录（steamapps\common 文件夹）</strong>以及部分大型游戏文件（如 CSGO、LOL）占用；</li><li>C 盘主要被 <strong>AppData 文件夹下的缓存文件</strong>、<strong>无畏时刻录屏视频</strong>、电影文件及部分重复的游戏文件占用。</li></ul><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li><strong>Steam 游戏未彻底卸载</strong>：用户卸载游戏时操作不完整，或存在多个账号，导致游戏文件仍保留在「common」目录中。</li><li><strong>视频与旧文件堆积</strong>：无畏时刻录屏视频、过期电影文件长期未清理，占用大量存储空间。</li><li><strong>重复的游戏安装路径</strong>：Steam 在 C 盘与 D 盘均建立了库目录，导致相同或类似游戏文件重复存在。</li><li><strong>系统使用时间过长</strong>：长期运行产生的软件缓存、临时文件累计，占用一定空间。</li></ol><blockquote><p><strong>清理原则</strong>：优先找出并删除占用空间最大的文件和文件夹，避免浪费时间在小缓存上。</p></blockquote><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>下载安装工具</strong></p><ul><li>打开 <a href="https://zhang9.com/">章九工具箱</a>，下载 <strong>Geek Uninstaller</strong>（用于彻底卸载软件和游戏）；</li><li>下载 <strong>SpaceSniffer</strong>（用于磁盘空间可视化分析）。</li></ul></li><li><p><strong>分析磁盘占用情况</strong></p><ul><li>打开 SpaceSniffer，分别扫描 C 盘与 D 盘；</li><li>等待分析完成后，重点关注「common」目录、AppData 文件夹及其他大型文件夹。</li></ul></li><li><p><strong>清理 D 盘</strong></p><ul><li>删除不再使用的 Steam 游戏文件（如 CSGO 等），这些文件位于「steamapps\common」目录；</li><li>与用户确认不再需要的旧游戏，直接移除；</li><li>保留仍在使用的游戏（如 LOL）。</li></ul></li><li><p><strong>清理 C 盘</strong></p><ul><li>删除无畏时刻录屏文件及不必要的旧视频；</li><li>移除不再观看的电影文件；</li><li>删除未使用的游戏文件（如 CSGO、瓦罗兰特等）；</li><li>保留仍需使用的软件和游戏；</li><li>对于缓存文件，可暂时保留，因其占用空间相对较小。</li></ul></li><li><p><strong>后续维护建议</strong></p><ul><li>将新软件和文件优先安装或保存至 D 盘，避免 C 盘过度消耗；</li><li>定期使用 SpaceSniffer 检查磁盘空间分布，及时清理无用文件；</li><li>卸载游戏时使用 Geek Uninstaller，确保残留文件被彻底删除；</li><li>对于 Steam 用户，可在设置中统一指定游戏安装目录，避免多盘冗余。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 可以在<a href="https://itxiaozhang.com/about/">关于</a>或者<a href="https://itxiaozhang.com/about-computer-repair-services-with-me/">这篇文章</a>找到我的联系方式。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C盘清理</tag>
+      
+      <tag>Steam</tag>
+      
+      <tag>磁盘清理</tag>
+      
+      <tag>无畏时刻</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案</title>
     <link href="/colorful-g16-24-secure-boot-van9003-fix/"/>
     <url>/colorful-g16-24-secure-boot-van9003-fix/</url>
