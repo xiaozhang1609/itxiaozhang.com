@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-09-15T01:44:16.670Z</updated>
+  <updated>2025-09-15T01:50:30.367Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://itxiaozhang.com/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/"/>
     <id>https://itxiaozhang.com/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/</id>
     <published>2025-09-15T01:31:16.000Z</published>
-    <updated>2025-09-15T01:44:16.670Z</updated>
+    <updated>2025-09-15T01:50:30.367Z</updated>
     
     
     <summary type="html">文介绍了一个专业的HMDB代谢物信息批量获取工具，该工具支持双离子模式、灵活的Da/PPM误差计算、智能缓存机制和并发处理。通过Python实现，具备企业级稳定性和用户友好的配置界面，为代谢组学研究提供高效的数据获取和代谢物注释解决方案，显著提升科研效率。</summary>
