@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-09-15T01:50:30.367Z</updated>
+  <updated>2025-09-19T02:12:19.453Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微软运行库官方下载合集：VC++、.NET、DirectX 全版本链接整理</title>
+    <link href="https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/"/>
+    <id>https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/</id>
+    <published>2025-09-19T02:07:54.000Z</published>
+    <updated>2025-09-19T02:12:19.453Z</updated>
+    
+    
+    <summary type="html">本文汇总微软官方运行库下载地址，包括 Visual C++ Redistributable、.NET Framework、DirectX 及 .NET Runtime，提供各版本直达链接，方便开发者与系统管理员快速获取所需组件。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="微软运行库" scheme="https://itxiaozhang.com/tags/%E5%BE%AE%E8%BD%AF%E8%BF%90%E8%A1%8C%E5%BA%93/"/>
+    
+    <category term="Visual C++ Redistributable" scheme="https://itxiaozhang.com/tags/Visual-C-Redistributable/"/>
+    
+    <category term=".NET Framework" scheme="https://itxiaozhang.com/tags/NET-Framework/"/>
+    
+    <category term="DirectX Runtime" scheme="https://itxiaozhang.com/tags/DirectX-Runtime/"/>
+    
+  </entry>
   
   <entry>
     <title>HMDB代谢物信息批量获取工具：支持PPM误差计算的Python代谢组学数据提取解决方案</title>
@@ -476,35 +501,6 @@
     <category term="HMDB" scheme="https://itxiaozhang.com/tags/HMDB/"/>
     
     <category term="网络爬虫" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无畏契约CPU虚拟化报错：您的电脑未开启或有其他软件占用CPU虚拟化功能</title>
-    <link href="https://itxiaozhang.com/valorant-cpu-virtualization-error-fix/"/>
-    <id>https://itxiaozhang.com/valorant-cpu-virtualization-error-fix/</id>
-    <published>2025-07-13T04:17:06.000Z</published>
-    <updated>2025-07-13T04:23:48.441Z</updated>
-    
-    
-    <summary type="html">启动《无畏契约》时出现ACE安全中心报错，提示未开启或被占用CPU虚拟化功能。本文提供系统设置、BIOS配置及游戏修复等完整解决方案。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="ACE安全中心" scheme="https://itxiaozhang.com/tags/ACE%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83/"/>
-    
-    <category term="无畏契约" scheme="https://itxiaozhang.com/tags/%E6%97%A0%E7%95%8F%E5%A5%91%E7%BA%A6/"/>
-    
-    <category term="CPU虚拟化" scheme="https://itxiaozhang.com/tags/CPU%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
-    
-    <category term="BIOS" scheme="https://itxiaozhang.com/tags/BIOS/"/>
-    
-    <category term="VT" scheme="https://itxiaozhang.com/tags/VT/"/>
-    
-    <category term="VD" scheme="https://itxiaozhang.com/tags/VD/"/>
     
   </entry>
   
