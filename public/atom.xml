@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-09-19T02:12:19.453Z</updated>
+  <updated>2025-09-19T05:27:57.294Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>装甲红锋报错「文件未找到(d3dcompiler_43.dll)」的解决方法</title>
+    <link href="https://itxiaozhang.com/fix-armored-red-bee-d3dcompiler-43-dll-error/"/>
+    <id>https://itxiaozhang.com/fix-armored-red-bee-d3dcompiler-43-dll-error/</id>
+    <published>2025-09-19T05:26:52.000Z</published>
+    <updated>2025-09-19T05:27:57.294Z</updated>
+    
+    
+    <summary type="html">装甲红锋启动时报错「文件未找到(d3dcompiler_43.dll)」，通过卸载旧运行库、下载并安装最新 VC++、.NET、DirectX 运行库，再修复 WeGame，可解决问题。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="WeGame" scheme="https://itxiaozhang.com/tags/WeGame/"/>
+    
+    <category term="装甲红锋" scheme="https://itxiaozhang.com/tags/%E8%A3%85%E7%94%B2%E7%BA%A2%E9%94%8B/"/>
+    
+    <category term="d3dcompiler_43.dll" scheme="https://itxiaozhang.com/tags/d3dcompiler-43-dll/"/>
+    
+  </entry>
   
   <entry>
     <title>微软运行库官方下载合集：VC++、.NET、DirectX 全版本链接整理</title>
@@ -478,29 +501,6 @@
     <category term="游戏问题" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/"/>
     
     <category term="三角洲" scheme="https://itxiaozhang.com/tags/%E4%B8%89%E8%A7%92%E6%B4%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HMDB数据库爬虫案例：一个高效、自动化的Python爬虫脚本</title>
-    <link href="https://itxiaozhang.com/hmdb-database-crawler-case-study-efficient-automated-python-script/"/>
-    <id>https://itxiaozhang.com/hmdb-database-crawler-case-study-efficient-automated-python-script/</id>
-    <published>2025-07-13T10:48:58.000Z</published>
-    <updated>2025-07-13T10:55:52.411Z</updated>
-    
-    
-    <summary type="html">本文介绍一个强大的Python爬虫脚本，能自动从HMDB网站批量抓取代谢物信息。它支持多线程、缓存和断点续传，极大提升科研数据获取效率。</summary>
-    
-    
-    
-    <category term="编程开发" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="Python" scheme="https://itxiaozhang.com/tags/Python/"/>
-    
-    <category term="HMDB" scheme="https://itxiaozhang.com/tags/HMDB/"/>
-    
-    <category term="网络爬虫" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
