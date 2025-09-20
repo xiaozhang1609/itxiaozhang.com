@@ -15,35 +15,55 @@ tags:
 > 原文地址：<https://itxiaozhang.com/windows-desktop-customization-translucenttb-nexus-rainmeter/>  
 > 本文配合视频食用效果最佳，视频版本在文章末尾。
 
+## 成品展示
+
+![桌面效果1](https://s21.ax1x.com/2025/09/20/pV4M56g.jpg)
+![桌面效果2](https://s21.ax1x.com/2025/09/20/pV4M41S.jpg)
+![桌面效果3](https://s21.ax1x.com/2025/09/20/pV4Mhp8.png)
+![桌面效果4](https://s21.ax1x.com/2025/09/20/pV4MRtP.jpg)
+![桌面效果5](https://s21.ax1x.com/2025/09/20/pV4M2kt.jpg)
+
+---
+
 ## 桌面美化教程概述
 
-本教程介绍如何在Windows系统中，通过第三方工具实现任务栏透明、添加Dock栏以及时间与音乐条等美化效果。
+本教程介绍如何在 Windows 系统中，通过第三方工具实现任务栏透明、添加 Dock 栏以及时间与音乐条等美化效果。
+
+---
 
 ## 美化思路
 
-Windows自带的桌面个性化功能较为有限，无法直接实现透明任务栏、自定义Dock栏以及个性化信息显示，因此需要借助专业的美化软件来完成。
+Windows 自带的桌面个性化功能较为有限，无法直接实现透明任务栏、自定义 Dock 栏以及个性化信息显示，因此需要借助专业美化软件来完成。
+
+---
 
 ## 美化步骤
 
-1. **任务栏透明化**
+### 1. 任务栏透明化
 
-   * 打开微软应用商店搜索并安装 [translucentTB](https://apps.microsoft.com/detail/9pf4kz2vn4w9)。
-   * 安装完成后运行，即可让任务栏呈现透明或半透明效果。
+1. 打开微软应用商店，搜索并安装 [TranslucentTB](https://apps.microsoft.com/detail/9pf4kz2vn4w9)。
+2. 安装完成后运行，即可让任务栏呈现透明或半透明效果。
 
-2. **添加Dock栏**
+---
 
-   * 从 [Winstep Nexus官网](https://www.winstep.net/nexus.asp) 或常用软件下载站下载「Nexus」。
-   * 安装后可自由设置Dock栏位置、图标样式和快捷方式，实现快速启动与桌面美化。
+### 2. 添加 Dock 栏
 
-3. **添加时间与音乐条**
+1. 从 [Winstep Nexus 官网](https://www.winstep.net/nexus.asp) 或常用软件下载站下载「Nexus」。
+2. 安装后可自由设置 Dock 栏位置、图标样式和快捷方式，实现快速启动与桌面美化。
 
-   * 从 [Rainmeter官网](https://www.rainmeter.net/) 下载并安装「雨滴」插件。
-   * 打开皮肤管理器，根据需要卸载、替换或加载皮肤。
-   * 推荐皮肤：
+---
 
-     * [Qualico](https://zhutix.com/skins/qualico/)
-     * [Mountains Modified CL](https://zhutix.com/skins/mountains-modified-cl/)
-   * 可通过[致美化](https://zhutix.com)等网站获取更多精美皮肤，按喜好下载并应用。
+### 3. 添加时间与音乐条
+
+1. 从 [Rainmeter 官网](https://www.rainmeter.net/) 下载并安装「雨滴」插件。
+2. 打开皮肤管理器，根据需要卸载、替换或加载皮肤。
+
+#### 推荐皮肤
+
+* [Qualico](https://zhutix.com/skins/qualico/)
+* [Mountains Modified CL](https://zhutix.com/skins/mountains-modified-cl/)
+
+3. 可通过 [致美化](https://zhutix.com) 等网站获取更多精美皮肤，按喜好下载并应用。
 
 ## 视频版本
 
