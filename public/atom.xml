@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-09-19T05:27:57.294Z</updated>
+  <updated>2025-09-21T10:26:41.453Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5E平台CSGO报错：反作弊异常提示需开启VT-d与IOMMU的解决方法</title>
+    <link href="https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/"/>
+    <id>https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/</id>
+    <published>2025-09-21T10:22:48.000Z</published>
+    <updated>2025-09-21T10:26:41.453Z</updated>
+    
+    
+    <summary type="html">本文归案总结了5E平台运行CSGO时出现「反作弊异常，需开启VT-d或IOMMU」的完整解决方案，涵盖系统修复、关闭Hyper-V与内存完整性、禁用hypervisor引导，以及在BIOS中开启虚拟化功能等步骤，帮助用户快速排障。</summary>
+    
+    
+    
+    
+    <category term="ACE" scheme="https://itxiaozhang.com/tags/ACE/"/>
+    
+    <category term="BIOS" scheme="https://itxiaozhang.com/tags/BIOS/"/>
+    
+    <category term="5E平台" scheme="https://itxiaozhang.com/tags/5E%E5%B9%B3%E5%8F%B0/"/>
+    
+    <category term="CSGO报错" scheme="https://itxiaozhang.com/tags/CSGO%E6%8A%A5%E9%94%99/"/>
+    
+    <category term="反作弊" scheme="https://itxiaozhang.com/tags/%E5%8F%8D%E4%BD%9C%E5%BC%8A/"/>
+    
+    <category term="虚拟化" scheme="https://itxiaozhang.com/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+    <category term="VTD" scheme="https://itxiaozhang.com/tags/VTD/"/>
+    
+    <category term="iommu" scheme="https://itxiaozhang.com/tags/iommu/"/>
+    
+  </entry>
   
   <entry>
     <title>装甲红锋报错「文件未找到(d3dcompiler_43.dll)」的解决方法</title>
@@ -478,29 +509,6 @@
     <category term="暗区突围" scheme="https://itxiaozhang.com/tags/%E6%9A%97%E5%8C%BA%E7%AA%81%E5%9B%B4/"/>
     
     <category term="CPU虚拟化" scheme="https://itxiaozhang.com/tags/CPU%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三角洲行动报错：The path &#39;{Path}&#39; cannot be found. 的解决方法</title>
-    <link href="https://itxiaozhang.com/fix-the-path-cannot-be-found-error-delta-force/"/>
-    <id>https://itxiaozhang.com/fix-the-path-cannot-be-found-error-delta-force/</id>
-    <published>2025-07-22T07:50:25.000Z</published>
-    <updated>2025-07-22T07:51:52.006Z</updated>
-    
-    
-    <summary type="html">本文针对「三角洲行动」运行或修复时出现「The path &#39;{Path}&#39; cannot be found.」报错，提供完整清理和修复步骤，适用于常见安装路径丢失问题。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="运行库" scheme="https://itxiaozhang.com/tags/%E8%BF%90%E8%A1%8C%E5%BA%93/"/>
-    
-    <category term="游戏问题" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/"/>
-    
-    <category term="三角洲" scheme="https://itxiaozhang.com/tags/%E4%B8%89%E8%A7%92%E6%B4%B2/"/>
     
   </entry>
   
