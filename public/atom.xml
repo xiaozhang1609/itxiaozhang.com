@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-09-21T10:26:41.453Z</updated>
+  <updated>2025-09-21T12:18:28.036Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/"/>
     <id>https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/</id>
     <published>2025-09-21T10:22:48.000Z</published>
-    <updated>2025-09-21T10:26:41.453Z</updated>
+    <updated>2025-09-21T12:18:28.036Z</updated>
     
     
-    <summary type="html">本文归案总结了5E平台运行CSGO时出现「反作弊异常，需开启VT-d或IOMMU」的完整解决方案，涵盖系统修复、关闭Hyper-V与内存完整性、禁用hypervisor引导，以及在BIOS中开启虚拟化功能等步骤，帮助用户快速排障。</summary>
+    <summary type="html">本文归纳总结了5E平台运行CSGO时出现「反作弊异常，需开启VT-d或IOMMU」的完整解决方案，涵盖系统修复、关闭Hyper-V与内存完整性、禁用hypervisor引导，以及在BIOS中开启虚拟化功能等步骤，帮助用户快速排障。</summary>
     
     
     
@@ -52,7 +52,7 @@
     <link href="https://itxiaozhang.com/fix-armored-red-bee-d3dcompiler-43-dll-error/"/>
     <id>https://itxiaozhang.com/fix-armored-red-bee-d3dcompiler-43-dll-error/</id>
     <published>2025-09-19T05:26:52.000Z</published>
-    <updated>2025-09-19T05:27:57.294Z</updated>
+    <updated>2025-09-21T12:18:28.961Z</updated>
     
     
     <summary type="html">装甲红锋启动时报错「文件未找到(d3dcompiler_43.dll)」，通过卸载旧运行库、下载并安装最新 VC++、.NET、DirectX 运行库，再修复 WeGame，可解决问题。</summary>
@@ -75,7 +75,7 @@
     <link href="https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/"/>
     <id>https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/</id>
     <published>2025-09-19T02:07:54.000Z</published>
-    <updated>2025-09-19T02:12:19.453Z</updated>
+    <updated>2025-09-21T12:18:28.957Z</updated>
     
     
     <summary type="html">本文汇总微软官方运行库下载地址，包括 Visual C++ Redistributable、.NET Framework、DirectX 及 .NET Runtime，提供各版本直达链接，方便开发者与系统管理员快速获取所需组件。</summary>
@@ -100,7 +100,7 @@
     <link href="https://itxiaozhang.com/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/"/>
     <id>https://itxiaozhang.com/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/</id>
     <published>2025-09-15T01:31:16.000Z</published>
-    <updated>2025-09-15T01:50:30.367Z</updated>
+    <updated>2025-09-21T12:18:28.532Z</updated>
     
     
     <summary type="html">文介绍了一个专业的HMDB代谢物信息批量获取工具，该工具支持双离子模式、灵活的Da/PPM误差计算、智能缓存机制和并发处理。通过Python实现，具备企业级稳定性和用户友好的配置界面，为代谢组学研究提供高效的数据获取和代谢物注释解决方案，显著提升科研效率。</summary>
@@ -125,7 +125,7 @@
     <link href="https://itxiaozhang.com/disk-cleanup-case-c-d-drive-full-solution/"/>
     <id>https://itxiaozhang.com/disk-cleanup-case-c-d-drive-full-solution/</id>
     <published>2025-09-12T12:07:46.000Z</published>
-    <updated>2025-09-12T12:13:48.071Z</updated>
+    <updated>2025-09-21T12:18:28.953Z</updated>
     
     
     <summary type="html">电脑 C 盘和 D 盘同时爆满，主要原因是 Steam 游戏文件、无畏时刻录屏视频及重复文件堆积。本文结合实际案例，总结清理思路和操作步骤。</summary>
@@ -150,7 +150,7 @@
     <link href="https://itxiaozhang.com/colorful-g16-24-secure-boot-van9003-fix/"/>
     <id>https://itxiaozhang.com/colorful-g16-24-secure-boot-van9003-fix/</id>
     <published>2025-09-04T11:56:22.000Z</published>
-    <updated>2025-09-04T11:58:55.720Z</updated>
+    <updated>2025-09-21T12:18:28.968Z</updated>
     
     
     <summary type="html">笔记本在启动港服《瓦罗兰特》时出现 VAN9003 报错，需要启用 Secure Boot，但 BIOS 菜单被隐藏。通过官方 BIOS 升级包刷新 BIOS 并恢复默认设置后，可成功启用 Secure Boot，解决报错问题。</summary>
@@ -177,7 +177,7 @@
     <link href="https://itxiaozhang.com/steam-mobile-authenticator-removal-tutorial/"/>
     <id>https://itxiaozhang.com/steam-mobile-authenticator-removal-tutorial/</id>
     <published>2025-09-02T06:01:55.000Z</published>
-    <updated>2025-09-02T09:11:25.021Z</updated>
+    <updated>2025-09-21T12:18:28.938Z</updated>
     
     
     <summary type="html">如果你的 Steam 手机令牌验证器（Steam Guard Mobile Authenticator） 丢失了，比如手机坏了、换号码了、恢复码没保存等，本教程将一步步教你如何安全地恢复账号。</summary>
@@ -202,7 +202,7 @@
     <link href="https://itxiaozhang.com/win10-11-bitlocker-disk-cannot-decrypt/"/>
     <id>https://itxiaozhang.com/win10-11-bitlocker-disk-cannot-decrypt/</id>
     <published>2025-09-02T05:37:33.000Z</published>
-    <updated>2025-09-02T05:43:28.844Z</updated>
+    <updated>2025-09-21T12:18:28.939Z</updated>
     
     
     <summary type="html">Windows 10/11 系统磁盘启用 BitLocker 后加密暂停导致无法解密，本文提供管理员命令操作步骤，恢复加密并完成解密。</summary>
@@ -227,7 +227,7 @@
     <link href="https://itxiaozhang.com/wegame-client-upgrade-0-percent-fix/"/>
     <id>https://itxiaozhang.com/wegame-client-upgrade-0-percent-fix/</id>
     <published>2025-08-29T10:05:38.000Z</published>
-    <updated>2025-08-29T10:07:00.264Z</updated>
+    <updated>2025-09-21T12:18:28.980Z</updated>
     
     
     <summary type="html">WeGame 启动时提示「客户端正在升级 0%」并卡死，原因多为系统文件损坏、网络异常或旧版本残留。通过系统修复、清理残留、调整网络配置并重装客户端即可解决。</summary>
@@ -248,7 +248,7 @@
     <link href="https://itxiaozhang.com/wegame-multiclient-crash-damaged-image-fix/"/>
     <id>https://itxiaozhang.com/wegame-multiclient-crash-damaged-image-fix/</id>
     <published>2025-08-27T01:34:40.000Z</published>
-    <updated>2025-08-27T01:36:04.720Z</updated>
+    <updated>2025-09-21T12:18:28.939Z</updated>
     
     
     <summary type="html">本文介绍了 WeGame 常见的两个问题：「TASLogin Application（32位）」导致的多开卡死，以及启动时报错「损坏的镜像」的原因与解决步骤，帮助用户快速恢复正常使用。</summary>
@@ -273,7 +273,7 @@
     <link href="https://itxiaozhang.com/aliyun-ecs-https-deployment-notes/"/>
     <id>https://itxiaozhang.com/aliyun-ecs-https-deployment-notes/</id>
     <published>2025-08-26T10:57:46.000Z</published>
-    <updated>2025-08-26T11:04:31.493Z</updated>
+    <updated>2025-09-21T12:18:28.957Z</updated>
     
     
     <summary type="html">本文记录了在阿里云ECS上部署HTTPS网站的全过程，包括环境准备、网页与证书上传、Nginx配置、验证及常见故障排查。</summary>
@@ -300,7 +300,7 @@
     <link href="https://itxiaozhang.com/wegame-update-failed-restart-or-download-new-version/"/>
     <id>https://itxiaozhang.com/wegame-update-failed-restart-or-download-new-version/</id>
     <published>2025-08-24T10:49:59.000Z</published>
-    <updated>2025-08-24T10:52:09.662Z</updated>
+    <updated>2025-09-21T12:18:28.969Z</updated>
     
     
     <summary type="html">WeGame启动时提示「更新失败，请尝试重启或者下载新版本」。问题原因多为旧版本残留、异常服务或网络配置错误。通过卸载旧版本、优化系统和网络设置，并自定义安装最新版，即可解决。</summary>
@@ -325,7 +325,7 @@
     <link href="https://itxiaozhang.com/batch-create-folders/"/>
     <id>https://itxiaozhang.com/batch-create-folders/</id>
     <published>2025-08-20T15:19:53.000Z</published>
-    <updated>2025-08-22T01:47:25.427Z</updated>
+    <updated>2025-09-21T12:18:28.957Z</updated>
     
     
     <summary type="html">本文介绍三种批量创建新文件夹的方法：巧妙高效的 ChatGPT 技巧、便捷实用的在线工具，以及功能强大的 Python 脚本。</summary>
@@ -348,7 +348,7 @@
     <link href="https://itxiaozhang.com/cf-ace-cpu-virtualization-error-fix/"/>
     <id>https://itxiaozhang.com/cf-ace-cpu-virtualization-error-fix/</id>
     <published>2025-08-20T01:39:33.000Z</published>
-    <updated>2025-08-20T01:42:01.838Z</updated>
+    <updated>2025-09-21T12:18:28.954Z</updated>
     
     
     <summary type="html">本文介绍了穿越火线运行时出现「ACE安全中心」虚拟化报错的原因，并提供了从系统修复、关闭 Hyper-V、调整 BIOS 设置到修复游戏的完整解决方案。</summary>
@@ -373,7 +373,7 @@
     <link href="https://itxiaozhang.com/league-of-legends-client-stuck-on-logo-fix/"/>
     <id>https://itxiaozhang.com/league-of-legends-client-stuck-on-logo-fix/</id>
     <published>2025-08-18T01:59:42.000Z</published>
-    <updated>2025-08-18T02:00:53.205Z</updated>
+    <updated>2025-09-21T12:18:28.940Z</updated>
     
     
     <summary type="html">本文介绍了《英雄联盟》客户端卡在 LOGO 界面无法进入的常见原因，并提供了两种解决方法：修改游戏目录名称和调整网络配置。</summary>
@@ -396,7 +396,7 @@
     <link href="https://itxiaozhang.com/windows-desktop-customization-translucenttb-nexus-rainmeter/"/>
     <id>https://itxiaozhang.com/windows-desktop-customization-translucenttb-nexus-rainmeter/</id>
     <published>2025-08-15T07:00:59.000Z</published>
-    <updated>2025-09-20T05:54:40.744Z</updated>
+    <updated>2025-09-21T12:18:28.036Z</updated>
     
     
     <summary type="html">本教程介绍如何使用translucentTB、Nexus和Rainmeter三款工具，让Windows桌面实现任务栏透明、添加Dock栏及个性化时间音乐条。</summary>
@@ -421,7 +421,7 @@
     <link href="https://itxiaozhang.com/wegame-login-timeout-7610001-fix/"/>
     <id>https://itxiaozhang.com/wegame-login-timeout-7610001-fix/</id>
     <published>2025-08-13T13:46:03.000Z</published>
-    <updated>2025-08-13T13:49:08.762Z</updated>
+    <updated>2025-09-21T12:18:28.036Z</updated>
     
     
     <summary type="html">WeGame 登录时报「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」。建议依次排查：临时关闭防火墙并放行WeGame、卸载可疑第三方安全/网络控制软件、禁用IPv6并更换DNS（如8.8.8.8）、刷新DNS并运行客户端修复程序，通常可恢复登录。</summary>
@@ -446,7 +446,7 @@
     <link href="https://itxiaozhang.com/valorant-van9003-secure-boot-tpm2-fix/"/>
     <id>https://itxiaozhang.com/valorant-van9003-secure-boot-tpm2-fix/</id>
     <published>2025-08-08T03:46:50.000Z</published>
-    <updated>2025-08-08T03:49:07.821Z</updated>
+    <updated>2025-09-21T12:18:28.036Z</updated>
     
     
     <summary type="html">本文介绍港服《瓦罗兰特》启动时报错 VAN9003 的原因，涵盖 Secure Boot 与 TPM 2.0 的启用方法，帮助用户快速恢复游戏正常运行。</summary>
@@ -471,7 +471,7 @@
     <link href="https://itxiaozhang.com/delta-operations-ace-security-center-cpu-virtualization-error-hk-tw-cn/"/>
     <id>https://itxiaozhang.com/delta-operations-ace-security-center-cpu-virtualization-error-hk-tw-cn/</id>
     <published>2025-08-02T07:45:51.000Z</published>
-    <updated>2025-08-02T07:48:22.382Z</updated>
+    <updated>2025-09-21T12:18:28.952Z</updated>
     
     
     <summary type="html">本文针对港澳台玩家在国服《三角洲行动》遇到的ACE安全中心及CPU虚拟化报错问题，分析原因并详细介绍“二次重启法”及BIOS设置，帮助解决反作弊加载失败和虚拟化冲突，保证游戏顺利运行。</summary>
@@ -494,7 +494,7 @@
     <link href="https://itxiaozhang.com/dark-zone-ace-cpu-virtualization-error-fix/"/>
     <id>https://itxiaozhang.com/dark-zone-ace-cpu-virtualization-error-fix/</id>
     <published>2025-07-30T03:11:24.000Z</published>
-    <updated>2025-07-30T03:13:07.968Z</updated>
+    <updated>2025-09-21T12:18:28.967Z</updated>
     
     
     <summary type="html">《暗区突围》启动时报错「ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能」，本文提供系统设置及 BIOS 操作的完整解决方案。</summary>

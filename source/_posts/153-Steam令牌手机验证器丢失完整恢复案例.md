@@ -11,7 +11,7 @@ tags:
 ---
 
 > 原文地址：<https://itxiaozhang.com/steam-token-mobile-verifier-loss-recovery-case/>  
-> 本文配合视频食用效果最佳，视频版本在文章末尾。
+> 远程修电脑，请访问 [章九工具箱](https://zhang9.com/)，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。 
 
 ---
 
@@ -113,6 +113,6 @@ Please assist in removing the Steam mobile token. Thank you!
 - [YouTube](https://www.youtube.com/@itxiaozhang)
 
 ---
-▶ 可以在[关于](https://itxiaozhang.com/about/)或者[这篇文章](https://itxiaozhang.com/about-computer-repair-services-with-me/)找到我的联系方式。
+▶ 远程修电脑，请访问 [章九工具箱](https://zhang9.com/)，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。 
 ▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。  
 ▶ **我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。**  

@@ -12,7 +12,7 @@ tags:
 
 
 > 原文地址：<https://itxiaozhang.com/rss-reader-recommendation-follow/>  
-> 本文配合视频食用效果最佳，视频版本在文章末尾。
+> 远程修电脑，请访问 [章九工具箱](https://zhang9.com/)，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。 
 
 ## 什么是RSS
 
