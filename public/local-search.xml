@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>注册表权限不足导致 Visual C++ 安装失败及解决方法</title>
+    <link href="/fix-visual-cpp-error-1402-registry-permission/"/>
+    <url>/fix-visual-cpp-error-1402-registry-permission/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/fix-visual-cpp-error-1402-registry-permission/">https://itxiaozhang.com/fix-visual-cpp-error-1402-registry-permission/</a><br>远程修电脑，请访问 <a href="https://zhang9.com/">章九工具箱</a>，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>安装运行库时出现报错：<br>「Product: Microsoft Visual C++ [版本号] Redistributable - [具体版本号] Error 1402. Could not open key: UNKNOWN\Components[GUID][子键]. System error 5.」</p><p>为了解决该问题，需要修改注册表权限。但在操作过程中，系统又提示：<br>「注册表编辑器无法在当前所选的项及其部分子项上设置安全性」。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li>Visual C++ 安装失败的根本原因是注册表关键项权限不足，系统错误 5 表示拒绝访问。</li><li>使用普通管理员权限修改注册表时，无法对部分系统级注册表项设置安全性。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p>下载微软官方的 <a href="https://learn.microsoft.com/zh-cn/sysinternals/downloads/psexec">PsExec</a> 工具。</p></li><li><p>解压工具包。</p></li><li><p>关闭所有已打开的注册表编辑器。</p></li><li><p>以管理员身份打开命令提示符，进入解压目录：</p><ul><li>输入磁盘号（如「D:」）；</li><li>输入「cd 文件夹名」进入解压目录。</li></ul></li><li><p>执行命令：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">psexec -<span class="hljs-selector-tag">i</span> -d -s regedit<br></code></pre></td></tr></table></figure><p>此时以系统权限打开注册表编辑器。</p></li><li><p>定位到报错提示的注册表路径：<br>「UNKNOWN\Components[GUID][子键]」。</p></li><li><p>右键该项，选择「权限」，为「Administrators」组赋予完全控制权限。</p></li><li><p>保存设置后，重新运行 Visual C++ 安装程序，即可完成安装。</p></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 远程修电脑，请访问 <a href="https://zhang9.com/">章九工具箱</a>，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运行库</tag>
+      
+      <tag>注册表</tag>
+      
+      <tag>PsExec</tag>
+      
+      <tag>Visual C++</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>三角洲行动鼠标点不中菜单的解决办法</title>
     <link href="/delta-force-mouse-click-wrong-position-fix/"/>
     <url>/delta-force-mouse-click-wrong-position-fix/</url>

@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-09-24T01:14:33.854Z</updated>
+  <updated>2025-09-28T15:40:15.444Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>注册表权限不足导致 Visual C++ 安装失败及解决方法</title>
+    <link href="https://itxiaozhang.com/fix-visual-cpp-error-1402-registry-permission/"/>
+    <id>https://itxiaozhang.com/fix-visual-cpp-error-1402-registry-permission/</id>
+    <published>2025-09-28T15:38:47.000Z</published>
+    <updated>2025-09-28T15:40:15.444Z</updated>
+    
+    
+    <summary type="html">安装 Microsoft Visual C++ Redistributable 时遇 Error 1402，因注册表关键项权限不足导致。通过 PsExec 提升系统权限修改注册表权限，即可解决安装失败问题。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="运行库" scheme="https://itxiaozhang.com/tags/%E8%BF%90%E8%A1%8C%E5%BA%93/"/>
+    
+    <category term="注册表" scheme="https://itxiaozhang.com/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
+    
+    <category term="PsExec" scheme="https://itxiaozhang.com/tags/PsExec/"/>
+    
+    <category term="Visual C++" scheme="https://itxiaozhang.com/tags/Visual-C/"/>
+    
+  </entry>
   
   <entry>
     <title>三角洲行动鼠标点不中菜单的解决办法</title>
@@ -484,31 +509,6 @@
     <category term="DNS" scheme="https://itxiaozhang.com/tags/DNS/"/>
     
     <category term="IPv6" scheme="https://itxiaozhang.com/tags/IPv6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>港服《瓦罗兰特》启动报错「VAN9003 This version of Vanguard requires secure boot to be enabled in order to play」解决方法</title>
-    <link href="https://itxiaozhang.com/valorant-van9003-secure-boot-tpm2-fix/"/>
-    <id>https://itxiaozhang.com/valorant-van9003-secure-boot-tpm2-fix/</id>
-    <published>2025-08-08T03:46:50.000Z</published>
-    <updated>2025-09-21T12:18:28.036Z</updated>
-    
-    
-    <summary type="html">本文介绍港服《瓦罗兰特》启动时报错 VAN9003 的原因，涵盖 Secure Boot 与 TPM 2.0 的启用方法，帮助用户快速恢复游戏正常运行。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="Secure Boot" scheme="https://itxiaozhang.com/tags/Secure-Boot/"/>
-    
-    <category term="VAN9003" scheme="https://itxiaozhang.com/tags/VAN9003/"/>
-    
-    <category term="瓦罗兰特" scheme="https://itxiaozhang.com/tags/%E7%93%A6%E7%BD%97%E5%85%B0%E7%89%B9/"/>
-    
-    <category term="TPM 2.0" scheme="https://itxiaozhang.com/tags/TPM-2-0/"/>
     
   </entry>
   
