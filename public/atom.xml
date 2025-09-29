@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-09-28T15:40:15.444Z</updated>
+  <updated>2025-09-29T07:49:47.224Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>卸载流氓软件极速输入法</title>
+    <link href="https://itxiaozhang.com/uninstall-jisu-input-method/"/>
+    <id>https://itxiaozhang.com/uninstall-jisu-input-method/</id>
+    <published>2025-09-29T07:37:27.000Z</published>
+    <updated>2025-09-29T07:49:47.224Z</updated>
+    
+    
+    <summary type="html">本文介绍如何卸载难以移除的极速输入法，包括重新安装、卸载、清理残留和重启电脑，彻底清除该流氓软件。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="输入法" scheme="https://itxiaozhang.com/tags/%E8%BE%93%E5%85%A5%E6%B3%95/"/>
+    
+    <category term="极速输入法" scheme="https://itxiaozhang.com/tags/%E6%9E%81%E9%80%9F%E8%BE%93%E5%85%A5%E6%B3%95/"/>
+    
+    <category term="卸载教程" scheme="https://itxiaozhang.com/tags/%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="流氓软件" scheme="https://itxiaozhang.com/tags/%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>注册表权限不足导致 Visual C++ 安装失败及解决方法</title>
@@ -484,31 +509,6 @@
     <category term="Nexus" scheme="https://itxiaozhang.com/tags/Nexus/"/>
     
     <category term="Rainmeter" scheme="https://itxiaozhang.com/tags/Rainmeter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WeGame 登录报错：「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」快速排查与修复</title>
-    <link href="https://itxiaozhang.com/wegame-login-timeout-7610001-fix/"/>
-    <id>https://itxiaozhang.com/wegame-login-timeout-7610001-fix/</id>
-    <published>2025-08-13T13:46:03.000Z</published>
-    <updated>2025-09-21T12:18:28.036Z</updated>
-    
-    
-    <summary type="html">WeGame 登录时报「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」。建议依次排查：临时关闭防火墙并放行WeGame、卸载可疑第三方安全/网络控制软件、禁用IPv6并更换DNS（如8.8.8.8）、刷新DNS并运行客户端修复程序，通常可恢复登录。</summary>
-    
-    
-    
-    
-    <category term="WeGame" scheme="https://itxiaozhang.com/tags/WeGame/"/>
-    
-    <category term="登录超时" scheme="https://itxiaozhang.com/tags/%E7%99%BB%E5%BD%95%E8%B6%85%E6%97%B6/"/>
-    
-    <category term="错误码7610001" scheme="https://itxiaozhang.com/tags/%E9%94%99%E8%AF%AF%E7%A0%817610001/"/>
-    
-    <category term="DNS" scheme="https://itxiaozhang.com/tags/DNS/"/>
-    
-    <category term="IPv6" scheme="https://itxiaozhang.com/tags/IPv6/"/>
     
   </entry>
   
