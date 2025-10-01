@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-10-01T08:32:28.487Z</updated>
+  <updated>2025-10-01T13:46:08.248Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>如何开启或关闭屏幕右上角的FPS、GPU、CPU、延迟显示</title>
+    <title>电脑右上角突然显示帧率如何关闭</title>
     <link href="https://itxiaozhang.com/nvidia-app-toggle-fps-gpu-cpu-delay-display/"/>
     <id>https://itxiaozhang.com/nvidia-app-toggle-fps-gpu-cpu-delay-display/</id>
     <published>2025-10-01T08:30:10.000Z</published>
-    <updated>2025-10-01T08:32:28.487Z</updated>
+    <updated>2025-10-01T13:46:08.248Z</updated>
     
     
     <summary type="html">屏幕右上角显示FPS、GPU、CPU、延迟信息，是因英伟达APP统计数据功能开启。通过「Alt+Z」进入菜单，即可轻松开启或关闭。</summary>
