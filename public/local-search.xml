@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>如何开启或关闭屏幕右上角的FPS、GPU、CPU、延迟显示</title>
+    <link href="/nvidia-app-toggle-fps-gpu-cpu-delay-display/"/>
+    <url>/nvidia-app-toggle-fps-gpu-cpu-delay-display/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/nvidia-app-toggle-fps-gpu-cpu-delay-display/">https://itxiaozhang.com/nvidia-app-toggle-fps-gpu-cpu-delay-display/</a><br>远程修电脑，请访问 <a href="https://zhang9.com/">章九工具箱</a>，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在电脑使用过程中，屏幕右上角会出现「FPS、GPU、CPU、延迟」等实时数据显示，部分用户觉得影响视觉体验，希望关闭或在需要时开启。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>这些数据显示来自英伟达 APP 中的「统计数据」功能。当该功能开启时，会在屏幕右上角实时显示帧率、显卡和处理器使用情况以及延迟信息。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p>按下快捷键「Alt + Z」，调出英伟达 APP 的快捷菜单。</p></li><li><p>在菜单中点击「统计数据」。</p></li><li><p>找到「显示」开关：</p><ul><li>若要关闭：将开关关闭，右上角的FPS、GPU、CPU、延迟信息会消失。</li><li>若要开启：将开关打开，即可在右上角显示相关信息。</li></ul></li><li><p>根据实际需求，灵活选择开启或关闭该功能。</p></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 远程修电脑，请访问 <a href="https://zhang9.com/">章九工具箱</a>，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>显卡</tag>
+      
+      <tag>英伟达APP</tag>
+      
+      <tag>FPS显示</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Windows 常用命令与英文安装词汇速查</title>
     <link href="/windows-commands-installation-english-terms/"/>
     <url>/windows-commands-installation-english-terms/</url>
