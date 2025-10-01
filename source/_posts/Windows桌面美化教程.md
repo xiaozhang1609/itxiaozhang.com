@@ -17,12 +17,13 @@ tags:
 
 ## 成品展示
 
-![桌面效果1](https://s21.ax1x.com/2025/09/20/pV4M56g.jpg)
-![桌面效果2](https://s21.ax1x.com/2025/09/20/pV4M41S.jpg)
-![桌面效果3](https://s21.ax1x.com/2025/09/20/pV4Mhp8.png)
-![桌面效果4](https://s21.ax1x.com/2025/09/20/pV4MRtP.jpg)
-![桌面效果5](https://s21.ax1x.com/2025/09/20/pV4M2kt.jpg)
-
+![效果图1](https://s21.ax1x.com/2025/09/20/pV4M56g.jpg)
+![效果图2](https://s21.ax1x.com/2025/09/20/pV4M41S.jpg)
+![效果图3](https://s21.ax1x.com/2025/09/20/pV4Mhp8.png)
+![效果图4](https://s21.ax1x.com/2025/09/20/pV4MRtP.jpg)
+![效果图5](https://s21.ax1x.com/2025/09/20/pV4M2kt.jpg)
+![效果图6](https://s21.ax1x.com/2025/10/01/pVTkMV0.jpg)
+![效果图7](https://s21.ax1x.com/2025/10/01/pVTkQaV.jpg)
 ---
 
 ## 桌面美化教程概述
