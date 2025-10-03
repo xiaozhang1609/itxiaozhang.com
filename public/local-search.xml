@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>三角洲行动锁帧6FPS？帧率优化案例</title>
+    <link href="/operation-delta-fps-case-study/"/>
+    <url>/operation-delta-fps-case-study/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/operation-delta-fps-case-study/">https://itxiaozhang.com/operation-delta-fps-case-study/</a><br>远程修电脑，请访问 <a href="https://zhang9.com/">章九工具箱</a>，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。    </p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在运行《三角洲行动》时，电脑出现明显的性能问题：</p><ul><li>游戏帧率被限制在「6 FPS」；</li><li>延迟过高、画面严重卡顿；</li><li>即使在菜单界面中也非常不流畅。</li></ul><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li>显卡驱动版本过旧（设备为 NVIDIA GeForce RTX 4050，驱动停留在 5 月版本）。</li><li>系统运行库缺失或未完整安装。</li><li>显卡控制面板配置不合理（如垂直同步、电源管理模式等）。</li><li>Windows 系统优化不足（Game Bar、游戏模式、GPU 硬件加速等未正确设置）。</li><li>游戏内视频参数未按硬件实际情况进行调整。</li><li>电脑散热条件较差，温度偏高。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>更新显卡驱动</strong></p><ul><li>打开「<a href="https://www.zhang9.com/">章九工具箱</a>」；</li><li>搜索「NVIDIA」，进入官网；</li><li>选择 GeForce RTX 4050（笔记本）与 Windows 11 系统；</li><li>下载并安装最新驱动，安装时选择「自定义」，并勾选「执行清洁安装」。</li></ul></li><li><p><strong>补全运行库</strong></p><ul><li>在「<a href="https://www.zhang9.com/">章九工具箱</a>」中搜索「运行库」；</li><li>下载并安装 32 位和 64 位运行库；</li><li>双击运行安装，勾选同意，完成后依次关闭即可。</li></ul></li><li><p><strong>调整显卡设置</strong></p><ul><li>打开「NVIDIA 控制面板」；</li><li>关闭「垂直同步」；</li><li>将「电源管理模式」改为「最高性能优先」；</li><li>图像质量设置为「高性能」。</li></ul></li><li><p><strong>优化系统设置</strong></p><ul><li>关闭 Xbox Game Bar；</li><li>打开「游戏模式」；</li><li>在「高级显示设置」中选择显示器支持的最高刷新率；</li><li>启用「硬件加速 GPU 计划」。</li></ul></li><li><p><strong>修改游戏内设置</strong></p><ul><li>分辨率和刷新率与显示器保持一致；</li><li>帧数上限设置为 240；</li><li>降低画质预设，纹理质量设为「中」或「高」；</li><li>超分辨率方法选择「DLSS」，模式设为「性能优先」；</li><li>启用「低延迟」模式。</li></ul></li><li><p><strong>改善散热</strong></p><ul><li>使用散热支架，保证良好通风；</li><li>定期清理灰尘，更换硅脂，确保温度稳定。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 远程修电脑，请访问 <a href="https://zhang9.com/">章九工具箱</a>，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>三角洲行动</tag>
+      
+      <tag>帧率优化</tag>
+      
+      <tag>游戏优化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>电脑右上角突然显示帧率如何关闭</title>
     <link href="/nvidia-app-toggle-fps-gpu-cpu-delay-display/"/>
     <url>/nvidia-app-toggle-fps-gpu-cpu-delay-display/</url>
