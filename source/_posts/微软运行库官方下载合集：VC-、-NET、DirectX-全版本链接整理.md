@@ -15,21 +15,28 @@ tags:
 > 原文地址：<https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/>  
 > 远程修电脑，请访问 [章九工具箱](https://zhang9.com/)，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。    
 
-
 ## 一、Visual C++ Redistributable
 
-**最新推荐页面**：[Latest Supported VC++ Downloads](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+**推荐页面**：[Latest Supported VC++ Downloads](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
 
-* **2015-2022 (最新统一版)**
+* **运行库整合包 (推荐)**
+  [VisualCppRedist AIO (GitHub)](https://github.com/abbodi1406/vcredist/releases)
+
+* **2015-2022 (统一版)**
   [x86](https://aka.ms/vs/17/release/vc_redist.x86.exe) ｜ [x64](https://aka.ms/vs/17/release/vc_redist.x64.exe) ｜ [ARM64](https://aka.ms/vs/17/release/vc_redist.arm64.exe)
+
 * **2013 (Update 5)**
   [x86](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe) ｜ [x64](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe) ｜ [ARM](https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_arm.exe)
+
 * **2012 (Update 4)**
   [x86](https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x86.exe) ｜ [x64](https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x64.exe) ｜ [ARM](https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_arm.exe)
+
 * **2010 (SP1)**
   [x86](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe) ｜ [x64](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe)
+
 * **2008 (SP1)**
   [x86](https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x86.exe) ｜ [x64](https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x64.exe)
+
 * **2005**
   [x86](https://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_x86.EXE) ｜ [x64](https://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_x64.EXE) ｜ [IA64](https://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_IA64.EXE)
 
@@ -39,20 +46,20 @@ tags:
 
 **下载中心**：[.NET Framework 下载](https://dotnet.microsoft.com/download/dotnet-framework)
 
-* **4.8.1** [下载页面](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
+* **4.8.1** [页面](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
 * **4.8** [离线](https://support.microsoft.com/en-us/topic/microsoft-net-framework-4-8-offline-installer-for-windows-9d23f658-3b97-68ab-d013-aa3c3e7495e0)
 * **4.7.2** [离线](https://download.microsoft.com/download/6/E/4/6E48E8AB-DC00-419E-9700-19FFC7A0CAFE/NDP472-KB4054530-x86-x64-AllOS-ENU.exe)
 * **4.6.2** [离线](https://download.microsoft.com/download/F/9/4/F942F07D-F26F-4F30-B4E3-EBD54FABA377/NDP462-KB3151800-x86-x64-AllOS-ENU.exe)
 * **4.5.2** [离线](https://download.microsoft.com/download/E/2/1/E21644B5-2DF2-47C2-91BD-63C560427900/NDP452-KB2901907-x86-x64-AllOS-ENU.exe)
 * **4.0** [Web](https://download.microsoft.com/download/1/B/4/1B4DE605-8378-47DA-8F73-778B39C5E51F/dotNetFx40_Full_setup.exe) ｜ [离线](https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe)
-* **3.5 SP1** [离线包](https://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe)
+* **3.5 SP1** [离线](https://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe)
 
 ---
 
 ## 三、DirectX End-User Runtime
 
-* **Web安装器** [dxwebsetup.exe](https://www.microsoft.com/en-us/download/details.aspx?id=35)
-* **离线包** [directx\_Jun2010\_redist.exe](https://download.microsoft.com/download/8/4/A/84A35BF1-DAFE-4AE8-82AF-AD2AE20B6B14/directx_Jun2010_redist.exe)
+* **Web 安装器** [dxwebsetup.exe](https://www.microsoft.com/en-us/download/details.aspx?id=35)
+* **离线包** [directx_Jun2010_redist.exe](https://download.microsoft.com/download/8/4/A/84A35BF1-DAFE-4AE8-82AF-AD2AE20B6B14/directx_Jun2010_redist.exe)
 
 ---
 
