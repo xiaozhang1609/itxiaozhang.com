@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>最新电脑开荒教程，一步步完成系统优化</title>
+    <link href="/new-pc-initial-setup-and-optimization/"/>
+    <url>/new-pc-initial-setup-and-optimization/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/new-pc-initial-setup-and-optimization">https://itxiaozhang.com/new-pc-initial-setup-and-optimization</a><br>远程修电脑，请访问 <a href="https://zhang9.com/">章九工具箱</a>，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。</p></blockquote><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>新电脑在首次启用时，常会出现以下问题：系统时间错误、预装软件冗余、桌面图标缺失、浏览器广告泛滥、磁盘分区混乱、文件路径不合理等。<br>本指南将带你一步完成系统优化，让电脑运行更流畅、更干净、更稳定。</p><h2 id="1-同步系统时间"><a href="#1-同步系统时间" class="headerlink" title="1. 同步系统时间"></a>1. 同步系统时间</h2><ul><li>打开 <strong>设置 → 时间和语言 → 日期和时间</strong></li><li>启用「自动设置时区」并点击 <strong>立即同步</strong></li></ul><h2 id="2-安装基础软件"><a href="#2-安装基础软件" class="headerlink" title="2. 安装基础软件"></a>2. 安装基础软件</h2><p>打开浏览器访问 <a href="https://zhang9.com/">章九工具箱</a>，下载并安装以下常用工具：</p><ul><li><a href="https://www.7-zip.org/">7-Zip 压缩解压</a></li><li><a href="https://geekuninstaller.com/download">Geek 卸载工具</a></li><li><a href="https://www.sordum.org/9470/windows-update-blocker-v1-8/">系统更新关闭工具</a></li><li><a href="https://github.com/abbodi1406/vcredist/releases">运行库整合包</a></li></ul><h2 id="3-卸载预装软件"><a href="#3-卸载预装软件" class="headerlink" title="3. 卸载预装软件"></a>3. 卸载预装软件</h2><ul><li>使用 <strong>Geek Uninstaller</strong> 卸载无用程序（如 360、鲁大师、应用宝等）</li><li>清理残留注册表，保持系统纯净</li></ul><h2 id="4-恢复桌面图标"><a href="#4-恢复桌面图标" class="headerlink" title="4. 恢复桌面图标"></a>4. 恢复桌面图标</h2><ul><li>右键桌面 → <strong>个性化 → 主题 → 桌面图标设置</strong></li><li>勾选「此电脑」「回收站」「控制面板」→ 点击 <strong>确定</strong></li></ul><h2 id="5-关闭任务栏与浏览器推荐内容"><a href="#5-关闭任务栏与浏览器推荐内容" class="headerlink" title="5. 关闭任务栏与浏览器推荐内容"></a>5. 关闭任务栏与浏览器推荐内容</h2><ul><li>任务栏右键 → <strong>任务栏设置</strong> → 关闭「任务视图」「小组件」</li><li>浏览器 → <strong>设置</strong> → 关闭「快速连接」「网站导航」「显示内容」等广告推送</li></ul><h2 id="6-磁盘分区与容量规划"><a href="#6-磁盘分区与容量规划" class="headerlink" title="6. 磁盘分区与容量规划"></a>6. 磁盘分区与容量规划</h2><ul><li><p>打开 <strong>磁盘管理</strong>，查看总容量（例：939GB）</p></li><li><p>建议：</p><ul><li><strong>C盘：300GB（系统盘）</strong></li><li><strong>D盘：其余空间（数据盘）</strong></li></ul></li></ul><p>计算压缩值：</p><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-number">939</span>GB - <span class="hljs-number">300</span>GB = <span class="hljs-number">639</span>GB  <br><span class="hljs-symbol">639 </span>× <span class="hljs-number">1024</span> = <span class="hljs-number">654</span>,<span class="hljs-number">336</span>MB<br></code></pre></td></tr></table></figure><p>在磁盘管理中：</p><ul><li>右键 C 盘 → <strong>压缩卷</strong> → 输入 654,336MB</li><li>右键未分配空间 → <strong>新建简单卷</strong> → 完成 D 盘分区</li></ul><h2 id="7-修改存储路径与启用自动清理"><a href="#7-修改存储路径与启用自动清理" class="headerlink" title="7. 修改存储路径与启用自动清理"></a>7. 修改存储路径与启用自动清理</h2><ul><li><p>打开 <strong>设置 → 系统 → 存储</strong></p></li><li><p>启用「自动用户内容清理」与「存储感知」</p></li><li><p>清理计划建议：</p><ul><li>当磁盘空间不足时自动运行</li><li>回收站中文件超过 14 天自动删除</li></ul></li></ul><h2 id="8-安装运行库与显卡驱动"><a href="#8-安装运行库与显卡驱动" class="headerlink" title="8. 安装运行库与显卡驱动"></a>8. 安装运行库与显卡驱动</h2><ul><li>以管理员身份运行 <strong>运行库整合包</strong> → 点击「Next」完成安装</li><li>前往 <a href="https://www.nvidia.cn/Download/index.aspx">NVIDIA 官网</a> 下载并安装最新显卡驱动</li></ul><h2 id="9-安装常用软件"><a href="#9-安装常用软件" class="headerlink" title="9. 安装常用软件"></a>9. 安装常用软件</h2><ul><li>打开 <strong>章九工具箱</strong> → 搜索并安装常用软件（如 Steam）</li><li>建议安装路径选择 D 盘</li></ul><h2 id="10-优化启动项与系统服务"><a href="#10-优化启动项与系统服务" class="headerlink" title="10. 优化启动项与系统服务"></a>10. 优化启动项与系统服务</h2><ul><li><p>打开 <strong>任务管理器 → 启动</strong> 标签 → 禁用无关启动项</p></li><li><p>管理员模式运行 PowerShell → 输入：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">msconfig</span><br></code></pre></td></tr></table></figure><p>在「服务」选项卡中关闭无用服务（如 PDF 后台进程）</p></li></ul><h2 id="11-重启系统"><a href="#11-重启系统" class="headerlink" title="11. 重启系统"></a>11. 重启系统</h2><p>完成以上设置后，<strong>重启电脑</strong> 即可享受优化后的流畅体验。</p><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 远程修电脑，请访问 <a href="https://zhang9.com/">章九工具箱</a>，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>新机开荒</tag>
+      
+      <tag>新电脑</tag>
+      
+      <tag>电脑优化</tag>
+      
+      <tag>磁盘分区</tag>
+      
+      <tag>驱动安装</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Wallpaper任何软件全屏后切回桌面都会黑屏一秒</title>
     <link href="/wallpaper-fullscreen-black-screen-fix/"/>
     <url>/wallpaper-fullscreen-black-screen-fix/</url>
