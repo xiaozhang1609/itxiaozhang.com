@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-10-06T16:02:52.648Z</updated>
+  <updated>2025-10-09T08:54:25.467Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《极限国度》报错：Ubisoft Connect 未安装的解决方法</title>
+    <link href="https://itxiaozhang.com/ubisoft-connect-not-installed-riders-republic-fix/"/>
+    <id>https://itxiaozhang.com/ubisoft-connect-not-installed-riders-republic-fix/</id>
+    <published>2025-10-09T08:50:24.000Z</published>
+    <updated>2025-10-09T08:54:25.467Z</updated>
+    
+    
+    <summary type="html">当《极限国度》启动时报错「UbisoftConnect PC is not currently installed」时，说明电脑缺少 Ubisoft Connect 客户端。本文介绍问题原因及详细安装步骤，帮助玩家顺利启动游戏。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="极限国度" scheme="https://itxiaozhang.com/tags/%E6%9E%81%E9%99%90%E5%9B%BD%E5%BA%A6/"/>
+    
+    <category term="Ubisoft" scheme="https://itxiaozhang.com/tags/Ubisoft/"/>
+    
+    <category term="育碧" scheme="https://itxiaozhang.com/tags/%E8%82%B2%E7%A2%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>最新电脑开荒教程，一步步完成系统优化</title>
@@ -476,33 +499,6 @@
     <category term="多开" scheme="https://itxiaozhang.com/tags/%E5%A4%9A%E5%BC%80/"/>
     
     <category term="损坏的镜像" scheme="https://itxiaozhang.com/tags/%E6%8D%9F%E5%9D%8F%E7%9A%84%E9%95%9C%E5%83%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阿里云ECS部署HTTPS网站笔记</title>
-    <link href="https://itxiaozhang.com/aliyun-ecs-https-deployment-notes/"/>
-    <id>https://itxiaozhang.com/aliyun-ecs-https-deployment-notes/</id>
-    <published>2025-08-26T10:57:46.000Z</published>
-    <updated>2025-09-21T12:18:28.957Z</updated>
-    
-    
-    <summary type="html">本文记录了在阿里云ECS上部署HTTPS网站的全过程，包括环境准备、网页与证书上传、Nginx配置、验证及常见故障排查。</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://itxiaozhang.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="阿里云" scheme="https://itxiaozhang.com/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
-    
-    <category term="ECS" scheme="https://itxiaozhang.com/tags/ECS/"/>
-    
-    <category term="HTTPS" scheme="https://itxiaozhang.com/tags/HTTPS/"/>
-    
-    <category term="Nginx" scheme="https://itxiaozhang.com/tags/Nginx/"/>
-    
-    <category term="SSL证书" scheme="https://itxiaozhang.com/tags/SSL%E8%AF%81%E4%B9%A6/"/>
     
   </entry>
   
