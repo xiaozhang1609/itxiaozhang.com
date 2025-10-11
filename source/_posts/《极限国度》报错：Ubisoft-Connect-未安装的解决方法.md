@@ -2,7 +2,7 @@
 title: 《极限国度》报错：Ubisoft Connect 未安装的解决方法
 permalink: /ubisoft-connect-not-installed-riders-republic-fix/
 date: 2025-10-09 16:50:24
-description: 当《极限国度》启动时报错「UbisoftConnect PC is not currently installed」时，说明电脑缺少 Ubisoft Connect 客户端。本文介绍问题原因及详细安装步骤，帮助玩家顺利启动游戏。
+description: 当《极限国度》启动时报错「UbisoftConnect PC is not currently installed」时，说明电脑缺少 Ubisoft Connect 客户端。本文介绍错误原因、客户端安装步骤，并补充两种关闭 Steam 大屏模式的方法。
 category:
 - 电脑维修
 tags:
