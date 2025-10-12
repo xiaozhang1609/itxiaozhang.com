@@ -1,0 +1,740 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="小章">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="通过实现边注、目录、易链接标题等小功能，博客和个人网站能够显著提升用户的阅读体验，让在线阅读更加舒适和愉悦。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="提升用户阅读体验：博客和个人网站的小功能[译]">
+<meta property="og:url" content="https://itxiaozhang.com/enhancing-reading-experience-micro-features-for-blogs-and-personal-websites/index.html">
+<meta property="og:site_name" content="IT小章">
+<meta property="og:description" content="通过实现边注、目录、易链接标题等小功能，博客和个人网站能够显著提升用户的阅读体验，让在线阅读更加舒适和愉悦。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/gwern-sidenotes.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/fasterthanlime-toc.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/lars-toc.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/quanta-scroll.gif">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/csstricks-toc.gif">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/hugo-titlelink.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/chapel-seriesnav.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/lars-toc.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/fasterthanlime-dialogue.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/craftinginterpreters-codenotes.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/hugo-gist.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/plfa-goto.gif">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/jamesg-external.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/gwern-linkicons-wiki.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/gwern-linkicons-haskell.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/gwern-linkicons-zip.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/gwern-hover.gif">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/feedbin.png">
+<meta property="og:image" content="https://danilafe.com/blog/blog_microfeatures/drew-openring.png">
+<meta property="article:published_time" content="2024-07-12T02:09:34.000Z">
+<meta property="article:modified_time" content="2025-09-21T12:16:19.591Z">
+<meta property="article:author" content="小章">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://danilafe.com/blog/blog_microfeatures/gwern-sidenotes.png">
+  
+  
+  
+  <title>提升用户阅读体验：博客和个人网站的小功能[译] - IT小章</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"itxiaozhang.com","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.0.0"><link rel="alternate" href="/atom.xml" title="IT小章" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 50vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>IT小章</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://zhang9.com" target="_self">
+                <i class="iconfont briefcase icon-briefcase"></i>
+                <span>工具箱</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">提升用户阅读体验：博客和个人网站的小功能[译]</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-12 10:09" pubdate>
+          2024年7月12日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          36 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">提升用户阅读体验：博客和个人网站的小功能[译]</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>原文地址：<a target="_blank" rel="noopener" href="https://danilafe.com/blog/blog_microfeatures/">https://danilafe.com/blog/blog_microfeatures/</a>  </p>
+</blockquote>
+<p>不久前，Hillel Wayne 发表了一篇题为 <a target="_blank" rel="noopener" href="https://buttondown.email/hillelwayne/archive/microfeatures-id-like-to-see-in-more-languages/"><em>Microfeatures I’d like to see in more languages</em></a> 的文章。在这篇文章中，他描述了三种编程语言特性：基本特性、深度嵌入特性和便利特性。Hillel 的观点是，语言设计者通常专注于前两种特性，但便利特性因其实现成本低，更容易在项目之间切换，并能提高用户体验。</p>
+<p>我已经经营博客有一段时间了——最早的一些文章可以追溯到2015年（由于质量问题，这些文章已不再显示）。在这段时间里，我一直在寻找改进网站的方法，并发现了许多方便但实现简单的小功能。这些功能不会决定网站的成败，但它们的存在能提升用户体验。我认为这些功能类似于 Hillel 所说的“微特性”。如果你有兴趣为自己的网站添加一些功能，不妨浏览一下这个列表，看看有没有什么能引起你的共鸣！</p>
+<p>最后需要说明的是，这篇文章并不是建议所有博客或个人网站都应具备这些微特性。有些想法只适合某些特定类型的内容和写作风格，不需要不加选择地应用。</p>
+<p>让我们开始吧！</p>
+<h2 id="边注"><a href="#边注" class="headerlink" title="边注"></a>边注</h2><p><a target="_blank" rel="noopener" href="https://gwern.net/me">Gwern</a> 被我称为边注之王。他的文章大量使用边注（至少在我读过的文章中是这样）。这是我在 <a target="_blank" rel="noopener" href="https://danilafe.com/blog/sidenotes/">Hugo</a> 中实现自己边注的灵感来源。可以查看他关于<a target="_blank" rel="noopener" href="https://gwern.net/hydrocephalus">脑积水</a>的页面；以下是我撰写本文时的页面截图：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/gwern-sidenotes.png" srcset="/img/loading.gif" lazyload alt="Gwern关于脑积水的页面截图。主文章内容在左边和右边的边距中都有注释。"></p>
+<p>边注的优点在于可以在不打断主文章流的情况下提供额外信息。你可以为好奇的读者提供更多细节，或者像<a target="_blank" rel="noopener" href="https://gwern.net/hydrocephalus#sn4">Gwern那样</a>用边注引用研究或来源。无论哪种情况，阅读体验都比脚注更愉快，因为脚注通常需要滚动到页面底部再返回顶部。</p>
+<p>我称Gwern为“边注之王”的另一个原因是<a target="_blank" rel="noopener" href="https://gwern.net/sidenote">这篇关于边注的页面</a>。在这里，Gwern 记录了许多实现边注的方法，主要受到 <a target="_blank" rel="noopener" href="https://edwardtufte.github.io/tufte-css/">Tufte CSS</a> 的启发。页面非常详细，甚至包含了一个链接到我的作品，尽管它不太为人所知！如果你有兴趣用边注增强你的网站，我强烈推荐你去看看。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>并非所有个人网站都包含目录（TOC），但它们是很有用的。它们有两个主要作用：</p>
+<ol>
+<li>让读者一目了然地看到文章的大纲。</li>
+<li>让读者能够快速导航到感兴趣的部分，而无需滚动。</li>
+</ol>
+<p>静态网站生成器（如我使用的 <a target="_blank" rel="noopener" href="https://gohugo.io/">Hugo</a>）通常可以自动生成目录，因为它们已经在生成 HTML，并且知道页面中有哪些标题。例如，Hugo 提供了<a target="_blank" rel="noopener" href="https://gohugo.io/methods/page/tableofcontents/"><code>TableOfContents</code></a> 方法。我相信其他网站技术也有类似的功能。</p>
+<p>尽管如此，我实际花了相当长时间才找到一个包含目录的常访问网站作为示例。第一个找到的是 <a target="_blank" rel="noopener" href="https://fasterthanli.me/">Faster than Lime</a> 的一篇关于<a target="_blank" rel="noopener" href="https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep">Rust 的 Futures</a>的文章；以下是撰写本文时的截图：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/fasterthanlime-toc.png" srcset="/img/loading.gif" lazyload alt="Faster than Lime 的目录截图。一个带有“目录”字样的框包含链接到页面下方的几个部分（屏幕外）"></p>
+<p>目录的质量和价值当然取决于页面本身的章节安排——以及页面是否有章节——但在我看来，即使是相对简单的页面，导航的好处也显而易见。</p>
+<p>作为一个荣誉提名，我想展示 <a target="_blank" rel="noopener" href="https://lars.hupel.info/">Lars Hupel 的网站</a>。据我所知，网站的页面没有 <em>内部</em> 目录。然而，属于某个系列的页面（例如<a target="_blank" rel="noopener" href="https://lars.hupel.info/topics/crdt/01-intro/">CRDTs简介</a>）有跨越整个系列的目录。</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/lars-toc.png" srcset="/img/loading.gif" lazyload alt="Lars Hupel 网站的目录截图。一个带有“系列导航”字样的框包含链接到系列中其他页面的链接。"></p>
+<p>我也觉得这很不错，尽管它确实错过了页面内的标题。</p>
+<h3 id="附加功能：显示页面进度"><a href="#附加功能：显示页面进度" class="headerlink" title="附加功能：显示页面进度"></a>附加功能：显示页面进度</h3><p>我提到目录可以传达页面的结构。然而，它们在你开始阅读之前就显示了页面结构。在其“基本形式”中，读者在开始阅读后不再受益于目录。\[注：当然，除非他们跳回文章顶部并再次找到目录。\]</p>
+<p>如果你想在读者处于页面中间时显示进度，可以使用页面进度条。我在阅读<a target="_blank" rel="noopener" href="https://www.quantamagazine.org/">Quanta Magazine</a>时注意到一个进度条；它看起来像这样（记录我滚动浏览<a target="_blank" rel="noopener" href="https://www.quantamagazine.org/how-the-square-root-of-2-became-a-number-20240621/">撰写时的最新文章</a>）：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/quanta-scroll.gif" srcset="/img/loading.gif" lazyload alt="Quanta Magazine 文章上的进度条。随着页面滚动，顶部的橙色条逐渐从左向右填充。"></p>
+<p>一个直接的想法是，这完全可以用浏览器的常规滚动条替代，后者始终显示在页面侧面。然而，滚动条可能会令人误解。如果你的页面有评论部分，评论可能会使页面看起来长得吓人。同样，引用其他页面和一般的“页脚材料”也会算入滚动条，但不会算入进度条。</p>
+<p>结合这两者，你可以想象一个始终可见的目录，其中突出显示当前所在的章节。通过这样的功能，你可以随时看到自己所在的位置（包括大致估计你在页面中滚动了多远），同时还能看到当前章节在更广泛结构中的位置。我以前见过这种做法，但一时想不起哪个网站实现了这种功能；作为备选方案，这里有 <a target="_blank" rel="noopener" href="https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states/">CSS Tricks 教程</a>展示了如何实现动态目录，以及我滚动浏览它的录屏：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/csstricks-toc.gif" srcset="/img/loading.gif" lazyload alt="CSS Tricks 演示中的目录。随着页面滚动，目录中的当前章节变为粗体。"></p>
+<h2 id="易于链接的标题"><a href="#易于链接的标题" class="headerlink" title="易于链接的标题"></a>易于链接的标题</h2><p>如何将页面的某个部分链接给你的朋友？在 HTML 中有一个明确定义的机制：你可以使用特定 HTML 元素的 ID，并将其作为 <code>#some-id</code> 添加到页面链接的末尾。然后，该链接会将用户带到那个特定的 HTML 元素。我可以这样做，例如链接到</p>
+<p><a href="#sidenotes">上面的边注部分</a>。</p>
+<p>如何发现要链接的页面部分的 ID？ID 不是“可视”属性；它不会显示给用户，而是 HTML 本身的细节。因此，在任何给定页面上，即使每个元素都有一个唯一的、可链接的 ID，我也无法在不进入 <strong>Inspect Element</strong> 并尝试在 HTML 树中找到 ID 的情况下使用它。</p>
+<p>简单的解决方案是将你想要轻松“链接”的元素本身变成链接！然后，用户可以右键单击相关元素（可能是标题），并单击 <strong>Copy Link</strong>。这样就简单多了！为了演示类似的想法，<a href="#linked-paragraph">这里是链接到本段的链接</a>。你现在可以使用上下文菜单选择 <strong>Copy Link</strong>，在浏览器中粘贴它，瞧——你又回到了这里！</p>
+<p>与<a href="#tables-of-contents">目录</a>类似，许多网站技术提供了大部分工具来支持此功能。我经常遇到的页面具有每个标题的唯一 ID，但没有可点击的链接！我最终不得不使用检查元素来找到锚点。</p>
+<p>这个想法的一个变体——如果你不想将整个标题或标题变成链接——是包括一个可点击的元素（在之前或之后）作为该标题的链接。你可以单击该元素来获取链接信息，而不是（图标还告诉你这是可能的）。Hugo 的文档就是这样做的：这是<a target="_blank" rel="noopener" href="https://gohugo.io/content-management/markdown-attributes/#overview">一个任意页面</a>的截图。</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/hugo-titlelink.png" srcset="/img/loading.gif" lazyload alt="Hugo 文档中的标题和段落。标题旁边有一个蓝色的链接符号。"></p>
+<h2 id="分组系列文章"><a href="#分组系列文章" class="headerlink" title="分组系列文章"></a>分组系列文章</h2><p>一些作者喜欢在特定主题上写得很长；为了更快地将内容传递给读者（并使结果页面不那么令人生畏），将一个主题分成多个系列是有意义的。最简单的方法是只……发布几篇相关文章，可能具有相关的名称，并相互链接。完成！</p>
+<p>但如果多花点功夫，系列阅读和系列写作的体验会更好。与其手动插入链接，你可以配置你的网站自动为系列中的页面添加“下一页”和“上一页”按钮。你还可以为特定系列提供概述，并创建一个“导航中心”。</p>
+<p>例如，<a target="_blank" rel="noopener" href="https://chapel-lang.org/blog/">Chapel 语言博客</a>有导航按钮。这是<a target="_blank" rel="noopener" href="https://chapel-lang.org/blog/posts/aoc2022-day09-elvish-string-theory/">Advent of Code 系列中的一篇文章</a>的截图：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/chapel-seriesnav.png" srcset="/img/loading.gif" lazyload alt="Chapel 博客文章上的系列导航按钮。有两个按钮；一个链接到系列中的上一页，另一个链接到下一页。"></p>
+<p>我在<a href="#tables-of-contents">目录</a>部分提到过这一点，但 <a target="_blank" rel="noopener" href="https://lars.hupel.info/">Lars Hupel 的网站</a>有跨系列链接的目录。我不确定它是自动生成的还是手写的，但它确实很好。</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/lars-toc.png" srcset="/img/loading.gif" lazyload alt="Lars Hupel 网站的目录截图。一个带有“系列导航”字样的框包含链接到系列中其他页面的链接。"></p>
+<h2 id="对话"><a href="#对话" class="headerlink" title="对话"></a>对话</h2><p>我第一次在 <a target="_blank" rel="noopener" href="https://xeiaso.net/">Xe Iaso 的网站</a>上遇到对话，但我认为我最常在 <a target="_blank" rel="noopener" href="https://fasterthanli.me/">Faster than Lime</a> 的文章中看到它们。作为例子，这里有一个关于 <a target="_blank" rel="noopener" href="https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep#it-s-waiting-for-the-first-one-to-finish">Rust’s futures</a>的文章中的小对话。撰写时，它看起来像这样：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/fasterthanlime-dialogue.png" srcset="/img/loading.gif" lazyload alt="Faster than Lime 上与“酷熊”的对话。页面包含熊角色和作者交替出现的聊天气泡。"></p>
+<p>即使是技术写作，使用对话也不是一个特别新颖的想法。我知道我在教科书中见过；可能是<a target="_blank" rel="noopener" href="https://pages.cs.wisc.edu/~remzi/OSTEP/dialogue-virtualization.pdf">操作系统：三个简单的部分</a>中的一部分。它可以帮助从一个不太有经验的角度提出问题，因此可能表达读者自己可能有的疑虑。当然——就像“酷熊”和 Xe Iaso 的<a target="_blank" rel="noopener" href="https://xeiaso.net/characters">许多角色</a>——它可以改变语调，使页面更有趣。</p>
+<h2 id="带有来源的代码块"><a href="#带有来源的代码块" class="headerlink" title="带有来源的代码块"></a>带有来源的代码块</h2><p>这是由一位读者推荐给我的，所以我会谈谈我的页面！</p>
+<p>当我在<a target="_blank" rel="noopener" href="https://danilafe.com/series/compiling-a-functional-language-using-c++/">写关于编译器的文章</a>时，一位读者给我发邮件指出他们在各种代码块中迷失了。我的页面显示了我正在编写的代码，但项目已经超出了单个文件。因此，我会在一个时刻修改一个文件的中途，然后在下一个时刻修改另一个文件。这促使我为我的代码块添加装饰器，看起来像这样：</p>
+<table><tbody><tr><td><pre tabindex="0"><code><span>3\n</span><span>4\n</span><span>5\n</span><span>6\n</span><span>7\n</span><span>8\n</span></code></pre></td><td><pre tabindex="0"><code data-lang="Ruby"><span><span><span>def</span> <span>sum_digits</span><span>(</span><span>n</span><span>)</span>\n</span></span><span><span>  <span>while</span> <span>n</span> <span>&gt;</span> <span>9</span>\n</span></span><span><span>    <span>n</span> <span>=</span> <span>n</span><span>.</span><span>to_s</span><span>.</span><span>chars</span><span>.</span><span>map</span><span>(</span><span>&amp;</span><span>:to_i</span><span>)</span><span>.</span><span>sum</span>\n</span></span><span><span>  <span>end</span>\n</span></span><span><span>  <span>n</span>\n</span></span><span><span><span>end</span></span></span></code></pre></td></tr></tbody></table>
+
+<p>装饰器显示了代码来自哪个文件以及显示了哪些行。如果你单击文件名，装饰器会链接到我的 Gitea 实例，允许你在上下文中阅读代码。</p>
+<p>尽管它不完全相同（特别是，它不幸缺少链接），但《Crafting Interpreters》在线书籍做了类似的事情。它在描述代码更改时，将更改的代码本身旁边的文字描述，比如“在 <code>MyStruct</code> 之后添加”。以下是撰写时关于<a target="_blank" rel="noopener" href="https://craftinginterpreters.com/local-variables.html">局部变量</a>页面的截图。</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/craftinginterpreters-codenotes.png" srcset="/img/loading.gif" lazyload alt="Crafting Interpreters 中代码的定位注释。代码块右侧，边注描述了文件和更改的性质。"></p>
+<p>我觉得它看起来相当优雅，在某些方面——特别是在每个更改做什么的口头描述中——可能比我的方法更好。</p>
+<p>这不完全相同，但 <a target="_blank" rel="noopener" href="https://gist.github.com/">GitHub Gists</a> 可以帮助实现这一功能。Gist 可以包含多个文件，每个文件可以单独嵌入到你的页面中。Hugo 特别支持 <a target="_blank" rel="noopener" href="https://gohugo.io/content-management/shortcodes/#gist">Gists</a>（我已经使用文档的<a href="#easily-linkable-headings">易于链接标题</a>获取了该链接）；我怀疑其他网站引擎也有某种形式的支持。撰写时，嵌入的 Gist 看起来像这样：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/hugo-gist.png" srcset="/img/loading.gif" lazyload alt="Hugo 文档中使用 GitHub Gist 嵌入的代码。"></p>
+<p>单击 <code>list.html</code> 将带你到文件的源代码。</p>
+<h3 id="附加功能：带有可点击链接的代码块"><a href="#附加功能：带有可点击链接的代码块" class="headerlink" title="附加功能：带有可点击链接的代码块"></a>附加功能：带有可点击链接的代码块</h3><p>如果我们追求花哨的代码块，另一个花哨的功能是由 <a target="_blank" rel="noopener" href="https://agda.readthedocs.io/en/latest/getting-started/what-is-agda.html">Agda 编程语言</a>提供的。Agda 可以生成 HTML 代码块，其中每个符号（如变量、记录名、函数名）都链接到它们的定义。因此，如果你在</p>
+<p>阅读代码，想知道“<code>x</code> 到底是什么？”，你可以单击它查看它的定义。</p>
+<p>将 Agda 的纯 HTML 输出集成到现有网页中并不简单，但一些项目确实这样做了。我在<a target="_blank" rel="noopener" href="https://danilafe.com/blog/agda_hugo/">关于将其与 Hugo 集成的文章</a>中尝试过。我猜测这对其他语言来说会更难。然而，它确实带来了不错的结果；我的首选是<a target="_blank" rel="noopener" href="https://plfa.github.io/">Agda 中的编程语言基础</a>。这本在线书籍介绍了编程语言理论的各种概念，每个代码块都完全链接。这使得可以像这样跳转页面：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/plfa-goto.gif" srcset="/img/loading.gif" lazyload alt="浏览 PLFA 页面的代码块。我悬停在一个加号上，然后单击以查看加法的定义。然后我做同样的操作查看自然数的定义。"></p>
+<h2 id="外部链接标记"><a href="#外部链接标记" class="headerlink" title="外部链接标记"></a>外部链接标记</h2><p>我见过的一些网站标记指向不同域的链接带有一个小图标。如果你读到这里，你可能已经注意到我的网站也这样做。另一个很好的例子是<a target="_blank" rel="noopener" href="https://jamesg.blog/">James’ Coffee Blog ☕</a>——尽管在撰写时 CSS 有些粗糙。我稍微调整了图标的颜色，因为我怀疑在我的浏览器中存在问题。</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/jamesg-external.png" srcset="/img/loading.gif" lazyload alt="James 博客中的外部链接。链接显示为正常，链接文本右侧有一个指向上右的对角箭头并被方框包围。"></p>
+<p>一些网站（<del>包括这个网站</del>）还会自动将此类链接在新标签页中打开。这样，你通常不会因为点击一个引用而失去原始文章。</p>
+<h3 id="附加功能：不同目的地的不同标记"><a href="#附加功能：不同目的地的不同标记" class="headerlink" title="附加功能：不同目的地的不同标记"></a>附加功能：不同目的地的不同标记</h3><p><a target="_blank" rel="noopener" href="https://gwern.net/">Gwern 的网站</a>进一步深化了这个想法，根据目的地改变外部链接的图标。例如，指向维基百科文章的链接样式化为一个小“W”，指向 Haskell.org 的链接样式化为一个 λ 符号，而指向 <code>.zip</code> 文件的链接则有一个小档案图标。还有更多；<del>我找到了<a target="_blank" rel="noopener" href="https://github.com/gwern/gwern.net/blob/959ba9c50d327a960e07241b2c7f13630bf8b80c/js/old/links.js">GitHub 上的链接处理代码</a>，以及<a target="_blank" rel="noopener" href="https://github.com/gwern/gwern.net/blob/959ba9c50d327a960e07241b2c7f13630bf8b80c/js/old/links.js#L380-L387">获得自己图标的网站列表</a>。</del>不过，我找不到口头描述。</p>
+<p><strong>编辑：</strong> Gwern 指出我提供的链接指向的是过时的代码。链接处理功能在<a target="_blank" rel="noopener" href="https://github.com/gwern/gwern.net/blob/959ba9c50d327a960e07241b2c7f13630bf8b80c/build/LinkIcon.hs#L15">此处注释中记录</a>，链接图标规则在<a target="_blank" rel="noopener" href="https://github.com/gwern/gwern.net/blob/959ba9c50d327a960e07241b2c7f13630bf8b80c/build/Config/LinkIcon.hs#L83">这里</a>。还有一个<a target="_blank" rel="noopener" href="https://gwern.net/lorem-link#link-icons">非代码的图标列表</a>。</p>
+<p>现在展示一些图片。这是<a target="_blank" rel="noopener" href="https://gwern.net/about">关于</a>页面上的大量链接！</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/gwern-linkicons-wiki.png" srcset="/img/loading.gif" lazyload alt="Gwern 网站上指向维基百科的链接。每个链接后面都有一个上标“W”。"></p>
+<p>Gwern 网站上指向维基百科的链接</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/gwern-linkicons-haskell.png" srcset="/img/loading.gif" lazyload alt="Gwern 网站上指向 Haskell.org 的链接。链接后面有一个上标 λ。"></p>
+<p>Gwern 网站上指向 Haskell.org 的链接</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/gwern-linkicons-zip.png" srcset="/img/loading.gif" lazyload alt="Gwern 网站上的 `.zip` 文件链接。每个链接后面都有一个档案图标。"></p>
+<h3 id="附加功能：链接预览"><a href="#附加功能：链接预览" class="headerlink" title="附加功能：链接预览"></a>附加功能：链接预览</h3><p><a target="_blank" rel="noopener" href="https://gwern.net/">Gwern 的网站</a>不乏好主意。其中之一是在悬停时显示链接预览。当悬停在链接上时，网站会显示一个弹出窗口，其中包含该页面的视图。我怀疑这个视图也被某种方式存档，所以它会保留一个与撰写时相匹配的页面视图。</p>
+<p>坦白说，一开始我觉得这个功能有点令人不安。当我尝试点击链接时，我会被额外的覆盖层吓到。然而，随着我在网站上花费的时间越来越多，我逐渐习惯了预览。我会悬停在链接上查看第一段，从而获得简短的概要。这在<a href="#bonus-different-markers-for-different-destinations">按目的地标记图标</a>方面效果很好；我可以一眼看出链接是否值得悬停。</p>
+<p>它看起来像这样：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/gwern-hover.gif" srcset="/img/loading.gif" lazyload alt="悬停在 Gwern 网站上的链接。悬停后，显示一个矩形弹出窗口，包含链接指向的维基百科页面的一部分。我滚动浏览到目录。"></p>
+<h2 id="RSS订阅"><a href="#RSS订阅" class="headerlink" title="RSS订阅"></a>RSS订阅</h2><p>RSS 是一种允许网站发布更新的订阅标准。博客特别可以使用 RSS 来通知读者更新。RSS 订阅由订阅阅读器处理，订阅阅读器是一种轮询网站 <code>index.xml</code> 文件（或其他类似文件）并读取它以检测新内容的程序。如果你选择全文本 RSS 订阅，用户可以完全从他们的阅读器中阅读整篇文章。</p>
+<p>RSS 使得更容易跟上你的网站。与其必须查看我喜欢在互联网上的每个作者的内容，我可以将他们的订阅 URL 添加到我的列表中，并让我的订阅阅读器自动汇总所有更新供我阅读。这有点像社交媒体或新闻订阅，但我控制显示给我的内容，而我关注的博客作者不需要创建账户并明确在社交媒体上分享他们的作品！</p>
+<p>我没有特别的网站来展示这个部分；相反，我会展示我在我选择的订阅阅读器中关注的网站列表。你可能会注意到，这些网站中很多在其他微特性部分都被列为灵感来源。</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/feedbin.png" srcset="/img/loading.gif" lazyload alt="我的 Feedbin 列表截图。一些网站包括 Hillel Wayne 的、Faster than Lime、Drew DeVault 和 Chapel Language Blog。"></p>
+<h2 id="链接到其他网站"><a href="#链接到其他网站" class="headerlink" title="链接到其他网站"></a>链接到其他网站</h2><p>我第一次注意到这一功能是在 Drew DeVault 的博客上。Drew 的博客上的每个页面底部都有一个标题为“我阅读的博客中的文章”的部分。例如，在<a target="_blank" rel="noopener" href="https://drewdevault.com/2024/05/24/2024-05-24-Bunnix.html">一个示例帖子</a>中，撰写时，我看到如下页脚：</p>
+<p><img src="https://danilafe.com/blog/blog_microfeatures/drew-openring.png" srcset="/img/loading.gif" lazyload alt="Drew DeVault 博客中指向其他博客的链接。链接由三个并排的框组成，每个框都有一个标题和简短的摘要。"></p>
+<p>如图片所示，Drew 的网站特别使用一个名为 <a target="_blank" rel="noopener" href="https://git.sr.ht/~sircmpwn/openring"><code>openring</code></a> 的程序，它基于 RSS 订阅（另一个<a href="#rss-feeds">我喜欢的微特性</a>）。然而，网站如何找到这些文章（静态如 <code>openring</code>，或使用某些 JavaScript 在页面加载时）对我来说并不重要。重要的是你在推广你喜欢的其他内容创作者的作品，这是我最喜欢的互联网片段的精神。</p>
+<h2 id="结论-其他？"><a href="#结论-其他？" class="headerlink" title="结论+其他？"></a>结论+其他？</h2><p>这些是我能在一次会议中想到的所有微特性。我希望你能受到启发将这些功能集成到你自己的网站中，或者至少认为这样做是个好主意。</p>
+<p>这个列表并不详尽。我可能错过了一些好的微特性！如果你能想到这样的功能，请告诉我；我的电子邮件地址在本文的页脚中有链接。</p>
+<p>感谢阅读，干杯！</p>
+<hr>
+<p>▶ 远程修电脑，请访问 <a target="_blank" rel="noopener" href="https://zhang9.com/">章九工具箱</a>，选择「电脑维修（国内）」或「电脑维修（海外）」加我微信咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/" class="category-chain-item">文章翻译</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%8D%9A%E5%AE%A2/" class="print-no-link">#博客</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>提升用户阅读体验：博客和个人网站的小功能[译]</div>
+      <div>https://itxiaozhang.com/enhancing-reading-experience-micro-features-for-blogs-and-personal-websites/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>小章</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年7月12日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/reinforce-future-plan-reading-reflections-week-19/" title="增援未来计划-阅读与感悟周记19">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">增援未来计划-阅读与感悟周记19</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/reinforce-future-plan-reading-reflections-week-18/" title="增援未来计划-阅读与感悟周记18">
+                        <span class="hidden-mobile">增援未来计划-阅读与感悟周记18</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
