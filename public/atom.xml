@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-10-11T11:30:17.409Z</updated>
+  <updated>2025-10-13T05:18:20.439Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>无畏契约开直播伴侣后一直闪退</title>
+    <link href="https://itxiaozhang.com/valorant-crash-loop-after-opening-streaming-tool/"/>
+    <id>https://itxiaozhang.com/valorant-crash-loop-after-opening-streaming-tool/</id>
+    <published>2025-10-13T05:17:00.000Z</published>
+    <updated>2025-10-13T05:18:20.439Z</updated>
+    
+    
+    <summary type="html">本文说明《无畏契约》在开启直播伴侣后出现持续闪退的原因，并提供显卡驱动更新、运行库修复及直播伴侣重装等完整解决步骤，帮助用户快速恢复正常使用。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="无畏契约" scheme="https://itxiaozhang.com/tags/%E6%97%A0%E7%95%8F%E5%A5%91%E7%BA%A6/"/>
+    
+    <category term="运行库" scheme="https://itxiaozhang.com/tags/%E8%BF%90%E8%A1%8C%E5%BA%93/"/>
+    
+    <category term="显卡驱动" scheme="https://itxiaozhang.com/tags/%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/"/>
+    
+    <category term="直播伴侣" scheme="https://itxiaozhang.com/tags/%E7%9B%B4%E6%92%AD%E4%BC%B4%E4%BE%A3/"/>
+    
+    <category term="闪退" scheme="https://itxiaozhang.com/tags/%E9%97%AA%E9%80%80/"/>
+    
+  </entry>
   
   <entry>
     <title>下载原版 Windows 系统镜像的四大渠道</title>
@@ -476,27 +503,6 @@
     <category term="Windows 11" scheme="https://itxiaozhang.com/tags/Windows-11/"/>
     
     <category term="加密" scheme="https://itxiaozhang.com/tags/%E5%8A%A0%E5%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WeGame 打开提示「客户端正在升级 0%」的解决方法</title>
-    <link href="https://itxiaozhang.com/wegame-client-upgrade-0-percent-fix/"/>
-    <id>https://itxiaozhang.com/wegame-client-upgrade-0-percent-fix/</id>
-    <published>2025-08-29T10:05:38.000Z</published>
-    <updated>2025-09-21T12:18:28.980Z</updated>
-    
-    
-    <summary type="html">WeGame 启动时提示「客户端正在升级 0%」并卡死，原因多为系统文件损坏、网络异常或旧版本残留。通过系统修复、清理残留、调整网络配置并重装客户端即可解决。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="网络" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="WeGame" scheme="https://itxiaozhang.com/tags/WeGame/"/>
     
   </entry>
   
