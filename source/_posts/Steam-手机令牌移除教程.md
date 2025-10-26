@@ -13,7 +13,7 @@ tags:
 ---
 
 > 原文地址：<https://itxiaozhang.com/steam-mobile-authenticator-removal-tutorial/>  
-> 远程修电脑，请访问 [章九工具箱](https://zhang9.com/)，点击电脑维修，加我微信咨询。 
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://itxiaozhang.netlify.app/)咨询。 
 
 ## 一、前提条件
 
@@ -172,6 +172,6 @@ A：打开 **微信 → 我 → 支付 → 钱包 → 账单** → 找到对应 
 - [YouTube](https://www.youtube.com/@itxiaozhang)
 
 ---
-▶ 远程修电脑，请访问 [章九工具箱](https://zhang9.com/)，点击电脑维修，加我微信咨询。 
+▶ 如果您需要远程电脑维修或者编程开发，请[加我微信](https://itxiaozhang.netlify.app/)咨询。 
 ▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。  
 ▶ **我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。**  
