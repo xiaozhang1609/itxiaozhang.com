@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开</title>
+    <link href="/wegame-black-screen-blue-and-black-text-fix/"/>
+    <url>/wegame-black-screen-blue-and-black-text-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/wegame-black-screen-blue-and-black-text-fix/">https://itxiaozhang.com/wegame-black-screen-blue-and-black-text-fix/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>打开 WeGame 客户端时界面黑屏，文字与链接显示为蓝色和黑色，左侧所有游戏图标均为灰色或黑色，无法启动任何游戏。即使多次重装系统，问题依旧存在。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li>WeGame 客户端文件或配置损坏；</li><li>防火墙或安全策略阻止 WeGame 联网；</li><li>DNS 配置错误或网络适配器异常；</li><li>系统区域、语言或时间设置不匹配导致验证失败；</li><li>网络组件损坏或注册表残留。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>尝试基础修复</strong></p><ul><li>右键 WeGame 图标，选择「打开文件所在的位置」→「repair」，执行客户端自带修复功能。</li><li>修复后重新登录测试。</li></ul></li><li><p><strong>网络连通性检测</strong></p><ul><li><p>打开命令提示符（CMD）；</p></li><li><p>执行命令：</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">tracert wegame.<span class="hljs-keyword">com</span>.<span class="hljs-keyword">cn</span><br></code></pre></td></tr></table></figure></li><li><p>检查网络链路是否有中断或超时。如网络正常，继续后续步骤。</p></li></ul></li><li><p><strong>检查防火墙设置</strong></p><ul><li>打开「Windows 防火墙」→「启用或关闭 Windows 防火墙」，暂时关闭后重启游戏测试；</li><li>若无效，恢复推荐设置；</li><li>在「允许应用通过防火墙」中，勾选所有与 WeGame、TGP 相关的专用与公用选项。</li></ul></li><li><p><strong>修改网络与 DNS 设置</strong></p><ul><li><p>打开「网络适配器」，双击常用网卡；</p></li><li><p>取消勾选 IPv6；</p></li><li><p>打开 IPv4，手动设置 DNS 为「8.8.8.8」；</p></li><li><p>执行命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ipconfig /flushdns<br></code></pre></td></tr></table></figure><p>刷新 DNS 缓存后重启 WeGame。</p></li></ul></li><li><p><strong>测试不同网络环境</strong></p><ul><li>尝试连接手机热点、无线网络或其他运营商宽带；</li><li>若多种网络环境下问题一致，可排除网络外部原因。</li></ul></li><li><p><strong>使用 ComIntRep 工具重置网络组件</strong></p><ul><li>下载并运行工具「ComIntRep」；</li><li>以管理员身份启动，执行网络组件重置操作；</li><li>等待系统提示完成后重启电脑；</li><li>重新测试 WeGame 是否恢复正常。</li></ul></li><li><p><strong>彻底卸载并重装 WeGame</strong></p><ul><li>使用「Geek Uninstaller」卸载 WeGame 并清理残留注册表项；</li><li>下载最新 WeGame 3.0 安装包；</li><li>选择「自定义安装」到 C 盘，并修改目录名（如「WeGame3」），以避免旧配置干扰。</li></ul></li><li><p><strong>调整系统语言与时间区域</strong></p><ul><li>打开「日期和时间」→「区域格式设置」；</li><li>临时切换系统语言为其他语言后，再改回「简体中文」；</li><li>同步系统时间，确保自动更新时间开启；</li><li>重启电脑并重新打开 WeGame。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网络</tag>
+      
+      <tag>游戏问题</tag>
+      
+      <tag>WeGame</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WeGame 下载报错和更新失败怎么办</title>
     <link href="/wegame-download-and-update-error-solution/"/>
     <url>/wegame-download-and-update-error-solution/</url>
