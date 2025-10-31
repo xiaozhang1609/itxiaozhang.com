@@ -19,24 +19,24 @@
   <meta name="author" content="小章">
   <meta name="keywords" content="">
   
-    <meta name="description" content="打开 WeGame 客户端时界面黑屏，文字与链接显示为蓝色和黑色，左侧所有游戏图标均为灰色或黑色，无法启动任何游戏。即使多次重装系统，问题依旧存在。">
+    <meta name="description" content="穿越火线修改分辨率或音效后无法保存，重启游戏后设置总是恢复默认。主要原因是配置文件权限或路径异常。通过修正注册表路径、调整「CFSystem」文件夹权限并修复游戏文件，可恢复正常保存功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开">
-<meta property="og:url" content="https://itxiaozhang.com/wegame-black-screen-blue-and-black-text-fix/index.html">
+<meta property="og:title" content="穿越火线设置无法保存一直恢复默认">
+<meta property="og:url" content="https://itxiaozhang.com/crossfire-settings-reset-to-default/index.html">
 <meta property="og:site_name" content="IT小章">
-<meta property="og:description" content="打开 WeGame 客户端时界面黑屏，文字与链接显示为蓝色和黑色，左侧所有游戏图标均为灰色或黑色，无法启动任何游戏。即使多次重装系统，问题依旧存在。">
+<meta property="og:description" content="穿越火线修改分辨率或音效后无法保存，重启游戏后设置总是恢复默认。主要原因是配置文件权限或路径异常。通过修正注册表路径、调整「CFSystem」文件夹权限并修复游戏文件，可恢复正常保存功能。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-10-29T02:31:25.000Z">
-<meta property="article:modified_time" content="2025-10-29T02:33:17.021Z">
+<meta property="article:published_time" content="2025-10-31T03:55:53.000Z">
+<meta property="article:modified_time" content="2025-10-31T04:17:33.171Z">
 <meta property="article:author" content="小章">
-<meta property="article:tag" content="WeGame">
-<meta property="article:tag" content="游戏问题">
-<meta property="article:tag" content="网络">
+<meta property="article:tag" content="CFSystem">
+<meta property="article:tag" content="注册表">
+<meta property="article:tag" content="穿越火线">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开 - IT小章</title>
+  <title>穿越火线设置无法保存一直恢复默认 - IT小章</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开</span>
+            <span id="subtitle">穿越火线设置无法保存一直恢复默认</span>
           
         </div>
 
@@ -214,8 +214,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-10-29 10:31" pubdate>
-          2025年10月29日 上午
+        <time datetime="2025-10-31 11:55" pubdate>
+          2025年10月31日 中午
         </time>
       </span>
     
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          740 字
+          563 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          7 分钟
+          5 分钟
         
       </span>
     
@@ -274,89 +274,53 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开</h1>
+            <h1 id="seo-header">穿越火线设置无法保存一直恢复默认</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>原文地址：<a href="https://itxiaozhang.com/wegame-black-screen-blue-and-black-text-fix/">https://itxiaozhang.com/wegame-black-screen-blue-and-black-text-fix/</a><br>如果您需要远程电脑维修或者编程开发，请<a target="_blank" rel="noopener" href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p>
+<p>原文地址：<a href="https://itxiaozhang.com/crossfire-settings-reset-to-default/">https://itxiaozhang.com/crossfire-settings-reset-to-default/</a><br>如果您需要远程电脑维修或者编程开发，请<a target="_blank" rel="noopener" href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。    </p>
 </blockquote>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>打开 WeGame 客户端时界面黑屏，文字与链接显示为蓝色和黑色，左侧所有游戏图标均为灰色或黑色，无法启动任何游戏。即使多次重装系统，问题依旧存在。</p>
-<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol>
-<li>WeGame 客户端文件或配置损坏；</li>
-<li>防火墙或安全策略阻止 WeGame 联网；</li>
-<li>DNS 配置错误或网络适配器异常；</li>
-<li>系统区域、语言或时间设置不匹配导致验证失败；</li>
-<li>网络组件损坏或注册表残留。</li>
-</ol>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在《穿越火线（CrossFire）》大厅中修改分辨率或音效后点击「确定」无法保存，系统提示：「UI 分辨率将在重启客户端后适用」，但重启后设置仍恢复为默认状态。</p>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>该问题通常由配置文件权限异常引起。<br>游戏会在系统「我的文档」目录下创建 <code>CFSystem</code> 文件夹，用于保存用户设置（如分辨率、音效等）。若该目录或其上级目录（如「我的文档」）缺乏写入权限、被隐藏、或路径被重定向（例如指向 OneDrive 或网络驱动器），游戏无法正确写入配置文件。结果即使重启客户端，配置仍会恢复默认。</p>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol>
-<li><p><strong>尝试基础修复</strong></p>
+<li><p><strong>关闭游戏及 WeGame 客户端</strong>。</p>
+</li>
+<li><p><strong>检查注册表路径</strong>：</p>
 <ul>
-<li>右键 WeGame 图标，选择「打开文件所在的位置」→「repair」，执行客户端自带修复功能。</li>
-<li>修复后重新登录测试。</li>
-</ul>
+<li><p>按「Win + R」→ 输入 <code>regedit</code> → 回车。</p>
 </li>
-<li><p><strong>网络连通性检测</strong></p>
-<ul>
-<li><p>打开命令提示符（CMD）；</p>
+<li><p>定位到：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\<span class="hljs-keyword">User</span> <span class="hljs-title">Shell</span> Folders<br></code></pre></td></tr></table></figure></li>
+<li><p>在右侧找到「Personal」项，确认路径是否正确（如 <code>C:\Users\&lt;用户名&gt;</code>）。</p>
 </li>
-<li><p>执行命令：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">tracert wegame.<span class="hljs-keyword">com</span>.<span class="hljs-keyword">cn</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>检查网络链路是否有中断或超时。如网络正常，继续后续步骤。</p>
+<li><p>若被重定向到 OneDrive 等位置，请修改为正确路径并保存。</p>
 </li>
 </ul>
 </li>
-<li><p><strong>检查防火墙设置</strong></p>
+<li><p><strong>确认配置文件夹存在</strong>：</p>
 <ul>
-<li>打开「Windows 防火墙」→「启用或关闭 Windows 防火墙」，暂时关闭后重启游戏测试；</li>
-<li>若无效，恢复推荐设置；</li>
-<li>在「允许应用通过防火墙」中，勾选所有与 WeGame、TGP 相关的专用与公用选项。</li>
+<li>打开上一步中的路径。</li>
+<li>检查是否存在名为 <code>CFSystem</code> 的文件夹。</li>
+<li>若不存在，手动新建同名文件夹。</li>
 </ul>
 </li>
-<li><p><strong>修改网络与 DNS 设置</strong></p>
+<li><p><strong>检查访问权限</strong>：</p>
 <ul>
-<li><p>打开「网络适配器」，双击常用网卡；</p>
-</li>
-<li><p>取消勾选 IPv6；</p>
-</li>
-<li><p>打开 IPv4，手动设置 DNS 为「8.8.8.8」；</p>
-</li>
-<li><p>执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ipconfig /flushdns<br></code></pre></td></tr></table></figure>
-
-<p>刷新 DNS 缓存后重启 WeGame。</p>
-</li>
+<li>右键「CFSystem」文件夹 → 属性 → 安全 → 确认当前用户拥有「读取&#x2F;写入」权限。</li>
+<li>若无权限，请添加并应用更改。</li>
 </ul>
 </li>
-<li><p><strong>测试不同网络环境</strong></p>
+<li><p><strong>修复游戏文件</strong>：</p>
 <ul>
-<li>尝试连接手机热点、无线网络或其他运营商宽带；</li>
-<li>若多种网络环境下问题一致，可排除网络外部原因。</li>
+<li>打开 WeGame → 右键《穿越火线》→ 选择「修复游戏」→ 执行「深度修复」。</li>
 </ul>
 </li>
-<li><p><strong>使用 ComIntRep 工具重置网络组件</strong></p>
+<li><p><strong>重新启动游戏测试</strong>：</p>
 <ul>
-<li>下载并运行工具「ComIntRep」；</li>
-<li>以管理员身份启动，执行网络组件重置操作；</li>
-<li>等待系统提示完成后重启电脑；</li>
-<li>重新测试 WeGame 是否恢复正常。</li>
-</ul>
-</li>
-<li><p><strong>彻底卸载并重装 WeGame</strong></p>
-<ul>
-<li>使用「Geek Uninstaller」卸载 WeGame 并清理残留注册表项；</li>
-<li>下载最新 WeGame 3.0 安装包；</li>
-<li>选择「自定义安装」到 C 盘，并修改目录名（如「WeGame3」），以避免旧配置干扰。</li>
-</ul>
-</li>
-<li><p><strong>调整系统语言与时间区域</strong></p>
-<ul>
-<li>打开「日期和时间」→「区域格式设置」；</li>
-<li>临时切换系统语言为其他语言后，再改回「简体中文」；</li>
-<li>同步系统时间，确保自动更新时间开启；</li>
-<li>重启电脑并重新打开 WeGame。</li>
+<li>修改分辨率和音效后点击「确定」。</li>
+<li>重启客户端验证设置是否保持不变。</li>
 </ul>
 </li>
 </ol>
@@ -399,11 +363,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%BD%91%E7%BB%9C/" class="print-no-link">#网络</a>
+        <a href="/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/" class="print-no-link">#注册表</a>
       
-        <a href="/tags/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/" class="print-no-link">#游戏问题</a>
+        <a href="/tags/%E7%A9%BF%E8%B6%8A%E7%81%AB%E7%BA%BF/" class="print-no-link">#穿越火线</a>
       
-        <a href="/tags/WeGame/" class="print-no-link">#WeGame</a>
+        <a href="/tags/CFSystem/" class="print-no-link">#CFSystem</a>
       
     </div>
   
@@ -415,8 +379,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开</div>
-      <div>https://itxiaozhang.com/wegame-black-screen-blue-and-black-text-fix/</div>
+      <div>穿越火线设置无法保存一直恢复默认</div>
+      <div>https://itxiaozhang.com/crossfire-settings-reset-to-default/</div>
     </div>
     <div class="license-meta">
       
@@ -428,7 +392,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年10月29日</div>
+          <div>2025年10月31日</div>
         </div>
       
       
@@ -460,18 +424,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/crossfire-settings-reset-to-default/" title="穿越火线设置无法保存一直恢复默认">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">穿越火线设置无法保存一直恢复默认</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/wegame-download-and-update-error-solution/" title="WeGame 下载报错和更新失败怎么办">
-                        <span class="hidden-mobile">WeGame 下载报错和更新失败怎么办</span>
+                      <a href="/wegame-black-screen-blue-and-black-text-fix/" title="WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开">
+                        <span class="hidden-mobile">WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
