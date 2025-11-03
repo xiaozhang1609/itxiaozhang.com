@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-11-01T10:14:54.966Z</updated>
+  <updated>2025-11-03T13:07:14.447Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HMDB代谢物批量抓取与结构化导出</title>
+    <link href="https://itxiaozhang.com/hmdb-metabolite-batch-extraction-csv-export/"/>
+    <id>https://itxiaozhang.com/hmdb-metabolite-batch-extraction-csv-export/</id>
+    <published>2025-11-03T12:56:43.000Z</published>
+    <updated>2025-11-03T13:07:14.447Z</updated>
+    
+    
+    <summary type="html">这篇文章介绍了一个HMDB代谢物批量爬虫工具，自持同时爬取几万条数据、并发限速与重试、断点续跑，解析25项核心字段并导出CSV。</summary>
+    
+    
+    
+    <category term="编程开发" scheme="https://itxiaozhang.com/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="爬虫" scheme="https://itxiaozhang.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+    <category term="HMDB" scheme="https://itxiaozhang.com/tags/HMDB/"/>
+    
+    <category term="Python" scheme="https://itxiaozhang.com/tags/Python/"/>
+    
+    <category term="代谢物" scheme="https://itxiaozhang.com/tags/%E4%BB%A3%E8%B0%A2%E7%89%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>Bilibili粉丝数据获取工具</title>
@@ -462,31 +487,6 @@
     <category term="装甲红锋" scheme="https://itxiaozhang.com/tags/%E8%A3%85%E7%94%B2%E7%BA%A2%E9%94%8B/"/>
     
     <category term="d3dcompiler_43.dll" scheme="https://itxiaozhang.com/tags/d3dcompiler-43-dll/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微软运行库官方下载合集：VC++、.NET、DirectX 全版本链接整理</title>
-    <link href="https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/"/>
-    <id>https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/</id>
-    <published>2025-09-19T02:07:54.000Z</published>
-    <updated>2025-10-26T12:03:11.651Z</updated>
-    
-    
-    <summary type="html">本文汇总微软官方运行库下载地址，包括 Visual C++ Redistributable、.NET Framework、DirectX 及 .NET Runtime，提供各版本直达链接，方便开发者与系统管理员快速获取所需组件。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="微软运行库" scheme="https://itxiaozhang.com/tags/%E5%BE%AE%E8%BD%AF%E8%BF%90%E8%A1%8C%E5%BA%93/"/>
-    
-    <category term="Visual C++ Redistributable" scheme="https://itxiaozhang.com/tags/Visual-C-Redistributable/"/>
-    
-    <category term=".NET Framework" scheme="https://itxiaozhang.com/tags/NET-Framework/"/>
-    
-    <category term="DirectX Runtime" scheme="https://itxiaozhang.com/tags/DirectX-Runtime/"/>
     
   </entry>
   
