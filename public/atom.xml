@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-10-31T04:17:33.171Z</updated>
+  <updated>2025-11-01T10:14:54.966Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bilibili粉丝数据获取工具</title>
+    <link href="https://itxiaozhang.com/bilibili-followers-data-fetcher-python-tutorial-guide/"/>
+    <id>https://itxiaozhang.com/bilibili-followers-data-fetcher-python-tutorial-guide/</id>
+    <published>2025-11-01T10:06:16.000Z</published>
+    <updated>2025-11-01T10:14:54.966Z</updated>
+    
+    
+    <summary type="html">本文介绍了一个基于Python开发的Bilibili粉丝数据获取工具，支持批量获取粉丝信息并生成HTML展示页面。文章详细讲解了Cookie获取方法、环境配置、使用步骤和常见问题解决方案，并提供完整的源码。适合UP主进行粉丝统计分析和数据备份使用。</summary>
+    
+    
+    
+    
+    <category term="爬虫" scheme="https://itxiaozhang.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+    <category term="Python" scheme="https://itxiaozhang.com/tags/Python/"/>
+    
+    <category term="哔哩哔哩" scheme="https://itxiaozhang.com/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>穿越火线设置无法保存一直恢复默认</title>
@@ -466,29 +487,6 @@
     <category term=".NET Framework" scheme="https://itxiaozhang.com/tags/NET-Framework/"/>
     
     <category term="DirectX Runtime" scheme="https://itxiaozhang.com/tags/DirectX-Runtime/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的公租房退房全流程</title>
-    <link href="https://itxiaozhang.com/public-rental-housing-move-out-guide-yinchuan/"/>
-    <id>https://itxiaozhang.com/public-rental-housing-move-out-guide-yinchuan/</id>
-    <published>2025-09-18T14:34:42.000Z</published>
-    <updated>2025-10-26T12:03:11.653Z</updated>
-    
-    
-    <summary type="html">2023年6月入住公租房，2025年9月顺利退房。本文详细记录了我在市民大厅、物业、水务公司等环节的退房经历，并总结了所需材料、注意事项和经验技巧。</summary>
-    
-    
-    
-    <category term="生活记录" scheme="https://itxiaozhang.com/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="公租房" scheme="https://itxiaozhang.com/tags/%E5%85%AC%E7%A7%9F%E6%88%BF/"/>
-    
-    <category term="退房流程" scheme="https://itxiaozhang.com/tags/%E9%80%80%E6%88%BF%E6%B5%81%E7%A8%8B/"/>
-    
-    <category term="实用经验" scheme="https://itxiaozhang.com/tags/%E5%AE%9E%E7%94%A8%E7%BB%8F%E9%AA%8C/"/>
     
   </entry>
   
