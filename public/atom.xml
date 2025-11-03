@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-11-03T13:07:14.447Z</updated>
+  <updated>2025-11-03T13:09:50.084Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://itxiaozhang.com/hmdb-metabolite-batch-extraction-csv-export/"/>
     <id>https://itxiaozhang.com/hmdb-metabolite-batch-extraction-csv-export/</id>
     <published>2025-11-03T12:56:43.000Z</published>
-    <updated>2025-11-03T13:07:14.447Z</updated>
+    <updated>2025-11-03T13:09:50.084Z</updated>
     
     
     <summary type="html">这篇文章介绍了一个HMDB代谢物批量爬虫工具，自持同时爬取几万条数据、并发限速与重试、断点续跑，解析25项核心字段并导出CSV。</summary>
