@@ -13,30 +13,37 @@ tags:
 ---
 
 > 原文地址：<https://itxiaozhang.com/hmdb-metabolite-batch-extraction-csv-export/>  
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://itxiaozhang.netlify.app/)咨询。    
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://itxiaozhang.netlify.app/)咨询。
 
 ## 需求介绍
+
 - 自动化获取多个 HMDB ID 的完整字段，减少手工搜索与遗漏。
 - 稳定可靠：处理限速与网络波动，不中断、可续跑。
 - 输出可用：统一字段、原始顺序、便于下游分析与复现。
 
 ## 程序如何运行
+
 - 准备
   - 在 `id.txt` 放入待处理 ID（如 `HMDB0000123`），一行一个。
   - 安装依赖：
+
     ```bash
     pip install requests lxml psutil pandas
     ```
+
 - 执行
+
   ```bash
   python HMDB_Metabolite_Extractor.py
   ```
+
 - 结果
   - 数据：`代谢物数据_最终.csv`（按原始 ID 顺序）。
   - 失败：`失败.txt`（便于回补）。
   - 进度：`progress.json`（断点续跑）。
 
 ## 整体框架
+
 - I/O 层
   - 读取 `id.txt`；写入 `代谢物数据_最终.csv`；失败与进度持久化。
 - 抓取层
@@ -271,6 +278,6 @@ if __name__ == "__main__":
 - [YouTube](https://www.youtube.com/@itxiaozhang)
 
 ---
-▶ 如果您需要远程电脑维修或者编程开发，请[加我微信](https://itxiaozhang.netlify.app/)咨询。 
+▶ 如果您需要远程电脑维修或者编程开发，请[加我微信](https://itxiaozhang.netlify.app/)咨询。
 ▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。  
 ▶ **我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。**  
