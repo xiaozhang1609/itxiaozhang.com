@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>完美平台提示未开启CPU虚拟化的解决方法</title>
+    <link href="/fix-perfect-platform-cpu-virtualization-error/"/>
+    <url>/fix-perfect-platform-cpu-virtualization-error/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/fix-perfect-platform-cpu-virtualization-error/">https://itxiaozhang.com/fix-perfect-platform-cpu-virtualization-error/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>打开完美平台时出现以下报错提示：<br>「当前您的设备未开启CPU虚拟化相关功能<br>请前往系统BIOS内开启包括但不限于以下功能 Intel平台：VT-x VT-d AMD平台: AMD-V IOMMU 详细开启引导可前往完美平台官网或联系客服查看」</p><p>该提示会在进入平台、匹配或游戏时反复出现，导致无法正常运行。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li>BIOS 虚拟化功能未开启。</li><li>系统中存在占用虚拟化能力的软件或后台服务。</li><li>Windows 中 Hyper-V、设备加密或内存隔离影响虚拟化环境。</li><li>系统虚拟化配置被修改，需要恢复为默认状态。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="1-全盘查杀与卸载占用虚拟化的软件"><a href="#1-全盘查杀与卸载占用虚拟化的软件" class="headerlink" title="1. 全盘查杀与卸载占用虚拟化的软件"></a>1. 全盘查杀与卸载占用虚拟化的软件</h3><ol><li><p>打开「Windows 安全中心」→「病毒和威胁防护」→「扫描选项」→ 执行「全面扫描」。</p></li><li><p>按 <strong>Win + R</strong> 输入：</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">appwiz.cpl<br></code></pre></td></tr></table></figure><p>在「程序和功能」中卸载可能干扰虚拟化的软件，例如：</p><ul><li>垃圾软件</li><li>不必要的安全防护软件</li><li>虚拟机工具（如未使用）</li></ul></li></ol><h3 id="2-关闭-Hyper-V-及相关组件"><a href="#2-关闭-Hyper-V-及相关组件" class="headerlink" title="2. 关闭 Hyper-V 及相关组件"></a>2. 关闭 Hyper-V 及相关组件</h3><p>在「程序和功能」左侧选择「启用或关闭 Windows 功能」，取消勾选：</p><ul><li>Hyper-V</li><li>虚拟机平台</li><li>Windows 沙盒<br>点击确定，无需立即重启。</li></ul><h3 id="3-关闭设备加密和内存隔离"><a href="#3-关闭设备加密和内存隔离" class="headerlink" title="3. 关闭设备加密和内存隔离"></a>3. 关闭设备加密和内存隔离</h3><ol><li>「设置」→「隐私和安全性」→ 关闭「设备加密」。</li><li>打开「Windows 安全中心」→「设备安全性」→「内存隔离」→ 关闭「内存完整性」。</li></ol><h3 id="4-在命令提示符（管理员）中修复系统配置"><a href="#4-在命令提示符（管理员）中修复系统配置" class="headerlink" title="4. 在命令提示符（管理员）中修复系统配置"></a>4. 在命令提示符（管理员）中修复系统配置</h3><ol><li><p>在开始菜单输入「cmd」→ 右键「以管理员身份运行」。</p></li><li><p>执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sfc /scannow<br></code></pre></td></tr></table></figure></li><li><p>扫描完成后继续执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bcdedit /set hypervisorlaunchtype off<br></code></pre></td></tr></table></figure></li></ol><h3 id="5-最后统一重启-→-进入-BIOS-开启虚拟化"><a href="#5-最后统一重启-→-进入-BIOS-开启虚拟化" class="headerlink" title="5. 最后统一重启 → 进入 BIOS 开启虚拟化"></a>5. 最后统一重启 → 进入 BIOS 开启虚拟化</h3><ol><li><p>重启电脑 → 开机连续按 <strong>F2 &#x2F; Delete</strong> 进入 BIOS。</p></li><li><p>根据 CPU 类型启用对应虚拟化参数：</p><ul><li>Intel：开启「Intel Virtualization Technology（VT-x）」和「VT-d」</li><li>AMD：开启「SVM（AMD-V）」和「IOMMU」</li></ul></li><li><p>保存设置 → 退出 BIOS → 自动重启回系统。</p></li></ol><h3 id="6-验证"><a href="#6-验证" class="headerlink" title="6. 验证"></a>6. 验证</h3><p>进入系统 → 打开完美平台 → 不再弹出虚拟化报错 → 可正常游戏。</p><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>游戏报错</tag>
+      
+      <tag>cpu虚拟化</tag>
+      
+      <tag>完美世界</tag>
+      
+      <tag>完美平台</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>用蓝牙耳机玩无畏契约声音变闷了怎么办</title>
     <link href="/valorant-bluetooth-sound-muffled-fix/"/>
     <url>/valorant-bluetooth-sound-muffled-fix/</url>

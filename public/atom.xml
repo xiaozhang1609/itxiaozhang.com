@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-11-04T08:06:08.251Z</updated>
+  <updated>2025-11-06T02:31:42.442Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>完美平台提示未开启CPU虚拟化的解决方法</title>
+    <link href="https://itxiaozhang.com/fix-perfect-platform-cpu-virtualization-error/"/>
+    <id>https://itxiaozhang.com/fix-perfect-platform-cpu-virtualization-error/</id>
+    <published>2025-11-06T02:19:09.000Z</published>
+    <updated>2025-11-06T02:31:42.442Z</updated>
+    
+    
+    <summary type="html">本文针对完美平台出现「当前您的设备未开启CPU虚拟化相关功能」的报错进行说明，提供从系统清理、关闭相关组件、命令修复到 BIOS 中启用虚拟化的完整操作步骤，最终确保平台与游戏可正常运行。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="游戏报错" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E6%8A%A5%E9%94%99/"/>
+    
+    <category term="cpu虚拟化" scheme="https://itxiaozhang.com/tags/cpu%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+    <category term="完美世界" scheme="https://itxiaozhang.com/tags/%E5%AE%8C%E7%BE%8E%E4%B8%96%E7%95%8C/"/>
+    
+    <category term="完美平台" scheme="https://itxiaozhang.com/tags/%E5%AE%8C%E7%BE%8E%E5%B9%B3%E5%8F%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>用蓝牙耳机玩无畏契约声音变闷了怎么办</title>
@@ -458,37 +483,6 @@
     <category term="鼠标错位" scheme="https://itxiaozhang.com/tags/%E9%BC%A0%E6%A0%87%E9%94%99%E4%BD%8D/"/>
     
     <category term="分辨率" scheme="https://itxiaozhang.com/tags/%E5%88%86%E8%BE%A8%E7%8E%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5E平台CSGO报错：反作弊异常提示需开启VT-d与IOMMU的解决方法</title>
-    <link href="https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/"/>
-    <id>https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/</id>
-    <published>2025-09-21T10:22:48.000Z</published>
-    <updated>2025-10-26T12:03:11.599Z</updated>
-    
-    
-    <summary type="html">本文归纳总结了5E平台运行CSGO时出现「反作弊异常，需开启VT-d或IOMMU」的完整解决方案，涵盖系统修复、关闭Hyper-V与内存完整性、禁用hypervisor引导，以及在BIOS中开启虚拟化功能等步骤，帮助用户快速排障。</summary>
-    
-    
-    
-    
-    <category term="ACE" scheme="https://itxiaozhang.com/tags/ACE/"/>
-    
-    <category term="5E平台" scheme="https://itxiaozhang.com/tags/5E%E5%B9%B3%E5%8F%B0/"/>
-    
-    <category term="CSGO报错" scheme="https://itxiaozhang.com/tags/CSGO%E6%8A%A5%E9%94%99/"/>
-    
-    <category term="反作弊" scheme="https://itxiaozhang.com/tags/%E5%8F%8D%E4%BD%9C%E5%BC%8A/"/>
-    
-    <category term="BIOS" scheme="https://itxiaozhang.com/tags/BIOS/"/>
-    
-    <category term="虚拟化" scheme="https://itxiaozhang.com/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
-    
-    <category term="VTD" scheme="https://itxiaozhang.com/tags/VTD/"/>
-    
-    <category term="iommu" scheme="https://itxiaozhang.com/tags/iommu/"/>
     
   </entry>
   
