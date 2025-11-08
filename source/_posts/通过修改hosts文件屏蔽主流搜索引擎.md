@@ -10,7 +10,7 @@ tags:
 - 搜索引擎
 ---
 
-> 原文地址：<https://itxiaozhang.com/pinyin/>  
+> 原文地址：<https://itxiaozhang.com/block-search-engines-windows-hosts/>  
 > 如果您需要远程电脑维修或者编程开发，请[加我微信](https://itxiaozhang.netlify.app/)咨询。 
 
 ## 问题描述
