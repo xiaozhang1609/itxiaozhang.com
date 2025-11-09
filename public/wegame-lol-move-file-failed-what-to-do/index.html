@@ -19,24 +19,25 @@
   <meta name="author" content="小章">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文汇总「无法登录战网」报错的常见原因及解决方案，包括防火墙设置、DNS修改、Host文件检查和客户端重装，帮助用户快速恢复战网登录及游戏功能。">
+    <meta name="description" content="本文分享解决 WeGame 下载或安装英雄联盟时提示移动文件失败的问题，包含磁盘修复、权限设置、系统清理及重新分区等完整排查流程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="战网登录失败，提示无法登录战网处理方法">
-<meta property="og:url" content="https://itxiaozhang.com/battlenet-login-error-solution/index.html">
+<meta property="og:title" content="WeGame 下载或安装英雄联盟出现移动文件失败怎么办">
+<meta property="og:url" content="https://itxiaozhang.com/wegame-lol-move-file-failed-what-to-do/index.html">
 <meta property="og:site_name" content="IT小章">
-<meta property="og:description" content="本文汇总「无法登录战网」报错的常见原因及解决方案，包括防火墙设置、DNS修改、Host文件检查和客户端重装，帮助用户快速恢复战网登录及游戏功能。">
+<meta property="og:description" content="本文分享解决 WeGame 下载或安装英雄联盟时提示移动文件失败的问题，包含磁盘修复、权限设置、系统清理及重新分区等完整排查流程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-11-08T03:08:10.000Z">
-<meta property="article:modified_time" content="2025-11-08T03:10:04.484Z">
+<meta property="article:published_time" content="2025-11-09T04:06:00.000Z">
+<meta property="article:modified_time" content="2025-11-09T04:07:55.909Z">
 <meta property="article:author" content="小章">
-<meta property="article:tag" content="DNS">
-<meta property="article:tag" content="守望先锋">
-<meta property="article:tag" content="战网">
+<meta property="article:tag" content="LOL">
+<meta property="article:tag" content="WeGame">
+<meta property="article:tag" content="磁盘修复">
+<meta property="article:tag" content="英雄联盟">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>战网登录失败，提示无法登录战网处理方法 - IT小章</title>
+  <title>WeGame 下载或安装英雄联盟出现移动文件失败怎么办 - IT小章</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">战网登录失败，提示无法登录战网处理方法</span>
+            <span id="subtitle">WeGame 下载或安装英雄联盟出现移动文件失败怎么办</span>
           
         </div>
 
@@ -214,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-11-08 11:08" pubdate>
-          2025年11月8日 上午
+        <time datetime="2025-11-09 12:06" pubdate>
+          2025年11月9日 中午
         </time>
       </span>
     
@@ -226,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          644 字
+          744 字
         
       </span>
     
@@ -237,7 +238,7 @@
         
         
         
-          6 分钟
+          7 分钟
         
       </span>
     
@@ -274,57 +275,82 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">战网登录失败，提示无法登录战网处理方法</h1>
+            <h1 id="seo-header">WeGame 下载或安装英雄联盟出现移动文件失败怎么办</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>原文地址：<a href="https://itxiaozhang.com/battlenet-login-error-solution/">https://itxiaozhang.com/battlenet-login-error-solution/</a><br>如果您需要远程电脑维修或者编程开发，请<a target="_blank" rel="noopener" href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p>
+<p>原文地址：<a href="https://itxiaozhang.com/wegame-lol-move-file-failed-what-to-do/">https://itxiaozhang.com/wegame-lol-move-file-failed-what-to-do/</a><br>如果您需要远程电脑维修或者编程开发，请<a target="_blank" rel="noopener" href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p>
 </blockquote>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>登录战网客户端时，提示报错：「无法登录战网。如果选择离线模式，部分游戏与功能将无法使用。」点击「重试」无效，依然出现相同报错。</p>
-<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol>
-<li><strong>防火墙阻止</strong>：Windows 防火墙可能阻止战网客户端访问网络。</li>
-<li><strong>DNS 配置异常</strong>：IPv4 DNS 地址设置不正确，导致无法解析战网服务器。</li>
-<li><strong>Host 文件干扰</strong>：Host 文件可能包含阻止战网连接的条目。</li>
-<li><strong>客户端或注册表异常</strong>：战网客户端文件损坏或注册表残留导致登录失败。</li>
-</ol>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="步骤-1：检查防火墙设置"><a href="#步骤-1：检查防火墙设置" class="headerlink" title="步骤 1：检查防火墙设置"></a>步骤 1：检查防火墙设置</h3><ol>
-<li><p>打开「控制面板 → 系统和安全 → Windows 防火墙 → 启用或关闭防火墙」。</p>
-</li>
-<li><p>尝试关闭防火墙后登录战网。</p>
-</li>
-<li><p>若无效，恢复默认防火墙设置（「使用推荐设置」）。</p>
-</li>
-<li><p>允许战网通过防火墙：</p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在使用 WeGame 下载或安装英雄联盟时，出现以下报错：</p>
 <ul>
-<li>点击「允许应用通过防火墙」</li>
-<li>若列表中无战网客户端，手动添加并勾选「专用」和「公用」网络。</li>
+<li>「移动文件失败，可能文件被占用或权限不足，请重启本机并关闭杀软后重试，错误码：7814080」</li>
+<li>「安装失败. 移动文件失败，可能文件被占用或权限不足，请重启本机并关闭条软后重试」</li>
+</ul>
+<p>同时，在尝试调整安装位置和磁盘时，磁盘管理提示：</p>
+<ul>
+<li>「选定进行压缩的卷可能已损坏。请使用 Chkdsk 来修复损坏问题，然后尝试再次压缩该卷。」</li>
+</ul>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol>
+<li>WeGame 文件被防火墙或杀毒软件拦截，或进程占用导致写入失败。</li>
+<li>系统存在不必要服务、启动项或软件干扰 WeGame。</li>
+<li>WeGame 残留文件未完全清除，导致再次安装异常。</li>
+<li>游戏安装所在磁盘分区存在损坏，导致无法正常移动&#x2F;写入文件。</li>
+</ol>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol>
+<li><p><strong>基础修复</strong></p>
+<ul>
+<li>找到 WeGame → 右键 → 打开文件所在位置 → 再次右键 → 打开文件所在位置 → 找到「Repair」→ 双击执行修复。</li>
+<li>修复后尝试重新下载游戏。</li>
+</ul>
+</li>
+<li><p><strong>检查防火墙设置</strong></p>
+<ul>
+<li>打开 Windows 防火墙 → 暂时关闭测试。</li>
+<li>若需要恢复 → 点击「允许应用通过防火墙」。</li>
+<li>找到「TGP」或 WeGame 相关应用 → 勾选专用网络和公用网络 → 保存。</li>
+</ul>
+</li>
+<li><p><strong>系统安全与进程检查</strong></p>
+<ul>
+<li><p>打开 Windows 安全中心 → 执行全盘扫描。</p>
+</li>
+<li><p>以管理员身份运行命令提示符，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sfc /scannow<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>运行「msconfig」→ 关闭不明或无关的服务与启动项。</p>
+</li>
+<li><p>若存在广告类或不必要软件（如壁纸软件等），建议卸载。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>完全卸载并重装 WeGame</strong></p>
+<ul>
+<li>使用卸载工具（如 Geek）卸载 WeGame → 清理残留注册表。</li>
+<li>重新下载安装 WeGame。</li>
+</ul>
+</li>
+<li><p><strong>检查并修复磁盘（重点）</strong></p>
+<ul>
+<li><p>若磁盘管理提示卷受损，说明安装盘可能存在文件系统错误。</p>
+</li>
+<li><p>以管理员身份打开命令行，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">chkdsk F: /f /r /x<br></code></pre></td></tr></table></figure>
+
+<p>（F 为实际需修复盘符）</p>
+</li>
+<li><p>若修复进度过慢且确认盘内无重要数据 → 可格式化该分区并重新分区。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>重新配置 WeGame 下载路径</strong></p>
+<ul>
+<li>打开 WeGame → 设置 → 下载与安装 → 修改到修复后或新分区路径。</li>
+<li>重新下载并安装游戏，确认可正常启动。</li>
 </ul>
 </li>
 </ol>
-<h3 id="步骤-2：修改-DNS-设置"><a href="#步骤-2：修改-DNS-设置" class="headerlink" title="步骤 2：修改 DNS 设置"></a>步骤 2：修改 DNS 设置</h3><ol>
-<li>打开管理员模式的终端，输入 <code>ncpa.cpl</code> 回车，打开网络连接。</li>
-<li>双击常用网卡 → 属性 → 选中 IPv4 → 属性。</li>
-<li>将 DNS 地址修改为 <code>8.8.8.8</code>。</li>
-<li>在终端输入 <code>ipconfig /flushdns</code> 刷新 DNS 缓存。</li>
-<li>测试战网客户端是否能正常登录。</li>
-</ol>
-<h3 id="步骤-3：检查-Host-文件"><a href="#步骤-3：检查-Host-文件" class="headerlink" title="步骤 3：检查 Host 文件"></a>步骤 3：检查 Host 文件</h3><ol>
-<li>路径：<code>C:\Windows\System32\drivers\etc\hosts</code></li>
-<li>备份原文件后，将其移动或删除。</li>
-<li>测试战网客户端是否能登录。</li>
-<li>如有效，保持此状态；若无效，恢复原 Host 文件。</li>
-</ol>
-<h3 id="步骤-4：重装战网客户端"><a href="#步骤-4：重装战网客户端" class="headerlink" title="步骤 4：重装战网客户端"></a>步骤 4：重装战网客户端</h3><ol>
-<li>下载最新战网安装包。</li>
-<li>使用卸载工具彻底卸载原客户端，包括注册表清理。</li>
-<li>双击安装包重新安装，建议更改安装路径以避免冲突。</li>
-<li>安装完成后登录并启动游戏。</li>
-</ol>
-<blockquote>
-<p><strong>提示</strong>：方法按顺序尝试，任一方法有效即可停止后续操作。</p>
-</blockquote>
 <h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
@@ -364,11 +390,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/DNS/" class="print-no-link">#DNS</a>
+        <a href="/tags/WeGame/" class="print-no-link">#WeGame</a>
       
-        <a href="/tags/%E6%88%98%E7%BD%91/" class="print-no-link">#战网</a>
+        <a href="/tags/%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F/" class="print-no-link">#英雄联盟</a>
       
-        <a href="/tags/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B/" class="print-no-link">#守望先锋</a>
+        <a href="/tags/LOL/" class="print-no-link">#LOL</a>
+      
+        <a href="/tags/%E7%A3%81%E7%9B%98%E4%BF%AE%E5%A4%8D/" class="print-no-link">#磁盘修复</a>
       
     </div>
   
@@ -380,8 +408,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>战网登录失败，提示无法登录战网处理方法</div>
-      <div>https://itxiaozhang.com/battlenet-login-error-solution/</div>
+      <div>WeGame 下载或安装英雄联盟出现移动文件失败怎么办</div>
+      <div>https://itxiaozhang.com/wegame-lol-move-file-failed-what-to-do/</div>
     </div>
     <div class="license-meta">
       
@@ -393,7 +421,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年11月8日</div>
+          <div>2025年11月9日</div>
         </div>
       
       
@@ -425,18 +453,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/wegame-lol-move-file-failed-what-to-do/" title="WeGame 下载或安装英雄联盟出现移动文件失败怎么办">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">WeGame 下载或安装英雄联盟出现移动文件失败怎么办</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/fix-perfect-platform-cpu-virtualization-error/" title="完美平台提示未开启CPU虚拟化的解决方法">
-                        <span class="hidden-mobile">完美平台提示未开启CPU虚拟化的解决方法</span>
+                      <a href="/battlenet-login-error-solution/" title="战网登录失败，提示无法登录战网处理方法">
+                        <span class="hidden-mobile">战网登录失败，提示无法登录战网处理方法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

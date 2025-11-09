@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>WeGame 下载或安装英雄联盟出现移动文件失败怎么办</title>
+    <link href="/wegame-lol-move-file-failed-what-to-do/"/>
+    <url>/wegame-lol-move-file-failed-what-to-do/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/wegame-lol-move-file-failed-what-to-do/">https://itxiaozhang.com/wegame-lol-move-file-failed-what-to-do/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在使用 WeGame 下载或安装英雄联盟时，出现以下报错：</p><ul><li>「移动文件失败，可能文件被占用或权限不足，请重启本机并关闭杀软后重试，错误码：7814080」</li><li>「安装失败. 移动文件失败，可能文件被占用或权限不足，请重启本机并关闭条软后重试」</li></ul><p>同时，在尝试调整安装位置和磁盘时，磁盘管理提示：</p><ul><li>「选定进行压缩的卷可能已损坏。请使用 Chkdsk 来修复损坏问题，然后尝试再次压缩该卷。」</li></ul><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ol><li>WeGame 文件被防火墙或杀毒软件拦截，或进程占用导致写入失败。</li><li>系统存在不必要服务、启动项或软件干扰 WeGame。</li><li>WeGame 残留文件未完全清除，导致再次安装异常。</li><li>游戏安装所在磁盘分区存在损坏，导致无法正常移动&#x2F;写入文件。</li></ol><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>基础修复</strong></p><ul><li>找到 WeGame → 右键 → 打开文件所在位置 → 再次右键 → 打开文件所在位置 → 找到「Repair」→ 双击执行修复。</li><li>修复后尝试重新下载游戏。</li></ul></li><li><p><strong>检查防火墙设置</strong></p><ul><li>打开 Windows 防火墙 → 暂时关闭测试。</li><li>若需要恢复 → 点击「允许应用通过防火墙」。</li><li>找到「TGP」或 WeGame 相关应用 → 勾选专用网络和公用网络 → 保存。</li></ul></li><li><p><strong>系统安全与进程检查</strong></p><ul><li><p>打开 Windows 安全中心 → 执行全盘扫描。</p></li><li><p>以管理员身份运行命令提示符，执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sfc /scannow<br></code></pre></td></tr></table></figure></li><li><p>运行「msconfig」→ 关闭不明或无关的服务与启动项。</p></li><li><p>若存在广告类或不必要软件（如壁纸软件等），建议卸载。</p></li></ul></li><li><p><strong>完全卸载并重装 WeGame</strong></p><ul><li>使用卸载工具（如 Geek）卸载 WeGame → 清理残留注册表。</li><li>重新下载安装 WeGame。</li></ul></li><li><p><strong>检查并修复磁盘（重点）</strong></p><ul><li><p>若磁盘管理提示卷受损，说明安装盘可能存在文件系统错误。</p></li><li><p>以管理员身份打开命令行，执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">chkdsk F: /f /r /x<br></code></pre></td></tr></table></figure><p>（F 为实际需修复盘符）</p></li><li><p>若修复进度过慢且确认盘内无重要数据 → 可格式化该分区并重新分区。</p></li></ul></li><li><p><strong>重新配置 WeGame 下载路径</strong></p><ul><li>打开 WeGame → 设置 → 下载与安装 → 修改到修复后或新分区路径。</li><li>重新下载并安装游戏，确认可正常启动。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>WeGame</tag>
+      
+      <tag>英雄联盟</tag>
+      
+      <tag>LOL</tag>
+      
+      <tag>磁盘修复</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>战网登录失败，提示无法登录战网处理方法</title>
     <link href="/battlenet-login-error-solution/"/>
     <url>/battlenet-login-error-solution/</url>
