@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itxiaozhang.com/installation-no-response-cannot-open-software/</loc>
+    
+    <lastmod>2025-11-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itxiaozhang.com/battlefield6-javelin-anti-cheat-secure-boot-error/</loc>
     
     <lastmod>2025-11-10</lastmod>
@@ -4487,6 +4496,27 @@
   
   <url>
     <loc>https://itxiaozhang.com/tags/Javelin/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E5%AE%89%E5%85%A8%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E7%81%AB%E7%BB%92/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

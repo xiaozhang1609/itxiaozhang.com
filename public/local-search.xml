@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>安装包双击无反应，无法安装软件，无法打开程序</title>
+    <link href="/installation-no-response-cannot-open-software/"/>
+    <url>/installation-no-response-cannot-open-software/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/installation-no-response-cannot-open-software/">https://itxiaozhang.com/installation-no-response-cannot-open-software/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>双击安装包或软件时，无任何反应，不弹出安装界面或运行窗口。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>此问题多为「火绒安全软件」拦截所致。用户可能在安装过程中误选了「阻止」并勾选了「记住本操作，下次自动处理」，导致后续所有类似操作被火绒自动拦截而不再提示。<br>此外，部分其他安全类软件（如360安全卫士、腾讯电脑管家等）也可能出现类似拦截提示，造成安装程序无法启动。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p>检查电脑是否安装火绒或其他安全软件。</p></li><li><p>若已安装，观察是否有拦截提示窗口出现在右下角。</p></li><li><p>如果不再弹出提示，可能是之前误选「阻止并记住」。</p></li><li><p>可尝试以下方法：</p><ul><li>方法一：退出安全软件后重新运行安装包；</li><li>方法二：在安全软件设置中找到「信任区」或「拦截记录」，将对应程序设为「允许」；</li><li>方法三：临时卸载安全软件，安装完成后再重新安装。</li></ul></li><li><p>重新运行安装包时，确保在提示窗口中选择「允许」，不要勾选「记住操作」再点「阻止」。</p></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>电脑维修</tag>
+      
+      <tag>安全软件</tag>
+      
+      <tag>火绒</tag>
+      
+      <tag>安装软件</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>战地6未开启 Secure Boot，无法启用 Javelin 反作弊系统</title>
     <link href="/battlefield6-javelin-anti-cheat-secure-boot-error/"/>
     <url>/battlefield6-javelin-anti-cheat-secure-boot-error/</url>
