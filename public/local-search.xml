@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>战地6未开启 Secure Boot，无法启用 Javelin 反作弊系统</title>
+    <link href="/battlefield6-javelin-anti-cheat-secure-boot-error/"/>
+    <url>/battlefield6-javelin-anti-cheat-secure-boot-error/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/battlefield6-javelin-anti-cheat-secure-boot-error/">https://itxiaozhang.com/battlefield6-javelin-anti-cheat-secure-boot-error/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>启动《战地6》时会出现提示：未开启 Secure Boot，导致无法正常启动 Javelin 反作弊系统，游戏无法进入。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>系统的 Secure Boot（安全启动）被关闭。Javelin 反作弊要求系统处于 Secure Boot 已启用状态，若未开启，反作弊驱动&#x2F;模块无法初始化，从而阻止游戏启动。TPM 状态正常并不能替代 Secure Boot。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>确认系统信息</strong></p><ul><li>按「Win + R」，输入「msinfo32」并回车。</li><li>查看「BIOS 模式」是否为「UEFI」，并确认「安全启动状态」是否为「关闭」。</li></ul></li><li><p><strong>确认 TPM（可选）</strong></p><ul><li>按「Win + R」，输入「tpm.msc」。</li><li>若显示「TPM 已启用」且为「2.0」，无须调整；若未启用，按主板&#x2F;系统说明启用 TPM。</li></ul></li><li><p><strong>启用 Secure Boot</strong></p><ul><li>重启进入 BIOS&#x2F;UEFI 设置（常见按键：F2、Del、F10，依厂商而定）。</li><li>切换到「高级模式」，找到「Security（安全性）」或「Boot」项。</li><li>将「Secure Boot Control／Secure Boot」设为「Enabled／开启」。</li><li>若存在「OS Type」或「Boot Mode」选项，确保使用「UEFI」或「Windows UEFI」模式。</li><li>保存并退出（Save &amp; Exit）。</li></ul></li><li><p><strong>验证与重试</strong></p><ul><li>系统重启后再次运行「msinfo32」，确认「安全启动状态」显示为「已启用」。</li><li>启动《战地6》，会出现「正在启动 Javelin 反作弊系统」提示，但此时 Javelin 应能正常加载，游戏可进入。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>反作弊</tag>
+      
+      <tag>Secure Boot</tag>
+      
+      <tag>战地6</tag>
+      
+      <tag>Javelin</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WeGame 下载或安装英雄联盟出现移动文件失败怎么办</title>
     <link href="/wegame-lol-move-file-failed-what-to-do/"/>
     <url>/wegame-lol-move-file-failed-what-to-do/</url>

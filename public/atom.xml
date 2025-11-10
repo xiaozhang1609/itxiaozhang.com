@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-11-09T04:07:55.909Z</updated>
+  <updated>2025-11-10T09:30:05.072Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>战地6未开启 Secure Boot，无法启用 Javelin 反作弊系统</title>
+    <link href="https://itxiaozhang.com/battlefield6-javelin-anti-cheat-secure-boot-error/"/>
+    <id>https://itxiaozhang.com/battlefield6-javelin-anti-cheat-secure-boot-error/</id>
+    <published>2025-11-10T09:23:17.000Z</published>
+    <updated>2025-11-10T09:30:05.072Z</updated>
+    
+    
+    <summary type="html">《战地6》启动时若提示系统未启用 Secure Boot，无法正常启动 Javelin 反作弊系统。本文介绍检查与开启安全启动的方法，帮助解决无法启动的问题。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="反作弊" scheme="https://itxiaozhang.com/tags/%E5%8F%8D%E4%BD%9C%E5%BC%8A/"/>
+    
+    <category term="Secure Boot" scheme="https://itxiaozhang.com/tags/Secure-Boot/"/>
+    
+    <category term="战地6" scheme="https://itxiaozhang.com/tags/%E6%88%98%E5%9C%B06/"/>
+    
+    <category term="Javelin" scheme="https://itxiaozhang.com/tags/Javelin/"/>
+    
+  </entry>
   
   <entry>
     <title>WeGame 下载或安装英雄联盟出现移动文件失败怎么办</title>
@@ -458,31 +483,6 @@
     <category term="Windows" scheme="https://itxiaozhang.com/tags/Windows/"/>
     
     <category term="系统命令" scheme="https://itxiaozhang.com/tags/%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>卸载流氓软件极速输入法</title>
-    <link href="https://itxiaozhang.com/uninstall-jisu-input-method/"/>
-    <id>https://itxiaozhang.com/uninstall-jisu-input-method/</id>
-    <published>2025-09-29T07:37:27.000Z</published>
-    <updated>2025-10-26T12:03:11.658Z</updated>
-    
-    
-    <summary type="html">本文介绍如何卸载难以移除的极速输入法，包括重新安装、卸载、清理残留和重启电脑，彻底清除该流氓软件。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="输入法" scheme="https://itxiaozhang.com/tags/%E8%BE%93%E5%85%A5%E6%B3%95/"/>
-    
-    <category term="极速输入法" scheme="https://itxiaozhang.com/tags/%E6%9E%81%E9%80%9F%E8%BE%93%E5%85%A5%E6%B3%95/"/>
-    
-    <category term="卸载教程" scheme="https://itxiaozhang.com/tags/%E5%8D%B8%E8%BD%BD%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="流氓软件" scheme="https://itxiaozhang.com/tags/%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
