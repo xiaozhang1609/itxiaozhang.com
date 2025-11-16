@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>WeGame 无法启动英雄联盟死循环</title>
+    <link href="/wegame-league-launch-issue-fix/"/>
+    <url>/wegame-league-launch-issue-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/wegame-league-launch-issue-fix/">https://itxiaozhang.com/wegame-league-launch-issue-fix/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>电脑通过 WeGame 启动「英雄联盟」时无任何反应，等待一段时间后会自动返回 WeGame 的初始启动界面，始终无法进入游戏。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ul><li>系统文件可能存在损坏，未正常修复。</li><li>运行库版本过旧或残留，影响程序调用。</li><li>显卡驱动过老，导致游戏无法正常初始化。</li><li>系统时区与本地时间不同步，引发平台校验失败。</li><li>系统区域设置未启用 UTF-8，造成兼容性问题。</li></ul><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>执行安全检查</strong>：在病毒与威胁防护中进行全盘扫描。</p></li><li><p><strong>修复系统文件</strong>：以管理员身份运行命令行，执行「SFC &#x2F;SCANNOW」。</p></li><li><p><strong>清理旧运行库并重装</strong>：</p><ul><li>卸载已安装的 64 位与 32 位运行库。</li><li>重新安装新版运行库。</li></ul></li><li><p><strong>更新显卡驱动</strong>：</p><ul><li>前往英伟达官网，根据显卡型号与系统选择正确驱动。</li><li>安装方式选择「自定义」，勾选「清洁安装」，完成更新。</li></ul></li><li><p><strong>同步系统时间</strong>：</p><ul><li>开启自动时区。</li><li>执行「立即同步」。</li></ul></li><li><p><strong>启用 UTF-8 支持</strong>：</p><ul><li>在区域设置中开启 UTF-8 兼容选项，并重启电脑。</li></ul></li><li><p><strong>重新测试游戏启动</strong>：重启后通过 WeGame 再次启动游戏确认是否恢复正常。</p></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>运行库</tag>
+      
+      <tag>显卡驱动</tag>
+      
+      <tag>WeGame</tag>
+      
+      <tag>英雄联盟</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>安装包双击无反应，无法安装软件，无法打开程序</title>
     <link href="/installation-no-response-cannot-open-software/"/>
     <url>/installation-no-response-cannot-open-software/</url>
