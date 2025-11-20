@@ -4,6 +4,29 @@
   
   
   <entry>
+    <title>直播伴侣画面添加静态和动态元素</title>
+    <link href="/live-companion-static-dynamic-elements/"/>
+    <url>/live-companion-static-dynamic-elements/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/live-companion-static-dynamic-elements/">https://itxiaozhang.com/live-companion-static-dynamic-elements/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在「直播伴侣」中，直播画面需要添加静态与动态元素，如多个人物头像，其中静态头像为图片，动态头像为动图或视频。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>该效果不是自动生成，而是通过直播伴侣叠加素材实现。如果没有提前准备图片或动图，或者未正确添加到直播场景，就无法显示所需效果。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>准备素材</strong></p><ul><li>静态元素：制作图片素材。</li><li>动态元素：准备 GIF 或短视频素材。</li></ul></li><li><p><strong>添加静态素材</strong></p><ul><li>打开直播伴侣。</li><li>在直播场景中添加「图片」素材。</li><li>调整位置和大小，将多个头像或静态元素排列好。</li></ul></li><li><p><strong>添加动态素材</strong></p><ul><li>添加「视频 &#x2F; 动图」素材。</li><li>调整大小与位置，使静态和动态元素统一协调。</li></ul></li><li><p><strong>优化布局</strong></p><ul><li>可继续添加更多静态或动态素材。</li><li>调整图层顺序与排列，使画面整齐自然。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>直播伴侣</tag>
+      
+      <tag>直播</tag>
+      
+      <tag>直播技巧</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>英雄联盟日服修改语言为中文教程</title>
     <link href="/lol-change-language-jp-to-chinese-tutorial/"/>
     <url>/lol-change-language-jp-to-chinese-tutorial/</url>

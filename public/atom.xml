@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-11-20T11:28:40.778Z</updated>
+  <updated>2025-11-20T12:51:49.224Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>直播伴侣画面添加静态和动态元素</title>
+    <link href="https://itxiaozhang.com/live-companion-static-dynamic-elements/"/>
+    <id>https://itxiaozhang.com/live-companion-static-dynamic-elements/</id>
+    <published>2025-11-20T12:50:52.000Z</published>
+    <updated>2025-11-20T12:51:49.224Z</updated>
+    
+    
+    <summary type="html">本文介绍如何在直播伴侣中为直播画面添加静态图片和动态动图或视频元素，实现多头像或其他动态效果的展示，步骤清晰易操作。</summary>
+    
+    
+    
+    
+    <category term="直播伴侣" scheme="https://itxiaozhang.com/tags/%E7%9B%B4%E6%92%AD%E4%BC%B4%E4%BE%A3/"/>
+    
+    <category term="直播" scheme="https://itxiaozhang.com/tags/%E7%9B%B4%E6%92%AD/"/>
+    
+    <category term="直播技巧" scheme="https://itxiaozhang.com/tags/%E7%9B%B4%E6%92%AD%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>英雄联盟日服修改语言为中文教程</title>
@@ -460,29 +481,6 @@
     <category term="磁盘分区" scheme="https://itxiaozhang.com/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/"/>
     
     <category term="驱动安装" scheme="https://itxiaozhang.com/tags/%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Wallpaper任何软件全屏后切回桌面都会黑屏一秒</title>
-    <link href="https://itxiaozhang.com/wallpaper-fullscreen-black-screen-fix/"/>
-    <id>https://itxiaozhang.com/wallpaper-fullscreen-black-screen-fix/</id>
-    <published>2025-10-04T04:45:30.000Z</published>
-    <updated>2025-10-26T12:03:11.742Z</updated>
-    
-    
-    <summary type="html">使用 Wallpaper 壁纸软件时，任何全屏应用切回桌面都会出现短暂黑屏。本文提供性能和常规设置的修改步骤，帮助快速解决问题。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="Wallpaper" scheme="https://itxiaozhang.com/tags/Wallpaper/"/>
-    
-    <category term="黑屏" scheme="https://itxiaozhang.com/tags/%E9%BB%91%E5%B1%8F/"/>
-    
-    <category term="壁纸" scheme="https://itxiaozhang.com/tags/%E5%A3%81%E7%BA%B8/"/>
     
   </entry>
   
