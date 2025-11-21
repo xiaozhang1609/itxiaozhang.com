@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>一打开英雄联盟电脑就断网怎么办？</title>
+    <link href="/how-to-fix-lol-computer-disconnect/"/>
+    <url>/how-to-fix-lol-computer-disconnect/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/how-to-fix-lol-computer-disconnect/">https://itxiaozhang.com/how-to-fix-lol-computer-disconnect/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>打开英雄联盟后，整个电脑会断网。无论进入训练营或任何模式，在加载界面都会反复提示「重新连接中，请稍候」，而其他软件与游戏均正常。进入游戏后无法正常操作。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><ul><li>英雄联盟启动时会进行大量 DNS 解析与连接请求。</li><li>若家庭网络存在多个光猫或路由器串联，可能产生 DHCP 或 DNS 冲突，导致网络异常。</li><li><strong>常见触发场景</strong>：多人合租、房东或前任租客遗留旧路由器、光猫后级联多个路由器、桥接设置不当、路由模式混乱，容易导致网络地址分配冲突。</li></ul><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>排除电脑自身网络问题</strong></p><ul><li>拔掉电脑网线。</li><li>使用手机热点测试网络是否正常。</li><li>若不正常，修改热点名称与密码后重新连接，再测试。若正常则继续下一步。</li></ul></li><li><p><strong>检查光猫或路由器连接</strong></p><ul><li>找到家中的光猫或路由器，查看连接的网线数量。</li><li><strong>仅保留电脑使用的那一根网线，拔掉其余所有网线</strong>。</li><li>拔掉光猫或路由器电源，等待约 10 秒后重新接通。</li><li>待指示灯全部恢复正常后，重新测试游戏。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网络问题</tag>
+      
+      <tag>英雄联盟</tag>
+      
+      <tag>LOL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>直播伴侣画面添加静态和动态元素</title>
     <link href="/live-companion-static-dynamic-elements/"/>
     <url>/live-companion-static-dynamic-elements/</url>
@@ -31,8 +60,14 @@
     <link href="/lol-change-language-jp-to-chinese-tutorial/"/>
     <url>/lol-change-language-jp-to-chinese-tutorial/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/lol-change-language-jp-to-chinese-tutorial/">https://itxiaozhang.com/lol-change-language-jp-to-chinese-tutorial/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>日服《英雄联盟》启动时默认显示英文界面。用户希望将界面切换为中文，需要手动编辑客户端的语言配置文件并确保修改不被自动覆盖。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>客户端默认语言设定为英文，且不同服务器提供的语言代码不同。若不手动修改配置文件的「locale」字段，或未将文件设为只读，系统会在更新时恢复默认语言。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>完全关闭英雄联盟客户端。</strong></p></li><li><p>进入 Riot Games 的配置目录（可直接从资源管理器地址栏粘贴路径）。</p></li><li><p>找到语言配置文件「league_of_legends.live.product_settings.yaml」，以记事本打开。</p></li><li><p>搜索「locale:」字段，将其值替换为对应的语言代码：</p><ul><li>简体中文：zh_CN</li><li>繁体中文：zh_TW</li><li>日文：ja_JP</li><li>韩文：ko_KR</li><li>英文：en_US</li></ul></li><li><p>保存并关闭文件。</p></li><li><p>打开文件属性，勾选「只读」，防止启动后被覆盖。</p></li><li><p>重新启动 Riot Client，让客户端更新语言包。</p></li><li><p>更新完成后启动游戏，界面即切换为设定语言。</p></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/lol-change-language-jp-to-chinese-tutorial/">https://itxiaozhang.com/lol-change-language-jp-to-chinese-tutorial/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>日服《英雄联盟》启动时默认显示英文界面。用户希望将界面切换为中文，需要手动编辑客户端的语言配置文件并确保修改不被自动覆盖。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>客户端默认语言设定为英文，且不同服务器提供的语言代码不同。若不手动修改配置文件的「locale」字段，或未将文件设为只读，系统会在更新时恢复默认语言。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>完全关闭英雄联盟客户端。</strong></p></li><li><p>进入 Riot Games 的配置目录 <code>C:\ProgramData\Riot Games\Metadata\league_of_legends.live</code>。</p></li><li><p>找到语言配置文件「league_of_legends.live.product_settings.yaml」，以记事本打开。</p></li><li><p>搜索「locale:」字段，将其值替换为对应的语言代码：</p><ul><li>简体中文：zh_CN</li><li>繁体中文：zh_TW</li><li>日文：ja_JP</li><li>韩文：ko_KR</li><li>英文：en_US</li></ul></li><li><p>保存并关闭文件。</p></li><li><p>打开文件属性，勾选「只读」，防止启动后被覆盖。</p></li><li><p>重新启动 Riot Client，让客户端更新语言包。</p></li><li><p>更新完成后启动游戏，界面即切换为设定语言。</p></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
     
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
     
     
   </entry>
