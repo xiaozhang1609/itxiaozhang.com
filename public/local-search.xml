@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>开启英伟达APP信息浮窗修改保存路径和快捷键</title>
+    <link href="/nvidia-app-overlay-and-recording-troubleshooting/"/>
+    <url>/nvidia-app-overlay-and-recording-troubleshooting/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/nvidia-app-overlay-and-recording-troubleshooting/">https://itxiaozhang.com/nvidia-app-overlay-and-recording-troubleshooting/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a><strong>问题描述</strong></h2><p>按下「Alt+Z」快捷键无法调出英伟达 APP 的界面，虽然系统已安装英伟达 APP，但快捷键无反应。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a><strong>问题原因</strong></h2><ul><li>英伟达 APP 中的「信息浮窗」未开启，导致快捷键无法呼出界面。</li><li>默认录制文件保存在系统盘，可能造成空间不足。</li><li>快捷键未按需求进行调整。</li></ul><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a><strong>解决办法</strong></h2><ol><li><p><strong>确认是否已安装英伟达 APP</strong></p><ul><li>在右下角托盘区找到英伟达图标，右键查看是否存在「英伟达 APP」。</li></ul></li><li><p><strong>开启信息浮窗</strong></p><ul><li>打开英伟达 APP → 设置 → 查找「信息浮窗」。</li><li>若处于关闭状态，将其开启。</li><li>关闭界面后按「Alt+Z」测试是否正常呼出。</li></ul></li><li><p><strong>修改录制文件保存位置</strong></p><ul><li>进入英伟达 APP → 设置 → 文件与存储管理。</li><li>点击「图库位置」后的更改选项。</li><li>返回根目录，选择非系统盘（如 D 盘）。</li><li>新建或选择一个空文件夹并确认。</li></ul></li><li><p><strong>调整录制快捷键</strong></p><ul><li>打开英伟达 APP → 设置 → 快捷键。</li><li>在「录制」中找到「打开&#x2F;关闭录制」。</li><li>设置新的快捷键，如「P」。</li><li>测试按键是否能正常开始与结束录制（默认为「Alt+F9」）。</li></ul></li><li><p><strong>检查录制文件</strong></p><ul><li>打开刚设置的保存目录，确认录制文件是否成功生成。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>英伟达APP</tag>
+      
+      <tag>信息浮窗</tag>
+      
+      <tag>Nvidia APP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>wegame微信登陆异常：该页面暂时无法显示，点击刷新或稍后再试</title>
     <link href="/wegame-weixin-login-error-solution/"/>
     <url>/wegame-weixin-login-error-solution/</url>
