@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>微软输入法中文候选框不显示怎么办？</title>
+    <link href="/microsoft-ime-chinese-candidate-box-fix/"/>
+    <url>/microsoft-ime-chinese-candidate-box-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/microsoft-ime-chinese-candidate-box-fix/">https://itxiaozhang.com/microsoft-ime-chinese-candidate-box-fix/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在使用微软拼音输入中文时出现「不显示候选框」的情况。英文输入正常，但切换到中文后无法看到候选框，无法正常选字。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>该问题多由微软拼音组件异常或兼容性设置异常引起。可能是语言包损坏、输入法键盘组件未正确加载，或需启用兼容模式。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="一、开启微软拼音兼容性（快速直观）"><a href="#一、开启微软拼音兼容性（快速直观）" class="headerlink" title="一、开启微软拼音兼容性（快速直观）"></a>一、开启微软拼音兼容性（快速直观）</h3><ol><li>任务栏右侧点击时间 →「调整日期和时间」。</li><li>左侧进入「语言」。</li><li>在「中文（简体）」中点击「选项」。</li><li>选择「微软拼音」→「选项」。</li><li>打开「常规」，下滑到底部启用「兼容性」。</li><li>关闭设置后重新测试，候选框应恢复。</li></ol><h3 id="二、重置键盘组件（较快）"><a href="#二、重置键盘组件（较快）" class="headerlink" title="二、重置键盘组件（较快）"></a>二、重置键盘组件（较快）</h3><ol><li>设置 → 时间和语言 → 语言 → 中文（简体）。</li><li>进入「选项」。</li><li>底部添加「微软五笔」。</li><li>删除「微软拼音」。</li><li>再次添加「微软拼音」。</li><li>删除微软五笔。<br>输入法键盘组件会刷新，候选框通常可恢复正常。</li></ol><h3 id="三、重装中文语言包（最彻底）"><a href="#三、重装中文语言包（最彻底）" class="headerlink" title="三、重装中文语言包（最彻底）"></a>三、重装中文语言包（最彻底）</h3><ol><li>设置 → 时间和语言 → 语言。</li><li>添加任意语言并拖到最上方。</li><li>删除原「中文（简体，中国）」。</li><li>重启电脑。</li><li>重新添加「Chinese（Simplified, China）」。</li><li>下载完成后删除刚才添加的临时语言。<br>系统会重新获取微软拼音组件，可彻底修复候选框问题。</li></ol><h3 id="四、启用旧版微软拼音（治标方案）"><a href="#四、启用旧版微软拼音（治标方案）" class="headerlink" title="四、启用旧版微软拼音（治标方案）"></a>四、启用旧版微软拼音（治标方案）</h3><p>在微软拼音设置中勾选「使用以前版本」，可临时恢复候选框。</p><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微软输入法</tag>
+      
+      <tag>输入法候选框</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>三角洲行动提示显存不足怎么办？</title>
     <link href="/delta-force-out-of-video-memory-solution/"/>
     <url>/delta-force-out-of-video-memory-solution/</url>
