@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-11-23T10:56:53.033Z</updated>
+  <updated>2025-11-27T04:48:28.810Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>三角洲行动提示显存不足怎么办？</title>
+    <link href="https://itxiaozhang.com/delta-force-out-of-video-memory-solution/"/>
+    <id>https://itxiaozhang.com/delta-force-out-of-video-memory-solution/</id>
+    <published>2025-11-27T04:10:51.000Z</published>
+    <updated>2025-11-27T04:48:28.810Z</updated>
+    
+    
+    <summary type="html">本文针对三角洲行动出现「Out of video memory…」及 GPU 占用异常偏高的问题，整理显卡驱动、虚拟内存及系统资源占用等原因，并提供完整操作步骤，帮助快速恢复显卡状态并顺利进入游戏。</summary>
+    
+    
+    
+    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+    
+    
+    <category term="三角洲行动" scheme="https://itxiaozhang.com/tags/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8/"/>
+    
+    <category term="显存不足" scheme="https://itxiaozhang.com/tags/%E6%98%BE%E5%AD%98%E4%B8%8D%E8%B6%B3/"/>
+    
+    <category term="GPU占用高" scheme="https://itxiaozhang.com/tags/GPU%E5%8D%A0%E7%94%A8%E9%AB%98/"/>
+    
+    <category term="delta force" scheme="https://itxiaozhang.com/tags/delta-force/"/>
+    
+  </entry>
   
   <entry>
     <title>开启英伟达APP信息浮窗修改保存路径和快捷键</title>
@@ -450,33 +475,6 @@
     
     
     <category term="工作室" scheme="https://itxiaozhang.com/tags/%E5%B7%A5%E4%BD%9C%E5%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无畏契约开直播伴侣后一直闪退</title>
-    <link href="https://itxiaozhang.com/valorant-crash-loop-after-opening-streaming-tool/"/>
-    <id>https://itxiaozhang.com/valorant-crash-loop-after-opening-streaming-tool/</id>
-    <published>2025-10-13T05:17:00.000Z</published>
-    <updated>2025-10-26T12:03:11.642Z</updated>
-    
-    
-    <summary type="html">本文说明《无畏契约》在开启直播伴侣后出现持续闪退的原因，并提供显卡驱动更新、运行库修复及直播伴侣重装等完整解决步骤，帮助用户快速恢复正常使用。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="无畏契约" scheme="https://itxiaozhang.com/tags/%E6%97%A0%E7%95%8F%E5%A5%91%E7%BA%A6/"/>
-    
-    <category term="运行库" scheme="https://itxiaozhang.com/tags/%E8%BF%90%E8%A1%8C%E5%BA%93/"/>
-    
-    <category term="显卡驱动" scheme="https://itxiaozhang.com/tags/%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/"/>
-    
-    <category term="直播伴侣" scheme="https://itxiaozhang.com/tags/%E7%9B%B4%E6%92%AD%E4%BC%B4%E4%BE%A3/"/>
-    
-    <category term="闪退" scheme="https://itxiaozhang.com/tags/%E9%97%AA%E9%80%80/"/>
     
   </entry>
   

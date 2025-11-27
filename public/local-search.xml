@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>三角洲行动提示显存不足怎么办？</title>
+    <link href="/delta-force-out-of-video-memory-solution/"/>
+    <url>/delta-force-out-of-video-memory-solution/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/delta-force-out-of-video-memory-solution/">https://itxiaozhang.com/delta-force-out-of-video-memory-solution/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>打开三角洲行动报错：「Out of video memory trying to allocate a rendering resource. Make sure your video card has the minimum required memory, try lowering the resolution and&#x2F;or closing other applications that are running. Exiting…」；<br>中文报错：「尝试分配渲染资源时显存不足。请确保你的显卡满足最低内存要求，并尝试降低分辨率和&#x2F;或关闭其他运行中的应用程序。正在退出……」。<br>此外，在未开启游戏的情况下，GPU 占用率依然偏高，表现异常。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>显卡驱动版本过旧或异常；虚拟内存配置不足；后台启动项及异常服务占用显存导致 GPU 资源紧张；显卡控制策略设置不当，使显存管理不稳定，从而触发显存不足提示。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li><p><strong>更新显卡驱动</strong></p><ul><li>在设备管理器确认显卡型号（如 RTX 4060 笔记本版）。</li><li>前往英伟达官网下载适配型号与系统版本的驱动。</li><li>安装时选择「自定义」，勾选「执行清洁安装」，完成后重启。</li></ul></li><li><p><strong>调整虚拟内存配置</strong></p><ul><li><p>打开系统设置 → 系统信息 → 高级系统设置 → 性能 → 设置 → 高级 → 虚拟内存。</p></li><li><p>取消自动管理，选择游戏所在磁盘。</p></li><li><p>根据 16GB 内存计算：</p><ul><li>16GB &#x3D; 16 × 1024 &#x3D; 16384MB</li><li>初始值：16384 × 1.5 &#x3D; 24576MB</li><li>最大值：16384 × 3 &#x3D; 49152MB</li></ul></li><li><p>输入后保存设置并确认。</p></li></ul></li><li><p><strong>清理后台占用资源</strong></p><ul><li>在任务管理器中关闭无用启动项。</li><li>运行「MSCONFIG」，关闭异常或不必要的服务，降低系统显存与 GPU 占用。</li></ul></li><li><p><strong>优化英伟达控制面板设置</strong></p><ul><li>打开英伟达控制面板 → 管理 3D 设置。</li><li>将「CUDA 系统内存回退政策」设为「偏好无系统内存回退」。</li><li>应用设置。</li></ul></li><li><p><strong>重启并验证效果</strong></p><ul><li>重启电脑后检查 GPU 占用是否恢复正常，再启动游戏测试着色器编译和运行情况。</li></ul></li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>电脑维修</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>三角洲行动</tag>
+      
+      <tag>显存不足</tag>
+      
+      <tag>GPU占用高</tag>
+      
+      <tag>delta force</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>开启英伟达APP信息浮窗修改保存路径和快捷键</title>
     <link href="/nvidia-app-overlay-and-recording-troubleshooting/"/>
     <url>/nvidia-app-overlay-and-recording-troubleshooting/</url>
