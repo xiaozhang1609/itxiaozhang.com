@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-11-30T09:45:35.196Z</updated>
+  <updated>2025-11-30T11:25:11.356Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SCP秘密实验室私服搭建教程</title>
+    <link href="https://itxiaozhang.com/scpsl-private-server-win-vps-guide/"/>
+    <id>https://itxiaozhang.com/scpsl-private-server-win-vps-guide/</id>
+    <published>2025-11-30T11:16:53.000Z</published>
+    <updated>2025-11-30T11:25:11.356Z</updated>
+    
+    
+    <summary type="html">本教程提供SCP:SL私服搭建的极简流程。采用 Windows 云服务器（VPS）， Steam 客户端图形界面方法，快速完成部署、配置与验证。内容涵盖环境准备、服务器工具安装、核心配置生成以及网络验证，高效建立并管理自己的私服。</summary>
+    
+    
+    
+    <category term="游戏问题" scheme="https://itxiaozhang.com/categories/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/"/>
+    
+    
+    <category term="游戏问题" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/"/>
+    
+    <category term="秘密实验室" scheme="https://itxiaozhang.com/tags/%E7%A7%98%E5%AF%86%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+    <category term="SCP秘密实验室" scheme="https://itxiaozhang.com/tags/SCP%E7%A7%98%E5%AF%86%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    
+    <category term="游戏教程" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>人类一败涂地点击邀请好友没有任何反应怎么办？</title>
@@ -456,29 +481,6 @@
     <category term="穿越火线" scheme="https://itxiaozhang.com/tags/%E7%A9%BF%E8%B6%8A%E7%81%AB%E7%BA%BF/"/>
     
     <category term="CFSystem" scheme="https://itxiaozhang.com/tags/CFSystem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开</title>
-    <link href="https://itxiaozhang.com/wegame-black-screen-blue-and-black-text-fix/"/>
-    <id>https://itxiaozhang.com/wegame-black-screen-blue-and-black-text-fix/</id>
-    <published>2025-10-29T02:31:25.000Z</published>
-    <updated>2025-10-29T02:33:17.021Z</updated>
-    
-    
-    <summary type="html">打开 WeGame 客户端时界面黑屏，文字与链接显示为蓝色和黑色，左侧所有游戏图标均为灰色或黑色，无法启动任何游戏。即使多次重装系统，问题依旧存在。</summary>
-    
-    
-    
-    <category term="电脑维修" scheme="https://itxiaozhang.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-    
-    
-    <category term="网络" scheme="https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="游戏问题" scheme="https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/"/>
-    
-    <category term="WeGame" scheme="https://itxiaozhang.com/tags/WeGame/"/>
     
   </entry>
   
