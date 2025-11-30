@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://itxiaozhang.com/lol-reconnecting-fix-wired-network-troubleshoot/</loc>
+    
+    <lastmod>2025-11-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://itxiaozhang.com/scpsl-private-server-win-vps-guide/</loc>
     
     <lastmod>2025-11-30</lastmod>
@@ -4721,6 +4730,20 @@
   
   <url>
     <loc>https://itxiaozhang.com/tags/%E6%B8%B8%E6%88%8F%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/%E7%BD%91%E7%BB%9C%E6%95%85%E9%9A%9C/</loc>
+    <lastmod>2025-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://itxiaozhang.com/tags/USB%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/</loc>
     <lastmod>2025-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
