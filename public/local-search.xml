@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>人类一败涂地点击邀请好友没有任何反应怎么办？</title>
+    <link href="/human-fall-flat-invite-friend-no-response-fix/"/>
+    <url>/human-fall-flat-invite-friend-no-response-fix/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>原文地址：<a href="https://itxiaozhang.com/human-fall-flat-invite-friend-no-response-fix/">https://itxiaozhang.com/human-fall-flat-invite-friend-no-response-fix/</a><br>如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。</p></blockquote><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在游戏「Human: Fall Flat（人类一败涂地）」中，点击邀请好友没有任何反应，无法正常发送游戏邀请。</p><h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>该问题通常由 Steam 叠加界面（Steam Overlay）被关闭或未正确启用导致。邀请好友功能依赖叠加界面的系统层与游戏层同时开启，任一关闭都会导致按钮无响应。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="一、启用-Steam-客户端层级的叠加界面"><a href="#一、启用-Steam-客户端层级的叠加界面" class="headerlink" title="一、启用 Steam 客户端层级的叠加界面"></a>一、启用 Steam 客户端层级的叠加界面</h3><ol><li>打开 Steam 客户端，进入「设置」。</li><li>点击「游戏中」。</li><li>启用「在游戏中启用 Steam 叠加界面」。</li></ol><h3 id="二、启用游戏本身的叠加界面"><a href="#二、启用游戏本身的叠加界面" class="headerlink" title="二、启用游戏本身的叠加界面"></a>二、启用游戏本身的叠加界面</h3><ol><li>在游戏库中找到「Human: Fall Flat（人类一败涂地）」。</li><li>右键选择「属性」。</li><li>在「通用」选项中，启用「在游戏中启用 Steam 叠加界面」。</li><li>确认系统层与游戏层的叠加界面均已开启。</li><li>关闭并重新启动游戏，即可正常邀请好友。</li><li>若其他 Steam 游戏也无法邀请好友，同样可按此方法检查并修复。</li></ol><h2 id="视频版本"><a href="#视频版本" class="headerlink" title="视频版本"></a>视频版本</h2><ul><li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li><li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li></ul><hr><p>▶ 如果您需要远程电脑维修或者编程开发，请<a href="https://itxiaozhang.netlify.app/">加我微信</a>咨询。<br>▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。<br>▶ <strong>我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。</strong>  </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>游戏问题</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>游戏问题</tag>
+      
+      <tag>Steam</tag>
+      
+      <tag>人类一败涂地</tag>
+      
+      <tag>[object Object]</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>英雄联盟进入游戏后一直提示「英雄已重新连接」怎么办</title>
     <link href="/lol-hero-reconnected-issue-fix/"/>
     <url>/lol-hero-reconnected-issue-fix/</url>
