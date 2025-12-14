@@ -5,4 +5,4 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /fancybox/
 Allow: /
-Sitemap: https://itxiaozhang.com/sitemap.xml,https://itxiaozhang.com/baidusitemap.xml
+Sitemap: https://itxiaozhang.com/sitemap.xml

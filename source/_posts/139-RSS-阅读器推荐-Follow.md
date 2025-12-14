@@ -12,7 +12,7 @@ tags:
 
 
 > 原文地址：<https://itxiaozhang.com/rss-reader-recommendation-follow/>  
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://itxiaozhang.netlify.app/)咨询。 
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
 
 ## 什么是RSS
 

@@ -118,8 +118,6 @@ feed:
 
 sitemap:
   path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
 
 
 robotstxt:
@@ -134,5 +132,4 @@ robotstxt:
     - "/fancybox/"
   sitemap:
     - https://itxiaozhang.com/sitemap.xml
-    - https://itxiaozhang.com/baidusitemap.xml
 

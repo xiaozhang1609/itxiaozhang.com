@@ -6,7 +6,7 @@
   <link href="https://itxiaozhang.com/atom.xml" rel="self"/>
   
   <link href="https://itxiaozhang.com/"/>
-  <updated>2025-11-30T13:32:40.647Z</updated>
+  <updated>2025-12-14T02:16:13.915Z</updated>
   <id>https://itxiaozhang.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>游戏安全系统检测到非法劫持模块怎么办？</title>
+    <link href="https://itxiaozhang.com/delta-force-illegal-module-sguardagent64-dll-fix/"/>
+    <id>https://itxiaozhang.com/delta-force-illegal-module-sguardagent64-dll-fix/</id>
+    <published>2025-12-14T02:02:26.000Z</published>
+    <updated>2025-12-14T02:16:13.915Z</updated>
+    
+    
+    <summary type="html">本文针对玩家启动《三角洲行动》时遇到的「游戏安全系统检测到非法劫持模块」警告，提供了详细且系统的解决方案。</summary>
+    
+    
+    
+    <category term="游戏问题" scheme="https://itxiaozhang.com/categories/%E6%B8%B8%E6%88%8F%E9%97%AE%E9%A2%98/"/>
+    
+    
+    <category term="ACE" scheme="https://itxiaozhang.com/tags/ACE/"/>
+    
+    <category term="反作弊" scheme="https://itxiaozhang.com/tags/%E5%8F%8D%E4%BD%9C%E5%BC%8A/"/>
+    
+    <category term="三角洲行动" scheme="https://itxiaozhang.com/tags/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8/"/>
+    
+    <category term="DeltaForce" scheme="https://itxiaozhang.com/tags/DeltaForce/"/>
+    
+  </entry>
+  
+  <entry>
     <title>英雄联盟频繁出现英雄已重新连接怎么办？</title>
     <link href="https://itxiaozhang.com/lol-reconnecting-fix-wired-network-troubleshoot/"/>
     <id>https://itxiaozhang.com/lol-reconnecting-fix-wired-network-troubleshoot/</id>
     <published>2025-11-30T13:29:52.000Z</published>
-    <updated>2025-11-30T13:32:40.647Z</updated>
+    <updated>2025-12-14T02:15:13.915Z</updated>
     
     
     <summary type="html">本文针对《英雄联盟》游戏中频繁出现「英雄已重新连接」的报错问题，提供了一套针对有线网络故障的快速排查流程。通过使用 USB 网络共享隔离电脑端问题后，将故障范围锁定在路由器或光猫上，并给出分步绕过路由器测试的解决办法，确保网络恢复稳定。</summary>
@@ -46,7 +71,7 @@
     <link href="https://itxiaozhang.com/scpsl-private-server-win-vps-guide/"/>
     <id>https://itxiaozhang.com/scpsl-private-server-win-vps-guide/</id>
     <published>2025-11-30T11:16:53.000Z</published>
-    <updated>2025-11-30T11:25:11.356Z</updated>
+    <updated>2025-12-14T02:15:13.945Z</updated>
     
     
     <summary type="html">本教程提供SCP:SL私服搭建的极简流程。采用 Windows 云服务器（VPS）， Steam 客户端图形界面方法，快速完成部署、配置与验证。内容涵盖环境准备、服务器工具安装、核心配置生成以及网络验证，高效建立并管理自己的私服。</summary>
@@ -71,7 +96,7 @@
     <link href="https://itxiaozhang.com/human-fall-flat-invite-friend-no-response-fix/"/>
     <id>https://itxiaozhang.com/human-fall-flat-invite-friend-no-response-fix/</id>
     <published>2025-11-30T09:38:19.000Z</published>
-    <updated>2025-11-30T09:45:35.196Z</updated>
+    <updated>2025-12-14T02:15:13.923Z</updated>
     
     
     <summary type="html">人类一败涂地中点击邀请好友没有任何反应，我尝试了很多办法后，答案竟然如此简单，打开游戏的叠加界面，邀请好友功能恢复正常。</summary>
@@ -96,7 +121,7 @@
     <link href="https://itxiaozhang.com/lol-hero-reconnected-issue-fix/"/>
     <id>https://itxiaozhang.com/lol-hero-reconnected-issue-fix/</id>
     <published>2025-11-29T10:26:35.000Z</published>
-    <updated>2025-11-29T10:34:35.483Z</updated>
+    <updated>2025-12-14T02:15:13.920Z</updated>
     
     
     <summary type="html">本文分享进入游戏后无法控制英雄并持续出现「英雄已重新连接」提示的情况，通过替代网络测试与逐步隔离设备，定位网络链路故障并提供清晰的排查步骤。</summary>
@@ -121,7 +146,7 @@
     <link href="https://itxiaozhang.com/microsoft-ime-chinese-candidate-box-fix/"/>
     <id>https://itxiaozhang.com/microsoft-ime-chinese-candidate-box-fix/</id>
     <published>2025-11-27T09:19:44.000Z</published>
-    <updated>2025-11-27T09:21:32.934Z</updated>
+    <updated>2025-12-14T02:15:13.922Z</updated>
     
     
     <summary type="html">本文整理微软拼音在中文输入时不显示候选框的常见原因，并提供四类可行修复方法，包括启用兼容性、刷新键盘组件、重装语言包及启用旧版输入法，适用于多数 Win10/11 用户。</summary>
@@ -142,7 +167,7 @@
     <link href="https://itxiaozhang.com/delta-force-out-of-video-memory-solution/"/>
     <id>https://itxiaozhang.com/delta-force-out-of-video-memory-solution/</id>
     <published>2025-11-27T04:10:51.000Z</published>
-    <updated>2025-11-27T04:48:28.810Z</updated>
+    <updated>2025-12-14T02:15:13.923Z</updated>
     
     
     <summary type="html">本文针对三角洲行动出现「Out of video memory…」及 GPU 占用异常偏高的问题，整理显卡驱动、虚拟内存及系统资源占用等原因，并提供完整操作步骤，帮助快速恢复显卡状态并顺利进入游戏。</summary>
@@ -167,7 +192,7 @@
     <link href="https://itxiaozhang.com/nvidia-app-overlay-and-recording-troubleshooting/"/>
     <id>https://itxiaozhang.com/nvidia-app-overlay-and-recording-troubleshooting/</id>
     <published>2025-11-23T10:53:58.000Z</published>
-    <updated>2025-11-23T10:56:53.033Z</updated>
+    <updated>2025-12-14T02:15:13.908Z</updated>
     
     
     <summary type="html">本文介绍英伟达APP信息浮窗未开启导致快捷键无效的问题，并提供更改录制保存路径与调整快捷键的步骤，帮助用户快速恢复正常使用。</summary>
@@ -190,7 +215,7 @@
     <link href="https://itxiaozhang.com/wegame-weixin-login-error-solution/"/>
     <id>https://itxiaozhang.com/wegame-weixin-login-error-solution/</id>
     <published>2025-11-22T08:49:08.000Z</published>
-    <updated>2025-11-22T08:51:24.511Z</updated>
+    <updated>2025-12-14T02:15:13.945Z</updated>
     
     
     <summary type="html">本文针对WeGame微信登录提示「该页面暂时无法显示，点击刷新或稍后再试」的问题，提供详细解决步骤及网络优化方法，帮助贵州及受限地区用户正常登录。</summary>
@@ -211,7 +236,7 @@
     <link href="https://itxiaozhang.com/how-to-fix-lol-computer-disconnect/"/>
     <id>https://itxiaozhang.com/how-to-fix-lol-computer-disconnect/</id>
     <published>2025-11-21T14:03:40.000Z</published>
-    <updated>2025-11-21T14:08:34.616Z</updated>
+    <updated>2025-12-14T02:15:13.924Z</updated>
     
     
     <summary type="html">打开英雄联盟后电脑会断网，加载英雄界面反复提示「重新连接中，请稍候」，而其他软件与游戏均正常。</summary>
@@ -234,7 +259,7 @@
     <link href="https://itxiaozhang.com/live-companion-static-dynamic-elements/"/>
     <id>https://itxiaozhang.com/live-companion-static-dynamic-elements/</id>
     <published>2025-11-20T12:50:52.000Z</published>
-    <updated>2025-11-20T12:51:49.224Z</updated>
+    <updated>2025-12-14T02:15:13.912Z</updated>
     
     
     <summary type="html">本文介绍如何在直播伴侣中为直播画面添加静态图片和动态动图或视频元素，实现多头像或其他动态效果的展示，步骤清晰易操作。</summary>
@@ -255,7 +280,7 @@
     <link href="https://itxiaozhang.com/lol-change-language-jp-to-chinese-tutorial/"/>
     <id>https://itxiaozhang.com/lol-change-language-jp-to-chinese-tutorial/</id>
     <published>2025-11-20T11:26:07.000Z</published>
-    <updated>2025-11-21T14:05:04.044Z</updated>
+    <updated>2025-12-14T02:15:13.913Z</updated>
     
     
     <summary type="html">本文介绍如何在日服英雄联盟中通过手动编辑配置文件，将默认英文界面切换为简体中文、繁体中文或其他语言，并通过设置只读防止更新覆盖。</summary>
@@ -272,7 +297,7 @@
     <link href="https://itxiaozhang.com/wegame-league-launch-issue-fix/"/>
     <id>https://itxiaozhang.com/wegame-league-launch-issue-fix/</id>
     <published>2025-11-16T11:25:53.000Z</published>
-    <updated>2025-11-16T11:28:04.918Z</updated>
+    <updated>2025-12-14T02:15:13.905Z</updated>
     
     
     <summary type="html">电脑通过 WeGame 启动「英雄联盟」时无任何反应，等待一段时间后会自动返回 WeGame 的初始启动界面，始终无法进入游戏。</summary>
@@ -297,7 +322,7 @@
     <link href="https://itxiaozhang.com/installation-no-response-cannot-open-software/"/>
     <id>https://itxiaozhang.com/installation-no-response-cannot-open-software/</id>
     <published>2025-11-10T12:52:47.000Z</published>
-    <updated>2025-11-10T16:10:19.340Z</updated>
+    <updated>2025-12-14T02:15:13.923Z</updated>
     
     
     <summary type="html">电脑双击安装包无反应，无法安装软件或打开程序，常因火绒或其他安全软件拦截。本文说明原因并提供信任区设置或退出安全软件的解决方法。</summary>
@@ -322,7 +347,7 @@
     <link href="https://itxiaozhang.com/battlefield6-javelin-anti-cheat-secure-boot-error/"/>
     <id>https://itxiaozhang.com/battlefield6-javelin-anti-cheat-secure-boot-error/</id>
     <published>2025-11-10T09:23:17.000Z</published>
-    <updated>2025-11-10T09:30:05.072Z</updated>
+    <updated>2025-12-14T02:15:13.923Z</updated>
     
     
     <summary type="html">《战地6》启动时若提示系统未启用 Secure Boot，无法正常启动 Javelin 反作弊系统。本文介绍检查与开启安全启动的方法，帮助解决无法启动的问题。</summary>
@@ -347,7 +372,7 @@
     <link href="https://itxiaozhang.com/wegame-lol-move-file-failed-what-to-do/"/>
     <id>https://itxiaozhang.com/wegame-lol-move-file-failed-what-to-do/</id>
     <published>2025-11-09T04:06:00.000Z</published>
-    <updated>2025-11-09T12:11:59.508Z</updated>
+    <updated>2025-12-14T02:15:13.945Z</updated>
     
     
     <summary type="html">本文分享解决 WeGame 下载或安装英雄联盟时提示移动文件失败的问题，包含磁盘修复、权限设置、系统清理及重新分区等完整排查流程。</summary>
@@ -372,7 +397,7 @@
     <link href="https://itxiaozhang.com/battlenet-login-error-solution/"/>
     <id>https://itxiaozhang.com/battlenet-login-error-solution/</id>
     <published>2025-11-08T03:08:10.000Z</published>
-    <updated>2025-11-08T03:10:04.484Z</updated>
+    <updated>2025-12-14T02:15:13.909Z</updated>
     
     
     <summary type="html">本文汇总「无法登录战网」报错的常见原因及解决方案，包括防火墙设置、DNS修改、Host文件检查和客户端重装，帮助用户快速恢复战网登录及游戏功能。</summary>
@@ -395,7 +420,7 @@
     <link href="https://itxiaozhang.com/fix-perfect-platform-cpu-virtualization-error/"/>
     <id>https://itxiaozhang.com/fix-perfect-platform-cpu-virtualization-error/</id>
     <published>2025-11-06T02:19:09.000Z</published>
-    <updated>2025-11-06T02:31:42.442Z</updated>
+    <updated>2025-12-14T02:15:13.908Z</updated>
     
     
     <summary type="html">本文针对完美平台出现「当前您的设备未开启CPU虚拟化相关功能」的报错进行说明，提供从系统清理、关闭相关组件、命令修复到 BIOS 中启用虚拟化的完整操作步骤，最终确保平台与游戏可正常运行。</summary>
@@ -420,7 +445,7 @@
     <link href="https://itxiaozhang.com/valorant-bluetooth-sound-muffled-fix/"/>
     <id>https://itxiaozhang.com/valorant-bluetooth-sound-muffled-fix/</id>
     <published>2025-11-04T07:05:48.000Z</published>
-    <updated>2025-11-04T08:06:08.251Z</updated>
+    <updated>2025-12-14T02:15:13.922Z</updated>
     
     
     <summary type="html">玩《无畏契约》时蓝牙耳机声音发闷，多因录制功能触发免提模式。关闭「无畏时刻」录制及耳机免提服务即可恢复清晰音质。</summary>
@@ -445,7 +470,7 @@
     <link href="https://itxiaozhang.com/hmdb-metabolite-batch-extraction-csv-export/"/>
     <id>https://itxiaozhang.com/hmdb-metabolite-batch-extraction-csv-export/</id>
     <published>2025-11-03T12:56:43.000Z</published>
-    <updated>2025-11-03T13:12:01.098Z</updated>
+    <updated>2025-12-14T02:15:13.945Z</updated>
     
     
     <summary type="html">这篇文章介绍了一个HMDB代谢物批量爬虫工具，自持同时爬取几万条数据、并发限速与重试、断点续跑，解析25项核心字段并导出CSV。</summary>
@@ -462,27 +487,6 @@
     <category term="HMDB" scheme="https://itxiaozhang.com/tags/HMDB/"/>
     
     <category term="代谢物" scheme="https://itxiaozhang.com/tags/%E4%BB%A3%E8%B0%A2%E7%89%A9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bilibili粉丝数据获取工具</title>
-    <link href="https://itxiaozhang.com/bilibili-followers-data-fetcher-python-tutorial-guide/"/>
-    <id>https://itxiaozhang.com/bilibili-followers-data-fetcher-python-tutorial-guide/</id>
-    <published>2025-11-01T10:06:16.000Z</published>
-    <updated>2025-11-01T10:14:54.966Z</updated>
-    
-    
-    <summary type="html">本文介绍了一个基于Python开发的Bilibili粉丝数据获取工具，支持批量获取粉丝信息并生成HTML展示页面。文章详细讲解了Cookie获取方法、环境配置、使用步骤和常见问题解决方案，并提供完整的源码。适合UP主进行粉丝统计分析和数据备份使用。</summary>
-    
-    
-    
-    
-    <category term="爬虫" scheme="https://itxiaozhang.com/tags/%E7%88%AC%E8%99%AB/"/>
-    
-    <category term="Python" scheme="https://itxiaozhang.com/tags/Python/"/>
-    
-    <category term="哔哩哔哩" scheme="https://itxiaozhang.com/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/"/>
     
   </entry>
   
