@@ -1,0 +1,8 @@
+# Hugo default output
+/public
+/resources
+.hugo_build.lock
+
+# OS specific
+.DS_Store
+Thumbs.db

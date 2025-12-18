@@ -1,0 +1,46 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-cn'
+title = '我的博客'
+theme = 'PaperMod'
+
+[params]
+    env = "production"
+    title = "我的博客"
+    description = "欢迎来到我的博客"
+    keywords = ["Blog", "PaperMod"]
+    author = "Me"
+    defaultTheme = "auto"
+    disableThemeToggle = false
+
+    [params.profileMode]
+    enabled = true
+    title = "我的博客"
+    subtitle = "欢迎来到我的个人博客"
+    # imageUrl = "<img-location>"
+    # imageTitle = "my image"
+    # imageWidth = 120
+    # imageHeight = 120
+    
+    [[params.profileMode.buttons]]
+    name = "文章"
+    url = "posts"
+    
+    [[params.profileMode.buttons]]
+    name = "归档"
+    url = "archives"
+    
+    [[params.profileMode.buttons]]
+    name = "关于"
+    url = "about"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 20
