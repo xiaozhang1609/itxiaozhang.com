@@ -1,0 +1,30 @@
+{{- if and .IsPage (eq .Type "posts") -}}
+<!-- 最新文章侧边栏 (仅宽屏显示，且仅在文章详情页显示) -->
+<div id="latest-posts-widget" style="display: none; position: fixed; top: 80px; right: 20px; width: 250px; max-height: 80vh; overflow-y: auto; background: var(--entry); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px; z-index: 99;">
+    <h3 style="font-size: 16px; margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 5px;">最新文章</h3>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+        {{ range first 5 (where site.RegularPages "Type" "posts") }}
+        <li style="margin-bottom: 10px;">
+            <a href="{{ .Permalink }}" style="font-size: 14px; text-decoration: none; display: block; line-height: 1.4;">{{ .Title }}</a>
+            <span style="font-size: 12px; color: var(--secondary);">{{ .Date.Format "2006-01-02" }}</span>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+
+<script>
+    // 简单的脚本，用于在宽屏下显示
+    function checkWidth() {
+        const widget = document.getElementById('latest-posts-widget');
+        if (widget) {
+            if (window.innerWidth >= 1500) {
+                widget.style.display = 'block';
+            } else {
+                widget.style.display = 'none';
+            }
+        }
+    }
+    window.addEventListener('resize', checkWidth);
+    checkWidth(); // 初始化检查
+</script>
+{{- end -}}

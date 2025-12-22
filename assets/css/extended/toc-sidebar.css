@@ -1,0 +1,51 @@
+/* 侧边目录样式 - 仅在宽屏显示 */
+@media screen and (min-width: 1500px) {
+    .toc {
+        position: fixed;
+        top: 80px;
+        left: 20px;
+        width: 250px;
+        max-height: 80vh;
+        overflow-y: auto;
+        z-index: 99;
+        /* 继承主题的边框和背景 */
+        background: var(--entry);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 10px;
+        /* 隐藏原始的 details/summary 展开效果，使其默认展开 */
+        display: block;
+    }
+
+    /* 强制展开详情 */
+    .toc details {
+        display: block;
+    }
+
+    .toc summary {
+        cursor: default;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    /* 隐藏 summary 前面的小箭头 */
+    .toc details > summary {
+        list-style: none;
+    }
+    .toc details > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* 优化滚动条 */
+    .toc::-webkit-scrollbar {
+        width: 5px;
+    }
+    .toc::-webkit-scrollbar-thumb {
+        background: var(--secondary);
+        border-radius: 5px;
+    }
+    
+    /* 调整主内容区域，防止被遮挡（可选，因为 TOC 在右侧空白处） */
+}
+
+/* 移动端/窄屏保持默认（文章顶部显示） */

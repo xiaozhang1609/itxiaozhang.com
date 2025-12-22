@@ -1,20 +1,86 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://itxiaozhang.com/'
 languageCode = 'zh-cn'
-title = '我的博客'
+defaultContentLanguage = 'zh-cn'
+title = 'IT小章'
 theme = 'PaperMod'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
 
 [params]
     env = "production"
-    title = "我的博客"
+    title = "IT小章"
     description = "欢迎来到我的博客"
     keywords = ["Blog", "PaperMod"]
     author = "Me"
     defaultTheme = "auto"
     disableThemeToggle = false
 
+    # 开启面包屑导航
+    ShowBreadCrumbs = true
+    # 开启阅读时间
+    ShowReadingTime = true
+    # 开启字数统计
+    ShowWordCount = true
+    # 开启侧边目录
+    ShowToc = true
+    TocOpen = true
+
+    # 显示代码复制按钮
+    ShowCodeCopyButtons = true
+
+    [params.assets]
+    favicon = "images/favicon.ico"
+    favicon16x16 = "images/favicon.ico"
+    favicon32x32 = "images/favicon.ico"
+    apple_touch_icon = "images/favicon.ico"
+    safari_pinned_tab = "images/favicon.ico"
+
+    [params.homeInfoParams]
+    Title = ""
+    Content = "<a href='https://zhang9.cn/' target='_blank'>电脑维修</a> | <a href='https://zhang9.cn/' target='_blank'>游戏优化</a> | <a href='https://zhang9.cn/' target='_blank'>编程开发</a> | <a href='https://zhang9.cn/' target='_blank'>网站搭建</a>"
+
+    [[params.socialIcons]]
+    name = "bilibili"
+    url = "https://space.bilibili.com/3546607630944387"
+
+    [[params.socialIcons]]
+    name = "youtube"
+    url = "https://www.youtube.com/@itxiaozhang"
+
+    [[params.socialIcons]]
+    name = "tiktok"
+    title = "抖音"
+    url = "https://www.douyin.com/user/MS4wLjABAAAAq76DktAYd0XQ6do2ACmc_ssSIlelXf5YJTfzJ-OWOmUUYk3tO3q0ijzqA2Mf1oXx"
+
+    [[params.socialIcons]]
+    name = "wechat"
+    url = "https://zhang9.cn/"
+
+    [[params.socialIcons]]
+    name = "email"
+    url = "mailto:test@example.com"
+
+    [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
     [params.profileMode]
-    enabled = true
-    title = "我的博客"
+    enabled = false
+    title = "IT小章"
     subtitle = "欢迎来到我的个人博客"
     # imageUrl = "<img-location>"
     # imageTitle = "my image"
@@ -44,3 +110,8 @@ theme = 'PaperMod'
     name = "归档"
     url = "/archives/"
     weight = 20
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 30

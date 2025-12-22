@@ -26,4 +26,17 @@
     <ul id="searchResults" aria-label="search results"></ul>
 </div>
 
+<div class="terms-tags" style="margin-top: 30px;">
+    <h3 style="margin-bottom: 15px;">热门标签</h3>
+    <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;">
+        {{- range $name, $taxonomy := site.Taxonomies.tags.ByCount }}
+        <li>
+            <a href="{{ "/tags/" | relLangURL }}{{ $taxonomy.Name | urlize }}" style="background: var(--entry); border: 1px solid var(--border); border-radius: 5px; padding: 5px 10px; text-decoration: none; font-size: 14px; transition: all 0.3s;">
+                {{ $taxonomy.Name }} <sup style="opacity: 0.6;">{{ $taxonomy.Count }}</sup>
+            </a>
+        </li>
+        {{- end }}
+    </ul>
+</div>
+
 {{- end }}{{/* end main */}}
