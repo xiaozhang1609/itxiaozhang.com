@@ -12,7 +12,7 @@ tags:
   - 腾讯
 author: IT小章
 ---
-> 原文地址：<https://itxiaozhang.com/fix-cpuvirtualization-technology-popup-issue/>  
+> 原文地址：<https://itxiaozhang.com/fix-cpu-virtualization-technology-popup-issue/>  
 > 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
 
 ## 问题描述
