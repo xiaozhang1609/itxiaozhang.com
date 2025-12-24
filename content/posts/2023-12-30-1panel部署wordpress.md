@@ -50,3 +50,7 @@ Commands:
 1pctl reset 重置 1Panel 系统信息
 1pctl restore 恢复 1Panel 服务及数据
 ```
+
+
+> 原文地址：<https://itxiaozhang.com/1panel-deployment-wordpress/>
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。

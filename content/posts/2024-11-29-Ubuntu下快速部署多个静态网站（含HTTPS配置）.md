@@ -13,7 +13,6 @@ tags:
   - 建站
 author: IT小章
 ---
-> 原文地址：<https://itxiaozhang.com/ubuntu-multiple-static-sites-deployment-guide/>  
 
 ## 环境
 
@@ -151,7 +150,6 @@ certbot --nginx -d example2.com -d www.example2.com
 certbot renew --dry-run
 ```
 
----
-▶ 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
-▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。  
-▶ **我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。**  
+
+> 原文地址：<https://itxiaozhang.com/ubuntu-multiple-static-sites-deployment-guide/>
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

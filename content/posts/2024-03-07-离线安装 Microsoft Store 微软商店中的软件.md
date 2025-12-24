@@ -21,3 +21,7 @@ author: IT小章
 2. 打开 [https://store.rg-adguard.net](https://store.rg-adguard.net) ，使用这个网站解析第一步获取到的链接。
 3. 选择一个版本下载，后缀名一般是 .msixbundle 或者 .appx。
 4. 双击安装。
+
+
+> 原文地址：<https://itxiaozhang.com/offline-installation-of-apps-from-microsoft-store/>
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。

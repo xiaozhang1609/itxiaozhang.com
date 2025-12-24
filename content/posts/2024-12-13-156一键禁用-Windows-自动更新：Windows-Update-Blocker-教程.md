@@ -10,8 +10,6 @@ tags:
   - windows update blocker
 author: IT小章
 ---
-> 原文地址：<https://itxiaozhang.com/windows-update-blocker-disable-auto-updates/>  
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
 
 ### 如何使用 **Windows Update Blocker** 禁用自动更新
 
@@ -39,7 +37,6 @@ author: IT小章
 - [哔哩哔哩](https://www.bilibili.com/video/BV1Z7BGYYEZj)
 - [YouTube](https://youtu.be/YvgYURqHP_o?si=SajEnSB3f9Ja2VBE)
 
----
-▶ 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
-▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。  
-▶ **我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。**  
+
+> 原文地址：<https://itxiaozhang.com/windows-update-blocker-disable-auto-updates/>
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

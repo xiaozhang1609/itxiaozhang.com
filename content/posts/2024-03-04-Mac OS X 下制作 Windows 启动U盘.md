@@ -21,3 +21,7 @@ author: IT小章
 5. 制作完成后，弹出U盘.
 
 > MacOS 使用U盘启动报错解决办法：[“启动安全性实用工具”](https://support.apple.com/zh-cn/102522 "“启动安全性实用工具”")
+
+
+> 原文地址：<https://itxiaozhang.com/create-windows-bootable-usb-on-macos/>
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。

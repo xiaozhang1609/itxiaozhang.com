@@ -71,3 +71,7 @@ author: IT小章
 - 解密过程中不要断电或关机，以免造成数据损坏。
 - 定期备份重要数据，以防数据丢失。
 - 如果没有重要数据，可以考虑关闭BitLocker，以避免将来忘记密钥的问题。
+
+
+> 原文地址：<https://itxiaozhang.com/bitlocker-key-recovery-deactivation/>
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。

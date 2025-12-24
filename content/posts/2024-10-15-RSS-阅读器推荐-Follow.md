@@ -10,8 +10,6 @@ tags:
   - rss阅读器
 author: IT小章
 ---
-> 原文地址：<https://itxiaozhang.com/rss-reader-recommendation-follow/>  
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
 
 ## 什么是RSS
 
@@ -47,8 +45,6 @@ RSS（Really Simple Syndication）是一种用于发布和分发内容的网络�
 - [哔哩哔哩](https://www.bilibili.com/video/BV1Tk2RYdEJy)  
 - [YouTube](https://youtu.be/ZqyIDEcUcDI?si=MtXG3us84f5a4bU5)  
 
----
 
-▶ 可以在[关于](https://itxiaozhang.com/about/)或[这篇文章](https://itxiaozhang.com/about-computer-repair-services-with-me/)找到我们的联系方式。  
-▶ 本网站的部分内容可能来源于网络，仅供学习与参考，如有侵权请联系核实删除。  
-▶ **我们是小章团队，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我们。**
+> 原文地址：<https://itxiaozhang.com/rss-reader-recommendation-follow/>
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

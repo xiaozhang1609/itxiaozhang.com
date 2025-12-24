@@ -10,7 +10,6 @@ tags:
   - 卸载工具
 author: IT小章
 ---
-> 原文地址：<https://itxiaozhang.com/geekuninstaller-effective-software-cleaning/>  
 > 本文配合视频食用效果最佳，视频教程在文章末尾。  
 
 ## 软件介绍
@@ -30,7 +29,6 @@ author: IT小章
 - [哔哩哔哩](https://www.bilibili.com/video/BV1h3pZecE2W)
 - [西瓜视频](https://www.ixigua.com/7404104812200985122)
 
----
-▶ 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
-▶ 本网站的部分内容可能来源于网络，仅供大家学习与参考，如有侵权请联系我核实删除。  
-▶ **我是小章，目前全职提供电脑维修和IT咨询服务。如果您有任何电脑相关的问题，都可以问我噢。**  
+
+> 原文地址：<https://itxiaozhang.com/geekuninstaller-effective-software-cleaning/>
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
