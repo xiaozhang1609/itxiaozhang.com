@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/office-tool-plus-install-activate-fast/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## Office Tool Plus 是什么？
 
 **Office Tool Plus** 是一款基于 Office 部署工具 (ODT) 开发的免费工具，具有以下主要功能：
@@ -98,7 +101,3 @@ KMS 激活就像是通过“家长签名”来验证文件是否有效。在大�
 - [[新手必读] Office Tool Plus 入门教程](https://www.coolhub.top/archives/42)
 - [Office Tool Plus 介绍](https://www.officetool.plus/zh-cn/introduction/what-is-otp.html)
 - [Office Tool Plus 使用方法](https://www.officetool.plus/zh-cn/usage/deploy/clean-deployment.html)
-
-
-> 原文地址：<https://itxiaozhang.com/office-tool-plus-install-activate-fast/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

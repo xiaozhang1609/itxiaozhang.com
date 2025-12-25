@@ -13,6 +13,10 @@ tags:
   - 电脑维修
 author: IT小章
 ---
+
+> 原文地址：<https://itxiaozhang.com/bitlocker-key-recovery-deactivation/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 1. 什么是BitLocker？
 
 **BitLocker** 是微软推出的一个磁盘分区加密方案。它首次出现在 Windows Vista 中，是一种数据保护功能，主要用于防止因计算机设备丢失而导致的数据泄露或被窃。一旦加密，若无密钥，即使是微软本身也无法破解，因此它提供了强大的数据安全保护。但同时，如果忘记或丢失密钥，可能会导致数据无法访问。
@@ -71,7 +75,3 @@ author: IT小章
 - 解密过程中不要断电或关机，以免造成数据损坏。
 - 定期备份重要数据，以防数据丢失。
 - 如果没有重要数据，可以考虑关闭BitLocker，以避免将来忘记密钥的问题。
-
-
-> 原文地址：<https://itxiaozhang.com/bitlocker-key-recovery-deactivation/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。

@@ -11,6 +11,10 @@ tags:
   - 修电脑
 author: IT小章
 ---
+
+> 原文地址：<https://itxiaozhang.com/three-methods-to-download-windows-10-and-windows-11-iso/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 > 本文配合视频食用效果最佳，视频教程在文章末尾。  
 
 ## 方法一：通过微软官网下载
@@ -104,7 +108,3 @@ author: IT小章
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1Cs421T7Vv)
 - [西瓜视频](https://www.ixigua.com/7382566736182116927)
-
-
-> 原文地址：<https://itxiaozhang.com/three-methods-to-download-windows-10-and-windows-11-iso/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

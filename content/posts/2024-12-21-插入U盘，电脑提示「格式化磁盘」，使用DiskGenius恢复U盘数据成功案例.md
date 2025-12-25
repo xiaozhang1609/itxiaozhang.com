@@ -11,6 +11,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/format-disk-error-recover-usb-data-with-diskgenius-case/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 背景  
 
 将U盘插入电脑后，系统提示“格式化磁盘”，但U盘里有一些非常重要的文件需要保留。本文详细介绍了如何利用DiskGenius修复U盘分区表并恢复数据的全过程，帮助遇到类似问题的用户找回丢失文件。
@@ -47,7 +50,3 @@ author: IT小章
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1tkktYTEGB)
 - [YouTube](https://youtu.be/AMm-73oH9yw?si=H3GH96ybn0zd-6nj)
-
-
-> 原文地址：<https://itxiaozhang.com/format-disk-error-recover-usb-data-with-diskgenius-case/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

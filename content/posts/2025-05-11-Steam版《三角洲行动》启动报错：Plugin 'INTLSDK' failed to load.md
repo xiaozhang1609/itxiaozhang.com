@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/fix-delta-force-plugin-intlsdk-module-intlcore-error/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述
 
 在通过 Steam 启动游戏《三角洲行动》时，出现以下错误提示：
@@ -51,7 +54,3 @@ author: IT小章
 
 * [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 * [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/fix-delta-force-plugin-intlsdk-module-intlcore-error/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

@@ -13,6 +13,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/dead-by-daylight-d3d11-compatible-gpu-error-fix/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述
 
 在尝试启动《黎明杀机》游戏时，出现如下错误提示：
@@ -59,7 +62,3 @@ author: IT小章
 
 - [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 - [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/dead-by-daylight-d3d11-compatible-gpu-error-fix/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

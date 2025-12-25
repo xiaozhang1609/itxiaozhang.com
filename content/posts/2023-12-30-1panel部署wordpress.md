@@ -9,6 +9,10 @@ tags:
   - 网站维护
 author: IT小章
 ---
+
+> 原文地址：<https://itxiaozhang.com/1panel-deployment-wordpress/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 _[1Panel在线安装文档](https://1panel.cn/docs/installation/online_installation/)_
 
 ## 环境
@@ -50,7 +54,3 @@ Commands:
 1pctl reset 重置 1Panel 系统信息
 1pctl restore 恢复 1Panel 服务及数据
 ```
-
-
-> 原文地址：<https://itxiaozhang.com/1panel-deployment-wordpress/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。

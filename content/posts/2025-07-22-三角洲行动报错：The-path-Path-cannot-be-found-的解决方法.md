@@ -14,10 +14,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/fix-the-path-cannot-be-found-error-delta-force/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述
 
 在运行《三角洲行动》或者尝试修复客户端时，弹出错误提示框：
-
-
-> 原文地址：<https://itxiaozhang.com/fix-the-path-cannot-be-found-error-delta-force/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

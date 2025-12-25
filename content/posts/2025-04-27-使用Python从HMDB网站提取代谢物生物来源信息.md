@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/python-hmdb-metabolite-biosource-extractor/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 核心功能
 
 - **自动化数据采集**：基于requests库实现稳定可靠的数据抓取
@@ -98,7 +101,3 @@ except Exception as e:
 
 - [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 - [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/python-hmdb-metabolite-biosource-extractor/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

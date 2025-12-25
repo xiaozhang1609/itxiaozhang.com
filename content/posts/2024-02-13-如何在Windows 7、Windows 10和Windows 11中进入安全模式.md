@@ -11,6 +11,10 @@ tags:
   - 安全模式
 author: IT小章
 ---
+
+> 原文地址：<https://itxiaozhang.com/enter-safe-mode-windows-7-windows-10-windows-11/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 _安全模式是Windows系统的一种诊断启动方式，仅加载必要的驱动程序和服务。每个Windows版本都提供了多种进入安全模式的方法。本文将介绍Windows 7、Windows 10和Windows 11的多种进入安全模式的方法。_
 <!--more-->
 
@@ -81,7 +85,3 @@ _安全模式是Windows系统的一种诊断启动方式，仅加载必要的驱
 [西瓜视频](https://www.ixigua.com/7335355860610843187)
 
 <iframe src="//player.bilibili.com/player.html?aid=1350721911&amp;bvid=BV1tz421d7YS&amp;cid=1439330940&amp;p=1" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0"></iframe>
-
-
-> 原文地址：<https://itxiaozhang.com/enter-safe-mode-windows-7-windows-10-windows-11/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。

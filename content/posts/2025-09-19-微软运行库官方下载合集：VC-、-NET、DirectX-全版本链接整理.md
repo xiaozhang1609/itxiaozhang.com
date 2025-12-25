@@ -13,6 +13,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 一、Visual C++ Redistributable
 
 **推荐页面**：[Latest Supported VC++ Downloads](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
@@ -75,7 +78,3 @@ author: IT小章
 
 - [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 - [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

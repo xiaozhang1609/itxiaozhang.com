@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com//github-actions-sync-specific-folder-to-ubuntu-server-complete-guide/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ### 需求分析
 
 1. **源**：
@@ -165,7 +168,3 @@ ssh -p [SSH端口] [用户名]@[服务器IP]
 
 3. 检查目标目录权限
 4. 确认 Secrets 是否正确设置
-
-
-> 原文地址：<https://itxiaozhang.com//github-actions-sync-specific-folder-to-ubuntu-server-complete-guide/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/hmdb-database-crawler-case-study-efficient-automated-python-script/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 这个程序是做什么的？
 
 这是一个专门为科研人员设计的网络爬虫工具。它的主要任务是从一个名为HMDB（人类代谢物组数据库）的网站上，自动、批量地抓取代谢物的相关信息。简单来说，你给它一批代谢物的编号（HMDB ID），它就能帮你把这些编号对应的详细分类和来源信息从网站上找回来，并整理好。
@@ -163,7 +166,3 @@ if __name__ == "__main__":
 
 * [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 * [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/hmdb-database-crawler-case-study-efficient-automated-python-script/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

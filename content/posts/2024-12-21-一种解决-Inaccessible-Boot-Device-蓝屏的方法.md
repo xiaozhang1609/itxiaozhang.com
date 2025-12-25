@@ -11,6 +11,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/solution-inaccessible-boot-device-blue-screen/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 科普：Intel VMD 与 Inaccessible Boot Device 蓝屏及解决方法
 
 **Intel VMD（Volume Management Device）** 是英特尔推出的技术，旨在优化NVMe SSD的性能与管理。VMD将存储设备直接连接到CPU，通过PCIe总线减少延迟，支持热插拔并简化管理，增强系统的安全性与可靠性。
@@ -33,7 +36,3 @@ author: IT小章
 
 1. 使用PE工具启动电脑，进入PE环境。
 2. 安装VMD驱动后重启，系统正常启动。
-
-
-> 原文地址：<https://itxiaozhang.com/solution-inaccessible-boot-device-blue-screen/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

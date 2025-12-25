@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/fix-valorant-d3d11-gpu-error/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述  
 
 启动《无畏契约》时出现以下错误提示：  
@@ -53,7 +56,3 @@ author: IT小章
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1Ks9YY5ESf)
 - [YouTube](https://youtu.be/SWh5Rhpz04Y)
-
-
-> 原文地址：<https://itxiaozhang.com/fix-valorant-d3d11-gpu-error/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

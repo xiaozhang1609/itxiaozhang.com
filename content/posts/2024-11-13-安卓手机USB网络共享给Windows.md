@@ -13,6 +13,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/how-to-share-android-phone-internet-with-windows-via-usb/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 准备工作
 
 - 一台安卓手机。
@@ -53,7 +56,3 @@ author: IT小章
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1fYUTY5ETQ)
 - [YouTube](https://youtu.be/O-jCAiVwwaA?si=NJ8YupMfIHHNsCkD)
-
-
-> 原文地址：<https://itxiaozhang.com/how-to-share-android-phone-internet-with-windows-via-usb/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

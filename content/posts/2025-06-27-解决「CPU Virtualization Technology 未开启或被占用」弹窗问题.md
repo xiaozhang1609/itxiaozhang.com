@@ -13,6 +13,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/fix-cpu-virtualization-technology-popup-issue/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述
 
 报错内容：「ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能（CPU Virtualization Technology），请重启电脑后进入BIOS开启VT-X/D或AMD-V。并关闭可能占用VT的相关软件或功能。」
@@ -79,7 +82,3 @@ author: IT小章
 
 * [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 * [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/fix-cpu-virtualization-technology-popup-issue/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

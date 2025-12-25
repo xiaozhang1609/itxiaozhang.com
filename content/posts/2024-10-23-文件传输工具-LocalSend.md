@@ -11,6 +11,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/file-transfer-tool-localsend/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## LocalSend简介
 
 LocalSend是一款开源、跨平台的局域网文件互传工具，能够在不同的操作系统之间（如Windows、macOS、Linux、iOS和Android）实现文件的快速传输，无需互联网连接或外部服务器的支持。文件传输过程中使用HTTPS加密以保证安全性。
@@ -49,7 +52,3 @@ LocalSend是一款开源、跨平台的局域网文件互传工具，能够在�
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1B3yfY1E1V)
 - [YouTube](https://youtu.be/y0a0ptk0uw0?si=VdRCOsgS01c67hJA)
-
-
-> 原文地址：<https://itxiaozhang.com/file-transfer-tool-localsend/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

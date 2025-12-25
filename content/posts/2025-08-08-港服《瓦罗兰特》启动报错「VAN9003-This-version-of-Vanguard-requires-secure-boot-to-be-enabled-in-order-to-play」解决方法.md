@@ -13,6 +13,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/valorant-van9003-secure-boot-tpm2-fix/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述
 
 原始报错：「VAN9003 This version of Vanguard requires secure boot to be enabled in order to play. See the Vanguard notification center in the tray for more details.」
@@ -51,7 +54,3 @@ author: IT小章
 
 * [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 * [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/valorant-van9003-secure-boot-tpm2-fix/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

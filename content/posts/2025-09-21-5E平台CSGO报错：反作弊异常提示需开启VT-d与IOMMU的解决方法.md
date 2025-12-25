@@ -16,6 +16,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述
 
 在 5E 对战平台启动 CSGO 时弹出报错：
@@ -83,7 +86,3 @@ author: IT小章
 
 * [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 * [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

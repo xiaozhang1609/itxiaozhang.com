@@ -10,6 +10,10 @@ tags:
   - everything
 author: IT小章
 ---
+
+> 原文地址：<https://itxiaozhang.com/file-search-tool-everything/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 什么是 Everything ？
 
 Everything 是一个文件搜索神器，可以帮我们用更短的时间找到电脑上的某一个文件。
@@ -46,7 +50,3 @@ Everything 是一个文件搜索神器，可以帮我们用更短的时间找到
 
 [视频链接](https://www.bilibili.com/video/BV1sK421x7P6)
 [视频链接](https://www.ixigua.com/iframe/7345090491413135935?autoplay=0)
-
-
-> 原文地址：<https://itxiaozhang.com/file-search-tool-everything/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。

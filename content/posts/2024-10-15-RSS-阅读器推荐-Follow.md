@@ -11,6 +11,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/rss-reader-recommendation-follow/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 什么是RSS
 
 RSS（Really Simple Syndication）是一种用于发布和分发内容的网络技术。它允许用户订阅感兴趣的内容源，如博客、新闻网站和播客等，自动接收最新信息，无需手动访问每个网站。
@@ -43,8 +46,4 @@ RSS（Really Simple Syndication）是一种用于发布和分发内容的网络�
 ## 视频教程
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1Tk2RYdEJy)  
-- [YouTube](https://youtu.be/ZqyIDEcUcDI?si=MtXG3us84f5a4bU5)  
-
-
-> 原文地址：<https://itxiaozhang.com/rss-reader-recommendation-follow/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
+- [YouTube](https://youtu.be/ZqyIDEcUcDI?si=MtXG3us84f5a4bU5)

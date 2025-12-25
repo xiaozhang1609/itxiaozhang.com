@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/wallpaper-fullscreen-black-screen-fix/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述
 
 在使用 Wallpaper 时，每当应用全屏后回到桌面，桌面会出现短暂黑屏。例如：「每次任务管理器全屏以后，回到桌面都会黑屏一次」。
@@ -50,7 +53,3 @@ Wallpaper 的性能设置默认在以下情况下会暂停壁纸显示：
 
 * [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 * [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/wallpaper-fullscreen-black-screen-fix/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

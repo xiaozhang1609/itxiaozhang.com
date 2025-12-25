@@ -14,6 +14,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/ubuntu-multiple-static-sites-deployment-guide/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 环境
 
 - 一台运行 Ubuntu 的服务器（本教程使用 Ubuntu 20.04）
@@ -149,7 +152,3 @@ certbot --nginx -d example2.com -d www.example2.com
 ```bash
 certbot renew --dry-run
 ```
-
-
-> 原文地址：<https://itxiaozhang.com/ubuntu-multiple-static-sites-deployment-guide/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

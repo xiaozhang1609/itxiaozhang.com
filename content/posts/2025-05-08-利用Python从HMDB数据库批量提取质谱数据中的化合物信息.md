@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/python-hmdb-mass-spectrometry-compound-extraction/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 需求分析
 
 本工具旨在帮助用户根据质谱数据（质量数），自动从HMDB数据库批量检索代谢物信息，包括HMDB ID、常用名称、化学式及结构图片等，并导出为Excel可直接打开的CSV文件，极大提升代谢物注释效率。
@@ -137,7 +140,3 @@ if __name__ == "__main__":
 
 - [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 - [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/python-hmdb-mass-spectrometry-compound-extraction/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

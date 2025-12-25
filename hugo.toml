@@ -49,10 +49,6 @@ theme = 'PaperMod'
     apple_touch_icon = "images/favicon.ico"
     safari_pinned_tab = "images/favicon.ico"
 
-    [params.homeInfoParams]
-    Title = ""
-    Content = "<a href='https://zhang9.cn/' target='_blank'>电脑维修</a> | <a href='https://zhang9.cn/' target='_blank'>游戏优化</a> | <a href='https://zhang9.cn/' target='_blank'>编程开发</a> | <a href='https://zhang9.cn/' target='_blank'>网站搭建</a>"
-
     [[params.socialIcons]]
     name = "bilibili"
     url = "https://space.bilibili.com/3546607630944387"
@@ -79,13 +75,13 @@ theme = 'PaperMod'
     url = "/index.xml"
 
     [params.profileMode]
-    enabled = false
+    enabled = true
     title = "IT小章"
-    subtitle = "欢迎来到我的个人博客"
-    # imageUrl = "<img-location>"
-    # imageTitle = "my image"
-    # imageWidth = 120
-    # imageHeight = 120
+    subtitle = "<a href='https://zhang9.cn/' target='_blank'>电脑维修</a> | <a href='https://zhang9.cn/' target='_blank'>游戏优化</a> | <a href='https://zhang9.cn/' target='_blank'>编程开发</a> | <a href='https://zhang9.cn/' target='_blank'>网站搭建</a>"
+    imageUrl = "images/head.webp"
+    imageTitle = "IT小章"
+    imageWidth = 150
+    imageHeight = 150
     
     [[params.profileMode.buttons]]
     name = "文章"

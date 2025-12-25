@@ -10,6 +10,10 @@ tags:
   - 脚本
 author: IT小章
 ---
+
+> 原文地址：<https://itxiaozhang.com/python-hmdb-data-extraction/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 > 本文配合视频食用效果最佳，视频教程在文章末尾。  
 
 ## 这个程序是做什么的？
@@ -145,7 +149,3 @@ if __name__ == "__main__":
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1Lg22Y1Ebp)
 - [YouTube](https://youtu.be/QXgs0mXYYnQ?si=rUa0uFDbycWNII0j)
-
-
-> 原文地址：<https://itxiaozhang.com/python-hmdb-data-extraction/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

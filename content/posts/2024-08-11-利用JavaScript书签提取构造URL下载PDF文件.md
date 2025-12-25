@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/create-bookmark-url-download-pdf/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 1. 写脚本
 
 ```javascript
@@ -47,7 +50,3 @@ javascript:(function() {
 - **提取ID**：使用 `URLSearchParams` 从当前页面的URL中提取ID参数。
 - **构造URL**：根据提取的ID生成PDF文件的下载链接。
 - **打开PDF**：使用 `window.open()` 在新窗口中打开构造的PDF文件链接。
-
-
-> 原文地址：<https://itxiaozhang.com/create-bookmark-url-download-pdf/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

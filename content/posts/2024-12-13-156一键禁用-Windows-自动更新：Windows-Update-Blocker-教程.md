@@ -11,6 +11,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/windows-update-blocker-disable-auto-updates/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ### 如何使用 **Windows Update Blocker** 禁用自动更新
 
 **Windows Update Blocker** 是一款简单的工具，帮助用户轻松禁用或启用 Windows 自动更新，避免系统在不合适的时候进行更新。以下是使用步骤：
@@ -36,7 +39,3 @@ author: IT小章
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1Z7BGYYEZj)
 - [YouTube](https://youtu.be/YvgYURqHP_o?si=SajEnSB3f9Ja2VBE)
-
-
-> 原文地址：<https://itxiaozhang.com/windows-update-blocker-disable-auto-updates/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

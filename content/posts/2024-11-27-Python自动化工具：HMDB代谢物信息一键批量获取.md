@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/python-hmdb-metabolites-batch-extractor/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 简介
 
 这是一个用于从HMDB（人类代谢组数据库）批量提取代谢物信息的小工具。它可以帮助研究人员快速获取多个代谢物的详细信息，节省手动查询的时间。
@@ -173,7 +176,3 @@ if __name__ == "__main__":
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1DsBQYwEC4/)
 - [YouTube](https://youtu.be/LWwqvTgxm3o?si=Uqy46agi8KYQpD9H)
-
-
-> 原文地址：<https://itxiaozhang.com/python-hmdb-metabolites-batch-extractor/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

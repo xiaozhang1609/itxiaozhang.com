@@ -10,6 +10,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/steam-fatal-error-non-ascii-path/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述  
 
 **Steam致命错误**  
@@ -43,7 +46,3 @@ Steam的安装路径中包含非ASCII字符（如中文字符），导致程序�
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV1enRwYzEu2)
 - [YouTube](https://youtu.be/MaRLsUXFcww?si=g2lIcp1vJ4vJ7mph)
-
-
-> 原文地址：<https://itxiaozhang.com/steam-fatal-error-non-ascii-path/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

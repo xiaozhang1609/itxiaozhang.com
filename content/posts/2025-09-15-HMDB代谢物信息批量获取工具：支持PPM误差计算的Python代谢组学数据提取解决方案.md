@@ -12,6 +12,10 @@ tags:
   - 质谱数据分析
 author: IT小章
 ---
+
+> 原文地址：<https://itxiaozhang.com/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 > 本文对应60号代码。
 
 ## 这个程序是做什么的？
@@ -300,7 +304,3 @@ if __name__ == '__main__':
 
 - [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 - [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

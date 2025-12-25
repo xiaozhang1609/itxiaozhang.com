@@ -11,6 +11,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/create-christmas-themed-webpage-with-html-css-javascript/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 介绍
 
 使用HTML、CSS和JavaScript创建一个充满节日气氛的圣诞节网页，包含雪花飘落、圣诞树、蜡烛闪烁等动画效果。通过这些效果，网页能更好地营造出圣诞节的氛围，并增加互动性。
@@ -250,7 +253,3 @@ Copyright © 2024 IT小章
 
 - [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 - [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/create-christmas-themed-webpage-with-html-css-javascript/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

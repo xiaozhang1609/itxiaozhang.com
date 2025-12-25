@@ -11,6 +11,10 @@ tags:
   - 开源
 author: IT小章
 ---
+
+> 原文地址：<https://itxiaozhang.com/handbrake-free-open-source-video-converter/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 > 本文配合视频食用效果最佳，视频教程在文章末尾。  
 
 ## 下载
@@ -36,7 +40,3 @@ author: IT小章
 
 - [哔哩哔哩](https://www.bilibili.com/video/BV13PvCeXE41)
 - [西瓜视频](https://www.ixigua.com/7397650804745699850)
-
-
-> 原文地址：<https://itxiaozhang.com/handbrake-free-open-source-video-converter/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

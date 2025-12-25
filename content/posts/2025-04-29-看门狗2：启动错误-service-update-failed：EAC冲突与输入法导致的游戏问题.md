@@ -13,6 +13,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/watchdogs2-service-update-failed-eac-input-issue/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 问题描述
 
 在启动《看门狗2》时，出现报错：「service update failed」。该错误出现在点击「开始游戏」后，导致游戏无法进入。
@@ -44,7 +47,3 @@ author: IT小章
 
 - [哔哩哔哩](https://space.bilibili.com/3546607630944387)
 - [YouTube](https://www.youtube.com/@itxiaozhang)
-
-
-> 原文地址：<https://itxiaozhang.com/watchdogs2-service-update-failed-eac-input-issue/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 

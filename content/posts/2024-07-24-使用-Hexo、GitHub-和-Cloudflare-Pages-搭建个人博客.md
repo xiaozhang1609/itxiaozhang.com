@@ -12,6 +12,9 @@ tags:
 author: IT小章
 ---
 
+> 原文地址：<https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
 ## 一、安装 Node.js
 
 1. **下载 Node.js 安装包**
@@ -156,7 +159,3 @@ author: IT小章
 
 > 备注：
 > sticky: true  # 添加这一行来置顶文章，有些主题可能需要特定的格式或数值
-
-
-> 原文地址：<https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/>
-> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
