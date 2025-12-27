@@ -74,26 +74,30 @@ theme = 'PaperMod'
     name = "rss"
     url = "/index.xml"
 
-    [params.profileMode]
-    enabled = true
-    title = "IT小章"
-    subtitle = "<a href='https://zhang9.cn/' target='_blank'>电脑维修</a> | <a href='https://zhang9.cn/' target='_blank'>游戏优化</a> | <a href='https://zhang9.cn/' target='_blank'>编程开发</a> | <a href='https://zhang9.cn/' target='_blank'>网站搭建</a>"
-    imageUrl = "images/head.webp"
-    imageTitle = "IT小章"
-    imageWidth = 150
-    imageHeight = 150
-    
-    [[params.profileMode.buttons]]
-    name = "文章"
-    url = "posts"
-    
-    [[params.profileMode.buttons]]
-    name = "归档"
-    url = "archives"
-    
-    [[params.profileMode.buttons]]
-    name = "关于"
-    url = "about"
+    # [params.profileMode]
+    # enabled = true
+    # title = "IT小章"
+    # subtitle = "<a href='https://zhang9.cn/' target='_blank'>电脑维修</a> | <a href='https://zhang9.cn/' target='_blank'>游戏优化</a> | <a href='https://zhang9.cn/' target='_blank'>编程开发</a> | <a href='https://zhang9.cn/' target='_blank'>网站搭建</a>"
+    # imageUrl = "images/head.webp"
+    # imageTitle = "IT小章"
+    # imageWidth = 150
+    # imageHeight = 150
+    # 
+    # [[params.profileMode.buttons]]
+    # name = "文章"
+    # url = "posts"
+    # 
+    # [[params.profileMode.buttons]]
+    # name = "归档"
+    # url = "archives"
+    # 
+    # [[params.profileMode.buttons]]
+    # name = "关于"
+    # url = "about"
+
+    [params.homeInfoParams]
+    Title = "欢迎来到 IT小章 的博客"
+    Content = "欢迎访问我的个人博客，这里分享电脑维修、游戏优化、编程开发和网站搭建的相关内容。"
 
 [menu]
   [[menu.main]]
