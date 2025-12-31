@@ -1,0 +1,34 @@
+---
+title: GeekUninstaller：高效清理电脑上的软件
+url: /geekuninstaller-effective-software-cleaning/
+date: '2024-08-17 10:23:53 +0800'
+description: 这篇文章介绍了GeekUninstaller，帮助你高效卸载电脑上的软件。它能彻底清理不需要的软件及其相关注册表信息，并提供简单的操作指南和附加功能说明。
+categories:
+  - 软件推荐
+tags:
+  - geek uninstaller
+  - 卸载工具
+author: IT小章
+---
+
+> 原文地址：<https://itxiaozhang.com/geekuninstaller-effective-software-cleaning/>  
+> 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。
+
+> 本文配合视频食用效果最佳，视频教程在文章末尾。  
+
+## 软件介绍
+
+- **彻底卸载**：进行深度扫描，移除所有残留文件，保持电脑干净。
+- **强制卸载**：处理难以卸载的顽固程序。
+- **简洁界面**：界面美观且功能实用，支持40多种语言。
+- **卸载微软商店应用**：支持在Windows 8/8.1/10/11中卸载微软商店应用。
+- **便携性**：单个小型EXE文件可在任何32位和64位Windows系统上运行。
+
+### 软件下载
+
+- [官网下载](https://geekuninstaller.com/)
+
+## 视频教程
+
+- [哔哩哔哩](https://www.bilibili.com/video/BV1h3pZecE2W)
+- [西瓜视频](https://www.ixigua.com/7404104812200985122)

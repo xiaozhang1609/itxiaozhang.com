@@ -1,0 +1,98 @@
+baseURL = "https://itxiaozhang.com/"
+title = "IT小章"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh"
+theme = "PaperMod"
+
+enableInlineShortcodes = true
+enableEmoji = true
+enableRobotsTXT = true
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+
+[params]
+    defaultTheme = "auto"
+    ShowCodeCopyButtons = true
+    ShowShareButtons = true
+    ShowReadingTime = true
+    ShowToc = false
+    
+    [params.profileMode]
+        enabled = true
+        title = "IT小章"
+        subtitle = "分享技术，记录生活"
+        imageUrl = "/images/head.webp" # 占位符头像
+        imageTitle = "IT小章"
+        imageWidth = 120
+        imageHeight = 120
+
+        [[params.profileMode.buttons]]
+            name = "电脑维修"
+            url = "https://zhang9.cn/"
+        [[params.profileMode.buttons]]
+            name = "编程开发"
+            url = "https://zhang9.cn/"
+
+    # [params.homeInfoParams]
+    #     Title = "IT小章"
+    #     Content = "分享技术，记录生活"
+
+    [[params.socialIcons]]
+        name = "bilibili"
+        url = "https://space.bilibili.com/3546607630944387"
+    [[params.socialIcons]]
+        name = "youtube"
+        url = "https://www.youtube.com/@itxiaozhang"
+    [[params.socialIcons]]
+        name = "rss"
+        url = "https://itxiaozhang.com/index.xml"
+
+    [params.assets]
+        disableHLJS = false
+        favicon = "/images/favicon.ico"
+        favicon16x16 = "/images/favicon.ico"
+        favicon32x32 = "/images/favicon.ico"
+        apple_touch_icon = "/images/apple-touch-icon.png"
+        safari_pinned_tab = "/images/favicon.svg"
+
+    [params.cover]
+        hidden = true # 禁用文章列表缩略图 
+
+[markup]
+    [markup.highlight]
+        noClasses = false
+        anchorLineNos = true
+        codeFences = true
+        guessSyntax = true
+        lineNos = true
+        style = "monokai"
+    [markup.goldmark.renderer]
+        unsafe = true # 允许嵌入 HTML
+
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "🏠 首页"
+        url = "/"
+        weight = 10
+    [[menu.main]]
+        identifier = "posts"
+        name = "📚 文章"
+        url = "/posts/"
+        weight = 15
+    [[menu.main]]
+        identifier = "archives"
+        name = "⏱️ 归档"
+        url = "/archives/"
+        weight = 20
+    [[menu.main]]
+        identifier = "search"
+        name = "🔍 搜索"
+        url = "/search/"
+        weight = 40
+    [[menu.main]]
+        identifier = "about"
+        name = "🙋 关于"
+        url = "/about/"
+        weight = 50

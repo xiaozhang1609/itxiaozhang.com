@@ -1,0 +1,104 @@
+
+/* 左右侧边栏布局容器 */
+.post-layout-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 侧边栏通用样式 */
+.sidebar-left, .sidebar-right {
+    width: 250px;
+    position: sticky;
+    top: 80px; /* 距离顶部的距离 */
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    padding: 10px;
+    display: none; /* 默认隐藏，小屏幕不显示 */
+}
+
+/* 左侧目录样式 */
+.sidebar-toc {
+    font-size: 14px;
+}
+.sidebar-toc h3 {
+    margin-top: 0;
+    font-size: 16px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.sidebar-toc .toc {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+.sidebar-toc .toc details summary {
+    display: none; /* 隐藏默认的 TOC 折叠按钮 */
+}
+.sidebar-toc .toc .inner {
+    display: block !important; /* 强制展开 */
+}
+
+/* 右侧推荐文章样式 */
+.sidebar-recent {
+    font-size: 14px;
+}
+.sidebar-recent h3 {
+    margin-top: 0;
+    font-size: 16px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.sidebar-recent ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-recent li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+.sidebar-recent a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.sidebar-recent a:hover {
+    color: var(--primary);
+}
+
+/* 文章主体微调 */
+.post-single {
+    flex: 1;
+    max-width: calc(100% - 540px); /* 减去两侧宽度 */
+    min-width: 0; /* 防止内容溢出 */
+}
+
+/* 大屏幕显示侧边栏 */
+@media screen and (min-width: 1400px) {
+    .sidebar-left, .sidebar-right {
+        display: block;
+    }
+    .post-single {
+        max-width: 800px; /* 限制文章最大宽度 */
+    }
+}
+
+/* 中屏幕只显示右侧或调整布局（可选） */
+@media screen and (max-width: 1399px) {
+    .post-layout-container {
+        display: block;
+    }
+    .post-single {
+        max-width: var(--main-width);
+        margin: 0 auto;
+    }
+    /* 在小屏下恢复默认 TOC 样式如果需要，或者直接隐藏 */
+}
