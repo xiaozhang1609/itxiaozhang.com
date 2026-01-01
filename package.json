@@ -1,0 +1,11 @@
+{
+  "name": "itxiaozhang-blog",
+  "version": "1.0.0",
+  "description": "IT小章 Blog",
+  "scripts": {
+    "build": "hugo --minify"
+  },
+  "devDependencies": {
+    "hugo-extended": "^0.121.0"
+  }
+}
