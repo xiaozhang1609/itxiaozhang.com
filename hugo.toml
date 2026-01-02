@@ -15,7 +15,7 @@ rssLimit = 20
 [params]
     defaultTheme = "auto"
     ShowCodeCopyButtons = true
-    ShowShareButtons = true
+    ShowShareButtons = false
     ShowReadingTime = true
     ShowToc = false
     
