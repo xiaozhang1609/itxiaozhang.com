@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Posts | IT小章</title>
+<meta name="keywords" content="">
+<meta name="description" content="Posts - IT小章">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="rss">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/posts/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span class="active">📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<header class="page-header">
+  <h1>
+    Posts
+  </h1>
+</header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">HMDB代谢物批量抓取与结构化导出
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>这篇文章介绍了一个HMDB代谢物批量爬虫工具，自持同时爬取几万条数据、并发限速与重试、断点续跑，解析25项核心字段并导出CSV。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-03 20:56:43 +0800 CST'>2025年11月3日</span>&nbsp;·&nbsp;<span>5 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to HMDB代谢物批量抓取与结构化导出" href="http://localhost:1313/hmdb-metabolite-batch-extraction-csv-export/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Bilibili粉丝数据获取工具
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文介绍了一个基于Python开发的Bilibili粉丝数据获取工具，支持批量获取粉丝信息并生成HTML展示页面。文章详细讲解了Cookie获取方法、环境配置、使用步骤和常见问题解决方案，并提供完整的源码。适合UP主进行粉丝统计分析和数据备份使用。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-01 18:06:16 +0800 CST'>2025年11月1日</span>&nbsp;·&nbsp;<span>7 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Bilibili粉丝数据获取工具" href="http://localhost:1313/bilibili-followers-data-fetcher-python-tutorial-guide/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">穿越火线设置无法保存一直恢复默认
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>穿越火线修改分辨率或音效后无法保存，重启游戏后设置总是恢复默认。主要原因是配置文件权限或路径异常。通过修正注册表路径、调整「CFSystem」文件夹权限并修复游戏文件，可恢复正常保存功能。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-31 11:55:53 +0800 CST'>2025年10月31日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 穿越火线设置无法保存一直恢复默认" href="http://localhost:1313/crossfire-settings-reset-to-default/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>打开 WeGame 客户端时界面黑屏，文字与链接显示为蓝色和黑色，左侧所有游戏图标均为灰色或黑色，无法启动任何游戏。即使多次重装系统，问题依旧存在。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-29 10:31:25 +0800 CST'>2025年10月29日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开" href="http://localhost:1313/wegame-black-screen-blue-and-black-text-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WeGame 下载报错和更新失败怎么办
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在下载 WeGame 安装包时，出现「dldir1.qq.com 拒绝了我们连接请求（ERR_CONNECTION_REFUSED）」导致无法访问官网或下载文件；而在打开已安装的 WeGame 客户端时，提示「更新失败，请尝试重启或者下载新版」，多次重试无效。本文说明两种情况的原因及对应解决方法，包括网络配置检查、防火墙设置及重新安装步骤。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-26 10:59:05 +0800 CST'>2025年10月26日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to WeGame 下载报错和更新失败怎么办" href="http://localhost:1313/wegame-download-and-update-error-solution/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">永劫无间帧率优化案例：从80帧至360帧
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文展示了《永劫无间》帧率下降问题的完整优化过程，通过更新显卡驱动、安装运行库、调整系统与游戏设置，将帧率从约80提升至360，大幅改善游戏流畅度。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-21 20:00:31 +0800 CST'>2025年10月21日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 永劫无间帧率优化案例：从80帧至360帧" href="http://localhost:1313/naraka-bladepoint-fps-optimization-case/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">工作室相关记录
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>这里会记录和工作室相关的内容</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-21 14:50:59 +0800 CST'>2025年10月21日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 工作室相关记录" href="http://localhost:1313/studio-business-records/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">无畏契约开直播伴侣后一直闪退
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文说明《无畏契约》在开启直播伴侣后出现持续闪退的原因，并提供显卡驱动更新、运行库修复及直播伴侣重装等完整解决步骤，帮助用户快速恢复正常使用。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-13 13:17:00 +0800 CST'>2025年10月13日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 无畏契约开直播伴侣后一直闪退" href="http://localhost:1313/valorant-crash-loop-after-opening-streaming-tool/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">下载原版 Windows 系统镜像的四大渠道
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文介绍四大安全高效的 Windows 系统原版镜像下载渠道，包括微软官方下载、MSDN、msdl.gravesoft.dev 和 UUP 转 ISO 工具，确保文件安全、未修改且更新及时。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-11 18:50:31 +0800 CST'>2025年10月11日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 下载原版 Windows 系统镜像的四大渠道" href="http://localhost:1313/four-channels-download-original-windows-iso/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">《极限国度》报错：Ubisoft Connect 未安装的解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>当《极限国度》启动时报错「UbisoftConnect PC is not currently installed」时，说明电脑缺少 Ubisoft Connect 客户端。本文介绍错误原因、客户端安装步骤，并补充两种关闭 Steam 大屏模式的方法。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-09 16:50:24 +0800 CST'>2025年10月9日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 《极限国度》报错：Ubisoft Connect 未安装的解决方法" href="http://localhost:1313/ubisoft-connect-not-installed-riders-republic-fix/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/posts/page/6/">
+      «&nbsp;上一页&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/posts/page/8/">下一页&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>漫威争锋 on IT小章</title>
+    <link>http://localhost:1313/tags/%E6%BC%AB%E5%A8%81%E4%BA%89%E9%94%8B/</link>
+    <description>Recent content in 漫威争锋 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 30 Dec 2024 17:20:32 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%BC%AB%E5%A8%81%E4%BA%89%E9%94%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《漫威争锋问题排查与修复教程》解决进不去游戏、卡顿崩溃、DX报错等常见问题！</title>
+      <link>http://localhost:1313/marvel-rivals-troubleshooting-fix-guide-unable-to-start-game-crash-dx-error/</link>
+      <pubDate>Mon, 30 Dec 2024 17:20:32 +0800</pubDate>
+      <guid>http://localhost:1313/marvel-rivals-troubleshooting-fix-guide-unable-to-start-game-crash-dx-error/</guid>
+      <description>本教程提供了《漫威争锋》常见问题的解决方法，包括启动失败、崩溃、卡顿、DX报错等。内容涉及清理着色器缓存、修复游戏文件、更新显卡驱动以及调整防火墙和杀毒软件设置，帮助提升游戏稳定性与流畅度。</description>
+    </item>
+    <item>
+      <title>《漫威争锋》着色器编译报错与显卡内存不足问题案例</title>
+      <link>http://localhost:1313/marvel-rivals-shader-compilation-gpu-memory-issue/</link>
+      <pubDate>Thu, 12 Dec 2024 09:28:00 +0800</pubDate>
+      <guid>http://localhost:1313/marvel-rivals-shader-compilation-gpu-memory-issue/</guid>
+      <description>这篇文章记录了《漫威争锋》游戏中英特尔第13/14代CPU用户遇到的着色器编译错误和显存不足问题的一个成功解决案例。</description>
+    </item>
+    <item>
+      <title>《漫威争锋》下载与安装指南 | PC配置要求及常见问题汇总</title>
+      <link>http://localhost:1313/marvel-battle-download-install-guide-pc-requirements-faq/</link>
+      <pubDate>Fri, 06 Dec 2024 10:17:39 +0800</pubDate>
+      <guid>http://localhost:1313/marvel-battle-download-install-guide-pc-requirements-faq/</guid>
+      <description>这篇文章简要介绍了《漫威争锋》的PC配置要求，包括最低和推荐配置，指导玩家从官网下载并安装游戏客户端，同时汇总了常见问题解决方案.</description>
+    </item>
+  </channel>
+</rss>

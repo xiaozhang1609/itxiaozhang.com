@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Deltaforce on IT小章</title>
+    <link>http://localhost:1313/tags/deltaforce/</link>
+    <description>Recent content in Deltaforce on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 14 Dec 2025 10:02:26 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/deltaforce/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>游戏安全系统检测到非法劫持模块怎么办？</title>
+      <link>http://localhost:1313/delta-force-illegal-module-sguardagent64-dll-fix/</link>
+      <pubDate>Sun, 14 Dec 2025 10:02:26 +0800</pubDate>
+      <guid>http://localhost:1313/delta-force-illegal-module-sguardagent64-dll-fix/</guid>
+      <description>本文针对玩家启动《三角洲行动》时遇到的「游戏安全系统检测到非法劫持模块」警告，提供了详细且系统的解决方案。</description>
+    </item>
+  </channel>
+</rss>

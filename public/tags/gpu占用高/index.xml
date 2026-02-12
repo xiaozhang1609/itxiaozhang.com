@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gpu占用高 on IT小章</title>
+    <link>http://localhost:1313/tags/gpu%E5%8D%A0%E7%94%A8%E9%AB%98/</link>
+    <description>Recent content in Gpu占用高 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 27 Nov 2025 12:10:51 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gpu%E5%8D%A0%E7%94%A8%E9%AB%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>三角洲行动提示显存不足怎么办？</title>
+      <link>http://localhost:1313/delta-force-out-of-video-memory-solution/</link>
+      <pubDate>Thu, 27 Nov 2025 12:10:51 +0800</pubDate>
+      <guid>http://localhost:1313/delta-force-out-of-video-memory-solution/</guid>
+      <description>本文针对三角洲行动出现「Out of video memory…」及 GPU 占用异常偏高的问题，整理显卡驱动、虚拟内存及系统资源占用等原因，并提供完整操作步骤，帮助快速恢复显卡状态并顺利进入游戏。</description>
+    </item>
+  </channel>
+</rss>

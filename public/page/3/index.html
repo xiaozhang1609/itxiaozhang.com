@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IT小章</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">一打开英雄联盟电脑就断网怎么办？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/how-to-fix-lol-computer-disconnect/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 打开英雄联盟后，整个电脑会断网。无论进入训练营或任何模式，在加载界面都会反复提示「重新连接中，请稍候」，而其他软件与游戏均正常，就算进入游戏后也无法正常操作。
+问题原因 英雄联盟启动时会进行大量 DNS 解析与连接请求。 若家庭网络存在多个光猫或路由器串联，可能产生 DHCP 或 DNS 冲突，导致网络异常。 常见触发场景：多人合租、房东或前任租客遗留旧路由器、光猫后级联多个路由器、桥接设置不当、路由模式混乱，容易导致网络地址分配冲突。 解决办法 排除电脑自身网络问题
+拔掉电脑网线。 使用手机热点测试网络是否正常。 若不正常，修改热点名称与密码后重新连接，再测试。若正常则继续下一步。 检查光猫或路由器连接
+找到家中的光猫或路由器，查看连接的网线数量。 仅保留电脑使用的那一根网线，拔掉其余所有网线。 拔掉光猫或路由器电源，等待约 10 秒后重新接通。 待指示灯全部恢复正常后，重新测试游戏。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-21 22:03:40 +0800 CST'>November 21, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 一打开英雄联盟电脑就断网怎么办？" href="http://localhost:1313/how-to-fix-lol-computer-disconnect/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">直播伴侣画面添加静态和动态元素
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/live-companion-static-dynamic-elements/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在「直播伴侣」中，直播画面需要添加静态与动态元素，如多个人物头像，其中静态头像为图片，动态头像为动图或视频。
+问题原因 该效果不是自动生成，而是通过直播伴侣叠加素材实现。如果没有提前准备图片或动图，或者未正确添加到直播场景，就无法显示所需效果。
+解决办法 准备素材
+静态元素：制作图片素材。 动态元素：准备 GIF 或短视频素材。 添加静态素材
+打开直播伴侣。 在直播场景中添加「图片」素材。 调整位置和大小，将多个头像或静态元素排列好。 添加动态素材
+添加「视频 / 动图」素材。 调整大小与位置，使静态和动态元素统一协调。 优化布局
+可继续添加更多静态或动态素材。 调整图层顺序与排列，使画面整齐自然。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-20 20:50:52 +0800 CST'>November 20, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 直播伴侣画面添加静态和动态元素" href="http://localhost:1313/live-companion-static-dynamic-elements/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">英雄联盟日服修改语言为中文教程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/lol-change-language-jp-to-chinese-tutorial/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 日服《英雄联盟》启动时默认显示英文界面。用户希望将界面切换为中文，需要手动编辑客户端的语言配置文件并确保修改不被自动覆盖。
+问题原因 客户端默认语言设定为英文，且不同服务器提供的语言代码不同。若不手动修改配置文件的「locale」字段，或未将文件设为只读，系统会在更新时恢复默认语言。
+解决办法 完全关闭英雄联盟客户端。
+进入 Riot Games 的配置目录 C:\ProgramData\Riot Games\Metadata\league_of_legends.live。
+找到语言配置文件「league_of_legends.live.product_settings.yaml」，以记事本打开。
+搜索「locale:」字段，将其值替换为对应的语言代码：
+简体中文：zh_CN 繁体中文：zh_TW 日文：ja_JP 韩文：ko_KR 英文：en_US 保存并关闭文件。
+打开文件属性，勾选「只读」，防止启动后被覆盖。
+重新启动 Riot Client，让客户端更新语言包。
+更新完成后启动游戏，界面即切换为设定语言。
+视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-20 19:26:07 +0800 CST'>November 20, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 英雄联盟日服修改语言为中文教程" href="http://localhost:1313/lol-change-language-jp-to-chinese-tutorial/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WeGame 无法启动英雄联盟死循环
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/wegame-league-launch-issue-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 电脑通过 WeGame 启动「英雄联盟」时无任何反应，等待一段时间后会自动返回 WeGame 的初始启动界面，始终无法进入游戏。
+问题原因 系统文件可能存在损坏，未正常修复。 运行库版本过旧或残留，影响程序调用。 显卡驱动过老，导致游戏无法正常初始化。 系统时区与本地时间不同步，引发平台校验失败。 系统区域设置未启用 UTF-8，造成兼容性问题。 解决办法 执行安全检查：在病毒与威胁防护中进行全盘扫描。
+修复系统文件：以管理员身份运行命令行，执行「SFC /SCANNOW」。
+清理旧运行库并重装：
+卸载已安装的 64 位与 32 位运行库。 重新安装新版运行库。 更新显卡驱动：
+前往英伟达官网，根据显卡型号与系统选择正确驱动。 安装方式选择「自定义」，勾选「清洁安装」，完成更新。 同步系统时间：
+开启自动时区。 执行「立即同步」。 启用 UTF-8 支持：
+在区域设置中开启 UTF-8 兼容选项，并重启电脑。 重新测试游戏启动：重启后通过 WeGame 再次启动游戏确认是否恢复正常。
+视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-16 19:25:53 +0800 CST'>November 16, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to WeGame 无法启动英雄联盟死循环" href="http://localhost:1313/wegame-league-launch-issue-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">安装包双击无反应，无法安装软件，无法打开程序
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/installation-no-response-cannot-open-software/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 双击安装包或软件时，无任何反应，不弹出安装界面或运行窗口。
+问题原因 此问题多为「火绒安全软件」拦截所致。用户可能在安装过程中误选了「阻止」并勾选了「记住本操作，下次自动处理」，导致后续所有类似操作被火绒自动拦截而不再提示。 此外，部分其他安全类软件（如360安全卫士、腾讯电脑管家等）也可能出现类似拦截提示，造成安装程序无法启动。
+解决办法 检查电脑是否安装火绒或其他安全软件。
+若已安装，观察是否有拦截提示窗口出现在右下角。
+如果不再弹出提示，可能是之前误选「阻止并记住」。
+可尝试以下方法：
+方法一：退出安全软件后重新运行安装包； 方法二：在安全软件设置中找到「信任区」或「拦截记录」，将对应程序设为「允许」； 方法三：临时卸载安全软件，安装完成后再重新安装。 重新运行安装包时，确保在提示窗口中选择「允许」，不要勾选「记住操作」再点「阻止」。
+视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-10 20:52:47 +0800 CST'>November 10, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 安装包双击无反应，无法安装软件，无法打开程序" href="http://localhost:1313/installation-no-response-cannot-open-software/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">战地6未开启 Secure Boot，无法启用 Javelin 反作弊系统
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/battlefield6-javelin-anti-cheat-secure-boot-error/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 启动《战地6》时会出现提示：未开启 Secure Boot，导致无法正常启动 Javelin 反作弊系统，游戏无法进入。
+问题原因 系统的 Secure Boot（安全启动）被关闭。Javelin 反作弊要求系统处于 Secure Boot 已启用状态，若未开启，反作弊驱动/模块无法初始化，从而阻止游戏启动。TPM 状态正常并不能替代 Secure Boot。
+解决办法 确认系统信息
+按「Win &#43; R」，输入「msinfo32」并回车。 查看「BIOS 模式」是否为「UEFI」，并确认「安全启动状态」是否为「关闭」。 确认 TPM（可选）
+按「Win &#43; R」，输入「tpm.msc」。 若显示「TPM 已启用」且为「2.0」，无须调整；若未启用，按主板/系统说明启用 TPM。 启用 Secure Boot
+重启进入 BIOS/UEFI 设置（常见按键：F2、Del、F10，依厂商而定）。 切换到「高级模式」，找到「Security（安全性）」或「Boot」项。 将「Secure Boot Control／Secure Boot」设为「Enabled／开启」。 若存在「OS Type」或「Boot Mode」选项，确保使用「UEFI」或「Windows UEFI」模式。 保存并退出（Save &amp; Exit）。 验证与重试
+系统重启后再次运行「msinfo32」，确认「安全启动状态」显示为「已启用」。 启动《战地6》，会出现「正在启动 Javelin 反作弊系统」提示，但此时 Javelin 应能正常加载，游戏可进入。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-10 17:23:17 +0800 CST'>November 10, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 战地6未开启 Secure Boot，无法启用 Javelin 反作弊系统" href="http://localhost:1313/battlefield6-javelin-anti-cheat-secure-boot-error/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WeGame 下载或安装英雄联盟出现移动文件失败怎么办
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/wegame-lol-move-file-failed-what-to-do/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在使用 WeGame 下载或安装英雄联盟时，出现以下报错：
+「移动文件失败，可能文件被占用或权限不足，请重启本机并关闭杀软后重试，错误码：7814080」 「安装失败. 移动文件失败，可能文件被占用或权限不足，请重启本机并关闭条软后重试」 同时，在尝试调整安装位置和磁盘时，磁盘管理提示：
+「选定进行压缩的卷可能已损坏。请使用 Chkdsk 来修复损坏问题，然后尝试再次压缩该卷。」 问题原因 WeGame 文件被防火墙或杀毒软件拦截，或进程占用导致写入失败。 系统存在不必要服务、启动项或软件干扰 WeGame。 WeGame 残留文件未完全清除，导致再次安装异常。 游戏安装所在磁盘分区存在损坏，导致无法正常移动/写入文件。 解决办法 基础修复
+找到 WeGame → 右键 → 打开文件所在位置 → 再次右键 → 打开文件所在位置 → 找到「Repair」→ 双击执行修复。 修复后尝试重新下载游戏。 检查防火墙设置
+打开 Windows 防火墙 → 暂时关闭测试。 若需要恢复 → 点击「允许应用通过防火墙」。 找到「TGP」或 WeGame 相关应用 → 勾选专用网络和公用网络 → 保存。 系统安全与进程检查
+打开 Windows 安全中心 → 执行全盘扫描。
+以管理员身份运行命令提示符，执行：
+1 sfc /scannow 运行「msconfig」→ 关闭不明或无关的服务与启动项。
+若存在广告类或不必要软件（如壁纸软件等），建议卸载。
+完全卸载并重装 WeGame
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-09 12:06:00 +0800 CST'>November 9, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to WeGame 下载或安装英雄联盟出现移动文件失败怎么办" href="http://localhost:1313/wegame-lol-move-file-failed-what-to-do/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">战网登录失败，提示无法登录战网处理方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/battlenet-login-error-solution/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 登录战网客户端时，提示报错：「无法登录战网。如果选择离线模式，部分游戏与功能将无法使用。」点击「重试」无效，依然出现相同报错。
+问题原因 防火墙阻止：Windows 防火墙可能阻止战网客户端访问网络。 DNS 配置异常：IPv4 DNS 地址设置不正确，导致无法解析战网服务器。 Host 文件干扰：Host 文件可能包含阻止战网连接的条目。 客户端或注册表异常：战网客户端文件损坏或注册表残留导致登录失败。 解决办法 步骤 1：检查防火墙设置 打开「控制面板 → 系统和安全 → Windows 防火墙 → 启用或关闭防火墙」。
+尝试关闭防火墙后登录战网。
+若无效，恢复默认防火墙设置（「使用推荐设置」）。
+允许战网通过防火墙：
+点击「允许应用通过防火墙」 若列表中无战网客户端，手动添加并勾选「专用」和「公用」网络。 步骤 2：修改 DNS 设置 打开管理员模式的终端，输入 ncpa.cpl 回车，打开网络连接。 双击常用网卡 → 属性 → 选中 IPv4 → 属性。 将 DNS 地址修改为 8.8.8.8。 在终端输入 ipconfig /flushdns 刷新 DNS 缓存。 测试战网客户端是否能正常登录。 步骤 3：检查 Host 文件 路径：C:\Windows\System32\drivers\etc\hosts 备份原文件后，将其移动或删除。 测试战网客户端是否能登录。 如有效，保持此状态；若无效，恢复原 Host 文件。 步骤 4：重装战网客户端 下载最新战网安装包。 使用卸载工具彻底卸载原客户端，包括注册表清理。 双击安装包重新安装，建议更改安装路径以避免冲突。 安装完成后登录并启动游戏。 提示：方法按顺序尝试，任一方法有效即可停止后续操作。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-08 11:08:10 +0800 CST'>November 8, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 战网登录失败，提示无法登录战网处理方法" href="http://localhost:1313/battlenet-login-error-solution/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">完美平台提示未开启CPU虚拟化的解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/fix-perfect-platform-cpu-virtualization-error/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 打开完美平台时出现以下报错提示： 「当前您的设备未开启CPU虚拟化相关功能 请前往系统BIOS内开启包括但不限于以下功能 Intel平台：VT-x VT-d AMD平台: AMD-V IOMMU 详细开启引导可前往完美平台官网或联系客服查看」
+该提示会在进入平台、匹配或游戏时反复出现，导致无法正常运行。
+问题原因 BIOS 虚拟化功能未开启。 系统中存在占用虚拟化能力的软件或后台服务。 Windows 中 Hyper-V、设备加密或内存隔离影响虚拟化环境。 系统虚拟化配置被修改，需要恢复为默认状态。 解决办法 1. 全盘查杀与卸载占用虚拟化的软件 打开「Windows 安全中心」→「病毒和威胁防护」→「扫描选项」→ 执行「全面扫描」。
+按 Win &#43; R 输入：
+1 appwiz.cpl 在「程序和功能」中卸载可能干扰虚拟化的软件，例如：
+垃圾软件 不必要的安全防护软件 虚拟机工具（如未使用） 2. 关闭 Hyper-V 及相关组件 在「程序和功能」左侧选择「启用或关闭 Windows 功能」，取消勾选：
+Hyper-V 虚拟机平台 Windows 沙盒 点击确定，无需立即重启。 3. 关闭设备加密和内存隔离 「设置」→「隐私和安全性」→ 关闭「设备加密」。 打开「Windows 安全中心」→「设备安全性」→「内存隔离」→ 关闭「内存完整性」。 4. 在命令提示符（管理员）中修复系统配置 在开始菜单输入「cmd」→ 右键「以管理员身份运行」。
+执行：
+1 sfc /scannow 扫描完成后继续执行：
+1 bcdedit /set hypervisorlaunchtype off 5. 最后统一重启 → 进入 BIOS 开启虚拟化 重启电脑 → 开机连续按 F2 / Delete 进入 BIOS。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-06 10:19:09 +0800 CST'>November 6, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 完美平台提示未开启CPU虚拟化的解决方法" href="http://localhost:1313/fix-perfect-platform-cpu-virtualization-error/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">用蓝牙耳机玩无畏契约声音变闷了怎么办
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/valorant-bluetooth-sound-muffled-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在使用蓝牙耳机玩《无畏契约（VALORANT）》时，出现「声音非常闷」的问题，但在其他游戏、音乐或视频播放时声音正常。
+问题原因 《无畏契约》启用了「无畏时刻」录制功能，该功能会占用系统的音频通道，使蓝牙耳机自动切换至「免提模式（Hands-Free）」音频协议，导致音质下降、声音发闷。
+解决办法 关闭「无畏时刻」录制功能
+启动《无畏契约》。 点击右上角的「无畏时刻」。 打开「设置」。 在「录制」选项中关闭录制功能（如原本已关闭，可尝试开启后再关闭）。 关闭设置窗口。 关闭蓝牙耳机的免提电话服务
+在系统搜索栏输入「蓝牙和其他设备设置」。 向下滚动，点击「更多设备和打印机设置」。 找到你的蓝牙耳机，右键或双击打开属性。 切换到「服务」选项卡。 取消勾选「免提电话服务」。 点击「确定」，等待系统完成更改。 测试音效
+关闭所有设置窗口。 启动《无畏契约》，进入游戏或靶场测试声音。 声音应恢复正常，背景音乐与射击音效清晰。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-04 15:05:48 +0800 CST'>November 4, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 用蓝牙耳机玩无畏契约声音变闷了怎么办" href="http://localhost:1313/valorant-bluetooth-sound-muffled-fix/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/2/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/4/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

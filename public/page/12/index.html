@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IT小章</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">阅读与感悟周记42
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/weekly-reflections-reading-insights-42/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+文章 隐说 No.3 儿时的梦想 - 太隐 2024 ·年度回顾 - 印记 IMDb公布2024年热门电影和电视剧-月光博客 我妈是北大教授，我初中都没上完 《HelloGitHub 月刊》第 105 期 - HelloGitHub 第一次日本自由行的个人心得 - V2EX 如何修复GPU驱动程序崩溃 高配电脑The Finals闪退/UE5报错/Crash报错/显存不足完美解决办法 - 哔哩哔哩 播客 年终总结 1：创新激励与极致内卷：从英伟达的崛起看黄仁勋的商业智慧与管理哲学 | S8E30 - What’s Next｜科技早知道 | 小宇宙 电影 兵临城下 六指琴魔 大话王 好好先生 感悟 翻垃圾箱的老人和茅坑里的蛆虫很像，这很悲哀。 振兴家族 如何做好一个皇帝，映射到现在，如何做自己的皇帝。 无时无刻的内容消费。 给自己设定一个达不到的目标 生活中有很多变量，在解释某一个东西的时候，总可以讲的合理一些，这是不是预留字段？ 即使是成熟的技术，只要被创新的用在合适的场景，也能够激发出巨大的价值。 这个世界给了我们太多的无关干扰项，这样看来，有信仰的人总会按照一套规则行事，做事也会变得更有效率。 看的很远，思想和太阳一样耀眼。 我现在需要启发我想象力的东西。 如果某一天，晒太阳变成了一件非常奢侈的事情，我希望那一天越迟越好。 其他人的生活是被规定好的。就按程就像程序一样。从生到死是固定好的。脚本儿是固定的。你能影响身边，你能影响一些人，但是影响不了所有的人，只能影响某几个人，到他们离你比较近的时候，你就能。或者他们和你有接触的时候，就影响你的场。你的场能影响到他们改变，强行改变他们的生活轨迹，影响他们的运转。 境界到了，状态好了，才能有好的表现。 日记 12月24日 刚刚突然地震，被吓了一跳，今年已经感受到好几次地震了，到底是怎么了？ 又开始摇了，前面是6点多，现在是10点多。 我现在总感觉床在摇，我什么时候这么怕死了。 </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-30 17:58:43 +0800 CST'>December 30, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 阅读与感悟周记42" href="http://localhost:1313/weekly-reflections-reading-insights-42/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">《漫威争锋问题排查与修复教程》解决进不去游戏、卡顿崩溃、DX报错等常见问题！
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/marvel-rivals-troubleshooting-fix-guide-unable-to-start-game-crash-dx-error/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+一、进不去游戏的情况 1. 卡在着色器阶段 特尔第13和第14代CPU崩溃问题：参考 视频教程 或 文本教程。 清理着色器缓存： 打开 NVIDIA 控制面板 → 管理 3D 设置 → 禁用着色器缓存，保存并重启电脑。 删除路径 %USERPROFILE%\AppData\LocalLow\NVIDIA\PerDriverVersion\ 下的 DXCache 文件夹。 重启后启用着色器缓存，保存并重启电脑。 重启游戏。 2. 加载后无法进入游戏或断线重连失败 原因：杀毒软件或防火墙误判游戏进程。 解决方法： 将游戏路径及 Marvel-Win64-Shipping.exe 加入白名单。 Windows Defender：允许 Marvel-Win64-Shipping.exe 通过文件夹限制访问。 Windows 防火墙：允许 Marvel-Win64-Shipping.exe 通过防火墙并访问网络。 3. DirectX 12 错误 错误信息：“DirectX 12 is not supported”。 解决方法： 更新至 Windows 10 64-bit（1909 或更高版本）。 更新显卡驱动并选择清洁安装。 二、可以进入游戏的情况（崩溃或卡顿） 1. 验证游戏文件完整性 原因：游戏文件损坏。 解决方法： 发烧平台： 打开启动器，点击 Marvel Rivals 图标。 点击 修复按钮 → 选择 游戏修复 → 确认并修复。 Steam平台： 在 Steam 库中右键游戏，选择 属性。 进入 本地文件 标签，点击 验证游戏文件完整性。 修复失败时：若修复失败，重启平台再试。 2. 更新显卡驱动 解决方法：按前述步骤更新显卡驱动并选择清洁安装。 3. 调整CPU核心频率设置 步骤：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-30 17:20:32 +0800 CST'>December 30, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 《漫威争锋问题排查与修复教程》解决进不去游戏、卡顿崩溃、DX报错等常见问题！" href="http://localhost:1313/marvel-rivals-troubleshooting-fix-guide-unable-to-start-game-crash-dx-error/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">阅读与感悟周记41
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/weekly-reflections-reading-insights-41/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+文章 隐说 No.2 教育与洗脑 - 太隐 数字游民有什么地方推荐居住 - V2EX 再读毛选：《反对本本主义》 - 太隐 DIY明信片互换计划 | @1900’Blog 川西笔架山，冬季雪山登山实操 | @1900’Blog 四十岁生日-2024注定是个不平凡的一年 | 小赖子的英国生活和资讯 焦虑和自洽—我的2024年书单 图片 我的玉米公主好靓啊～ 播客 E29. 00后清华美女CC解密：web3新人如何通过打造个人IP走上职业快车道 - Day1Global生而全球-Web3版 | 小宇宙 视频 【公开课】温铁军：中国经济研究（33讲） 【完整版】温铁军2024年11月演讲，主题：全球化解体与中国的压舱石。 温铁军讲座集（2017~2022） 电影 误杀瞒天记2 雪国列车 想法 收紧自己的服务范围，主要做游戏相关的内容，咸鱼用来做解决游戏问题的素材。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-23 22:52:00 +0800 CST'>December 23, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 阅读与感悟周记41" href="http://localhost:1313/weekly-reflections-reading-insights-41/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">用HTML、CSS和JavaScript写一个圣诞氛围的网页
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/create-christmas-themed-webpage-with-html-css-javascript/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+介绍 使用HTML、CSS和JavaScript创建一个充满节日气氛的圣诞节网页，包含雪花飘落、圣诞树、蜡烛闪烁等动画效果。通过这些效果，网页能更好地营造出圣诞节的氛围，并增加互动性。
+使用 将下面的源码复制到记事本中。 将文件保存为 .html 格式（例如 christmas_scene.html）。 双击保存的文件，即可在浏览器中打开并查看动感的圣诞节网页。 源码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 &lt;!-- ================================ 作者：IT小章 网站：itxiaozhang.com 时间：2024年12月23日 Copyright © 2024 IT小章 ================================ --&gt; &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;title&gt;Christmas Scene with Candles&lt;/title&gt; &lt;style&gt; body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; } .scene { background-color: black; width: 100vw; height: 100vh; overflow: hidden; position: relative; } #snowCanvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; filter: blur(1px); } .mainTree { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: min(60vw, 60vh); /* 增大圣诞树尺寸 */ color: #00ff00; z-index: 3; transition: all 0.3s ease; cursor: pointer; animation: sway 4s ease-in-out infinite; } .mainTree:hover { transform: translate(-50%, -50%) scale(1.05); } @keyframes sway { 0%, 100% { transform: translate(-50%, -50%) rotate(-1deg); } 50% { transform: translate(-50%, -50%) rotate(1deg); } } .candle { position: absolute; font-size: min(3vw, 3vh); color: rgba(255, 255, 224, 0.7); text-shadow: 0 0 5px rgba(255, 255, 224, 0.7); animation: flicker 2s ease-in-out infinite alternate; z-index: 2; cursor: pointer; transition: all 0.3s ease; } .candle:hover { transform: scale(1.2); color: rgba(255, 255, 224, 1); text-shadow: 0 0 10px rgba(255, 255, 224, 1); } @keyframes flicker { 0% { opacity: 0.5; transform: scale(0.95); } 50% { opacity: 1; transform: scale(1.05); } 100% { opacity: 0.7; transform: scale(1); } } @keyframes sparkle { 0%, 100% { opacity: 0; } 50% { opacity: 1; } } .sparkle { position: absolute; width: 5px; height: 5px; background-color: white; border-radius: 50%; animation: sparkle 0.8s linear infinite; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div class=&#34;scene&#34;&gt; &lt;canvas id=&#34;snowCanvas&#34;&gt;&lt;/canvas&gt; &lt;div class=&#34;mainTree&#34;&gt;🎄&lt;/div&gt; &lt;/div&gt; &lt;script&gt; const scene = document.querySelector(&#39;.scene&#39;); const canvas = document.getElementById(&#39;snowCanvas&#39;); const ctx = canvas.getContext(&#39;2d&#39;); function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; } resizeCanvas(); window.addEventListener(&#39;resize&#39;, resizeCanvas); class Snowflake { constructor() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height; this.size = Math.random() * 5 &#43; 2; this.speed = Math.random() * 1.5 &#43; 0.5; this.opacity = Math.random() * 0.5 &#43; 0.3; this.wind = Math.random() * 0.5 - 0.25; } update() { this.y &#43;= this.speed; this.x &#43;= this.wind; if (this.y &gt; canvas.height) { this.y = 0; this.x = Math.random() * canvas.width; } if (this.x &gt; canvas.width) this.x = 0; if (this.x &lt; 0) this.x = canvas.width; } draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`; ctx.fill(); } } const snowflakes = Array.from({ length: 150 }, () =&gt; new Snowflake()); function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); snowflakes.forEach(snowflake =&gt; { snowflake.update(); snowflake.draw(); }); requestAnimationFrame(animate); } animate(); function createCandles() { const numCandles = 15; const minDistance = 100; const candles = []; for (let i = 0; i &lt; numCandles; i&#43;&#43;) { let x, y, overlapping; do { x = Math.random() * (window.innerWidth - 100) &#43; 50; y = Math.random() * (window.innerHeight - 100) &#43; 50; overlapping = candles.some(candle =&gt; Math.hypot(candle.x - x, candle.y - y) &lt; minDistance ); } while (overlapping); const candle = document.createElement(&#39;div&#39;); candle.className = &#39;candle&#39;; candle.textContent = &#39;🕯️&#39;; candle.style.left = `${x}px`; candle.style.top = `${y}px`; const scale = Math.random() * 0.3 &#43; 0.3; const rotation = Math.random() * 20 - 10; candle.style.transform = `scale(${scale}) rotate(${rotation}deg)`; scene.appendChild(candle); candles.push({ x, y }); } } function handleClick(event) { const rect = event.target.getBoundingClientRect(); const x = event.clientX - rect.left; const y = event.clientY - rect.top; for (let i = 0; i &lt; 10; i&#43;&#43;) { const sparkle = document.createElement(&#39;div&#39;); sparkle.className = &#39;sparkle&#39;; sparkle.style.left = `${x &#43; Math.random() * 40 - 20}px`; sparkle.style.top = `${y &#43; Math.random() * 40 - 20}px`; sparkle.style.width = `${Math.random() * 3 &#43; 2}px`; sparkle.style.height = sparkle.style.width; event.target.appendChild(sparkle); setTimeout(() =&gt; sparkle.remove(), 800); } } function adjustLayout() { const mainTree = document.querySelector(&#39;.mainTree&#39;); const candles = document.querySelectorAll(&#39;.candle&#39;); mainTree.style.fontSize = `min(60vw, 60vh)`; // 增大圣诞树尺寸 candles.forEach(candle =&gt; { candle.style.fontSize = `min(3vw, 3vh)`; const x = Math.random() * (window.innerWidth - 100) &#43; 50; const y = Math.random() * (window.innerHeight - 100) &#43; 50; candle.style.left = `${x}px`; candle.style.top = `${y}px`; }); } createCandles(); adjustLayout(); document.querySelector(&#39;.mainTree&#39;).addEventListener(&#39;click&#39;, handleClick); document.querySelectorAll(&#39;.candle&#39;).forEach(candle =&gt; { candle.addEventListener(&#39;click&#39;, handleClick); }); window.addEventListener(&#39;resize&#39;, adjustLayout); &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-23 14:04:44 +0800 CST'>December 23, 2024</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 用HTML、CSS和JavaScript写一个圣诞氛围的网页" href="http://localhost:1313/create-christmas-themed-webpage-with-html-css-javascript/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">微软官方安装卸载修复工具与恶意软件删除工具使用教程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/windows-installation-uninstallation-problems-solution/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+在使用 Windows 系统时，程序安装或卸载过程中常常会遇到各种问题，比如注册表损坏、程序无法卸载或安装等。这些问题通常会影响系统的正常运行。微软提供了两个非常有用的官方工具，可以帮助解决这些常见的安装和卸载问题，同时帮助清理恶意软件。今天，我们就来介绍这两个工具以及如何解决相关的报错问题。
+程序安装和卸载修复工具 如果你遇到如下报错提示：
+“The feature you are trying to use is on a network resource that is unavailable.”
+点击 OK 后，会显示：
+“Click OK to try again, or enter an alternate path to a folder containing the installation package in the box below.”
+这个问题通常是由于安装程序的路径丢失、注册表损坏或其他文件问题引起的。微软的“程序安装和卸载修复工具”可以帮助你修复这些问题。
+使用步骤 下载工具： 访问微软官方网站，下载 程序安装和卸载修复工具。
+运行工具： 下载完成后，双击运行该程序，并按照提示点击“下一步”。
+选择修复功能： 你可以选择“卸载功能”来修复程序卸载失败的问题。如果遇到安装问题，也可以选择“安装功能”来修复安装失败。
+选择需要修复的程序： 根据工具提示，选择需要修复的程序，点击“下一步”进行卸载或修复。
+完成修复： 修复完成后，点击“关闭”即可。
+恶意软件删除工具 如果系统被恶意软件感染，可能会导致各种功能异常，包括程序无法正常安装或卸载。微软的 恶意软件删除工具 可以帮助你清除系统中的流行恶意软件，确保系统安全。该工具支持 Windows 7 到 Windows 10，适用于扫描和清除各种特定恶意软件。
+使用步骤 下载工具： 访问微软官方网站，下载 恶意软件删除工具。以 64 位举例，下载对于 64 位基于 x64 的系统。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-22 01:09:42 +0800 CST'>December 22, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 微软官方安装卸载修复工具与恶意软件删除工具使用教程" href="http://localhost:1313/windows-installation-uninstallation-problems-solution/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">两种关闭VBS的实用方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/two-effective-ways-to-disable-vbs/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+什么是VBS（Virtualization-Based Security）？ 虚拟化基础安全性（VBS） 是一种利用硬件虚拟化技术增强操作系统安全的功能。它通过将内存、进程等重要系统组件隔离在一个受保护的虚拟环境中，以防止恶意软件访问和篡改系统数据。VBS 的目的是提高系统防护，尤其是防止内核级的攻击。
+然而，启用 VBS 可能导致系统性能下降，特别是当运行虚拟化应用时。此外，一些依赖硬件虚拟化的程序可能会与 VBS 产生兼容性问题。因此，某些用户可能希望关闭 VBS 以提高性能或解决兼容性问题。
+方法一：使用批处理文件禁用 VBS 创建批处理文件
+首先，创建一个批处理文件，内容如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 @echo off dism /Online /Disable-Feature:microsoft-hyper-v-all /NoRestart dism /Online /Disable-Feature:IsolatedUserMode /NoRestart dism /Online /Disable-Feature:Microsoft-Hyper-V-Hypervisor /NoRestart dism /Online /Disable-Feature:Microsoft-Hyper-V-Online /NoRestart dism /Online /Disable-Feature:HypervisorPlatform /NoRestart REM =========================================== mountvol X: /s copy %WINDIR%\System32\SecConfig.efi X:\EFI\Microsoft\Boot\SecConfig.efi /Y bcdedit /create {0cb3b571-2f2e-4343-a879-d86a476d7215} /d &#34;DebugTool&#34; /application osloader bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} path &#34;\EFI\Microsoft\Boot\SecConfig.efi&#34; bcdedit /set {bootmgr} bootsequence {0cb3b571-2f2e-4343-a879-d86a476d7215} bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=X: mountvol X: /d bcdedit /set hypervisorlaunchtype off echo. echo. echo ======================================================= echo 当前操作已完成，接下来请关闭此窗口并重启电脑，然后根据屏幕提示完成剩下操作。 pause &gt; nul echo. 保存文件并以管理员身份运行
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-22 00:53:09 +0800 CST'>December 22, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 两种关闭VBS的实用方法" href="http://localhost:1313/two-effective-ways-to-disable-vbs/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">一种解决 Inaccessible Boot Device 蓝屏的方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/solution-inaccessible-boot-device-blue-screen/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+科普：Intel VMD 与 Inaccessible Boot Device 蓝屏及解决方法 Intel VMD（Volume Management Device） 是英特尔推出的技术，旨在优化NVMe SSD的性能与管理。VMD将存储设备直接连接到CPU，通过PCIe总线减少延迟，支持热插拔并简化管理，增强系统的安全性与可靠性。
+Inaccessible Boot Device 蓝屏 inaccessible_boot_device 蓝屏错误通常发生在系统无法访问启动盘时，常见原因包括：
+VMD 驱动未安装：系统无法识别启用的VMD控制器。 BIOS 配置问题：VMD在BIOS中启用时，可能导致存储设备无法被正确访问。 解决方法 方法一：在 BIOS 中关闭 VMD 进入 BIOS 设置，禁用 VMD 功能。 保存并退出，重启系统，问题解决。 方法二：进入 PE 环境安装 VMD 驱动 使用PE工具启动电脑，进入PE环境。 安装VMD驱动后重启，系统正常启动。 </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-21 19:40:36 +0800 CST'>December 21, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 一种解决 Inaccessible Boot Device 蓝屏的方法" href="http://localhost:1313/solution-inaccessible-boot-device-blue-screen/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">插入U盘，电脑提示「格式化磁盘」，使用DiskGenius恢复U盘数据成功案例
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/format-disk-error-recover-usb-data-with-diskgenius-case/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+背景 将U盘插入电脑后，系统提示“格式化磁盘”，但U盘里有一些非常重要的文件需要保留。本文详细介绍了如何利用DiskGenius修复U盘分区表并恢复数据的全过程，帮助遇到类似问题的用户找回丢失文件。
+步骤一：下载并安装DiskGenius 官网下载DiskGenius软件。 安装并打开软件，准备进行数据恢复。 步骤二：连接U盘并打开软件 将出现问题的U盘插入电脑。 打开DiskGenius软件，找到U盘并选择。 步骤三：搜索丢失的分区 右键点击U盘，选择**“搜索已丢失分区（重建分区表）”**。 选择“自动搜索整个磁盘”，点击“开始搜索”。 等待扫描完成，通常几分钟内即可。 步骤四：检查恢复的文件 扫描完成后，查看恢复的分区。 检查文件是否正常。 确认文件无误后，点击**“保存更改”**。 步骤五：恢复数据并保存 使用免费版时，可能需要购买专业版才能恢复数据。 购买专业版后，继续恢复过程。 恢复完成后，将数据保存到电脑硬盘中，防止U盘再次出现问题。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-21 17:42:24 +0800 CST'>December 21, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 插入U盘，电脑提示「格式化磁盘」，使用DiskGenius恢复U盘数据成功案例" href="http://localhost:1313/format-disk-error-recover-usb-data-with-diskgenius-case/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WeGame登录超时问题（错误码：7610001）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/wegame-login-timeout-error-7610001/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在登录WeGame时，出现以下错误提示：
+登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001
+这意味着WeGame无法连接到服务器，导致登录超时。通常情况下，这个问题由以下几种原因引起：
+防火墙设置：防火墙可能会阻止WeGame的网络连接。 安全软件干扰：一些安全软件（如360安全卫士、联想软件管家等）可能会限制WeGame的网络访问。 IPv6协议冲突：某些电脑开启了IPv6协议，可能与WeGame的服务器兼容性差。 解决办法 针对上述问题，以下是几种常见的解决方法：
+1. 关闭防火墙 防火墙可能会阻止WeGame与服务器的连接，导致登录超时。
+操作步骤：
+点击**“开始”菜单，搜索并打开“Windows Defender 防火墙”**。 在左侧菜单选择**“启用或关闭Windows Defender 防火墙”**。 选择**“关闭Windows Defender 防火墙（不推荐）”**。 点击**“确定”**。 注意：关闭防火墙时，计算机的安全性会降低，操作完成后，建议尽快重新开启防火墙。
+2. 关闭安全软件 某些安全软件（如360安全卫士、联想软件管家等）可能会干扰WeGame的网络连接。可以尝试暂时关闭这些软件，再尝试登录。
+操作步骤：
+打开使用的安全软件（如360安全卫士、联想软件管家等）。 找到并关闭与网络或防火墙相关的设置，或者直接退出软件。 注意：关闭安全软件后，确保在操作完成后及时重新开启，以保障电脑安全。
+3. 禁用IPv6 IPv6协议可能与WeGame的连接存在兼容性问题，禁用IPv6后可能会解决登录问题。
+操作步骤：
+右键点击任务栏中的网络图标，选择**“打开网络和Internet设置”**。 点击**“更改适配器设置”**。 右键点击当前的网络连接（如Wi-Fi或以太网），选择**“属性”**。 找到并取消勾选**“Internet协议版本6（TCP/IPv6）”**。 点击**“确定”**保存。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-18 21:30:33 +0800 CST'>December 18, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to WeGame登录超时问题（错误码：7610001）" href="http://localhost:1313/wegame-login-timeout-error-7610001/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">永劫无间不能记住账号问题成功解决案例
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/fortress-eternal-login-issue-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题原因 使用虚贝租号后残留文件未清理，导致游戏无法记住账号密码。
+解决步骤 打开文件夹
+进入路径：C:\Users\你的用户名\AppData\Roaming\Netease。
+（将“你的用户名”替换为你电脑上的实际用户名） 显示隐藏文件
+如果未看到AppData文件夹： 点击顶部菜单“查看”，选择“显示隐藏项”。 删除残留文件夹
+找到文件夹Mpay，直接删除。 重新登录游戏
+打开《永劫无间》，输入账号密码，勾选“记住账号密码”。 登录成功后，退出游戏。 验证结果
+再次启动游戏，无需输入账号密码，直接进入游戏即可。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-16 17:59:37 +0800 CST'>December 16, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 永劫无间不能记住账号问题成功解决案例" href="http://localhost:1313/fortress-eternal-login-issue-fix/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/11/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/13/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

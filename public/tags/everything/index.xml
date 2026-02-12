@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Everything on IT小章</title>
+    <link>http://localhost:1313/tags/everything/</link>
+    <description>Recent content in Everything on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 11 Feb 2024 15:42:06 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/everything/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>文件搜索神器 Everything</title>
+      <link>http://localhost:1313/file-search-tool-everything/</link>
+      <pubDate>Sun, 11 Feb 2024 15:42:06 +0800</pubDate>
+      <guid>http://localhost:1313/file-search-tool-everything/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/file-search-tool-everything/&#34;&gt;https://itxiaozhang.com/file-search-tool-everything/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;什么是-everything-&#34;&gt;什么是 Everything ？&lt;/h2&gt;
+&lt;p&gt;Everything 是一个文件搜索神器，可以帮我们用更短的时间找到电脑上的某一个文件。&lt;/p&gt;
+&lt;h3 id=&#34;主要特点&#34;&gt;主要特点&lt;/h3&gt;</description>
+    </item>
+  </channel>
+</rss>

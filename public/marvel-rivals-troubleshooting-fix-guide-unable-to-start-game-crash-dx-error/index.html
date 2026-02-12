@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>《漫威争锋问题排查与修复教程》解决进不去游戏、卡顿崩溃、DX报错等常见问题！ | IT小章</title>
+<meta name="keywords" content="漫威争锋, 修电脑">
+<meta name="description" content="本教程提供了《漫威争锋》常见问题的解决方法，包括启动失败、崩溃、卡顿、DX报错等。内容涉及清理着色器缓存、修复游戏文件、更新显卡驱动以及调整防火墙和杀毒软件设置，帮助提升游戏稳定性与流畅度。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/marvel-rivals-troubleshooting-fix-guide-unable-to-start-game-crash-dx-error/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/marvel-rivals-troubleshooting-fix-guide-unable-to-start-game-crash-dx-error/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      《漫威争锋问题排查与修复教程》解决进不去游戏、卡顿崩溃、DX报错等常见问题！
+    </h1>
+    <div class="post-description">
+      本教程提供了《漫威争锋》常见问题的解决方法，包括启动失败、崩溃、卡顿、DX报错等。内容涉及清理着色器缓存、修复游戏文件、更新显卡驱动以及调整防火墙和杀毒软件设置，帮助提升游戏稳定性与流畅度。
+    </div>
+    <div class="post-meta"><span title='2024-12-30 17:20:32 +0800 CST'>2024年12月30日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/marvel-rivals-troubleshooting-fix-guide-unable-to-start-game-crash-dx-error/">https://itxiaozhang.com/marvel-rivals-troubleshooting-fix-guide-unable-to-start-game-crash-dx-error/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="一进不去游戏的情况">一、进不去游戏的情况<a hidden class="anchor" aria-hidden="true" href="#一进不去游戏的情况">#</a></h2>
+<h3 id="1-卡在着色器阶段">1. <strong>卡在着色器阶段</strong><a hidden class="anchor" aria-hidden="true" href="#1-卡在着色器阶段">#</a></h3>
+<ul>
+<li><strong>特尔第13和第14代CPU崩溃问题</strong>：参考 <a href="https://www.bilibili.com/video/BV12pq8YFE9Q">视频教程</a> 或 <a href="https://itxiaozhang.com/marvel-rivals-shader-compilation-gpu-memory-issue/">文本教程</a>。</li>
+<li><strong>清理着色器缓存</strong>：
+<ol>
+<li>打开 <strong>NVIDIA 控制面板</strong> → 管理 3D 设置 → 禁用着色器缓存，保存并重启电脑。</li>
+<li>删除路径 <code>%USERPROFILE%\AppData\LocalLow\NVIDIA\PerDriverVersion\</code> 下的 <strong>DXCache</strong> 文件夹。</li>
+<li>重启后启用着色器缓存，保存并重启电脑。</li>
+<li>重启游戏。</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-加载后无法进入游戏或断线重连失败">2. <strong>加载后无法进入游戏或断线重连失败</strong><a hidden class="anchor" aria-hidden="true" href="#2-加载后无法进入游戏或断线重连失败">#</a></h3>
+<ul>
+<li><strong>原因</strong>：杀毒软件或防火墙误判游戏进程。</li>
+<li><strong>解决方法</strong>：
+<ol>
+<li>将游戏路径及 <code>Marvel-Win64-Shipping.exe</code> 加入白名单。</li>
+<li><strong>Windows Defender</strong>：允许 <code>Marvel-Win64-Shipping.exe</code> 通过文件夹限制访问。</li>
+<li><strong>Windows 防火墙</strong>：允许 <code>Marvel-Win64-Shipping.exe</code> 通过防火墙并访问网络。</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-directx-12-错误">3. <strong>DirectX 12 错误</strong><a hidden class="anchor" aria-hidden="true" href="#3-directx-12-错误">#</a></h3>
+<ul>
+<li><strong>错误信息</strong>：“DirectX 12 is not supported”。</li>
+<li><strong>解决方法</strong>：
+<ol>
+<li>更新至 <strong>Windows 10 64-bit</strong>（1909 或更高版本）。</li>
+<li>更新显卡驱动并选择清洁安装。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="二可以进入游戏的情况崩溃或卡顿">二、可以进入游戏的情况（崩溃或卡顿）<a hidden class="anchor" aria-hidden="true" href="#二可以进入游戏的情况崩溃或卡顿">#</a></h2>
+<h3 id="1-验证游戏文件完整性">1. <strong>验证游戏文件完整性</strong><a hidden class="anchor" aria-hidden="true" href="#1-验证游戏文件完整性">#</a></h3>
+<ul>
+<li><strong>原因</strong>：游戏文件损坏。</li>
+<li><strong>解决方法</strong>：
+<ul>
+<li><strong>发烧平台</strong>：
+<ol>
+<li>打开启动器，点击 <strong>Marvel Rivals</strong> 图标。</li>
+<li>点击 <strong>修复按钮</strong> → 选择 <strong>游戏修复</strong> → 确认并修复。</li>
+</ol>
+</li>
+<li><strong>Steam平台</strong>：
+<ol>
+<li>在 Steam 库中右键游戏，选择 <strong>属性</strong>。</li>
+<li>进入 <strong>本地文件</strong> 标签，点击 <strong>验证游戏文件完整性</strong>。</li>
+</ol>
+</li>
+<li><strong>修复失败时</strong>：若修复失败，重启平台再试。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-更新显卡驱动">2. <strong>更新显卡驱动</strong><a hidden class="anchor" aria-hidden="true" href="#2-更新显卡驱动">#</a></h3>
+<ul>
+<li><strong>解决方法</strong>：按前述步骤更新显卡驱动并选择清洁安装。</li>
+</ul>
+<h3 id="3-调整cpu核心频率设置">3. <strong>调整CPU核心频率设置</strong><a hidden class="anchor" aria-hidden="true" href="#3-调整cpu核心频率设置">#</a></h3>
+<ul>
+<li>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li><strong>进入BIOS</strong>：重启电脑，摁 <strong>F2</strong> 或 <strong>Del</strong> 键（根据主板不同进入BIOS的方式可能不同）。</li>
+<li><strong>进入高级模式</strong>：
+<ul>
+<li>按 <strong>F7</strong> 进入高级模式，或手动点击进入高级模式。</li>
+<li>若界面不同，找到相应的选项进入高级模式。</li>
+</ul>
+</li>
+<li><strong>修改XMP设置</strong>：
+<ul>
+<li>进入 <strong>Ai Tweaker</strong> 选项（修改XMP设置的地方）。</li>
+<li>选择 <strong>Performance Core Ratio</strong> 选项，设置为 <strong>Sync All Cores</strong>。</li>
+</ul>
+</li>
+<li><strong>调整All-Core Ratio Limit</strong>：
+<ul>
+<li>将 <strong>All-Core Ratio Limit</strong> 设置为 <strong>53</strong>，并将其从 <strong>Auto</strong> 改为 <strong>53</strong>。</li>
+</ul>
+</li>
+<li><strong>保存设置并重启</strong>：
+<ul>
+<li>按 <strong>F10</strong> 保存设置，或选择保存并重启电脑。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>效果</strong>：此操作将锁定CPU核心频率，防止因频率波动引起的崩溃或卡顿，解决虚幻5引擎相关的报错问题。</p>
+</li>
+</ul>
+<h3 id="4-启用gpu调试模式">4. <strong>启用GPU调试模式</strong><a hidden class="anchor" aria-hidden="true" href="#4-启用gpu调试模式">#</a></h3>
+<ul>
+<li><strong>解决方法</strong>：
+<ol>
+<li>在游戏设置中启用 <strong>GPU调试模式</strong>。</li>
+<li>启用后可能影响性能，但有助于收集崩溃信息。</li>
+<li>问题解决后可关闭调试模式。</li>
+</ol>
+</li>
+</ul>
+<h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
+<li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
+</ul>
+<h2 id="参考链接">参考链接<a hidden class="anchor" aria-hidden="true" href="#参考链接">#</a></h2>
+<ul>
+<li><a href="https://itxiaozhang.com/marvel-rivals-shader-compilation-gpu-memory-issue/">着色器编译及GPU内存问题解决方案</a></li>
+<li><a href="https://marvelrivals.163.com/guide/">Marvel Rivals官方指南</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E6%BC%AB%E5%A8%81%E4%BA%89%E9%94%8B/">漫威争锋</a></li>
+      <li><a href="http://localhost:1313/tags/%E4%BF%AE%E7%94%B5%E8%84%91/">修电脑</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>客户服务 on IT小章</title>
+    <link>http://localhost:1313/tags/%E5%AE%A2%E6%88%B7%E6%9C%8D%E5%8A%A1/</link>
+    <description>Recent content in 客户服务 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 09 Jan 2026 12:08:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%AE%A2%E6%88%B7%E6%9C%8D%E5%8A%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>章九工作室团队职能分工梳理</title>
+      <link>http://localhost:1313/zhangjiu-studio-team-division-and-collaboration-process/</link>
+      <pubDate>Fri, 09 Jan 2026 12:08:00 +0800</pubDate>
+      <guid>http://localhost:1313/zhangjiu-studio-team-division-and-collaboration-process/</guid>
+      <description>本文梳理了远程电脑维修团队的职责边界，明确负责人、技术骨干、客服执行岗及外包岗的工作内容，规范流量聚合分配机制与服务协作流程，提升团队运转效率。</description>
+    </item>
+  </channel>
+</rss>

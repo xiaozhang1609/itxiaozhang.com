@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>压缩解压神器7-Zip | IT小章</title>
+<meta name="keywords" content="7zip, 压缩软件, 压缩解压">
+<meta name="description" content="
+原文地址：https://itxiaozhang.com/7-zip-ultimate-compression-tool/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+
+
+7-Zip 是一款开源、免费、高效、安全、无广告、支持多种压缩格式、具有强大加密功能、跨平台的文件压缩和解压缩工具。
+
+优点
+
+高压缩比率：使用 7z 压缩格式，能够在保持压缩速度的同时实现最高水平的压缩比率，有效节省存储空间和带宽。
+支持多种压缩格式：除了 7z 格式外，还支持解压缩几乎所有主流的压缩格式，包括 ZIP、RAR、GZIP 等，提供广泛的兼容性和灵活性。
+强大的加密功能：支持使用 AES-256 加密算法对压缩文件进行加密，确保敏感数据的安全性，适用于保护隐私和商业数据。
+跨平台性：可在多个操作系统上运行，包括 Windows、Linux、Mac 等，为用户提供了灵活的选择，无需担心平台兼容性问题。
+">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/7-zip-ultimate-compression-tool/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/7-zip-ultimate-compression-tool/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      压缩解压神器7-Zip
+    </h1>
+    <div class="post-meta"><span title='2024-03-03 00:00:00 +0800 CST'>2024年3月3日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/7-zip-ultimate-compression-tool/">https://itxiaozhang.com/7-zip-ultimate-compression-tool/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<blockquote>
+<p>7-Zip 是一款开源、免费、高效、安全、无广告、支持多种压缩格式、具有强大加密功能、跨平台的文件压缩和解压缩工具。</p>
+</blockquote>
+<p><strong>优点</strong></p>
+<ol>
+<li><strong>高压缩比率</strong>：使用 7z 压缩格式，能够在保持压缩速度的同时实现最高水平的压缩比率，有效节省存储空间和带宽。</li>
+<li><strong>支持多种压缩格式</strong>：除了 7z 格式外，还支持解压缩几乎所有主流的压缩格式，包括 ZIP、RAR、GZIP 等，提供广泛的兼容性和灵活性。</li>
+<li><strong>强大的加密功能</strong>：支持使用 AES-256 加密算法对压缩文件进行加密，确保敏感数据的安全性，适用于保护隐私和商业数据。</li>
+<li><strong>跨平台性</strong>：可在多个操作系统上运行，包括 Windows、Linux、Mac 等，为用户提供了灵活的选择，无需担心平台兼容性问题。</li>
+</ol>
+<ol start="5">
+<li><strong>开源免费</strong>：作为开源软件，7-Zip 是免费的，并且用户可以自由查看和修改其源代码，确保软件的透明度和可靠性，且无需支付费用。</li>
+<li><strong>快速压缩和解压缩速度</strong>：尽管提供了高压缩比率，但仍能以很快的速度进行压缩和解压缩操作，提高了工作效率。</li>
+<li><strong>轻量级</strong>：安装包小巧，占用系统资源少，能够在各种计算机环境中运行，而不会对系统性能产生太大影响。</li>
+<li><strong>多语言支持</strong>：提供多种语言界面，方便用户选择自己熟悉的语言进行操作，增强了软件的可用性和易用性。</li>
+<li><strong>自解压功能</strong>：支持创建自解压文件，使得接收方无需安装额外软件即可解压缩文件，提供了更便捷的文件共享方式。</li>
+<li><strong>集成到资源管理器</strong>：在 Windows 系统中提供资源管理器集成，用户可以通过右键单击文件或文件夹直接进行压缩、解压缩操作，简化了操作步骤。</li>
+<li><strong>可定制性强</strong>：用户可以根据自己的需求对软件进行定制设置，例如调整压缩算法、加密设置等，满足个性化的使用需求。</li>
+<li><strong>稳定可靠</strong>：经过长期发展和测试，7-Zip 具有稳定可靠的性能，能够在各种情况下提供一致的压缩和解压缩效果。</li>
+<li><strong>无广告，干净</strong>：作为开源软件，不含任何广告，并且经过广泛审查和测试，确保软件的干净性和安全性，用户可以放心使用而无需担心受到广告干扰或恶意软件的侵扰。</li>
+</ol>
+<p><strong>下载</strong>
+<a href="https://www.7-zip.org/download.html">https://www.7-zip.org/download.html</a></p>
+<h3 id="视频教程">视频教程<a hidden class="anchor" aria-hidden="true" href="#视频教程">#</a></h3>
+<p><a href="https://www.bilibili.com/video/BV1nu4m137wt">B站观看</a>
+<a href="http://xhslink.com/EHrUNC">小红书</a>
+<a href="https://www.ixigua.com/7342164687561327144">西瓜视频</a></p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/7zip/">7zip</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%8E%8B%E7%BC%A9%E8%BD%AF%E4%BB%B6/">压缩软件</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B/">压缩解压</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

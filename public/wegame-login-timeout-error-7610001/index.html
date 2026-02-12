@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>WeGame登录超时问题（错误码：7610001） | IT小章</title>
+<meta name="keywords" content="wegame">
+<meta name="description" content="在登录WeGame时，出现错误提示“登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001”，本文提供三种有效的解决方法。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/wegame-login-timeout-error-7610001/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/wegame-login-timeout-error-7610001/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      WeGame登录超时问题（错误码：7610001）
+    </h1>
+    <div class="post-description">
+      在登录WeGame时，出现错误提示“登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001”，本文提供三种有效的解决方法。
+    </div>
+    <div class="post-meta"><span title='2024-12-18 21:30:33 +0800 CST'>2024年12月18日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/wegame-login-timeout-error-7610001/">https://itxiaozhang.com/wegame-login-timeout-error-7610001/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="问题描述">问题描述<a hidden class="anchor" aria-hidden="true" href="#问题描述">#</a></h2>
+<p>在登录WeGame时，出现以下错误提示：</p>
+<blockquote>
+<p><strong>登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001</strong></p>
+</blockquote>
+<p>这意味着WeGame无法连接到服务器，导致登录超时。通常情况下，这个问题由以下几种原因引起：</p>
+<ul>
+<li><strong>防火墙设置</strong>：防火墙可能会阻止WeGame的网络连接。</li>
+<li><strong>安全软件干扰</strong>：一些安全软件（如360安全卫士、联想软件管家等）可能会限制WeGame的网络访问。</li>
+<li><strong>IPv6协议冲突</strong>：某些电脑开启了IPv6协议，可能与WeGame的服务器兼容性差。</li>
+</ul>
+<h2 id="解决办法">解决办法<a hidden class="anchor" aria-hidden="true" href="#解决办法">#</a></h2>
+<p>针对上述问题，以下是几种常见的解决方法：</p>
+<h3 id="1-关闭防火墙">1. 关闭防火墙<a hidden class="anchor" aria-hidden="true" href="#1-关闭防火墙">#</a></h3>
+<p>防火墙可能会阻止WeGame与服务器的连接，导致登录超时。</p>
+<p><strong>操作步骤</strong>：</p>
+<ol>
+<li>点击**“开始”<strong>菜单，搜索并打开</strong>“Windows Defender 防火墙”**。</li>
+<li>在左侧菜单选择**“启用或关闭Windows Defender 防火墙”**。</li>
+<li>选择**“关闭Windows Defender 防火墙（不推荐）”**。</li>
+<li>点击**“确定”**。</li>
+</ol>
+<p><strong>注意</strong>：关闭防火墙时，计算机的安全性会降低，操作完成后，建议尽快重新开启防火墙。</p>
+<h3 id="2-关闭安全软件">2. 关闭安全软件<a hidden class="anchor" aria-hidden="true" href="#2-关闭安全软件">#</a></h3>
+<p>某些安全软件（如360安全卫士、联想软件管家等）可能会干扰WeGame的网络连接。可以尝试暂时关闭这些软件，再尝试登录。</p>
+<p><strong>操作步骤</strong>：</p>
+<ol>
+<li>打开使用的安全软件（如360安全卫士、联想软件管家等）。</li>
+<li>找到并关闭与网络或防火墙相关的设置，或者直接退出软件。</li>
+</ol>
+<p><strong>注意</strong>：关闭安全软件后，确保在操作完成后及时重新开启，以保障电脑安全。</p>
+<h3 id="3-禁用ipv6">3. 禁用IPv6<a hidden class="anchor" aria-hidden="true" href="#3-禁用ipv6">#</a></h3>
+<p>IPv6协议可能与WeGame的连接存在兼容性问题，禁用IPv6后可能会解决登录问题。</p>
+<p><strong>操作步骤</strong>：</p>
+<ol>
+<li>右键点击任务栏中的<strong>网络图标</strong>，选择**“打开网络和Internet设置”**。</li>
+<li>点击**“更改适配器设置”**。</li>
+<li>右键点击当前的网络连接（如Wi-Fi或以太网），选择**“属性”**。</li>
+<li>找到并取消勾选**“Internet协议版本6（TCP/IPv6）”**。</li>
+<li>点击**“确定”**保存。</li>
+</ol>
+<h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1UkkTY1E3X">哔哩哔哩</a></li>
+<li><a href="https://youtu.be/TgAaAQbtjTQ?si=7J0nzrpkDfs0YaNd">YouTube</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/wegame/">WeGame</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

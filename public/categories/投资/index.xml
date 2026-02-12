@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>投资 on IT小章</title>
+    <link>http://localhost:1313/categories/%E6%8A%95%E8%B5%84/</link>
+    <description>Recent content in 投资 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 25 Dec 2025 17:14:23 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%8A%95%E8%B5%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的永久投资组合</title>
+      <link>http://localhost:1313/my-permanent-portfolio/</link>
+      <pubDate>Thu, 25 Dec 2025 17:14:23 +0800</pubDate>
+      <guid>http://localhost:1313/my-permanent-portfolio/</guid>
+      <description>基于永久投资组合理念，构建一套偏稳健、低依赖判断的长期资产结构，通过分散配置与定期再平衡，在不确定环境中追求长期可持续增长。</description>
+    </item>
+  </channel>
+</rss>

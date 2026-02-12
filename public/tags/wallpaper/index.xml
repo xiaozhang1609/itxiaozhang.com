@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Wallpaper on IT小章</title>
+    <link>http://localhost:1313/tags/wallpaper/</link>
+    <description>Recent content in Wallpaper on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 04 Oct 2025 12:45:30 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/wallpaper/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wallpaper任何软件全屏后切回桌面都会黑屏一秒</title>
+      <link>http://localhost:1313/wallpaper-fullscreen-black-screen-fix/</link>
+      <pubDate>Sat, 04 Oct 2025 12:45:30 +0800</pubDate>
+      <guid>http://localhost:1313/wallpaper-fullscreen-black-screen-fix/</guid>
+      <description>使用 Wallpaper 壁纸软件时，任何全屏应用切回桌面都会出现短暂黑屏。本文提供性能和常规设置的修改步骤，帮助快速解决问题。</description>
+    </item>
+  </channel>
+</rss>

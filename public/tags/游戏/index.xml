@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>游戏 on IT小章</title>
+    <link>http://localhost:1313/tags/%E6%B8%B8%E6%88%8F/</link>
+    <description>Recent content in 游戏 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 27 Jan 2026 09:31:44 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FACEIT 反作弊 VT SVM 报错怎么办</title>
+      <link>http://localhost:1313/faceit-anticheat-vt-svm-error-how-to-fix/</link>
+      <pubDate>Tue, 27 Jan 2026 09:31:44 +0800</pubDate>
+      <guid>http://localhost:1313/faceit-anticheat-vt-svm-error-how-to-fix/</guid>
+      <description>启动 FACEIT 时，反作弊程序报错，无法登录。 关键报错信息如下： FACEIT Anti-cheat：Your PC requires the following settings to be enabled in order to login: Intel VT-x/AMD SVM</description>
+    </item>
+    <item>
+      <title>DNF双开提示启动太快多开进程准备中的解决方法</title>
+      <link>http://localhost:1313/dnf-multi-client-start-too-fast-fix/</link>
+      <pubDate>Sun, 25 Jan 2026 10:36:25 +0800</pubDate>
+      <guid>http://localhost:1313/dnf-multi-client-start-too-fast-fix/</guid>
+      <description>DNF 双开或多开时出现“启动太快了，多开进进程准备中”提示，通常与系统环境、运行库、DirectX 或游戏文件异常有关。本文整理该问题的成因分析及完整解决步骤。</description>
+    </item>
+    <item>
+      <title>开机提示 LoadLibrary Failed With Error 126 的解决方法</title>
+      <link>http://localhost:1313/loadlibrary-failed-with-error-126-fix/</link>
+      <pubDate>Sat, 17 Jan 2026 10:31:41 +0800</pubDate>
+      <guid>http://localhost:1313/loadlibrary-failed-with-error-126-fix/</guid>
+      <description>电脑开机反复弹出 LoadLibrary failed with error 126 错误，来源于 AMD Software 异常。通过卸载残留并重新干净安装 AMD 显卡驱动，可彻底解决问题。</description>
+    </item>
+    <item>
+      <title>反作弊提示 Please Enable DMA Protection 解决办法</title>
+      <link>http://localhost:1313/faceit-anti-cheat-please-enable-dma-protection-fix/</link>
+      <pubDate>Sat, 17 Jan 2026 09:51:30 +0800</pubDate>
+      <guid>http://localhost:1313/faceit-anti-cheat-please-enable-dma-protection-fix/</guid>
+      <description>打开 FACEIT 报错 Please enable DMA Protection，原因是系统未启用内核 DMA 保护。通过 BIOS 启用 DMA Protection / IOMMU，并确认安全启动与 TPM 状态后即可恢复正常。</description>
+    </item>
+    <item>
+      <title>特战英豪启动失败与VAN 81连线错误解决方法</title>
+      <link>http://localhost:1313/valorant-launch-failed-van-81-connection-error-fix/</link>
+      <pubDate>Tue, 06 Jan 2026 09:49:04 +0800</pubDate>
+      <guid>http://localhost:1313/valorant-launch-failed-van-81-connection-error-fix/</guid>
+      <description>《特战英豪》启动时提示“VALORANT 啟動失敗”，随后出现“連線錯誤”，错误代码 VAN-81，导致客户端无法正常连接并进入游戏。</description>
+    </item>
+    <item>
+      <title>使用QQ快捷登录WeGame报错140022002的解决方法</title>
+      <link>http://localhost:1313/fix-wegame-qq-quick-login-error-140022002/</link>
+      <pubDate>Sat, 03 Jan 2026 13:24:44 +0800</pubDate>
+      <guid>http://localhost:1313/fix-wegame-qq-quick-login-error-140022002/</guid>
+      <description>使用 QQ 快捷登录 WeGame 时出现错误码 140022002，问题与 QQ 最新版本 Bug 有关。通过安装 QQ 往期怀旧版 9.7.25 可临时恢复快捷登录功能。</description>
+    </item>
+    <item>
+      <title>无畏契约打开报错VAL43</title>
+      <link>http://localhost:1313/valorant-launch-error-val43/</link>
+      <pubDate>Fri, 02 Jan 2026 14:24:05 +0800</pubDate>
+      <guid>http://localhost:1313/valorant-launch-error-val43/</guid>
+      <description>打开无畏契约提示“连接至平台时出错”，错误代码 VAL43。通过检查网络设置、同步系统时间、处理 hosts 文件并修复游戏可恢复正常。</description>
+    </item>
+    <item>
+      <title>GTA5 启动卡在正在初始化的解决方法</title>
+      <link>http://localhost:1313/gta5-stuck-on-initializing-fix/</link>
+      <pubDate>Wed, 31 Dec 2025 17:25:46 +0800</pubDate>
+      <guid>http://localhost:1313/gta5-stuck-on-initializing-fix/</guid>
+      <description>GTA5 启动时卡在“正在初始化”，通常与运行库异常、显卡驱动问题或虚拟内存设置不当有关。通过重装运行库、清洁安装显卡驱动并调整虚拟内存，可恢复游戏正常启动。</description>
+    </item>
+    <item>
+      <title>修复FACEIT平台TPM与安全启动报错</title>
+      <link>http://localhost:1313/fix-faceit-tpm-secure-boot-error-bios-update/</link>
+      <pubDate>Mon, 29 Dec 2025 17:50:48 +0800</pubDate>
+      <guid>http://localhost:1313/fix-faceit-tpm-secure-boot-error-bios-update/</guid>
+      <description>本文针对 FACEIT 平台提示 TPM 及 Secure Boot 报错的问题，以技嘉 B550M 主板为例，提供了从关闭设备加密、制作 FAT32 格式 BIOS 升级盘，到使用 Q-Flash 刷入固件并开启安全启动的完整解决方案。</description>
+    </item>
+    <item>
+      <title>看门狗2游戏闪屏怎么办？</title>
+      <link>http://localhost:1313/watch-dogs-2-screen-flickering-solution/</link>
+      <pubDate>Thu, 25 Dec 2025 22:55:43 +0800</pubDate>
+      <guid>http://localhost:1313/watch-dogs-2-screen-flickering-solution/</guid>
+      <description>看门狗2在运行过程中出现画面闪屏问题，可通过两个闪屏修复补丁到游戏安装目录中解决。</description>
+    </item>
+    <item>
+      <title>游戏安全组件运行时发生异常，ACE安全中心问题归纳总结</title>
+      <link>http://localhost:1313/game-security-component-issues-ace-security-center-summary/</link>
+      <pubDate>Mon, 02 Dec 2024 09:31:04 +0800</pubDate>
+      <guid>http://localhost:1313/game-security-component-issues-ace-security-center-summary/</guid>
+      <description>本教程教你通过卸载ACE和重新安装WeGAME来解决腾讯游戏中的ACE安全中心错误，步骤简单易懂，适合普通用户操作。</description>
+    </item>
+  </channel>
+</rss>

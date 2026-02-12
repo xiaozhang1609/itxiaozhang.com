@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Diskgenius on IT小章</title>
+    <link>http://localhost:1313/tags/diskgenius/</link>
+    <description>Recent content in Diskgenius on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 Dec 2024 17:42:24 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/diskgenius/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>插入U盘，电脑提示「格式化磁盘」，使用DiskGenius恢复U盘数据成功案例</title>
+      <link>http://localhost:1313/format-disk-error-recover-usb-data-with-diskgenius-case/</link>
+      <pubDate>Sat, 21 Dec 2024 17:42:24 +0800</pubDate>
+      <guid>http://localhost:1313/format-disk-error-recover-usb-data-with-diskgenius-case/</guid>
+      <description>插入U盘，电脑提示“格式化磁盘”，但U盘内有重要数据需要保留。本文详细介绍了如何利用DiskGenius修复U盘分区表并恢复数据的全过程，帮助遇到类似问题的用户找回丢失文件。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>相机 on IT小章</title>
+    <link>http://localhost:1313/tags/%E7%9B%B8%E6%9C%BA/</link>
+    <description>Recent content in 相机 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 04 Jan 2024 15:42:06 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%9B%B8%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>影石Insta360使用记录</title>
+      <link>http://localhost:1313/insta360-usage-records/</link>
+      <pubDate>Thu, 04 Jan 2024 15:42:06 +0800</pubDate>
+      <guid>http://localhost:1313/insta360-usage-records/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/insta360-usage-records/&#34;&gt;https://itxiaozhang.com/insta360-usage-records/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;影石Insta360如何重置？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、将相机从拓展舱内取出&lt;br&gt;
+2、分别长按主机按键及拓展舱电源键7秒进行重置&lt;br&gt;
+3、再将相机放回到拓展舱，重新开机使用，即重置完成。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;影石Insta360使用数据线连接电脑后，不显示U盘模式如何处理？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、清理相机背后和拓展舱内部。&lt;br&gt;
+2、重置，重置教程如上。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;影石Insta360不能预览录像如何处理？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;解决：重置，重置教程如上。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

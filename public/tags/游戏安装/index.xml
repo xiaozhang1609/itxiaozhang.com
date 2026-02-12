@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>游戏安装 on IT小章</title>
+    <link>http://localhost:1313/tags/%E6%B8%B8%E6%88%8F%E5%AE%89%E8%A3%85/</link>
+    <description>Recent content in 游戏安装 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 18 Jan 2026 11:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%B8%B8%E6%88%8F%E5%AE%89%E8%A3%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《逆战：未来》下载安装与配置全攻略</title>
+      <link>http://localhost:1313/nz-future-download-installation-and-config-guide/</link>
+      <pubDate>Sun, 18 Jan 2026 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/nz-future-download-installation-and-config-guide/</guid>
+      <description>本文为《逆战：未来》玩家提供全方位的配置核验指南与下载教学，涵盖PC端（WeGame/官网直装）及移动端详细参数。</description>
+    </item>
+  </channel>
+</rss>

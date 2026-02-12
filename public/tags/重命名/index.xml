@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>重命名 on IT小章</title>
+    <link>http://localhost:1313/tags/%E9%87%8D%E5%91%BD%E5%90%8D/</link>
+    <description>Recent content in 重命名 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 17 Jul 2024 17:19:26 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%87%8D%E5%91%BD%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gwang.top：一键官网查询</title>
+      <link>http://localhost:1313/one-click-official-site-query/</link>
+      <pubDate>Wed, 17 Jul 2024 17:19:26 +0800</pubDate>
+      <guid>http://localhost:1313/one-click-official-site-query/</guid>
+      <description>gwang.top是由小章做的一款在线工具，专注于帮助用户快速查找软件、机构或公司的官方网站，本文介绍这款工具的使用。</description>
+    </item>
+    <item>
+      <title>文件批量重命名</title>
+      <link>http://localhost:1313/batch-file-renaming/</link>
+      <pubDate>Wed, 03 Jul 2024 14:12:32 +0800</pubDate>
+      <guid>http://localhost:1313/batch-file-renaming/</guid>
+      <description>本文探讨了如何利用Python批量重命名文件，通过正则表达式匹配文件名格式，并增加指定数值以实现文件名数字部分的更新。详细介绍了代码实现及其在不同文件夹结构下的应用，旨在帮助用户提升文件管理效率。</description>
+    </item>
+  </channel>
+</rss>

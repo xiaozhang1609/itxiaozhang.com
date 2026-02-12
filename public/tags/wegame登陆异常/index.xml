@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Wegame登陆异常 on IT小章</title>
+    <link>http://localhost:1313/tags/wegame%E7%99%BB%E9%99%86%E5%BC%82%E5%B8%B8/</link>
+    <description>Recent content in Wegame登陆异常 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 22 Nov 2025 16:49:08 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/wegame%E7%99%BB%E9%99%86%E5%BC%82%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wegame微信登陆异常：该页面暂时无法显示，点击刷新或稍后再试</title>
+      <link>http://localhost:1313/wegame-weixin-login-error-solution/</link>
+      <pubDate>Sat, 22 Nov 2025 16:49:08 +0800</pubDate>
+      <guid>http://localhost:1313/wegame-weixin-login-error-solution/</guid>
+      <description>本文针对WeGame微信登录提示「该页面暂时无法显示，点击刷新或稍后再试」的问题，提供详细解决步骤及网络优化方法，帮助贵州及受限地区用户正常登录。</description>
+    </item>
+  </channel>
+</rss>

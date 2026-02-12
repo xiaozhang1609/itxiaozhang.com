@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Chatgpt on IT小章</title>
+    <link>http://localhost:1313/tags/chatgpt/</link>
+    <description>Recent content in Chatgpt on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 20 Aug 2025 23:19:53 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>批量新建文件夹的三种简便方法</title>
+      <link>http://localhost:1313/batch-create-folders/</link>
+      <pubDate>Wed, 20 Aug 2025 23:19:53 +0800</pubDate>
+      <guid>http://localhost:1313/batch-create-folders/</guid>
+      <description>本文介绍三种批量创建新文件夹的方法：巧妙高效的 ChatGPT 技巧、便捷实用的在线工具，以及功能强大的 Python 脚本。</description>
+    </item>
+  </channel>
+</rss>

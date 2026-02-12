@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Motrix on IT小章</title>
+    <link>http://localhost:1313/tags/motrix/</link>
+    <description>Recent content in Motrix on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 26 May 2024 10:44:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/motrix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Motrix下载管理器：开源优雅高效的下载工具</title>
+      <link>http://localhost:1313/motrix-download-manager-open-source-efficient-tool/</link>
+      <pubDate>Sun, 26 May 2024 10:44:00 +0800</pubDate>
+      <guid>http://localhost:1313/motrix-download-manager-open-source-efficient-tool/</guid>
+      <description>本文介绍了Motrix，一个全能且免费的下载管理器，跨Windows、Mac、Linux平台使用，支持多种下载协议，如HTTP、FTP、BT及磁力链接。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Iso下载 on IT小章</title>
+    <link>http://localhost:1313/tags/iso%E4%B8%8B%E8%BD%BD/</link>
+    <description>Recent content in Iso下载 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 20 Jun 2024 17:54:40 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/iso%E4%B8%8B%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>三种方法教你下载 Windows 10 和 Windows 11 原生镜像</title>
+      <link>http://localhost:1313/three-methods-to-download-windows-10-and-windows-11-iso/</link>
+      <pubDate>Thu, 20 Jun 2024 17:54:40 +0800</pubDate>
+      <guid>http://localhost:1313/three-methods-to-download-windows-10-and-windows-11-iso/</guid>
+      <description>这篇教程详细介绍了三种下载 Windows 10 和 Windows 11 原生镜像的方法，包括通过微软官网、iTellYou 网站和系统库网站下载，帮助你快速获取所需的操作系统镜像文件。</description>
+    </item>
+  </channel>
+</rss>

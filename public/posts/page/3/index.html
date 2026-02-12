@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Posts | IT小章</title>
+<meta name="keywords" content="">
+<meta name="description" content="Posts - IT小章">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="rss">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/posts/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span class="active">📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<header class="page-header">
+  <h1>
+    Posts
+  </h1>
+</header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">GTA5增强版报错ERR GFX STATE解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>GTA5 或 GTA5 增强版运行一段时间后黑屏并提示 ERR-GFX-STATE 错误，通常与显卡驱动、DX12 组件及 DirectX 着色器缓存异常有关。</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-14 16:49:40 +0800 CST'>2026年1月14日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to GTA5增强版报错ERR GFX STATE解决方法" href="http://localhost:1313/gta5-enhanced-version-err-gfx-state-solution/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">三角洲登录失败错误码7650001解决办法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>三角洲启动时报错登录失败、登录超时（错误码7650001），同时 WeGame 无法下载安装资源。通过调整网络配置、防火墙、系统时间与区域设置后问题恢复正常。</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-13 22:07:13 +0800 CST'>2026年1月13日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 三角洲登录失败错误码7650001解决办法" href="http://localhost:1313/delta-login-fail-error-code-7650001-solution/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WEGAME启动卡界面转圈后闪退的排查与解决
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>针对 WeGame 启动时卡界面转圈并随后闪退的问题，本文提供了系统性的解决方案。内容涵盖调整网络适配器与 DNS 设置、同步系统时间、彻底重装客户端以及检查 Hosts 文件和防火墙等关键排查步骤。</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-09 11:28:34 +0800 CST'>2026年1月9日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to WEGAME启动卡界面转圈后闪退的排查与解决" href="http://localhost:1313/fix-wegame-startup-crash-stuck-interface/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">FACEIT反作弊提示需启用TPM2.0与安全启动的解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>FACEIT 反作弊提示需启用 TPM 2.0 与 Secure Boot。通过更新 Gigabyte B550M 主板 BIOS 并在 BIOS 中开启安全启动，可自动启用 TPM 2.0，从而解决无法登录问题。</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-08 17:19:18 +0800 CST'>2026年1月8日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to FACEIT反作弊提示需启用TPM2.0与安全启动的解决方法" href="http://localhost:1313/faceit-anti-cheat-enable-tpm2-secure-boot-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">VALORANT安装失败：UNABLE to INSTALL
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>双击打开 VALORANT 安装包时报错，无法继续安装，提示 UNABLE TO INSTALL</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-07 12:18:30 +0800 CST'>2026年1月7日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to VALORANT安装失败：UNABLE to INSTALL" href="http://localhost:1313/valorant-installation-unable-to-install/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">重装系统后使用 WinRE 恢复华硕官方系统
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>重装 Windows 11 专业版后，华硕笔记本丢失 MyASUS in WinRE 恢复选项？本文提供基于 reagentc 的修复方案，并深度解析其生效背后的系统分区机制。</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-06 15:10:49 +0800 CST'>2026年1月6日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 重装系统后使用 WinRE 恢复华硕官方系统" href="http://localhost:1313/restore-asus-official-system-with-winre-after-reinstall/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">特战英豪启动失败与VAN 81连线错误解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>《特战英豪》启动时提示“VALORANT 啟動失敗”，随后出现“連線錯誤”，错误代码 VAN-81，导致客户端无法正常连接并进入游戏。</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-06 09:49:04 +0800 CST'>2026年1月6日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 特战英豪启动失败与VAN 81连线错误解决方法" href="http://localhost:1313/valorant-launch-failed-van-81-connection-error-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">使用QQ快捷登录WeGame报错140022002的解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>使用 QQ 快捷登录 WeGame 时出现错误码 140022002，问题与 QQ 最新版本 Bug 有关。通过安装 QQ 往期怀旧版 9.7.25 可临时恢复快捷登录功能。</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-03 13:24:44 +0800 CST'>2026年1月3日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 使用QQ快捷登录WeGame报错140022002的解决方法" href="http://localhost:1313/fix-wegame-qq-quick-login-error-140022002/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">无畏契约打开报错VAL43
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>打开无畏契约提示“连接至平台时出错”，错误代码 VAL43。通过检查网络设置、同步系统时间、处理 hosts 文件并修复游戏可恢复正常。</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-02 14:24:05 +0800 CST'>2026年1月2日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 无畏契约打开报错VAL43" href="http://localhost:1313/valorant-launch-error-val43/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">跨平台Favicon生成
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文介绍了如何使用 Real Favicon Generator 等工具，为您的网站或应用生成一套完整的、兼容所有主流设备和浏览器的 Favicon 图标文件。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-31 23:45:49 +0800 CST'>2025年12月31日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 跨平台Favicon生成" href="http://localhost:1313/cross-platform-favicon-generation/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/posts/page/2/">
+      «&nbsp;上一页&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/posts/page/4/">下一页&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

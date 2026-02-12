@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>通义千问 on IT小章</title>
+    <link>http://localhost:1313/tags/%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE/</link>
+    <description>Recent content in 通义千问 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 16 Jan 2024 15:42:06 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第1课-认识和注册【通义千问入门到进阶教程】</title>
+      <link>http://localhost:1313/tongyi-qianwen-beginner-to-advanced-tutorial-lesson1/</link>
+      <pubDate>Tue, 16 Jan 2024 15:42:06 +0800</pubDate>
+      <guid>http://localhost:1313/tongyi-qianwen-beginner-to-advanced-tutorial-lesson1/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/tongyi-qianwen-beginner-to-advanced-tutorial-lesson1/&#34;&gt;https://itxiaozhang.com/tongyi-qianwen-beginner-to-advanced-tutorial-lesson1/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;p&gt;在全球范围内，大模型已成为自然语言处理领域的关键技术突破，其中GPT系列、BERT、T5以及阿里云通义千问等均属这一范畴。通义千问继承了大模型的核心特点，即通过大规模数据训练，实现对复杂语言现象的深刻理解和生成。阿里云通义千问是一款代表中国尖端技术水平的超大规模语言模型，凭借其庞大的参数规模、卓越的性能表现以及丰富的应用场景，为用户提供前所未有的智能交互体验。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

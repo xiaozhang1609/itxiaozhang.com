@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IT小章</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">如何解决「管理员已阻止你运行此应用」错误（mmc.exe）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/how-to-fix-admin-blocked-mmc-exe-error/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 报错信息：
+用户帐户控制
+为了对电脑进行保护，已经阻止此应用。
+管理员已阻止你运行此应用。有关详细信息，请与管理员联系。
+mmc.exe
+发布者：未知
+文件源：此计算机上的硬盘驱动器
+程序位置：“C:\WINDOWS\system32\mmc.exe” C:\WINDOWS\system32\devmgmt.msc
+关闭。
+问题原因 用户账户控制（UAC）限制：Windows的用户账户控制可能误判了mmc.exe的安全性，导致其被阻止执行。 注册表或组策略配置错误：某些注册表项（如EnableLUA、FilterAdministratorToken）被修改，或者组策略设置了管理员批准模式，阻止了mmc.exe的运行。 防火墙或安全软件拦截：某些防火墙或第三方安全软件可能会误判mmc.exe，并阻止其运行。 解决办法 方法1：通过注册表修改（推荐） 以管理员身份运行记事本，创建新文件并粘贴以下内容：
+1 2 3 4 Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System] &#34;EnableLUA&#34;=dword:00000000 &#34;FilterAdministratorToken&#34;=dword:00000001 保存文件为 .reg 格式（如 fix_mmc.reg），双击文件导入注册表。
+重启计算机，使设置生效。
+方法2：组策略调整 按 Win &#43; R，输入 gpedit.msc 打开组策略编辑器。 依次展开：计算机配置 → Windows设置 → 安全设置 → 本地策略 → 安全选项。 修改以下两项： 用户账户控制: 用于内置管理员账户的管理员批准模式 → 设置为已启用。 用户账户控制: 以管理员批准模式运行所有管理员 → 设置为已禁用。 重启计算机。 方法3：防火墙例外设置 打开控制面板 → Windows Defender 防火墙。 点击“允许应用或功能通过防火墙”，然后点击“更改设置”。 点击“允许其他应用”，定位到 C:\Windows\System32\mmc.exe 并添加。 勾选“专用”和“公用网络”权限，保存后注销系统。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-14 09:13:27 +0800 CST'>March 14, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 如何解决「管理员已阻止你运行此应用」错误（mmc.exe）" href="http://localhost:1313/how-to-fix-admin-blocked-mmc-exe-error/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">解决安装虚幻引擎时出现的错误代码 0x80070660
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/fix-unreal-engine-installation-error-0x80070660/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在安装虚幻引擎和相关运行库时，出现以下错误提示：
+错误代码 0x80070660
+临时文件夹已满或无法访问。请释放一些空间或验证您是否有写入临时文件夹的权限。
+问题原因 导致此错误的常见原因包括：
+缺失 Installer 文件夹：系统中的 C:\Windows\Installer 文件夹丢失，导致安装程序无法正常工作。
+临时文件夹权限问题：C:\Windows\Temp 或用户的 %temp% 文件夹权限设置不当，阻止安装程序写入临时文件。
+解决办法 方法一：创建缺失的 Installer 文件夹 打开命令提示符（管理员）：
+按下 Windows 键，输入“命令提示符”，在搜索结果中右键点击“命令提示符”，选择“以管理员身份运行”。 创建 Installer 文件夹：
+在命令提示符窗口中，输入以下命令并按回车键：
+1 md C:\Windows\Installer 重新运行安装程序：关闭命令提示符窗口，尝试再次运行之前的安装程序。
+方法二：运行 Windows 更新疑难解答 打开设置：
+按下 Windows 键 &#43; I，打开“设置”窗口。 进入疑难解答：
+点击“更新和安全”，然后选择“疑难解答”。 运行 Windows 更新疑难解答：
+在“疑难解答”页面，点击“其他疑难解答”，找到并点击“Windows 更新”，然后点击“运行疑难解答”。 按照提示操作：系统将自动检测并修复与 Windows 更新相关的问题。
+重新启动计算机：完成修复后，重启计算机，然后尝试再次安装软件。
+方法三：修复临时文件夹权限 打开命令提示符（管理员）：
+按下 Windows 键，输入“命令提示符”，在搜索结果中右键点击“命令提示符”，选择“以管理员身份运行”。 修复系统临时文件夹权限：
+在命令提示符窗口中，输入以下命令并逐一按回车键执行：
+1 2 3 4 5 6 takeown /f c:\windows\temp /a icacls c:\windows\temp /reset icacls c:\windows\temp /inheritance:r icacls c:\windows\temp /grant *S-1-5-32-544:(OI)(CI)(F) icacls c:\windows\temp /grant *S-1-5-18:(OI)(CI)(F) icacls c:\windows\temp /grant &#34;%username%&#34;:(OI)(CI)(F) 修复用户临时文件夹权限：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-10 08:32:52 +0800 CST'>March 10, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 解决安装虚幻引擎时出现的错误代码 0x80070660" href="http://localhost:1313/fix-unreal-engine-installation-error-0x80070660/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">解决《卡拉比丘》游戏无法全屏显示黑边问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/fix-kalabiqiu-fullscreen-black-bars/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在运行《卡拉比丘》游戏时，屏幕上下出现黑边，无法实现全屏显示。而在桌面状态下，显示正常。
+问题原因 游戏的显示模式未设置为全屏，或者分辨率设置不匹配，导致屏幕无法完全填充显示区域。
+解决办法 进入游戏设置：打开《卡拉比丘》游戏，进入“设置”界面。 修改显示模式：在“显示模式”选项中，将其更改为“全屏”。 调整分辨率： 先将分辨率设置为1920×1080（16:9），检查是否全屏。 若无问题，可进一步调整为更高的16:9分辨率，如2560×1440，以获得更好的画质体验。 确认效果：应用设置后，重新启动游戏，确认黑边问题是否消失。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-06 12:44:30 +0800 CST'>March 6, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 解决《卡拉比丘》游戏无法全屏显示黑边问题" href="http://localhost:1313/fix-kalabiqiu-fullscreen-black-bars/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Steam致命错误，安装路径包含非ASCII字符导致无法运行
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/steam-fatal-error-non-ascii-path/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 Steam致命错误
+Steam在该Windows版本上无法从含有非ASCII字符的文件夹路径运行。请重新安装Steam至默认文件夹，或将其安装于Windows 7及更高版本上。
+问题原因 Steam的安装路径中包含非ASCII字符（如中文字符），导致程序无法正常运行。
+解决办法 重新安装Steam：
+双击打开Steam安装包。 选择简体中文作为安装语言，点击“下一步”。 注意默认安装路径，如果包含中文字符，需要修改。 修改安装路径：
+在安装路径栏，删除中文文件夹名称。 替换为仅包含英文字符的文件夹名称（如“Steam”）。 确认后点击“安装”。 运行Steam：
+安装完成后，点击“完成”启动Steam。 确保Steam可以正常更新运行。 避免后续问题：
+如果之前安装路径含有中文字符，导致无法打开Steam，需要卸载并重新安装。 重新安装时，务必选择全英文路径，以确保Steam正常运行。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-06 12:24:16 +0800 CST'>March 6, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Steam致命错误，安装路径包含非ASCII字符导致无法运行" href="http://localhost:1313/steam-fatal-error-non-ascii-path/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">三角洲行动报错处理：加载 xapofx1_5.dll 失败
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/fix-delta-force-xapofx1_5-dll-error/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在运行《三角洲行动》时，弹出以下错误信息：
+加载 xapofx1_5.dll 失败，该文件缺失或损坏！尝试重新安装程序可能会解决此问题。
+此错误通常表明 DirectX 相关的 DLL 文件损坏或缺失，导致游戏无法正常运行。
+问题原因 DirectX 组件损坏或未安装：xapofx1_5.dll 是 DirectX 运行库的一部分，如果文件损坏或丢失，游戏可能无法加载。 系统更新导致文件缺失：某些 Windows 更新可能会影响 DirectX 组件，导致相关 DLL 文件不可用。 游戏文件损坏：游戏本身可能存在损坏的文件，导致依赖的 DLL 无法正确加载。 解决办法 方法 1：重新安装 DirectX 打开 微软 DirectX 运行库下载页面：点击访问。 选择合适的语言，点击 下载。 下载完成后，双击运行安装程序。 在安装向导中，勾选“我接受协议”，然后点击 下一步。 取消勾选 任何不必要的附加软件选项（如工具栏等）。 按提示完成 DirectX 组件安装，并等待安装进度条完成。 重新启动电脑，以确保更改生效。 方法 2：修复游戏文件 打开 WGAME 或游戏管理平台。 找到 《三角洲行动》，右键点击 修复 或 验证游戏文件完整性。 等待修复完成后，重新尝试启动游戏。 方法 3：手动替换 xapofx1_5.dll 文件（不推荐） 如果前两种方法无效，可以尝试从可靠来源获取 xapofx1_5.dll 文件，并手动放置到 C:\Windows\System32 或 C:\Windows\SysWOW64 目录下。但此方法可能存在安全风险，不建议轻易尝试。
+完成以上步骤后，重新启动游戏，问题应能解决。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-03 09:24:55 +0800 CST'>March 3, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 三角洲行动报错处理：加载 xapofx1_5.dll 失败" href="http://localhost:1313/fix-delta-force-xapofx1_5-dll-error/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">无畏契约报错：A D3D11-compatible GPU
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/fix-valorant-d3d11-gpu-error/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 启动《无畏契约》时出现以下错误提示：
+“A D3D11-compatible GPU (Feature Level 11.0, Shader Model 5.0) is required to run the engine”
+游戏无法正常启动，停留在错误界面。
+问题原因 电脑未正确安装显卡驱动，导致系统无法识别显卡。 现有显卡驱动损坏或版本过旧，不支持DirectX 11功能。 电脑显卡本身不支持DirectX 11（较老型号显卡）。 解决办法 1. 检查显卡驱动状态 右键点击 此电脑 → 选择 管理 → 设备管理器。 展开 显示适配器，检查是否有显卡设备，或者是否显示黄色感叹号。 如果显卡设备不存在或异常，需重新安装驱动。 2. 安装或更新显卡驱动 访问显卡官方驱动下载网站（如NVIDIA、AMD、Intel），根据显卡型号下载最新驱动。 如果不清楚显卡型号，可使用 第三方驱动管理软件（如驱动精灵、驱动人生）进行自动检测并安装驱动。 按照安装向导完成驱动安装，建议选择 自定义安装 → 清洁安装，确保旧版本驱动不会干扰新驱动。 3. 重启电脑并测试游戏 安装完成后，重启电脑，使驱动生效。 重新运行《无畏契约》，检查是否仍然出现相同错误。 4. 检查显卡是否支持DirectX 11（适用于老旧设备） 在 运行（Win &#43; R） 中输入 dxdiag 并回车，打开 DirectX 诊断工具。 切换到 显示 选项卡，查看 Direct3D 功能级别，确保支持 11.0 或以上。 如果显卡本身不支持 DirectX 11，可能需要更换新显卡以运行游戏。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-03 09:11:06 +0800 CST'>March 3, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 无畏契约报错：A D3D11-compatible GPU" href="http://localhost:1313/fix-valorant-d3d11-gpu-error/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">阅读与感悟周记45
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/weekly-reflections-reading-insights-45/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+文章 从《让子弹飞》看，权力才是利益的来源 - V2EX 自洽的程序员 电影 峡谷 日记 突然发现这周啥都没干成，阅读了很少的东西，也没有记录。 回家一趟，差不多花了三天时间，荒废了三天。 明天还得领着妈去医院检查咽炎，估计又得费一天。 </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-23 23:38:59 +0800 CST'>February 23, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 阅读与感悟周记45" href="http://localhost:1313/weekly-reflections-reading-insights-45/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">阅读与感悟周记44
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/weekly-reflections-reading-insights-44/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+言论 今天所有关于缅甸电诈的新闻主打一个敲碎你所有的心理安全防线，谁也别想切割：
+你以为不贪不傻就能防住吗？他们可以专业化团队化操作，获得你的所有隐私掰碎了分析，个性化量身打造，甚至专门为你拉一个几十个人的群聊，聊天都充满氛围感，这根本不是贪不贪的问题，衣食住行但凡有所求，他们都能给你营造出一个世界等着你踏进去，在此之前能在你身上投资几万几十万。
+你以为你没钱就不会骗你？他们要的不是你口袋里的一块八毛，而是要把你整个人生吞活剥，一旦踏入，你的每一分价值都被榨干然后被当做牲口卖掉。
+你以为你在国内不出国就安全？今晚400多人的互助文档被删了/屏蔽了，删之前里面的信息足够触目惊心：大量的人就是在国内某省某地下了飞机接上车就被控制了，然后直接带去了境外。并且有大量亲人报警警方不立案的事实。
+这些构成了去年新闻里的一个数字：泰国警方估计每天有将近两百华人、每年超过七万人被贩卖到妙瓦底，这还只是一个地方。
+能逃得过吗？还能怪受害者吗？
+— 来源
+杭州地铁上
+今天杭州地铁上的人明显少了很多。大家相视而笑，互相点头示意但眼神坚定。
+因为我们知道，只有杭州城最优秀的人才，各部门最重要的岗位才会在这个时间出现在这个车厢。
+拖着行李箱的人羞愧地低下了头，他知道自己是党和国家的寄生虫。
+— 来源
+今天什么日子啊？我在公司看外面好热闹，像过年一样
+— 来源
+干旱地区的一位农民向神许愿，希望神能满足他的一个愿望。
+神现身了，问他想要什么，
+农民说：“想要一个水龙头。”
+神问，”为什么？”
+农民答：“这个东西好，插在墙上就能出水。”
+— 来源
+来自一个少年好学生，青年海王，中年居家好男人的胡说八道：
+1 、 自由恋爱吧，不建议相亲结婚，因为生命诚可贵，爱情价更高，若为自由顾…；
+2 、 除非喜欢孩子，不必一定结婚；
+3 、 孩子会大大降低生活质量，必须有牺牲和奉献的准备，一定区分好是想生个娃，还是想日复一日养娃陪伴长大，没想好前不要乱生，对自己负责，更是对孩子负责；
+4 、 不结婚不等于滥情，性感的肉体千篇一律，高潮的时间很短暂，而有趣的灵魂万里挑一，稳定的亲密关系让多巴胺和内啡肽更澎湃；
+— 来源
+“我们基于目前世界的制约条件来想象它的未来，但其实还有大量新的机会和事物会涌现。所以我觉得，写代码在现在确实非常重要，而且很快就会发生变化。大家需要保持足够的灵活性。
+我常打的比方是，好比我们是一群会计师，而微软 Excel 刚刚问世。你是想当第一个放下 HP 计算器学 Excel 的人，因为这是更好的工具，还是想做那个死抱着计算尺和 HP 计算器不放，还在那儿说‘这帮年轻人只会用 Excel，他们不懂行’的人？
+虽然这个比方有点粗糙，但我觉得对大多数人来说，这是最好的姿态，就是拥抱变化，尝试这些工具。装上最新的代码助手，比如 0.3 版本什么的，真正去用它写点你本来不想写的代码。你可不想做那个最后才用上 Excel 的会计吧，那样你很可能丢了饭碗。”
+— Bret Taylor
+文章 从 0 到 2000 元，我花了 10 个月 - V2EX （VPS）全网首家测评–搬瓦工 power box - V2EX 第026期 - 暮野灵猴 | 大橘和朋友们的周刊 科技爱好者周刊（第 337 期）：互联网创业几乎没了 - 阮一峰的网络日志 《HelloGitHub 月刊》第 106 期 - HelloGitHub 都没人看我为什么还要写博客？ | 宝玉的分享 分享一个自己整理的纯干货：独立开发者 / 独立小团队如何在一周内搞定所有的资质开始在 App Store / Steam / Stripe 收款 - V2EX KMS激活Windows/Office口袋指南 - 零散坑 - Sliamb的零散日常和填坑(╯‵□′)╯︵┻━┻ 银川最近为何小震不断？是否会发生大地震？官方回应|界面新闻 · 快讯 图片 Fu3K-UOzMMAzmp5wW3GGhbla4nyBv3 工具 Mini-Cover：优雅的在线封面生成工具。 tempmail100：临时电子邮件邮箱，接受验证码。 南京大学测速站 电影 孤注一掷 动漫 死亡笔记 鬼灭之刃 第一季 鬼灭之刃 无限列车篇 鬼灭之刃 游郭篇 鬼灭之刃 锻刀村篇 柱训练篇 中国惊奇先生 视频 王立群读史记之汉武帝【全集】 王立群读史记之秦始皇 《牧羊曲》- 郑绪岚 | “举起鞭儿轻轻摇” 唠叨 距离上次发周记断了40天左右，该打。 第一次出远门，第一次去云南，第一次坐飞机，第一次在外省呆了20天，可能还有一些第一次，感觉还是挺好的。 修电脑变得好起来了，今天营业额七百多，我都有点飘了。 在大理玩的时候其实记录了很多口水日记，还是不发了吧，没什么营养。 希望我以后可以坚持周记。 </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-16 10:26:34 +0800 CST'>February 16, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 阅读与感悟周记44" href="http://localhost:1313/weekly-reflections-reading-insights-44/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Windows 10/11 安装与激活指南
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/windows-10-11-install-activation-guide/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+镜像下载 Windows 镜像下载链接 工具下载 工具下载链接 💻 激活方法 ✅ 方法一：使用 PowerShell（推荐） 1 irm https://get.activated.win | iex 执行后，按提示选择：
+1：HWID 激活 Windows 2：Ohook 激活 Office ⚙️ 方法二：使用内置 KMS 命令 1 2 3 slmgr -ipk W269N-WFGWX-YVC9B-4J6C9-T83GX slmgr -skms kms.03k.org slmgr -ato </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-31 21:20:40 +0800 CST'>January 31, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Windows 10/11 安装与激活指南" href="http://localhost:1313/windows-10-11-install-activation-guide/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">阅读与感悟周记43
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/weekly-reflections-reading-insights-43/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+言论 很多人想象回到过去时，他们担心做了一点小事就会改变现在，但没有人意识到，如果现在我们做一些小事，没准能够改变未来
+— 来源
+电影 三个老枪手 龙门飞甲 扫毒2天地对决 啪嗒啪嗒 热天午后 剧集 幕府将军 播客 Vol.263 北去来辞：所有的离开与到达，也是希望和向往 170.晋善晋美，紧挨河北：聊聊山西 - 不开玩笑 Jokes Aside | 小宇宙 - 听播客，上小宇宙 马斯洛的需求层次理论 马斯洛需求层次理论的8个层次，包括他后期扩展的认知需求、审美需求和超越自我实现需求，按从最基本到最高级的顺序如下：
+1. 生理需求（Physiological Needs） 定义：最基本的生存需求，维持生命所必需的一切。 内容：食物、水、空气、睡眠、性、身体的舒适、排泄等。 特点：这是最优先需要满足的需求，只有满足这些基本需求，人们才会去关注其他需求。 2. 安全需求（Safety Needs） 定义：对身体和财产安全、健康保障、稳定环境的需求。 内容：稳定的收入、工作的保障、家庭安全、健康保险、避免危险和不确定性。 特点：当生理需求得到满足后，个体会开始寻求安全和稳定的生活环境。 3. 归属与爱的需求（Love and Belonging Needs） 定义：人类对社会关系、情感联系和群体归属感的需求。 内容：友谊、亲密关系、家庭、爱情、社交网络、群体归属等。 特点：缺乏社会联系会导致孤独感和隔离感，从而影响心理健康。 4. 尊重需求（Esteem Needs） 定义：对自尊和他人尊重的需求，追求个人的成就与认可。 内容：自尊（自信、能力感）、他人尊重（名誉、地位）、社会认可、成功和成就感。 特点：当个体在社会中获得尊重与认可时，会增强自信与自我价值感。若未满足，可能会出现自卑感或过度寻求外界认同。 5. 认知需求（Cognitive Needs） 定义：对知识、理解、探索和智慧的需求。 内容：学习、好奇心、对真理的渴望、对世界和自我的理解。 特点：当安全和社会需求得到满足后，个体会产生对世界和自身的更深层次探索需求。这一需求促进了创造力和智力的发展。 6. 审美需求（Aesthetic Needs） 定义：对美、和谐、对称、艺术的需求。 内容：欣赏艺术、音乐、文学、自然景观的美感，追求精神和审美上的享受。 特点：在认知需求得到满足后，个体对美的追求成为内心深处的渴望。它不仅仅是外部美的享受，还是对内在心灵的滋养。 7. 自我实现需求（Self-Actualization Needs） 定义：个体追求最大限度地实现个人潜力、创造力和理想。 内容：个人理想的实现、独立的自我表达、创造力的发挥、追求个人使命、心理成长。 特点：这是人类追求意义、目标和自我提升的最高层次。个体希望充分发挥自己的潜力，做出独特的贡献。每个人的自我实现目标不同，它是个人成长的终极表现。 8. 超越自我实现需求（Transcendence Needs） 定义：超越自我，实现更广泛的社会或人类福祉，服务于更大目标。 内容：为他人和社会贡献，追求超越个人利益的意义，如慈善、服务他人、为社会作出贡献。 特点：马斯洛在晚期提出的这一需求层次强调了人类精神的超越，个体不再只是关注自我成长，而是开始关注全人类的福祉、集体目标或精神领域的高度。 总结 生理需求是最基本的，是所有需求的基础。 在满足了生理需求和安全需求后，个体才会关注更高层次的需求，如归属与爱的需求和尊重需求。 一旦这些基本的社会和心理需求得到满足，个体便会追求认知需求、审美需求，以及最终的自我实现需求。 最后，马斯洛的超越自我实现需求强调了人类在追求自我成长后，可能会为更广泛的社会和人类福祉作出贡献。 笑话 今天背着室友偷偷来图书馆学习，手机静音，一口气复习到中午，28个未接电话，45条未读消息，才知道复习的这门课上午考完了
+— 来源
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-06 17:26:34 +0800 CST'>January 6, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 阅读与感悟周记43" href="http://localhost:1313/weekly-reflections-reading-insights-43/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/10/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/12/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

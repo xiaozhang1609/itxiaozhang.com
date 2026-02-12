@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>直播 on IT小章</title>
+    <link>http://localhost:1313/tags/%E7%9B%B4%E6%92%AD/</link>
+    <description>Recent content in 直播 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 20 Nov 2025 20:50:52 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%9B%B4%E6%92%AD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>直播伴侣画面添加静态和动态元素</title>
+      <link>http://localhost:1313/live-companion-static-dynamic-elements/</link>
+      <pubDate>Thu, 20 Nov 2025 20:50:52 +0800</pubDate>
+      <guid>http://localhost:1313/live-companion-static-dynamic-elements/</guid>
+      <description>本文介绍如何在直播伴侣中为直播画面添加静态图片和动态动图或视频元素，实现多头像或其他动态效果的展示，步骤清晰易操作。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IT小章</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">微软运行库官方下载合集：VC&#43;&#43;、.NET、DirectX 全版本链接整理
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/microsoft-runtime-download-links-vcpp-dotnet-directx/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+一、Visual C&#43;&#43; Redistributable 推荐页面：Latest Supported VC&#43;&#43; Downloads
+运行库整合包 (推荐) VisualCppRedist AIO (GitHub)
+2015-2022 (统一版) x86 ｜ x64 ｜ ARM64
+2013 (Update 5) x86 ｜ x64 ｜ ARM
+2012 (Update 4) x86 ｜ x64 ｜ ARM
+2010 (SP1) x86 ｜ x64
+2008 (SP1) x86 ｜ x64
+2005 x86 ｜ x64 ｜ IA64
+二、.NET Framework 下载中心：.NET Framework 下载
+4.8.1 页面 4.8 离线 4.7.2 离线 4.6.2 离线 4.5.2 离线 4.0 Web ｜ 离线 3.5 SP1 离线 三、DirectX End-User Runtime Web 安装器 dxwebsetup.exe 离线包 directx_Jun2010_redist.exe 四、.NET (Core) Runtime / SDK 下载中心：.NET 下载
+.NET Runtime（运行 .NET 应用） ASP.NET Core Runtime（运行 Web 应用） .NET Desktop Runtime（运行 WinForms / WPF 应用） .NET SDK（开发工具，含运行时） 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-19 10:07:54 +0800 CST'>September 19, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 微软运行库官方下载合集：VC&#43;&#43;、.NET、DirectX 全版本链接整理" href="http://localhost:1313/microsoft-runtime-download-links-vcpp-dotnet-directx/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">我的公租房退房全流程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/public-rental-housing-move-out-guide-yinchuan/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+我是在 2023年4月 申请到公租房的，当时是通过“新就业及十万大学生留银专项计划”通道。2023年6月入住，2025年7月搬出，9月中旬正式办理退房。
+一开始我对退房流程完全不熟悉，担心很麻烦。结果真正走完后发现，确实有点麻烦，幸亏有我大哥陪我一起去，帮我跑前跑后，还负责开车接送，很靠谱。不然要是我自己一个人，肯定不会在一天之内就把退房办完。这里分享我的退房经历和注意事项，给有需要的人做个参考。
+我的退房步骤（按顺序） 提前咨询住房保障中心 在去市民大厅之前，我先打电话咨询了住房保障中心。他们告诉我需要带身份证、保障证和租赁协议，并且第一步要先去他们那边开退房凭证。 第二天我才正式去市民大厅，窗口工作人员帮我开了退房凭证，还给了我一份纸质的《退房须知》。那张纸上他们用笔圈出了关键步骤：第一步、第二步、第三步，还特别提醒了最后需要哪些材料，告诉我所有东西办完后要回到市民大厅才能最终结案。
+找物业验房 拿到退房凭证后，我去小区物业预约了验房。 在此之前，我把房子收拾干净，大件家具处理掉。原本我担心柜子、床、沙发太大不好搬，后来我在小区群里发了一句话：“家具免费送”。没想到很多邻居来要，家具很快就搬走了，省了力气也省了搬家费。 验房时，物业主要看墙面、门窗、灯具、水池、燃气表这些设施。我提前修好了一个坏掉的灯开关，所以很顺利就通过了。
+缴清费用并拿发票 退房需要把各项费用都结清。工作人员告诉我，需要准备以下几张票据：
+暖气费：最后一个采暖年度的纸质发票。 水费：需要到水务公司营业厅线下预约抄表，再缴清费用拿到发票。 垃圾处理费：一开始因为工作人员上班时间不在岗差点办不成，我态度坚硬坚持说一定要当天解决，最后他们帮我办好了。 我没有开通天然气，所以这部分不用管。电费也不需要特别出具证明。 拿齐这些票据后，我交给了物业，物业在退房凭证上签字盖章。 回验收处再签字 物业签章之后，我还需要回到验收部门，再签一个字。这个环节各地可能略有不同，我按照他们的要求完成了。
+回市民大厅最终办结 我带齐材料回到市民大厅五楼，窗口工作人员帮我完成了最后的退房手续。
+关于押金和户口 退房时，我遇到一个问题：押金不能马上退。 原因是我的户口还在公租房里，工作人员说必须把户口迁出后才可以退押金。
+预计可以退还：
+押金 3000元 加上多缴的房租（大约三个月） 合计大概 3400元左右。 等我迁出户口后，再带押金收据原件、身份证、户口本（带迁出章）、银行卡去办理，就能退了哦。
+我的经验总结 有人帮忙，速度快：有我大哥陪同，开车接送、跑腿都很方便，所以我才能一天内办完退房。 提前打电话咨询：去市民大厅之前，我提前电话问清楚需要带的证件和第一步该怎么做，这让我少走了很多弯路。 家具处理：大件家具搬不动，可以像我一样在小区群里发布“免费送”，邻居很快就会来搬走。 小问题提前修好：比如灯坏了、开关松了，自己修一下，验房就顺利多了。 缴费要注意细节：水费必须去营业厅现场预约抄表；遇到不负责任的工作人员，要坚持沟通。 时间安排：虽然我一天就办完了，但这是在大哥帮忙的情况下。如果一个人办，最好留出整整两天。 我的简要流程清单 市民大厅五楼 → 取号 → 开退房凭证 拿退房凭证 → 找物业预约验房 → 清理房子 → 物业验收签章 去供暖公司、水务公司、垃圾处理部门结清费用并开票 拿票据给物业签字盖章 回验收处再签字（如有要求） 带齐材料回市民大厅 → 办结退房 后续步骤：迁出户口 → 拿押金收据、身份证、户口本、银行卡 → 退押金 </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-18 22:34:42 +0800 CST'>September 18, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 我的公租房退房全流程" href="http://localhost:1313/public-rental-housing-move-out-guide-yinchuan/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">HMDB代谢物信息批量获取工具：支持PPM误差计算的Python代谢组学数据提取解决方案
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+本文对应60号代码。
+这个程序是做什么的？ HMDB代谢物信息批量获取工具是一个专业的生物信息学工具，专门用于从HMDB（Human Metabolome Database，人类代谢组数据库）批量获取代谢物的详细信息。该工具通过输入代谢物的质量数，自动搜索并提取相关的代谢物数据，为代谢组学研究提供高效的数据获取解决方案。
+核心用途 代谢组学研究：为质谱分析结果提供代谢物注释 化合物鉴定：根据精确质量数快速匹配可能的代谢物 数据库查询：批量获取代谢物的生物学信息 科研辅助：为生物医学研究提供代谢物数据支持 主要功能 1. 双离子模式支持 正离子模式：支持M&#43;H、M&#43;Li、M&#43;NH4、M&#43;Na等加合离子 负离子模式：支持M-H加合离子 智能模式选择：用户可根据实验条件选择合适的离子化模式 2. 灵活的误差计算方式 固定Da误差：传统的绝对误差计算方式 PPM相对误差：科学的相对误差计算，公式为 (实验值-理论值)/理论值×10^6 用户可配置：通过da.txt和ppm.txt文件自定义误差参数 3. 智能缓存机制 本地缓存：避免重复请求相同的代谢物数据 断点续传：支持程序中断后继续处理 批量保存：优化I/O操作，提高处理效率 4. 高效并发处理 多线程处理：同时处理多个HMDB ID查询 智能限流：控制并发数量，避免服务器过载 进度显示：实时显示处理进度和统计信息 5. robust错误处理 智能重试：针对网络错误和服务器503错误的特殊处理 指数退避：逐步增加重试间隔，提高成功率 详细日志：完整记录处理过程和错误信息 6. 丰富的数据提取 程序能够提取以下代谢物信息：
+基本信息：HMDB ID、通用名称、化学式 分类信息：超类、类别、子类 生物学性质：内源性、组织分布 数据库交叉引用：KEGG、ChEBI、METLIN ID 结构信息：分子结构图链接 程序特点 1. 用户友好的交互界面 1 2 3 4 5 6 7 8 9 📁 检查输入文件: ✓ positive.txt (5 个质量数) ✓ negative.txt (2 个质量数) ✓ da.txt (3 个Da选项) ✓ ppm.txt (4 个PPM选项) ⚙️ 请选择误差计算方式: 1. 固定Da误差模式 (使用da.txt配置) 2. PPM相对误差模式 (使用ppm.txt配置) 2. 高度可配置性 配置文件驱动：所有参数都可通过配置文件调整 多精度选择：支持不同精度要求的应用场景 向后兼容：保持与旧版本的兼容性 3. 企业级稳定性 连接池管理：优化网络连接使用 内存优化：智能缓存管理，避免内存溢出 异常恢复：程序崩溃后可从断点继续 4. 性能优化 批量处理：一次性处理大量质量数 并发控制：平衡处理速度和服务器负载 缓存命中率统计：实时监控缓存效果 部分代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 import requests import json import time from typing import List, Dict, Any from abc import ABC, abstractmethod class BaseExtractor(ABC): &#34;&#34;&#34;抽象基类 - 数据提取器接口&#34;&#34;&#34; def __init__(self, config: Dict[str, Any]): self.config = config self.session = self._create_session() def _create_session(self) -&gt; requests.Session: &#34;&#34;&#34;创建HTTP会话&#34;&#34;&#34; session = requests.Session() session.headers.update(self.config.get(&#39;headers&#39;, {})) return session @abstractmethod def search(self, query: str) -&gt; List[str]: &#34;&#34;&#34;搜索方法 - 子类必须实现&#34;&#34;&#34; pass @abstractmethod def extract(self, item_id: str) -&gt; Dict[str, Any]: &#34;&#34;&#34;提取方法 - 子类必须实现&#34;&#34;&#34; pass class CacheManager: &#34;&#34;&#34;缓存管理器&#34;&#34;&#34; def __init__(self, cache_file: str): self.cache_file = cache_file self.data = self._load() def _load(self) -&gt; Dict: try: with open(self.cache_file, &#39;r&#39;) as f: return json.load(f) except FileNotFoundError: return {} def get(self, key: str) -&gt; Any: return self.data.get(key) def set(self, key: str, value: Any): self.data[key] = value self._save() def _save(self): with open(self.cache_file, &#39;w&#39;) as f: json.dump(self.data, f) class DataProcessor: &#34;&#34;&#34;数据处理器&#34;&#34;&#34; @staticmethod def process_batch(items: List[str], processor_func) -&gt; List[Dict]: &#34;&#34;&#34;批量处理数据&#34;&#34;&#34; results = [] for item in items: try: result = processor_func(item) if result: results.append(result) except Exception as e: print(f&#34;处理失败: {item}, 错误: {e}&#34;) return results @staticmethod def save_results(data: List[Dict], filename: str): &#34;&#34;&#34;保存结果&#34;&#34;&#34; with open(filename, &#39;w&#39;, encoding=&#39;utf-8&#39;) as f: json.dump(data, f, ensure_ascii=False, indent=2) class WebExtractor(BaseExtractor): &#34;&#34;&#34;具体实现类&#34;&#34;&#34; def __init__(self, config: Dict[str, Any]): super().__init__(config) self.cache = CacheManager(config.get(&#39;cache_file&#39;, &#39;cache.json&#39;)) def search(self, query: str) -&gt; List[str]: &#34;&#34;&#34;搜索实现&#34;&#34;&#34; # 检查缓存 cache_key = f&#34;search_{query}&#34; cached = self.cache.get(cache_key) if cached: return cached # 模拟网络请求 time.sleep(1) # 请求延迟 # 这里是具体的搜索逻辑 # 实际项目中会有具体的API调用和数据解析 results = self._perform_search(query) # 缓存结果 self.cache.set(cache_key, results) return results def extract(self, item_id: str) -&gt; Dict[str, Any]: &#34;&#34;&#34;提取实现&#34;&#34;&#34; # 检查缓存 cached = self.cache.get(item_id) if cached: return cached # 模拟网络请求 time.sleep(0.5) # 这里是具体的提取逻辑 data = self._perform_extraction(item_id) # 缓存结果 if data: self.cache.set(item_id, data) return data def _perform_search(self, query: str) -&gt; List[str]: &#34;&#34;&#34;执行搜索 - 具体实现会根据目标网站调整&#34;&#34;&#34; # 这里会有具体的HTTP请求和HTML解析逻辑 return [f&#34;item_{i}&#34; for i in range(3)] # 示例返回 def _perform_extraction(self, item_id: str) -&gt; Dict[str, Any]: &#34;&#34;&#34;执行提取 - 具体实现会根据目标网站调整&#34;&#34;&#34; # 这里会有具体的数据提取逻辑 return { &#39;id&#39;: item_id, &#39;title&#39;: f&#39;Title for {item_id}&#39;, &#39;data&#39;: f&#39;Data for {item_id}&#39; } class Application: &#34;&#34;&#34;应用程序主类&#34;&#34;&#34; def __init__(self, config: Dict[str, Any]): self.config = config self.extractor = WebExtractor(config) self.processor = DataProcessor() def run(self, queries: List[str]): &#34;&#34;&#34;运行应用程序&#34;&#34;&#34; all_results = [] for query in queries: # 搜索相关项目 items = self.extractor.search(query) # 提取详细数据 for item_id in items: data = self.extractor.extract(item_id) if data: data[&#39;query&#39;] = query all_results.append(data) # 保存结果 self.processor.save_results(all_results, &#39;results.json&#39;) print(f&#34;完成处理，共获取 {len(all_results)} 条数据&#34;) def main(): &#34;&#34;&#34;主函数&#34;&#34;&#34; # 配置参数 config = { &#39;headers&#39;: {&#39;User-Agent&#39;: &#39;Generic-Bot/1.0&#39;}, &#39;cache_file&#39;: &#39;app_cache.json&#39;, &#39;delay&#39;: 1.0 } # 创建应用实例 app = Application(config) # 示例查询列表 test_queries = [&#39;query1&#39;, &#39;query2&#39;, &#39;query3&#39;] # 运行程序 app.run(test_queries) if __name__ == &#39;__main__&#39;: main() 技术亮点 科学的误差计算：支持PPM相对误差，适应不同质量范围的化合物 智能网络处理：针对HMDB服务器特点优化的请求策略 高效缓存机制：多层缓存设计，显著提高处理效率 robust错误处理：全面的异常处理和恢复机制 用户友好设计：直观的配置文件和交互界面 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-15 09:31:16 +0800 CST'>September 15, 2025</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to HMDB代谢物信息批量获取工具：支持PPM误差计算的Python代谢组学数据提取解决方案" href="http://localhost:1313/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/disk-cleanup-case-c-d-drive-full-solution/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 这台电脑的 C 盘与 D 盘空间已满，其中 D 盘已经完全爆满。通过工具扫描发现：
+D 盘主要被 **Steam 游戏目录（steamapps\common 文件夹）**以及部分大型游戏文件（如 CSGO、LOL）占用； C 盘主要被 AppData 文件夹下的缓存文件、无畏时刻录屏视频、电影文件及部分重复的游戏文件占用。 问题原因 Steam 游戏未彻底卸载：用户卸载游戏时操作不完整，或存在多个账号，导致游戏文件仍保留在「common」目录中。 视频与旧文件堆积：无畏时刻录屏视频、过期电影文件长期未清理，占用大量存储空间。 重复的游戏安装路径：Steam 在 C 盘与 D 盘均建立了库目录，导致相同或类似游戏文件重复存在。 系统使用时间过长：长期运行产生的软件缓存、临时文件累计，占用一定空间。 清理原则：优先找出并删除占用空间最大的文件和文件夹，避免浪费时间在小缓存上。
+解决办法 下载安装工具
+打开 章九工具箱，下载 Geek Uninstaller（用于彻底卸载软件和游戏）； 下载 SpaceSniffer（用于磁盘空间可视化分析）。 分析磁盘占用情况
+打开 SpaceSniffer，分别扫描 C 盘与 D 盘； 等待分析完成后，重点关注「common」目录、AppData 文件夹及其他大型文件夹。 清理 D 盘
+删除不再使用的 Steam 游戏文件（如 CSGO 等），这些文件位于「steamapps\common」目录； 与用户确认不再需要的旧游戏，直接移除； 保留仍在使用的游戏（如 LOL）。 清理 C 盘
+删除无畏时刻录屏文件及不必要的旧视频； 移除不再观看的电影文件； 删除未使用的游戏文件（如 CSGO、瓦罗兰特等）； 保留仍需使用的软件和游戏； 对于缓存文件，可暂时保留，因其占用空间相对较小。 后续维护建议
+将新软件和文件优先安装或保存至 D 盘，避免 C 盘过度消耗； 定期使用 SpaceSniffer 检查磁盘空间分布，及时清理无用文件； 卸载游戏时使用 Geek Uninstaller，确保残留文件被彻底删除； 对于 Steam 用户，可在设置中统一指定游戏安装目录，避免多盘冗余。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-12 20:07:46 +0800 CST'>September 12, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路" href="http://localhost:1313/disk-cleanup-case-c-d-drive-full-solution/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/colorful-g16-24-secure-boot-van9003-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 七彩虹隐星 G16 24 笔记本在启动港服《瓦罗兰特》时出现报错：
+1 VAN9003 This version of Vanguard requires secure boot to be enabled in order to play. See the Vanguard notification center in the tray for more details. 尝试在 BIOS 中开启 Secure Boot 时，又出现报错：
+1 Secure boot can be enabled when system in user mode. Repeat operation after enrolling platform key (PK) 同时，部分 BIOS 菜单被隐藏，无法直接修改 Secure Boot 设置。
+问题原因 笔记本出厂设置下，部分高级 BIOS 菜单被隐藏，用户无法直接修改 Secure Boot 相关选项。 BIOS 配置未处于用户模式（User Mode），导致启用 Secure Boot 时出现报错。 官方 BIOS 升级包未安装或未正确操作，造成系统无法识别平台密钥（Platform Key，PK）。 解决办法 准备工作
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-04 19:56:22 +0800 CST'>September 4, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案" href="http://localhost:1313/colorful-g16-24-secure-boot-van9003-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Steam 手机令牌移除教程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/steam-mobile-authenticator-removal-tutorial/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+一、前提条件 在开始之前，请确认以下事项：
+邮箱可用：必须能正常登录注册时填写的邮箱，这是所有恢复操作的基础。 账号基本信息：记得自己的 Steam 用户名 / 昵称 / 密码。 支付凭证：建议准备一张近期的 Steam 消费截图（微信、支付宝等支付记录）。 二、常见问题场景 导致无法使用手机令牌的情况，主要有以下几类：
+手机损坏、丢失或格式化 → 无法使用验证器 恢复码未备份或遗失 绑定手机号已注销 → 无法接收短信验证码 仅剩邮箱与密码，客户端可能能登录，也可能完全无法进入 三、解决方案总览 根据账号的登录情况，分为 两种恢复路径：
+路径 A：电脑客户端还能登录 → 直接在客户端里移除验证器，简单快捷。 路径 B：客户端无法登录 → 需要通过 Steam 网页端提交，需要填写的内容多于路径A。 四、路径 A：客户端可登录时的处理方法 打开 Steam 客户端 左上角点击 Steam → 设置 → 账户 在 账户安全 栏选择 管理 Steam 令牌 点击 移除 Steam 令牌 根据提示，完成后续步骤。 五、路径 B：客户端无法登录时的处理方法 步骤 1：访问支持页面 打开 Steam 支持页面 点击 “我删除或遗失了我的 Steam 令牌手机验证器” 步骤 2：验证账户信息 输入注册邮箱 点击 通过电子邮件发送账户验证码 登录邮箱，点击邮件中的 继续恢复 页面将显示 Steam 用户名和昵称 → 请记录 步骤 3：声明无法使用手机号和恢复码 选择 我已无法使用我的 Steam 手机令牌验证器 选择 我已无法使用此手机号码 点击 我找不到验证器恢复码了 → 进入人工审核表单 步骤 4：填写恢复表单 需要填写以下内容：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-02 14:01:55 +0800 CST'>September 2, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Steam 手机令牌移除教程" href="http://localhost:1313/steam-mobile-authenticator-removal-tutorial/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Win10/11 系统磁盘被 BitLocker 加密，无法解密
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/win10-11-bitlocker-disk-cannot-decrypt/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在 Windows 10/11 系统中，磁盘启用 BitLocker 后异常：
+设置界面提示「你的加密由 BitLocker 管理」，无法进行操作；
+尝试关闭 BitLocker 时仅弹出提示窗口并关闭，无进一步选项；
+使用命令「manage-bde -status C:」查看时，状态显示：
+「Conversion Status: Encryption Paused」 「Percentage Encrypted: 98.8%」 「Protection Status: Protection Off」 「Lock Status: Unlocked」 此时无法继续加密，也无法解密。 问题原因 BitLocker 在加密过程中中断，导致驱动器停留在「Encryption Paused」状态。由于加密未完成，系统界面缺少操作选项，用户陷入无法加密完成也无法解密的状态。
+解决办法 以管理员身份运行命令提示符
+搜索「cmd」→ 右键 →「以管理员身份运行」。 检查磁盘状态
+输入：
+1 manage-bde -status C: 确认「Encryption Paused」。
+禁用保护机制
+输入：
+1 manage-bde -protectors -disable C: 恢复加密进程
+输入：
+1 manage-bde -resume C: 确认状态变化
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-02 13:37:33 +0800 CST'>September 2, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Win10/11 系统磁盘被 BitLocker 加密，无法解密" href="http://localhost:1313/win10-11-bitlocker-disk-cannot-decrypt/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WeGame 打开提示「客户端正在升级 0%」的解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/wegame-client-upgrade-0-percent-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 打开 WeGame 时，界面提示「客户端正在升级 0%」，并一直卡在该界面不动。
+问题原因 系统文件可能存在损坏； 杀毒软件未及时清理病毒或残留文件； WeGame 卸载不彻底，存在注册表残留； 网络配置（DNS/IPv6）异常导致连接问题； 旧版本路径冲突引起安装失败。 解决办法 以管理员身份运行命令提示符，输入「sfc /scannow」并执行扫描修复； 使用自带或第三方杀毒软件进行全盘扫描； 下载并运行「Geek」卸载工具，彻底卸载 WeGame 并清理注册表； 打开「ncpa.cpl」，进入网络连接，取消 IPv6 选项，修改 IPv4 DNS 为「8.8.8.8」； 在命令提示符中输入「ipconfig /flushdns」，刷新 DNS 缓存； 重新下载安装最新版 WeGame，安装路径建议与之前不同； 安装完成后，清理临时下载工具及文件。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-08-29 18:05:38 +0800 CST'>August 29, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to WeGame 打开提示「客户端正在升级 0%」的解决方法" href="http://localhost:1313/wegame-client-upgrade-0-percent-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WeGame 多开卡死与「损坏的镜像」报错解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/wegame-multiclient-crash-damaged-image-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 多开问题：在 WeGame 中尝试「小号多开」时，界面卡死，一直转圈。 启动报错：打开 WeGame 时提示「损坏的镜像」，点击确定后错误窗口不断弹出。 问题原因 多开问题：WeGame 启动进程中存在名为「TASLogin Application（32位）」的后台任务未被结束，导致多开失败。
+启动报错：
+系统可能存在病毒或木马程序影响。 系统文件出现损坏。 运行库不完整或异常。 WeGame 残留文件、注册表未清理干净。 解决办法 针对多开问题 打开任务管理器。 在搜索栏输入「TAS」。 展开 WeGame 下的进程，找到「TASLogin Application（32位）」相关任务。 逐一结束这些进程。 返回 WeGame，重新登录即可。 针对「损坏的镜像」报错 查杀病毒：使用系统自带或第三方安全软件进行全盘查杀。
+修复系统文件：
+以管理员身份运行命令提示符。 输入「SFC /SCANNOW」并执行，等待系统文件修复完成。 清理并重装运行库与 WeGame：
+卸载所有 Microsoft 运行库。 卸载 WeGame（建议使用 Geek 等工具彻底清理残留文件和注册表）。 从微软官网下载并重新安装 32 位与 64 位运行库。 重新安装 WeGame，建议自定义新安装路径。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-08-27 09:34:40 +0800 CST'>August 27, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to WeGame 多开卡死与「损坏的镜像」报错解决方法" href="http://localhost:1313/wegame-multiclient-crash-damaged-image-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">阿里云ECS部署HTTPS网站笔记
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/aliyun-ecs-https-deployment-notes/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+一、服务器与环境准备 1 2 3 4 5 6 7 8 ssh root@&lt;your-server&gt; # 登录服务器 sudo apt update &amp;&amp; sudo apt upgrade -y sudo apt install nginx -y sudo ufw allow ssh sudo ufw allow &#39;Nginx Full&#39; sudo ufw enable 二、上传网页与证书 1. 新建目录 1 2 sudo mkdir -p /var/www/html sudo mkdir -p /etc/nginx/ssl 2. 上传文件 使用 WindTerm 上传网页文件到 /var/www/html/
+使用 WindTerm 上传证书文件到 /etc/nginx/ssl/：
+24xiu.cn.pem 24xiu.cn.key 3. 设置权限 1 sudo chmod 600 /etc/nginx/ssl/* 三、配置 Nginx 1 2 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak sudo vim /etc/nginx/sites-available/default 配置内容：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-08-26 18:57:46 +0800 CST'>August 26, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 阿里云ECS部署HTTPS网站笔记" href="http://localhost:1313/aliyun-ecs-https-deployment-notes/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/5/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/7/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

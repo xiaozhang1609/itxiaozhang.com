@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>信息浮窗 on IT小章</title>
+    <link>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%B5%AE%E7%AA%97/</link>
+    <description>Recent content in 信息浮窗 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 23 Nov 2025 18:53:58 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%B5%AE%E7%AA%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开启英伟达APP信息浮窗修改保存路径和快捷键</title>
+      <link>http://localhost:1313/nvidia-app-overlay-and-recording-troubleshooting/</link>
+      <pubDate>Sun, 23 Nov 2025 18:53:58 +0800</pubDate>
+      <guid>http://localhost:1313/nvidia-app-overlay-and-recording-troubleshooting/</guid>
+      <description>本文介绍英伟达APP信息浮窗未开启导致快捷键无效的问题，并提供更改录制保存路径与调整快捷键的步骤，帮助用户快速恢复正常使用。</description>
+    </item>
+  </channel>
+</rss>

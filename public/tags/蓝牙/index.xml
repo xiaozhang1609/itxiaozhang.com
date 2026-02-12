@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>蓝牙 on IT小章</title>
+    <link>http://localhost:1313/tags/%E8%93%9D%E7%89%99/</link>
+    <description>Recent content in 蓝牙 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 09 Dec 2023 15:42:06 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%93%9D%E7%89%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>蓝牙连接问题解决方案指南</title>
+      <link>http://localhost:1313/bluetooth-connection-issue-resolution-guide/</link>
+      <pubDate>Sat, 09 Dec 2023 15:42:06 +0800</pubDate>
+      <guid>http://localhost:1313/bluetooth-connection-issue-resolution-guide/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/bluetooth-connection-issue-resolution-guide/&#34;&gt;https://itxiaozhang.com/bluetooth-connection-issue-resolution-guide/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;蓝牙科普&#34;&gt;蓝牙科普&lt;/h2&gt;
+&lt;p&gt;蓝牙是一种无线通信技术，其原理基于短距离无线通信。它使用2.4 GHz频段的无线电波进行通信，这个频段是为蓝牙设备专门保留的。蓝牙技术采用频分复用（Frequency Division Multiplexing）和时分复用（Time Division Multiplexing）的结合，以实现多设备间的并行通信。蓝牙设备通过建立小型、自组织的网络，可以在10米至100米范围内进行通信。通信过程中，蓝牙设备通过建立连接、交换身份信息和协商通信参数，实现快速可靠的数据传输。蓝牙的低功耗特性使其在电池供电设备中得到广泛应用，例如耳机、键盘、鼠标和智能手机等。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

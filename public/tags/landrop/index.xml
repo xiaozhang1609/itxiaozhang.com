@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Landrop on IT小章</title>
+    <link>http://localhost:1313/tags/landrop/</link>
+    <description>Recent content in Landrop on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 01 Aug 2024 11:20:55 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/landrop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>文件传输太简单！Landrop帮你秒速搞定跨设备传输！</title>
+      <link>http://localhost:1313/file-transfer-made-easy-with-landrop/</link>
+      <pubDate>Thu, 01 Aug 2024 11:20:55 +0800</pubDate>
+      <guid>http://localhost:1313/file-transfer-made-easy-with-landrop/</guid>
+      <description>这边文章介绍一款名为Landrop的高效文件传输工具，支持跨平台文件传输，无论是在Windows、macOS、Linux系统下的电脑，还是在安卓或iOS系统的手机上，都能轻松使用。本文将详细讲解如何安装Landrop，并演示如何在不同设备间传输文件。</description>
+    </item>
+  </channel>
+</rss>

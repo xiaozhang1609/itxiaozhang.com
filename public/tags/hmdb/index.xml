@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HMDB on IT小章</title>
+    <link>http://localhost:1313/tags/hmdb/</link>
+    <description>Recent content in HMDB on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 27 Dec 2025 20:53:32 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hmdb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自动抓取 HMDB 外源性代谢物食物来源工具</title>
+      <link>http://localhost:1313/auto-hmdb-exogenous-metabolite-food-source/</link>
+      <pubDate>Sat, 27 Dec 2025 20:53:32 +0800</pubDate>
+      <guid>http://localhost:1313/auto-hmdb-exogenous-metabolite-food-source/</guid>
+      <description>自动化抓取 HMDB 数据库中代谢物外源性来源，生成 CSV，便于科研与食物-代谢物关联分析。</description>
+    </item>
+    <item>
+      <title>HMDB代谢物批量抓取与结构化导出</title>
+      <link>http://localhost:1313/hmdb-metabolite-batch-extraction-csv-export/</link>
+      <pubDate>Mon, 03 Nov 2025 20:56:43 +0800</pubDate>
+      <guid>http://localhost:1313/hmdb-metabolite-batch-extraction-csv-export/</guid>
+      <description>这篇文章介绍了一个HMDB代谢物批量爬虫工具，自持同时爬取几万条数据、并发限速与重试、断点续跑，解析25项核心字段并导出CSV。</description>
+    </item>
+    <item>
+      <title>HMDB代谢物信息批量获取工具：支持PPM误差计算的Python代谢组学数据提取解决方案</title>
+      <link>http://localhost:1313/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/</link>
+      <pubDate>Mon, 15 Sep 2025 09:31:16 +0800</pubDate>
+      <guid>http://localhost:1313/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/</guid>
+      <description>文介绍了一个专业的HMDB代谢物信息批量获取工具，该工具支持双离子模式、灵活的Da/PPM误差计算、智能缓存机制和并发处理。通过Python实现，具备企业级稳定性和用户友好的配置界面，为代谢组学研究提供高效的数据获取和代谢物注释解决方案，显著提升科研效率。</description>
+    </item>
+    <item>
+      <title>HMDB数据库爬虫案例：一个高效、自动化的Python爬虫脚本</title>
+      <link>http://localhost:1313/hmdb-database-crawler-case-study-efficient-automated-python-script/</link>
+      <pubDate>Sun, 13 Jul 2025 18:48:58 +0800</pubDate>
+      <guid>http://localhost:1313/hmdb-database-crawler-case-study-efficient-automated-python-script/</guid>
+      <description>本文介绍一个强大的Python爬虫脚本，能自动从HMDB网站批量抓取代谢物信息。它支持多线程、缓存和断点续传，极大提升科研数据获取效率。</description>
+    </item>
+    <item>
+      <title>HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</title>
+      <link>http://localhost:1313/hmdb-metabolite-batch-extraction-tool/</link>
+      <pubDate>Thu, 15 May 2025 10:38:01 +0800</pubDate>
+      <guid>http://localhost:1313/hmdb-metabolite-batch-extraction-tool/</guid>
+      <description>这是一款专为代谢组学研究设计的Python自动化工具，能够从HMDB数据库批量获取代谢物信息，包括物质分类、组织定位和相关数据库ID等关键信息，大幅提升数据收集效率。</description>
+    </item>
+    <item>
+      <title>利用Python从HMDB数据库批量提取质谱数据中的化合物信息</title>
+      <link>http://localhost:1313/python-hmdb-mass-spectrometry-compound-extraction/</link>
+      <pubDate>Thu, 08 May 2025 15:11:58 +0800</pubDate>
+      <guid>http://localhost:1313/python-hmdb-mass-spectrometry-compound-extraction/</guid>
+      <description>本工具通过Python脚本，利用质谱数据中的质量数，从HMDB数据库批量提取化合物信息，包括HMDB ID、常用名称、化学式及结构图片，并将结果导出为CSV文件，极大提升代谢物注释效率。</description>
+    </item>
+    <item>
+      <title>使用Python从HMDB网站提取代谢物生物来源信息</title>
+      <link>http://localhost:1313/python-hmdb-metabolite-biosource-extractor/</link>
+      <pubDate>Sun, 27 Apr 2025 09:12:08 +0800</pubDate>
+      <guid>http://localhost:1313/python-hmdb-metabolite-biosource-extractor/</guid>
+      <description>使用Python从HMDB数据库获取代谢物的生物来源信息，结合智能HTML解析与关键词匹配算法，高效生成结构化数据报告。</description>
+    </item>
+    <item>
+      <title>Python自动化工具：HMDB代谢物信息一键批量获取</title>
+      <link>http://localhost:1313/python-hmdb-metabolites-batch-extractor/</link>
+      <pubDate>Wed, 27 Nov 2024 12:08:15 +0800</pubDate>
+      <guid>http://localhost:1313/python-hmdb-metabolites-batch-extractor/</guid>
+      <description>本文介绍了一款基于Python开发的自动化工具，可批量获取HMDB数据库中的代谢物信息，支持正负离子模式，提高科研效率。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>装甲红锋 on IT小章</title>
+    <link>http://localhost:1313/tags/%E8%A3%85%E7%94%B2%E7%BA%A2%E9%94%8B/</link>
+    <description>Recent content in 装甲红锋 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 19 Sep 2025 13:26:52 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%A3%85%E7%94%B2%E7%BA%A2%E9%94%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>装甲红锋报错「文件未找到(d3dcompiler_43.dll)」的解决方法</title>
+      <link>http://localhost:1313/fix-armored-red-bee-d3dcompiler-43-dll-error/</link>
+      <pubDate>Fri, 19 Sep 2025 13:26:52 +0800</pubDate>
+      <guid>http://localhost:1313/fix-armored-red-bee-d3dcompiler-43-dll-error/</guid>
+      <description>装甲红锋启动时报错「文件未找到(d3dcompiler_43.dll)」，通过卸载旧运行库、下载并安装最新 VC&#43;&#43;、.NET、DirectX 运行库，再修复 WeGame，可解决问题。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>编程案例 | IT小章</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/index.xml" title="rss">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<header class="page-header">
+  <h1>
+    编程案例
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">编程案例：摄影照片展示网站纯前端实现（HTML、CSS、JS）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>「视界捕手」是一个单页面应用（SPA），用于展示摄影照片，基于JavaScript动态加载图片内容，使用CSS网格布局实现响应式展示。页面切换时，通过淡入淡出动画实现平滑过渡，所有交互均无需重新加载页面。</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-30 16:54:12 +0800 CST'>2025年3月30日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 编程案例：摄影照片展示网站纯前端实现（HTML、CSS、JS）" href="http://localhost:1313/spa-photography-gallery/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">用HTML、CSS和JavaScript写一个圣诞氛围的网页
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文介绍了如何使用HTML、CSS和JavaScript创建一个充满圣诞氛围的网页。通过实现雪花飘落、圣诞树和蜡烛闪烁等动态效果。</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-23 14:04:44 +0800 CST'>2024年12月23日</span>&nbsp;·&nbsp;<span>5 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 用HTML、CSS和JavaScript写一个圣诞氛围的网页" href="http://localhost:1313/create-christmas-themed-webpage-with-html-css-javascript/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Python爬虫实战: 58同城房产信息自动化采集
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>这是一个基于Python开发的58同城房产信息采集系统,主要用于自动采集商铺、写字楼、厂房和生意转让等房产信息。系统提供图形界面操作,支持多城市数据采集。</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-12-01 19:28:00 +0800 CST'>2024年12月1日</span>&nbsp;·&nbsp;<span>6 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Python爬虫实战: 58同城房产信息自动化采集" href="http://localhost:1313/python-web-crawler-58city-real-estate-data-collection/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Python自动化工具：HMDB代谢物信息一键批量获取
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文介绍了一款基于Python开发的自动化工具，可批量获取HMDB数据库中的代谢物信息，支持正负离子模式，提高科研效率。</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-11-27 12:08:15 +0800 CST'>2024年11月27日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Python自动化工具：HMDB代谢物信息一键批量获取" href="http://localhost:1313/python-hmdb-metabolites-batch-extractor/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">用python写一个网页源码下载器
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>这个Python脚本能帮助您轻松保存完整网页,包括图片、样式和脚本。</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-17 11:42:12 +0800 CST'>2024年10月17日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 用python写一个网页源码下载器" href="http://localhost:1313/python-webpage-source-downloader/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">使用 Python 从 HMDB 网站提取数据
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文介绍了一款自动化工具，用于从人类代谢组数据库（HMDB）批量提取代谢物信息，并根据需求整合。</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-10-11 08:59:45 +0800 CST'>2024年10月11日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 使用 Python 从 HMDB 网站提取数据" href="http://localhost:1313/python-hmdb-data-extraction/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">利用JavaScript书签提取构造URL下载PDF文件
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文介绍如何创建一个浏览器书签，通过JavaScript自动提取当前页面的ID参数，构造PDF文件的下载链接，并在新窗口中打开该链接。</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-08-11 12:09:58 +0800 CST'>2024年8月11日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 利用JavaScript书签提取构造URL下载PDF文件" href="http://localhost:1313/create-bookmark-url-download-pdf/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">gwang.top：一键官网查询
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>gwang.top是由小章做的一款在线工具，专注于帮助用户快速查找软件、机构或公司的官方网站，本文介绍这款工具的使用。</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-07-17 17:19:26 +0800 CST'>2024年7月17日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to gwang.top：一键官网查询" href="http://localhost:1313/one-click-official-site-query/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">文件批量重命名
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文探讨了如何利用Python批量重命名文件，通过正则表达式匹配文件名格式，并增加指定数值以实现文件名数字部分的更新。详细介绍了代码实现及其在不同文件夹结构下的应用，旨在帮助用户提升文件管理效率。</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-07-03 14:12:32 +0800 CST'>2024年7月3日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 文件批量重命名" href="http://localhost:1313/batch-file-renaming/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Python小游戏开发：贪吃蛇的实现
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文介绍了如何使用Python和Pygame库开发经典的贪吃蛇小游戏。提供详细的玩法，和完整的代码。</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-27 13:54:02 +0800 CST'>2024年3月27日</span>&nbsp;·&nbsp;<span>4 分钟</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Python小游戏开发：贪吃蛇的实现" href="http://localhost:1313/python-mini-game-development-snake-implementation/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://localhost:1313/categories/%E7%BC%96%E7%A8%8B%E6%A1%88%E4%BE%8B/page/2/">下一页&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

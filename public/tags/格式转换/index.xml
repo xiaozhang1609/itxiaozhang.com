@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>格式转换 on IT小章</title>
+    <link>http://localhost:1313/tags/%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/</link>
+    <description>Recent content in 格式转换 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 19 Jul 2024 19:58:22 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HandBrake：免费开源的全能视频转换神器</title>
+      <link>http://localhost:1313/handbrake-free-open-source-video-converter/</link>
+      <pubDate>Fri, 19 Jul 2024 19:58:22 +0800</pubDate>
+      <guid>http://localhost:1313/handbrake-free-open-source-video-converter/</guid>
+      <description>这篇文章介绍HandBrake，一款免费开源的视频转换神器。它跨平台运行，提供便捷的设备预设，支持多种视频格式，支持批量处理。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Win10/11 系统磁盘被 BitLocker 加密，无法解密 | IT小章</title>
+<meta name="keywords" content="bitlocker, windows 10, windows 11, 加密, bitlocker">
+<meta name="description" content="Windows 10/11 系统磁盘启用 BitLocker 后加密暂停导致无法解密，本文提供管理员命令操作步骤，恢复加密并完成解密。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/win10-11-bitlocker-disk-cannot-decrypt/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/win10-11-bitlocker-disk-cannot-decrypt/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Win10/11 系统磁盘被 BitLocker 加密，无法解密
+    </h1>
+    <div class="post-description">
+      Windows 10/11 系统磁盘启用 BitLocker 后加密暂停导致无法解密，本文提供管理员命令操作步骤，恢复加密并完成解密。
+    </div>
+    <div class="post-meta"><span title='2025-09-02 13:37:33 +0800 CST'>2025年9月2日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/win10-11-bitlocker-disk-cannot-decrypt/">https://itxiaozhang.com/win10-11-bitlocker-disk-cannot-decrypt/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="问题描述">问题描述<a hidden class="anchor" aria-hidden="true" href="#问题描述">#</a></h2>
+<p>在 Windows 10/11 系统中，磁盘启用 BitLocker 后异常：</p>
+<ul>
+<li>
+<p>设置界面提示「你的加密由 BitLocker 管理」，无法进行操作；</p>
+</li>
+<li>
+<p>尝试关闭 BitLocker 时仅弹出提示窗口并关闭，无进一步选项；</p>
+</li>
+<li>
+<p>使用命令「manage-bde -status C:」查看时，状态显示：</p>
+<ul>
+<li>「Conversion Status: Encryption Paused」</li>
+<li>「Percentage Encrypted: 98.8%」</li>
+<li>「Protection Status: Protection Off」</li>
+<li>「Lock Status: Unlocked」
+此时无法继续加密，也无法解密。</li>
+</ul>
+</li>
+</ul>
+<h2 id="问题原因">问题原因<a hidden class="anchor" aria-hidden="true" href="#问题原因">#</a></h2>
+<p>BitLocker 在加密过程中中断，导致驱动器停留在「Encryption Paused」状态。由于加密未完成，系统界面缺少操作选项，用户陷入无法加密完成也无法解密的状态。</p>
+<h2 id="解决办法">解决办法<a hidden class="anchor" aria-hidden="true" href="#解决办法">#</a></h2>
+<ol>
+<li>
+<p><strong>以管理员身份运行命令提示符</strong></p>
+<ul>
+<li>搜索「cmd」→ 右键 →「以管理员身份运行」。</li>
+</ul>
+</li>
+<li>
+<p><strong>检查磁盘状态</strong></p>
+<ul>
+<li>
+<p>输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">manage-bde -status C:
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>确认「Encryption Paused」。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>禁用保护机制</strong></p>
+<ul>
+<li>
+<p>输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">manage-bde -protectors -disable C:
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>恢复加密进程</strong></p>
+<ul>
+<li>
+<p>输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">manage-bde -resume C:
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>确认状态变化</strong></p>
+<ul>
+<li>
+<p>输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">manage-bde -status C:
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>应显示「Encryption in Progress」。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>等待加密完成</strong></p>
+<ul>
+<li>持续检查，直到「Percentage Encrypted」为 100%，状态为「Fully Encrypted」。</li>
+</ul>
+</li>
+<li>
+<p><strong>关闭 BitLocker 解密磁盘</strong></p>
+<ul>
+<li>
+<p>输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-1"><a class="lnlinks" href="#hl-4-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">manage-bde -off C:
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>完成后驱动器上的锁标志消失。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="另一种尝试反向操作尝试开启加密">另一种尝试：反向操作（尝试“开启”加密）<a hidden class="anchor" aria-hidden="true" href="#另一种尝试反向操作尝试开启加密">#</a></h2>
+<p>这听起来很反直觉，但因为错误提示说“无法关闭设备加密”，我们可以尝试顺着它的意思，强制它先<strong>完成加密</strong>，解除死锁状态，然后再关闭。</p>
+<ol>
+<li>
+<p><strong>以管理员身份运行 PowerShell</strong></p>
+</li>
+<li>
+<p><strong>输入命令</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-5-1"><a class="lnlinks" href="#hl-5-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">manage-bde</span> <span class="n">-on</span> <span class="n">C:</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>如果命令成功</strong></p>
+<ul>
+<li>输入 <code>manage-bde -status</code>。</li>
+<li>如果状态变为“正在加密”，请等待它跑到 100% <strong>完全加密</strong>。</li>
+<li>一旦达到 100%，你就可以正常执行 <code>manage-bde -off C:</code> 来彻底解密了。</li>
+</ul>
+</li>
+</ol>
+<h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
+<li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/windows-10/">Windows 10</a></li>
+      <li><a href="http://localhost:1313/tags/windows-11/">Windows 11</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%8A%A0%E5%AF%86/">加密</a></li>
+      <li><a href="http://localhost:1313/tags/bitlocker/">Bitlocker</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

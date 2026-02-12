@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mmc.exe on IT小章</title>
+    <link>http://localhost:1313/tags/mmc.exe/</link>
+    <description>Recent content in Mmc.exe on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 14 Mar 2025 09:13:27 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mmc.exe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何解决「管理员已阻止你运行此应用」错误（mmc.exe）</title>
+      <link>http://localhost:1313/how-to-fix-admin-blocked-mmc-exe-error/</link>
+      <pubDate>Fri, 14 Mar 2025 09:13:27 +0800</pubDate>
+      <guid>http://localhost:1313/how-to-fix-admin-blocked-mmc-exe-error/</guid>
+      <description>本文介绍了如何解决Windows系统中出现的「管理员已阻止你运行此应用」错误，针对mmc.exe文件无法运行的常见原因，提供了注册表修改、组策略调整和防火墙例外设置三种有效的解决方法。</description>
+    </item>
+  </channel>
+</rss>

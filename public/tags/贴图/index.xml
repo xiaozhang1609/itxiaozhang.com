@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>贴图 on IT小章</title>
+    <link>http://localhost:1313/tags/%E8%B4%B4%E5%9B%BE/</link>
+    <description>Recent content in 贴图 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Aug 2024 22:18:55 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%B4%B4%E5%9B%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PixPin截图图软件教程</title>
+      <link>http://localhost:1313/pixpin-screenshot-sticky-notes-software-tutorial/</link>
+      <pubDate>Tue, 13 Aug 2024 22:18:55 +0800</pubDate>
+      <guid>http://localhost:1313/pixpin-screenshot-sticky-notes-software-tutorial/</guid>
+      <description>这篇文章讲了PixPin软件的六大主要功能：截图、贴图、长截图、文字识别、标注和动图录制等。</description>
+    </item>
+  </channel>
+</rss>

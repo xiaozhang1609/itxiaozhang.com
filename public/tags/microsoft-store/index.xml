@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Microsoft-Store on IT小章</title>
+    <link>http://localhost:1313/tags/microsoft-store/</link>
+    <description>Recent content in Microsoft-Store on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 07 Mar 2024 15:42:06 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/microsoft-store/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>离线安装 Microsoft Store 微软商店中的软件</title>
+      <link>http://localhost:1313/offline-installation-of-apps-from-microsoft-store/</link>
+      <pubDate>Thu, 07 Mar 2024 15:42:06 +0800</pubDate>
+      <guid>http://localhost:1313/offline-installation-of-apps-from-microsoft-store/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/offline-installation-of-apps-from-microsoft-store/&#34;&gt;https://itxiaozhang.com/offline-installation-of-apps-from-microsoft-store/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;由于某些网络环境限制或系统配置问题，我们无法直接 Microsoft Store 安装软件，在这种情况下，我们可以选择另外一种方法。本文中，我用 WinDbg Preview 下载安装举例。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

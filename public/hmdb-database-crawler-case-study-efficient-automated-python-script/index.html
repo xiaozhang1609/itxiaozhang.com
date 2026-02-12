@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>HMDB数据库爬虫案例：一个高效、自动化的Python爬虫脚本 | IT小章</title>
+<meta name="keywords" content="python, 网络爬虫, hmdb">
+<meta name="description" content="本文介绍一个强大的Python爬虫脚本，能自动从HMDB网站批量抓取代谢物信息。它支持多线程、缓存和断点续传，极大提升科研数据获取效率。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/hmdb-database-crawler-case-study-efficient-automated-python-script/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/hmdb-database-crawler-case-study-efficient-automated-python-script/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      HMDB数据库爬虫案例：一个高效、自动化的Python爬虫脚本
+    </h1>
+    <div class="post-description">
+      本文介绍一个强大的Python爬虫脚本，能自动从HMDB网站批量抓取代谢物信息。它支持多线程、缓存和断点续传，极大提升科研数据获取效率。
+    </div>
+    <div class="post-meta"><span title='2025-07-13 18:48:58 +0800 CST'>2025年7月13日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/hmdb-database-crawler-case-study-efficient-automated-python-script/">https://itxiaozhang.com/hmdb-database-crawler-case-study-efficient-automated-python-script/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="这个程序是做什么的">这个程序是做什么的？<a hidden class="anchor" aria-hidden="true" href="#这个程序是做什么的">#</a></h2>
+<p>这是一个专门为科研人员设计的网络爬虫工具。它的主要任务是从一个名为HMDB（人类代谢物组数据库）的网站上，自动、批量地抓取代谢物的相关信息。简单来说，你给它一批代谢物的编号（HMDB ID），它就能帮你把这些编号对应的详细分类和来源信息从网站上找回来，并整理好。</p>
+<h2 id="主要功能">主要功能<a hidden class="anchor" aria-hidden="true" href="#主要功能">#</a></h2>
+<ol>
+<li>
+<p><strong>读取数据源</strong>：程序会自动读取<code>data</code>文件夹下所有的Excel文件，并从每个文件的第一列中提取出所有格式为<code>HMDBXXXXXXX</code>的代谢物编号。</p>
+</li>
+<li>
+<p><strong>网络数据抓取</strong>：对于每一个提取到的HMDB编号，程序会访问HMDB网站上对应的网页，并抓取以下三个关键信息：</p>
+<ul>
+<li><strong>Class (分类)</strong></li>
+<li><strong>Sub Class (亚类)</strong></li>
+<li><strong>Source (来源)</strong>：判断该物质是内源性（Endogenous）还是外源性（Exogenous）。</li>
+</ul>
+</li>
+<li>
+<p><strong>结果保存</strong>：抓取到的信息会以表格形式，保存到<code>result</code>文件夹下一个同名的Excel文件中。每一行对应一个HMDB编号和它抓取到的信息。</p>
+</li>
+<li>
+<p><strong>缓存机制</strong>：程序非常智能，它会把查询过的结果保存在一个名为<code>hmid_cache.json</code>的缓存文件中。下次运行时，如果遇到相同的编号，它会直接从缓存中读取数据，而不是重新访问网站，这极大地提高了效率并减少了不必要的网络请求。</p>
+</li>
+<li>
+<p><strong>断点续传</strong>：得益于缓存机制，如果程序在中途因为网络问题或其他原因中断，下次重新运行时它会自动跳过已经成功处理的编号，从上次中断的地方继续，非常省心。</p>
+</li>
+</ol>
+<h2 id="程序特点">程序特点<a hidden class="anchor" aria-hidden="true" href="#程序特点">#</a></h2>
+<ol>
+<li>
+<p><strong>自动化与批量处理</strong>：你只需要把包含HMDB编号的Excel文件放进<code>data</code>文件夹，运行一次程序，它就能自动处理所有文件，无需人工干预。</p>
+</li>
+<li>
+<p><strong>高效稳定</strong>：</p>
+<ul>
+<li><strong>多线程处理</strong>：程序会同时开启多个线程（默认为5个，可以自己设置）来抓取数据，就像多个人同时在工作，速度比单线程快很多。</li>
+<li><strong>智能重试</strong>：如果遇到网络波动或网站临时访问不了，程序会自动尝试重新连接，确保数据抓取的成功率。</li>
+</ul>
+</li>
+<li>
+<p><strong>用户友好</strong>：</p>
+<ul>
+<li><strong>进度条显示</strong>：在程序运行时，你会看到一个清晰的进度条，告诉你当前处理到哪里了，还剩多少任务。</li>
+<li><strong>详细日志</strong>：程序会把运行过程中的所有重要信息（如哪个文件处理成功，哪个编号查询失败）记录在<code>hmdb_scraper.log</code>日志文件中，方便你随时查看或排查问题。</li>
+</ul>
+</li>
+<li>
+<p><strong>高可配置性</strong>：你可以通过命令行参数来调整程序的行为，例如：</p>
+<ul>
+<li>调整同时工作的线程数量（<code>--workers</code>）。</li>
+<li>设置是否使用缓存（<code>--no-cache</code>）。</li>
+<li>调整请求之间的时间间隔（<code>--delay</code>）。</li>
+</ul>
+</li>
+</ol>
+<h2 id="部分代码">部分代码<a hidden class="anchor" aria-hidden="true" href="#部分代码">#</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">  1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">  2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">  3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">  4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">  5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">  6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7">  7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8">  8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9">  9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10"> 10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11"> 11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12"> 12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13"> 13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14"> 14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15"> 15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16"> 16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17"> 17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18"> 18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19"> 19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20"> 20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21"> 21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22"> 22</a>
+</span><span class="lnt" id="hl-0-23"><a class="lnlinks" href="#hl-0-23"> 23</a>
+</span><span class="lnt" id="hl-0-24"><a class="lnlinks" href="#hl-0-24"> 24</a>
+</span><span class="lnt" id="hl-0-25"><a class="lnlinks" href="#hl-0-25"> 25</a>
+</span><span class="lnt" id="hl-0-26"><a class="lnlinks" href="#hl-0-26"> 26</a>
+</span><span class="lnt" id="hl-0-27"><a class="lnlinks" href="#hl-0-27"> 27</a>
+</span><span class="lnt" id="hl-0-28"><a class="lnlinks" href="#hl-0-28"> 28</a>
+</span><span class="lnt" id="hl-0-29"><a class="lnlinks" href="#hl-0-29"> 29</a>
+</span><span class="lnt" id="hl-0-30"><a class="lnlinks" href="#hl-0-30"> 30</a>
+</span><span class="lnt" id="hl-0-31"><a class="lnlinks" href="#hl-0-31"> 31</a>
+</span><span class="lnt" id="hl-0-32"><a class="lnlinks" href="#hl-0-32"> 32</a>
+</span><span class="lnt" id="hl-0-33"><a class="lnlinks" href="#hl-0-33"> 33</a>
+</span><span class="lnt" id="hl-0-34"><a class="lnlinks" href="#hl-0-34"> 34</a>
+</span><span class="lnt" id="hl-0-35"><a class="lnlinks" href="#hl-0-35"> 35</a>
+</span><span class="lnt" id="hl-0-36"><a class="lnlinks" href="#hl-0-36"> 36</a>
+</span><span class="lnt" id="hl-0-37"><a class="lnlinks" href="#hl-0-37"> 37</a>
+</span><span class="lnt" id="hl-0-38"><a class="lnlinks" href="#hl-0-38"> 38</a>
+</span><span class="lnt" id="hl-0-39"><a class="lnlinks" href="#hl-0-39"> 39</a>
+</span><span class="lnt" id="hl-0-40"><a class="lnlinks" href="#hl-0-40"> 40</a>
+</span><span class="lnt" id="hl-0-41"><a class="lnlinks" href="#hl-0-41"> 41</a>
+</span><span class="lnt" id="hl-0-42"><a class="lnlinks" href="#hl-0-42"> 42</a>
+</span><span class="lnt" id="hl-0-43"><a class="lnlinks" href="#hl-0-43"> 43</a>
+</span><span class="lnt" id="hl-0-44"><a class="lnlinks" href="#hl-0-44"> 44</a>
+</span><span class="lnt" id="hl-0-45"><a class="lnlinks" href="#hl-0-45"> 45</a>
+</span><span class="lnt" id="hl-0-46"><a class="lnlinks" href="#hl-0-46"> 46</a>
+</span><span class="lnt" id="hl-0-47"><a class="lnlinks" href="#hl-0-47"> 47</a>
+</span><span class="lnt" id="hl-0-48"><a class="lnlinks" href="#hl-0-48"> 48</a>
+</span><span class="lnt" id="hl-0-49"><a class="lnlinks" href="#hl-0-49"> 49</a>
+</span><span class="lnt" id="hl-0-50"><a class="lnlinks" href="#hl-0-50"> 50</a>
+</span><span class="lnt" id="hl-0-51"><a class="lnlinks" href="#hl-0-51"> 51</a>
+</span><span class="lnt" id="hl-0-52"><a class="lnlinks" href="#hl-0-52"> 52</a>
+</span><span class="lnt" id="hl-0-53"><a class="lnlinks" href="#hl-0-53"> 53</a>
+</span><span class="lnt" id="hl-0-54"><a class="lnlinks" href="#hl-0-54"> 54</a>
+</span><span class="lnt" id="hl-0-55"><a class="lnlinks" href="#hl-0-55"> 55</a>
+</span><span class="lnt" id="hl-0-56"><a class="lnlinks" href="#hl-0-56"> 56</a>
+</span><span class="lnt" id="hl-0-57"><a class="lnlinks" href="#hl-0-57"> 57</a>
+</span><span class="lnt" id="hl-0-58"><a class="lnlinks" href="#hl-0-58"> 58</a>
+</span><span class="lnt" id="hl-0-59"><a class="lnlinks" href="#hl-0-59"> 59</a>
+</span><span class="lnt" id="hl-0-60"><a class="lnlinks" href="#hl-0-60"> 60</a>
+</span><span class="lnt" id="hl-0-61"><a class="lnlinks" href="#hl-0-61"> 61</a>
+</span><span class="lnt" id="hl-0-62"><a class="lnlinks" href="#hl-0-62"> 62</a>
+</span><span class="lnt" id="hl-0-63"><a class="lnlinks" href="#hl-0-63"> 63</a>
+</span><span class="lnt" id="hl-0-64"><a class="lnlinks" href="#hl-0-64"> 64</a>
+</span><span class="lnt" id="hl-0-65"><a class="lnlinks" href="#hl-0-65"> 65</a>
+</span><span class="lnt" id="hl-0-66"><a class="lnlinks" href="#hl-0-66"> 66</a>
+</span><span class="lnt" id="hl-0-67"><a class="lnlinks" href="#hl-0-67"> 67</a>
+</span><span class="lnt" id="hl-0-68"><a class="lnlinks" href="#hl-0-68"> 68</a>
+</span><span class="lnt" id="hl-0-69"><a class="lnlinks" href="#hl-0-69"> 69</a>
+</span><span class="lnt" id="hl-0-70"><a class="lnlinks" href="#hl-0-70"> 70</a>
+</span><span class="lnt" id="hl-0-71"><a class="lnlinks" href="#hl-0-71"> 71</a>
+</span><span class="lnt" id="hl-0-72"><a class="lnlinks" href="#hl-0-72"> 72</a>
+</span><span class="lnt" id="hl-0-73"><a class="lnlinks" href="#hl-0-73"> 73</a>
+</span><span class="lnt" id="hl-0-74"><a class="lnlinks" href="#hl-0-74"> 74</a>
+</span><span class="lnt" id="hl-0-75"><a class="lnlinks" href="#hl-0-75"> 75</a>
+</span><span class="lnt" id="hl-0-76"><a class="lnlinks" href="#hl-0-76"> 76</a>
+</span><span class="lnt" id="hl-0-77"><a class="lnlinks" href="#hl-0-77"> 77</a>
+</span><span class="lnt" id="hl-0-78"><a class="lnlinks" href="#hl-0-78"> 78</a>
+</span><span class="lnt" id="hl-0-79"><a class="lnlinks" href="#hl-0-79"> 79</a>
+</span><span class="lnt" id="hl-0-80"><a class="lnlinks" href="#hl-0-80"> 80</a>
+</span><span class="lnt" id="hl-0-81"><a class="lnlinks" href="#hl-0-81"> 81</a>
+</span><span class="lnt" id="hl-0-82"><a class="lnlinks" href="#hl-0-82"> 82</a>
+</span><span class="lnt" id="hl-0-83"><a class="lnlinks" href="#hl-0-83"> 83</a>
+</span><span class="lnt" id="hl-0-84"><a class="lnlinks" href="#hl-0-84"> 84</a>
+</span><span class="lnt" id="hl-0-85"><a class="lnlinks" href="#hl-0-85"> 85</a>
+</span><span class="lnt" id="hl-0-86"><a class="lnlinks" href="#hl-0-86"> 86</a>
+</span><span class="lnt" id="hl-0-87"><a class="lnlinks" href="#hl-0-87"> 87</a>
+</span><span class="lnt" id="hl-0-88"><a class="lnlinks" href="#hl-0-88"> 88</a>
+</span><span class="lnt" id="hl-0-89"><a class="lnlinks" href="#hl-0-89"> 89</a>
+</span><span class="lnt" id="hl-0-90"><a class="lnlinks" href="#hl-0-90"> 90</a>
+</span><span class="lnt" id="hl-0-91"><a class="lnlinks" href="#hl-0-91"> 91</a>
+</span><span class="lnt" id="hl-0-92"><a class="lnlinks" href="#hl-0-92"> 92</a>
+</span><span class="lnt" id="hl-0-93"><a class="lnlinks" href="#hl-0-93"> 93</a>
+</span><span class="lnt" id="hl-0-94"><a class="lnlinks" href="#hl-0-94"> 94</a>
+</span><span class="lnt" id="hl-0-95"><a class="lnlinks" href="#hl-0-95"> 95</a>
+</span><span class="lnt" id="hl-0-96"><a class="lnlinks" href="#hl-0-96"> 96</a>
+</span><span class="lnt" id="hl-0-97"><a class="lnlinks" href="#hl-0-97"> 97</a>
+</span><span class="lnt" id="hl-0-98"><a class="lnlinks" href="#hl-0-98"> 98</a>
+</span><span class="lnt" id="hl-0-99"><a class="lnlinks" href="#hl-0-99"> 99</a>
+</span><span class="lnt" id="hl-0-100"><a class="lnlinks" href="#hl-0-100">100</a>
+</span><span class="lnt" id="hl-0-101"><a class="lnlinks" href="#hl-0-101">101</a>
+</span><span class="lnt" id="hl-0-102"><a class="lnlinks" href="#hl-0-102">102</a>
+</span><span class="lnt" id="hl-0-103"><a class="lnlinks" href="#hl-0-103">103</a>
+</span><span class="lnt" id="hl-0-104"><a class="lnlinks" href="#hl-0-104">104</a>
+</span><span class="lnt" id="hl-0-105"><a class="lnlinks" href="#hl-0-105">105</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">================================
+</span></span></span><span class="line"><span class="cl"><span class="s2">作者：IT小章
+</span></span></span><span class="line"><span class="cl"><span class="s2">博客：itxiaozhang.com
+</span></span></span><span class="line"><span class="cl"><span class="s2">时间：2025年7月13日
+</span></span></span><span class="line"><span class="cl"><span class="s2">Copyright © 2024 IT小章
+</span></span></span><span class="line"><span class="cl"><span class="s2">================================
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">html</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 日志配置</span>
+</span></span><span class="line"><span class="cl"><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(levelname)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">handlers</span><span class="o">=</span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="s2">&#34;hmdb_scraper.log&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&#34;hmdb_scraper&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 会话创建（细节省略）</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_session</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...屏蔽实现...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">session</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 随机User-Agent（细节省略）</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_random_user_agent</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...屏蔽实现...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;User-Agent-Placeholder&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 清理URL</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">clean_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...屏蔽实现...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">url</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取代谢物数据（核心内容已屏蔽）</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_metabolite_data</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">session</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">session</span> <span class="o">=</span> <span class="n">create_session</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="n">clean_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...屏蔽核心爬虫逻辑...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Compound ID&#34;</span><span class="p">:</span> <span class="s2">&#34;HMDBXXXXXXX&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Class&#34;</span><span class="p">:</span> <span class="s2">&#34;屏蔽&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Sub Class&#34;</span><span class="p">:</span> <span class="s2">&#34;屏蔽&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Source&#34;</span><span class="p">:</span> <span class="s2">&#34;屏蔽&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 单个HMID处理函数</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">process_hmid</span><span class="p">(</span><span class="n">hmid</span><span class="p">,</span> <span class="n">hmid_cache</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">retry_failed</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">hmid</span> <span class="ow">in</span> <span class="n">hmid_cache</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">retry_failed</span> <span class="ow">and</span> <span class="s2">&#34;获取失败&#34;</span> <span class="ow">in</span> <span class="n">hmid_cache</span><span class="p">[</span><span class="n">hmid</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;重试失败项: </span><span class="si">{</span><span class="n">hmid</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">hmid_cache</span><span class="p">[</span><span class="n">hmid</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;https://hmdb.ca/metabolites/</span><span class="si">{</span><span class="n">hmid</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">get_metabolite_data</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hmid_cache</span><span class="p">[</span><span class="n">hmid</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span> <span class="ow">or</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Compound ID&#34;</span><span class="p">:</span> <span class="n">hmid</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Class&#34;</span><span class="p">:</span> <span class="s2">&#34;获取失败&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Sub Class&#34;</span><span class="p">:</span> <span class="s2">&#34;获取失败&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Source&#34;</span><span class="p">:</span> <span class="s2">&#34;获取失败&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">hmid_cache</span><span class="p">[</span><span class="n">hmid</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">load_cache</span><span class="p">(</span><span class="n">cache_file</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...屏蔽缓存读取实现...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">save_cache</span><span class="p">(</span><span class="n">cache_data</span><span class="p">,</span> <span class="n">cache_file</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...屏蔽缓存保存实现...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 处理Excel文件（调用逻辑保留）</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">process_excel_files</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">use_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">retry_failed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...屏蔽部分实现，仅保留接口调用结构与日志...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;模拟处理Excel文件...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;模拟完成。&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;HMDB数据爬取工具（公开版本）&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--workers&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--no-cache&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--delay&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--no-retry-failed&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--chunk-size&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;启动爬虫（敏感实现已屏蔽）&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">process_excel_files</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">max_workers</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">workers</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">use_cache</span><span class="o">=</span><span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">no_cache</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">delay</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">delay</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">retry_failed</span><span class="o">=</span><span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">no_retry_failed</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">chunk_size</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">chunk_size</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
+<li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/">网络爬虫</a></li>
+      <li><a href="http://localhost:1313/tags/hmdb/">HMDB</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

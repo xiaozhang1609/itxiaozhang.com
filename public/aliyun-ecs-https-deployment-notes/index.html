@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>阿里云ECS部署HTTPS网站笔记 | IT小章</title>
+<meta name="keywords" content="阿里云, ecs, https, nginx, ssl证书">
+<meta name="description" content="本文记录了在阿里云ECS上部署HTTPS网站的全过程，包括环境准备、网页与证书上传、Nginx配置、验证及常见故障排查。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/aliyun-ecs-https-deployment-notes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/aliyun-ecs-https-deployment-notes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      阿里云ECS部署HTTPS网站笔记
+    </h1>
+    <div class="post-description">
+      本文记录了在阿里云ECS上部署HTTPS网站的全过程，包括环境准备、网页与证书上传、Nginx配置、验证及常见故障排查。
+    </div>
+    <div class="post-meta"><span title='2025-08-26 18:57:46 +0800 CST'>2025年8月26日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/aliyun-ecs-https-deployment-notes/">https://itxiaozhang.com/aliyun-ecs-https-deployment-notes/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="一服务器与环境准备">一、服务器与环境准备<a hidden class="anchor" aria-hidden="true" href="#一服务器与环境准备">#</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7">7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh root@&lt;your-server&gt;   <span class="c1"># 登录服务器</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</span></span><span class="line"><span class="cl">sudo apt install nginx -y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo ufw allow ssh
+</span></span><span class="line"><span class="cl">sudo ufw allow <span class="s1">&#39;Nginx Full&#39;</span>
+</span></span><span class="line"><span class="cl">sudo ufw <span class="nb">enable</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="二上传网页与证书">二、上传网页与证书<a hidden class="anchor" aria-hidden="true" href="#二上传网页与证书">#</a></h2>
+<h3 id="1-新建目录">1. 新建目录<a hidden class="anchor" aria-hidden="true" href="#1-新建目录">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /var/www/html
+</span></span><span class="line"><span class="cl">sudo mkdir -p /etc/nginx/ssl
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-上传文件">2. 上传文件<a hidden class="anchor" aria-hidden="true" href="#2-上传文件">#</a></h3>
+<ul>
+<li>
+<p>使用 <strong>WindTerm</strong> 上传网页文件到 <code>/var/www/html/</code></p>
+</li>
+<li>
+<p>使用 <strong>WindTerm</strong> 上传证书文件到 <code>/etc/nginx/ssl/</code>：</p>
+<ul>
+<li><code>24xiu.cn.pem</code></li>
+<li><code>24xiu.cn.key</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-设置权限">3. 设置权限<a hidden class="anchor" aria-hidden="true" href="#3-设置权限">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod <span class="m">600</span> /etc/nginx/ssl/*
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="三配置-nginx">三、配置 Nginx<a hidden class="anchor" aria-hidden="true" href="#三配置-nginx">#</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span><span class="lnt" id="hl-3-2"><a class="lnlinks" href="#hl-3-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+</span></span><span class="line"><span class="cl">sudo vim /etc/nginx/sites-available/default
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-1"><a class="lnlinks" href="#hl-4-1"> 1</a>
+</span><span class="lnt" id="hl-4-2"><a class="lnlinks" href="#hl-4-2"> 2</a>
+</span><span class="lnt" id="hl-4-3"><a class="lnlinks" href="#hl-4-3"> 3</a>
+</span><span class="lnt" id="hl-4-4"><a class="lnlinks" href="#hl-4-4"> 4</a>
+</span><span class="lnt" id="hl-4-5"><a class="lnlinks" href="#hl-4-5"> 5</a>
+</span><span class="lnt" id="hl-4-6"><a class="lnlinks" href="#hl-4-6"> 6</a>
+</span><span class="lnt" id="hl-4-7"><a class="lnlinks" href="#hl-4-7"> 7</a>
+</span><span class="lnt" id="hl-4-8"><a class="lnlinks" href="#hl-4-8"> 8</a>
+</span><span class="lnt" id="hl-4-9"><a class="lnlinks" href="#hl-4-9"> 9</a>
+</span><span class="lnt" id="hl-4-10"><a class="lnlinks" href="#hl-4-10">10</a>
+</span><span class="lnt" id="hl-4-11"><a class="lnlinks" href="#hl-4-11">11</a>
+</span><span class="lnt" id="hl-4-12"><a class="lnlinks" href="#hl-4-12">12</a>
+</span><span class="lnt" id="hl-4-13"><a class="lnlinks" href="#hl-4-13">13</a>
+</span><span class="lnt" id="hl-4-14"><a class="lnlinks" href="#hl-4-14">14</a>
+</span><span class="lnt" id="hl-4-15"><a class="lnlinks" href="#hl-4-15">15</a>
+</span><span class="lnt" id="hl-4-16"><a class="lnlinks" href="#hl-4-16">16</a>
+</span><span class="lnt" id="hl-4-17"><a class="lnlinks" href="#hl-4-17">17</a>
+</span><span class="lnt" id="hl-4-18"><a class="lnlinks" href="#hl-4-18">18</a>
+</span><span class="lnt" id="hl-4-19"><a class="lnlinks" href="#hl-4-19">19</a>
+</span><span class="lnt" id="hl-4-20"><a class="lnlinks" href="#hl-4-20">20</a>
+</span><span class="lnt" id="hl-4-21"><a class="lnlinks" href="#hl-4-21">21</a>
+</span><span class="lnt" id="hl-4-22"><a class="lnlinks" href="#hl-4-22">22</a>
+</span><span class="lnt" id="hl-4-23"><a class="lnlinks" href="#hl-4-23">23</a>
+</span><span class="lnt" id="hl-4-24"><a class="lnlinks" href="#hl-4-24">24</a>
+</span><span class="lnt" id="hl-4-25"><a class="lnlinks" href="#hl-4-25">25</a>
+</span><span class="lnt" id="hl-4-26"><a class="lnlinks" href="#hl-4-26">26</a>
+</span><span class="lnt" id="hl-4-27"><a class="lnlinks" href="#hl-4-27">27</a>
+</span><span class="lnt" id="hl-4-28"><a class="lnlinks" href="#hl-4-28">28</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="c1"># HTTP → HTTPS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span> <span class="s">24xiu.cn</span> <span class="s">www.24xiu.cn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># HTTPS 配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span> <span class="s">24xiu.cn</span> <span class="s">www.24xiu.cn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_certificate</span> <span class="s">/etc/nginx/ssl/24xiu.cn.pem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_certificate_key</span> <span class="s">/etc/nginx/ssl/24xiu.cn.key</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_protocols</span> <span class="s">TLSv1.2</span> <span class="s">TLSv1.3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_ciphers</span> <span class="s">HIGH:!aNULL:!MD5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">add_header</span> <span class="s">Strict-Transport-Security</span> <span class="s">&#34;max-age=31536000</span><span class="p">;</span> <span class="kn">includeSubDomains&#34;</span> <span class="s">always</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">root</span> <span class="s">/var/www/html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">index</span> <span class="s">index.html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="四验证">四、验证<a hidden class="anchor" aria-hidden="true" href="#四验证">#</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-5-1"><a class="lnlinks" href="#hl-5-1">1</a>
+</span><span class="lnt" id="hl-5-2"><a class="lnlinks" href="#hl-5-2">2</a>
+</span><span class="lnt" id="hl-5-3"><a class="lnlinks" href="#hl-5-3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nginx -t
+</span></span><span class="line"><span class="cl">sudo systemctl restart nginx
+</span></span><span class="line"><span class="cl">curl -I https://24xiu.cn
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="五常见排查要点">五、常见排查要点<a hidden class="anchor" aria-hidden="true" href="#五常见排查要点">#</a></h2>
+<ol>
+<li>
+<p><strong>Nginx 状态</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-6-1"><a class="lnlinks" href="#hl-6-1">1</a>
+</span><span class="lnt" id="hl-6-2"><a class="lnlinks" href="#hl-6-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nginx -t
+</span></span><span class="line"><span class="cl">systemctl status nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>证书有效性</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-7-1"><a class="lnlinks" href="#hl-7-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl x509 -in /etc/nginx/ssl/24xiu.cn.pem -noout -dates
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>安全组</strong>
+确认放行：</p>
+<ul>
+<li>TCP 22</li>
+<li>TCP 80</li>
+<li>TCP 443</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="六后续维护">六、后续维护<a hidden class="anchor" aria-hidden="true" href="#六后续维护">#</a></h2>
+<ul>
+<li>证书到期后，在阿里云控制台续签并下载新证书（本次过期时间：2025-11-24）</li>
+<li>覆盖 <code>/etc/nginx/ssl/24xiu.cn.pem</code> 和 <code>/etc/nginx/ssl/24xiu.cn.key</code></li>
+<li>重启 Nginx <code>sudo systemctl restart nginx</code></li>
+</ul>
+<h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
+<li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">阿里云</a></li>
+      <li><a href="http://localhost:1313/tags/ecs/">Ecs</a></li>
+      <li><a href="http://localhost:1313/tags/https/">Https</a></li>
+      <li><a href="http://localhost:1313/tags/nginx/">Nginx</a></li>
+      <li><a href="http://localhost:1313/tags/ssl%E8%AF%81%E4%B9%A6/">Ssl证书</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rainmeter on IT小章</title>
+    <link>http://localhost:1313/tags/rainmeter/</link>
+    <description>Recent content in Rainmeter on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 15 Aug 2025 15:00:59 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/rainmeter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows桌面美化教程</title>
+      <link>http://localhost:1313/windows-desktop-customization-translucenttb-nexus-rainmeter/</link>
+      <pubDate>Fri, 15 Aug 2025 15:00:59 +0800</pubDate>
+      <guid>http://localhost:1313/windows-desktop-customization-translucenttb-nexus-rainmeter/</guid>
+      <description>本教程介绍如何使用translucentTB、Nexus和Rainmeter三款工具，让Windows桌面实现任务栏透明、添加Dock栏及个性化时间音乐条。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bitlocker on IT小章</title>
+    <link>http://localhost:1313/tags/bitlocker/</link>
+    <description>Recent content in Bitlocker on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Sep 2025 13:37:33 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bitlocker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Win10/11 系统磁盘被 BitLocker 加密，无法解密</title>
+      <link>http://localhost:1313/win10-11-bitlocker-disk-cannot-decrypt/</link>
+      <pubDate>Tue, 02 Sep 2025 13:37:33 +0800</pubDate>
+      <guid>http://localhost:1313/win10-11-bitlocker-disk-cannot-decrypt/</guid>
+      <description>Windows 10/11 系统磁盘启用 BitLocker 后加密暂停导致无法解密，本文提供管理员命令操作步骤，恢复加密并完成解密。</description>
+    </item>
+    <item>
+      <title>关闭代理软件后无法打开网页？解决方法在这里！</title>
+      <link>http://localhost:1313/fix-proxy-webpage-issues/</link>
+      <pubDate>Fri, 19 Apr 2024 15:32:05 +0800</pubDate>
+      <guid>http://localhost:1313/fix-proxy-webpage-issues/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/fix-proxy-webpage-issues/&#34;&gt;https://itxiaozhang.com/fix-proxy-webpage-issues/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文首发于：&lt;a href=&#34;https://itxiaozhang.com/fix-proxy-webpage-issues/&#34;&gt;https://itxiaozhang.com/fix-proxy-webpage-issues/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;问题概述&#34;&gt;问题概述&lt;/h2&gt;
+&lt;p&gt;电脑开启了代理，忘记关闭导致无法打开网页，但仍能使用QQ和微信。如何解决这个问题？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>BitLocker磁盘解密和关闭教程</title>
+      <link>http://localhost:1313/bitlocker-key-recovery-deactivation/</link>
+      <pubDate>Sat, 30 Mar 2024 21:09:01 +0800</pubDate>
+      <guid>http://localhost:1313/bitlocker-key-recovery-deactivation/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/bitlocker-key-recovery-deactivation/&#34;&gt;https://itxiaozhang.com/bitlocker-key-recovery-deactivation/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-什么是bitlocker&#34;&gt;1. 什么是BitLocker？&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;BitLocker&lt;/strong&gt; 是微软推出的一个磁盘分区加密方案。它首次出现在 Windows Vista 中，是一种数据保护功能，主要用于防止因计算机设备丢失而导致的数据泄露或被窃。一旦加密，若无密钥，即使是微软本身也无法破解，因此它提供了强大的数据安全保护。但同时，如果忘记或丢失密钥，可能会导致数据无法访问。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>默认输入法全角和半角切换 Win10 / Win11</title>
+      <link>http://localhost:1313/switch-full-half-angle-win10-win11/</link>
+      <pubDate>Sat, 23 Mar 2024 21:09:01 +0800</pubDate>
+      <guid>http://localhost:1313/switch-full-half-angle-win10-win11/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/switch-full-half-angle-win10-win11/&#34;&gt;https://itxiaozhang.com/switch-full-half-angle-win10-win11/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文首发于：&lt;a href=&#34;https://itxiaozhang.com/switch-full-half-angle-win10-win11/&#34;&gt;https://itxiaozhang.com/switch-full-half-angle-win10-win11/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
+&lt;p&gt;在使用Windows 10操作系统时，可能会遇到英文输入法突然从半角模式变为全角模式，表现为英文字符间距加大，不符合英文排版惯例。&lt;/p&gt;
+&lt;h2 id=&#34;发生原因&#34;&gt;发生原因&lt;/h2&gt;
+&lt;p&gt;这种情况通常源自误触键盘上的&lt;code&gt;Shift + 空格&lt;/code&gt;快捷键，这一组合键在很多输入法中用于在全角和半角模式之间切换。然而，若系统中该快捷键功能被关闭或失效，则会导致无法轻易地通过快捷键恢复到半角英文输入。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

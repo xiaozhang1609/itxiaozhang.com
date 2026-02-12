@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>共享文件夹 on IT小章</title>
+    <link>http://localhost:1313/tags/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/</link>
+    <description>Recent content in 共享文件夹 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 21 Nov 2024 13:38:48 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 10 局域网共享文件夹设置教程</title>
+      <link>http://localhost:1313/windows-10-local-network-shared-folder-setup-guide/</link>
+      <pubDate>Thu, 21 Nov 2024 13:38:48 +0800</pubDate>
+      <guid>http://localhost:1313/windows-10-local-network-shared-folder-setup-guide/</guid>
+      <description>本问介绍如何在多台Windows 10计算机上设置局域网共享文件夹，包括准备工作、启用网络发现和文件共享、设置共享文件夹以及解决账户锁定问题的步骤。</description>
+    </item>
+  </channel>
+</rss>

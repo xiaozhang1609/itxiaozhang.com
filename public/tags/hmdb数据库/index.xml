@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hmdb数据库 on IT小章</title>
+    <link>http://localhost:1313/tags/hmdb%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in Hmdb数据库 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 27 Dec 2025 20:53:32 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hmdb%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自动抓取 HMDB 外源性代谢物食物来源工具</title>
+      <link>http://localhost:1313/auto-hmdb-exogenous-metabolite-food-source/</link>
+      <pubDate>Sat, 27 Dec 2025 20:53:32 +0800</pubDate>
+      <guid>http://localhost:1313/auto-hmdb-exogenous-metabolite-food-source/</guid>
+      <description>自动化抓取 HMDB 数据库中代谢物外源性来源，生成 CSV，便于科研与食物-代谢物关联分析。</description>
+    </item>
+    <item>
+      <title>HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</title>
+      <link>http://localhost:1313/hmdb-metabolite-batch-extraction-tool/</link>
+      <pubDate>Thu, 15 May 2025 10:38:01 +0800</pubDate>
+      <guid>http://localhost:1313/hmdb-metabolite-batch-extraction-tool/</guid>
+      <description>这是一款专为代谢组学研究设计的Python自动化工具，能够从HMDB数据库批量获取代谢物信息，包括物质分类、组织定位和相关数据库ID等关键信息，大幅提升数据收集效率。</description>
+    </item>
+    <item>
+      <title>利用Python从HMDB数据库批量提取质谱数据中的化合物信息</title>
+      <link>http://localhost:1313/python-hmdb-mass-spectrometry-compound-extraction/</link>
+      <pubDate>Thu, 08 May 2025 15:11:58 +0800</pubDate>
+      <guid>http://localhost:1313/python-hmdb-mass-spectrometry-compound-extraction/</guid>
+      <description>本工具通过Python脚本，利用质谱数据中的质量数，从HMDB数据库批量提取化合物信息，包括HMDB ID、常用名称、化学式及结构图片，并将结果导出为CSV文件，极大提升代谢物注释效率。</description>
+    </item>
+  </channel>
+</rss>

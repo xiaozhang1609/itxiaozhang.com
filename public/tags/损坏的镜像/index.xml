@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>损坏的镜像 on IT小章</title>
+    <link>http://localhost:1313/tags/%E6%8D%9F%E5%9D%8F%E7%9A%84%E9%95%9C%E5%83%8F/</link>
+    <description>Recent content in 损坏的镜像 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 Aug 2025 09:34:40 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%8D%9F%E5%9D%8F%E7%9A%84%E9%95%9C%E5%83%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WeGame 多开卡死与「损坏的镜像」报错解决方法</title>
+      <link>http://localhost:1313/wegame-multiclient-crash-damaged-image-fix/</link>
+      <pubDate>Wed, 27 Aug 2025 09:34:40 +0800</pubDate>
+      <guid>http://localhost:1313/wegame-multiclient-crash-damaged-image-fix/</guid>
+      <description>本文介绍了 WeGame 常见的两个问题：「TASLogin Application（32位）」导致的多开卡死，以及启动时报错「损坏的镜像」的原因与解决步骤，帮助用户快速恢复正常使用。</description>
+    </item>
+  </channel>
+</rss>

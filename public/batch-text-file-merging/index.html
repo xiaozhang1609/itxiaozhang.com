@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>批量文本文件合并 | IT小章</title>
+<meta name="keywords" content="python, 脚本">
+<meta name="description" content="
+原文地址：https://itxiaozhang.com/batch-text-file-merging/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+
+场景
+假设我们有一个项目文件夹 documents，其中包含了多个子文件夹，每个子文件夹中都存放着我们需要合并的文本文件。我们想要将这些文本文件合并为一个单独的文件，以便于后续的查阅和分析。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/batch-text-file-merging/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/batch-text-file-merging/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      批量文本文件合并
+    </h1>
+    <div class="post-meta"><span title='2024-03-23 15:42:06 +0800 CST'>2024年3月23日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/batch-text-file-merging/">https://itxiaozhang.com/batch-text-file-merging/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="场景">场景<a hidden class="anchor" aria-hidden="true" href="#场景">#</a></h2>
+<p>假设我们有一个项目文件夹 <code>documents</code>，其中包含了多个子文件夹，每个子文件夹中都存放着我们需要合并的文本文件。我们想要将这些文本文件合并为一个单独的文件，以便于后续的查阅和分析。</p>
+<h2 id="功能">功能<a hidden class="anchor" aria-hidden="true" href="#功能">#</a></h2>
+<ul>
+<li>
+<p><strong>自动合并文本文件：</strong> 该工具能够自动合并指定文件夹中的所有Markdown（.md）和txt格式的文本文件，无需手动逐个文件进行合并操作。</p>
+</li>
+<li>
+<p><strong>自动排序：</strong> 在合并过程中，工具会按照文本文件的创建时间对其进行排序，以确保合并后的内容顺序正确，避免错乱。</p>
+</li>
+<li>
+<p><strong>输出文件保存：</strong> 合并后的文本内容将保存到一个输出文件中，方便查阅和使用。</p>
+</li>
+</ul>
+<h2 id="示例">示例<a hidden class="anchor" aria-hidden="true" href="#示例">#</a></h2>
+<ol>
+<li>
+<p><strong>准备文件夹：</strong> 在您的计算机上创建一个名为 <code>documents</code> 的文件夹，然后在其中创建多个子文件夹，每个子文件夹中存放着需要合并的文本文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7">7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">documents/
+</span></span><span class="line"><span class="cl">├── folder1/
+</span></span><span class="line"><span class="cl">│   ├── report1.md
+</span></span><span class="line"><span class="cl">│   └── notes1.txt
+</span></span><span class="line"><span class="cl">├── folder2/
+</span></span><span class="line"><span class="cl">│   ├── report2.md
+</span></span><span class="line"><span class="cl">│   └── notes2.txt
+</span></span><span class="line"><span class="cl">└── merge_text_files.py
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>运行脚本：</strong> 打开命令行界面（Command Prompt或Terminal），导航到包含 <code>merge_text_files.py</code> 脚本文件的目录。</p>
+</li>
+<li>
+<p><strong>执行合并操作：</strong> 在命令行中运行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">python merge_text_files.py
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查看结果：</strong> 脚本会开始合并文本文件，并在完成后显示合并结果的信息。合并后的结果将保存在与每个子文件夹同名的输出文件中，例如 <code>folder1.txt</code> 和 <code>folder2.txt</code>。</p>
+</li>
+</ol>
+<h2 id="代码">代码<a hidden class="anchor" aria-hidden="true" href="#代码">#</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1"> 1</a>
+</span><span class="lnt" id="hl-2-2"><a class="lnlinks" href="#hl-2-2"> 2</a>
+</span><span class="lnt" id="hl-2-3"><a class="lnlinks" href="#hl-2-3"> 3</a>
+</span><span class="lnt" id="hl-2-4"><a class="lnlinks" href="#hl-2-4"> 4</a>
+</span><span class="lnt" id="hl-2-5"><a class="lnlinks" href="#hl-2-5"> 5</a>
+</span><span class="lnt" id="hl-2-6"><a class="lnlinks" href="#hl-2-6"> 6</a>
+</span><span class="lnt" id="hl-2-7"><a class="lnlinks" href="#hl-2-7"> 7</a>
+</span><span class="lnt" id="hl-2-8"><a class="lnlinks" href="#hl-2-8"> 8</a>
+</span><span class="lnt" id="hl-2-9"><a class="lnlinks" href="#hl-2-9"> 9</a>
+</span><span class="lnt" id="hl-2-10"><a class="lnlinks" href="#hl-2-10">10</a>
+</span><span class="lnt" id="hl-2-11"><a class="lnlinks" href="#hl-2-11">11</a>
+</span><span class="lnt" id="hl-2-12"><a class="lnlinks" href="#hl-2-12">12</a>
+</span><span class="lnt" id="hl-2-13"><a class="lnlinks" href="#hl-2-13">13</a>
+</span><span class="lnt" id="hl-2-14"><a class="lnlinks" href="#hl-2-14">14</a>
+</span><span class="lnt" id="hl-2-15"><a class="lnlinks" href="#hl-2-15">15</a>
+</span><span class="lnt" id="hl-2-16"><a class="lnlinks" href="#hl-2-16">16</a>
+</span><span class="lnt" id="hl-2-17"><a class="lnlinks" href="#hl-2-17">17</a>
+</span><span class="lnt" id="hl-2-18"><a class="lnlinks" href="#hl-2-18">18</a>
+</span><span class="lnt" id="hl-2-19"><a class="lnlinks" href="#hl-2-19">19</a>
+</span><span class="lnt" id="hl-2-20"><a class="lnlinks" href="#hl-2-20">20</a>
+</span><span class="lnt" id="hl-2-21"><a class="lnlinks" href="#hl-2-21">21</a>
+</span><span class="lnt" id="hl-2-22"><a class="lnlinks" href="#hl-2-22">22</a>
+</span><span class="lnt" id="hl-2-23"><a class="lnlinks" href="#hl-2-23">23</a>
+</span><span class="lnt" id="hl-2-24"><a class="lnlinks" href="#hl-2-24">24</a>
+</span><span class="lnt" id="hl-2-25"><a class="lnlinks" href="#hl-2-25">25</a>
+</span><span class="lnt" id="hl-2-26"><a class="lnlinks" href="#hl-2-26">26</a>
+</span><span class="lnt" id="hl-2-27"><a class="lnlinks" href="#hl-2-27">27</a>
+</span><span class="lnt" id="hl-2-28"><a class="lnlinks" href="#hl-2-28">28</a>
+</span><span class="lnt" id="hl-2-29"><a class="lnlinks" href="#hl-2-29">29</a>
+</span><span class="lnt" id="hl-2-30"><a class="lnlinks" href="#hl-2-30">30</a>
+</span><span class="lnt" id="hl-2-31"><a class="lnlinks" href="#hl-2-31">31</a>
+</span><span class="lnt" id="hl-2-32"><a class="lnlinks" href="#hl-2-32">32</a>
+</span><span class="lnt" id="hl-2-33"><a class="lnlinks" href="#hl-2-33">33</a>
+</span><span class="lnt" id="hl-2-34"><a class="lnlinks" href="#hl-2-34">34</a>
+</span><span class="lnt" id="hl-2-35"><a class="lnlinks" href="#hl-2-35">35</a>
+</span><span class="lnt" id="hl-2-36"><a class="lnlinks" href="#hl-2-36">36</a>
+</span><span class="lnt" id="hl-2-37"><a class="lnlinks" href="#hl-2-37">37</a>
+</span><span class="lnt" id="hl-2-38"><a class="lnlinks" href="#hl-2-38">38</a>
+</span><span class="lnt" id="hl-2-39"><a class="lnlinks" href="#hl-2-39">39</a>
+</span><span class="lnt" id="hl-2-40"><a class="lnlinks" href="#hl-2-40">40</a>
+</span><span class="lnt" id="hl-2-41"><a class="lnlinks" href="#hl-2-41">41</a>
+</span><span class="lnt" id="hl-2-42"><a class="lnlinks" href="#hl-2-42">42</a>
+</span><span class="lnt" id="hl-2-43"><a class="lnlinks" href="#hl-2-43">43</a>
+</span><span class="lnt" id="hl-2-44"><a class="lnlinks" href="#hl-2-44">44</a>
+</span><span class="lnt" id="hl-2-45"><a class="lnlinks" href="#hl-2-45">45</a>
+</span><span class="lnt" id="hl-2-46"><a class="lnlinks" href="#hl-2-46">46</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import os
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def get_sorted_text_files(folder_path):
+</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">    获取指定文件夹中的所有文本文件（包括Markdown和txt文件），并按照创建时间排序。
+</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">    text_files = []
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    try:
+</span></span><span class="line"><span class="cl">        # 遍历文件夹，找到所有文本文件
+</span></span><span class="line"><span class="cl">        for root, dirs, files in os.walk(folder_path):
+</span></span><span class="line"><span class="cl">            for file in files:
+</span></span><span class="line"><span class="cl">                if file.endswith(&#34;.md&#34;) or file.endswith(&#34;.txt&#34;):
+</span></span><span class="line"><span class="cl">                    file_path = os.path.join(root, file)
+</span></span><span class="line"><span class="cl">                    file_stat = os.stat(file_path)
+</span></span><span class="line"><span class="cl">                    text_files.append((file_path, file_stat.st_mtime))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 按文件创建时间排序
+</span></span><span class="line"><span class="cl">        text_files.sort(key=lambda x: x[1])
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    except FileNotFoundError:
+</span></span><span class="line"><span class="cl">        print(&#34;错误: 指定的文件夹路径不存在，请检查路径是否正确。&#34;)
+</span></span><span class="line"><span class="cl">    except PermissionError:
+</span></span><span class="line"><span class="cl">        print(&#34;错误: 无权限访问指定的文件夹，请检查文件夹权限。&#34;)
+</span></span><span class="line"><span class="cl">    except Exception as e:
+</span></span><span class="line"><span class="cl">        print(f&#34;错误: 获取文本文件时发生错误: {str(e)}&#34;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    return text_files
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def merge_text_files_to_output(folder_path, output_file):
+</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">    合并指定文件夹中的所有文本文件，并将结果保存到输出文件中。
+</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">    try:
+</span></span><span class="line"><span class="cl">        # 获取排序后的文本文件列表
+</span></span><span class="line"><span class="cl">        text_files = get_sorted_text_files(folder_path)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 合并文件
+</span></span><span class="line"><span class="cl">        with open(output_file, &#39;w&#39;, en编程案例=&#39;utf-8&#39;) as output:
+</span></span><span class="line"><span class="cl">            for text_file, _ in text_files:
+</span></span><span class="line"><span class="cl">                with open(text_file, &#39;r&#39;, en编程案例=&#39;utf-8&#39;) as f:
+</span></span><span class="line"><span class="cl">                    output.write(f.read())
+</span></span><span class="line"><span class="cl">                    output.write(&#39;\n\n&#39;)  # 添加换行符区分不同文件内容
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        print(f&#34;合并完成，合并后的文件保存为: {output_file}&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%84%9A%E6%9C%AC/">脚本</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

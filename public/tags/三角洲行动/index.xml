@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>三角洲行动 on IT小章</title>
+    <link>http://localhost:1313/tags/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8/</link>
+    <description>Recent content in 三角洲行动 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 Feb 2026 10:54:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E4%B8%89%E8%A7%92%E6%B4%B2%E8%A1%8C%E5%8A%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>三角洲行动启动报错ACE安全组件运行时发生异常1 0 0解决方法</title>
+      <link>http://localhost:1313/fix-delta-force-ace-anticheat-error-1-0-0/</link>
+      <pubDate>Tue, 10 Feb 2026 10:54:00 +0800</pubDate>
+      <guid>http://localhost:1313/fix-delta-force-ace-anticheat-error-1-0-0/</guid>
+      <description>打开《三角洲行动》时弹出“ACE 安全中心：游戏安全组件运行时发生异常，请关闭不必要的软件或其他游戏，或重启机器后再试(1-0-0)”导致无法启动。</description>
+    </item>
+    <item>
+      <title>三角洲行动着色器预热阶段闪退怎么办？</title>
+      <link>http://localhost:1313/how-to-fix-delta-force-crash-during-shader-preheating/</link>
+      <pubDate>Fri, 06 Feb 2026 09:29:18 +0800</pubDate>
+      <guid>http://localhost:1313/how-to-fix-delta-force-crash-during-shader-preheating/</guid>
+      <description>启动《三角洲行动》后，在着色器预热阶段进度运行至2%时程序直接闪退。日志中连续出现4条与显卡相关报错信息。重装系统后问题依旧存在，无法进入游戏主界面。</description>
+    </item>
+    <item>
+      <title>三角洲行动启动器登录组件报错1067104怎么办</title>
+      <link>http://localhost:1313/delta-force-launcher-login-component-error-1067104-fix/</link>
+      <pubDate>Sat, 24 Jan 2026 09:19:50 +0800</pubDate>
+      <guid>http://localhost:1313/delta-force-launcher-login-component-error-1067104-fix/</guid>
+      <description>打开《三角洲行动》时提示：因启动器登录组件报错，游戏被强制关闭。错误码:1067104。游戏无法正常进入。</description>
+    </item>
+    <item>
+      <title>三角洲行动着色器预热阶段显存不足报错解决方法</title>
+      <link>http://localhost:1313/delta-force-out-of-video-memory-shader-preload-fix/</link>
+      <pubDate>Sun, 28 Dec 2025 10:39:00 +0800</pubDate>
+      <guid>http://localhost:1313/delta-force-out-of-video-memory-shader-preload-fix/</guid>
+      <description>启动《三角洲行动》时在着色器预热阶段出现显存不足报错，主要与显卡驱动、虚拟内存配置、系统服务冲突及部分 CPU 高频状态有关。</description>
+    </item>
+    <item>
+      <title>游戏安全系统检测到非法劫持模块怎么办？</title>
+      <link>http://localhost:1313/delta-force-illegal-module-sguardagent64-dll-fix/</link>
+      <pubDate>Sun, 14 Dec 2025 10:02:26 +0800</pubDate>
+      <guid>http://localhost:1313/delta-force-illegal-module-sguardagent64-dll-fix/</guid>
+      <description>本文针对玩家启动《三角洲行动》时遇到的「游戏安全系统检测到非法劫持模块」警告，提供了详细且系统的解决方案。</description>
+    </item>
+    <item>
+      <title>三角洲行动提示显存不足怎么办？</title>
+      <link>http://localhost:1313/delta-force-out-of-video-memory-solution/</link>
+      <pubDate>Thu, 27 Nov 2025 12:10:51 +0800</pubDate>
+      <guid>http://localhost:1313/delta-force-out-of-video-memory-solution/</guid>
+      <description>本文针对三角洲行动出现「Out of video memory…」及 GPU 占用异常偏高的问题，整理显卡驱动、虚拟内存及系统资源占用等原因，并提供完整操作步骤，帮助快速恢复显卡状态并顺利进入游戏。</description>
+    </item>
+    <item>
+      <title>三角洲行动锁帧6FPS？帧率优化案例</title>
+      <link>http://localhost:1313/operation-delta-fps-case-study/</link>
+      <pubDate>Fri, 03 Oct 2025 10:47:41 +0800</pubDate>
+      <guid>http://localhost:1313/operation-delta-fps-case-study/</guid>
+      <description>本文通过实际案例展示《三角洲行动》帧率从6FPS提升至约190FPS的全过程，涵盖驱动更新、运行库安装、显卡与系统优化、游戏设置调整及散热改进。</description>
+    </item>
+    <item>
+      <title>三角洲行动鼠标点不中菜单的解决办法</title>
+      <link>http://localhost:1313/delta-force-mouse-click-wrong-position-fix/</link>
+      <pubDate>Wed, 24 Sep 2025 09:12:44 +0800</pubDate>
+      <guid>http://localhost:1313/delta-force-mouse-click-wrong-position-fix/</guid>
+      <description>在玩「三角洲行动」时，常会遇到鼠标指到按钮却点不中，需要下移才能点到的情况。这通常是分辨率设置不一致导致的，调整分辨率后即可恢复正常。</description>
+    </item>
+    <item>
+      <title>港澳台玩家启动国服三角洲行动报错「ACE安全中心：您的電腦未開啟或有其他軟體佔用CPU虛擬化功能」</title>
+      <link>http://localhost:1313/delta-operations-ace-security-center-cpu-virtualization-error-hk-tw-cn/</link>
+      <pubDate>Sat, 02 Aug 2025 15:45:51 +0800</pubDate>
+      <guid>http://localhost:1313/delta-operations-ace-security-center-cpu-virtualization-error-hk-tw-cn/</guid>
+      <description>本文针对港澳台玩家在国服《三角洲行动》遇到的ACE安全中心及CPU虚拟化报错问题，分析原因并详细介绍“二次重启法”及BIOS设置，帮助解决反作弊加载失败和虚拟化冲突，保证游戏顺利运行。</description>
+    </item>
+    <item>
+      <title>三角洲行动 ACE安全中心报错(1-0-0)：游戏安全组件运行时发生异常</title>
+      <link>http://localhost:1313/delta-action-ace-security-center-error-1-0-0/</link>
+      <pubDate>Sat, 12 Jul 2025 13:48:09 +0800</pubDate>
+      <guid>http://localhost:1313/delta-action-ace-security-center-error-1-0-0/</guid>
+      <description>本文针对《三角洲行动》启动时出现“游戏安全组件运行时发生异常 (1-0-0)”错误，分析可能原因并提供禁用异常服务、修复系统文件、清理残留、查杀病毒及重装组件的循序渐进解决方案。</description>
+    </item>
+    <item>
+      <title>Steam版《三角洲行动》启动报错：Plugin &#39;INTLSDK&#39; failed to load</title>
+      <link>http://localhost:1313/fix-delta-force-plugin-intlsdk-module-intlcore-error/</link>
+      <pubDate>Sun, 11 May 2025 09:53:08 +0800</pubDate>
+      <guid>http://localhost:1313/fix-delta-force-plugin-intlsdk-module-intlcore-error/</guid>
+      <description>本文针对Steam版《三角洲行动》启动时报错「Plugin &amp;#39;INTLSDK&amp;#39; failed to load because module &amp;#39;INTLCore&amp;#39; could not be found」的问题，分析其原因并提供详细的解决步骤，帮助用户恢复游戏正常运行。</description>
+    </item>
+    <item>
+      <title>三角洲行动报错处理：加载 xapofx1_5.dll 失败</title>
+      <link>http://localhost:1313/fix-delta-force-xapofx1_5-dll-error/</link>
+      <pubDate>Mon, 03 Mar 2025 09:24:55 +0800</pubDate>
+      <guid>http://localhost:1313/fix-delta-force-xapofx1_5-dll-error/</guid>
+      <description>运行《三角洲行动》时，可能遇到“加载 xapofx1_5.dll 失败，该文件缺失或损坏”的错误。这通常是由于 DirectX 组件缺失或损坏导致的。本文将分析该问题的原因，并提供详细的修复步骤，帮助用户顺利解决问题。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ipv6 on IT小章</title>
+    <link>http://localhost:1313/tags/ipv6/</link>
+    <description>Recent content in Ipv6 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 13 Aug 2025 21:46:03 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ipv6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WeGame 登录报错：「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」快速排查与修复</title>
+      <link>http://localhost:1313/wegame-login-timeout-7610001-fix/</link>
+      <pubDate>Wed, 13 Aug 2025 21:46:03 +0800</pubDate>
+      <guid>http://localhost:1313/wegame-login-timeout-7610001-fix/</guid>
+      <description>WeGame 登录时报「登录超时，请检查您的网络或者本机防火墙设置。错误码：7610001」。建议依次排查：临时关闭防火墙并放行WeGame、卸载可疑第三方安全/网络控制软件、禁用IPv6并更换DNS（如8.8.8.8）、刷新DNS并运行客户端修复程序，通常可恢复登录。</description>
+    </item>
+  </channel>
+</rss>

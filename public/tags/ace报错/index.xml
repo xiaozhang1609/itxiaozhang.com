@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ace报错 on IT小章</title>
+    <link>http://localhost:1313/tags/ace%E6%8A%A5%E9%94%99/</link>
+    <description>Recent content in Ace报错 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 09 Dec 2024 21:20:11 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ace%E6%8A%A5%E9%94%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ACE安全中心报错怎么办？试试我总结的「二次重启法」！</title>
+      <link>http://localhost:1313/how-to-fix-ace-security-center-error-double-restart-method/</link>
+      <pubDate>Mon, 09 Dec 2024 21:20:11 +0800</pubDate>
+      <guid>http://localhost:1313/how-to-fix-ace-security-center-error-double-restart-method/</guid>
+      <description>玩无畏契约或者其他腾讯代理的游戏时，可能会遇到以下报错信息：&amp;#34;ACE安全中心[]游戏安全组件运行时发生异常，请关闭不必要的软件或其他游戏，或重启机器后再试()&amp;#34;。此问题通常与ACE防作弊组件的冲突或加载失败有关，通过“二次重启法”可以有效修复。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>代谢组学工具 on IT小章</title>
+    <link>http://localhost:1313/tags/%E4%BB%A3%E8%B0%A2%E7%BB%84%E5%AD%A6%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 代谢组学工具 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 15 Sep 2025 09:31:16 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E4%BB%A3%E8%B0%A2%E7%BB%84%E5%AD%A6%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HMDB代谢物信息批量获取工具：支持PPM误差计算的Python代谢组学数据提取解决方案</title>
+      <link>http://localhost:1313/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/</link>
+      <pubDate>Mon, 15 Sep 2025 09:31:16 +0800</pubDate>
+      <guid>http://localhost:1313/hmdb-metabolite-batch-extractor-python-tool-with-ppm-error-calculation/</guid>
+      <description>文介绍了一个专业的HMDB代谢物信息批量获取工具，该工具支持双离子模式、灵活的Da/PPM误差计算、智能缓存机制和并发处理。通过Python实现，具备企业级稳定性和用户友好的配置界面，为代谢组学研究提供高效的数据获取和代谢物注释解决方案，显著提升科研效率。</description>
+    </item>
+    <item>
+      <title>HMDB代谢物信息一键批量获取工具：快速获取代谢组学数据</title>
+      <link>http://localhost:1313/hmdb-metabolite-batch-extraction-tool/</link>
+      <pubDate>Thu, 15 May 2025 10:38:01 +0800</pubDate>
+      <guid>http://localhost:1313/hmdb-metabolite-batch-extraction-tool/</guid>
+      <description>这是一款专为代谢组学研究设计的Python自动化工具，能够从HMDB数据库批量获取代谢物信息，包括物质分类、组织定位和相关数据库ID等关键信息，大幅提升数据收集效率。</description>
+    </item>
+  </channel>
+</rss>

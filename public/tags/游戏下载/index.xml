@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>游戏下载 on IT小章</title>
+    <link>http://localhost:1313/tags/%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD/</link>
+    <description>Recent content in 游戏下载 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 18 Jan 2026 11:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《逆战：未来》下载安装与配置全攻略</title>
+      <link>http://localhost:1313/nz-future-download-installation-and-config-guide/</link>
+      <pubDate>Sun, 18 Jan 2026 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/nz-future-download-installation-and-config-guide/</guid>
+      <description>本文为《逆战：未来》玩家提供全方位的配置核验指南与下载教学，涵盖PC端（WeGame/官网直装）及移动端详细参数。</description>
+    </item>
+    <item>
+      <title>Roblox 下载安装教程</title>
+      <link>http://localhost:1313/roblox-download-installation-guide/</link>
+      <pubDate>Tue, 20 May 2025 21:27:43 +0800</pubDate>
+      <guid>http://localhost:1313/roblox-download-installation-guide/</guid>
+      <description>本文介绍了在 Windows 系统上通过两种方式下载安装 Roblox 客户端的方法，包括通过官网点击游戏触发安装和直接访问下载页面，帮助新用户顺利开始游戏体验。</description>
+    </item>
+  </channel>
+</rss>

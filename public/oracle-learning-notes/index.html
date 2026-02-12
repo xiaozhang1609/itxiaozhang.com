@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>ORACLE学习笔记 | IT小章</title>
+<meta name="keywords" content="oracle">
+<meta name="description" content="
+原文地址：https://itxiaozhang.com/oracle-learning-notes/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+
+重要概念
+
+数据库：侧重于物理存储（硬件），一些数据文件。 实例：侧重于线程或者进程，一套硬件上可以运行多个实例，一般运行一个实例。 用户：Oracle中管理表的基本单位是用户（某用户下有几张表），MySQL中管理表的基本单位是数据库（当前数据库下有几张表）。 表空间：逻辑单位，当数据库很大不便于管理时，把数据库分成很多块，名为表空间 数据文件：存储dbf、ora文件
+">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/oracle-learning-notes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/oracle-learning-notes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      ORACLE学习笔记
+    </h1>
+    <div class="post-meta"><span title='2024-03-23 15:42:06 +0800 CST'>2024年3月23日</span>&nbsp;·&nbsp;<span>7 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/oracle-learning-notes/">https://itxiaozhang.com/oracle-learning-notes/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h3 id="重要概念">重要概念<a hidden class="anchor" aria-hidden="true" href="#重要概念">#</a></h3>
+<blockquote>
+<p>数据库：侧重于物理存储（硬件），一些数据文件。 实例：侧重于线程或者进程，一套硬件上可以运行多个实例，一般运行一个实例。 用户：Oracle中管理表的基本单位是用户（某用户下有几张表），MySQL中管理表的基本单位是数据库（当前数据库下有几张表）。 表空间：逻辑单位，当数据库很大不便于管理时，把数据库分成很多块，名为表空间 数据文件：存储dbf、ora文件</p>
+</blockquote>
+<h3 id="创建删除表空间">创建、删除表空间<a hidden class="anchor" aria-hidden="true" href="#创建删除表空间">#</a></h3>
+<p>前提：超级管理员权限用户才能创建表空间，如system。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7">7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8">8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--创建名为test1的表空间，指定路径，指定大小，指定每次扩容的大小
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="n">test_tablespace</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">datafile</span><span class="w"> </span><span class="s1">&#39;数据库服务器目录\test_tablespace.dbf&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">size</span><span class="w"> </span><span class="mi">100</span><span class="n">m</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">autoextend</span><span class="w"> </span><span class="k">on</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">next</span><span class="w"> </span><span class="mi">10</span><span class="n">m</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--删除
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">drop</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="n">test_tablespace</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="创建用户">创建用户<a hidden class="anchor" aria-hidden="true" href="#创建用户">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3">3</a>
+</span><span class="lnt" id="hl-1-4"><a class="lnlinks" href="#hl-1-4">4</a>
+</span><span class="lnt" id="hl-1-5"><a class="lnlinks" href="#hl-1-5">5</a>
+</span><span class="lnt" id="hl-1-6"><a class="lnlinks" href="#hl-1-6">6</a>
+</span><span class="lnt" id="hl-1-7"><a class="lnlinks" href="#hl-1-7">7</a>
+</span><span class="lnt" id="hl-1-8"><a class="lnlinks" href="#hl-1-8">8</a>
+</span><span class="lnt" id="hl-1-9"><a class="lnlinks" href="#hl-1-9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--在表空间test_tablespace中创建用户，名为test_user，密码为password
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">test_user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">password</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="n">test_tablespace</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--给用户授权，Oracle数据库有3种常用角色
+</span></span></span><span class="line"><span class="cl"><span class="c1">--connect（连接角色，基本角色）、resource（开发者角色）、dba（超级管理员角色）
+</span></span></span><span class="line"><span class="cl"><span class="c1">--给用户test_user授予dba角色
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">grant</span><span class="w"> </span><span class="n">dba</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">test_user</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="常见数据类型">常见数据类型<a hidden class="anchor" aria-hidden="true" href="#常见数据类型">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>数据类型</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Varchar、Varchar2</td>
+          <td>常用Varchar2，可自动将长度减小为适合存入的数据，都不能扩展</td>
+      </tr>
+      <tr>
+          <td>NUMBER</td>
+          <td>NUMBER(2)表示长度为n的整数，NUMBER(m,n)表示长度为m的小数，小数部分n位</td>
+      </tr>
+      <tr>
+          <td>DATE</td>
+          <td>日期类型</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="创建表">创建表<a hidden class="anchor" aria-hidden="true" href="#创建表">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1">1</a>
+</span><span class="lnt" id="hl-2-2"><a class="lnlinks" href="#hl-2-2">2</a>
+</span><span class="lnt" id="hl-2-3"><a class="lnlinks" href="#hl-2-3">3</a>
+</span><span class="lnt" id="hl-2-4"><a class="lnlinks" href="#hl-2-4">4</a>
+</span><span class="lnt" id="hl-2-5"><a class="lnlinks" href="#hl-2-5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--先名词，后类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">person</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">pid</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">pname</span><span class="w"> </span><span class="n">varchar21</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="修改表结构2">修改表结构2<a hidden class="anchor" aria-hidden="true" href="#修改表结构2">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span><span class="lnt" id="hl-3-2"><a class="lnlinks" href="#hl-3-2">2</a>
+</span><span class="lnt" id="hl-3-3"><a class="lnlinks" href="#hl-3-3">3</a>
+</span><span class="lnt" id="hl-3-4"><a class="lnlinks" href="#hl-3-4">4</a>
+</span><span class="lnt" id="hl-3-5"><a class="lnlinks" href="#hl-3-5">5</a>
+</span><span class="lnt" id="hl-3-6"><a class="lnlinks" href="#hl-3-6">6</a>
+</span><span class="lnt" id="hl-3-7"><a class="lnlinks" href="#hl-3-7">7</a>
+</span><span class="lnt" id="hl-3-8"><a class="lnlinks" href="#hl-3-8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--添加列,pid和pname--
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="p">(</span><span class="n">pid</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">pname</span><span class="w"> </span><span class="n">varchar2</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--修改列类型，pid列由number(1)变为char(1)--
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="k">modify</span><span class="w"> </span><span class="n">pid</span><span class="w"> </span><span class="nb">char</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--修改列名称,pid变为sex--
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="k">rename</span><span class="w"> </span><span class="k">column</span><span class="w"> </span><span class="n">pid</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">sex</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--删除列,sex--
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="k">drop</span><span class="w"> </span><span class="k">column</span><span class="w"> </span><span class="n">sex</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="数据的增删改">数据的增删改<a hidden class="anchor" aria-hidden="true" href="#数据的增删改">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-1"><a class="lnlinks" href="#hl-4-1"> 1</a>
+</span><span class="lnt" id="hl-4-2"><a class="lnlinks" href="#hl-4-2"> 2</a>
+</span><span class="lnt" id="hl-4-3"><a class="lnlinks" href="#hl-4-3"> 3</a>
+</span><span class="lnt" id="hl-4-4"><a class="lnlinks" href="#hl-4-4"> 4</a>
+</span><span class="lnt" id="hl-4-5"><a class="lnlinks" href="#hl-4-5"> 5</a>
+</span><span class="lnt" id="hl-4-6"><a class="lnlinks" href="#hl-4-6"> 6</a>
+</span><span class="lnt" id="hl-4-7"><a class="lnlinks" href="#hl-4-7"> 7</a>
+</span><span class="lnt" id="hl-4-8"><a class="lnlinks" href="#hl-4-8"> 8</a>
+</span><span class="lnt" id="hl-4-9"><a class="lnlinks" href="#hl-4-9"> 9</a>
+</span><span class="lnt" id="hl-4-10"><a class="lnlinks" href="#hl-4-10">10</a>
+</span><span class="lnt" id="hl-4-11"><a class="lnlinks" href="#hl-4-11">11</a>
+</span><span class="lnt" id="hl-4-12"><a class="lnlinks" href="#hl-4-12">12</a>
+</span><span class="lnt" id="hl-4-13"><a class="lnlinks" href="#hl-4-13">13</a>
+</span><span class="lnt" id="hl-4-14"><a class="lnlinks" href="#hl-4-14">14</a>
+</span><span class="lnt" id="hl-4-15"><a class="lnlinks" href="#hl-4-15">15</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--添加一条记录--
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="p">(</span><span class="n">pid</span><span class="p">,</span><span class="n">pname</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;小明&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">commit</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--修改一条记录--
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">update</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;小飞&#39;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">pid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">commit</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--三个删除--
+</span></span></span><span class="line"><span class="cl"><span class="c1">---删除表中全部记录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">person</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---删除表结构
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">drop</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">person</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---先删除表，再次创建表，效果等同于删除表中全部记录
+</span></span></span><span class="line"><span class="cl"><span class="c1">---在数据量大的情况下，尤其是表中带有索引的情况下，会先删除索引，所以该操作效率高
+</span></span></span><span class="line"><span class="cl"><span class="c1">---索引可以提高查询效率，但是会影响增删改效率
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">truncate</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">person</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="序列">序列<a hidden class="anchor" aria-hidden="true" href="#序列">#</a></h3>
+<blockquote>
+<p>默认从1开始，依次递增，主要用来给主键赋值使用 序列不真的属于任何一张表，但是可以逻辑和表做绑定</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-5-1"><a class="lnlinks" href="#hl-5-1">1</a>
+</span><span class="lnt" id="hl-5-2"><a class="lnlinks" href="#hl-5-2">2</a>
+</span><span class="lnt" id="hl-5-3"><a class="lnlinks" href="#hl-5-3">3</a>
+</span><span class="lnt" id="hl-5-4"><a class="lnlinks" href="#hl-5-4">4</a>
+</span><span class="lnt" id="hl-5-5"><a class="lnlinks" href="#hl-5-5">5</a>
+</span><span class="lnt" id="hl-5-6"><a class="lnlinks" href="#hl-5-6">6</a>
+</span><span class="lnt" id="hl-5-7"><a class="lnlinks" href="#hl-5-7">7</a>
+</span><span class="lnt" id="hl-5-8"><a class="lnlinks" href="#hl-5-8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">create</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="n">s_person</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--dual是虚表，只是为了补全语法，无任何意义
+</span></span></span><span class="line"><span class="cl"><span class="c1">--nextval一直递增，currval一直是当前值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">s_person</span><span class="p">.</span><span class="n">nextval</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--添加一条记录，用s_person.nextval--
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="p">(</span><span class="n">pid</span><span class="p">,</span><span class="n">pname</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="p">(</span><span class="n">s_person</span><span class="p">.</span><span class="n">nextval</span><span class="p">,</span><span class="s1">&#39;小明&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">commit</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="scott用户">scott用户<a hidden class="anchor" aria-hidden="true" href="#scott用户">#</a></h3>
+<blockquote>
+<p>密码默认是tiger 后面的演示都使用scott用户下的表</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-6-1"><a class="lnlinks" href="#hl-6-1">1</a>
+</span><span class="lnt" id="hl-6-2"><a class="lnlinks" href="#hl-6-2">2</a>
+</span><span class="lnt" id="hl-6-3"><a class="lnlinks" href="#hl-6-3">3</a>
+</span><span class="lnt" id="hl-6-4"><a class="lnlinks" href="#hl-6-4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--超级管理员权限解锁scott用户
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">alter</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">scott</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="n">unlock</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--解锁scott用户的密码，此句也可以重置密码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">alter</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">scott</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="n">tiger</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="单行函数">单行函数<a hidden class="anchor" aria-hidden="true" href="#单行函数">#</a></h3>
+<blockquote>
+<p>单行函数：作用于一行，返回一个值 多行函数：作用于多行，返回一个值</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-7-1"><a class="lnlinks" href="#hl-7-1"> 1</a>
+</span><span class="lnt" id="hl-7-2"><a class="lnlinks" href="#hl-7-2"> 2</a>
+</span><span class="lnt" id="hl-7-3"><a class="lnlinks" href="#hl-7-3"> 3</a>
+</span><span class="lnt" id="hl-7-4"><a class="lnlinks" href="#hl-7-4"> 4</a>
+</span><span class="lnt" id="hl-7-5"><a class="lnlinks" href="#hl-7-5"> 5</a>
+</span><span class="lnt" id="hl-7-6"><a class="lnlinks" href="#hl-7-6"> 6</a>
+</span><span class="lnt" id="hl-7-7"><a class="lnlinks" href="#hl-7-7"> 7</a>
+</span><span class="lnt" id="hl-7-8"><a class="lnlinks" href="#hl-7-8"> 8</a>
+</span><span class="lnt" id="hl-7-9"><a class="lnlinks" href="#hl-7-9"> 9</a>
+</span><span class="lnt" id="hl-7-10"><a class="lnlinks" href="#hl-7-10">10</a>
+</span><span class="lnt" id="hl-7-11"><a class="lnlinks" href="#hl-7-11">11</a>
+</span><span class="lnt" id="hl-7-12"><a class="lnlinks" href="#hl-7-12">12</a>
+</span><span class="lnt" id="hl-7-13"><a class="lnlinks" href="#hl-7-13">13</a>
+</span><span class="lnt" id="hl-7-14"><a class="lnlinks" href="#hl-7-14">14</a>
+</span><span class="lnt" id="hl-7-15"><a class="lnlinks" href="#hl-7-15">15</a>
+</span><span class="lnt" id="hl-7-16"><a class="lnlinks" href="#hl-7-16">16</a>
+</span><span class="lnt" id="hl-7-17"><a class="lnlinks" href="#hl-7-17">17</a>
+</span><span class="lnt" id="hl-7-18"><a class="lnlinks" href="#hl-7-18">18</a>
+</span><span class="lnt" id="hl-7-19"><a class="lnlinks" href="#hl-7-19">19</a>
+</span><span class="lnt" id="hl-7-20"><a class="lnlinks" href="#hl-7-20">20</a>
+</span><span class="lnt" id="hl-7-21"><a class="lnlinks" href="#hl-7-21">21</a>
+</span><span class="lnt" id="hl-7-22"><a class="lnlinks" href="#hl-7-22">22</a>
+</span><span class="lnt" id="hl-7-23"><a class="lnlinks" href="#hl-7-23">23</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--字符函数upper()和lower()--
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="k">upper</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--数值函数，四舍五入，保留1位，即26.2，保留-1位，即30
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">round</span><span class="p">(</span><span class="mi">26</span><span class="p">.</span><span class="mi">18</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--截取函数，保留1位即56.1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">trunc</span><span class="p">(</span><span class="mi">56</span><span class="p">.</span><span class="mi">16</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--求余函数，1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="k">mod</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--日期函数
+</span></span></span><span class="line"><span class="cl"><span class="c1">---查询emp表中所有员工入职距离现在几天
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">sysdate</span><span class="o">-</span><span class="n">e</span><span class="p">.</span><span class="n">hiredate</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---明天此刻
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">sysdate</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--日期转换字符串函数, 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">to_char</span><span class="p">(</span><span class="n">sysdate</span><span class="p">,</span><span class="s1">&#39;yyyy-mm-ss hh:mi:ss&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">to_char</span><span class="p">(</span><span class="n">sysdate</span><span class="p">,</span><span class="s1">&#39;yyyy-mm-ss hh24:mi:ss&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--字符串转日期函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">to_date</span><span class="p">(</span><span class="s1">&#39;2020-10-10 21:07:52&#39;</span><span class="p">,</span><span class="s1">&#39;yyyy-mm-ss hh:mi:ss&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--通用函数nvl()，如果e.comm不是null，则使用，否则为0
+</span></span></span><span class="line"><span class="cl"><span class="c1">---null和任意值做算术运算，结果都是null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="o">*</span><span class="mi">12</span><span class="o">+</span><span class="n">nvl</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">comm</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="条件表达式">条件表达式<a hidden class="anchor" aria-hidden="true" href="#条件表达式">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-8-1"><a class="lnlinks" href="#hl-8-1"> 1</a>
+</span><span class="lnt" id="hl-8-2"><a class="lnlinks" href="#hl-8-2"> 2</a>
+</span><span class="lnt" id="hl-8-3"><a class="lnlinks" href="#hl-8-3"> 3</a>
+</span><span class="lnt" id="hl-8-4"><a class="lnlinks" href="#hl-8-4"> 4</a>
+</span><span class="lnt" id="hl-8-5"><a class="lnlinks" href="#hl-8-5"> 5</a>
+</span><span class="lnt" id="hl-8-6"><a class="lnlinks" href="#hl-8-6"> 6</a>
+</span><span class="lnt" id="hl-8-7"><a class="lnlinks" href="#hl-8-7"> 7</a>
+</span><span class="lnt" id="hl-8-8"><a class="lnlinks" href="#hl-8-8"> 8</a>
+</span><span class="lnt" id="hl-8-9"><a class="lnlinks" href="#hl-8-9"> 9</a>
+</span><span class="lnt" id="hl-8-10"><a class="lnlinks" href="#hl-8-10">10</a>
+</span><span class="lnt" id="hl-8-11"><a class="lnlinks" href="#hl-8-11">11</a>
+</span><span class="lnt" id="hl-8-12"><a class="lnlinks" href="#hl-8-12">12</a>
+</span><span class="lnt" id="hl-8-13"><a class="lnlinks" href="#hl-8-13">13</a>
+</span><span class="lnt" id="hl-8-14"><a class="lnlinks" href="#hl-8-14">14</a>
+</span><span class="lnt" id="hl-8-15"><a class="lnlinks" href="#hl-8-15">15</a>
+</span><span class="lnt" id="hl-8-16"><a class="lnlinks" href="#hl-8-16">16</a>
+</span><span class="lnt" id="hl-8-17"><a class="lnlinks" href="#hl-8-17">17</a>
+</span><span class="lnt" id="hl-8-18"><a class="lnlinks" href="#hl-8-18">18</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--给emp表种员工起中文名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">when</span><span class="w"> </span><span class="s1">&#39;hiccup&#39;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;曹操&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="s1">&#39;tom&#39;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;大猫&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">when</span><span class="w"> </span><span class="s1">&#39;sms&#39;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;史密斯&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;无名&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="k">end</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--判断emp表中员工工资，如果高于3000显示高收入，如果在1500和3000之间，显示中等收入，其余显示低收入
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">when</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="o">&gt;</span><span class="mi">3000</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;高收入&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="o">&gt;</span><span class="mi">1500</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;中等收入&#39;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">                                </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;低收入&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="k">end</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意：Oracle一般都用单引号</strong></p>
+<h3 id="多行函数聚合函数">多行函数（聚合函数）<a hidden class="anchor" aria-hidden="true" href="#多行函数聚合函数">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-9-1"><a class="lnlinks" href="#hl-9-1">1</a>
+</span><span class="lnt" id="hl-9-2"><a class="lnlinks" href="#hl-9-2">2</a>
+</span><span class="lnt" id="hl-9-3"><a class="lnlinks" href="#hl-9-3">3</a>
+</span><span class="lnt" id="hl-9-4"><a class="lnlinks" href="#hl-9-4">4</a>
+</span><span class="lnt" id="hl-9-5"><a class="lnlinks" href="#hl-9-5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--注意，一次执行多行要有分号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="n">sal</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">max</span><span class="p">(</span><span class="n">sal</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">sal</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="分组查询">分组查询<a hidden class="anchor" aria-hidden="true" href="#分组查询">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-10-1"><a class="lnlinks" href="#hl-10-1">1</a>
+</span><span class="lnt" id="hl-10-2"><a class="lnlinks" href="#hl-10-2">2</a>
+</span><span class="lnt" id="hl-10-3"><a class="lnlinks" href="#hl-10-3">3</a>
+</span><span class="lnt" id="hl-10-4"><a class="lnlinks" href="#hl-10-4">4</a>
+</span><span class="lnt" id="hl-10-5"><a class="lnlinks" href="#hl-10-5">5</a>
+</span><span class="lnt" id="hl-10-6"><a class="lnlinks" href="#hl-10-6">6</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--查询出每个部门的平均工资
+</span></span></span><span class="line"><span class="cl"><span class="c1">---分组查询中，出现在gruop by后天的原始列，才能出现在select后面
+</span></span></span><span class="line"><span class="cl"><span class="c1">---没有出现在group by后面的原始列，想在后面出现，必须加上聚合函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="p">,</span><span class="k">avg</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-11-1"><a class="lnlinks" href="#hl-11-1">1</a>
+</span><span class="lnt" id="hl-11-2"><a class="lnlinks" href="#hl-11-2">2</a>
+</span><span class="lnt" id="hl-11-3"><a class="lnlinks" href="#hl-11-3">3</a>
+</span><span class="lnt" id="hl-11-4"><a class="lnlinks" href="#hl-11-4">4</a>
+</span><span class="lnt" id="hl-11-5"><a class="lnlinks" href="#hl-11-5">5</a>
+</span><span class="lnt" id="hl-11-6"><a class="lnlinks" href="#hl-11-6">6</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--查询公司高于2000的部门信息
+</span></span></span><span class="line"><span class="cl"><span class="c1">---所有条件都不能使用别名判断，因为条件的优先级大于select
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="p">,</span><span class="k">avg</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">having</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">2000</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-12-1"><a class="lnlinks" href="#hl-12-1">1</a>
+</span><span class="lnt" id="hl-12-2"><a class="lnlinks" href="#hl-12-2">2</a>
+</span><span class="lnt" id="hl-12-3"><a class="lnlinks" href="#hl-12-3">3</a>
+</span><span class="lnt" id="hl-12-4"><a class="lnlinks" href="#hl-12-4">4</a>
+</span><span class="lnt" id="hl-12-5"><a class="lnlinks" href="#hl-12-5">5</a>
+</span><span class="lnt" id="hl-12-6"><a class="lnlinks" href="#hl-12-6">6</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--查询出每个部门工资高于800的员工的平均工资
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="p">,</span><span class="k">avg</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="o">&gt;</span><span class="mi">800</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-13-1"><a class="lnlinks" href="#hl-13-1">1</a>
+</span><span class="lnt" id="hl-13-2"><a class="lnlinks" href="#hl-13-2">2</a>
+</span><span class="lnt" id="hl-13-3"><a class="lnlinks" href="#hl-13-3">3</a>
+</span><span class="lnt" id="hl-13-4"><a class="lnlinks" href="#hl-13-4">4</a>
+</span><span class="lnt" id="hl-13-5"><a class="lnlinks" href="#hl-13-5">5</a>
+</span><span class="lnt" id="hl-13-6"><a class="lnlinks" href="#hl-13-6">6</a>
+</span><span class="lnt" id="hl-13-7"><a class="lnlinks" href="#hl-13-7">7</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">---where过滤分组前的数据，having过滤分组后的数据
+</span></span></span><span class="line"><span class="cl"><span class="c1">---位置表现为在group by前后
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="p">,</span><span class="k">avg</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="o">&gt;</span><span class="mi">800</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">having</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">2000</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="多表查询">多表查询<a hidden class="anchor" aria-hidden="true" href="#多表查询">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-14-1"><a class="lnlinks" href="#hl-14-1">1</a>
+</span><span class="lnt" id="hl-14-2"><a class="lnlinks" href="#hl-14-2">2</a>
+</span><span class="lnt" id="hl-14-3"><a class="lnlinks" href="#hl-14-3">3</a>
+</span><span class="lnt" id="hl-14-4"><a class="lnlinks" href="#hl-14-4">4</a>
+</span><span class="lnt" id="hl-14-5"><a class="lnlinks" href="#hl-14-5">5</a>
+</span><span class="lnt" id="hl-14-6"><a class="lnlinks" href="#hl-14-6">6</a>
+</span><span class="lnt" id="hl-14-7"><a class="lnlinks" href="#hl-14-7">7</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--笛卡尔积，14*4=56条
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">dept</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--等值连接，14条
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="n">dept</span><span class="w"> </span><span class="n">d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">deptno</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="子查询">子查询<a hidden class="anchor" aria-hidden="true" href="#子查询">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-15-1"><a class="lnlinks" href="#hl-15-1"> 1</a>
+</span><span class="lnt" id="hl-15-2"><a class="lnlinks" href="#hl-15-2"> 2</a>
+</span><span class="lnt" id="hl-15-3"><a class="lnlinks" href="#hl-15-3"> 3</a>
+</span><span class="lnt" id="hl-15-4"><a class="lnlinks" href="#hl-15-4"> 4</a>
+</span><span class="lnt" id="hl-15-5"><a class="lnlinks" href="#hl-15-5"> 5</a>
+</span><span class="lnt" id="hl-15-6"><a class="lnlinks" href="#hl-15-6"> 6</a>
+</span><span class="lnt" id="hl-15-7"><a class="lnlinks" href="#hl-15-7"> 7</a>
+</span><span class="lnt" id="hl-15-8"><a class="lnlinks" href="#hl-15-8"> 8</a>
+</span><span class="lnt" id="hl-15-9"><a class="lnlinks" href="#hl-15-9"> 9</a>
+</span><span class="lnt" id="hl-15-10"><a class="lnlinks" href="#hl-15-10">10</a>
+</span><span class="lnt" id="hl-15-11"><a class="lnlinks" href="#hl-15-11">11</a>
+</span><span class="lnt" id="hl-15-12"><a class="lnlinks" href="#hl-15-12">12</a>
+</span><span class="lnt" id="hl-15-13"><a class="lnlinks" href="#hl-15-13">13</a>
+</span><span class="lnt" id="hl-15-14"><a class="lnlinks" href="#hl-15-14">14</a>
+</span><span class="lnt" id="hl-15-15"><a class="lnlinks" href="#hl-15-15">15</a>
+</span><span class="lnt" id="hl-15-16"><a class="lnlinks" href="#hl-15-16">16</a>
+</span><span class="lnt" id="hl-15-17"><a class="lnlinks" href="#hl-15-17">17</a>
+</span><span class="lnt" id="hl-15-18"><a class="lnlinks" href="#hl-15-18">18</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--返回一个值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="k">in</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;xiaoming&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--返回一个集合
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="k">in</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">sql</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">deptno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;10&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--返回一张表，多行记录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">deptno</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">dname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">deptno</span><span class="p">,</span><span class="k">min</span><span class="p">(</span><span class="n">sal</span><span class="p">)</span><span class="w"> </span><span class="n">s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">deptno</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="n">dept</span><span class="w"> </span><span class="n">d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">deptno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">and</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">sal</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">and</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">deptno</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="分页查询">分页查询<a hidden class="anchor" aria-hidden="true" href="#分页查询">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-16-1"><a class="lnlinks" href="#hl-16-1">1</a>
+</span><span class="lnt" id="hl-16-2"><a class="lnlinks" href="#hl-16-2">2</a>
+</span><span class="lnt" id="hl-16-3"><a class="lnlinks" href="#hl-16-3">3</a>
+</span><span class="lnt" id="hl-16-4"><a class="lnlinks" href="#hl-16-4">4</a>
+</span><span class="lnt" id="hl-16-5"><a class="lnlinks" href="#hl-16-5">5</a>
+</span><span class="lnt" id="hl-16-6"><a class="lnlinks" href="#hl-16-6">6</a>
+</span><span class="lnt" id="hl-16-7"><a class="lnlinks" href="#hl-16-7">7</a>
+</span><span class="lnt" id="hl-16-8"><a class="lnlinks" href="#hl-16-8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--只有做select查询的时候，才会有rownum
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">rownum</span><span class="w"> </span><span class="n">rn</span><span class="p">,</span><span class="w"> </span><span class="n">tt</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="k">sql</span><span class="w"> </span><span class="k">desc</span><span class="c1">--无论这行多少条，根据11和5的值都可以分页显示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="n">tt</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">rownum</span><span class="o">&lt;</span><span class="mi">11</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">rn</span><span class="o">&gt;</span><span class="mi">5</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="视图">视图<a hidden class="anchor" aria-hidden="true" href="#视图">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-17-1"><a class="lnlinks" href="#hl-17-1"> 1</a>
+</span><span class="lnt" id="hl-17-2"><a class="lnlinks" href="#hl-17-2"> 2</a>
+</span><span class="lnt" id="hl-17-3"><a class="lnlinks" href="#hl-17-3"> 3</a>
+</span><span class="lnt" id="hl-17-4"><a class="lnlinks" href="#hl-17-4"> 4</a>
+</span><span class="lnt" id="hl-17-5"><a class="lnlinks" href="#hl-17-5"> 5</a>
+</span><span class="lnt" id="hl-17-6"><a class="lnlinks" href="#hl-17-6"> 6</a>
+</span><span class="lnt" id="hl-17-7"><a class="lnlinks" href="#hl-17-7"> 7</a>
+</span><span class="lnt" id="hl-17-8"><a class="lnlinks" href="#hl-17-8"> 8</a>
+</span><span class="lnt" id="hl-17-9"><a class="lnlinks" href="#hl-17-9"> 9</a>
+</span><span class="lnt" id="hl-17-10"><a class="lnlinks" href="#hl-17-10">10</a>
+</span><span class="lnt" id="hl-17-11"><a class="lnlinks" href="#hl-17-11">11</a>
+</span><span class="lnt" id="hl-17-12"><a class="lnlinks" href="#hl-17-12">12</a>
+</span><span class="lnt" id="hl-17-13"><a class="lnlinks" href="#hl-17-13">13</a>
+</span><span class="lnt" id="hl-17-14"><a class="lnlinks" href="#hl-17-14">14</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--视图：提供一个查询的窗口，所有数据来自于原表，所以修改视图的数据，也就是修改对应原表里的数据
+</span></span></span><span class="line"><span class="cl"><span class="c1">---创建视图必须要有dba权限，查询语句可以跨用户查询
+</span></span></span><span class="line"><span class="cl"><span class="c1">---利用查询语句创建表
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">scott</span><span class="p">.</span><span class="n">emp</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---创建视图 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">v_emp</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">ename</span><span class="p">,</span><span class="n">job</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---查询视图
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">v_emp</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---修改视图，所有数据来自于原表，所以修改视图的数据，也就是修改对应原表里的数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">update</span><span class="w"> </span><span class="n">v_emp</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;clerk&#39;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;aline&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">commit</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---创建只读视图
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">v_emp</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">ename</span><span class="p">,</span><span class="n">job</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="k">read</span><span class="w"> </span><span class="k">only</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---视图的作用：屏蔽敏感字段，保证总部和分部数据及时统一（分部使用总部做的视图）
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="索引">索引<a hidden class="anchor" aria-hidden="true" href="#索引">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-18-1"><a class="lnlinks" href="#hl-18-1">1</a>
+</span><span class="lnt" id="hl-18-2"><a class="lnlinks" href="#hl-18-2">2</a>
+</span><span class="lnt" id="hl-18-3"><a class="lnlinks" href="#hl-18-3">3</a>
+</span><span class="lnt" id="hl-18-4"><a class="lnlinks" href="#hl-18-4">4</a>
+</span><span class="lnt" id="hl-18-5"><a class="lnlinks" href="#hl-18-5">5</a>
+</span><span class="lnt" id="hl-18-6"><a class="lnlinks" href="#hl-18-6">6</a>
+</span><span class="lnt" id="hl-18-7"><a class="lnlinks" href="#hl-18-7">7</a>
+</span><span class="lnt" id="hl-18-8"><a class="lnlinks" href="#hl-18-8">8</a>
+</span><span class="lnt" id="hl-18-9"><a class="lnlinks" href="#hl-18-9">9</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--索引：在表的列上构建一个二叉树（例如书的目录），可以提高查询效率，降低增删改效率。
+</span></span></span><span class="line"><span class="cl"><span class="c1">---单列索引，触发规则：条件必须是索引列的原始值，单行函数，模糊查询都会影响索引的触发。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="n">idx_ename</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">ename</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;scott&#39;</span><span class="p">;</span><span class="c1">--触发单列索引
+</span></span></span><span class="line"><span class="cl"><span class="c1">---复合索引，触发规则：第一列为优先检索列，若要触发索引，必须包含有优先检索列中的原始值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="n">idx_ename_job</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="p">(</span><span class="n">ename</span><span class="p">,</span><span class="n">job</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;scott&#39;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">job</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;tt&#39;</span><span class="p">;</span><span class="c1">--触发复合索引
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;scott&#39;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">job</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;tt&#39;</span><span class="p">;</span><span class="c1">--不触发索引
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;scott&#39;</span><span class="p">;</span><span class="c1">--触发单列索引
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="plsql变量">pl/sql变量<a hidden class="anchor" aria-hidden="true" href="#plsql变量">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-19-1"><a class="lnlinks" href="#hl-19-1"> 1</a>
+</span><span class="lnt" id="hl-19-2"><a class="lnlinks" href="#hl-19-2"> 2</a>
+</span><span class="lnt" id="hl-19-3"><a class="lnlinks" href="#hl-19-3"> 3</a>
+</span><span class="lnt" id="hl-19-4"><a class="lnlinks" href="#hl-19-4"> 4</a>
+</span><span class="lnt" id="hl-19-5"><a class="lnlinks" href="#hl-19-5"> 5</a>
+</span><span class="lnt" id="hl-19-6"><a class="lnlinks" href="#hl-19-6"> 6</a>
+</span><span class="lnt" id="hl-19-7"><a class="lnlinks" href="#hl-19-7"> 7</a>
+</span><span class="lnt" id="hl-19-8"><a class="lnlinks" href="#hl-19-8"> 8</a>
+</span><span class="lnt" id="hl-19-9"><a class="lnlinks" href="#hl-19-9"> 9</a>
+</span><span class="lnt" id="hl-19-10"><a class="lnlinks" href="#hl-19-10">10</a>
+</span><span class="lnt" id="hl-19-11"><a class="lnlinks" href="#hl-19-11">11</a>
+</span><span class="lnt" id="hl-19-12"><a class="lnlinks" href="#hl-19-12">12</a>
+</span><span class="lnt" id="hl-19-13"><a class="lnlinks" href="#hl-19-13">13</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--pl/sql编程语言是对sql语言的扩展，使得sql语言有过程化编程特性，主要用来编写存储过程和存储函数。
+</span></span></span><span class="line"><span class="cl"><span class="c1">---申明方法，可以使用&#34;:=&#34;赋值，也可以使用into查询语句赋值，
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="n">varchar2</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;小明&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ena</span><span class="w"> </span><span class="n">emp</span><span class="p">.</span><span class="n">ename</span><span class="o">%</span><span class="k">type</span><span class="p">;</span><span class="c1">---引用型变量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">emprow</span><span class="w"> </span><span class="n">emp</span><span class="o">%</span><span class="n">rowtype</span><span class="p">;</span><span class="c1">---记录型变量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">ename</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">ena</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">empno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;7878&#39;</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">emprow</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">empno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;7878&#39;</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">emprow</span><span class="p">.</span><span class="n">ename</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;的工作为：&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">emprow</span><span class="p">.</span><span class="n">job</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="plsql判断">pl/sql判断<a hidden class="anchor" aria-hidden="true" href="#plsql判断">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-20-1"><a class="lnlinks" href="#hl-20-1"> 1</a>
+</span><span class="lnt" id="hl-20-2"><a class="lnlinks" href="#hl-20-2"> 2</a>
+</span><span class="lnt" id="hl-20-3"><a class="lnlinks" href="#hl-20-3"> 3</a>
+</span><span class="lnt" id="hl-20-4"><a class="lnlinks" href="#hl-20-4"> 4</a>
+</span><span class="lnt" id="hl-20-5"><a class="lnlinks" href="#hl-20-5"> 5</a>
+</span><span class="lnt" id="hl-20-6"><a class="lnlinks" href="#hl-20-6"> 6</a>
+</span><span class="lnt" id="hl-20-7"><a class="lnlinks" href="#hl-20-7"> 7</a>
+</span><span class="lnt" id="hl-20-8"><a class="lnlinks" href="#hl-20-8"> 8</a>
+</span><span class="lnt" id="hl-20-9"><a class="lnlinks" href="#hl-20-9"> 9</a>
+</span><span class="lnt" id="hl-20-10"><a class="lnlinks" href="#hl-20-10">10</a>
+</span><span class="lnt" id="hl-20-11"><a class="lnlinks" href="#hl-20-11">11</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ii</span><span class="p">;</span><span class="c1">--输入，变量名任意
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">18</span><span class="w"> </span><span class="k">then</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="s1">&#39;未成年&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">elsif</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">40</span><span class="w"> </span><span class="k">then</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="s1">&#39;中年人&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">else</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="s1">&#39;老年人&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="plsql循环loop">pl/sql循环loop<a hidden class="anchor" aria-hidden="true" href="#plsql循环loop">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-21-1"><a class="lnlinks" href="#hl-21-1"> 1</a>
+</span><span class="lnt" id="hl-21-2"><a class="lnlinks" href="#hl-21-2"> 2</a>
+</span><span class="lnt" id="hl-21-3"><a class="lnlinks" href="#hl-21-3"> 3</a>
+</span><span class="lnt" id="hl-21-4"><a class="lnlinks" href="#hl-21-4"> 4</a>
+</span><span class="lnt" id="hl-21-5"><a class="lnlinks" href="#hl-21-5"> 5</a>
+</span><span class="lnt" id="hl-21-6"><a class="lnlinks" href="#hl-21-6"> 6</a>
+</span><span class="lnt" id="hl-21-7"><a class="lnlinks" href="#hl-21-7"> 7</a>
+</span><span class="lnt" id="hl-21-8"><a class="lnlinks" href="#hl-21-8"> 8</a>
+</span><span class="lnt" id="hl-21-9"><a class="lnlinks" href="#hl-21-9"> 9</a>
+</span><span class="lnt" id="hl-21-10"><a class="lnlinks" href="#hl-21-10">10</a>
+</span><span class="lnt" id="hl-21-11"><a class="lnlinks" href="#hl-21-11">11</a>
+</span><span class="lnt" id="hl-21-12"><a class="lnlinks" href="#hl-21-12">12</a>
+</span><span class="lnt" id="hl-21-13"><a class="lnlinks" href="#hl-21-13">13</a>
+</span><span class="lnt" id="hl-21-14"><a class="lnlinks" href="#hl-21-14">14</a>
+</span><span class="lnt" id="hl-21-15"><a class="lnlinks" href="#hl-21-15">15</a>
+</span><span class="lnt" id="hl-21-16"><a class="lnlinks" href="#hl-21-16">16</a>
+</span><span class="lnt" id="hl-21-17"><a class="lnlinks" href="#hl-21-17">17</a>
+</span><span class="lnt" id="hl-21-18"><a class="lnlinks" href="#hl-21-18">18</a>
+</span><span class="lnt" id="hl-21-19"><a class="lnlinks" href="#hl-21-19">19</a>
+</span><span class="lnt" id="hl-21-20"><a class="lnlinks" href="#hl-21-20">20</a>
+</span><span class="lnt" id="hl-21-21"><a class="lnlinks" href="#hl-21-21">21</a>
+</span><span class="lnt" id="hl-21-22"><a class="lnlinks" href="#hl-21-22">22</a>
+</span><span class="lnt" id="hl-21-23"><a class="lnlinks" href="#hl-21-23">23</a>
+</span><span class="lnt" id="hl-21-24"><a class="lnlinks" href="#hl-21-24">24</a>
+</span><span class="lnt" id="hl-21-25"><a class="lnlinks" href="#hl-21-25">25</a>
+</span><span class="lnt" id="hl-21-26"><a class="lnlinks" href="#hl-21-26">26</a>
+</span><span class="lnt" id="hl-21-27"><a class="lnlinks" href="#hl-21-27">27</a>
+</span><span class="lnt" id="hl-21-28"><a class="lnlinks" href="#hl-21-28">28</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--while循环
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">while</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">11</span><span class="w"> </span><span class="n">loop</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">i</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--exit循环较为常用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">loop</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">exit</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">i</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">i</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--for循环
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="p">..</span><span class="mi">10</span><span class="w"> </span><span class="n">loop</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="游标">游标<a hidden class="anchor" aria-hidden="true" href="#游标">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-22-1"><a class="lnlinks" href="#hl-22-1"> 1</a>
+</span><span class="lnt" id="hl-22-2"><a class="lnlinks" href="#hl-22-2"> 2</a>
+</span><span class="lnt" id="hl-22-3"><a class="lnlinks" href="#hl-22-3"> 3</a>
+</span><span class="lnt" id="hl-22-4"><a class="lnlinks" href="#hl-22-4"> 4</a>
+</span><span class="lnt" id="hl-22-5"><a class="lnlinks" href="#hl-22-5"> 5</a>
+</span><span class="lnt" id="hl-22-6"><a class="lnlinks" href="#hl-22-6"> 6</a>
+</span><span class="lnt" id="hl-22-7"><a class="lnlinks" href="#hl-22-7"> 7</a>
+</span><span class="lnt" id="hl-22-8"><a class="lnlinks" href="#hl-22-8"> 8</a>
+</span><span class="lnt" id="hl-22-9"><a class="lnlinks" href="#hl-22-9"> 9</a>
+</span><span class="lnt" id="hl-22-10"><a class="lnlinks" href="#hl-22-10">10</a>
+</span><span class="lnt" id="hl-22-11"><a class="lnlinks" href="#hl-22-11">11</a>
+</span><span class="lnt" id="hl-22-12"><a class="lnlinks" href="#hl-22-12">12</a>
+</span><span class="lnt" id="hl-22-13"><a class="lnlinks" href="#hl-22-13">13</a>
+</span><span class="lnt" id="hl-22-14"><a class="lnlinks" href="#hl-22-14">14</a>
+</span><span class="lnt" id="hl-22-15"><a class="lnlinks" href="#hl-22-15">15</a>
+</span><span class="lnt" id="hl-22-16"><a class="lnlinks" href="#hl-22-16">16</a>
+</span><span class="lnt" id="hl-22-17"><a class="lnlinks" href="#hl-22-17">17</a>
+</span><span class="lnt" id="hl-22-18"><a class="lnlinks" href="#hl-22-18">18</a>
+</span><span class="lnt" id="hl-22-19"><a class="lnlinks" href="#hl-22-19">19</a>
+</span><span class="lnt" id="hl-22-20"><a class="lnlinks" href="#hl-22-20">20</a>
+</span><span class="lnt" id="hl-22-21"><a class="lnlinks" href="#hl-22-21">21</a>
+</span><span class="lnt" id="hl-22-22"><a class="lnlinks" href="#hl-22-22">22</a>
+</span><span class="lnt" id="hl-22-23"><a class="lnlinks" href="#hl-22-23">23</a>
+</span><span class="lnt" id="hl-22-24"><a class="lnlinks" href="#hl-22-24">24</a>
+</span><span class="lnt" id="hl-22-25"><a class="lnlinks" href="#hl-22-25">25</a>
+</span><span class="lnt" id="hl-22-26"><a class="lnlinks" href="#hl-22-26">26</a>
+</span><span class="lnt" id="hl-22-27"><a class="lnlinks" href="#hl-22-27">27</a>
+</span><span class="lnt" id="hl-22-28"><a class="lnlinks" href="#hl-22-28">28</a>
+</span><span class="lnt" id="hl-22-29"><a class="lnlinks" href="#hl-22-29">29</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--游标：可以存放多个对象，多行记录
+</span></span></span><span class="line"><span class="cl"><span class="c1">---输出emp表中的所有员工的姓名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">cursor</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">emprow</span><span class="w"> </span><span class="n">emp</span><span class="o">%</span><span class="n">rowtype</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">open</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">loop</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">fetch</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">emprow</span><span class="p">;</span><span class="c1">--一行一行的取
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">            </span><span class="n">exit</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">c1</span><span class="o">%</span><span class="n">notfound</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">emprow</span><span class="p">.</span><span class="n">ename</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">close</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---给指定部门员工涨工资
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">cursor</span><span class="w"> </span><span class="n">c2</span><span class="p">(</span><span class="n">eno</span><span class="w"> </span><span class="n">emp</span><span class="p">.</span><span class="n">deptno</span><span class="o">%</span><span class="k">type</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">empno</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">deptno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eno</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">en</span><span class="w"> </span><span class="n">emp</span><span class="p">.</span><span class="n">empno</span><span class="o">%</span><span class="k">type</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">open</span><span class="w"> </span><span class="n">c2</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">loop</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">fetch</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">en</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">exit</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">c2</span><span class="o">%</span><span class="n">notfound</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">update</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">empno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">en</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">commit</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">close</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span><span class="c1">--只赋值一次
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="存储过程">存储过程<a hidden class="anchor" aria-hidden="true" href="#存储过程">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-23-1"><a class="lnlinks" href="#hl-23-1"> 1</a>
+</span><span class="lnt" id="hl-23-2"><a class="lnlinks" href="#hl-23-2"> 2</a>
+</span><span class="lnt" id="hl-23-3"><a class="lnlinks" href="#hl-23-3"> 3</a>
+</span><span class="lnt" id="hl-23-4"><a class="lnlinks" href="#hl-23-4"> 4</a>
+</span><span class="lnt" id="hl-23-5"><a class="lnlinks" href="#hl-23-5"> 5</a>
+</span><span class="lnt" id="hl-23-6"><a class="lnlinks" href="#hl-23-6"> 6</a>
+</span><span class="lnt" id="hl-23-7"><a class="lnlinks" href="#hl-23-7"> 7</a>
+</span><span class="lnt" id="hl-23-8"><a class="lnlinks" href="#hl-23-8"> 8</a>
+</span><span class="lnt" id="hl-23-9"><a class="lnlinks" href="#hl-23-9"> 9</a>
+</span><span class="lnt" id="hl-23-10"><a class="lnlinks" href="#hl-23-10">10</a>
+</span><span class="lnt" id="hl-23-11"><a class="lnlinks" href="#hl-23-11">11</a>
+</span><span class="lnt" id="hl-23-12"><a class="lnlinks" href="#hl-23-12">12</a>
+</span><span class="lnt" id="hl-23-13"><a class="lnlinks" href="#hl-23-13">13</a>
+</span><span class="lnt" id="hl-23-14"><a class="lnlinks" href="#hl-23-14">14</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--存储过程：提前已经编译好的一段pl/sql语言，放置在数据库端可直接别调用，这一段pl/sql一般都是固定步骤的业务
+</span></span></span><span class="line"><span class="cl"><span class="c1">---给指定员工涨100元
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">procedure</span><span class="w"> </span><span class="n">p1</span><span class="p">(</span><span class="n">eno</span><span class="w"> </span><span class="n">emp</span><span class="p">.</span><span class="n">empno</span><span class="o">%</span><span class="k">type</span><span class="p">)</span><span class="c1">--默认in类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">as</span><span class="c1">--is也可以，这里相当于declare，做申明用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">update</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">sal</span><span class="o">=</span><span class="n">sal</span><span class="o">+</span><span class="mi">100</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">empno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eno</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">commit</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---调用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">p1</span><span class="p">(</span><span class="mi">7788</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="存储函数">存储函数<a hidden class="anchor" aria-hidden="true" href="#存储函数">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-24-1"><a class="lnlinks" href="#hl-24-1"> 1</a>
+</span><span class="lnt" id="hl-24-2"><a class="lnlinks" href="#hl-24-2"> 2</a>
+</span><span class="lnt" id="hl-24-3"><a class="lnlinks" href="#hl-24-3"> 3</a>
+</span><span class="lnt" id="hl-24-4"><a class="lnlinks" href="#hl-24-4"> 4</a>
+</span><span class="lnt" id="hl-24-5"><a class="lnlinks" href="#hl-24-5"> 5</a>
+</span><span class="lnt" id="hl-24-6"><a class="lnlinks" href="#hl-24-6"> 6</a>
+</span><span class="lnt" id="hl-24-7"><a class="lnlinks" href="#hl-24-7"> 7</a>
+</span><span class="lnt" id="hl-24-8"><a class="lnlinks" href="#hl-24-8"> 8</a>
+</span><span class="lnt" id="hl-24-9"><a class="lnlinks" href="#hl-24-9"> 9</a>
+</span><span class="lnt" id="hl-24-10"><a class="lnlinks" href="#hl-24-10">10</a>
+</span><span class="lnt" id="hl-24-11"><a class="lnlinks" href="#hl-24-11">11</a>
+</span><span class="lnt" id="hl-24-12"><a class="lnlinks" href="#hl-24-12">12</a>
+</span><span class="lnt" id="hl-24-13"><a class="lnlinks" href="#hl-24-13">13</a>
+</span><span class="lnt" id="hl-24-14"><a class="lnlinks" href="#hl-24-14">14</a>
+</span><span class="lnt" id="hl-24-15"><a class="lnlinks" href="#hl-24-15">15</a>
+</span><span class="lnt" id="hl-24-16"><a class="lnlinks" href="#hl-24-16">16</a>
+</span><span class="lnt" id="hl-24-17"><a class="lnlinks" href="#hl-24-17">17</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">---通过存储函数计算指定员工的年薪
+</span></span></span><span class="line"><span class="cl"><span class="c1">----存储过程和存储函数的参数都不能带长度，存储函数的返回值类型不能带长度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">f_yearsal</span><span class="p">(</span><span class="n">eno</span><span class="w"> </span><span class="n">emp</span><span class="p">.</span><span class="n">empno</span><span class="o">%</span><span class="k">type</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">number</span><span class="c1">--number是类型，不能加长度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">is</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="k">sql</span><span class="o">*</span><span class="mi">12</span><span class="o">+</span><span class="n">nvl</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">empno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eno</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---调用f_yearsal
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">f_yearsal</span><span class="p">(</span><span class="mi">7788</span><span class="p">);</span><span class="c1">--需要返回值接收
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="out类型参数">out类型参数<a hidden class="anchor" aria-hidden="true" href="#out类型参数">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-25-1"><a class="lnlinks" href="#hl-25-1"> 1</a>
+</span><span class="lnt" id="hl-25-2"><a class="lnlinks" href="#hl-25-2"> 2</a>
+</span><span class="lnt" id="hl-25-3"><a class="lnlinks" href="#hl-25-3"> 3</a>
+</span><span class="lnt" id="hl-25-4"><a class="lnlinks" href="#hl-25-4"> 4</a>
+</span><span class="lnt" id="hl-25-5"><a class="lnlinks" href="#hl-25-5"> 5</a>
+</span><span class="lnt" id="hl-25-6"><a class="lnlinks" href="#hl-25-6"> 6</a>
+</span><span class="lnt" id="hl-25-7"><a class="lnlinks" href="#hl-25-7"> 7</a>
+</span><span class="lnt" id="hl-25-8"><a class="lnlinks" href="#hl-25-8"> 8</a>
+</span><span class="lnt" id="hl-25-9"><a class="lnlinks" href="#hl-25-9"> 9</a>
+</span><span class="lnt" id="hl-25-10"><a class="lnlinks" href="#hl-25-10">10</a>
+</span><span class="lnt" id="hl-25-11"><a class="lnlinks" href="#hl-25-11">11</a>
+</span><span class="lnt" id="hl-25-12"><a class="lnlinks" href="#hl-25-12">12</a>
+</span><span class="lnt" id="hl-25-13"><a class="lnlinks" href="#hl-25-13">13</a>
+</span><span class="lnt" id="hl-25-14"><a class="lnlinks" href="#hl-25-14">14</a>
+</span><span class="lnt" id="hl-25-15"><a class="lnlinks" href="#hl-25-15">15</a>
+</span><span class="lnt" id="hl-25-16"><a class="lnlinks" href="#hl-25-16">16</a>
+</span><span class="lnt" id="hl-25-17"><a class="lnlinks" href="#hl-25-17">17</a>
+</span><span class="lnt" id="hl-25-18"><a class="lnlinks" href="#hl-25-18">18</a>
+</span><span class="lnt" id="hl-25-19"><a class="lnlinks" href="#hl-25-19">19</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">---使用存储过程计算年薪
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">procedure</span><span class="w"> </span><span class="n">p_yearsal</span><span class="p">(</span><span class="n">eno</span><span class="w"> </span><span class="n">emp</span><span class="p">.</span><span class="n">empno</span><span class="o">%</span><span class="k">type</span><span class="p">,</span><span class="w"> </span><span class="n">yearsal</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="nb">number</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">is</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">c</span><span class="w"> </span><span class="n">emp</span><span class="p">.</span><span class="n">comm</span><span class="o">%</span><span class="k">type</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">sal</span><span class="o">*</span><span class="mi">12</span><span class="p">,</span><span class="n">nvl</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">empno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eno</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">yearsal</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="o">+</span><span class="k">c</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--调用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">yearsal</span><span class="w"> </span><span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">p_yearsal</span><span class="p">(</span><span class="mi">7788</span><span class="p">,</span><span class="w"> </span><span class="n">yearsal</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="n">yearsal</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---in和out类型参数区别：凡是涉及到into查询语句赋值，或者:=赋值操作的参数，都必须使用out参数
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="存储过程和存储函数的区别">存储过程和存储函数的区别<a hidden class="anchor" aria-hidden="true" href="#存储过程和存储函数的区别">#</a></h3>
+<blockquote>
+<p>语法区别，关键字 存储函数比存储过程多了两个return 本质区别：存储函数有返回值，存储过程无返回值</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-26-1"><a class="lnlinks" href="#hl-26-1"> 1</a>
+</span><span class="lnt" id="hl-26-2"><a class="lnlinks" href="#hl-26-2"> 2</a>
+</span><span class="lnt" id="hl-26-3"><a class="lnlinks" href="#hl-26-3"> 3</a>
+</span><span class="lnt" id="hl-26-4"><a class="lnlinks" href="#hl-26-4"> 4</a>
+</span><span class="lnt" id="hl-26-5"><a class="lnlinks" href="#hl-26-5"> 5</a>
+</span><span class="lnt" id="hl-26-6"><a class="lnlinks" href="#hl-26-6"> 6</a>
+</span><span class="lnt" id="hl-26-7"><a class="lnlinks" href="#hl-26-7"> 7</a>
+</span><span class="lnt" id="hl-26-8"><a class="lnlinks" href="#hl-26-8"> 8</a>
+</span><span class="lnt" id="hl-26-9"><a class="lnlinks" href="#hl-26-9"> 9</a>
+</span><span class="lnt" id="hl-26-10"><a class="lnlinks" href="#hl-26-10">10</a>
+</span><span class="lnt" id="hl-26-11"><a class="lnlinks" href="#hl-26-11">11</a>
+</span><span class="lnt" id="hl-26-12"><a class="lnlinks" href="#hl-26-12">12</a>
+</span><span class="lnt" id="hl-26-13"><a class="lnlinks" href="#hl-26-13">13</a>
+</span><span class="lnt" id="hl-26-14"><a class="lnlinks" href="#hl-26-14">14</a>
+</span><span class="lnt" id="hl-26-15"><a class="lnlinks" href="#hl-26-15">15</a>
+</span><span class="lnt" id="hl-26-16"><a class="lnlinks" href="#hl-26-16">16</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">--查询出员工姓名，员工所在部门名称
+</span></span></span><span class="line"><span class="cl"><span class="c1">---传统实现
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ename</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">dname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">dept</span><span class="w"> </span><span class="n">d</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">deptno</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---使用存储函数实现
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">fdna</span><span class="p">(</span><span class="n">dno</span><span class="w"> </span><span class="n">dept</span><span class="p">.</span><span class="n">deptno</span><span class="o">%</span><span class="k">type</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">dept</span><span class="p">.</span><span class="n">dname</span><span class="o">%</span><span class="k">type</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">is</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">dna</span><span class="w"> </span><span class="n">dept</span><span class="p">.</span><span class="n">dname</span><span class="o">%</span><span class="k">type</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">dna</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dept</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">deptno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dno</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dna</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">---调用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">ename</span><span class="p">,</span><span class="w"> </span><span class="n">fdna</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">deptno</span><span class="p">)</span><span class="c1">--只有存储函数可以这样做，因为存储过程没有返回值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="触发器">触发器<a hidden class="anchor" aria-hidden="true" href="#触发器">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-27-1"><a class="lnlinks" href="#hl-27-1"> 1</a>
+</span><span class="lnt" id="hl-27-2"><a class="lnlinks" href="#hl-27-2"> 2</a>
+</span><span class="lnt" id="hl-27-3"><a class="lnlinks" href="#hl-27-3"> 3</a>
+</span><span class="lnt" id="hl-27-4"><a class="lnlinks" href="#hl-27-4"> 4</a>
+</span><span class="lnt" id="hl-27-5"><a class="lnlinks" href="#hl-27-5"> 5</a>
+</span><span class="lnt" id="hl-27-6"><a class="lnlinks" href="#hl-27-6"> 6</a>
+</span><span class="lnt" id="hl-27-7"><a class="lnlinks" href="#hl-27-7"> 7</a>
+</span><span class="lnt" id="hl-27-8"><a class="lnlinks" href="#hl-27-8"> 8</a>
+</span><span class="lnt" id="hl-27-9"><a class="lnlinks" href="#hl-27-9"> 9</a>
+</span><span class="lnt" id="hl-27-10"><a class="lnlinks" href="#hl-27-10">10</a>
+</span><span class="lnt" id="hl-27-11"><a class="lnlinks" href="#hl-27-11">11</a>
+</span><span class="lnt" id="hl-27-12"><a class="lnlinks" href="#hl-27-12">12</a>
+</span><span class="lnt" id="hl-27-13"><a class="lnlinks" href="#hl-27-13">13</a>
+</span><span class="lnt" id="hl-27-14"><a class="lnlinks" href="#hl-27-14">14</a>
+</span><span class="lnt" id="hl-27-15"><a class="lnlinks" href="#hl-27-15">15</a>
+</span><span class="lnt" id="hl-27-16"><a class="lnlinks" href="#hl-27-16">16</a>
+</span><span class="lnt" id="hl-27-17"><a class="lnlinks" href="#hl-27-17">17</a>
+</span><span class="lnt" id="hl-27-18"><a class="lnlinks" href="#hl-27-18">18</a>
+</span><span class="lnt" id="hl-27-19"><a class="lnlinks" href="#hl-27-19">19</a>
+</span><span class="lnt" id="hl-27-20"><a class="lnlinks" href="#hl-27-20">20</a>
+</span><span class="lnt" id="hl-27-21"><a class="lnlinks" href="#hl-27-21">21</a>
+</span><span class="lnt" id="hl-27-22"><a class="lnlinks" href="#hl-27-22">22</a>
+</span><span class="lnt" id="hl-27-23"><a class="lnlinks" href="#hl-27-23">23</a>
+</span><span class="lnt" id="hl-27-24"><a class="lnlinks" href="#hl-27-24">24</a>
+</span><span class="lnt" id="hl-27-25"><a class="lnlinks" href="#hl-27-25">25</a>
+</span><span class="lnt" id="hl-27-26"><a class="lnlinks" href="#hl-27-26">26</a>
+</span><span class="lnt" id="hl-27-27"><a class="lnlinks" href="#hl-27-27">27</a>
+</span><span class="lnt" id="hl-27-28"><a class="lnlinks" href="#hl-27-28">28</a>
+</span><span class="lnt" id="hl-27-29"><a class="lnlinks" href="#hl-27-29">29</a>
+</span><span class="lnt" id="hl-27-30"><a class="lnlinks" href="#hl-27-30">30</a>
+</span><span class="lnt" id="hl-27-31"><a class="lnlinks" href="#hl-27-31">31</a>
+</span><span class="lnt" id="hl-27-32"><a class="lnlinks" href="#hl-27-32">32</a>
+</span><span class="lnt" id="hl-27-33"><a class="lnlinks" href="#hl-27-33">33</a>
+</span><span class="lnt" id="hl-27-34"><a class="lnlinks" href="#hl-27-34">34</a>
+</span><span class="lnt" id="hl-27-35"><a class="lnlinks" href="#hl-27-35">35</a>
+</span><span class="lnt" id="hl-27-36"><a class="lnlinks" href="#hl-27-36">36</a>
+</span><span class="lnt" id="hl-27-37"><a class="lnlinks" href="#hl-27-37">37</a>
+</span><span class="lnt" id="hl-27-38"><a class="lnlinks" href="#hl-27-38">38</a>
+</span><span class="lnt" id="hl-27-39"><a class="lnlinks" href="#hl-27-39">39</a>
+</span><span class="lnt" id="hl-27-40"><a class="lnlinks" href="#hl-27-40">40</a>
+</span><span class="lnt" id="hl-27-41"><a class="lnlinks" href="#hl-27-41">41</a>
+</span><span class="lnt" id="hl-27-42"><a class="lnlinks" href="#hl-27-42">42</a>
+</span><span class="lnt" id="hl-27-43"><a class="lnlinks" href="#hl-27-43">43</a>
+</span><span class="lnt" id="hl-27-44"><a class="lnlinks" href="#hl-27-44">44</a>
+</span><span class="lnt" id="hl-27-45"><a class="lnlinks" href="#hl-27-45">45</a>
+</span><span class="lnt" id="hl-27-46"><a class="lnlinks" href="#hl-27-46">46</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 触发器：指定一个规则，在我们做增删改的时候，只要满足规则，自动触发无需调用
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 分为两类，语句级和行级，包含 for each row 的是行级触发器，加 for each now 的目的是为了使用:old 或者 :new 对象或者一行记录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 插入一条记录，输出一个新员工入职 --- 语句级触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">trigger</span><span class="w"> </span><span class="n">t1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">after</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">insert</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">on</span><span class="w"> </span><span class="n">person</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="s1">&#39;一个新员工入职&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--- 触发
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="k">values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;小马&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">commit</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--- 不能给员工降薪 -- 行级触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="n">tirgger</span><span class="w"> </span><span class="n">t2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">before</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">update</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">on</span><span class="w"> </span><span class="n">emp</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="k">row</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">:</span><span class="k">old</span><span class="p">.</span><span class="n">sal</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">:</span><span class="k">new</span><span class="p">.</span><span class="n">sal</span><span class="w"> </span><span class="k">then</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">raise_application_error</span><span class="p">(</span><span class="o">-</span><span class="mi">20001</span><span class="p">,</span><span class="s1">&#39;不能给员工降薪&#39;</span><span class="p">)</span><span class="c1">--只能-20001到-20999之间，不能重复
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--- 触发
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">update</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">empno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7788</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">commit</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--- 使用触发器实现主键自增 -- 行级触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">create</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">replace</span><span class="w"> </span><span class="k">trigger</span><span class="w"> </span><span class="n">autoid</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">before</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">insert</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">on</span><span class="w"> </span><span class="n">person</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="k">each</span><span class="w"> </span><span class="k">row</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">declare</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">begin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">s_person</span><span class="p">.</span><span class="n">nextval</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="p">:</span><span class="k">new</span><span class="p">.</span><span class="n">pid</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">end</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">--- 使用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="p">(</span><span class="n">pname</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;嗷嗷嗷&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">commit</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="参考链接">参考链接<a hidden class="anchor" aria-hidden="true" href="#参考链接">#</a></h3>
+<p><a href="https://www.bilibili.com/video/BV1aE411K7u8">视频教程</a></p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/oracle/">Oracle</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

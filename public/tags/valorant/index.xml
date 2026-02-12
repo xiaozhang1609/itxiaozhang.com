@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Valorant on IT小章</title>
+    <link>http://localhost:1313/tags/valorant/</link>
+    <description>Recent content in Valorant on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 31 Jan 2026 10:02:26 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/valorant/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>瓦洛兰特反作弊提示：不兼容的软件ene.sys</title>
+      <link>http://localhost:1313/valorant-anticheat-incompatible-software-ene-sys-fix/</link>
+      <pubDate>Sat, 31 Jan 2026 10:02:26 +0800</pubDate>
+      <guid>http://localhost:1313/valorant-anticheat-incompatible-software-ene-sys-fix/</guid>
+      <description>打开瓦洛兰特提示：检测到不兼容的软件组件请更新或卸载以下驱动以继续游戏 C:\Windows\system32\drivers\ene.sys</description>
+    </item>
+    <item>
+      <title>VALORANT安装失败：UNABLE to INSTALL</title>
+      <link>http://localhost:1313/valorant-installation-unable-to-install/</link>
+      <pubDate>Wed, 07 Jan 2026 12:18:30 +0800</pubDate>
+      <guid>http://localhost:1313/valorant-installation-unable-to-install/</guid>
+      <description>双击打开 VALORANT 安装包时报错，无法继续安装，提示 UNABLE TO INSTALL</description>
+    </item>
+    <item>
+      <title>特战英豪启动失败与VAN 81连线错误解决方法</title>
+      <link>http://localhost:1313/valorant-launch-failed-van-81-connection-error-fix/</link>
+      <pubDate>Tue, 06 Jan 2026 09:49:04 +0800</pubDate>
+      <guid>http://localhost:1313/valorant-launch-failed-van-81-connection-error-fix/</guid>
+      <description>《特战英豪》启动时提示“VALORANT 啟動失敗”，随后出现“連線錯誤”，错误代码 VAN-81，导致客户端无法正常连接并进入游戏。</description>
+    </item>
+    <item>
+      <title>无畏契约打开报错VAL43</title>
+      <link>http://localhost:1313/valorant-launch-error-val43/</link>
+      <pubDate>Fri, 02 Jan 2026 14:24:05 +0800</pubDate>
+      <guid>http://localhost:1313/valorant-launch-error-val43/</guid>
+      <description>打开无畏契约提示“连接至平台时出错”，错误代码 VAL43。通过检查网络设置、同步系统时间、处理 hosts 文件并修复游戏可恢复正常。</description>
+    </item>
+    <item>
+      <title>用蓝牙耳机玩无畏契约声音变闷了怎么办</title>
+      <link>http://localhost:1313/valorant-bluetooth-sound-muffled-fix/</link>
+      <pubDate>Tue, 04 Nov 2025 15:05:48 +0800</pubDate>
+      <guid>http://localhost:1313/valorant-bluetooth-sound-muffled-fix/</guid>
+      <description>玩《无畏契约》时蓝牙耳机声音发闷，多因录制功能触发免提模式。关闭「无畏时刻」录制及耳机免提服务即可恢复清晰音质。</description>
+    </item>
+  </channel>
+</rss>

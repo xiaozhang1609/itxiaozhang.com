@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>批量图片去水印：使用 IOPaint 实现固定掩膜批量去除图片水印 | IT小章</title>
+<meta name="keywords" content="批量处理, iopaint, 水印, python">
+<meta name="description" content="使用 IOPaint CLI 和固定掩膜图，在 CPU 环境下实现图片水印的批量自动去除，兼顾高效率与低门槛，适用于无 GPU 用户的图像处理需求。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/iopaint-fixed-mask-batch-inpainting-cpu/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/iopaint-fixed-mask-batch-inpainting-cpu/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      批量图片去水印：使用 IOPaint 实现固定掩膜批量去除图片水印
+    </h1>
+    <div class="post-description">
+      使用 IOPaint CLI 和固定掩膜图，在 CPU 环境下实现图片水印的批量自动去除，兼顾高效率与低门槛，适用于无 GPU 用户的图像处理需求。
+    </div>
+    <div class="post-meta"><span title='2025-05-19 18:27:22 +0800 CST'>2025年5月19日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/iopaint-fixed-mask-batch-inpainting-cpu/">https://itxiaozhang.com/iopaint-fixed-mask-batch-inpainting-cpu/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="一需求分析">一、需求分析<a hidden class="anchor" aria-hidden="true" href="#一需求分析">#</a></h2>
+<p>在批量处理图片的实际工作中，常会遇到统一位置的水印（如顶部编号、底部标识等）。手动擦除效率低，借助 AI 图像修复工具如 IOPaint（原 Lama Cleaner）可实现自动化处理。然而其默认使用 Web 界面，不能直接批处理，因此本文目标是：</p>
+<ul>
+<li><strong>批量处理整目录图片</strong></li>
+<li><strong>使用一个固定掩膜去除相同水印位置</strong></li>
+<li><strong>全自动运行，无需交互操作</strong></li>
+<li><strong>使用 CPU，兼容所有普通电脑</strong></li>
+<li><strong>输出保持原分辨率与文件名</strong></li>
+<li><strong>生成完整处理日志</strong></li>
+</ul>
+<hr>
+<h2 id="二解决思路">二、解决思路<a hidden class="anchor" aria-hidden="true" href="#二解决思路">#</a></h2>
+<h3 id="1-工具选择">1. 工具选择<a hidden class="anchor" aria-hidden="true" href="#1-工具选择">#</a></h3>
+<p>使用开源图像修复工具 <a href="https://github.com/Sanster/IOPaint">IOPaint</a>，支持命令行调用与 AI 修复模型（默认 lama），适合图像 inpainting 任务，兼容 CPU 和 GPU。</p>
+<h3 id="2-执行流程">2. 执行流程<a hidden class="anchor" aria-hidden="true" href="#2-执行流程">#</a></h3>
+<ul>
+<li>安装 Python 与 IOPaint CLI</li>
+<li>使用 Lama Cleaner 在线版手动生成统一的掩膜图</li>
+<li>用 Python 脚本批量执行 CLI 命令</li>
+<li>支持多进程并发，加速 CPU 处理</li>
+</ul>
+<hr>
+<h2 id="三掩膜文件准备与优化">三、掩膜文件准备与优化<a hidden class="anchor" aria-hidden="true" href="#三掩膜文件准备与优化">#</a></h2>
+<h3 id="1-掩膜制作">1. 掩膜制作<a hidden class="anchor" aria-hidden="true" href="#1-掩膜制作">#</a></h3>
+<p>打开 <a href="https://huggingface.co/spaces/Sanster/Lama-Cleaner-lama">Lama Cleaner Hugging Face 页面</a>，加载任意一张图，进行掩膜绘制：</p>
+<ul>
+<li>勾选「Download Mask」</li>
+<li>勾选「Manual Inpainting Mode」</li>
+<li>用画笔框选需要去除的水印区域</li>
+<li>点击「Download Mask」按钮下载掩膜图</li>
+</ul>
+<p>掩膜图与原图尺寸一致，白色区域为需修复部分。</p>
+<h3 id="2-掩膜要求">2. 掩膜要求<a hidden class="anchor" aria-hidden="true" href="#2-掩膜要求">#</a></h3>
+<ul>
+<li>保存为 <code>fixed_mask.jpg</code>，与原图尺寸相同（如 960x8049）</li>
+<li>白色区域表示需要修复，黑色保留不变</li>
+<li>掩膜应统一应用于所有图像</li>
+</ul>
+<hr>
+<h2 id="四脚本开发与并行优化仅使用-cpu">四、脚本开发与并行优化（仅使用 CPU）<a hidden class="anchor" aria-hidden="true" href="#四脚本开发与并行优化仅使用-cpu">#</a></h2>
+<p>为提升批量处理效率，我们开发了一个支持多进程并发的 Python 脚本。虽然运行在 CPU 上，但并行仍能显著提速。</p>
+<h3 id="-文件结构">📁 文件结构<a hidden class="anchor" aria-hidden="true" href="#-文件结构">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3">3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4">4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5">5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6">6</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">项目目录/
+</span></span><span class="line"><span class="cl">├─ input/              # 原始图片目录
+</span></span><span class="line"><span class="cl">├─ output/             # 输出目录（自动创建）
+</span></span><span class="line"><span class="cl">├─ fixed\_mask.jpg      # 掩膜图
+</span></span><span class="line"><span class="cl">├─ parallel\_iopaint.py # 主执行脚本
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="-脚本核心内容简要">📜 脚本核心内容（简要）<a hidden class="anchor" aria-hidden="true" href="#-脚本核心内容简要">#</a></h3>
+<ul>
+<li>遍历 <code>input/</code> 目录中的图片</li>
+<li>为每张图调用 IOPaint CLI 命令行工具</li>
+<li>使用 <code>multiprocessing.Pool</code> 并发处理多个任务</li>
+<li>日志记录每张图是否成功及处理耗时</li>
+</ul>
+<h3 id="-主要命令调用">🔧 主要命令调用<a hidden class="anchor" aria-hidden="true" href="#-主要命令调用">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3">3</a>
+</span><span class="lnt" id="hl-1-4"><a class="lnlinks" href="#hl-1-4">4</a>
+</span><span class="lnt" id="hl-1-5"><a class="lnlinks" href="#hl-1-5">5</a>
+</span><span class="lnt" id="hl-1-6"><a class="lnlinks" href="#hl-1-6">6</a>
+</span><span class="lnt" id="hl-1-7"><a class="lnlinks" href="#hl-1-7">7</a>
+</span><span class="lnt" id="hl-1-8"><a class="lnlinks" href="#hl-1-8">8</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;iopaint&#34;</span><span class="p">,</span> <span class="s2">&#34;run&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;--model&#34;</span><span class="p">,</span> <span class="s2">&#34;lama&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;--device&#34;</span><span class="p">,</span> <span class="s2">&#34;cpu&#34;</span><span class="p">,</span>           <span class="c1"># 明确使用 CPU，兼容性好</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;--image&#34;</span><span class="p">,</span> <span class="n">input_path</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;--mask&#34;</span><span class="p">,</span> <span class="n">mask_path</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;--output&#34;</span><span class="p">,</span> <span class="n">output_dir</span>
+</span></span><span class="line"><span class="cl"><span class="p">])</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="五使用说明">五、使用说明<a hidden class="anchor" aria-hidden="true" href="#五使用说明">#</a></h2>
+<h3 id="1-环境安装无-anaconda纯-pip">1. 环境安装（无 Anaconda，纯 pip）<a hidden class="anchor" aria-hidden="true" href="#1-环境安装无-anaconda纯-pip">#</a></h3>
+<p>确保已安装 Python 3.9/3.10，并添加到 PATH：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1">1</a>
+</span><span class="lnt" id="hl-2-2"><a class="lnlinks" href="#hl-2-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install torch torchvision
+</span></span><span class="line"><span class="cl">pip install iopaint
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>无需 GPU、CUDA，直接使用 CPU 即可。</p>
+</blockquote>
+<h3 id="2-执行脚本">2. 执行脚本<a hidden class="anchor" aria-hidden="true" href="#2-执行脚本">#</a></h3>
+<p>将图片放入 <code>input/</code>，掩膜命名为 <code>fixed_mask.jpg</code>，运行命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python parallel_iopaint.py
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>所有图片将自动处理，输出保存在 <code>output/</code>，日志记录写入 <code>process.log</code>。</p>
+<h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
+<li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86/">批量处理</a></li>
+      <li><a href="http://localhost:1313/tags/iopaint/">Iopaint</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%B0%B4%E5%8D%B0/">水印</a></li>
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

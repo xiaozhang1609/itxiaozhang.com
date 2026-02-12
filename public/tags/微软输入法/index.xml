@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>微软输入法 on IT小章</title>
+    <link>http://localhost:1313/tags/%E5%BE%AE%E8%BD%AF%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+    <description>Recent content in 微软输入法 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 27 Nov 2025 17:19:44 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%BE%AE%E8%BD%AF%E8%BE%93%E5%85%A5%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>微软输入法中文候选框不显示怎么办？</title>
+      <link>http://localhost:1313/microsoft-ime-chinese-candidate-box-fix/</link>
+      <pubDate>Thu, 27 Nov 2025 17:19:44 +0800</pubDate>
+      <guid>http://localhost:1313/microsoft-ime-chinese-candidate-box-fix/</guid>
+      <description>本文整理微软拼音在中文输入时不显示候选框的常见原因，并提供四类可行修复方法，包括启用兼容性、刷新键盘组件、重装语言包及启用旧版输入法，适用于多数 Win10/11 用户。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>文件批量重命名 | IT小章</title>
+<meta name="keywords" content="重命名">
+<meta name="description" content="本文探讨了如何利用Python批量重命名文件，通过正则表达式匹配文件名格式，并增加指定数值以实现文件名数字部分的更新。详细介绍了代码实现及其在不同文件夹结构下的应用，旨在帮助用户提升文件管理效率。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/batch-file-renaming/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/batch-file-renaming/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      文件批量重命名
+    </h1>
+    <div class="post-description">
+      本文探讨了如何利用Python批量重命名文件，通过正则表达式匹配文件名格式，并增加指定数值以实现文件名数字部分的更新。详细介绍了代码实现及其在不同文件夹结构下的应用，旨在帮助用户提升文件管理效率。
+    </div>
+    <div class="post-meta"><span title='2024-07-03 14:12:32 +0800 CST'>2024年7月3日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/batch-file-renaming/">https://itxiaozhang.com/batch-file-renaming/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<blockquote>
+<p>本文配合视频食用效果最佳，视频教程在文章末尾。</p>
+</blockquote>
+<h2 id="客户需求">客户需求<a hidden class="anchor" aria-hidden="true" href="#客户需求">#</a></h2>
+<p>目前有很多文件，文件名的格式类似于&quot;附件n，其他内容&quot;，其中n是一个数字。我希望将所有以&quot;附件n&quot;开头的文件名中的数字n增加m，文件名中的其他部分应保持不变。假设m=8，举例如下：</p>
+<table>
+  <thead>
+      <tr>
+          <th>原来的名称</th>
+          <th>修改后的名称</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>附件1-其他内容.txt</td>
+          <td>附件9-其他内容.txt</td>
+      </tr>
+      <tr>
+          <td>附件2-其他内容2.pdf</td>
+          <td>附件10-其他内容2.pdf</td>
+      </tr>
+      <tr>
+          <td>附件11-其他名称.txt</td>
+          <td>附件19-其他名称.txt</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="代码">代码<a hidden class="anchor" aria-hidden="true" href="#代码">#</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17">17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18">18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19">19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20">20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21">21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22">22</a>
+</span><span class="lnt" id="hl-0-23"><a class="lnlinks" href="#hl-0-23">23</a>
+</span><span class="lnt" id="hl-0-24"><a class="lnlinks" href="#hl-0-24">24</a>
+</span><span class="lnt" id="hl-0-25"><a class="lnlinks" href="#hl-0-25">25</a>
+</span><span class="lnt" id="hl-0-26"><a class="lnlinks" href="#hl-0-26">26</a>
+</span><span class="lnt" id="hl-0-27"><a class="lnlinks" href="#hl-0-27">27</a>
+</span><span class="lnt" id="hl-0-28"><a class="lnlinks" href="#hl-0-28">28</a>
+</span><span class="lnt" id="hl-0-29"><a class="lnlinks" href="#hl-0-29">29</a>
+</span><span class="lnt" id="hl-0-30"><a class="lnlinks" href="#hl-0-30">30</a>
+</span><span class="lnt" id="hl-0-31"><a class="lnlinks" href="#hl-0-31">31</a>
+</span><span class="lnt" id="hl-0-32"><a class="lnlinks" href="#hl-0-32">32</a>
+</span><span class="lnt" id="hl-0-33"><a class="lnlinks" href="#hl-0-33">33</a>
+</span><span class="lnt" id="hl-0-34"><a class="lnlinks" href="#hl-0-34">34</a>
+</span><span class="lnt" id="hl-0-35"><a class="lnlinks" href="#hl-0-35">35</a>
+</span><span class="lnt" id="hl-0-36"><a class="lnlinks" href="#hl-0-36">36</a>
+</span><span class="lnt" id="hl-0-37"><a class="lnlinks" href="#hl-0-37">37</a>
+</span><span class="lnt" id="hl-0-38"><a class="lnlinks" href="#hl-0-38">38</a>
+</span><span class="lnt" id="hl-0-39"><a class="lnlinks" href="#hl-0-39">39</a>
+</span><span class="lnt" id="hl-0-40"><a class="lnlinks" href="#hl-0-40">40</a>
+</span><span class="lnt" id="hl-0-41"><a class="lnlinks" href="#hl-0-41">41</a>
+</span><span class="lnt" id="hl-0-42"><a class="lnlinks" href="#hl-0-42">42</a>
+</span><span class="lnt" id="hl-0-43"><a class="lnlinks" href="#hl-0-43">43</a>
+</span><span class="lnt" id="hl-0-44"><a class="lnlinks" href="#hl-0-44">44</a>
+</span><span class="lnt" id="hl-0-45"><a class="lnlinks" href="#hl-0-45">45</a>
+</span><span class="lnt" id="hl-0-46"><a class="lnlinks" href="#hl-0-46">46</a>
+</span><span class="lnt" id="hl-0-47"><a class="lnlinks" href="#hl-0-47">47</a>
+</span><span class="lnt" id="hl-0-48"><a class="lnlinks" href="#hl-0-48">48</a>
+</span><span class="lnt" id="hl-0-49"><a class="lnlinks" href="#hl-0-49">49</a>
+</span><span class="lnt" id="hl-0-50"><a class="lnlinks" href="#hl-0-50">50</a>
+</span><span class="lnt" id="hl-0-51"><a class="lnlinks" href="#hl-0-51">51</a>
+</span><span class="lnt" id="hl-0-52"><a class="lnlinks" href="#hl-0-52">52</a>
+</span><span class="lnt" id="hl-0-53"><a class="lnlinks" href="#hl-0-53">53</a>
+</span><span class="lnt" id="hl-0-54"><a class="lnlinks" href="#hl-0-54">54</a>
+</span><span class="lnt" id="hl-0-55"><a class="lnlinks" href="#hl-0-55">55</a>
+</span><span class="lnt" id="hl-0-56"><a class="lnlinks" href="#hl-0-56">56</a>
+</span><span class="lnt" id="hl-0-57"><a class="lnlinks" href="#hl-0-57">57</a>
+</span><span class="lnt" id="hl-0-58"><a class="lnlinks" href="#hl-0-58">58</a>
+</span><span class="lnt" id="hl-0-59"><a class="lnlinks" href="#hl-0-59">59</a>
+</span><span class="lnt" id="hl-0-60"><a class="lnlinks" href="#hl-0-60">60</a>
+</span><span class="lnt" id="hl-0-61"><a class="lnlinks" href="#hl-0-61">61</a>
+</span><span class="lnt" id="hl-0-62"><a class="lnlinks" href="#hl-0-62">62</a>
+</span><span class="lnt" id="hl-0-63"><a class="lnlinks" href="#hl-0-63">63</a>
+</span><span class="lnt" id="hl-0-64"><a class="lnlinks" href="#hl-0-64">64</a>
+</span><span class="lnt" id="hl-0-65"><a class="lnlinks" href="#hl-0-65">65</a>
+</span><span class="lnt" id="hl-0-66"><a class="lnlinks" href="#hl-0-66">66</a>
+</span><span class="lnt" id="hl-0-67"><a class="lnlinks" href="#hl-0-67">67</a>
+</span><span class="lnt" id="hl-0-68"><a class="lnlinks" href="#hl-0-68">68</a>
+</span><span class="lnt" id="hl-0-69"><a class="lnlinks" href="#hl-0-69">69</a>
+</span><span class="lnt" id="hl-0-70"><a class="lnlinks" href="#hl-0-70">70</a>
+</span><span class="lnt" id="hl-0-71"><a class="lnlinks" href="#hl-0-71">71</a>
+</span><span class="lnt" id="hl-0-72"><a class="lnlinks" href="#hl-0-72">72</a>
+</span><span class="lnt" id="hl-0-73"><a class="lnlinks" href="#hl-0-73">73</a>
+</span><span class="lnt" id="hl-0-74"><a class="lnlinks" href="#hl-0-74">74</a>
+</span><span class="lnt" id="hl-0-75"><a class="lnlinks" href="#hl-0-75">75</a>
+</span><span class="lnt" id="hl-0-76"><a class="lnlinks" href="#hl-0-76">76</a>
+</span><span class="lnt" id="hl-0-77"><a class="lnlinks" href="#hl-0-77">77</a>
+</span><span class="lnt" id="hl-0-78"><a class="lnlinks" href="#hl-0-78">78</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">logging</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">argparse</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">setup_logging</span><span class="p">(</span><span class="n">log_file</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    设置日志记录的配置，同时输出到文件和控制台。
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> - </span><span class="si">%(levelname)s</span><span class="s1"> - </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">handlers</span><span class="o">=</span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">log_file</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">rename_files</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">number_to_add</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    重命名指定目录及其子目录中的文件。
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^附件(\d+)(.*)$&#39;</span><span class="p">)</span>  <span class="c1"># 匹配以“附件数字”开头的文件名</span>
+</span></span><span class="line"><span class="cl">    <span class="n">total_renamed_count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="n">total_error_count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">renamed_count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="n">error_count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">match</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="k">match</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="k">match</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="k">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># 提取文件名中的数字部分</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">rest</span> <span class="o">=</span> <span class="k">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>         <span class="c1"># 提取文件名中的其余部分</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">new_number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="n">number_to_add</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">new_filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;附件</span><span class="si">{</span><span class="n">new_number</span><span class="si">}{</span><span class="n">rest</span><span class="si">}</span><span class="s1">&#39;</span>  <span class="c1"># 构造新的文件名</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="n">old_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">root</span><span class="p">)</span> <span class="o">/</span> <span class="n">filename</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">new_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">root</span><span class="p">)</span> <span class="o">/</span> <span class="n">new_filename</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="n">old_file</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">new_file</span><span class="p">)</span>  <span class="c1"># 重命名文件</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">renamed_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">total_renamed_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Error renaming file </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">error_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">total_error_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;在目录 &#34;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s1">&#34; 中修改了 </span><span class="si">{</span><span class="n">renamed_count</span><span class="si">}</span><span class="s1"> 个文件。&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Renaming complete. </span><span class="si">{</span><span class="n">total_renamed_count</span><span class="si">}</span><span class="s1"> files renamed, </span><span class="si">{</span><span class="n">total_error_count</span><span class="si">}</span><span class="s1"> errors occurred.&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    主程序入口，解析命令行参数并调用重命名函数。
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;重命名目录及其子目录中的文件。&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--dir&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;要处理的目录 (默认: 当前目录)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--log&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;rename_log.txt&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;日志文件名 (默认: rename_log.txt)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">setup_logging</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">log</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">number_to_add</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># 用户输入的增量m，这里设置为固定值8</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;请输入一个有效的整数。&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">rename_files</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">dir</span><span class="p">,</span> <span class="n">number_to_add</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;操作完成。按 Enter 键退出。&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="目录结构">目录结构<a hidden class="anchor" aria-hidden="true" href="#目录结构">#</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span><span class="lnt" id="hl-1-2"><a class="lnlinks" href="#hl-1-2">2</a>
+</span><span class="lnt" id="hl-1-3"><a class="lnlinks" href="#hl-1-3">3</a>
+</span><span class="lnt" id="hl-1-4"><a class="lnlinks" href="#hl-1-4">4</a>
+</span><span class="lnt" id="hl-1-5"><a class="lnlinks" href="#hl-1-5">5</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">|   rename_files.py.py
+</span></span><span class="line"><span class="cl">\---文件夹1
+</span></span><span class="line"><span class="cl">        附件11，其他名称.txt
+</span></span><span class="line"><span class="cl">        附件149，其他名称.pdf
+</span></span><span class="line"><span class="cl">        附件149，其他名称1.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/%E9%87%8D%E5%91%BD%E5%90%8D/">重命名</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

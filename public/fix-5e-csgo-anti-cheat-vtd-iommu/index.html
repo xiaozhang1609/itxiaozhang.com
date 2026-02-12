@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>5E平台CSGO报错：反作弊异常提示需开启VT-d与IOMMU的解决方法 | IT小章</title>
+<meta name="keywords" content="5e平台, csgo报错, 反作弊, ace, bios, 虚拟化, vtd, iommu">
+<meta name="description" content="本文归纳总结了5E平台运行CSGO时出现「反作弊异常，需开启VT-d或IOMMU」的完整解决方案，涵盖系统修复、关闭Hyper-V与内存完整性、禁用hypervisor引导，以及在BIOS中开启虚拟化功能等步骤，帮助用户快速排障。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/fix-5e-csgo-anti-cheat-vtd-iommu/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/fix-5e-csgo-anti-cheat-vtd-iommu/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      5E平台CSGO报错：反作弊异常提示需开启VT-d与IOMMU的解决方法
+    </h1>
+    <div class="post-description">
+      本文归纳总结了5E平台运行CSGO时出现「反作弊异常，需开启VT-d或IOMMU」的完整解决方案，涵盖系统修复、关闭Hyper-V与内存完整性、禁用hypervisor引导，以及在BIOS中开启虚拟化功能等步骤，帮助用户快速排障。
+    </div>
+    <div class="post-meta"><span title='2025-09-21 18:22:48 +0800 CST'>2025年9月21日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/">https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="问题描述">问题描述<a hidden class="anchor" aria-hidden="true" href="#问题描述">#</a></h2>
+<p>在 5E 对战平台启动 CSGO 时弹出报错：
+「反作弊异常
+您的机器需要开启Vt-d和iommu功能，请进入BIOS设置内开启相关功能后重试」
+同时可能伴随「部署失败」或无法进入游戏的情况。</p>
+<h2 id="问题原因">问题原因<a hidden class="anchor" aria-hidden="true" href="#问题原因">#</a></h2>
+<ul>
+<li>CPU 虚拟化相关功能未开启（Intel 常见为 VT-d，AMD 为 IOMMU）。</li>
+<li>BIOS 版本过旧或主板固件未暴露相关选项，无法开启虚拟化直通。</li>
+<li>Windows 安全/虚拟化功能与反作弊冲突（如 Hyper-V、内核内存完整性或已加载的 hypervisor）。</li>
+<li>系统文件或环境异常导致检测误报。</li>
+</ul>
+<h2 id="解决办法">解决办法<a hidden class="anchor" aria-hidden="true" href="#解决办法">#</a></h2>
+<ol>
+<li>
+<p><strong>确认主板型号</strong></p>
+<ul>
+<li>按 Win+R，输入 <code>msinfo32</code> 回车，查看「主板制造商/型号」，用于后续查找 BIOS 及设置指南。</li>
+</ul>
+</li>
+<li>
+<p><strong>系统检查与修复</strong></p>
+<ul>
+<li>
+<p>以管理员身份打开命令提示符，运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sfc /scannow
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>等待扫描并修复完成，重启系统（如有修复提示）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>关闭 Hyper-V 与关闭 hypervisor 引导</strong></p>
+<ul>
+<li>
+<p>控制面板 → 程序 → 「启用或关闭 Windows 功能」，取消勾选「Hyper-V」，确认并重启（如提示）。</p>
+</li>
+<li>
+<p>以管理员身份打开命令提示符，运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">bcdedit /set hypervisorlaunchtype off
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>以上操作执行后重启生效。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>关闭内核内存完整性（Core isolation → Memory integrity）</strong></p>
+<ul>
+<li>打开「Windows 安全中心」→「设备安全性」→「内核隔离详细信息」，将「内存完整性」切换为关闭，按提示重启。</li>
+</ul>
+</li>
+<li>
+<p><strong>进入 BIOS 并开启 VT-d / IOMMU</strong></p>
+<ul>
+<li>重启并按对应按键进入 BIOS（常见例）：华硕 F2/DEL，微星 DEL，技嘉 DEL，戴尔 F2，联想 F1，惠普 F10，小米 F2。</li>
+<li>若 BIOS 有「Advanced/高级模式」，进入后搜索关键词「VT-d」「Virtualization」「IOMMU」「虚拟化」。</li>
+<li>若存在 Secure Boot，可先将其设为 Disabled（部分主板需关闭安全启动后才能更改虚拟化选项）。</li>
+<li>找到后开启 VT-d（Intel）或 IOMMU（AMD），保存（通常 F10）并重启。</li>
+</ul>
+</li>
+<li>
+<p><strong>若 BIOS 找不到相关选项，更新 BIOS</strong></p>
+<ul>
+<li>到主板或整机厂商官网，根据主板型号下载最新 BIOS/固件与升级工具，严格按厂商说明升级。</li>
+<li>升级时确保稳定供电，按厂商流程操作。升级完成后再次进入 BIOS 寻找并开启虚拟化选项。</li>
+</ul>
+</li>
+<li>
+<p><strong>验证与回测</strong></p>
+<ul>
+<li>完成上述步骤并重启后，启动 5E 平台和 CSGO 进行验证。</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>小提示：开启虚拟化仅为游玩平台时需要，非游玩期间可根据需要关闭；不同主板 BIOS 菜单和命名差异较大，按主板品牌文档操作为准。</p>
+</blockquote>
+<h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
+<li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/5e%E5%B9%B3%E5%8F%B0/">5E平台</a></li>
+      <li><a href="http://localhost:1313/tags/csgo%E6%8A%A5%E9%94%99/">Csgo报错</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%8F%8D%E4%BD%9C%E5%BC%8A/">反作弊</a></li>
+      <li><a href="http://localhost:1313/tags/ace/">Ace</a></li>
+      <li><a href="http://localhost:1313/tags/bios/">BIOS</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/">虚拟化</a></li>
+      <li><a href="http://localhost:1313/tags/vtd/">VTD</a></li>
+      <li><a href="http://localhost:1313/tags/iommu/">IOMMU</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

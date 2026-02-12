@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Asus on IT小章</title>
+    <link>http://localhost:1313/tags/asus/</link>
+    <description>Recent content in Asus on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 06 Jan 2026 15:10:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/asus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>重装系统后使用 WinRE 恢复华硕官方系统</title>
+      <link>http://localhost:1313/restore-asus-official-system-with-winre-after-reinstall/</link>
+      <pubDate>Tue, 06 Jan 2026 15:10:49 +0800</pubDate>
+      <guid>http://localhost:1313/restore-asus-official-system-with-winre-after-reinstall/</guid>
+      <description>重装 Windows 11 专业版后，华硕笔记本丢失 MyASUS in WinRE 恢复选项？本文提供基于 reagentc 的修复方案，并深度解析其生效背后的系统分区机制。</description>
+    </item>
+  </channel>
+</rss>

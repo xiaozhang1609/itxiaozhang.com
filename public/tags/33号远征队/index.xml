@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>33号远征队 on IT小章</title>
+    <link>http://localhost:1313/tags/33%E5%8F%B7%E8%BF%9C%E5%BE%81%E9%98%9F/</link>
+    <description>Recent content in 33号远征队 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 02 Feb 2026 10:37:59 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/33%E5%8F%B7%E8%BF%9C%E5%BE%81%E9%98%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决《33号远征队》UE报错和《黑神话：悟空》显存不足问题</title>
+      <link>http://localhost:1313/fix-33-expedition-ue-error-and-black-myth-wukong-vram-error/</link>
+      <pubDate>Mon, 02 Feb 2026 10:37:59 +0800</pubDate>
+      <guid>http://localhost:1313/fix-33-expedition-ue-error-and-black-myth-wukong-vram-error/</guid>
+      <description>运行《33号远征队》时出现 UE 报错，启动《黑神话：悟空》在编译着色器阶段提示显存不足。本文记录上述错误的具体表现，并展示解决方法。</description>
+    </item>
+  </channel>
+</rss>

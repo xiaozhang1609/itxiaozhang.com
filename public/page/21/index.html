@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IT小章</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">生僻字轻松输入
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/easy-input-for-rare-characters/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+阅读全文：https://itxiaozhang.com/easy-input-for-rare-characters/
+此教程配合视频学习效果最佳，视频教程在文章末尾。
+微软输入法是Windows操作系统内置的中文输入工具，提供全拼、双拼、笔画和英文输入方式，以及特殊输入模式如V模式和U模式，支持数字、日期、公式和特殊字符输入。本文探讨了微软拼音输入法的V模式和U模式，这两种模式为用户提供了高效的输入解决方案，适用于专业场景如数据处理和学术研究。
+V模式输入 V模式可以完成数据格式转换，使用户能够高效地输入格式化的数字、日期、时间以及数学公式。
+数字格式化 用户输入“v123”，可以转化为“一百二十三”。 用户输入“v123”，可以转化为“壹佰贰拾叁”。 用户输入“v123”，可以转化为“CXXIII”。 日期输入 通过“v2024.5.13”，转换为“2024年5月13日”。 通过“v2024.5.13”，转换为“二〇二四年五月十三日”。 通过“v2024.5.13”，转换为“贰零贰肆年伍月壹拾叁日”。 通过“v2024.5.13”，转换为“农历二〇二四年四月初六”。 时间格式化 输入“v12:34”，直接得到“十二时三十四分”。 输入“v12:34”，直接得到“12时34分”。 输入“v12:34”，直接得到“十二分三十四秒”。 数学公式处理 键入“v1&#43;2”，输出结果为“3”。 键入“v1&#43;2”，输出结果为“1&#43;2=3”。 U模式输入 U模式则更侧重于汉字构成的细节，支持笔画输入、字符拆分，以及专业领域符号的快捷输入。
+笔画输入：输入“h/横，s/竖，p/撇，n/捺，z/折”。 “丅”的笔画代码为“uhs”。 “㐅”的笔画代码为“upn”。 字符拆分 如“火&#43;火&#43;火”可组成“焱”。 如“火&#43;火&#43;火&#43;火”可组成“燚”。 符号专用输入 单位符号“uudw”快速转换为“单位”， 序号“uuxh”快速转换为“序号”， 特殊字符“uuts”转换为“特殊”， 标点符号“uubd”， 数学符号“uusx”， 几何符号“uujh”， 字母“uuzm”。 视频教程 哔哩哔哩 西瓜视频 </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-05-13 12:56:38 +0800 CST'>May 13, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 生僻字轻松输入" href="http://localhost:1313/easy-input-for-rare-characters/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">双击文件夹提示找不到应用程序
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/double-click-folder-no-application-found/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+阅读全文：https://itxiaozhang.com/double-click-folder-no-application-found/
+此教程配合视频学习效果最佳，视频教程在文章末尾。
+问题描述 在 Win10/11 操作系统中：双击文件夹时系统提示“找不到应用程序”，但通过右键菜单选择“打开”能正常打开文件夹。这种情况通常表明文件夹的默认打开方式被错误地修改或指向了一个不存在的应用程序。
+原理分析 Windows操作系统使用注册表来存储系统和应用程序的配置信息，包括文件和文件夹的默认操作（如双击打开）。当安装第三方文件管理器（如FileManager）后，这些程序可能会修改文件夹打开的默认命令，指向自己的可执行文件。如果之后这些第三方应用被卸载，而相关的注册表设置未被清除，系统会尝试调用已不存在的程序来打开文件夹，从而出现错误提示。
+解决办法 1. 注册表修复 步骤一：备份注册表
+在进行任何操作前，首先打开注册表编辑器（按Win &#43; R，输入regedit，按Enter），导出当前的注册表作为备份。 步骤二：检查注册表项
+定位到 HKEY_CURRENT_USER\Software\Classes\Folder\shell。 检查该路径下是否有异常的键值，如 openinfilemanager。标准设置应只包含 open 作为默认命令。 步骤三：修改或删除异常键值
+如果 shell 下的默认值不是 open，应将其修改为 open。 删除任何非 open 的异常键值，如 openinfilemanager 或其他第三方应用程序创建的键。 步骤四：应用更改并重启
+完成修改后，关闭注册表编辑器并重启电脑以使更改生效。 参考链接：https://www.zhihu.com/question/498553343
+视频教程 哔哩哔哩 西瓜视频 </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-05-12 16:57:56 +0800 CST'>May 12, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 双击文件夹提示找不到应用程序" href="http://localhost:1313/double-click-folder-no-application-found/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">增援未来计划-阅读与感悟周记10
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-10/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+文章 使用 Ollama 自建大模型并对接第三方平台二次分发盈利 - lcry 五一假期留念 » Dabenshi Blog 波士顿之行 #63 云南瑰宝：大理古城游记 - 云心怀鹤 我如何夺冠新加坡首届 GPT-4 提示工程大赛 - [译] | 宝玉的分享 记录一个噩梦 – est の 输入输出 呼伦贝尔暮归 by UU 月刊（第26期）：旅途 - Airing 的博客 冰岛极限自驾游记 - FKUNのBLOG 不花钱的同声传译 - @Lenciel “表现诚意”和“启动资金”：关于彩礼的两个流行谎言 Vol.77 短更新 | 壹苇可航 游记｜宁波象山，北纬30度最美海岸线 家书（2024） - Elizen “小仙女”、彩礼与传统父权制 2024年五一外出游记 – 伪医生律师的博客 反面教材 - 因为很想念 弱智吧，人类最后的防线，中文AI大模型训练的神奇语料库，简短幽默蕴含哲理的网络金句聚集地已经被用于训练大模型 : : 硕鼠的博客站 不要再给我硬灌流量了 - 河南郑州无罪刑事辩护律师 - 日记随想 - 刑辩人在路上 跳出自己的舒适圈 Kimi上新：月之暗面有了光，也有了LangGPT 那个 50 万 - Innomad 一挪迈 一些最近的想法 - Ratodo 让搜索引擎更好用的秘密（二） - 小站背面 为什么要看《新闻联播》 - 记录生活，精彩一刻 行者微评论180-某度副总与大环境-博客|综合-风雨行者 老用户的失望 | 槿呈Goidea 乐天知命 - 太隐 大理洱海：骑行之旅的绝美风景 - 云心怀鹤 言论 德国欧洲议会议员克里斯汀·安德森：“未来的极权政权不再需要带电的铁丝网围栏。他们所需要的只是一部手机、一个二维码、一个数字身份证，然后他们就可以对你为所欲为，这很可怕。” 索伦·克尔凯郭尔：生命只能向后理解，但必须向前生活。 《世上为什么要有图书馆》：在我踏入官场的第一个月里，我去过不同的场合，“被重视”的轻微快乐以及“被忽视”的轻微失落，都发生过。我把它们摘出来放在手心注视，它们从什么样的土壤里长出来，我要把土壤清除，我不允许以后我的心里再长出这种蘑菇。 播客 S8E04 | 70%以上的公司都在做 AI？这届 YC 有哪些值得关注的新动向 有声小说 《明朝那些事儿》(100%) 动漫 《天国大魔境》(10/13)：很精彩。 《物理魔法使马修》：有些无脑，第一部看完了，第二部还剩下几集受不了这种无脑，没有看完。 音乐 AI生成：让我们荡起双桨（重金属） 读书 《长安的荔枝》(100%) 《世上为什么要有图书馆》(43%) 开源项目 Gmeek: Issues博客框架 现代化诗词学习网站 日记 5.5，使用Gmeek: Issues博客框架搭建备用备用博客。 5.5，走的好好的，突然后脑勺干净像被电一下，身体有个毛病已经2年左右了，冷不丁来一下，完全没规律。 5.5，我想找个机会，带爸妈去有大海的地方玩一玩。 5.7，我经常去“老马牛羊肉”这家店买牛肉。之前某一次买了感觉不错，就一直在他家买肉，不料今天他给我耍奸，卖给我1斤多看着不好的牛肉。当时买的时候他直接从什么地方拿出来的，而不是现割，我就质疑的问了他，他说这是很好的里脊肉，其他人剩下的，我选择信了他，买回来以后我近距离观察，才发现肉质不好，闻着倒是闻不出来味道。我决定，下次不去他家了。 5.8，昨晚梦到自己犯法了，被公安约谈，要求做2年牢，但是我怎么也想不起我做了什么违法的事。还梦到这已经是我第三次违法了，最后在极度纠结中被吓醒了。 5.8，昨天睡得很晚，在看动漫，然后听到邻居半夜亲热的响动，再看看自己，倍感孤独。 5.9，我很早就关闭了朋友圈，今天早晨却鬼使神差的点开了高中初恋的朋友圈，看到了一条4月的动态，她和她的男朋友，看起来很甜蜜。认识的人好像都成双成对了，我还是形单影只，哎。每当这种时候，我都会用这句话来安慰自己：没有一种生活是完美的。 5.9，今晚又看了《长安三万里》，感触良多。 唐朝人人都会写诗。 李白行卷不成，返回扬州，在扬州写词名气照样传进长安。 李白得到皇帝赏识，写信邀请高适去长安，要为高适谋前程，可面对高适，却不记得写信的事情，高适有些不高兴，但他没有真的怪李白，他知道自己和李白的路不一样，他的路在梁园，在军旅。 每首诗都有故事，读懂诗后的故事，也就读懂了诗。 唐诗摘抄 1 2 3 4 5 6 7 8 9 10 11 12 13 14 汉家烟尘在东北，汉将辞家破残贼。 男儿本自重横行，天子非常赐颜色。 摐金伐鼓下榆关，旌旗逶迤碣石间。 校尉羽书飞瀚海，单于猎火照狼山。 山川萧条极边土，胡骑凭陵杂风雨。 战士军前半死生，美人帐下犹歌舞。 大漠穷秋塞草腓，孤城落日斗兵稀。 身当恩遇常轻敌，力尽关山未解围。 铁衣远戍辛勤久，玉筋应啼别离后。 少妇城南欲断肠，征人蓟北空回首。 边风飘飘那可度，绝域苍茫更何有。 杀气三时作阵云，寒声一夜传刁斗。 相看白刃血纷纷，死节从来岂顾勋。 君不见沙场征战苦，至今犹忆李将军。 1 2 3 4 昔人已乘黄鹤去，此地空余黄鹤楼。 黄鹤一去不复返，白云千载空悠悠。 晴川历历汉阳树，芳草萋萋鹦鹉洲。 日暮乡关何处是？烟波江上使人愁。 1 2 秦时明月汉时关，万里长征人未还。 但使龙城飞将在，不教胡马度阴山。 1 2 3 4 岱宗夫如何？齐鲁青未了。 造化钟神秀，阴阳割昏晓。 荡胸生曾云，决眦入归鸟。 会当凌绝顶，一览众山小。 1 2 风急天高猿啸哀，渚清沙白鸟飞回。 无边落木萧萧下，不尽长江滚滚来。 1 2 红豆生南国，春来发几枝。 愿君多采撷，此物最相思。 想法 没有一种生活是完美的。我选择了这种生活：享受自由，面对孤独。 做一个全网粉丝墙，可以实时显示某个博主的所有粉丝，点进头像可以进一步看到头像、和博主的互动、粉丝的账号空间等等。 老年人市场很大，服务于老年人很有前途。 画古代的画，贴上现代的事物。 讲故事永远不过时，而且非常实用，我应该学会讲故事。 我的阅读量很小，文笔太差，不能很好的组织文字，但我一直有一个写小说的梦想。我应该构思好情节，然后再往里面填充内容，以情节取胜。 我计划新开一个想法页面，专门记录我的所有想法，这些想法将成为我做的那件事的一部分，我暂时还不知道我要做的那件事是什么。 笑话 朋友说，她爸爸早年买了只猴儿回家，说当儿子养。后来被当地动物园和警察知道了，上门逮猴也逮她爸爸。叔叔抵着门不让人进，高喊：“谁都不能把我儿子带走！”最后，还是给带走了，猴儿进了动物园，叔叔被关了几个月。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-05-11 11:08:40 +0800 CST'>May 11, 2024</span>&nbsp;·&nbsp;<span>11 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 增援未来计划-阅读与感悟周记10" href="http://localhost:1313/reinforce-future-plan-reading-reflections-week-10/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">桌面图标Bug：Win10/Win11桌面图标占用空间变成长方形怎么办？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/win10-win11-desktop-icon-bug-rectangular-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+阅读全文：https://itxiaozhang.com/win10-win11-desktop-icon-bug-rectangular-fix/
+此教程配合视频学习效果最佳，视频教程在文章末尾。
+问题描述 在使用Windows 10或Windows 11操作系统时，桌面图标的间距突然变得很大，变成了长方形。该问题通常发生在修改屏幕分辨率、连接外部显示器、频繁缩放后等。
+解决办法 打开注册表编辑器
+按下Win &#43; R快捷键打开“运行”对话框，输入regedit，然后按回车键。在弹出的用户账户控制提示中点击“是”以打开注册表编辑器。 定位到相应键值
+在注册表编辑器的左侧目录树中，导航至以下路径：
+HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics 备份注册表
+修改图标间距
+在右侧找到名为IconSpacing和IconVerticalSpacing的两个键值。 双击IconSpacing，将数值数据改为-1125，然后同样操作修改IconVerticalSpacing为-1125。 确认更改后关闭注册表编辑器。 注销/重启计算机
+完成修改后，注销/重启电脑让更改生效。 视频教程 哔哩哔哩 西瓜视频 </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-05-07 10:32:36 +0800 CST'>May 7, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 桌面图标Bug：Win10/Win11桌面图标占用空间变成长方形怎么办？" href="http://localhost:1313/win10-win11-desktop-icon-bug-rectangular-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">增援未来计划-阅读与感悟周记9
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-9/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+阅读全文：https://itxiaozhang.com/reinforce-future-plan-reading-reflections-week-9/
+文末或者关于页面有我的联系方式噢。
+文章 青年人，读马克思吧！ - 太隐 奥威尔与核武器- 卢昌海 不出意外地被放鸽子 – Richie的时光机 新疆天山 - 时光日志 我的省钱路数 • Usubeni Fantasy 为什么是日本 闲话 UFO - YouTube 2024.05.01: 各种链接 - Owen的博客 4.29日——挖野菜！ 漫步在海滩上的回忆 – 先森博客 海洋馆半天游 - 网友小宋 交个朋友 - Another Dayu 2024年4月阅读书摘 今日收到19张国际明信片 - 生活点滴 - 小杨生活志 二四年四月小结 - 网友小宋 山重水复疑无路，全国可飞好去处 - 陶小桃Blog 近期 4月日常 - 当下 开源商业化软件的陷阱 - Prologue 一晚上省出来两千块是什么体验？ | 子虚栈 我将自己困在了“信息茧房” – 有话豪说 捂胸有感 - 俊赏 人际吸引力 | 马草原 の Blog 言论 这不是粗制滥造的烂片，而是包装精美的过期火腿肠。 你投入在目标设定上的每一分钟都是值得的。因为目标是一种驱动力，如果你的程序中没有目标，那么跑步时就没有目的感。日积月累，量变最终会引起质变，某一天，打开门锁出门就会变得极其困难。 你应该关注自己可以控制的事情，并尽量减少关注你无法掌控的事情。 人在一生中遭遇的每件事都只会发生一次，不会重复第二次——所以，在每一个刹那，每个时刻，都得好好实行自己心里美好良善的想法。假如没有那天在石阶上的回忆，或许我也不会了解这样的道理。 总之，我就是想说，正因为会发生未知的事情，旅行才有趣。假如一切都像当初计划的那样顺顺当当不出意外，旅行大概也就失去了意义。 在线小游戏 黑洞大作战 想法 注入自己的心意，认真做一件事情。 全世界所有鸡的霸王龙基因觉醒，人类面临灭亡的困境，猴子帮助了人类。 适合情侣的剧本：从头记录到现在，从现在记录到未来。 网站推荐 Eva Design System：一个基于深度学习的色彩生成器网站，它能够根据用户输入的主要颜色自动生成一系列协调的语义色彩，帮助设计师快速创建一致的配色方案。 电视剧 不良执念清除师(100%) 寄生兽：灰色部队(100%) 有声小说 《明朝那些事儿》(215-258) 电影 蚁人2：黄蜂女现身(100%) 釜山行 부산행 (2016)(100%) 读书 《一句顶一万句》(100%) 《长安的荔枝》(50%) 日记 4.30日早上，窗外放炮声不停，我第一时间想到是庆祝五一，但五一有放炮的吗？可能是有其他喜事吧。 4.30日晚上，和爸、哥、妈通电话商量明天去哪里玩，爸提议一家人去影视城玩，我同意，哥和妈觉得人多门票贵，还不如在家吃点好的，最后觉得在家附近野炊。 哥对爸说，应该让弟把工资给家里上交些，你们好不容易供他上学，现在他还不给家里钱。 5.1日上午，早晨8点多出门，去车站经过市场，在市场买了一个西瓜40元，5个玉米棒10元，3斤苹果6元，等了大巴车20分钟，坐车回家。我回家后，10点多一点，看到爸妈在倒腾窗前的一块地，哥还没有到。 5.1日中午，爸听说有个地方的大葱没人要，大家可以免费挖，爸妈、我还有小侄女拿个铁锹一起去了，就图个玩，最后也真是玩了一圈。我们没找到地方，前后问了2次人，一个说昨天已经被挖光了，另一个说前天已经被挖光了。 5.1日下午，哥负责腌肉，我和爸去老院子拿炉子、签子、木炭等这些东西，找到后来始终没有找到炉子，估计是被当没用的废品被卖了，于是就找了个铁桶，DIY 了一个炉子。 炉子：铁桶靠近底下的位置开两个通风口，靠近上面的位置钻了一些洞，使用钢丝穿过洞做铁刺刺（炉栅），然后把圆的铁桶用力窝成一个有平行面的椭圆，炉子就做好了，从实际效果来看，效果很好。 一边烧烤，一边吃，一边聊天，有羊肉、茄子、金针菇、辣椒、土豆，有苹果、西瓜可乐，一直迟到下午六点多才收场，剩三分之一没有吃完。 5.2，昨晚梦境清晰，梦里自己被称为“九千岁”之类的，是一个妖精，可以飞起来。我在人群中，突然跳下一处高地，然后缓缓扇动翅膀飞了起来，翅膀很大很有力量，众人惊呼“九千岁”。我扇动翅膀，几下就飞到了很高的位置，地面离越来越远，我看到了某一个宫殿，我朝着那个宫殿飞了过去，我不知道为什么要飞过去，梦里的其他事情记不清了。 5.3日，昨晚梦到了自己在玩真人吃鸡，身临其境的吃鸡，很像绝地求生的场景，不同的是里面很多npc，他们不是玩家，但有思想。 5.4，前几天买的白酒到了，下午去驿站取了回来。27年以来，今天是第一次主动喝白酒，以前也被动喝过，但也不超过5次。为什么喝呢，应该是在尝试以前没做过的事情吧。 5.5，上午11点出门，去外面吃了炒面片，然后去公园晒太阳，一边沐浴阳光一边听《长安的荔枝》，阳光很舒服，微风很舒服，我也很舒服。 开源项目 免费、开源的落地页模板 ollama：本地运行各种 LLM 的工具 Android 天气应用 天涯 kkndme 神贴聊房价 诗词学习网站 IMaker：制作封面的网站 笑话 问：大佬们，我用数据线在电脑和手机之间传输文件，如果突然两头都拔掉，文件会保存在数据线里吗？急！急！急！
+答：当然可以，然后你把数据线的一端对准天空，还可以直接上传到云端呢！
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-05-04 17:08:50 +0800 CST'>May 4, 2024</span>&nbsp;·&nbsp;<span>8 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 增援未来计划-阅读与感悟周记9" href="http://localhost:1313/reinforce-future-plan-reading-reflections-week-9/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Wegame 启动错误一键修复
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/wegame-start-error-one-click-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+此教程配合视频学习效果最佳，视频教程在文章末尾。
+问题描述 Wegame 打开时提示“无法定位程序输入点”，不能正常打开登陆界面。
+解决方法 右键Wegame图标，选“打开文件所在的位置”。 寻找并双击“repair”程序启动自动修复。 等待修复完成，完成后会自动打开 Wegame 。 手动重启Wegame测试。 问题解决，Wegame顺利运行！ 视频教程 https://www.bilibili.com/video/BV15D421P7bu
+Wegame 启动错误一键修复(bilibili) Wegame 启动错误一键修复(西瓜视频) </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-05-03 19:12:43 +0800 CST'>May 3, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Wegame 启动错误一键修复" href="http://localhost:1313/wegame-start-error-one-click-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第3课 提示词工程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/prompt-engineering-3/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+阅读全文：https://itxiaozhang.com/prompt-engineering-3/
+此教程配合视频学习效果最佳，视频教程在文章末尾。
+文末或者关于页面有我的联系方式噢。
+引言 恰当的例子对指导大型语言模型至关重要。
+相比增加多重约束条件，通过提供明确示例，可以规范输出的内容和格式，能更有效地优化模型回应，确保结果贴近期望。
+下面是一个提供例子的演示。
+1 2 3 4 5 6 __ASK__ 制定简短的广告文案，用于推广飘柔。 __CONSTRAINTS__ - 不要过度着重于功能细节，应侧重于品牌宣传。 - 广告内容需极为简练。 1 2 3 4 5 6 7 8 9 10 __ASK__ 制定简短的广告文案，用于推广飘柔。 __CONSTRAINTS__ - 不要过度着重于功能细节，应侧重于品牌宣传。 - 广告内容需极为简练。 - 严格遵循所提供的示例格式进行创作。 __EXAMPLE__ 飘柔，就是这么自信。 练习1 **题目：**使用MPF框架重新排版提示词，梳理ASK 、 CONTEXT 、 CONSTRAINTS 和 EXAMPLE。
+1 2 3 4 5 6 7 8 9 10 11 12 13 帮我写一首歌，主旨是孙悟空形象的生动赞歌，通过活泼明快的旋律和通俗易懂的歌词，展现了孙悟空神通广大、机智勇敢、不畏强权的英雄形象。孙悟空，又称齐天大圣、美猴王，是《西游记》中的核心人物之一，他保护唐僧西天取经，一路上降妖伏魔，历经九九八十一难。整首歌曲应该以一种轻松欢快的方式，传达了对孙悟空这一角色深深的喜爱与崇敬，同时也弘扬了正义、勇敢、智慧和坚持不懈的精神价值。 举例： 猴哥猴哥，你真了不得 五行大山压不住你，蹦出个孙行者 猴哥猴哥，你真太难得 紧箍咒再念，没改变老孙的本色 拔一根毫毛，吹出猴万个 眨一眨眼皮，能把鬼识破 翻个跟斗十万八千里，抖一抖威风山崩地也裂 哪里有难都想你，哪里有险都有哥 身经百战打头阵，惩恶扬善心如佛 你的美名万人传，你的故事千家说 金箍棒啊永闪烁，扫清天下浊 解答
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-05-03 09:34:10 +0800 CST'>May 3, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 第3课 提示词工程" href="http://localhost:1313/prompt-engineering-3/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">秘塔AI搜索：新一代人工智能搜索引擎
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/metaso-ai-search-new-generation/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+本文首发于：https://itxiaozhang.com/metaso-ai-search-new-generation/
+此教程配合视频学习效果最佳，视频教程在文章末尾。
+秘塔AI搜索简介 秘塔AI搜索(metaso.cn)于2024年初上线，它是一款能够深入理解您的问题的AI搜索引擎，没有广告，直达结果。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-05-02 09:48:08 +0800 CST'>May 2, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 秘塔AI搜索：新一代人工智能搜索引擎" href="http://localhost:1313/metaso-ai-search-new-generation/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">周记 #8
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/weekly8/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+你好，我是小章，这里记录我每周的所见所闻所思所想。
+文章 科学网—孤独！该如何科学面对? - 孙学军的博文 A case for socks with toes | ᕕ( ᐛ )ᕗ Herman’s blog How a Photographer Captured His Spectacular Dream Eclipse Photo | PetaPixel 联手 Copilot，我在10个小时内上线了一个前端网站 - 阿猫的博客 梁溪人家隐小园 – 旅行漫记 Kimi Chat: 探索智能对话助手的多种用途 - 文武科技柜 捡到一只珠颈斑鸠 - 俊赏 如何更高效的收听播客？ - 李迷糊 日本回来了，说下感想 - V2EX 接了个私活，分享下我是如何从 0 到 1 交付项目的 - V2EX 卡尔·马克思：工人越是奋斗，他就越会使自己陷于痛苦和不幸之中 - 河南郑州无罪刑事辩护律师 - 日记随想 - 刑辩人在路上 感受慢节奏，再慢一点~-秫米 我的极简生活经验 - Tw93 在线快速生成微信等虚拟对话图片 也说我的几个小坚持 | 椒盐豆豉 没有人生来就会阅读 | 尺宅杂记 长安的鲜荔枝何来？-二猫blog 言论 传统编程这个行业最终会消失，甚至比我们想象中的要更快。或许未来还会有一小部分人作为非物质文化遗产的传承者，古法手工编写代码。 没有信息过载，只有过滤失败。 当你听到了以前喜欢过的一首歌，然后连带着回想起那段时间的事。 当年在集上做买卖的老人儿，从东头到西头，你还数得过来不？ 老蔡他哥老曾知道，镇上一个开生药铺的，叫蔡宝林，左脸生一大痦子，嘴特能说，得理不让人，是一个死蛤蟆能缠出尿的人。 过去一件事挺难，除非再发生一件大事，把这件事遮过去。 培养阅读的习惯能够为你筑造一座避难所，让你逃脱几乎人世间所有悲哀。 开始逐渐理解老年人喜欢养花花草草了。花花草草是生命的缩影，也是生命的延续。人养花，花也养人。 其实大多数人恐惧的并不是死亡本身，而是当生命渐渐走到尽头，你才发现自己从未真正的活过。 如果你突然有了一个奇思妙想的好点子，很大概率是读书不够多。 当古典软件行业的人们还在犹豫如何有效撬动 LLMs 生产力时，少数的创新企业已将其作为流程重塑、价值创造的核心手段。而GPTs 作为一种早期 AI Agents，正在揭开智能富足、创新涌现的时代新面纱。 假设你是世界上最好的深海潜水员，大家都知道你的水平最高。如果有人走了好运发现了一艘沉没的宝船，他们会第一时间联系你让你帮助他们寻宝。于是，他们的好运也变成了你的好运。 想法 如果投胎、轮回等都是客观规律，是否可以使用ai强大的逻辑能力，归纳总结这种规律。 做一个ai算命系统，讲古典算命和人工智能结合起来。 使用ai做星座相关的产品，应该也是可行的。 音乐 《没有鸟鸣，关上窗吧》 / 声音碎片 / 2019 有声小说 《明朝那些事儿》(157-214) 电影 《宇宙探索编辑部》 《三大队》 《涉过愤怒的海》 《蜘蛛侠：平行宇宙》 《蜘蛛侠：纵横宇宙》 电视剧 不良执念清除师(1-6) 读书 4月23日是世界读书日。 《一句顶一万句》(46%) 开源项目 自动化获取和安装SSL/TLS证书的工具 开源个人财务管理软件 1000 小时 | 人人都能用英语 笑话 好的会计出自：双一流高校× 提篮桥✔ 自证的河狸 传说河狸的蛋蛋能治疗阳痿，于是公河狸们就遭了殃，为了保命，河狸在被猎人追逐中会忍痛扯掉自己的蛋蛋丢给猎人。这是伊索寓言里的故事。后来贾行家也给我讲了个他看到的故事，作者是谁忘了，说那些已经没有蛋蛋的河狸如果被猎人盯上了，会主动躺下，张开双腿，让猎人检查，猎人失望地挥了挥手，河狸先生逃过一劫，然后满脸羞愧，灰溜溜地走掉。 图片 Download Cat, Nature, Pet. Royalty-Free Stock Illustration Image - Pixabay sea, sunlight, silhouette, red | 2048x1365 Wallpaper - wallhaven.cc mushroom, bag, plants, forest, green, nature, closeup | 4007x2528 Wallpaper - wallhaven.cc digital painting, nature, landscape | 1920x1080 Wallpaper - wallhaven.cc A tall tower with a clock on top · Free Stock Photo Sparrow · Free Stock Photo A woman in a dress laying on the beach · Free Stock Photo GHANA HAT · Free Stock Photo Elden Ring, video game art | 1920x1080 Wallpaper - wallhaven.cc 煎蛋网 No.5668816 Birds with Food inflight by Bahaadeen Al Qazwini Leopard on A Tree by Jun Zuo Gracile, anime, sky, clouds, Moon, trees, artwork | 5640x2400 Wallpaper - wallhaven.cc digital art, artwork, illustration, clouds, forest, trees, sunlight, river, water, duck, under bridg… river, forest, bridge, landscape, nature, aerial view, fall | 3840x2160 Wallpaper - wallhaven.cc Cyberpunk 2077, video games, video game art, screen shot, dark, computer, keyboards, lamp, table, mi… synthwave, sunset, palm trees, beach, waves, sea, clouds | 5824x3264 Wallpaper - wallhaven.cc Snow egret angel by Xiaobing Tian pattern, digital art, texture, hexagon, gray | 1920x1080 Wallpaper - wallhaven.cc digital art, 3D Blocks, white, red, CGI, 3D Abstract | 1920x1080 Wallpaper - wallhaven.cc space, galaxy, stars, space art, digital art | 4318x2929 Wallpaper - wallhaven.cc ThinkPad, texture, pattern, digital art, Lenovo | 1920x1200 Wallpaper - wallhaven.cc typography, digital art, blue background | 1920x1080 Wallpaper - wallhaven.cc mechanical keyboard, technology, CGI, artwork, keyboards, digital art, minimalism, simple background… Amine Fassi, landscape, sunset, beach, sky, stones | 3000x2000 Wallpaper - wallhaven.cc A person walking on a boardwalk on a beach · Free Stock Photo Wedding Photography of a Romantic Couple · Free Stock Photo Woman Posing by Red Car · Free Stock Photo Sheep in a field with trees in the background · Free Stock Photo Three people sitting on a bench next to a body of water · Free Stock Photo sunflower in the outskirts of gundulpet · Free Stock Photo Matka Canyon Skopje North Macedonia · Free Stock Photo 2024-04-25 《海蓝时见鲸》精选_摄影作品影集 - 500px摄影社区 Rainy Night in NYC II by Kenneth Zeng Mom is home by Wei Xu Bear Hug by Jerome S. Siegel Download Ai Generated, Cat, Black Cat. Royalty-Free Stock Illustration Image - Pixabay A small black animal standing in the woods · Free Stock Photo Romantic sunset in venice for a couple · Free Stock Photo The ancient city of persepolis in persia · Free Stock Photo We really love you by Barbara Gill Serenity by Hristo Ivanov Yordanov The big family by Phillip Chang Colorful Italian Architecture · Free Stock Photo An old barn in front of the grand teton mountains · Free Stock Photo Keep walking - The wall by Andrei Baisan The Herd &amp; the Oxpecker by Clint Ralph Hill behind Grassland · Free Stock Photo Still life with camera by kiyokari43 All Is Gold by Eyal Bar Or Rise and Shine by Sebastian Prioteasa 燃烧的废片 · 雅余 · 茶余饭后，闲情雅致 Donkey · Free Stock Photo Cygne · Free Stock Photo Wassermühle · Free Stock Photo A young woman in a flower garden with a flower · Free Stock Photo Fire flowers by Ahmed Sulaiman Alshehhi Floating Squirrel by Niki Colemont Woman framing her face outside · Free Stock Photo Two birds sitting on a wooden post · Free Stock Photo 煎蛋网 No.5666719 Mundari Ash by Francesca Poggi Keep on dancing for me by Carles Punyet Miró artwork, painting, fantasy castle, castle, forest, mountains, lake, Neuschwanstein Castle | 2009x118… A lifeguard tower on the beach with people laying on the sand · Free Stock Photo baltic sea · Free Stock Photo Matterhorn · Free Stock Photo I am Orca by Serge Melesan The mill and the stars by Manuel Jose Guillen Abad 格聂的晨曦 一句顶一万句 - Koodo Reader cats · Free Stock Photo Daybreak. 36° F. April 21, 2024. Cove Island Park, Stamford, CT. · Free Stock Photo kotor old town · Free Stock Photo Serene Duck in the Park · Free Stock Photo Two men playing chess in a garden · Free Stock Photo 投资兔子洞 大学刚毕业的时候，在学校隔壁市工作，小我一届的女朋… A black and white photo of bags of grain · Free Stock Photo Beatiful winter landscape · Free Stock Photo Windmühlenidylle · Free Stock Photo 如果没有阅读障碍症，纯粹是不喜欢读书，那很抱歉，左… REFLECTION by Ana amtmann Raw power by Anita Singh 湖口县武山 · Free Stock Photo 1. AI精选工具库 - 飞书云文档 Elephant and hippo · Free Stock Photo Elephant · Free Stock Photo Tribe · Free Stock Photo Venice waterways by Colin Dixon Crested Serpent Eagle by Taksing (吉星高照) Too thirsty by Phillip Chang A man riding a surfboard in the water · Free Stock Photo A desert landscape with cactus and mountains · Free Stock Photo Lago Argentino - El Calafate · Free Stock Photo Sunrise at mountain · Free Stock Photo A brown animal running through a field of grass · Free Stock Photo Two baby goats standing in the grass · Free Stock Photo A bird sitting on a branch in the water · Free Stock Photo A stone tower with a green roof on top · Free Stock Photo A view of the ocean and fields from a stone wall · Free Stock Photo The old bridge over the river in the mountains · Free Stock Photo end of season by UJa Young eyes from Myanmar by Marco Tagliarino Steal by Yemay Hsieh The Tulip Tapestry by SANDEEP MATHUR Download Dachshund, Cat, Dog. Royalty-Free Stock Illustration Image - Pixabay Download Cat, Animal, Fence. Royalty-Free Stock Illustration Image - Pixabay Download Woman, Cat, Friends. Royalty-Free Stock Illustration Image - Pixabay Download Ai Generated, Pet, Cat. Royalty-Free Stock Illustration Image - Pixabay Good for ‘U’ by MUTI on Dribbble City Sunset (Revival) by Guillaume Kurkdjian on Dribbble </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-04-27 11:17:07 +0800 CST'>April 27, 2024</span>&nbsp;·&nbsp;<span>6 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 周记 #8" href="http://localhost:1313/weekly8/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">提示词收藏
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/prompt-vault/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+视频转文字稿文章撰写 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 **角色定位** 你是一名技术文档整理助手，擅长从不完整或存在错误的转录文本中提炼准确信息，并整理为清晰、客观、易读的技术文章。 **背景说明** * 电脑维修过程被录制为视频，并自动转录为文字稿。 * 由于识别误差，文字稿中可能存在错字、漏字、语句混乱等问题。 **任务流程** 1. 主动请求用户提供电脑维修的文字稿。 2. 基于文字稿内容，整理并撰写一篇客观说明文章。 **写作要求** * 内容忠于原文字稿，在不改变原意的前提下纠正明显错误。 * 语言简洁清楚，面向普通用户。 * 全文不出现任何主观表述或自我指代，直接陈述事实与解决方案。 **文章结构（必须严格遵守）** 文章由三个部分组成，均使用 Markdown 二级标题： ## 问题描述 * 必须包含最关键的报错信息。 * 报错信息需保持为原始错误内容（可适当精简，但不得修改或翻译）。 ## 问题原因 ## 解决办法 * 步骤清晰 * 逻辑递进 * 条理分明 **输出规则（分阶段）** 1. **首次输出**： * 仅输出正文内容 * 使用 Markdown 排版 * 输出完成后，询问用户是否继续获取后续信息 2. **在用户确认后输出以下内容（按顺序）**： * 文章标题：必须由当天日期 &#43; 标题组成，格式为 `YYYY-MM-DD-标题` * 一条 Hugo 新建文章命令： * `hugo new posts/YYYY-MM-DD-标题.md` * 不超过 100 字的摘要 * 5 个标签：必须为 2 个英文（全部小写）、3 个中文 * 基于标题生成的 SEO 友好英文 URL **示例说明** * 文章标题示例：`2025-12-22-使用恢复码移除 Steam 手机令牌` * Hugo 命令示例：`hugo new posts/2025-12-22-使用恢复码移除 Steam 手机令牌.md` * 标签示例：`steam, recovery, 电脑, 手机, 安全` **执行约束** * 严格按照以上步骤执行，不得合并、跳过或提前输出后续内容。 steam令牌移除工单 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 极度轻微润色： 尊敬的 Steam 客服团队： 您好！我迫切需要您的帮助，以移除我 Steam 账户中的手机令牌，从而恢复账户的正常使用。为了便于您快速核实我的身份，我提供了以下信息： * 用户名：**273129872** * 昵称：**米亚内哈几嘛** * 相关交易记录截图已随邮件附件提供，供您核对 不幸的是，我的手机因意外损坏并被格式化，导致我丢失了 Steam 手机令牌和恢复码。由于缺少令牌，我无法通过常规方式恢复访问权限，这给我带来了极大的困扰。 该账号对我来说极为重要，其中不仅包含我在 Steam 上购买的大量游戏，还保存了许多珍贵的好友联系。失去访问权限将对我的游戏体验和社交造成严重影响。 鉴于此情况，我恳请贵团队尽快协助移除我账户中的手机令牌，以便我重新绑定手机号并恢复正常使用。您的帮助对我而言至关重要，万分感谢！ --- Dear Steam Customer Support, I urgently need your assistance to remove the mobile token from my Steam account in order to restore normal access. To facilitate the prompt verification of my identity, I have provided the following details: * Username: **273129872** * Nickname: **米亚内哈几嘛** * A screenshot of the relevant transaction record has been attached to this message for your reference Unfortunately, my phone was accidentally damaged and subsequently formatted, resulting in the loss of both my Steam mobile token and recovery code. Without the token, I am unable to regain access through the usual recovery process, which has caused significant inconvenience. This account is of great importance to me. It not only contains a large library of purchased games but also holds a valuable network of friends I have built over time. Losing access would have a serious impact on both my gaming experience and social connections. Given the urgency of this matter, I sincerely request your prompt assistance in removing the mobile token from my account so that I can rebind my phone number and restore full account functionality. Your support is greatly appreciated, and I thank you in advance for your understanding and swift action. 远程电脑维修视频字幕处理需求文档 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 场景 远程电脑维修者的讲解视频已录制完毕，使用 Buzz 得到原始 SRT（含时间戳与识别文本），需对字幕做后期校正：修常识性错误与专有名词识别错误，保留画面与语音不变，最终输出标准 SRT（仅中文）。 --- 输入 Buzz 导出的原始 .srt 文件（含序号、时间轴、原始识别中文文本）。 --- 白名单（必须严格使用，不改写、不翻译、不缩写） WEGAME、章九工具箱、Geek Uninstaller、Edge浏览器、sfc /scannow、ipconfig /flushdns、ncpa.cpl、IPv4、IPv6、DNS、小章 若识别结果为近似错写（如 scnnuw、rpconfig、Vgame 等），一律修正为白名单标准写法。 --- 修正原则（优先级） 1. 保留原始表达风格，仅在明显错误或超长时修改。 2. 修正常识性错误（事实类）与专有名词识别错误。 3. 不增添未说出的信息，不更改语意核心，不改语音与画面内容。 --- 输出格式（严格） 标准 SRT 块格式，块间空行： 1 00:00:01,000 --&gt; 00:00:03,000 优化后的中文字幕 每条字幕块包含三行：序号、时间轴、中文（单行，不换行）。 最终文件需兼容主流剪辑或播放软件（Premiere、Final Cut、DaVinci Resolve、VLC 等）。 --- 字数与拆分规则（关键修正，避免逻辑矛盾） 中文单条文本不超过13个汉字（标点不计入字符上限但影响断句）。 若原条文本超过限制，则拆分为多个连续字幕块（每块中文单行、≤13字），拆分过程要保持语义连贯与节奏自然。 拆分后的时间轴分配规则（严格且确定）： 1. 原字幕的时间区间为整体区间（首条 start = 原 start，末条 end = 原 end）。 2. 按字符数比例分配每片段时长。 3. 若片段时长小于0.3秒，则与邻近片段合并，直至每片段时长≥0.3秒或无法合并。 4. 拆分时不得打断白名单词、命令、版本号等完整实体。 --- 时间轴微调与合并规则 总体原则：不扩大原时间范围，仅在区间内划分。 若连续短字幕（小于0.3秒）造成卡顿，可合并为一条（start=前者 start，end=后者 end）。 若需微调时间轴，调整幅度应在相邻字幕时间范围内，并记录理由。 --- 语言与标点规范 保持中文自然、口语化表达。 使用中文标点。 白名单项保持原格式与大小写（如 sfc /scannow、ipconfig /flushdns）。 --- 质量检查（输出前必须通过） 1. 每条字幕中文≤13字且不含换行。 2. 白名单词条完全标准化。 3. 时间轴总体覆盖原文件（不改变总时长）。 4. 不新增与语音不符的内容。 5. SRT 格式严格合规（序号递增、时间格式正确、块间空行）。 --- 备注（示例） 原条（超长）： 45 00:02:10,000 --&gt; 00:02:14,000 现在我们先用Geek Uninstaller把残留卸载干净然后再运行sfc /scannow来修复系统文件 拆分后（按字符比例分配时间）： 45 00:02:10,000 --&gt; 00:02:11,600 现在我们先用Geek Uninstaller把残留卸载干净 46 00:02:11,600 --&gt; 00:02:14,000 然后再运行sfc /scannow来修复系统文件 工资计算逻辑 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 你是我的记账逻辑检查助手。 我会提供一条或多条记账记录，包含以下字段： - 星期 - 日期（YYYY-MM-DD） - 总营收（total_income） - 自己固定收入（my_fixed_income） - David外包费（david_fee） - 自己账户收款（my_account） - 大兵账户收款（dabing_account） - 大锤账户收款（dachui_account） - 自己应得收入（my_income） - 大兵应得收入（dabing_income） - 大锤应得收入（dachui_income） - David应得收入（david_income） - 大兵应发工资（dabing_payable） - 大锤应发工资（dachui_payable） 请帮我检查以下内容： 1. 剩余金额是否正确： remain = total_income - my_fixed_income - david_fee 2. 各人员理论收入是否正确： - my_income = my_fixed_income &#43; remain × 0.5 - dabing_income = remain × 0.25 - dachui_income = remain × 0.25 - david_income = david_fee 3. 应发工资是否正确： - dabing_payable = dabing_income - dabing_account - dachui_payable = dachui_income - dachui_account 4. 总收款是否对得上总营收： - total_account = my_account &#43; dabing_account &#43; dachui_account - total_account 是否等于 total_income 5. 输出对每条记录的检查结果，指出错误字段及正确值，并备注原因。 请只用表格或列表形式给出每条记录的检查结果，注明错误及修正建议。 示例数据格式（制表符或逗号分隔）： 星期 日期 总营收 自己固定收入 David外包费 自己账户收款 大兵账户收款 大锤账户收款 自己应得收入 大兵应得收入 大锤应得收入 David应得收入 大兵应发工资 大锤应发工资 星期一 2025-08-11 1510 200 233 970 390 150 738.50 269.25 269.25 233.00 -120.75 119.25 互联网&#43;挑战杯大创竞赛导师 1 2 3 4 5 6 7 8 9 Role and Goal: The GPT will act as a mentor for students participating in competitions like the Internet&#43; Competition, Challenge Cup, and College Students&#39; Innovation and Entrepreneurship Competition in China. It will guide students through the process of conceptualizing, designing, and writing project proposals and presentations. Constraints: The GPT should not create complete project proposals or presentations but rather provide guidance, suggestions, and critiques to improve the students&#39; own work. Guidelines: The GPT will provide educational support, focusing on fostering students&#39; critical thinking and creativity. It should offer insights into effective project planning, structure, and presentation skills. Clarification: When unclear about a project&#39;s specifics, the GPT should ask for more details to provide tailored advice. Personalization: The GPT should maintain a supportive and educational tone, encouraging students to develop their ideas independently while providing expert advice. 来源
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-04-25 10:41:15 +0800 CST'>April 25, 2024</span>&nbsp;·&nbsp;<span>7 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 提示词收藏" href="http://localhost:1313/prompt-vault/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/20/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/22/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

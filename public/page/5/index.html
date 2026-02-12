@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IT小章</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">最新电脑开荒教程，一步步完成系统优化
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/new-pc-initial-setup-and-optimization
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+前言 新电脑在首次启用时，常会出现以下问题：系统时间错误、预装软件冗余、桌面图标缺失、浏览器广告泛滥、磁盘分区混乱、文件路径不合理等。 本指南将带你一步完成系统优化，让电脑运行更流畅、更干净、更稳定。
+1. 同步系统时间 打开 设置 → 时间和语言 → 日期和时间 启用「自动设置时区」并点击 立即同步 2. 安装基础软件 打开浏览器访问 章九工具箱，下载并安装以下常用工具：
+7-Zip 压缩解压 Geek 卸载工具 系统更新关闭工具 运行库整合包 3. 卸载预装软件 使用 Geek Uninstaller 卸载无用程序（如 360、鲁大师、应用宝等） 清理残留注册表，保持系统纯净 4. 恢复桌面图标 右键桌面 → 个性化 → 主题 → 桌面图标设置 勾选「此电脑」「回收站」「控制面板」→ 点击 确定 5. 关闭任务栏与浏览器推荐内容 任务栏右键 → 任务栏设置 → 关闭「任务视图」「小组件」 浏览器 → 设置 → 关闭「快速连接」「网站导航」「显示内容」等广告推送 6. 磁盘分区与容量规划 打开 磁盘管理，查看总容量（例：939GB）
+建议：
+C盘：300GB（系统盘） D盘：其余空间（数据盘） 计算压缩值：
+1 2 939GB - 300GB = 639GB 639 × 1024 = 654,336MB 在磁盘管理中：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-06 23:35:22 +0800 CST'>October 6, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 最新电脑开荒教程，一步步完成系统优化" href="http://localhost:1313/new-pc-initial-setup-and-optimization/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Wallpaper任何软件全屏后切回桌面都会黑屏一秒
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/wallpaper-fullscreen-black-screen-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在使用 Wallpaper 时，每当应用全屏后回到桌面，桌面会出现短暂黑屏。例如：「每次任务管理器全屏以后，回到桌面都会黑屏一次」。
+问题原因 Wallpaper 的性能设置默认在以下情况下会暂停壁纸显示：
+其他应用程序全屏 其他应用程序播放音频 这会导致桌面短暂黑屏。
+解决办法 1. 修改性能设置 打开 Wallpaper 设置，进入 性能 选项卡，修改以下设置：
+其他应用程序最大化时：暂停 其他应用程序全屏时：暂停 其他应用程序播放音频时：暂停 2. 修改常规设置 切换到 常规 选项卡，勾选以下两项：
+覆盖壁纸图像 → 点击确认 覆盖锁屏图像 → 点击确认 3. 测试效果 完成设置后，重新全屏切换任务管理器或其他应用，桌面黑屏问题应已解决。
+视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-04 12:45:30 +0800 CST'>October 4, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Wallpaper任何软件全屏后切回桌面都会黑屏一秒" href="http://localhost:1313/wallpaper-fullscreen-black-screen-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">三角洲行动锁帧6FPS？帧率优化案例
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/operation-delta-fps-case-study/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在运行《三角洲行动》时，电脑出现明显的性能问题：
+游戏帧率被限制在「6 FPS」； 延迟过高、画面严重卡顿； 即使在菜单界面中也非常不流畅。 问题原因 显卡驱动版本过旧（设备为 NVIDIA GeForce RTX 4050，驱动停留在 5 月版本）。 系统运行库缺失或未完整安装。 显卡控制面板配置不合理（如垂直同步、电源管理模式等）。 Windows 系统优化不足（Game Bar、游戏模式、GPU 硬件加速等未正确设置）。 游戏内视频参数未按硬件实际情况进行调整。 电脑散热条件较差，温度偏高。 解决办法 更新显卡驱动
+打开「章九工具箱」； 搜索「NVIDIA」，进入官网； 选择 GeForce RTX 4050（笔记本）与 Windows 11 系统； 下载并安装最新驱动，安装时选择「自定义」，并勾选「执行清洁安装」。 补全运行库
+在「章九工具箱」中搜索「运行库」； 下载并安装 32 位和 64 位运行库； 双击运行安装，勾选同意，完成后依次关闭即可。 调整显卡设置
+打开「NVIDIA 控制面板」； 关闭「垂直同步」； 将「电源管理模式」改为「最高性能优先」； 图像质量设置为「高性能」。 优化系统设置
+关闭 Xbox Game Bar； 打开「游戏模式」； 在「高级显示设置」中选择显示器支持的最高刷新率； 启用「硬件加速 GPU 计划」。 修改游戏内设置
+分辨率和刷新率与显示器保持一致； 帧数上限设置为 240； 降低画质预设，纹理质量设为「中」或「高」； 超分辨率方法选择「DLSS」，模式设为「性能优先」； 启用「低延迟」模式。 改善散热
+使用散热支架，保证良好通风； 定期清理灰尘，更换硅脂，确保温度稳定。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-03 10:47:41 +0800 CST'>October 3, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 三角洲行动锁帧6FPS？帧率优化案例" href="http://localhost:1313/operation-delta-fps-case-study/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">电脑右上角突然显示帧率如何关闭
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/nvidia-app-toggle-fps-gpu-cpu-delay-display/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在电脑使用过程中，屏幕右上角会出现「FPS、GPU、CPU、延迟」等实时数据显示，部分用户觉得影响视觉体验，希望关闭或在需要时开启。
+问题原因 这些数据显示来自英伟达 APP 中的「统计数据」功能。当该功能开启时，会在屏幕右上角实时显示帧率、显卡和处理器使用情况以及延迟信息。
+解决办法 按下快捷键「Alt &#43; Z」，调出英伟达 APP 的快捷菜单。
+在菜单中点击「统计数据」。
+找到「显示」开关：
+若要关闭：将开关关闭，右上角的FPS、GPU、CPU、延迟信息会消失。 若要开启：将开关打开，即可在右上角显示相关信息。 根据实际需求，灵活选择开启或关闭该功能。
+视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-01 16:30:10 +0800 CST'>October 1, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 电脑右上角突然显示帧率如何关闭" href="http://localhost:1313/nvidia-app-toggle-fps-gpu-cpu-delay-display/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Windows 常用命令与英文安装词汇速查
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/windows-commands-installation-english-terms/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+一、Windows 常用命令 系统信息与诊断 msinfo32：系统信息（硬件/软件配置） dxdiag：DirectX诊断工具（显卡/声卡） systeminfo：命令行系统摘要 perfmon /report：60秒健康报告 系统配置与管理 msconfig：系统配置（启动项/服务） services.msc：服务管理 taskmgr：任务管理器 control：控制面板 appwiz.cpl：程序和功能（卸载/更改） 磁盘管理 diskmgmt.msc：磁盘管理（分区/盘符） cmd：命令提示符 网络相关 ping：网络连通性测试 ncpa.cpl：网络连接界面 便捷工具 notepad：记事本 mspaint：画图 osk：屏幕键盘 二、英文安装常见词汇 英文 中文 常见场景 About 关于 软件版本、版权信息 Accept/Agree 接受/同意 用户协议、条款 Activate 激活 软件功能验证 Add to Desktop 添加桌面图标 快捷方式创建 Advanced 高级 高级设置选项 Back/Next 上一步/下一步 安装向导导航 Browse 浏览 选择路径或文件 Cancel 取消 放弃操作 Change 更改 修改路径或组件 Check 检查 更新、组件检测 Close/Exit 关闭/退出 退出窗口或程序 Complete/Typical/Standard 完整/典型/标准 安装模式 Confirm/OK 确认/确定 执行操作 Continue 继续 跳过警告继续 Custom 自定义 选择安装组件 Decline/Disagree 拒绝/不同意 不接受协议 Delete/Remove/Uninstall 删除/移除/卸载 卸载或删除 Disable/Enable 禁用/启用 功能开关 Extract/Unzip 解压 安装包解压 Finish 完成 安装结束 Help 帮助 查看帮助 Install/Setup 安装 开始安装 Launch/Run 启动/运行 启动已安装程序 License/Terms 许可/条款 协议说明 Minimal 最小化 安装核心功能 Privacy 隐私 隐私政策设置 Register 注册 输入激活码 Repair 修复 修复文件 Restart 重启 配置完成需重启 Retry 重试 重新尝试操作 Save/Submit 保存/提交 保存设置或提交信息 Skip 跳过 忽略步骤 Update/Upgrade 更新/升级 升级到新版本 Verify 验证 文件完整性或密钥验证 Yes/No 是/否 确认或拒绝 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-01 10:42:47 +0800 CST'>October 1, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Windows 常用命令与英文安装词汇速查" href="http://localhost:1313/windows-commands-installation-english-terms/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">卸载流氓软件极速输入法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/uninstall-jisu-input-method/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 右下角出现「极速输入法」，在系统安装列表中找不到，无法直接卸载。
+问题原因 「极速输入法」可能通过捆绑安装进入系统，未生成正常的卸载程序，因此在常规的程序列表中无法找到。
+解决办法 重新安装
+下载并运行「极速输入法」安装包。 点击下载极速输入法安装包 执行卸载
+安装完成后，在「程序和功能」或第三方工具（如Geek Uninstaller）中卸载「极速输入法」。 清理残留
+删除提示的残留文件。 检查任务栏和输入法列表。 重启电脑
+若仍有显示，重启后即可彻底移除。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-29 15:37:27 +0800 CST'>September 29, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 卸载流氓软件极速输入法" href="http://localhost:1313/uninstall-jisu-input-method/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">注册表权限不足导致 Visual C&#43;&#43; 安装失败及解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/fix-visual-cpp-error-1402-registry-permission/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 安装运行库时出现报错： 「Product: Microsoft Visual C&#43;&#43; [版本号] Redistributable - [具体版本号] Error 1402. Could not open key: UNKNOWN\Components[GUID][子键]. System error 5.」
+为了解决该问题，需要修改注册表权限。但在操作过程中，系统又提示： 「注册表编辑器无法在当前所选的项及其部分子项上设置安全性」。
+问题原因 Visual C&#43;&#43; 安装失败的根本原因是注册表关键项权限不足，系统错误 5 表示拒绝访问。 使用普通管理员权限修改注册表时，无法对部分系统级注册表项设置安全性。 解决办法 下载微软官方的 PsExec 工具。
+解压工具包。
+关闭所有已打开的注册表编辑器。
+以管理员身份打开命令提示符，进入解压目录：
+输入磁盘号（如「D:」）； 输入「cd 文件夹名」进入解压目录。 执行命令：
+1 psexec -i -d -s regedit 此时以系统权限打开注册表编辑器。
+定位到报错提示的注册表路径： 「UNKNOWN\Components[GUID][子键]」。
+右键该项，选择「权限」，为「Administrators」组赋予完全控制权限。
+保存设置后，重新运行 Visual C&#43;&#43; 安装程序，即可完成安装。
+视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-28 23:38:47 +0800 CST'>September 28, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 注册表权限不足导致 Visual C&#43;&#43; 安装失败及解决方法" href="http://localhost:1313/fix-visual-cpp-error-1402-registry-permission/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">三角洲行动鼠标点不中菜单的解决办法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/delta-force-mouse-click-wrong-position-fix/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 玩「三角洲行动」时，遇到鼠标点击位置和界面按钮错位的问题。比如：
+鼠标指向「设置」按钮却点不中； 需要把鼠标往下移一段距离，才能点到想要的选项； 不管是设置菜单还是控制器菜单，都存在同样的错位情况。 问题原因 这是因为游戏里的分辨率和电脑系统分辨率不一致，画面显示比例不对，导致鼠标位置和实际点击区域出现偏差。
+解决办法 打开电脑的「显示设置」或「NVIDIA 控制面板」，确认当前分辨率和刷新率（如 1920×1080，165Hz）。
+打开「三角洲行动」，进入设置，把游戏分辨率改成和系统一样（比如 1920×1080）。
+如果游戏里没有这个分辨率：
+先选「自动」分辨率，再点「应用」； 如果点不了「应用」，可以按「ESC」退出，再重新进入尝试。 保存设置后退出游戏，并重新启动。
+进入游戏测试，鼠标点击位置和菜单选项应已恢复正常。
+视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-24 09:12:44 +0800 CST'>September 24, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 三角洲行动鼠标点不中菜单的解决办法" href="http://localhost:1313/delta-force-mouse-click-wrong-position-fix/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">5E平台CSGO报错：反作弊异常提示需开启VT-d与IOMMU的解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/fix-5e-csgo-anti-cheat-vtd-iommu/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在 5E 对战平台启动 CSGO 时弹出报错： 「反作弊异常 您的机器需要开启Vt-d和iommu功能，请进入BIOS设置内开启相关功能后重试」 同时可能伴随「部署失败」或无法进入游戏的情况。
+问题原因 CPU 虚拟化相关功能未开启（Intel 常见为 VT-d，AMD 为 IOMMU）。 BIOS 版本过旧或主板固件未暴露相关选项，无法开启虚拟化直通。 Windows 安全/虚拟化功能与反作弊冲突（如 Hyper-V、内核内存完整性或已加载的 hypervisor）。 系统文件或环境异常导致检测误报。 解决办法 确认主板型号
+按 Win&#43;R，输入 msinfo32 回车，查看「主板制造商/型号」，用于后续查找 BIOS 及设置指南。 系统检查与修复
+以管理员身份打开命令提示符，运行：
+1 sfc /scannow 等待扫描并修复完成，重启系统（如有修复提示）。
+关闭 Hyper-V 与关闭 hypervisor 引导
+控制面板 → 程序 → 「启用或关闭 Windows 功能」，取消勾选「Hyper-V」，确认并重启（如提示）。
+以管理员身份打开命令提示符，运行：
+1 bcdedit /set hypervisorlaunchtype off 以上操作执行后重启生效。
+关闭内核内存完整性（Core isolation → Memory integrity）
+打开「Windows 安全中心」→「设备安全性」→「内核隔离详细信息」，将「内存完整性」切换为关闭，按提示重启。 进入 BIOS 并开启 VT-d / IOMMU
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-21 18:22:48 +0800 CST'>September 21, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 5E平台CSGO报错：反作弊异常提示需开启VT-d与IOMMU的解决方法" href="http://localhost:1313/fix-5e-csgo-anti-cheat-vtd-iommu/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">装甲红锋报错「文件未找到(d3dcompiler_43.dll)」的解决方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/fix-armored-red-bee-d3dcompiler-43-dll-error/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 在启动「装甲红锋」游戏时，运行约五六秒后出现弹窗报错： 「警告(,1039,30003) 错误[126]: 文件未找到(d3dcompiler_43.dll)」。
+问题原因 该报错通常由以下原因引起：
+系统缺少 DirectX 运行库文件； 已安装的运行库损坏或未完整安装； 游戏依赖的运行环境未被正确配置。 解决办法 卸载旧的运行库
+打开「程序和功能」； 找到已安装的运行库，卸载损坏或版本不正确的项。 下载安装运行库
+打开 章九工具箱； 搜索「运行库」，找到文章 微软运行库官方下载合集：VC&#43;&#43;、.NET、DirectX 全版本链接整理； 下载对应的 VC&#43;&#43;、.NET 及 DirectX 运行库（X86 与 X64 均需安装）； 双击运行安装包，勾选同意并完成安装。 修复 WeGame
+打开 WeGame 安装目录； 找到「repair」修复工具，双击运行； 等待修复完成，WeGame 将自动启动。 验证结果
+在 WeGame 中重新启动「装甲红锋」； 确认游戏能够正常进入； 若问题解决，其他因运行库缺失导致的错误也可用此方法修复。 视频版本 哔哩哔哩 YouTube </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-19 13:26:52 +0800 CST'>September 19, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 装甲红锋报错「文件未找到(d3dcompiler_43.dll)」的解决方法" href="http://localhost:1313/fix-armored-red-bee-d3dcompiler-43-dll-error/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/4/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/6/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

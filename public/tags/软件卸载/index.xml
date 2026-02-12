@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>软件卸载 on IT小章</title>
+    <link>http://localhost:1313/tags/%E8%BD%AF%E4%BB%B6%E5%8D%B8%E8%BD%BD/</link>
+    <description>Recent content in 软件卸载 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 24 Aug 2025 18:49:59 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%BD%AF%E4%BB%B6%E5%8D%B8%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WeGame报错「更新失败，请尝试重启或者下载新版本」的解决办法</title>
+      <link>http://localhost:1313/wegame-update-failed-restart-or-download-new-version/</link>
+      <pubDate>Sun, 24 Aug 2025 18:49:59 +0800</pubDate>
+      <guid>http://localhost:1313/wegame-update-failed-restart-or-download-new-version/</guid>
+      <description>WeGame启动时提示「更新失败，请尝试重启或者下载新版本」。问题原因多为旧版本残留、异常服务或网络配置错误。通过卸载旧版本、优化系统和网络设置，并自定义安装最新版，即可解决。</description>
+    </item>
+  </channel>
+</rss>

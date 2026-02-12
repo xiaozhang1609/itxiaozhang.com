@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>人工智能 on IT小章</title>
+    <link>http://localhost:1313/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
+    <description>Recent content in 人工智能 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 19 May 2024 22:07:03 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>和GPT对话1：水价为何便宜</title>
+      <link>http://localhost:1313/talking-with-gpt-water-prices/</link>
+      <pubDate>Sun, 19 May 2024 22:07:03 +0800</pubDate>
+      <guid>http://localhost:1313/talking-with-gpt-water-prices/</guid>
+      <description>水价为何便宜？小章与GPT探讨多种因素。</description>
+    </item>
+    <item>
+      <title>第3课 提示词工程</title>
+      <link>http://localhost:1313/prompt-engineering-3/</link>
+      <pubDate>Fri, 03 May 2024 09:34:10 +0800</pubDate>
+      <guid>http://localhost:1313/prompt-engineering-3/</guid>
+      <description>通过提供明确示例，可以规范输出的内容和格式，能更有效地优化模型回应，确保结果贴近期望。</description>
+    </item>
+    <item>
+      <title>秘塔AI搜索：新一代人工智能搜索引擎</title>
+      <link>http://localhost:1313/metaso-ai-search-new-generation/</link>
+      <pubDate>Thu, 02 May 2024 09:48:08 +0800</pubDate>
+      <guid>http://localhost:1313/metaso-ai-search-new-generation/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/metaso-ai-search-new-generation/&#34;&gt;https://itxiaozhang.com/metaso-ai-search-new-generation/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文首发于：&lt;a href=&#34;https://itxiaozhang.com/metaso-ai-search-new-generation/&#34;&gt;https://itxiaozhang.com/metaso-ai-search-new-generation/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此教程配合视频学习效果最佳，视频教程在文章末尾。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;秘塔ai搜索简介&#34;&gt;秘塔AI搜索简介&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://metaso.cn/&#34;&gt;秘塔AI搜索&lt;/a&gt;(metaso.cn)于2024年初上线，它是一款能够深入理解您的问题的AI搜索引擎，没有广告，直达结果。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>提示词收藏</title>
+      <link>http://localhost:1313/prompt-vault/</link>
+      <pubDate>Thu, 25 Apr 2024 10:41:15 +0800</pubDate>
+      <guid>http://localhost:1313/prompt-vault/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/prompt-vault/&#34;&gt;https://itxiaozhang.com/prompt-vault/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;视频转文字稿文章撰写&#34;&gt;视频转文字稿文章撰写&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-1&#34;&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-2&#34;&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-3&#34;&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-4&#34;&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-5&#34;&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-6&#34;&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-7&#34;&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-8&#34;&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-9&#34;&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-10&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-10&#34;&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-11&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-11&#34;&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-12&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-12&#34;&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-13&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-13&#34;&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-14&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-14&#34;&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-15&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-15&#34;&gt;15&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-16&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-16&#34;&gt;16&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-17&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-17&#34;&gt;17&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-18&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-18&#34;&gt;18&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-19&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-19&#34;&gt;19&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-20&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-20&#34;&gt;20&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-21&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-21&#34;&gt;21&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-22&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-22&#34;&gt;22&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-23&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-23&#34;&gt;23&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-24&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-24&#34;&gt;24&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-25&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-25&#34;&gt;25&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-26&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-26&#34;&gt;26&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-27&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-27&#34;&gt;27&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-28&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-28&#34;&gt;28&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-29&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-29&#34;&gt;29&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-30&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-30&#34;&gt;30&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-31&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-31&#34;&gt;31&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-32&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-32&#34;&gt;32&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-33&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-33&#34;&gt;33&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-34&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-34&#34;&gt;34&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-35&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-35&#34;&gt;35&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-36&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-36&#34;&gt;36&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-37&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-37&#34;&gt;37&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-38&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-38&#34;&gt;38&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-39&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-39&#34;&gt;39&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-40&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-40&#34;&gt;40&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-41&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-41&#34;&gt;41&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-42&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-42&#34;&gt;42&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-43&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-43&#34;&gt;43&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-44&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-44&#34;&gt;44&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-45&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-45&#34;&gt;45&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-46&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-46&#34;&gt;46&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-47&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-47&#34;&gt;47&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-48&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-48&#34;&gt;48&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-49&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-49&#34;&gt;49&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-50&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-50&#34;&gt;50&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-51&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-51&#34;&gt;51&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-52&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-52&#34;&gt;52&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-53&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-53&#34;&gt;53&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-54&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-54&#34;&gt;54&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-55&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-55&#34;&gt;55&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-56&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-56&#34;&gt;56&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-57&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-57&#34;&gt;57&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-58&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-58&#34;&gt;58&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-59&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-59&#34;&gt;59&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-60&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-60&#34;&gt;60&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-61&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-61&#34;&gt;61&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-62&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-62&#34;&gt;62&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-0-63&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-0-63&#34;&gt;63&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**角色定位**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;你是一名技术文档整理助手，擅长从不完整或存在错误的转录文本中提炼准确信息，并整理为清晰、客观、易读的技术文章。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**背景说明**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 电脑维修过程被录制为视频，并自动转录为文字稿。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 由于识别误差，文字稿中可能存在错字、漏字、语句混乱等问题。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**任务流程**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; 主动请求用户提供电脑维修的文字稿。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 基于文字稿内容，整理并撰写一篇客观说明文章。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**写作要求**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 内容忠于原文字稿，在不改变原意的前提下纠正明显错误。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 语言简洁清楚，面向普通用户。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 全文不出现任何主观表述或自我指代，直接陈述事实与解决方案。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**文章结构（必须严格遵守）**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;文章由三个部分组成，均使用 Markdown 二级标题：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## 问题描述
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 必须包含最关键的报错信息。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 报错信息需保持为原始错误内容（可适当精简，但不得修改或翻译）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## 问题原因
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## 解决办法
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 步骤清晰
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 逻辑递进
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 条理分明
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**输出规则（分阶段）**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; &lt;span class=&#34;gs&#34;&gt;**首次输出**&lt;/span&gt;：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 仅输出正文内容
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 使用 Markdown 排版
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 输出完成后，询问用户是否继续获取后续信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; &lt;span class=&#34;gs&#34;&gt;**在用户确认后输出以下内容（按顺序）**&lt;/span&gt;：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 文章标题：必须由当天日期 + 标题组成，格式为 &lt;span class=&#34;sb&#34;&gt;`YYYY-MM-DD-标题`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 一条 Hugo 新建文章命令：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`hugo new posts/YYYY-MM-DD-标题.md`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 不超过 100 字的摘要，要尽量描述报错的过程和错误详情，不需要解决办法，尽可能使用原始报错的信息。必须包含主题和详细报错内容。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 5 个标签：必须为 2 个英文（全部小写）、3 个中文
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 基于标题生成的 SEO 友好英文 URL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**示例说明**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 文章标题示例：&lt;span class=&#34;sb&#34;&gt;`2025-12-22-使用恢复码移除 Steam 手机令牌`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; Hugo 命令示例：&lt;span class=&#34;sb&#34;&gt;`hugo new posts/2025-12-22-使用恢复码移除 Steam 手机令牌.md`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 标签示例：&lt;span class=&#34;sb&#34;&gt;`steam, recovery, 电脑, 手机, 安全`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**执行约束**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 严格按照以上步骤执行，不得合并、跳过或提前输出后续内容。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;steam令牌移除工单&#34;&gt;steam令牌移除工单&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-1&#34;&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-2&#34;&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-3&#34;&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-4&#34;&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-5&#34;&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-6&#34;&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-7&#34;&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-8&#34;&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-9&#34;&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-10&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-10&#34;&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-11&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-11&#34;&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-12&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-12&#34;&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-13&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-13&#34;&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-14&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-14&#34;&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-15&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-15&#34;&gt;15&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-16&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-16&#34;&gt;16&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-17&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-17&#34;&gt;17&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-18&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-18&#34;&gt;18&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-19&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-19&#34;&gt;19&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-20&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-20&#34;&gt;20&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-21&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-21&#34;&gt;21&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-22&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-22&#34;&gt;22&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-23&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-23&#34;&gt;23&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-24&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-24&#34;&gt;24&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-25&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-25&#34;&gt;25&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-26&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-26&#34;&gt;26&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-27&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-27&#34;&gt;27&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-28&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-28&#34;&gt;28&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-29&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-29&#34;&gt;29&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-30&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-30&#34;&gt;30&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-31&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-31&#34;&gt;31&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-1-32&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-1-32&#34;&gt;32&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;极度轻微润色：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;尊敬的 Steam 客服团队：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;您好！我迫切需要您的帮助，以移除我 Steam 账户中的手机令牌，从而恢复账户的正常使用。为了便于您快速核实我的身份，我提供了以下信息：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 用户名：**273129872**
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 昵称：**米亚内哈几嘛**
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; 相关交易记录截图已随邮件附件提供，供您核对
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;不幸的是，我的手机因意外损坏并被格式化，导致我丢失了 Steam 手机令牌和恢复码。由于缺少令牌，我无法通过常规方式恢复访问权限，这给我带来了极大的困扰。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;该账号对我来说极为重要，其中不仅包含我在 Steam 上购买的大量游戏，还保存了许多珍贵的好友联系。失去访问权限将对我的游戏体验和社交造成严重影响。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;鉴于此情况，我恳请贵团队尽快协助移除我账户中的手机令牌，以便我重新绑定手机号并恢复正常使用。您的帮助对我而言至关重要，万分感谢！
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Dear Steam Customer Support,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I urgently need your assistance to remove the mobile token from my Steam account in order to restore normal access. To facilitate the prompt verification of my identity, I have provided the following details:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; Username: &lt;span class=&#34;gs&#34;&gt;**273129872**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; Nickname: &lt;span class=&#34;gs&#34;&gt;**米亚内哈几嘛**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt; A screenshot of the relevant transaction record has been attached to this message for your reference
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Unfortunately, my phone was accidentally damaged and subsequently formatted, resulting in the loss of both my Steam mobile token and recovery code. Without the token, I am unable to regain access through the usual recovery process, which has caused significant inconvenience.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;This account is of great importance to me. It not only contains a large library of purchased games but also holds a valuable network of friends I have built over time. Losing access would have a serious impact on both my gaming experience and social connections.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Given the urgency of this matter, I sincerely request your prompt assistance in removing the mobile token from my account so that I can rebind my phone number and restore full account functionality. Your support is greatly appreciated, and I thank you in advance for your understanding and swift action.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;远程电脑维修视频字幕处理需求文档&#34;&gt;远程电脑维修视频字幕处理需求文档&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-1&#34;&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-2&#34;&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-3&#34;&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-4&#34;&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-5&#34;&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-6&#34;&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-7&#34;&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-8&#34;&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-9&#34;&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-10&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-10&#34;&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-11&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-11&#34;&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-12&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-12&#34;&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-13&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-13&#34;&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-14&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-14&#34;&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-15&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-15&#34;&gt;15&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-16&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-16&#34;&gt;16&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-17&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-17&#34;&gt;17&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-18&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-18&#34;&gt;18&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-19&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-19&#34;&gt;19&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-20&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-20&#34;&gt;20&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-21&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-21&#34;&gt;21&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-22&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-22&#34;&gt;22&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-23&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-23&#34;&gt;23&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-24&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-24&#34;&gt;24&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-25&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-25&#34;&gt;25&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-26&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-26&#34;&gt;26&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-27&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-27&#34;&gt;27&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-28&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-28&#34;&gt;28&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-29&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-29&#34;&gt;29&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-30&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-30&#34;&gt;30&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-31&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-31&#34;&gt;31&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-32&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-32&#34;&gt;32&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-33&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-33&#34;&gt;33&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-34&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-34&#34;&gt;34&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-35&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-35&#34;&gt;35&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-36&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-36&#34;&gt;36&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-37&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-37&#34;&gt;37&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-38&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-38&#34;&gt;38&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-39&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-39&#34;&gt;39&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-40&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-40&#34;&gt;40&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-41&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-41&#34;&gt;41&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-42&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-42&#34;&gt;42&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-43&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-43&#34;&gt;43&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-44&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-44&#34;&gt;44&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-45&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-45&#34;&gt;45&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-46&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-46&#34;&gt;46&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-47&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-47&#34;&gt;47&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-48&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-48&#34;&gt;48&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-49&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-49&#34;&gt;49&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-50&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-50&#34;&gt;50&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-51&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-51&#34;&gt;51&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-52&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-52&#34;&gt;52&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-53&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-53&#34;&gt;53&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-54&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-54&#34;&gt;54&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-55&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-55&#34;&gt;55&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-56&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-56&#34;&gt;56&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-57&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-57&#34;&gt;57&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-58&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-58&#34;&gt;58&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-59&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-59&#34;&gt;59&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-60&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-60&#34;&gt;60&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-61&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-61&#34;&gt;61&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-62&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-62&#34;&gt;62&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-63&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-63&#34;&gt;63&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-64&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-64&#34;&gt;64&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-65&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-65&#34;&gt;65&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-66&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-66&#34;&gt;66&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-67&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-67&#34;&gt;67&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-68&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-68&#34;&gt;68&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-69&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-69&#34;&gt;69&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-70&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-70&#34;&gt;70&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-71&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-71&#34;&gt;71&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-72&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-72&#34;&gt;72&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-73&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-73&#34;&gt;73&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-74&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-74&#34;&gt;74&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-75&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-75&#34;&gt;75&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-76&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-76&#34;&gt;76&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-77&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-77&#34;&gt;77&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-78&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-78&#34;&gt;78&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-79&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-79&#34;&gt;79&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-80&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-80&#34;&gt;80&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-81&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-81&#34;&gt;81&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-82&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-82&#34;&gt;82&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-83&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-83&#34;&gt;83&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-84&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-84&#34;&gt;84&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-85&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-85&#34;&gt;85&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-86&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-86&#34;&gt;86&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-87&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-87&#34;&gt;87&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-88&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-88&#34;&gt;88&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-2-89&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-2-89&#34;&gt;89&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;场景
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;远程电脑维修者的讲解视频已录制完毕，使用 Buzz 得到原始 SRT（含时间戳与识别文本），需对字幕做后期校正：修常识性错误与专有名词识别错误，保留画面与语音不变，最终输出标准 SRT（仅中文）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;输入
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Buzz 导出的原始 .srt 文件（含序号、时间轴、原始识别中文文本）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;白名单（必须严格使用，不改写、不翻译、不缩写）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WEGAME、章九工具箱、Geek Uninstaller、Edge浏览器、sfc /scannow、ipconfig /flushdns、ncpa.cpl、IPv4、IPv6、DNS、小章
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;若识别结果为近似错写（如 scnnuw、rpconfig、Vgame 等），一律修正为白名单标准写法。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;修正原则（优先级）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; 保留原始表达风格，仅在明显错误或超长时修改。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 修正常识性错误（事实类）与专有名词识别错误。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; 不增添未说出的信息，不更改语意核心，不改语音与画面内容。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;输出格式（严格）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;标准 SRT 块格式，块间空行：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;00:00:01,000 --&amp;gt; 00:00:03,000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;优化后的中文字幕
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;每条字幕块包含三行：序号、时间轴、中文（单行，不换行）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;最终文件需兼容主流剪辑或播放软件（Premiere、Final Cut、DaVinci Resolve、VLC 等）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;字数与拆分规则（关键修正，避免逻辑矛盾）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;中文单条文本不超过13个汉字（标点不计入字符上限但影响断句）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;若原条文本超过限制，则拆分为多个连续字幕块（每块中文单行、≤13字），拆分过程要保持语义连贯与节奏自然。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;拆分后的时间轴分配规则（严格且确定）：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; 原字幕的时间区间为整体区间（首条 start = 原 start，末条 end = 原 end）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 按字符数比例分配每片段时长。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; 若片段时长小于0.3秒，则与邻近片段合并，直至每片段时长≥0.3秒或无法合并。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;4.&lt;/span&gt; 拆分时不得打断白名单词、命令、版本号等完整实体。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;时间轴微调与合并规则
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;总体原则：不扩大原时间范围，仅在区间内划分。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;若连续短字幕（小于0.3秒）造成卡顿，可合并为一条（start=前者 start，end=后者 end）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;若需微调时间轴，调整幅度应在相邻字幕时间范围内，并记录理由。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;语言与标点规范
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;保持中文自然、口语化表达。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;使用中文标点。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;白名单项保持原格式与大小写（如 sfc /scannow、ipconfig /flushdns）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;质量检查（输出前必须通过）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; 每条字幕中文≤13字且不含换行。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 白名单词条完全标准化。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; 时间轴总体覆盖原文件（不改变总时长）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;4.&lt;/span&gt; 不新增与语音不符的内容。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;5.&lt;/span&gt; SRT 格式严格合规（序号递增、时间格式正确、块间空行）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;备注（示例）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;原条（超长）：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;45
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;00:02:10,000 --&amp;gt; 00:02:14,000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;现在我们先用Geek Uninstaller把残留卸载干净然后再运行sfc /scannow来修复系统文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;拆分后（按字符比例分配时间）：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;45
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;00:02:10,000 --&amp;gt; 00:02:11,600
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;现在我们先用Geek Uninstaller把残留卸载干净
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;46
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;00:02:11,600 --&amp;gt; 00:02:14,000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;然后再运行sfc /scannow来修复系统文件
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;周记格式化&#34;&gt;周记格式化&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-1&#34;&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-2&#34;&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-3&#34;&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-4&#34;&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-5&#34;&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-6&#34;&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-7&#34;&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-8&#34;&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-9&#34;&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-10&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-10&#34;&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-11&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-11&#34;&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-12&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-12&#34;&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-13&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-13&#34;&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-14&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-14&#34;&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-15&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-15&#34;&gt;15&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-16&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-16&#34;&gt;16&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-17&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-17&#34;&gt;17&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-18&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-18&#34;&gt;18&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-19&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-19&#34;&gt;19&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-20&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-20&#34;&gt;20&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-21&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-21&#34;&gt;21&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-22&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-22&#34;&gt;22&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-23&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-23&#34;&gt;23&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-24&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-24&#34;&gt;24&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-25&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-25&#34;&gt;25&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-26&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-26&#34;&gt;26&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-27&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-27&#34;&gt;27&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-28&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-28&#34;&gt;28&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-29&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-29&#34;&gt;29&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-30&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-30&#34;&gt;30&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-31&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-31&#34;&gt;31&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-32&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-32&#34;&gt;32&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-33&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-33&#34;&gt;33&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-34&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-34&#34;&gt;34&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-35&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-35&#34;&gt;35&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-36&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-36&#34;&gt;36&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-37&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-37&#34;&gt;37&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-38&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-38&#34;&gt;38&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-39&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-39&#34;&gt;39&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-40&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-40&#34;&gt;40&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-41&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-41&#34;&gt;41&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-42&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-42&#34;&gt;42&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-43&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-43&#34;&gt;43&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-44&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-44&#34;&gt;44&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-45&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-45&#34;&gt;45&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-46&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-46&#34;&gt;46&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-47&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-47&#34;&gt;47&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-48&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-48&#34;&gt;48&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-49&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-49&#34;&gt;49&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-50&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-50&#34;&gt;50&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-51&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-51&#34;&gt;51&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-3-52&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-3-52&#34;&gt;52&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@@
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;帮我按照以下要求对文章内容进行统一梳理与润色，仅做整理与结构化，不进行创作扩写：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;一、通用原则
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; 所有内容必须使用 Markdown 无序列表（-），不得出现普通段落文本。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 内容梳理完成后，需对所有模块进行一次整体复查，确保：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 信息准确
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 链接可用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 名称与链接严格对应
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 结构符合下述规则
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; 不输出任何“说明、分析、过程性文字”，只输出整理后的结果。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;二、模块规则
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;【言论模块】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 每一条言论作为一个独立列表项，用 - 开头。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 引用内容单独成行。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 下一行换行显示来源，格式为：[&lt;span class=&#34;nt&#34;&gt;来源&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;链接&lt;/span&gt;)。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 每条言论都必须有来源。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;【文章模块】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 每一篇文章作为一个列表项。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 根据链接自动补全完整文章标题。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 输出格式统一为：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;文章标题&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;链接&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;【读书 / 电影 / 剧集模块】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 每一项内容作为一个列表项。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 若我已提供链接，直接使用。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 若我未提供链接，需主动补全权威条目链接，优先级如下：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; NeoDB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 豆瓣（仅在 NeoDB 找不到时使用）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 输出格式统一为：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;名称&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;链接&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 不额外说明链接来源或补充过程。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;【日记模块】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 一级列表项表示日期：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 日期
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 二级缩进列表项表示当天的每一件独立事件：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ␠␠- 事件内容
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 不合并事件，不使用普通段落。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;【感悟模块】
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 每一句感悟作为一个独立列表项。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 每条以 - 开头，不合并、不扩写。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;三、最终检查要求
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 所有模块必须符合对应结构。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 所有“每条使用 -”的内容，均指以 Markdown 无序列表项形式表达。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 确保整体结构清晰、层级正确、数据可靠。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@@
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;工资计算逻辑&#34;&gt;工资计算逻辑&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-1&#34;&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-2&#34;&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-3&#34;&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-4&#34;&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-5&#34;&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-6&#34;&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-7&#34;&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-8&#34;&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-9&#34;&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-10&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-10&#34;&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-11&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-11&#34;&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-12&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-12&#34;&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-13&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-13&#34;&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-14&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-14&#34;&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-15&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-15&#34;&gt;15&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-16&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-16&#34;&gt;16&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-17&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-17&#34;&gt;17&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-18&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-18&#34;&gt;18&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-19&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-19&#34;&gt;19&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-20&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-20&#34;&gt;20&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-21&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-21&#34;&gt;21&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-22&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-22&#34;&gt;22&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-23&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-23&#34;&gt;23&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-24&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-24&#34;&gt;24&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-25&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-25&#34;&gt;25&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-26&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-26&#34;&gt;26&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-27&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-27&#34;&gt;27&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-28&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-28&#34;&gt;28&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-29&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-29&#34;&gt;29&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-30&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-30&#34;&gt;30&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-31&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-31&#34;&gt;31&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-32&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-32&#34;&gt;32&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-33&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-33&#34;&gt;33&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-34&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-34&#34;&gt;34&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-35&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-35&#34;&gt;35&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-36&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-36&#34;&gt;36&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-37&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-37&#34;&gt;37&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-38&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-38&#34;&gt;38&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-4-39&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-4-39&#34;&gt;39&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;你是我的记账逻辑检查助手。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;我会提供一条或多条记账记录，包含以下字段：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 星期
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 日期（YYYY-MM-DD）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 总营收（total_income）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 自己固定收入（my_fixed_income）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; David外包费（david_fee）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 自己账户收款（my_account）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 大兵账户收款（dabing_account）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 大锤账户收款（dachui_account）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 自己应得收入（my_income）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 大兵应得收入（dabing_income）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 大锤应得收入（dachui_income）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; David应得收入（david_income）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 大兵应发工资（dabing_payable）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 大锤应发工资（dachui_payable）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请帮我检查以下内容：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; 剩余金额是否正确：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   remain = total_income - my_fixed_income - david_fee
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; 各人员理论收入是否正确：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; my_income = my_fixed_income + remain × 0.5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; dabing_income = remain × 0.25
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; dachui_income = remain × 0.25
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; david_income = david_fee
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; 应发工资是否正确：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; dabing_payable = dabing_income - dabing_account
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; dachui_payable = dachui_income - dachui_account
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;4.&lt;/span&gt; 总收款是否对得上总营收：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; total_account = my_account + dabing_account + dachui_account
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; total_account 是否等于 total_income
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;5.&lt;/span&gt; 输出对每条记录的检查结果，指出错误字段及正确值，并备注原因。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请只用表格或列表形式给出每条记录的检查结果，注明错误及修正建议。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;示例数据格式（制表符或逗号分隔）：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;星期 日期 总营收 自己固定收入 David外包费 自己账户收款 大兵账户收款 大锤账户收款 自己应得收入 大兵应得收入 大锤应得收入 David应得收入 大兵应发工资 大锤应发工资
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;星期一 2025-08-11 1510 200 233 970 390 150 738.50 269.25 269.25 233.00 -120.75 119.25
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;互联网挑战杯大创竞赛导师&#34;&gt;互联网+挑战杯大创竞赛导师&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-5-1&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-5-1&#34;&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-5-2&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-5-2&#34;&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-5-3&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-5-3&#34;&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-5-4&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-5-4&#34;&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-5-5&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-5-5&#34;&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-5-6&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-5-6&#34;&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-5-7&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-5-7&#34;&gt;7&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-5-8&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-5-8&#34;&gt;8&lt;/a&gt;
+&lt;/span&gt;&lt;span class=&#34;lnt&#34; id=&#34;hl-5-9&#34;&gt;&lt;a class=&#34;lnlinks&#34; href=&#34;#hl-5-9&#34;&gt;9&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Role and Goal: The GPT will act as a mentor for students participating in competitions like the Internet+ Competition, Challenge Cup, and College Students&amp;#39; Innovation and Entrepreneurship Competition in China. It will guide students through the process of conceptualizing, designing, and writing project proposals and presentations.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Constraints: The GPT should not create complete project proposals or presentations but rather provide guidance, suggestions, and critiques to improve the students&amp;#39; own work.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Guidelines: The GPT will provide educational support, focusing on fostering students&amp;#39; critical thinking and creativity. It should offer insights into effective project planning, structure, and presentation skills.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Clarification: When unclear about a project&amp;#39;s specifics, the GPT should ask for more details to provide tailored advice.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Personalization: The GPT should maintain a supportive and educational tone, encouraging students to develop their ideas independently while providing expert advice.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/linexjlin/GPTs/blob/main/prompts/%E4%BA%92%E8%81%94%E7%BD%91+%E6%8C%91%E6%88%98%E6%9D%AF%E5%A4%A7%E5%88%9B%E7%AB%9E%E8%B5%9B%E5%AF%BC%E5%B8%88.md&#34;&gt;来源&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>第2课【提示词工程】</title>
+      <link>http://localhost:1313/prompt-engineering-2/</link>
+      <pubDate>Fri, 12 Apr 2024 16:59:03 +0800</pubDate>
+      <guid>http://localhost:1313/prompt-engineering-2/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/prompt-engineering-2/&#34;&gt;https://itxiaozhang.com/prompt-engineering-2/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文首发于：&lt;a href=&#34;https://itxiaozhang.com/prompt-engineering-2/&#34;&gt;https://itxiaozhang.com/prompt-engineering-2/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此教程配合视频学习效果最佳，视频教程在文章末尾。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;p&gt;在本次课程中，我们要聊聊如何跟大型语言模型（LLM）更高效地沟通。就像我们平时说话要讲清楚、有条理一样，给LLM的提示词也需要清晰、有组织，这样它们才能更好地理解我们的意图，让我们的交流更加顺畅，更有成效。MPF框架让我们创建的提示词既好读又好用，还能保持高效，确保在各种场景下都能发挥关键作用。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>第1课【提示词工程】</title>
+      <link>http://localhost:1313/prompt-engineering-1/</link>
+      <pubDate>Mon, 01 Apr 2024 14:42:40 +0800</pubDate>
+      <guid>http://localhost:1313/prompt-engineering-1/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/prompt-engineering-1/&#34;&gt;https://itxiaozhang.com/prompt-engineering-1/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文首发于：&lt;a href=&#34;https://itxiaozhang.com/prompt-engineering-1/&#34;&gt;https://itxiaozhang.com/prompt-engineering-1/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此教程配合视频学习效果最佳，视频教程在文章末尾。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Codesignal推出了一个&lt;a href=&#34;https://learn.codesignal.com/preview/course-paths/16/prompt-engineering-for-everyone&#34;&gt;提示词工程教程&lt;/a&gt;，这个教程是全英文版本的，演示网站加载的很慢，不利于普通人使用。为了方便大家学习，我做了一些修改和翻译，使用国内的大模型做演示，希望对你有所帮助。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>第1课-认识和注册【通义千问入门到进阶教程】</title>
+      <link>http://localhost:1313/tongyi-qianwen-beginner-to-advanced-tutorial-lesson1/</link>
+      <pubDate>Tue, 16 Jan 2024 15:42:06 +0800</pubDate>
+      <guid>http://localhost:1313/tongyi-qianwen-beginner-to-advanced-tutorial-lesson1/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/tongyi-qianwen-beginner-to-advanced-tutorial-lesson1/&#34;&gt;https://itxiaozhang.com/tongyi-qianwen-beginner-to-advanced-tutorial-lesson1/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;p&gt;在全球范围内，大模型已成为自然语言处理领域的关键技术突破，其中GPT系列、BERT、T5以及阿里云通义千问等均属这一范畴。通义千问继承了大模型的核心特点，即通过大规模数据训练，实现对复杂语言现象的深刻理解和生成。阿里云通义千问是一款代表中国尖端技术水平的超大规模语言模型，凭借其庞大的参数规模、卓越的性能表现以及丰富的应用场景，为用户提供前所未有的智能交互体验。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>使用恢复码移除 Steam 手机令牌 | IT小章</title>
+<meta name="keywords" content="steam, steam令牌, steam guard, 恢复码, 账户安全">
+<meta name="description" content="本文演示在无法访问原有手机令牌设备时，如何使用恢复码（R开头代码）安全地移除 Steam 手机令牌（Steam Guard Mobile Authenticator）。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/how-to-remove-steam-authenticator-with-recovery-code/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/how-to-remove-steam-authenticator-with-recovery-code/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      使用恢复码移除 Steam 手机令牌
+    </h1>
+    <div class="post-description">
+      本文演示在无法访问原有手机令牌设备时，如何使用恢复码（R开头代码）安全地移除 Steam 手机令牌（Steam Guard Mobile Authenticator）。
+    </div>
+    <div class="post-meta"><span title='2025-12-18 19:05:39 +0800 CST'>2025年12月18日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/how-to-remove-steam-authenticator-with-recovery-code/">https://itxiaozhang.com/how-to-remove-steam-authenticator-with-recovery-code/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="问题描述">问题描述<a hidden class="anchor" aria-hidden="true" href="#问题描述">#</a></h2>
+<p>用户因<strong>更换手机、遗失手机或无法访问旧的手机设备</strong>，导致无法使用 Steam 手机令牌（Steam Guard Mobile Authenticator）登录 Steam 账户。需要通过<strong>恢复码</strong>移除当前的手机令牌，以便重新登录账户或设置新的令牌。</p>
+<h2 id="问题原因">问题原因<a hidden class="anchor" aria-hidden="true" href="#问题原因">#</a></h2>
+<ul>
+<li><strong>设备丢失/更换：</strong> 用户用于接收 Steam 手机令牌验证码的移动设备丢失或被替换。</li>
+<li><strong>无法访问邮箱：</strong> 在尝试通过电子邮件恢复时，用户可能最初选择了无法访问用于注册 Steam 账户的电子邮箱。</li>
+<li><strong>网络问题：</strong> 极少数情况下，登录或恢复过程失败可能由网络连接不稳定或特定网络限制引起。</li>
+</ul>
+<h2 id="解决办法">解决办法<a hidden class="anchor" aria-hidden="true" href="#解决办法">#</a></h2>
+<p>移除 Steam 手机令牌的步骤如下：</p>
+<ol>
+<li><strong>访问账户恢复页面：</strong></li>
+</ol>
+<ul>
+<li>通过 Steam 客户端或网页浏览器访问 Steam 官方网站。</li>
+<li>点击“<strong>我无法登录</strong>”。</li>
+<li>选择“<strong>我删除或遗失了 Steam 令牌</strong>”。</li>
+</ul>
+<ol start="2">
+<li><strong>启动身份验证流程：</strong></li>
+</ol>
+<ul>
+<li>输入账户的<strong>初始电子邮箱地址</strong>。</li>
+<li>输入验证码并点击“搜索”。</li>
+<li>在恢复选项中选择“<strong>我已无法访问电子邮件</strong>”（如果无法访问邮箱），或直接选择通过电子邮件接收验证码。</li>
+</ul>
+<ol start="3">
+<li><strong>通过电子邮件验证：</strong></li>
+</ol>
+<ul>
+<li>检查注册邮箱，找到 Steam 发送的验证邮件。</li>
+<li>点击邮件中的“<strong>继续恢复</strong>”链接。</li>
+</ul>
+<ol start="4">
+<li><strong>选择账户并移除令牌：</strong></li>
+</ol>
+<ul>
+<li>在新打开的页面中，选择需要移除令牌的 <strong>Steam 账户</strong>。</li>
+<li>选择第三项：“<strong>移除 Steam 令牌手机验证器</strong>”。</li>
+<li>在后续步骤中，选择“<strong>我无法使用 Steam 手机令牌</strong>”。</li>
+<li>选择“<strong>无法使用手机号</strong>”。</li>
+</ul>
+<ol start="5">
+<li><strong>输入恢复码：</strong></li>
+</ol>
+<ul>
+<li>找到并输入在首次设置 Steam 手机令牌时系统提供的<strong>恢复码</strong>。</li>
+<li><strong>注意：</strong> 恢复码通常以大写字母 <strong>R</strong> 开头，后跟 5 位数字。</li>
+<li>点击“<strong>移除 Steam 令牌手机验证器</strong>”。</li>
+</ul>
+<ol start="6">
+<li><strong>登录与邮箱验证：</strong></li>
+</ol>
+<ul>
+<li>令牌移除成功后，打开 Steam 客户端或网页端。</li>
+<li>输入<strong>用户名和密码</strong>尝试登录。</li>
+<li>系统会要求输入<strong>邮箱验证码</strong>。</li>
+<li>检查邮箱，获取并输入验证码即可成功登录。</li>
+</ul>
+<ol start="7">
+<li><strong>网络故障排除（如果登录失败）：</strong></li>
+</ol>
+<ul>
+<li>如果遇到登录或恢复问题，请尝试切换网络环境。</li>
+<li>建议更换为手机热点或 USB 网络共享连接。</li>
+<li>尝试在其他电脑设备上进行登录操作。</li>
+</ul>
+<h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li>哔哩哔哩：<a href="https://space.bilibili.com/3546607630944387">https://space.bilibili.com/3546607630944387</a></li>
+<li>YouTube：<a href="https://www.youtube.com/@itxiaozhang">https://www.youtube.com/@itxiaozhang</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/steam/">Steam</a></li>
+      <li><a href="http://localhost:1313/tags/steam%E4%BB%A4%E7%89%8C/">Steam令牌</a></li>
+      <li><a href="http://localhost:1313/tags/steam-guard/">Steam Guard</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%81%A2%E5%A4%8D%E7%A0%81/">恢复码</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%B4%A6%E6%88%B7%E5%AE%89%E5%85%A8/">账户安全</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>压缩软件 on IT小章</title>
+    <link>http://localhost:1313/tags/%E5%8E%8B%E7%BC%A9%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 压缩软件 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 03 Mar 2024 00:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%8E%8B%E7%BC%A9%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>压缩解压神器7-Zip</title>
+      <link>http://localhost:1313/7-zip-ultimate-compression-tool/</link>
+      <pubDate>Sun, 03 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/7-zip-ultimate-compression-tool/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/7-zip-ultimate-compression-tool/&#34;&gt;https://itxiaozhang.com/7-zip-ultimate-compression-tool/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;7-Zip 是一款开源、免费、高效、安全、无广告、支持多种压缩格式、具有强大加密功能、跨平台的文件压缩和解压缩工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;高压缩比率&lt;/strong&gt;：使用 7z 压缩格式，能够在保持压缩速度的同时实现最高水平的压缩比率，有效节省存储空间和带宽。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支持多种压缩格式&lt;/strong&gt;：除了 7z 格式外，还支持解压缩几乎所有主流的压缩格式，包括 ZIP、RAR、GZIP 等，提供广泛的兼容性和灵活性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;强大的加密功能&lt;/strong&gt;：支持使用 AES-256 加密算法对压缩文件进行加密，确保敏感数据的安全性，适用于保护隐私和商业数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跨平台性&lt;/strong&gt;：可在多个操作系统上运行，包括 Windows、Linux、Mac 等，为用户提供了灵活的选择，无需担心平台兼容性问题。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>无畏时刻 on IT小章</title>
+    <link>http://localhost:1313/tags/%E6%97%A0%E7%95%8F%E6%97%B6%E5%88%BB/</link>
+    <description>Recent content in 无畏时刻 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 12 Sep 2025 20:07:46 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%97%A0%E7%95%8F%E6%97%B6%E5%88%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>磁盘清理案例分享：C 盘和 D 盘爆满后的清理思路</title>
+      <link>http://localhost:1313/disk-cleanup-case-c-d-drive-full-solution/</link>
+      <pubDate>Fri, 12 Sep 2025 20:07:46 +0800</pubDate>
+      <guid>http://localhost:1313/disk-cleanup-case-c-d-drive-full-solution/</guid>
+      <description>电脑 C 盘和 D 盘同时爆满，主要原因是 Steam 游戏文件、无畏时刻录屏视频及重复文件堆积。本文结合实际案例，总结清理思路和操作步骤。</description>
+    </item>
+  </channel>
+</rss>

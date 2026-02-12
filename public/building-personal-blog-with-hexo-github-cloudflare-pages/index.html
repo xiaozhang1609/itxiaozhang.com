@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客 | IT小章</title>
+<meta name="keywords" content="hexo, 博客, cloudflare">
+<meta name="description" content="这篇文章记录我使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客，记录如何安装和配置 Hexo，如何通过 SSH 将项目推送到 GitHub，以及如何在 Cloudflare Pages 部署博客并设置自定义域名。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/building-personal-blog-with-hexo-github-cloudflare-pages/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/building-personal-blog-with-hexo-github-cloudflare-pages/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客
+    </h1>
+    <div class="post-description">
+      这篇文章记录我使用 Hexo、GitHub 和 Cloudflare Pages 搭建个人博客，记录如何安装和配置 Hexo，如何通过 SSH 将项目推送到 GitHub，以及如何在 Cloudflare Pages 部署博客并设置自定义域名。
+    </div>
+    <div class="post-meta"><span title='2024-07-24 22:38:03 +0800 CST'>2024年7月24日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/">https://itxiaozhang.com/building-personal-blog-with-hexo-github-cloudflare-pages/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="一安装-nodejs">一、安装 Node.js<a hidden class="anchor" aria-hidden="true" href="#一安装-nodejs">#</a></h2>
+<ol>
+<li>
+<p><strong>下载 Node.js 安装包</strong></p>
+<ul>
+<li>前往 Node.js 官网 <a href="https://nodejs.org/">https://nodejs.org/</a>，点击“LTS”按钮下载最新的 LTS 版本。</li>
+</ul>
+</li>
+<li>
+<p><strong>安装 Node.js</strong></p>
+<ul>
+<li>
+<p>双击下载的安装包，按照提示进行安装。默认选择即可。安装完成后，会自动安装 Node.js 和 npm（Node.js 的包管理工具）。</p>
+</li>
+<li>
+<p>安装完成后，打开命令提示符（可以通过按 <code>Win + R</code>，输入 <code>cmd</code>，然后按回车键打开），输入以下命令检查 Node.js 和 npm 是否安装成功：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node -v
+</span></span><span class="line"><span class="cl">npm -v
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>你应该会看到 Node.js 和 npm 的版本号。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="二安装和配置-hexo">二、安装和配置 Hexo<a hidden class="anchor" aria-hidden="true" href="#二安装和配置-hexo">#</a></h2>
+<ol>
+<li>
+<p><strong>安装 Hexo CLI</strong></p>
+<ul>
+<li>
+<p>在命令提示符中输入以下命令安装 Hexo CLI：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install -g hexo-cli
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>初始化 Hexo 项目</strong></p>
+<ul>
+<li>
+<p>在命令提示符中，切换到你想要存放博客文件的目录，例如 <code>D:\Blogs</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /d D:<span class="se">\B</span>logs
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>初始化 Hexo 项目：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span><span class="lnt" id="hl-3-2"><a class="lnlinks" href="#hl-3-2">2</a>
+</span><span class="lnt" id="hl-3-3"><a class="lnlinks" href="#hl-3-3">3</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexo init my-blog
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> my-blog
+</span></span><span class="line"><span class="cl">npm install
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>生成静态文件并测试</strong></p>
+<ul>
+<li>
+<p>在命令提示符中输入以下命令生成静态文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-1"><a class="lnlinks" href="#hl-4-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexo generate
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>启动本地服务器进行测试：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-5-1"><a class="lnlinks" href="#hl-5-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexo server
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>打开浏览器，访问 <a href="http://localhost:4000/">http://localhost:4000/</a> 以查看生成的博客页面。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>取消忽略 <code>public</code> 目录</strong></p>
+<ul>
+<li>打开 <code>D:\Blogs\my-blog</code> 目录，找到并编辑 <code>.gitignore</code> 文件，删除 <code>public/</code> 这一行，使 <code>public</code> 目录不再被忽略。</li>
+</ul>
+</li>
+</ol>
+<h2 id="三使用-ssh-链接-github">三、使用 SSH 链接 GitHub<a hidden class="anchor" aria-hidden="true" href="#三使用-ssh-链接-github">#</a></h2>
+<ol>
+<li>
+<p><strong>生成 SSH 密钥对</strong></p>
+<ul>
+<li>
+<p>打开 Git Bash（如果没有请自行安装），输入以下命令生成 SSH 密钥对：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-6-1"><a class="lnlinks" href="#hl-6-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t rsa -b <span class="m">4096</span> -C <span class="s2">&#34;xiaozhang@example.com&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>按照提示操作，默认路径即可（按 3 次回车），生成的密钥对通常保存在 <code>C:\Users\YourUsername\.ssh</code> 目录中。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>将公钥添加到 GitHub</strong></p>
+<ul>
+<li>打开文件资源管理器，导航到 <code>C:\Users\YourUsername\.ssh</code>，用记事本打开 <code>id_rsa.pub</code> 文件，复制文件内容。</li>
+<li>登录 GitHub，进入 <code>Settings</code> &gt; <code>SSH and GPG keys</code>，点击 <code>New SSH key</code>，将公钥粘贴进去并保存。</li>
+</ul>
+</li>
+<li>
+<p><strong>验证 SSH 链接成功</strong></p>
+<ul>
+<li>
+<p>在 Git Bash 中输入以下命令验证与 GitHub 的连接：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-7-1"><a class="lnlinks" href="#hl-7-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -T git@github.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如果连接成功，你将看到类似以下的输出：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-8-1"><a class="lnlinks" href="#hl-8-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">Hi xiaozhang! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如果看到这条信息，说明 SSH 连接配置成功。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="四创建-github-仓库">四、创建 GitHub 仓库<a hidden class="anchor" aria-hidden="true" href="#四创建-github-仓库">#</a></h2>
+<ol>
+<li>
+<p><strong>登录 GitHub 并创建一个新的仓库</strong></p>
+<ul>
+<li>登录 GitHub，点击右上角的“+”，选择 <code>New repository</code>，创建一个新的仓库。</li>
+<li>仓库名（随便起）：<code>xiaozhang.github.io</code></li>
+<li>仓库类型：Public</li>
+</ul>
+</li>
+<li>
+<p><strong>在本地仓库中添加 GitHub 远程仓库</strong></p>
+<ul>
+<li>
+<p>打开命令提示符，导航到 Hexo 项目目录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-9-1"><a class="lnlinks" href="#hl-9-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /d D:<span class="se">\B</span>logs<span class="se">\m</span>y-blog
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>初始化 Git 并添加远程仓库：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-10-1"><a class="lnlinks" href="#hl-10-1">1</a>
+</span><span class="lnt" id="hl-10-2"><a class="lnlinks" href="#hl-10-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git remote add origin git@github.com:xiaozhang/xiaozhang.github.io.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>将整个项目文件夹推送到 GitHub 的 <code>main</code> 分支</strong></p>
+<ul>
+<li>
+<p>首先，确保 <code>.gitignore</code> 文件已经配置好，以便包括 <code>public</code> 目录中的内容。然后，执行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-11-1"><a class="lnlinks" href="#hl-11-1">1</a>
+</span><span class="lnt" id="hl-11-2"><a class="lnlinks" href="#hl-11-2">2</a>
+</span><span class="lnt" id="hl-11-3"><a class="lnlinks" href="#hl-11-3">3</a>
+</span><span class="lnt" id="hl-11-4"><a class="lnlinks" href="#hl-11-4">4</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Initial commit&#34;</span>
+</span></span><span class="line"><span class="cl">git branch -M main
+</span></span><span class="line"><span class="cl">git push -u origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ol>
+<h2 id="五配置-cloudflare-pages">五、配置 Cloudflare Pages<a hidden class="anchor" aria-hidden="true" href="#五配置-cloudflare-pages">#</a></h2>
+<ol>
+<li>
+<p><strong>登录 Cloudflare 并创建一个 Pages 项目</strong></p>
+<ul>
+<li>登录 Cloudflare，进入 Dashboard，点击 <code>Pages</code>，然后点击 <code>Create a project</code>。</li>
+<li>选择 <code>Connect to Git</code>，并连接到你在 GitHub 上的仓库 <code>xiaozhang.github.io</code>。</li>
+<li>选择 <code>main</code> 分支作为构建分支。</li>
+</ul>
+</li>
+<li>
+<p><strong>配置 Cloudflare Pages</strong></p>
+<ul>
+<li>在设置页面中，将 “Output Directory” 设为 <code>public</code>。其他设置保持默认即可。</li>
+</ul>
+</li>
+</ol>
+<h2 id="六配置自定义域名">六、配置自定义域名<a hidden class="anchor" aria-hidden="true" href="#六配置自定义域名">#</a></h2>
+<ol>
+<li>
+<p><strong>在 Cloudflare 上添加域名</strong></p>
+<ul>
+<li>登录 Cloudflare，进入 Dashboard，点击 <code>Add a Site</code>，添加域名。</li>
+</ul>
+</li>
+<li>
+<p><strong>配置 DNS 记录</strong></p>
+<ul>
+<li>在 Cloudflare 的 DNS 管理页面中，添加一条 CNAME 记录，指向 Cloudflare Pages 的默认域名（如 <code>xiaozhang.github.io</code>）。</li>
+</ul>
+</li>
+<li>
+<p><strong>在 Cloudflare Pages 上配置自定义域名</strong></p>
+<ul>
+<li>进入 Cloudflare Pages 项目的设置页面，找到 <code>Custom Domains</code>，添加自定义域名。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>备注：
+sticky: true  # 添加这一行来置顶文章，有些主题可能需要特定的格式或数值</p>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/hexo/">Hexo</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
+      <li><a href="http://localhost:1313/tags/cloudflare/">Cloudflare</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

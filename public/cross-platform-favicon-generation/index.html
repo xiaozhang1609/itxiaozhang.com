@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>跨平台Favicon生成 | IT小章</title>
+<meta name="keywords" content="favicon, webdesign, 网站, 博客, 网站图标">
+<meta name="description" content="本文介绍了如何使用 Real Favicon Generator 等工具，为您的网站或应用生成一套完整的、兼容所有主流设备和浏览器的 Favicon 图标文件。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/cross-platform-favicon-generation/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/cross-platform-favicon-generation/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      跨平台Favicon生成
+    </h1>
+    <div class="post-description">
+      本文介绍了如何使用 Real Favicon Generator 等工具，为您的网站或应用生成一套完整的、兼容所有主流设备和浏览器的 Favicon 图标文件。
+    </div>
+    <div class="post-meta"><span title='2025-12-31 23:45:49 +0800 CST'>2025年12月31日</span>&nbsp;·&nbsp;<span>1 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/cross-platform-favicon-generation">https://itxiaozhang.com/cross-platform-favicon-generation</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<p>Favicon（favorites icon，收藏夹图标）是您的网站在浏览器标签页、书签列表和移动设备上显示的标志性小图标。本教程将指导您使用专业的在线工具生成一套完整的 Favicon 文件，并将其应用到任何网站或项目中。</p>
+<h3 id="第一步准备原始图像">第一步：准备原始图像<a hidden class="anchor" aria-hidden="true" href="#第一步准备原始图像">#</a></h3>
+<ol>
+<li><strong>准备图像文件：</strong> 准备一张高质量的<strong>正方形</strong>图像文件（推荐使用 PNG、JPG 或 SVG 格式）。</li>
+<li><strong>推荐尺寸：</strong> 为确保生成各种尺寸的高清图标，原始图像的尺寸应为 <strong>512x512 像素或更大</strong>。</li>
+</ol>
+<h3 id="第二步使用-real-favicon-generator-生成文件">第二步：使用 Real Favicon Generator 生成文件<a hidden class="anchor" aria-hidden="true" href="#第二步使用-real-favicon-generator-生成文件">#</a></h3>
+<ol>
+<li><strong>访问工具：</strong> 打开 <strong>Real Favicon Generator</strong> 网站：<a href="https://realfavicongenerator.net/">https://realfavicongenerator.net/</a>。</li>
+<li><strong>上传图像：</strong> 点击页面上的上传按钮（通常是 “Pick your favicon image”），上传您在第一步中准备好的图像文件。</li>
+<li><strong>配置与生成：</strong></li>
+</ol>
+<ul>
+<li>网页会展示图标在不同设备和平台（如 Windows 磁贴、iOS 主屏、Android Chrome 等）上的预览效果。</li>
+<li>您可以接受工具提供的<strong>默认设置</strong>（这些设置通常是最佳实践）。</li>
+<li>滚动到页面底部，点击生成按钮（如 “Generate your Favicons and HTML code” 或 “Next →”）。</li>
+</ul>
+<ol start="4">
+<li><strong>下载文件包：</strong> 网站将生成并提供一个包含所有必要 Favicon 文件的压缩包（Zip 文件），请下载它。</li>
+</ol>
+<h3 id="第三步整理和准备文件">第三步：整理和准备文件<a hidden class="anchor" aria-hidden="true" href="#第三步整理和准备文件">#</a></h3>
+<ol>
+<li><strong>解压文件：</strong> 解压缩下载的 Favicon 文件包。</li>
+<li><strong>整理文件：</strong></li>
+</ol>
+<ul>
+<li><strong>删除非图像文件：</strong> 原始文章建议删除配置或清单文件。请从解压后的文件中删除类似 <code>site.webmanifest</code> 或其他不属于图像的文件。</li>
+<li><strong>保留图像文件：</strong> 保留所有生成的图像文件，主要包括各种尺寸的 <strong>.PNG</strong> 文件、<strong><code>.ICO</code></strong> 文件和 <strong><code>.SVG</code></strong> 文件。</li>
+</ul>
+<h3 id="第四步将-favicon-文件复制到项目目录">第四步：将 Favicon 文件复制到项目目录<a hidden class="anchor" aria-hidden="true" href="#第四步将-favicon-文件复制到项目目录">#</a></h3>
+<ol>
+<li><strong>定位目标目录：</strong></li>
+</ol>
+<ul>
+<li>在您的网站项目结构中，确定用于存放 Favicon 文件的位置。这通常是一个名为 <code>assets/img/favicons/</code>、<code>images/</code> 或直接是网站的<strong>根目录</strong>。</li>
+<li>如果您的项目尚未有专用的 Favicon 目录，建议创建一个。</li>
+</ul>
+<ol start="2">
+<li><strong>复制文件：</strong> 将您在第三步中整理好的所有 Favicon 图像文件（.PNG, .ICO, .SVG 等）复制到该目标目录中。</li>
+</ol>
+<h3 id="第五步完成部署">第五步：完成部署<a hidden class="anchor" aria-hidden="true" href="#第五步完成部署">#</a></h3>
+<ol>
+<li><strong>更新项目：</strong> 如果您的项目是使用构建工具或框架生成的，请执行相应的构建或部署流程。</li>
+<li><strong>清除缓存：</strong> 部署新文件后，您可能需要清除浏览器缓存，以确保浏览器加载的是新的 Favicon 图标。</li>
+</ol>
+<h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
+<li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/favicon/">Favicon</a></li>
+      <li><a href="http://localhost:1313/tags/webdesign/">Webdesign</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%BD%91%E7%AB%99/">网站</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87/">网站图标</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

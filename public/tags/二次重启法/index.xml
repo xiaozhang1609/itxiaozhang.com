@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>二次重启法 on IT小章</title>
+    <link>http://localhost:1313/tags/%E4%BA%8C%E6%AC%A1%E9%87%8D%E5%90%AF%E6%B3%95/</link>
+    <description>Recent content in 二次重启法 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 12 Jul 2025 13:48:09 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E4%BA%8C%E6%AC%A1%E9%87%8D%E5%90%AF%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>三角洲行动 ACE安全中心报错(1-0-0)：游戏安全组件运行时发生异常</title>
+      <link>http://localhost:1313/delta-action-ace-security-center-error-1-0-0/</link>
+      <pubDate>Sat, 12 Jul 2025 13:48:09 +0800</pubDate>
+      <guid>http://localhost:1313/delta-action-ace-security-center-error-1-0-0/</guid>
+      <description>本文针对《三角洲行动》启动时出现“游戏安全组件运行时发生异常 (1-0-0)”错误，分析可能原因并提供禁用异常服务、修复系统文件、清理残留、查杀病毒及重装组件的循序渐进解决方案。</description>
+    </item>
+  </channel>
+</rss>

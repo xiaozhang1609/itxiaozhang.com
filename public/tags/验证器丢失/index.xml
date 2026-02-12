@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>验证器丢失 on IT小章</title>
+    <link>http://localhost:1313/tags/%E9%AA%8C%E8%AF%81%E5%99%A8%E4%B8%A2%E5%A4%B1/</link>
+    <description>Recent content in 验证器丢失 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Sep 2025 14:01:55 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%AA%8C%E8%AF%81%E5%99%A8%E4%B8%A2%E5%A4%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Steam 手机令牌移除教程</title>
+      <link>http://localhost:1313/steam-mobile-authenticator-removal-tutorial/</link>
+      <pubDate>Tue, 02 Sep 2025 14:01:55 +0800</pubDate>
+      <guid>http://localhost:1313/steam-mobile-authenticator-removal-tutorial/</guid>
+      <description>如果你的 Steam 手机令牌验证器（Steam Guard Mobile Authenticator） 丢失了，比如手机坏了、换号码了、恢复码没保存等，本教程将一步步教你如何安全地恢复账号。</description>
+    </item>
+  </channel>
+</rss>

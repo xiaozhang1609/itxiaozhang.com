@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Steam 手机令牌移除教程 | IT小章</title>
+<meta name="keywords" content="steam, 手机令牌, 账号恢复, 验证器丢失">
+<meta name="description" content="如果你的 Steam 手机令牌验证器（Steam Guard Mobile Authenticator） 丢失了，比如手机坏了、换号码了、恢复码没保存等，本教程将一步步教你如何安全地恢复账号。">
+<meta name="author" content="IT小章">
+<link rel="canonical" href="http://localhost:1313/steam-mobile-authenticator-removal-tutorial/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/steam-mobile-authenticator-removal-tutorial/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 首页">
+                    <span>🏠 首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="📚 文章">
+                    <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="⏱️ 归档">
+                    <span>⏱️ 归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="🙋 关于">
+                    <span>🙋 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Steam 手机令牌移除教程
+    </h1>
+    <div class="post-description">
+      如果你的 Steam 手机令牌验证器（Steam Guard Mobile Authenticator） 丢失了，比如手机坏了、换号码了、恢复码没保存等，本教程将一步步教你如何安全地恢复账号。
+    </div>
+    <div class="post-meta"><span title='2025-09-02 14:01:55 +0800 CST'>2025年9月2日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>IT小章</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>原文地址：<a href="https://itxiaozhang.com/steam-mobile-authenticator-removal-tutorial/">https://itxiaozhang.com/steam-mobile-authenticator-removal-tutorial/</a><br>
+如果您需要远程电脑维修或者编程开发，请<a href="https://zhang9.cn">加我微信</a>咨询。</p>
+</blockquote>
+<h2 id="一前提条件">一、前提条件<a hidden class="anchor" aria-hidden="true" href="#一前提条件">#</a></h2>
+<p>在开始之前，请确认以下事项：</p>
+<ul>
+<li><strong>邮箱可用</strong>：必须能正常登录注册时填写的邮箱，这是所有恢复操作的基础。</li>
+<li><strong>账号基本信息</strong>：记得自己的 Steam 用户名 / 昵称 / 密码。</li>
+<li><strong>支付凭证</strong>：建议准备一张近期的 Steam 消费截图（微信、支付宝等支付记录）。</li>
+</ul>
+<hr>
+<h2 id="二常见问题场景">二、常见问题场景<a hidden class="anchor" aria-hidden="true" href="#二常见问题场景">#</a></h2>
+<p>导致无法使用手机令牌的情况，主要有以下几类：</p>
+<ol>
+<li>手机损坏、丢失或格式化 → 无法使用验证器</li>
+<li>恢复码未备份或遗失</li>
+<li>绑定手机号已注销 → 无法接收短信验证码</li>
+<li>仅剩邮箱与密码，客户端可能能登录，也可能完全无法进入</li>
+</ol>
+<hr>
+<h2 id="三解决方案总览">三、解决方案总览<a hidden class="anchor" aria-hidden="true" href="#三解决方案总览">#</a></h2>
+<p>根据账号的登录情况，分为 <strong>两种恢复路径</strong>：</p>
+<ul>
+<li><strong>路径 A：电脑客户端还能登录</strong> → 直接在客户端里移除验证器，简单快捷。</li>
+<li><strong>路径 B：客户端无法登录</strong> → 需要通过 Steam 网页端提交，需要填写的内容多于路径A。</li>
+</ul>
+<hr>
+<h2 id="四路径-a客户端可登录时的处理方法">四、路径 A：客户端可登录时的处理方法<a hidden class="anchor" aria-hidden="true" href="#四路径-a客户端可登录时的处理方法">#</a></h2>
+<ol>
+<li>打开 Steam 客户端</li>
+<li>左上角点击 <strong>Steam → 设置 → 账户</strong></li>
+<li>在 <strong>账户安全</strong> 栏选择 <strong>管理 Steam 令牌</strong></li>
+<li>点击 <strong>移除 Steam 令牌</strong></li>
+<li>根据提示，完成后续步骤。</li>
+</ol>
+<hr>
+<h2 id="五路径-b客户端无法登录时的处理方法">五、路径 B：客户端无法登录时的处理方法<a hidden class="anchor" aria-hidden="true" href="#五路径-b客户端无法登录时的处理方法">#</a></h2>
+<h3 id="步骤-1访问支持页面">步骤 1：访问支持页面<a hidden class="anchor" aria-hidden="true" href="#步骤-1访问支持页面">#</a></h3>
+<ul>
+<li>打开 <a href="https://help.steampowered.com/">Steam 支持页面</a></li>
+<li>点击 <strong>“我删除或遗失了我的 Steam 令牌手机验证器”</strong></li>
+</ul>
+<h3 id="步骤-2验证账户信息">步骤 2：验证账户信息<a hidden class="anchor" aria-hidden="true" href="#步骤-2验证账户信息">#</a></h3>
+<ul>
+<li>输入注册邮箱</li>
+<li>点击 <strong>通过电子邮件发送账户验证码</strong></li>
+<li>登录邮箱，点击邮件中的 <strong>继续恢复</strong></li>
+<li>页面将显示 <strong>Steam 用户名和昵称</strong> → 请记录</li>
+</ul>
+<h3 id="步骤-3声明无法使用手机号和恢复码">步骤 3：声明无法使用手机号和恢复码<a hidden class="anchor" aria-hidden="true" href="#步骤-3声明无法使用手机号和恢复码">#</a></h3>
+<ul>
+<li>选择 <strong>我已无法使用我的 Steam 手机令牌验证器</strong></li>
+<li>选择 <strong>我已无法使用此手机号码</strong></li>
+<li>点击 <strong>我找不到验证器恢复码了</strong> → 进入人工审核表单</li>
+</ul>
+<h3 id="步骤-4填写恢复表单">步骤 4：填写恢复表单<a hidden class="anchor" aria-hidden="true" href="#步骤-4填写恢复表单">#</a></h3>
+<p>需要填写以下内容：</p>
+<ul>
+<li><strong>账户信息</strong>：注册邮箱、Steam 用户名、昵称</li>
+<li><strong>情况说明示例</strong>：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17">17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18">18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19">19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20">20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21">21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22">22</a>
+</span><span class="lnt" id="hl-0-23"><a class="lnlinks" href="#hl-0-23">23</a>
+</span><span class="lnt" id="hl-0-24"><a class="lnlinks" href="#hl-0-24">24</a>
+</span><span class="lnt" id="hl-0-25"><a class="lnlinks" href="#hl-0-25">25</a>
+</span><span class="lnt" id="hl-0-26"><a class="lnlinks" href="#hl-0-26">26</a>
+</span><span class="lnt" id="hl-0-27"><a class="lnlinks" href="#hl-0-27">27</a>
+</span><span class="lnt" id="hl-0-28"><a class="lnlinks" href="#hl-0-28">28</a>
+</span><span class="lnt" id="hl-0-29"><a class="lnlinks" href="#hl-0-29">29</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">尊敬的 Steam 客服团队：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">您好！我迫切需要您的帮助，以移除我 Steam 账户中的手机令牌，从而恢复账户的正常使用。为了便于您快速核实我的身份，我提供了以下信息：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">* 用户名：123456789
+</span></span><span class="line"><span class="cl">* 昵称：上山打老虎
+</span></span><span class="line"><span class="cl">* 相关交易记录截图已随邮件附件提供，供您核对
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">不幸的是，我的手机因意外损坏并被格式化，导致我丢失了 Steam 手机令牌和恢复码，且原绑定手机号已注销。由于缺少令牌，我无法通过常规方式恢复访问权限，这给我带来了极大的困扰。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">该账号对我来说极为重要，其中不仅包含我在 Steam 上购买的大量游戏，还保存了许多珍贵的好友联系。失去访问权限将对我的游戏体验和社交造成严重影响。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">鉴于此情况，我恳请贵团队尽快协助移除我账户中的手机令牌，以便我重新绑定手机号并恢复正常使用。您的帮助对我而言至关重要，万分感谢！
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Dear Steam Customer Support,
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">I urgently need your assistance to remove the mobile token from my Steam account in order to restore normal access. To facilitate the prompt verification of my identity, I have provided the following details:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">* Username: 123456789
+</span></span><span class="line"><span class="cl">* Nickname: 上山打老虎
+</span></span><span class="line"><span class="cl">* A screenshot of the relevant transaction record has been attached to this message for your reference
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Unfortunately, my phone was accidentally damaged and subsequently formatted, resulting in the loss of both my Steam mobile token and recovery code. Without the token, I am unable to regain access through the usual recovery process, which has caused significant inconvenience.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">This account is of great importance to me. It not only contains a large library of purchased games but also holds a valuable network of friends I have built over time. Losing access would have a serious impact on both my gaming experience and social connections.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Given the urgency of this matter, I sincerely request your prompt assistance in removing the mobile token from my account so that I can rebind my phone number and restore full account functionality. Your support is greatly appreciated, and I thank you in advance for your understanding and swift action.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="步骤-5上传支付凭证">步骤 5：上传支付凭证<a hidden class="anchor" aria-hidden="true" href="#步骤-5上传支付凭证">#</a></h3>
+<ul>
+<li><strong>微信支付</strong>：提供订单截图（包含商品单号，取掉前3位字母后保留 7–9 位数字）</li>
+<li><strong>支付宝支付</strong>：提供全屏交易截图（显示订单号、时间、金额），再点击查看订单号截图。</li>
+</ul>
+<p>💡 每个购买记录都上传2张图，购买详情图和订单号截图。建议截图清晰、未经修改，否则可能审核失败。</p>
+<h3 id="步骤-6提交与等待">步骤 6：提交与等待<a hidden class="anchor" aria-hidden="true" href="#步骤-6提交与等待">#</a></h3>
+<ul>
+<li>提交表单后，系统会提示“已发送”</li>
+<li>审核时间通常为 <strong>1–3 个工作日</strong></li>
+<li>结果会通过邮件反馈，若成功会显示“已移除手机验证器”</li>
+</ul>
+<hr>
+<h2 id="六恢复结果案例">六、恢复结果案例<a hidden class="anchor" aria-hidden="true" href="#六恢复结果案例">#</a></h2>
+<p>根据用户实测案例：提交表单 + 附带支付凭证后，当天下午便收到了邮件通知，确认手机令牌已被移除，账号恢复正常使用。随后即可重新绑定新的手机号和令牌。</p>
+<hr>
+<h2 id="七经验与注意事项">七、经验与注意事项<a hidden class="anchor" aria-hidden="true" href="#七经验与注意事项">#</a></h2>
+<ul>
+<li><strong>不要急于退出客户端</strong>：如果当前电脑还登录 Steam，暂时保持在线，能直接移除更省事。</li>
+<li><strong>优先客户端操作</strong>：能用客户端时，不需要走表单流程。</li>
+<li><strong>凭证真实性</strong>：支付记录必须真实，模糊或篡改截图会导致审核失败。</li>
+<li><strong>信息准确性</strong>：表单中的邮箱、用户名、首次消费时间等必须与实际一致。</li>
+<li><strong>CAPTCHA 验证失败</strong>：网页端出现“您对 CAPTCHA 的响应无效”时，可以改用 Steam 客户端完成。</li>
+<li><strong>工单撤销</strong>：若误提交，可在 Steam 客户端撤销申请。</li>
+<li><strong>务必备份恢复码</strong>：成功恢复后，请立即保存新的恢复码（建议存放在加密云盘或密码管理器）。</li>
+</ul>
+<hr>
+<h2 id="八常见问题faq">八、常见问题（FAQ）<a hidden class="anchor" aria-hidden="true" href="#八常见问题faq">#</a></h2>
+<p><strong>Q：提交表单后没收到回复？</strong><br>
+A：检查邮箱垃圾邮件；若超过 3 个工作日无反馈，可通过 Steam 支持工单系统查询。</p>
+<p><strong>Q：微信支付截图中找不到商品单号？</strong><br>
+A：打开 <strong>微信 → 我 → 支付 → 钱包 → 账单</strong> → 找到对应 Steam 交易 → 截图时确保 <strong>商品栏完整显示</strong>。</p>
+<hr>
+<h2 id="九总结">九、总结<a hidden class="anchor" aria-hidden="true" href="#九总结">#</a></h2>
+<ul>
+<li>能用客户端 → 直接移除最快捷</li>
+<li>无法登录 → 走表单 + 提交支付凭证</li>
+<li>通过邮箱验证是关键，手机号注销并不会让账号完全无法恢复</li>
+<li>恢复成功后 <strong>一定要重新绑定手机号并妥善保存恢复码</strong></li>
+</ul>
+<blockquote>
+<p>本文基于<a href="https://itxiaozhang.com/steam-token-mobile-verifier-loss-recovery-case/">Steam令牌手机验证器丢失完整恢复案例</a>更新完善。</p>
+</blockquote>
+<h2 id="视频版本">视频版本<a hidden class="anchor" aria-hidden="true" href="#视频版本">#</a></h2>
+<ul>
+<li><a href="https://space.bilibili.com/3546607630944387">哔哩哔哩</a></li>
+<li><a href="https://www.youtube.com/@itxiaozhang">YouTube</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/steam/">Steam</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%89%8B%E6%9C%BA%E4%BB%A4%E7%89%8C/">手机令牌</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%B4%A6%E5%8F%B7%E6%81%A2%E5%A4%8D/">账号恢复</a></li>
+      <li><a href="http://localhost:1313/tags/%E9%AA%8C%E8%AF%81%E5%99%A8%E4%B8%A2%E5%A4%B1/">验证器丢失</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

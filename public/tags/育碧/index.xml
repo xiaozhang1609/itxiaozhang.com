@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>育碧 on IT小章</title>
+    <link>http://localhost:1313/tags/%E8%82%B2%E7%A2%A7/</link>
+    <description>Recent content in 育碧 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Oct 2025 16:50:24 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%82%B2%E7%A2%A7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《极限国度》报错：Ubisoft Connect 未安装的解决方法</title>
+      <link>http://localhost:1313/ubisoft-connect-not-installed-riders-republic-fix/</link>
+      <pubDate>Thu, 09 Oct 2025 16:50:24 +0800</pubDate>
+      <guid>http://localhost:1313/ubisoft-connect-not-installed-riders-republic-fix/</guid>
+      <description>当《极限国度》启动时报错「UbisoftConnect PC is not currently installed」时，说明电脑缺少 Ubisoft Connect 客户端。本文介绍错误原因、客户端安装步骤，并补充两种关闭 Steam 大屏模式的方法。</description>
+    </item>
+  </channel>
+</rss>

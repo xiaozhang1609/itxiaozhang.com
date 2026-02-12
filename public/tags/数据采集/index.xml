@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数据采集 on IT小章</title>
+    <link>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/</link>
+    <description>Recent content in 数据采集 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 27 Apr 2025 09:12:08 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Python从HMDB网站提取代谢物生物来源信息</title>
+      <link>http://localhost:1313/python-hmdb-metabolite-biosource-extractor/</link>
+      <pubDate>Sun, 27 Apr 2025 09:12:08 +0800</pubDate>
+      <guid>http://localhost:1313/python-hmdb-metabolite-biosource-extractor/</guid>
+      <description>使用Python从HMDB数据库获取代谢物的生物来源信息，结合智能HTML解析与关键词匹配算法，高效生成结构化数据报告。</description>
+    </item>
+  </channel>
+</rss>

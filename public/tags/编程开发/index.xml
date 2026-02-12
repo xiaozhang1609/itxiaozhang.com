@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>编程开发 on IT小章</title>
+    <link>http://localhost:1313/tags/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 编程开发 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Jun 2025 11:19:01 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Python 批量替换图片局部区域</title>
+      <link>http://localhost:1313/batch-replace-fixed-region-images-python/</link>
+      <pubDate>Wed, 18 Jun 2025 11:19:01 +0800</pubDate>
+      <guid>http://localhost:1313/batch-replace-fixed-region-images-python/</guid>
+      <description>使用Python脚本，批量替换长图中同一固定区域内容，适用于统一批改模板或替换页眉页脚。支持尺寸过滤、多线程处理，操作简单高效。</description>
+    </item>
+  </channel>
+</rss>

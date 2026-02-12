@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>卡拉比丘 on IT小章</title>
+    <link>http://localhost:1313/tags/%E5%8D%A1%E6%8B%89%E6%AF%94%E4%B8%98/</link>
+    <description>Recent content in 卡拉比丘 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 06 Mar 2025 12:44:30 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%8D%A1%E6%8B%89%E6%AF%94%E4%B8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决《卡拉比丘》游戏无法全屏显示黑边问题</title>
+      <link>http://localhost:1313/fix-kalabiqiu-fullscreen-black-bars/</link>
+      <pubDate>Thu, 06 Mar 2025 12:44:30 +0800</pubDate>
+      <guid>http://localhost:1313/fix-kalabiqiu-fullscreen-black-bars/</guid>
+      <description>在运行《卡拉比丘》时，部分玩家遇到上下黑边的问题，导致无法全屏显示。本文介绍了该问题的原因，并提供了通过调整显示模式和分辨率来解决黑边问题的具体步骤。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>贪吃蛇 on IT小章</title>
+    <link>http://localhost:1313/tags/%E8%B4%AA%E5%90%83%E8%9B%87/</link>
+    <description>Recent content in 贪吃蛇 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 Mar 2024 13:54:02 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%B4%AA%E5%90%83%E8%9B%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python小游戏开发：贪吃蛇的实现</title>
+      <link>http://localhost:1313/python-mini-game-development-snake-implementation/</link>
+      <pubDate>Wed, 27 Mar 2024 13:54:02 +0800</pubDate>
+      <guid>http://localhost:1313/python-mini-game-development-snake-implementation/</guid>
+      <description>本文介绍了如何使用Python和Pygame库开发经典的贪吃蛇小游戏。提供详细的玩法，和完整的代码。</description>
+    </item>
+  </channel>
+</rss>

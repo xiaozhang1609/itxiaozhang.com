@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>G16 24 on IT小章</title>
+    <link>http://localhost:1313/tags/g16-24/</link>
+    <description>Recent content in G16 24 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 04 Sep 2025 19:56:22 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/g16-24/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>七彩虹隐星 G16 24 笔记本 Secure Boot 报错 VAN9003 解决方案</title>
+      <link>http://localhost:1313/colorful-g16-24-secure-boot-van9003-fix/</link>
+      <pubDate>Thu, 04 Sep 2025 19:56:22 +0800</pubDate>
+      <guid>http://localhost:1313/colorful-g16-24-secure-boot-van9003-fix/</guid>
+      <description>笔记本在启动港服《瓦罗兰特》时出现 VAN9003 报错，需要启用 Secure Boot，但 BIOS 菜单被隐藏。通过官方 BIOS 升级包刷新 BIOS 并恢复默认设置后，可成功启用 Secure Boot，解决报错问题。</description>
+    </item>
+  </channel>
+</rss>

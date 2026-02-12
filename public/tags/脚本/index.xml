@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>脚本 on IT小章</title>
+    <link>http://localhost:1313/tags/%E8%84%9A%E6%9C%AC/</link>
+    <description>Recent content in 脚本 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 Nov 2024 12:08:15 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%84%9A%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python自动化工具：HMDB代谢物信息一键批量获取</title>
+      <link>http://localhost:1313/python-hmdb-metabolites-batch-extractor/</link>
+      <pubDate>Wed, 27 Nov 2024 12:08:15 +0800</pubDate>
+      <guid>http://localhost:1313/python-hmdb-metabolites-batch-extractor/</guid>
+      <description>本文介绍了一款基于Python开发的自动化工具，可批量获取HMDB数据库中的代谢物信息，支持正负离子模式，提高科研效率。</description>
+    </item>
+    <item>
+      <title>使用 Python 从 HMDB 网站提取数据</title>
+      <link>http://localhost:1313/python-hmdb-data-extraction/</link>
+      <pubDate>Fri, 11 Oct 2024 08:59:45 +0800</pubDate>
+      <guid>http://localhost:1313/python-hmdb-data-extraction/</guid>
+      <description>本文介绍了一款自动化工具，用于从人类代谢组数据库（HMDB）批量提取代谢物信息，并根据需求整合。</description>
+    </item>
+    <item>
+      <title>常见Windows图标和缩略图问题的解决方法</title>
+      <link>http://localhost:1313/common-windows-icon-thumbnail-issues-solutions/</link>
+      <pubDate>Fri, 17 May 2024 20:01:36 +0800</pubDate>
+      <guid>http://localhost:1313/common-windows-icon-thumbnail-issues-solutions/</guid>
+      <description>本文详细介绍了Windows系统中常见的图标和缩略图显示问题，包括图标显示错误、不更新、缩略图不生成等情况。通过一个简单的批处理脚本，可以轻松解决这些问题。</description>
+    </item>
+    <item>
+      <title>批量文本文件合并</title>
+      <link>http://localhost:1313/batch-text-file-merging/</link>
+      <pubDate>Sat, 23 Mar 2024 15:42:06 +0800</pubDate>
+      <guid>http://localhost:1313/batch-text-file-merging/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/batch-text-file-merging/&#34;&gt;https://itxiaozhang.com/batch-text-file-merging/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;场景&#34;&gt;场景&lt;/h2&gt;
+&lt;p&gt;假设我们有一个项目文件夹 &lt;code&gt;documents&lt;/code&gt;，其中包含了多个子文件夹，每个子文件夹中都存放着我们需要合并的文本文件。我们想要将这些文本文件合并为一个单独的文件，以便于后续的查阅和分析。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

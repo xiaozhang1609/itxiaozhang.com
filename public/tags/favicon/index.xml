@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Favicon on IT小章</title>
+    <link>http://localhost:1313/tags/favicon/</link>
+    <description>Recent content in Favicon on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 31 Dec 2025 23:45:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/favicon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>跨平台Favicon生成</title>
+      <link>http://localhost:1313/cross-platform-favicon-generation/</link>
+      <pubDate>Wed, 31 Dec 2025 23:45:49 +0800</pubDate>
+      <guid>http://localhost:1313/cross-platform-favicon-generation/</guid>
+      <description>本文介绍了如何使用 Real Favicon Generator 等工具，为您的网站或应用生成一套完整的、兼容所有主流设备和浏览器的 Favicon 图标文件。</description>
+    </item>
+  </channel>
+</rss>

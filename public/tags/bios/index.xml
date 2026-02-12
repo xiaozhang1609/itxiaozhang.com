@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BIOS on IT小章</title>
+    <link>http://localhost:1313/tags/bios/</link>
+    <description>Recent content in BIOS on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 08 Feb 2026 18:30:24 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>打开使命召唤提示安全启动未启用且BIOS版本过低怎么办</title>
+      <link>http://localhost:1313/call-of-duty-secure-boot-not-enabled-bios-version-too-old-fix/</link>
+      <pubDate>Sun, 08 Feb 2026 18:30:24 +0800</pubDate>
+      <guid>http://localhost:1313/call-of-duty-secure-boot-not-enabled-bios-version-too-old-fix/</guid>
+      <description>启动《使命召唤》时提示“检测到潜在系统不稳定：您的PC使用的是Intel第13代或第14代处理器，当前BIOS版本可能导致系统不稳定”，同时提示“安全启动所需条件未满足：安全启动未启用”。</description>
+    </item>
+    <item>
+      <title>FACEIT反作弊提示需启用TPM2.0与安全启动的解决方法</title>
+      <link>http://localhost:1313/faceit-anti-cheat-enable-tpm2-secure-boot-fix/</link>
+      <pubDate>Thu, 08 Jan 2026 17:19:18 +0800</pubDate>
+      <guid>http://localhost:1313/faceit-anti-cheat-enable-tpm2-secure-boot-fix/</guid>
+      <description>FACEIT 反作弊提示需启用 TPM 2.0 与 Secure Boot。通过更新 Gigabyte B550M 主板 BIOS 并在 BIOS 中开启安全启动，可自动启用 TPM 2.0，从而解决无法登录问题。</description>
+    </item>
+    <item>
+      <title>修复FACEIT平台TPM与安全启动报错</title>
+      <link>http://localhost:1313/fix-faceit-tpm-secure-boot-error-bios-update/</link>
+      <pubDate>Mon, 29 Dec 2025 17:50:48 +0800</pubDate>
+      <guid>http://localhost:1313/fix-faceit-tpm-secure-boot-error-bios-update/</guid>
+      <description>本文针对 FACEIT 平台提示 TPM 及 Secure Boot 报错的问题，以技嘉 B550M 主板为例，提供了从关闭设备加密、制作 FAT32 格式 BIOS 升级盘，到使用 Q-Flash 刷入固件并开启安全启动的完整解决方案。</description>
+    </item>
+    <item>
+      <title>5E平台CSGO报错：反作弊异常提示需开启VT-d与IOMMU的解决方法</title>
+      <link>http://localhost:1313/fix-5e-csgo-anti-cheat-vtd-iommu/</link>
+      <pubDate>Sun, 21 Sep 2025 18:22:48 +0800</pubDate>
+      <guid>http://localhost:1313/fix-5e-csgo-anti-cheat-vtd-iommu/</guid>
+      <description>本文归纳总结了5E平台运行CSGO时出现「反作弊异常，需开启VT-d或IOMMU」的完整解决方案，涵盖系统修复、关闭Hyper-V与内存完整性、禁用hypervisor引导，以及在BIOS中开启虚拟化功能等步骤，帮助用户快速排障。</description>
+    </item>
+    <item>
+      <title>穿越火线报错「ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功能」解决方法</title>
+      <link>http://localhost:1313/cf-ace-cpu-virtualization-error-fix/</link>
+      <pubDate>Wed, 20 Aug 2025 09:39:33 +0800</pubDate>
+      <guid>http://localhost:1313/cf-ace-cpu-virtualization-error-fix/</guid>
+      <description>本文介绍了穿越火线运行时出现「ACE安全中心」虚拟化报错的原因，并提供了从系统修复、关闭 Hyper-V、调整 BIOS 设置到修复游戏的完整解决方案。</description>
+    </item>
+    <item>
+      <title>无畏契约CPU虚拟化报错：您的电脑未开启或有其他软件占用CPU虚拟化功能</title>
+      <link>http://localhost:1313/valorant-cpu-virtualization-error-fix/</link>
+      <pubDate>Sun, 13 Jul 2025 12:17:06 +0800</pubDate>
+      <guid>http://localhost:1313/valorant-cpu-virtualization-error-fix/</guid>
+      <description>启动《无畏契约》时出现ACE安全中心报错，提示未开启或被占用CPU虚拟化功能。本文提供系统设置、BIOS配置及游戏修复等完整解决方案。</description>
+    </item>
+    <item>
+      <title>解决「CPU Virtualization Technology 未开启或被占用」弹窗问题</title>
+      <link>http://localhost:1313/fix-cpu-virtualization-technology-popup-issue/</link>
+      <pubDate>Fri, 27 Jun 2025 22:24:29 +0800</pubDate>
+      <guid>http://localhost:1313/fix-cpu-virtualization-technology-popup-issue/</guid>
+      <description>启动腾讯游戏时出现「ACE安全中心」虚拟化相关报错。本文汇总各大主板开启虚拟化设置方法，并提供关闭HVCI、VBS、Hyper-V等系统占用功能的详细步骤，帮助用户彻底排查并解决弹窗问题。</description>
+    </item>
+    <item>
+      <title>各品牌电脑U盘启动快捷键查询列表</title>
+      <link>http://localhost:1313/usb-boot-shortcut-keys-by-brand/</link>
+      <pubDate>Sun, 10 Mar 2024 16:37:29 +0800</pubDate>
+      <guid>http://localhost:1313/usb-boot-shortcut-keys-by-brand/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/usb-boot-shortcut-keys-by-brand/&#34;&gt;https://itxiaozhang.com/usb-boot-shortcut-keys-by-brand/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;浏览器种可使用 Ctrl+F 键，快速定位。 如果想要进入BIOS，一般使用Delete、F1和F2。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;品牌台式&#34;&gt;品牌台式&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>

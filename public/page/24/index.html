@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IT小章</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IT小章 (Alt + H)">IT小章</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">离线安装 Microsoft Store 微软商店中的软件
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/offline-installation-of-apps-from-microsoft-store/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+背景 由于某些网络环境限制或系统配置问题，我们无法直接 Microsoft Store 安装软件，在这种情况下，我们可以选择另外一种方法。本文中，我用 WinDbg Preview 下载安装举例。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-07 15:42:06 +0800 CST'>March 7, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 离线安装 Microsoft Store 微软商店中的软件" href="http://localhost:1313/offline-installation-of-apps-from-microsoft-store/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Mac OS X 下制作 Windows 启动U盘
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/create-windows-bootable-usb-on-macos/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+BalenaEtcher 是一款可以在 MacOS 上使用的启动盘制作神器。
+访问BalenaEtcher官网，下载安装包。 ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-04 15:42:06 +0800 CST'>March 4, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Mac OS X 下制作 Windows 启动U盘" href="http://localhost:1313/create-windows-bootable-usb-on-macos/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">压缩解压神器7-Zip
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/7-zip-ultimate-compression-tool/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+7-Zip 是一款开源、免费、高效、安全、无广告、支持多种压缩格式、具有强大加密功能、跨平台的文件压缩和解压缩工具。
+优点
+高压缩比率：使用 7z 压缩格式，能够在保持压缩速度的同时实现最高水平的压缩比率，有效节省存储空间和带宽。 支持多种压缩格式：除了 7z 格式外，还支持解压缩几乎所有主流的压缩格式，包括 ZIP、RAR、GZIP 等，提供广泛的兼容性和灵活性。 强大的加密功能：支持使用 AES-256 加密算法对压缩文件进行加密，确保敏感数据的安全性，适用于保护隐私和商业数据。 跨平台性：可在多个操作系统上运行，包括 Windows、Linux、Mac 等，为用户提供了灵活的选择，无需担心平台兼容性问题。 ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-03-03 00:00:00 +0800 CST'>March 3, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 压缩解压神器7-Zip" href="http://localhost:1313/7-zip-ultimate-compression-tool/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">查看固态硬盘和机械硬盘的数量
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/viewing-ssd-and-hdd-counts/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+有几块硬盘？ 方法1：使用磁盘管理工具 右键点击 开始菜单，选择&#34;磁盘管理&#34;。 在打开的&#34;磁盘管理&#34;窗口中，可以看到左侧栏列出的所有磁盘及其分区情况。每个独立的磁盘号（如磁盘0、磁盘1等）通常代表一个物理硬盘。 方法2：使用设备管理器 右键点击 开始菜单，选择&#34;设备管理器&#34;。 在设备管理器窗口中，找到并展开&#34;磁盘驱动器&#34;分类。 在磁盘驱动器列表中，每一条记录代表一个硬盘。请注意，这里的&#34;磁盘驱动器&#34;指的是物理硬盘，不包括虚拟磁盘或分区。 方法3：通过系统信息 按 Win &#43; R 键打开运行对话框，输入 msinfo32 并按回车键打开&#34;系统信息&#34;。 在系统信息中查找&#34;存储&#34;相关部分，找到&#34;磁盘&#34;或&#34;磁盘驱动器&#34;，查看所列出的硬盘数量。 ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-02-28 00:00:00 +0800 CST'>February 28, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 查看固态硬盘和机械硬盘的数量" href="http://localhost:1313/viewing-ssd-and-hdd-counts/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Win10/11 桌面图标消失
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/desktop-icons-disappeared-win10-11/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+1. 图标被设置隐藏 原因：用户可能无意间操作或通过特定设置使桌面图标被隐藏。 解决方法： 右键点击桌面空白区域 -&gt; 选择&#34;查看&#34;或&#34;视图&#34; -&gt; 确认&#34;显示桌面图标&#34;已勾选，若未勾选则选中，桌面图标应重新出现。 2. 桌面进程出现问题（explorer.exe） 原因：explorer.exe进程意外关闭或未正常启动，可能导致桌面图标及其他桌面元素消失。 解决方法： 使用 `Ctrl &#43; Alt &#43; Delete` 打开任务管理器 -&gt; 选择&#34;文件&#34;-&gt;&#34;运行新任务&#34; -&gt; 输入 `explorer.exe` 并确认，重启资源管理器进程以恢复桌面图标。 ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-02-26 00:00:00 +0800 CST'>February 26, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to Win10/11 桌面图标消失" href="http://localhost:1313/desktop-icons-disappeared-win10-11/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">电脑桌面反复黑屏、任务栏反复刷新
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/pc-desktop-repeated-black-screen-taskbar-refresh/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+问题描述 用户在打开任意桌面软件时，桌面都会黑屏。 打开文件管理器、浏览器或其他软件后，桌面黑屏并且所有的窗口都会自动关闭。 故障排查与解决方法 经过排查发现，卸载搜狗输入法后，上述问题得到解决。 原因推测与分析 推测此问题可能与搜狗输入法与Win 10/11操作系统的兼容性有关。 当用户启动新软件或文件管理器时，可能触发了搜狗输入法与其间的交互冲突，导致桌面黑屏并关闭所有窗口。 ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-02-24 00:00:00 +0800 CST'>February 24, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 电脑桌面反复黑屏、任务栏反复刷新" href="http://localhost:1313/pc-desktop-repeated-black-screen-taskbar-refresh/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ToDesk远程桌面软件
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/todesk-remote-desktop-software/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+ToDesk是一款备受好评的远程桌面解决软件，可以提供远程办公、给别人提供技术支持等等。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-02-22 15:42:06 +0800 CST'>February 22, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to ToDesk远程桌面软件" href="http://localhost:1313/todesk-remote-desktop-software/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">关键时刻救急：系统还原功能
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/emergency-recovery-system-restore-function/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+我们日常使用电脑的时候，难免会遇到一些系统问题、软件问题、或者蓝屏、卡住等等问题，这个时候不用急着做系统，我们可以考虑将系统恢复到某一个正常的时间点，这个操作叫做系统还原。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-02-18 15:42:06 +0800 CST'>February 18, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 关键时刻救急：系统还原功能" href="http://localhost:1313/emergency-recovery-system-restore-function/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">火绒安全软件
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/huo-rong-an-quan-ruan-jian/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+不打扰，是我们的态度。易使用，是我们的温度。
+干净轻巧，简单易用 干净Pure： 无广告推广性质的弹窗和捆绑，确保用户体验纯净。 轻巧Light： 占用资源少，不影响日常办公和游戏体验。 简单Simple： 一键下载安装，即可使用默认配置享受安全防护。 易用Intuitive： 经过多次优化，兼容性好，操作流畅。 ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-02-16 00:00:00 +0800 CST'>February 16, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 火绒安全软件" href="http://localhost:1313/huo-rong-an-quan-ruan-jian/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">更新AMD显卡驱动后出现卡顿、闪烁、卡屏、卡住不动问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址：https://itxiaozhang.com/amd-graphics-card-driver-update-causes-stuttering-flickering-freezing-issues/
+如果您需要远程电脑维修或者编程开发，请加我微信咨询。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-02-15 00:00:00 +0800 CST'>February 15, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>IT小章</span></footer>
+  <a class="entry-link" aria-label="post link to 更新AMD显卡驱动后出现卡顿、闪烁、卡屏、卡住不动问题" href="http://localhost:1313/amd-graphics-card-driver-update-causes-stuttering-flickering-freezing-issues/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/23/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/25/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">IT小章</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

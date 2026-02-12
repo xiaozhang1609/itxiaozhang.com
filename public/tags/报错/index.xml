@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>报错 on IT小章</title>
+    <link>http://localhost:1313/tags/%E6%8A%A5%E9%94%99/</link>
+    <description>Recent content in 报错 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 22 Jul 2025 15:50:25 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%8A%A5%E9%94%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>三角洲行动报错：The path &#39;{Path}&#39; cannot be found. 的解决方法</title>
+      <link>http://localhost:1313/fix-the-path-cannot-be-found-error-delta-force/</link>
+      <pubDate>Tue, 22 Jul 2025 15:50:25 +0800</pubDate>
+      <guid>http://localhost:1313/fix-the-path-cannot-be-found-error-delta-force/</guid>
+      <description>本文针对「三角洲行动」运行或修复时出现「The path &amp;#39;{Path}&amp;#39; cannot be found.」报错，提供完整清理和修复步骤，适用于常见安装路径丢失问题。</description>
+    </item>
+  </channel>
+</rss>

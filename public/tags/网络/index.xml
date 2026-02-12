@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>网络 on IT小章</title>
+    <link>http://localhost:1313/tags/%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 网络 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 29 Oct 2025 10:31:25 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WeGame黑屏且界面文字变成蓝色和黑色、游戏全部打不开</title>
+      <link>http://localhost:1313/wegame-black-screen-blue-and-black-text-fix/</link>
+      <pubDate>Wed, 29 Oct 2025 10:31:25 +0800</pubDate>
+      <guid>http://localhost:1313/wegame-black-screen-blue-and-black-text-fix/</guid>
+      <description>打开 WeGame 客户端时界面黑屏，文字与链接显示为蓝色和黑色，左侧所有游戏图标均为灰色或黑色，无法启动任何游戏。即使多次重装系统，问题依旧存在。</description>
+    </item>
+    <item>
+      <title>WeGame 下载报错和更新失败怎么办</title>
+      <link>http://localhost:1313/wegame-download-and-update-error-solution/</link>
+      <pubDate>Sun, 26 Oct 2025 10:59:05 +0800</pubDate>
+      <guid>http://localhost:1313/wegame-download-and-update-error-solution/</guid>
+      <description>在下载 WeGame 安装包时，出现「dldir1.qq.com 拒绝了我们连接请求（ERR_CONNECTION_REFUSED）」导致无法访问官网或下载文件；而在打开已安装的 WeGame 客户端时，提示「更新失败，请尝试重启或者下载新版」，多次重试无效。本文说明两种情况的原因及对应解决方法，包括网络配置检查、防火墙设置及重新安装步骤。</description>
+    </item>
+    <item>
+      <title>WeGame 打开提示「客户端正在升级 0%」的解决方法</title>
+      <link>http://localhost:1313/wegame-client-upgrade-0-percent-fix/</link>
+      <pubDate>Fri, 29 Aug 2025 18:05:38 +0800</pubDate>
+      <guid>http://localhost:1313/wegame-client-upgrade-0-percent-fix/</guid>
+      <description>WeGame 启动时提示「客户端正在升级 0%」并卡死，原因多为系统文件损坏、网络异常或旧版本残留。通过系统修复、清理残留、调整网络配置并重装客户端即可解决。</description>
+    </item>
+    <item>
+      <title>常见电脑网络问题解决思路</title>
+      <link>http://localhost:1313/common-computer-network-problems-solutions/</link>
+      <pubDate>Sat, 16 Nov 2024 13:29:24 +0800</pubDate>
+      <guid>http://localhost:1313/common-computer-network-problems-solutions/</guid>
+      <description>本文提供了解决常见电脑网络问题的思路，适用于Windows 7、Windows 10 和 Windows 11 系统的电脑。</description>
+    </item>
+    <item>
+      <title>校园网网络问题记录</title>
+      <link>http://localhost:1313/campus-network-issues-log/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/campus-network-issues-log/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&#34;https://itxiaozhang.com/campus-network-issues-log/&#34;&gt;https://itxiaozhang.com/campus-network-issues-log/&lt;/a&gt;&lt;br&gt;
+如果您需要远程电脑维修或者编程开发，请&lt;a href=&#34;https://zhang9.cn&#34;&gt;加我微信&lt;/a&gt;咨询。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;随机硬件地址是一种网络安全功能，旨在增强用户隐私和安全性。它通过在设备连接到网络时动态生成随机的MAC地址，使得设备在网络上的身份更难被跟踪或识别。随机硬件地址的使用已经成为现代操作系统和网络设备中的一项常见功能，特别是在公共或不受信任的网络环境中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;症状描述&#34;&gt;症状描述&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;连接校园网后，右下角显示小地球，无法正常使用网络。&lt;/li&gt;
+&lt;li&gt;使用移动热点时，网络却可以正常使用。&lt;/li&gt;
+&lt;li&gt;校园网账号在手机上可以使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
+&lt;p&gt;打开&amp;quot;网络和Internet设置&amp;quot;，选择WLAN，启用了&amp;quot;随机硬件地址&amp;quot;选项。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

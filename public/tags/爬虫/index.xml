@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>爬虫 on IT小章</title>
+    <link>http://localhost:1313/tags/%E7%88%AC%E8%99%AB/</link>
+    <description>Recent content in 爬虫 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 03 Nov 2025 20:56:43 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HMDB代谢物批量抓取与结构化导出</title>
+      <link>http://localhost:1313/hmdb-metabolite-batch-extraction-csv-export/</link>
+      <pubDate>Mon, 03 Nov 2025 20:56:43 +0800</pubDate>
+      <guid>http://localhost:1313/hmdb-metabolite-batch-extraction-csv-export/</guid>
+      <description>这篇文章介绍了一个HMDB代谢物批量爬虫工具，自持同时爬取几万条数据、并发限速与重试、断点续跑，解析25项核心字段并导出CSV。</description>
+    </item>
+    <item>
+      <title>Bilibili粉丝数据获取工具</title>
+      <link>http://localhost:1313/bilibili-followers-data-fetcher-python-tutorial-guide/</link>
+      <pubDate>Sat, 01 Nov 2025 18:06:16 +0800</pubDate>
+      <guid>http://localhost:1313/bilibili-followers-data-fetcher-python-tutorial-guide/</guid>
+      <description>本文介绍了一个基于Python开发的Bilibili粉丝数据获取工具，支持批量获取粉丝信息并生成HTML展示页面。文章详细讲解了Cookie获取方法、环境配置、使用步骤和常见问题解决方案，并提供完整的源码。适合UP主进行粉丝统计分析和数据备份使用。</description>
+    </item>
+    <item>
+      <title>Python爬虫实战: 58同城房产信息自动化采集</title>
+      <link>http://localhost:1313/python-web-crawler-58city-real-estate-data-collection/</link>
+      <pubDate>Sun, 01 Dec 2024 19:28:00 +0800</pubDate>
+      <guid>http://localhost:1313/python-web-crawler-58city-real-estate-data-collection/</guid>
+      <description>这是一个基于Python开发的58同城房产信息采集系统,主要用于自动采集商铺、写字楼、厂房和生意转让等房产信息。系统提供图形界面操作,支持多城市数据采集。</description>
+    </item>
+  </channel>
+</rss>

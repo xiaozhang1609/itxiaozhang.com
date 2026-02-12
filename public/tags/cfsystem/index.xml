@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cfsystem on IT小章</title>
+    <link>http://localhost:1313/tags/cfsystem/</link>
+    <description>Recent content in Cfsystem on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 31 Oct 2025 11:55:53 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cfsystem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>穿越火线设置无法保存一直恢复默认</title>
+      <link>http://localhost:1313/crossfire-settings-reset-to-default/</link>
+      <pubDate>Fri, 31 Oct 2025 11:55:53 +0800</pubDate>
+      <guid>http://localhost:1313/crossfire-settings-reset-to-default/</guid>
+      <description>穿越火线修改分辨率或音效后无法保存，重启游戏后设置总是恢复默认。主要原因是配置文件权限或路径异常。通过修正注册表路径、调整「CFSystem」文件夹权限并修复游戏文件，可恢复正常保存功能。</description>
+    </item>
+  </channel>
+</rss>

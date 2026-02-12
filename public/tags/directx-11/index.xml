@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Directx 11 on IT小章</title>
+    <link>http://localhost:1313/tags/directx-11/</link>
+    <description>Recent content in Directx 11 on IT小章</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 27 May 2025 10:00:22 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/directx-11/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《黎明杀机》启动错误：A D3D11-compatible GPU 解决方案</title>
+      <link>http://localhost:1313/dead-by-daylight-d3d11-compatible-gpu-error-fix/</link>
+      <pubDate>Tue, 27 May 2025 10:00:22 +0800</pubDate>
+      <guid>http://localhost:1313/dead-by-daylight-d3d11-compatible-gpu-error-fix/</guid>
+      <description>本文针对《黎明杀机》启动时报错「A D3D11-compatible GPU (Feature Level 11.0, Shader Model 5.0) is required to run the engine」的问题，分析可能原因，并提供更新显卡驱动、设置独立显卡、修复 DirectX 等解决步骤，帮助用户顺利运行游戏。</description>
+    </item>
+  </channel>
+</rss>
