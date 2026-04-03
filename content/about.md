@@ -20,6 +20,6 @@ url: "/about/"
 - **微信**: [zhang9.cn](https://zhang9.cn)
 - **Bilibili**: [IT小章](https://space.bilibili.com/3546607630944387)
 - **YouTube**: [IT小章](https://www.youtube.com/@itxiaozhang)
-- **Email**: example@example.com (请替换为您的真实邮箱)
+- **Email**: [itxiaozhang.com@gmail.com](mailto:itxiaozhang.com@gmail.com)
 
 > 如果您需要远程电脑维修或者编程开发，欢迎通过微信联系我。
