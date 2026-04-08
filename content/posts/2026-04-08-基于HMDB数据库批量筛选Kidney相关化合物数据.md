@@ -59,9 +59,20 @@ author: IT小章
 - `*.stats.txt`：行数统计（输入/输出/删除数量、命中/未命中/无效 ID 数量）
 - `kidney_filter_summary*.txt`：目录级汇总，便于快速对比每个文件的筛选情况
 
-## 全部代码
+## 部分代码
 
 ```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+HMDB Kidney 代谢物筛选工具
+作者：IT小章
+时间：2026年4月8日
+网站：itxiaozhang.com
+
+功能：从HMDB XML数据库中筛选与肾脏相关的代谢物，并过滤Excel文件
+"""
+
 import argparse
 import csv
 import os
@@ -69,37 +80,23 @@ import re
 import time
 from lxml import etree
 
-_DEFAULT_XML_CANDIDATES = (
-    r"C:\Users\Administrator\Documents\HMDB离线数据库\hmdb_metabolites\hmdb_metabolites.xml",
-    "hmdb_metabolites.xml",
-)
-
-_HMDB_ID_RE_STRICT = re.compile(r"^HMDB(\d{1,7})$")
-_HMDB_ID_RE_LOOSE = re.compile(r"^HMDB(\d+)$")
+# 默认XML路径
+DEFAULT_XML_PATH = r"C:\Users\Administrator\Documents\HMDB离线数据库\hmdb_metabolites\hmdb_metabolites.xml"
 
 
-def normalize_hmdb_id(raw: str, strict: bool) -> str | None:
-    if raw is None:
+def normalize_hmdb_id(raw: str) -> str | None:
+    """标准化HMDB ID格式为 HMDB0000001"""
+    if not raw:
         return None
     s = raw.strip().upper()
-    if not s:
-        return None
-    m = (_HMDB_ID_RE_STRICT if strict else _HMDB_ID_RE_LOOSE).match(s)
+    m = re.match(r"^HMDB(\d+)$", s)
     if not m:
         return None
-    digits = m.group(1)
-    if strict and len(digits) > 7:
-        return None
-    if len(digits) > 7:
-        return None
-    return "HMDB" + digits.zfill(7)
-
-
-def _tag(ns: str, local: str) -> str:
-    return f"{{{ns}}}{local}" if ns else local
+    return "HMDB" + m.group(1).zfill(7)
 
 
 def detect_namespace(xml_file: str) -> str:
+    """检测XML命名空间"""
     with open(xml_file, "rb") as f:
         context = etree.iterparse(f, events=("start",))
         _, root = next(context)
@@ -108,448 +105,161 @@ def detect_namespace(xml_file: str) -> str:
         return ""
 
 
-def _has_kidney_in_tissues(elem, ns: str) -> bool:
-    tissues = elem.find(_tag(ns, "biological_properties"))
-    if tissues is None:
-        return False
-    tissues = tissues.find(_tag(ns, "tissue_locations"))
-    if tissues is None:
-        return False
-    tissue_tag = _tag(ns, "tissue")
-    for t in tissues.findall(tissue_tag):
-        txt = (t.text or "").strip().casefold()
-        if "kidney" in txt:
-            return True
+def has_kidney_keyword(elem, ns: str) -> bool:
+    """检查代谢物是否包含kidney关键词"""
+    tag = lambda local: f"{{{ns}}}{local}" if ns else local
+    
+    # 检查组织位置
+    bio = elem.find(tag("biological_properties"))
+    if bio is not None:
+        tissues = bio.find(tag("tissue_locations"))
+        if tissues is not None:
+            for t in tissues.findall(tag("tissue")):
+                if "kidney" in (t.text or "").lower():
+                    return True
+    
+    # 检查本体论
+    ontology = elem.find(tag("ontology"))
+    if ontology is not None:
+        for t in ontology.iter(tag=tag("term")):
+            if "kidney" in (t.text or "").lower():
+                return True
     return False
 
 
-def _has_kidney_in_ontology(elem, ns: str) -> bool:
-    ontology = elem.find(_tag(ns, "ontology"))
-    if ontology is None:
-        return False
-    term_tag = _tag(ns, "term")
-    for t in ontology.iter(tag=term_tag):
-        txt = (t.text or "").strip().casefold()
-        if "kidney" in txt:
-            return True
-    return False
-
-
-def metabolite_has_kidney(elem, ns: str) -> bool:
-    return _has_kidney_in_tissues(elem, ns=ns) or _has_kidney_in_ontology(elem, ns=ns)
-
-
-def pick_default_xml_path() -> str:
-    for p in _DEFAULT_XML_CANDIDATES:
-        if os.path.exists(p):
-            return p
-    return _DEFAULT_XML_CANDIDATES[0]
-
-
-def build_kidney_hit_set(xml_file: str, strict_id: bool, progress_every: int) -> set[str]:
+def build_kidney_set(xml_file: str) -> set[str]:
+    """构建肾脏相关代谢物ID集合"""
+    print(f"正在解析 XML: {xml_file}")
     ns = detect_namespace(xml_file)
-    metabolite_tag = _tag(ns, "metabolite")
-    accession_tag = _tag(ns, "accession")
-    secondary_accessions_tag = _tag(ns, "secondary_accessions")
-
-    hits: set[str] = set()
-    scanned = 0
+    tag = lambda local: f"{{{ns}}}{local}" if ns else local
+    
+    kidney_ids = set()
+    count = 0
     start = time.time()
-
-    context = etree.iterparse(xml_file, events=("end",), tag=metabolite_tag)
+    
+    context = etree.iterparse(xml_file, events=("end",), tag=tag("metabolite"))
+    
     for _, elem in context:
-        scanned += 1
-        if progress_every and scanned % progress_every == 0:
-            elapsed = time.time() - start
-            rate = scanned / elapsed if elapsed > 0 else 0.0
-            print(f"已扫描 {scanned} 条 | Kidney 命中 {len(hits)} 条 | {rate:.1f} 条/秒")
-
-        if metabolite_has_kidney(elem, ns=ns):
-            acc_elem = elem.find(accession_tag)
-            primary = normalize_hmdb_id((acc_elem.text or "") if acc_elem is not None else "", strict=strict_id)
-            if primary:
-                hits.add(primary)
-
-            sa_elem = elem.find(secondary_accessions_tag)
-            if sa_elem is not None:
-                for a in sa_elem.findall(accession_tag):
-                    cand = normalize_hmdb_id(a.text or "", strict=strict_id)
-                    if cand:
-                        hits.add(cand)
-
+        count += 1
+        if count % 5000 == 0:
+            rate = count / (time.time() - start)
+            print(f"  已扫描 {count} 条，命中 {len(kidney_ids)} 条 ({rate:.0f} 条/秒)")
+        
+        if has_kidney_keyword(elem, ns):
+            # 提取主ID
+            acc = elem.find(tag("accession"))
+            if acc is not None and acc.text:
+                if (nid := normalize_hmdb_id(acc.text)):
+                    kidney_ids.add(nid)
+            # 提取次要ID
+            sec = elem.find(tag("secondary_accessions"))
+            if sec is not None:
+                for a in sec.findall(tag("accession")):
+                    if (nid := normalize_hmdb_id(a.text)):
+                        kidney_ids.add(nid)
+        
+        # 释放内存
         elem.clear()
         while elem.getprevious() is not None:
             del elem.getparent()[0]
-
-    return hits
-
-
-def _normalize_header_cell(v) -> str:
-    if v is None:
-        return ""
-    s = str(v).strip().casefold()
-    s = s.replace("_", " ").replace("-", " ")
-    s = " ".join(s.split())
-    return s
+    
+    print(f"XML解析完成: 共 {count} 条代谢物，{len(kidney_ids)} 条与肾脏相关")
+    return kidney_ids
 
 
-def detect_hmdb_id_column(ws) -> int:
-    row = next(ws.iter_rows(min_row=1, max_row=1, values_only=True), None)
-    if not row:
-        return 2
-
-    header = [_normalize_header_cell(x) for x in row]
-    candidates = ("hmdb id", "hmdbid", "compound id", "compoundid")
-    for idx, name in enumerate(header, start=1):
-        if name in candidates:
-            return idx
-    return 2
+def find_hmdb_column(headers: list) -> int:
+    """查找HMDB ID所在列索引（从1开始）"""
+    norm = lambda x: str(x).lower().replace("_", " ").replace("-", " ")
+    candidates = {"hmdb id", "hmdbid", "compound id", "compoundid"}
+    
+    for i, h in enumerate(headers, 1):
+        if norm(h) in candidates:
+            return i
+    return 2  # 默认第2列
 
 
-_INVALID_FILENAME_CHARS_RE = re.compile(r'[\\/:*?"<>|]+')
-
-
-def _safe_filename_component(s: str) -> str:
-    s = (s or "").strip()
-    s = _INVALID_FILENAME_CHARS_RE.sub("_", s)
-    s = s.replace("\n", " ").replace("\r", " ").replace("\t", " ")
-    s = " ".join(s.split())
-    return s[:80] if len(s) > 80 else s
-
-
-def _row_values_for_csv(src_cells, target_len: int) -> list[str]:
-    values = [c.value for c in src_cells]
-    if len(values) < target_len:
-        values.extend([None] * (target_len - len(values)))
-
-    last_non_none = -1
-    for i, v in enumerate(values):
-        if v is not None:
-            last_non_none = i
-    if last_non_none + 1 < target_len:
-        for i in range(last_non_none + 1, target_len):
-            values[i] = None
-
-    out: list[str] = []
-    for v in values:
-        if v is None:
-            out.append("")
-        else:
-            out.append(str(v))
-    return out
-
-
-def filter_workbook_keep_kidney_rows(
-    src_path: str,
-    out_csv_base_path: str,
-    xml_file: str,
-    kidney_hit_set: set[str],
-    strict_id: bool,
-    row_progress_every: int,
-    unmatched_txt_path: str,
-    stats_txt_path: str,
-) -> dict[str, int]:
+def filter_excel(src_path: str, out_path: str, kidney_set: set) -> dict:
+    """过滤Excel文件，只保留肾脏相关行"""
     import openpyxl
-    import sqlite3
-
-    in_wb = openpyxl.load_workbook(src_path, read_only=True, data_only=False)
-
-    stats = {"sheets": 0, "rows_in": 0, "rows_out": 0, "rows_removed": 0}
-    hmdb_rows_total = 0
-    hmdb_rows_hit = 0
-    hmdb_rows_miss = 0
-    hmdb_rows_invalid = 0
-    header_rows = 0
-
-    db_path = out_csv_base_path + ".unmatched.sqlite.tmp"
-    if os.path.exists(db_path):
-        os.remove(db_path)
-    con = sqlite3.connect(db_path)
-    try:
-        cur = con.cursor()
-        cur.execute("PRAGMA journal_mode=MEMORY")
-        cur.execute("PRAGMA synchronous=OFF")
-        cur.execute("CREATE TABLE IF NOT EXISTS seen (id TEXT PRIMARY KEY)")
-        cur.execute("CREATE TABLE IF NOT EXISTS hit (id TEXT PRIMARY KEY)")
-        cur.execute("CREATE TABLE IF NOT EXISTS miss (id TEXT PRIMARY KEY)")
-        con.commit()
-
-        seen_batch: list[tuple[str]] = []
-        hit_batch: list[tuple[str]] = []
-        miss_batch: list[tuple[str]] = []
-        batch_size = 2000
-        out_csv_paths: list[str] = []
-
-        sheetnames = list(in_wb.sheetnames)
-        multiple_sheets = len(sheetnames) != 1
-
-        for idx, sheet_name in enumerate(sheetnames, start=1):
-            in_ws = in_wb[sheet_name]
-            stats["sheets"] += 1
-
-            hmdb_col = detect_hmdb_id_column(in_ws)
-            target_len = in_ws.max_column or 0
-            sheet_rows_in = 0
-            sheet_rows_out = 0
-            sheet_rows_removed = 0
-            sheet_start = time.time()
-
-            safe_sheet = _safe_filename_component(sheet_name) or f"sheet{idx}"
-            if multiple_sheets:
-                out_csv_path = f"{out_csv_base_path}.{idx:02d}_{safe_sheet}.csv"
-            else:
-                out_csv_path = f"{out_csv_base_path}.csv"
-            out_csv_paths.append(out_csv_path)
-
-            tmp_csv_path = out_csv_path + ".tmp"
-            os.makedirs(os.path.dirname(out_csv_path) or ".", exist_ok=True)
-            with open(tmp_csv_path, "w", encoding="utf-8-sig", newline="") as f_csv:
-                writer = csv.writer(f_csv, lineterminator="\n")
-
-                print(f"  - Sheet: {sheet_name} | HMDB 列={hmdb_col} | 列数={target_len} | 输出: {os.path.basename(out_csv_path)}")
-
-                first = True
-                for row in in_ws.iter_rows(values_only=False):
-                    stats["rows_in"] += 1
-                    sheet_rows_in += 1
-                    if first:
-                        writer.writerow(_row_values_for_csv(row, target_len=target_len))
-                        stats["rows_out"] += 1
-                        sheet_rows_out += 1
-                        first = False
-                        header_rows += 1
-                        continue
-
-                    try:
-                        raw_id = row[hmdb_col - 1].value
-                    except Exception:
-                        raw_id = None
-
-                    if raw_id is None:
-                        hmdb_rows_invalid += 1
-                        writer.writerow(_row_values_for_csv(row, target_len=target_len))
-                        stats["rows_out"] += 1
-                        sheet_rows_out += 1
-                        continue
-
-                    norm = normalize_hmdb_id(str(raw_id), strict=strict_id)
-                    if norm is None:
-                        hmdb_rows_invalid += 1
-                        writer.writerow(_row_values_for_csv(row, target_len=target_len))
-                        stats["rows_out"] += 1
-                        sheet_rows_out += 1
-                        continue
-
-                    hmdb_rows_total += 1
-                    seen_batch.append((norm,))
-                    if norm in kidney_hit_set:
-                        hmdb_rows_hit += 1
-                        hit_batch.append((norm,))
-                        writer.writerow(_row_values_for_csv(row, target_len=target_len))
-                        stats["rows_out"] += 1
-                        sheet_rows_out += 1
-                    else:
-                        hmdb_rows_miss += 1
-                        miss_batch.append((norm,))
-                        stats["rows_removed"] += 1
-                        sheet_rows_removed += 1
-
-                    if len(seen_batch) >= batch_size:
-                        cur.executemany("INSERT OR IGNORE INTO seen(id) VALUES (?)", seen_batch)
-                        cur.executemany("INSERT OR IGNORE INTO hit(id) VALUES (?)", hit_batch)
-                        cur.executemany("INSERT OR IGNORE INTO miss(id) VALUES (?)", miss_batch)
-                        con.commit()
-                        seen_batch.clear()
-                        hit_batch.clear()
-                        miss_batch.clear()
-
-                    if row_progress_every and sheet_rows_in % row_progress_every == 0:
-                        elapsed = time.time() - sheet_start
-                        rate = sheet_rows_in / elapsed if elapsed > 0 else 0.0
-                        print(
-                            f"    已处理 {sheet_rows_in} 行 | 保留 {sheet_rows_out} 行 | 删除 {sheet_rows_removed} 行 | {rate:.1f} 行/秒"
-                        )
-
-            os.replace(tmp_csv_path, out_csv_path)
-
-        if seen_batch:
-            cur.executemany("INSERT OR IGNORE INTO seen(id) VALUES (?)", seen_batch)
-            cur.executemany("INSERT OR IGNORE INTO hit(id) VALUES (?)", hit_batch)
-            cur.executemany("INSERT OR IGNORE INTO miss(id) VALUES (?)", miss_batch)
-            con.commit()
-
-        distinct_total = cur.execute("SELECT COUNT(*) FROM seen").fetchone()[0]
-        distinct_hit = cur.execute("SELECT COUNT(*) FROM hit").fetchone()[0]
-        distinct_miss = cur.execute("SELECT COUNT(*) FROM miss").fetchone()[0]
-
-        in_wb.close()
-
-        os.makedirs(os.path.dirname(unmatched_txt_path) or ".", exist_ok=True)
-        with open(unmatched_txt_path, "w", encoding="utf-8") as f:
-            f.write(f"source_xlsx: {os.path.abspath(src_path)}\n")
-            f.write(f"xml: {os.path.abspath(xml_file)}\n")
-            f.write(f"hmdb_id_distinct_total: {distinct_total}\n")
-            f.write(f"hmdb_id_distinct_hit: {distinct_hit}\n")
-            f.write(f"hmdb_id_distinct_miss: {distinct_miss}\n")
-            f.write("\n")
-            for (mid,) in cur.execute("SELECT id FROM miss ORDER BY id"):
-                f.write(mid + "\n")
-
-        with open(stats_txt_path, "w", encoding="utf-8") as f:
-            f.write(f"source_xlsx: {os.path.abspath(src_path)}\n")
-            f.write("output_csv:\n")
-            for p in out_csv_paths:
-                f.write(f"  - {os.path.abspath(p)}\n")
-            f.write(f"unmatched_hmid_txt: {os.path.abspath(unmatched_txt_path)}\n")
-            f.write(f"sheets: {stats['sheets']}\n")
-            f.write(f"rows_in_total_including_headers: {stats['rows_in']}\n")
-            f.write(f"header_rows: {header_rows}\n")
-            f.write(f"rows_out_total_including_headers: {stats['rows_out']}\n")
-            f.write(f"rows_removed_total: {stats['rows_removed']}\n")
-            f.write("\n")
-            f.write(f"hmdb_id_rows_total: {hmdb_rows_total}\n")
-            f.write(f"hmdb_id_rows_hit: {hmdb_rows_hit}\n")
-            f.write(f"hmdb_id_rows_miss: {hmdb_rows_miss}\n")
-            f.write(f"hmdb_id_rows_invalid_or_blank: {hmdb_rows_invalid}\n")
-            f.write("\n")
-            f.write(f"hmdb_id_distinct_total: {distinct_total}\n")
-            f.write(f"hmdb_id_distinct_hit: {distinct_hit}\n")
-            f.write(f"hmdb_id_distinct_miss: {distinct_miss}\n")
-    finally:
-        try:
-            con.close()
-        except Exception:
-            pass
-        try:
-            if os.path.exists(db_path):
-                os.remove(db_path)
-        except Exception:
-            pass
-
+    
+    wb = openpyxl.load_workbook(src_path, read_only=True, data_only=False)
+    stats = {"in": 0, "out": 0, "removed": 0}
+    
+    with open(out_path, "w", encoding="utf-8-sig", newline="") as f:
+        writer = csv.writer(f, lineterminator="\n")
+        
+        for sheet in wb.sheetnames:
+            ws = wb[sheet]
+            hmdb_col = find_hmdb_column([c.value for c in next(ws.iter_rows(max_row=1))])
+            max_col = ws.max_column or 0
+            
+            print(f"  处理工作表 '{sheet}' (HMDB列: {hmdb_col})")
+            
+            for i, row in enumerate(ws.iter_rows(values_only=False)):
+                stats["in"] += 1
+                
+                # 保留表头
+                if i == 0:
+                    writer.writerow([c.value for c in row])
+                    stats["out"] += 1
+                    continue
+                
+                # 检查HMDB ID
+                try:
+                    raw_id = row[hmdb_col - 1].value
+                except IndexError:
+                    raw_id = None
+                
+                nid = normalize_hmdb_id(str(raw_id)) if raw_id else None
+                
+                # 匹配则保留，否则跳过
+                if nid and nid in kidney_set:
+                    writer.writerow([c.value for c in row])
+                    stats["out"] += 1
+                else:
+                    stats["removed"] += 1
+    
     return stats
 
 
-def filter_xlsx_dir(
-    xlsx_dir: str,
-    xml_file: str,
-    strict_id: bool,
-    progress_every: int,
-    xlsx_row_progress_every: int,
-    out_suffix: str,
-    only_files: set[str] | None,
-) -> None:
-    kidney_set = build_kidney_hit_set(xml_file, strict_id=strict_id, progress_every=progress_every)
-    print(f"Kidney 命中集合已构建: {len(kidney_set)} 个 HMDB ID")
-
-    summary_path = os.path.join(xlsx_dir, f"kidney_filter_summary{out_suffix}.txt")
-    summary_lines: list[str] = []
-    summary_lines.append(f"xml: {os.path.abspath(xml_file)}")
-    summary_lines.append(f"xlsx_dir: {os.path.abspath(xlsx_dir)}")
-    summary_lines.append(f"out_suffix: {out_suffix}")
-    summary_lines.append(f"kidney_hit_set_size: {len(kidney_set)}")
-    summary_lines.append("")
-
-    for name in sorted(os.listdir(xlsx_dir)):
-        if not name.lower().endswith(".xlsx"):
-            continue
-        if name.lower().endswith(f"{out_suffix.lower()}.xlsx"):
-            continue
-        if name.lower().endswith(f"{out_suffix.lower()}.csv"):
-            continue
-        if only_files is not None and name not in only_files:
-            continue
-
-        src_path = os.path.join(xlsx_dir, name)
-        base = name[:-5]
-        out_csv_base = os.path.join(xlsx_dir, f"{base}{out_suffix}")
-        unmatched_name = f"{base}{out_suffix}.unmatched_hmid.txt"
-        unmatched_path = os.path.join(xlsx_dir, unmatched_name)
-        stats_name = f"{base}{out_suffix}.stats.txt"
-        stats_path = os.path.join(xlsx_dir, stats_name)
-
-        print(f"处理: {name} -> {base}{out_suffix}.csv")
-        file_start = time.time()
-        stats = filter_workbook_keep_kidney_rows(
-            src_path,
-            out_csv_base,
-            xml_file,
-            kidney_set,
-            strict_id=strict_id,
-            row_progress_every=xlsx_row_progress_every,
-            unmatched_txt_path=unmatched_path,
-            stats_txt_path=stats_path,
-        )
-        elapsed = time.time() - file_start
-        print(
-            f"完成: sheets={stats['sheets']} rows_in={stats['rows_in']} rows_out={stats['rows_out']} removed={stats['rows_removed']} | {elapsed:.1f}s"
-        )
-        summary_lines.append(f"file: {name}")
-        summary_lines.append(f"  output_csv_base: {os.path.basename(out_csv_base)}")
-        summary_lines.append(f"  stats_txt: {stats_name}")
-        summary_lines.append(f"  unmatched_hmid_txt: {unmatched_name}")
-        summary_lines.append(f"  sheets: {stats['sheets']}")
-        summary_lines.append(f"  rows_in: {stats['rows_in']}")
-        summary_lines.append(f"  rows_out: {stats['rows_out']}")
-        summary_lines.append(f"  rows_removed: {stats['rows_removed']}")
-        summary_lines.append("")
-
-    with open(summary_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(summary_lines))
-
-
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--xml", default=pick_default_xml_path())
-    parser.add_argument("--xlsx-dir", default="")
-    parser.add_argument("--xlsx-out-suffix", default=".kidney")
-    parser.add_argument("--xlsx-only", default="")
-    parser.add_argument("--strict", action="store_true", default=True)
-    parser.add_argument("--no-strict", action="store_false", dest="strict")
-    parser.add_argument("--progress-every", type=int, default=5000)
-    parser.add_argument("--xlsx-progress-every", type=int, default=50000)
+    parser = argparse.ArgumentParser(description="HMDB肾脏代谢物筛选工具")
+    parser.add_argument("--xml", default=DEFAULT_XML_PATH, help="HMDB XML文件路径")
+    parser.add_argument("--xlsx-dir", default="data", help="输入Excel目录")
+    parser.add_argument("--suffix", default=".kidney", help="输出文件后缀")
     args = parser.parse_args()
-
+    
     if not os.path.exists(args.xml):
-        raise SystemExit(f"找不到 XML 文件: {args.xml}")
-
-    xlsx_dir = args.xlsx_dir.strip()
-    if not xlsx_dir and os.path.isdir("data"):
-        xlsx_dir = "data"
-
-    if not xlsx_dir:
-        raise SystemExit("未找到可处理的 xlsx 目录。请使用 --xlsx-dir 指定，或在当前目录提供 data 文件夹。")
-
-    if not os.path.isdir(xlsx_dir):
-        raise SystemExit(f"找不到 xlsx-dir: {xlsx_dir}")
-
-    try:
-        import openpyxl  # noqa: F401
-    except Exception as e:
-        raise SystemExit(f"缺少依赖 openpyxl，无法处理 xlsx: {e}")
-
-    only_files = None
-    if args.xlsx_only.strip():
-        only_files = {x.strip() for x in args.xlsx_only.split(",") if x.strip()}
-
-    print(f"XML: {os.path.abspath(args.xml)}")
-    print(f"XLSX_DIR: {os.path.abspath(xlsx_dir)}")
-    print(f"输出后缀: {args.xlsx_out_suffix}")
-    filter_xlsx_dir(
-        xlsx_dir=xlsx_dir,
-        xml_file=args.xml,
-        strict_id=args.strict,
-        progress_every=args.progress_every,
-        xlsx_row_progress_every=args.xlsx_progress_every,
-        out_suffix=args.xlsx_out_suffix,
-        only_files=only_files,
-    )
+        raise SystemExit(f"错误: 找不到XML文件 {args.xml}")
+    if not os.path.isdir(args.xlsx_dir):
+        raise SystemExit(f"错误: 找不到目录 {args.xlsx_dir}")
+    
+    # 步骤1: 构建肾脏代谢物集合
+    kidney_set = build_kidney_set(args.xml)
+    
+    # 步骤2: 处理Excel文件
+    print(f"\n开始处理Excel文件 (目录: {args.xlsx_dir})")
+    
+    for name in sorted(os.listdir(args.xlsx_dir)):
+        if not name.endswith(".xlsx") or args.suffix in name:
+            continue
+        
+        src = os.path.join(args.xlsx_dir, name)
+        out = os.path.join(args.xlsx_dir, name[:-5] + args.suffix + ".csv")
+        
+        print(f"\n处理: {name}")
+        start = time.time()
+        stats = filter_excel(src, out, kidney_set)
+        
+        print(f"完成: 输入 {stats['in']} 行, 输出 {stats['out']} 行, 跳过 {stats['removed']} 行")
+        print(f"输出: {out} ({time.time()-start:.1f}s)")
+    
+    print("\n全部完成!")
 
 
 if __name__ == "__main__":
     main()
-
 ```
-
 ## 视频版本
 
 * [哔哩哔哩](https://space.bilibili.com/3546607630944387)
