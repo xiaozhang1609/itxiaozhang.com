@@ -20,8 +20,11 @@ author: IT小章
 
 **推荐页面**：[Latest Supported VC++ Downloads](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
 
-* **运行库整合包 (推荐)**
+* **运行库整合包1**
   [VisualCppRedist AIO (GitHub)](https://github.com/abbodi1406/vcredist/releases)
+
+* **运行库整合包2**
+  [TechPowerUp运行库合集](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
 
 * **2015-2022 (统一版)**
   [x86](https://aka.ms/vs/17/release/vc_redist.x86.exe) ｜ [x64](https://aka.ms/vs/17/release/vc_redist.x64.exe) ｜ [ARM64](https://aka.ms/vs/17/release/vc_redist.arm64.exe)
