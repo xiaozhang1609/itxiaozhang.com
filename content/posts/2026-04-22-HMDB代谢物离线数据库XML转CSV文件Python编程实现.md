@@ -47,122 +47,55 @@ author: IT小章
    * 仅导出必要字段，避免冗余数据
    * 减少文件体积，提高加载速度
 
-## 全部代码
+## 部分代码
 
 ```python
 # export_hmdb_selected_fields.py
-import argparse
 import csv
-import gzip
-import os
 import xml.etree.ElementTree as ET
 
+SOURCE_XML = "input.xml"
+OUTPUT_CSV = "output.csv"
 
-SOURCE_XML = r"C:\Users\Administrator\Documents\HMDB离线数据库\hmdb_metabolites\hmdb_metabolites.xml"
-OUTPUT_CSV = os.path.join(os.path.dirname(__file__), "hmdb_selected_fields.csv")
-NS = {"h": "http://www.hmdb.ca"}
-
-
-def text_or_empty(elem):
-    return elem.text.strip() if elem is not None and elem.text else ""
-
-
-def extract_pathways(metabolite_elem, sep):
-    names = []
-    pathway_nodes = metabolite_elem.findall(".//h:biological_properties/h:pathways/h:pathway", NS)
-    for node in pathway_nodes:
-        name = text_or_empty(node.find("h:name", NS))
-        if name:
-            names.append(name)
-    seen = set()
-    unique_names = []
-    for n in names:
-        if n not in seen:
-            seen.add(n)
-            unique_names.append(n)
-    return sep.join(unique_names)
-
-
-def iter_rows(xml_path, pathway_sep):
-    context = ET.iterparse(xml_path, events=("start", "end"))
-    context = iter(context)
-    _, root = next(context)
-
+def parse_xml_stream(xml_path):
+    # 流式解析（具体实现已简化）
+    context = ET.iterparse(xml_path, events=("end",))
     for event, elem in context:
-        if event == "end" and elem.tag == "{http://www.hmdb.ca}metabolite":
-            mono_mass = text_or_empty(elem.find("h:monisotopic_molecular_weight", NS))
-            avg_mass = text_or_empty(elem.find("h:average_molecular_weight", NS))
-            mass = mono_mass if mono_mass else avg_mass
-
-            yield {
-                "HMDB ID": text_or_empty(elem.find("h:accession", NS)),
-                "代谢物名称": text_or_empty(elem.find("h:name", NS)),
-                "分子式": text_or_empty(elem.find("h:chemical_formula", NS)),
-                "分子量": mass,
-                "SMILES 结构": text_or_empty(elem.find("h:smiles", NS)),
-                "KEGG ID": text_or_empty(elem.find("h:kegg_id", NS)),
-                "PubChem CID": text_or_empty(elem.find("h:pubchem_compound_id", NS)),
-                "InChIKey": text_or_empty(elem.find("h:inchikey", NS)),
-                "所属通路": extract_pathways(elem, pathway_sep),
-            }
-
+        if elem.tag.endswith("metabolite"):
+            yield extract_fields(elem)
             elem.clear()
-            root.clear()
 
+def extract_fields(elem):
+    # 字段提取逻辑（已隐藏细节）
+    return {
+        "HMDB ID": "...",
+        "代谢物名称": "...",
+        "分子式": "...",
+        "分子量": "...",
+        "SMILES 结构": "...",
+        "KEGG ID": "...",
+        "PubChem CID": "...",
+        "InChIKey": "...",
+        "所属通路": "...",
+    }
 
-def ensure_gz_path(path):
-    return path if path.lower().endswith(".gz") else f"{path}.gz"
-
-
-def open_output(path, use_gzip):
-    if use_gzip:
-        return gzip.open(ensure_gz_path(path), "wt", newline="", encoding="utf-8-sig")
-    return open(path, "w", newline="", encoding="utf-8-sig")
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--source", default=SOURCE_XML)
-    parser.add_argument("--out", default=OUTPUT_CSV)
-    parser.add_argument("--gzip", action="store_true")
-    parser.add_argument("--force", action="store_true")
-    parser.add_argument("--pathway-sep", default="|")
-    parser.add_argument("--progress-every", type=int, default=10000)
-    args = parser.parse_args()
-
-    if not os.path.exists(args.source):
-        raise FileNotFoundError(f"未找到离线数据库文件: {args.source}")
-
+def write_csv(rows, output_path):
     headers = [
-        "HMDB ID",
-        "代谢物名称",
-        "分子式",
-        "分子量",
-        "SMILES 结构",
-        "KEGG ID",
-        "PubChem CID",
-        "InChIKey",
-        "所属通路",
+        "HMDB ID", "代谢物名称", "分子式", "分子量",
+        "SMILES 结构", "KEGG ID", "PubChem CID",
+        "InChIKey", "所属通路"
     ]
 
-    os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
-    out_path = ensure_gz_path(args.out) if args.gzip else args.out
-    if os.path.exists(out_path) and not args.force:
-        raise FileExistsError(f"输出文件已存在（如需覆盖请加 --force）：{out_path}")
-
-    with open_output(args.out, args.gzip) as f:
+    with open(output_path, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=headers)
         writer.writeheader()
-        count = 0
-        for row in iter_rows(args.source, args.pathway_sep):
+        for row in rows:
             writer.writerow(row)
-            count += 1
-            if args.progress_every > 0 and count % args.progress_every == 0:
-                print(f"已处理 {count} 条代谢物记录...", end="\r")
 
-    print(f"\n完成：共导出 {count} 条记录")
-    print(f"输出文件：{out_path}")
-
+def main():
+    rows = parse_xml_stream(SOURCE_XML)
+    write_csv(rows, OUTPUT_CSV)
+    print("处理完成")
 
 if __name__ == "__main__":
     main()

@@ -39,6 +39,6 @@ url: "/about/"
 
 ### 📫 联系我
 
-- **微信**: [zhang9.cn](https://zhang9.cn)
+- **微信**: [点击这里](https://zhang9.cn)
 - **Email**: [itxiaozhang.com@gmail.com](mailto:itxiaozhang.com@gmail.com)
 
