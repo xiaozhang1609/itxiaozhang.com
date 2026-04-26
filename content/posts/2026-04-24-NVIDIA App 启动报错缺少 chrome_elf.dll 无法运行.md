@@ -7,7 +7,7 @@ categories:
   - 游戏问题
 tags:
   - NVIDIA App
-  - DLL
+  - DLL缺失
   - 无法运行
   - 运行库
   - 系统文件
