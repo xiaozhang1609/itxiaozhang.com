@@ -2,13 +2,16 @@
 title: '启动瓦罗兰特提示VAN INCOMPATIBLE OEM DRIVER检测到mtkwl6ex Sys不兼容需更新驱动后才能运行游戏'
 url: valorant-van-incompatible-oem-driver-mediatek-rz616-wifi-6e-adapter-driver-mtkwl6ex-sys/
 date: 2026-05-23T17:45:05+08:00
-description: 
+description: 启动 Valorant 时出现报错“VAN INCOMPATIBLE OEM DRIVER”，提示 MediaTek RZ616 Wi-Fi 6E Adapter 驱动文件 mtkwl6ex.sys 不兼容，要求更新 OEM 驱动后才能进入游戏。
 categories:
   - 游戏问题
 tags:
   - valorant
   - 瓦罗兰特
-  - 游戏
+  - 游戏问题
+  - 驱动不兼容
+  - 更新驱动
+
 
 author: IT小章
 ---
