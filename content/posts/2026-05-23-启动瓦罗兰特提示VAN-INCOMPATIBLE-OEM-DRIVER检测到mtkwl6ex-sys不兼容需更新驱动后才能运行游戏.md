@@ -75,7 +75,7 @@ Press OK to visit our support page for more information:
 
 11. 本案例为 Lenovo 联想笔记本，使用联想官方驱动安装工具：
 
-[Lenovo Quick Fix 驱动安装工具](https://iknow.lenovo.com.cn/detail/419379?utm_source=chatgpt.com)
+[Lenovo Quick Fix 驱动安装工具](https://iknow.lenovo.com.cn/detail/419379)
 
 12. 打开工具后勾选许可协议。
 
