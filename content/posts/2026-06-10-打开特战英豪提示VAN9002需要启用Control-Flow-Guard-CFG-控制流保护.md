@@ -13,7 +13,7 @@ tags:
 author: IT小章
 ---
 
-> 原文地址：<https://itxiaozhang.com/open-valorant-van9002-control-flow-guard-cfg-required>  
+> 原文地址：<https://itxiaozhang.com/open-valorant-van9002-control-flow-guard-cfg-required/>  
 > 如果您需要远程电脑维修或者编程开发，请[加我微信](https://zhang9.cn)咨询。 
 
 ## 问题描述
