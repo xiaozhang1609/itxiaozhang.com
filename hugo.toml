@@ -93,7 +93,7 @@ rssLimit = 20
         url = "/search/"
         weight = 40
     [[menu.main]]
-        identifier = "about"
-        name = "🙋 关于"
-        url = "/about/"
+        identifier = "contact"
+        name = "📮 联系"
+        url = "/contact/"
         weight = 50
