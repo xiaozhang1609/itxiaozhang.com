@@ -297,7 +297,6 @@ draft = false
 ```markdown
 ![一张本地测试图片](/images/my-photo.webp)
 ```
-![这是一个本地图片测试](/images/IMG_20251208_100123.jpg)
 
 图片实际存放在 `static/images/my-photo.webp`，发布后访问地址会是 `https://你的域名/images/my-photo.webp`。这就是“本地图片随博客一起发布”。
 
