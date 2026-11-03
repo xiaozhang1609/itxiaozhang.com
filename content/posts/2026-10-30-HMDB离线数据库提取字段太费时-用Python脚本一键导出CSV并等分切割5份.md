@@ -45,7 +45,7 @@ InChIKey
 超类
 ```
 
-其中「分子量」等字段存在多个候选数据来源，程序按内部优先级自动选取；「所属通路」「来源」「同义词」属于多值字段，需要去重后合并到同一个单元格。
+其中「分子量」优先取单同位素分子量，缺失时回退到平均分子量；「所属通路」「来源」「同义词」属于多值字段，需要合并到同一个单元格。
 
 ## 程序设计
 
@@ -53,56 +53,74 @@ InChIKey
 
 ### 一、流式解析 XML
 
-HMDB XML 体积较大，直接整体加载会占用大量内存。程序采用流式解析方式逐条读取代谢物记录，处理完一条即释放相关节点：
+HMDB XML 体积较大，直接整体加载会占用大量内存。程序采用 `iterparse` 流式解析，逐条处理 `metabolite` 节点，处理完立即释放节点：
 
 ```python
 def iter_rows(xml_path, limit):
-    """流式读取代谢物记录
+    context = ET.iterparse(xml_path, events=("start", "end"))
+    context = iter(context)
+    _, root = next(context)
 
-    具体节点匹配与字段提取逻辑隐藏
-    """
-    pass
+    for event, elem in context:
+        if event != "end" or elem.tag != "{http://www.hmdb.ca}metabolite":
+            continue
+
+        mono_mass = text_or_empty(elem.find("h:monisotopic_molecular_weight", NS))
+        avg_mass = text_or_empty(elem.find("h:average_molecular_weight", NS))
+
+        yield {
+            "HMDB ID": text_or_empty(elem.find("h:accession", NS)),
+            "代谢物名称": text_or_empty(elem.find("h:name", NS)),
+            "分子量": mono_mass if mono_mass else avg_mass,
+            # 其余字段按同一方式提取
+        }
+
+        elem.clear()
+        root.clear()
 ```
 
-每条记录的字段映射关系，以及分子量等字段的取值优先级，属于脚本内部处理规则，此处不展开。
+### 二、多值字段去重合并
 
-### 二、多值字段处理
-
-「所属通路」「来源」「同义词」这类字段在原始数据中可能重复，直接拼接会产生冗余内容。程序统一做去重后合并到同一个单元格，分隔符由脚本内部固定。
-
-其中「来源」无法直接读取，需要按 HMDB 本体层级逐层匹配后收集目标节点：
-
-```python
-def extract_source(metabolite_elem):
-    """按本体层级提取来源信息
-
-    具体层级匹配规则隐藏
-    """
-    pass
-```
-
-去重合并部分：
+「所属通路」「来源」「同义词」这类字段在原始数据中可能重复，直接拼接会产生冗余内容。程序统一做去重处理，再以 `|` 分隔写入同一个单元格：
 
 ```python
 def join_unique(items, sep):
-    """去重后按指定分隔符合并
+    seen = set()
+    unique_items = []
+    for item in items:
+        if item and item not in seen:
+            seen.add(item)
+            unique_items.append(item)
+    return sep.join(unique_items)
+```
 
-    具体实现隐藏
-    """
-    pass
+其中「来源」字段并非直接读取，而是需要按 HMDB 本体层级定位。程序先找到 `Disposition` 根节点，再逐层匹配 `Source`，最后收集其下所有子节点名称：
+
+```python
+DISPOSITION_TERM = "Disposition"
+SOURCE_TERM = "Source"
+
+def extract_source(metabolite_elem):
+    terms = []
+    for root in metabolite_elem.findall("h:ontology/h:root", NS):
+        if text_or_empty(root.find("h:term", NS)) != DISPOSITION_TERM:
+            continue
+        for level2 in root.findall("h:descendants/h:descendant", NS):
+            if text_or_empty(level2.find("h:term", NS)) != SOURCE_TERM:
+                continue
+            for node in level2.findall("h:descendants/h:descendant/h:term", NS):
+                terms.append(text_or_empty(node))
+    return join_unique(terms, VALUE_SEP)
 ```
 
 ### 三、等分切割
 
-切割前先统计主 CSV 的数据行数，再按份数计算每份应包含的目标行数，除不尽的余数依次分配到前几份，保证各分片行数差距不超过 1 行：
+切割前先统计主 CSV 的数据行数，用 `divmod` 计算每份的基础行数和余数，余数从第一份开始依次分配，保证 5 份行数差距不超过 1 行：
 
 ```python
-def split_evenly(csv_path, out_dir, parts, force):
-    """按行数尽量平均切割 CSV
+base, extra = divmod(total_rows, parts)
 
-    具体分配算法隐藏
-    """
-    pass
+target_rows = base + (1 if part_index <= extra else 0)
 ```
 
 分片文件命名为 `hmdb_selected_fields.part0001.csv` 这类形式，写入到 `splits_5` 目录，每份都带完整表头。
@@ -124,7 +142,7 @@ def split_evenly(csv_path, out_dir, parts, force):
 1. **默认不覆盖**：输出文件已存在时直接报错并终止，必须在命令行显式加上 `--force` 参数才会覆盖，避免误删已有结果。
 2. **抽样试跑**：提供 `--limit` 参数，可以只处理前 N 条记录，先验证字段提取是否正确，再执行全量导出。
 3. **输入校验**：启动时检查源 XML 是否存在，不存在时直接抛出 `FileNotFoundError`；切割前检查主 CSV 是否有数据行、行数是否少于切割份数。
-4. **一致性校验**：自检阶段逐项核对行数、表头和 ID 唯一性，一旦发现问题会打印明细并以非零状态码退出，便于在自动化流程中捕获失败。
+4. **一致性校验**：自检阶段逐项核对行数、表头和 ID 唯一性，一旦发现问题会打印明细并通过 `sys.exit(1)` 退出，便于在自动化流程中捕获失败。
 
 ## 使用方法与运行结果
 
