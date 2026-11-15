@@ -99,7 +99,7 @@ UE4 引擎发生致命错误，游戏已崩溃并即将关闭。
 
 ## 视频版本
 
-* [哔哩哔哩](https://space.bilibili.com/3546607630944387)
-* [YouTube](https://www.youtube.com/@itxiaozhang)
+* [哔哩哔哩](https://www.bilibili.com/video/BV11groBTEkA)
+* [YouTube](https://www.youtube.com/watch?v=e5lwYYsu3ls)
 
 

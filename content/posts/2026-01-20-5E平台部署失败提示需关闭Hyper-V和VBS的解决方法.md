@@ -43,7 +43,7 @@ author: IT小章
 
 ## 视频版本
 
-* [哔哩哔哩](https://space.bilibili.com/3546607630944387)
-* [YouTube](https://www.youtube.com/@itxiaozhang)
+* [哔哩哔哩](https://www.bilibili.com/video/BV11q6kBbEGs)
+* [YouTube](https://www.youtube.com/watch?v=nZMzs8cEJaI)
 
 

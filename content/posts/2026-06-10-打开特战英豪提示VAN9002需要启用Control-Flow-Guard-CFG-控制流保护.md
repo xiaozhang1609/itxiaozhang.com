@@ -49,7 +49,7 @@ CFG（Control Flow Guard，控制流保护）是 Windows 提供的一项安全�
 
 ## 视频版本
 
-* [哔哩哔哩](https://space.bilibili.com/3546607630944387)
-* [YouTube](https://www.youtube.com/@itxiaozhang)
+* [哔哩哔哩](https://www.bilibili.com/video/BV1keEX6vEtF)
+* [YouTube](https://www.youtube.com/watch?v=Y8r-wsYf2zM)
 
 

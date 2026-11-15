@@ -52,5 +52,5 @@ author: IT小章
 
 ## 视频版本
 
-* [哔哩哔哩](https://space.bilibili.com/3546607630944387)
-* [YouTube](https://www.youtube.com/@itxiaozhang)
+* [哔哩哔哩](https://www.bilibili.com/video/BV1a3EuzrEcM)
+* [YouTube](https://www.youtube.com/watch?v=Txdl-UT-q8k)

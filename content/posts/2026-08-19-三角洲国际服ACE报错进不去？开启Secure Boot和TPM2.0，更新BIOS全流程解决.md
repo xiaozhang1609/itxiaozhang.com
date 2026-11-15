@@ -103,5 +103,5 @@ ACE Security Center
 
 ## 视频版本
 
-* [哔哩哔哩](https://space.bilibili.com/3546607630944387)
-* [YouTube](https://www.youtube.com/@itxiaozhang)
+* [哔哩哔哩](https://www.bilibili.com/video/BV14S8q6bEYk)
+* [YouTube](https://www.youtube.com/watch?v=zm0ioAmp8ZQ)

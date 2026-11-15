@@ -107,7 +107,7 @@ ACE安全中心：您的电脑未开启或有其他软件占用CPU虚拟化功�
 
 ## 视频版本
 
-* [哔哩哔哩](https://space.bilibili.com/3546607630944387)
-* [YouTube](https://www.youtube.com/@itxiaozhang)
+* [哔哩哔哩](https://www.bilibili.com/video/BV176dYB8E6r)
+* [YouTube](https://www.youtube.com/watch?v=w4F3mIpBxhY)
 
 

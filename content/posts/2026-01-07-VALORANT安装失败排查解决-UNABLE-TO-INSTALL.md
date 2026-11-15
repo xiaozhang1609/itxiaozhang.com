@@ -109,7 +109,7 @@ certutil -generateSSTFromWU roots.sst
 
 ## 视频版本
 
-* [哔哩哔哩](https://space.bilibili.com/3546607630944387)
-* [YouTube](https://www.youtube.com/@itxiaozhang)
+* [哔哩哔哩](https://www.bilibili.com/video/BV1Y9i1B6E2A)
+* [YouTube](https://www.youtube.com/watch?v=NkDADzZGAWQ)
 
 
