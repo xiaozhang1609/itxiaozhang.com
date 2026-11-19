@@ -8,3 +8,14 @@
 
 # Windows
 Thumbs.db
+
+# Python 缓存（脚本互相 import 会生成，非源码）
+__pycache__/
+*.pyc
+
+# 剪辑助手/字幕助手 二进制资源：字体与背景音乐不进仓库（本机存于 D:\IT小章\，换机器需重建）
+*.otf
+*.ttf
+*.mp3
+*.m4a
+*.wav
